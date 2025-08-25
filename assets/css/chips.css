@@ -1,0 +1,345 @@
+/* --- CHIPS (categorias/tags) -------------------------------------------- */
+
+/* 0) TOKENS BASE em baixa especificidade (para a cascata funcionar) */
+.quarto-category{
+  --chip-bg:#f5f7fb; --chip-fg:#1f2937; --chip-br:#e5e7eb;
+  --chip-bg-hover:#e9eef7; --chip-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+
+/* modo escuro: também em baixa especificidade */
+@media (prefers-color-scheme: dark){
+  .quarto-category{
+    --chip-bg:#111827; --chip-fg:#e5e7eb; --chip-br:#374151;
+    --chip-bg-hover:#0f172a; --chip-shadow:0 2px 10px rgba(0,0,0,.4);
+  }
+}
+
+/* 1) CONTÊINER */
+#title-block-header .quarto-categories,
+main .quarto-categories{
+  display:flex; flex-wrap:wrap; gap:.5rem;
+  margin-top:.4rem; margin-bottom:.75rem;
+}
+
+/* 2) CHIP (usa as variáveis, mas NÃO redefine) */
+#title-block-header .quarto-categories > .quarto-category,
+main .quarto-categories > .quarto-category{
+  display:inline-flex; align-items:center; gap:.35rem;
+  padding:.32rem .72rem;
+  border:1px solid var(--chip-br);
+  background:var(--chip-bg);
+  color:var(--chip-fg);
+  border-radius:999px;
+  font-size:.74rem; font-weight:600; letter-spacing:.02em;
+  text-transform:uppercase; line-height:1.15; text-decoration:none;
+  transition:background .12s ease, transform .12s ease, box-shadow .12s ease;
+}
+
+/* hover visual (funciona antes/depois do JS virar link) */
+#title-block-header .quarto-categories > .quarto-category:hover,
+main .quarto-categories > .quarto-category:hover{
+  background: var(--chip-bg-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--chip-shadow);
+  cursor: pointer;
+}
+
+/* foco quando já for <a> */
+#title-block-header .quarto-categories > a.quarto-category:focus-visible,
+main .quarto-categories > a.quarto-category:focus-visible{
+  outline:2px solid #60a5fa; outline-offset:2px;
+}
+
+/* respeito a quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce){
+  #title-block-header .quarto-categories > .quarto-category,
+  main .quarto-categories > .quarto-category{
+    transition:none !important; transform:none !important; box-shadow:none !important;
+  }
+}
+
+/* 3) PALETA POR CATEGORIA — agora VENCE a base */
+.quarto-category.cat--matematica   { --chip-bg:#eaf2ff; --chip-br:#cfe0ff; --chip-fg:#0b4abf; --chip-bg-hover:#dfeaff; }
+.quarto-category.cat--estatistica  { --chip-bg:#eafaf3; --chip-br:#c9eedb; --chip-fg:#0f6848; --chip-bg-hover:#def7ea; }
+.quarto-category.cat--fisica       { --chip-bg:#f3eaff; --chip-br:#e0d1ff; --chip-fg:#5a31b6; --chip-bg-hover:#ede0ff; }
+.quarto-category.cat--programacao  { --chip-bg:#e8f9fb; --chip-br:#c9eef2; --chip-fg:#0b6b78; --chip-bg-hover:#def4f7; }
+.quarto-category.cat--curso        { --chip-bg:#eef6ff; --chip-br:#d5e8ff; --chip-fg:#0b4a7a; --chip-bg-hover:#e5f1ff; }
+.quarto-category.cat--artigo       { --chip-bg:#f6f7fb; --chip-br:#e5e7eb; --chip-fg:#374151; --chip-bg-hover:#eef0f4; }
+.quarto-category.cat--serie        { --chip-bg:#ffeef2; --chip-br:#ffd4de; --chip-fg:#a62445; --chip-bg-hover:#ffe3ea; }
+
+@media (prefers-color-scheme: dark){
+  .quarto-category.cat--matematica  { --chip-bg:#0b1b34; --chip-br:#1a3a6b; --chip-fg:#c3d8ff; --chip-bg-hover:#0e2548; }
+  .quarto-category.cat--estatistica { --chip-bg:#0b1f17; --chip-br:#1e5a46; --chip-fg:#c5f2dd; --chip-bg-hover:#0d2a1d; }
+  .quarto-category.cat--fisica      { --chip-bg:#1a1330; --chip-br:#3a2f6b; --chip-fg:#e0d6ff; --chip-bg-hover:#221a43; }
+  .quarto-category.cat--programacao { --chip-bg:#0a2228; --chip-br:#1b5a63; --chip-fg:#bfeaf0; --chip-bg-hover:#0d2c33; }
+  .quarto-category.cat--curso       { --chip-bg:#0b1726; --chip-br:#1c3c5e; --chip-fg:#c7e0ff; --chip-bg-hover:#0d2133; }
+  .quarto-category.cat--artigo      { --chip-bg:#111827; --chip-br:#374151; --chip-fg:#e5e7eb; --chip-bg-hover:#0f172a; }
+  .quarto-category.cat--serie       { --chip-bg:#2a0f18; --chip-br:#6b1e34; --chip-fg:#ffd6de; --chip-bg-hover:#33121e; }
+}
+
+/* ===================== FORÇA A PALETA (LIGHT) ===================== */
+/* match por classe cat--… OU pelo hash do href (fallback) */
+#title-block-header .quarto-categories > .quarto-category.cat--matematica,
+main .quarto-categories > .quarto-category.cat--matematica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#matematica"],
+main .quarto-categories > a.quarto-category[href*="#matematica"]{
+  background:#eaf2ff !important; border-color:#cfe0ff !important; color:#0b4abf !important;
+}
+
+#title-block-header .quarto-categories > .quarto-category.cat--estatistica,
+main .quarto-categories > .quarto-category.cat--estatistica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#estatistica"],
+main .quarto-categories > a.quarto-category[href*="#estatistica"]{
+  background:#eafaf3 !important; border-color:#c9eedb !important; color:#0f6848 !important;
+}
+
+#title-block-header .quarto-categories > .quarto-category.cat--fisica,
+main .quarto-categories > .quarto-category.cat--fisica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#fisica"],
+main .quarto-categories > a.quarto-category[href*="#fisica"]{
+  background:#f3eaff !important; border-color:#e0d1ff !important; color:#5a31b6 !important;
+}
+
+#title-block-header .quarto-categories > .quarto-category.cat--programacao,
+main .quarto-categories > .quarto-category.cat--programacao,
+#title-block-header .quarto-categories > a.quarto-category[href*="#programacao"],
+main .quarto-categories > a.quarto-category[href*="#programacao"]{
+  background:#e8f9fb !important; border-color:#c9eef2 !important; color:#0b6b78 !important;
+}
+
+#title-block-header .quarto-categories > .quarto-category.cat--curso,
+main .quarto-categories > .quarto-category.cat--curso,
+#title-block-header .quarto-categories > a.quarto-category[href*="#curso"],
+main .quarto-categories > a.quarto-category[href*="#curso"]{
+  background:#eef6ff !important; border-color:#d5e8ff !important; color:#0b4a7a !important;
+}
+
+#title-block-header .quarto-categories > .quarto-category.cat--artigo,
+main .quarto-categories > .quarto-category.cat--artigo,
+#title-block-header .quarto-categories > a.quarto-category[href*="#artigo"],
+main .quarto-categories > a.quarto-category[href*="#artigo"]{
+  background:#f6f7fb !important; border-color:#e5e7eb !important; color:#374151 !important;
+}
+
+#title-block-header .quarto-categories > .quarto-category.cat--serie,
+main .quarto-categories > .quarto-category.cat--serie,
+#title-block-header .quarto-categories > a.quarto-category[href*="#serie"],
+main .quarto-categories > a.quarto-category[href*="#serie"]{
+  background:#ffeef2 !important; border-color:#ffd4de !important; color:#a62445 !important;
+}
+
+/* ===================== DARK MODE ===================== */
+@media (prefers-color-scheme: dark){
+  #title-block-header .quarto-categories > .quarto-category.cat--matematica,
+  main .quarto-categories > .quarto-category.cat--matematica,
+  #title-block-header .quarto-categories > a.quarto-category[href*="#matematica"],
+  main .quarto-categories > a.quarto-category[href*="#matematica"]{
+    background:#0b1b34 !important; border-color:#1a3a6b !important; color:#c3d8ff !important;
+  }
+  #title-block-header .quarto-categories > .quarto-category.cat--estatistica,
+  main .quarto-categories > .quarto-category.cat--estatistica,
+  #title-block-header .quarto-categories > a.quarto-category[href*="#estatistica"],
+  main .quarto-categories > a.quarto-category[href*="#estatistica"]{
+    background:#0b1f17 !important; border-color:#1e5a46 !important; color:#c5f2dd !important;
+  }
+  #title-block-header .quarto-categories > .quarto-category.cat--fisica,
+  main .quarto-categories > .quarto-category.cat--fisica,
+  #title-block-header .quarto-categories > a.quarto-category[href*="#fisica"],
+  main .quarto-categories > a.quarto-category[href*="#fisica"]{
+    background:#1a1330 !important; border-color:#3a2f6b !important; color:#e0d6ff !important;
+  }
+  #title-block-header .quarto-categories > .quarto-category.cat--programacao,
+  main .quarto-categories > .quarto-category.cat--programacao,
+  #title-block-header .quarto-categories > a.quarto-category[href*="#programacao"],
+  main .quarto-categories > a.quarto-category[href*="#programacao"]{
+    background:#0a2228 !important; border-color:#1b5a63 !important; color:#bfeaf0 !important;
+  }
+  #title-block-header .quarto-categories > .quarto-category.cat--curso,
+  main .quarto-categories > .quarto-category.cat--curso,
+  #title-block-header .quarto-categories > a.quarto-category[href*="#curso"],
+  main .quarto-categories > a.quarto-category[href*="#curso"]{
+    background:#0b1726 !important; border-color:#1c3c5e !important; color:#c7e0ff !important;
+  }
+  #title-block-header .quarto-categories > .quarto-category.cat--artigo,
+  main .quarto-categories > .quarto-category.cat--artigo,
+  #title-block-header .quarto-categories > a.quarto-category[href*="#artigo"],
+  main .quarto-categories > a.quarto-category[href*="#artigo"]{
+    background:#111827 !important; border-color:#374151 !important; color:#e5e7eb !important;
+  }
+  #title-block-header .quarto-categories > .quarto-category.cat--serie,
+  main .quarto-categories > .quarto-category.cat--serie,
+  #title-block-header .quarto-categories > a.quarto-category[href*="#serie"],
+  main .quarto-categories > a.quarto-category[href*="#serie"]{
+    background:#2a0f18 !important; border-color:#6b1e34 !important; color:#ffd6de !important;
+  }
+}
+
+/* ---- FISICA ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--fisica,
+main .quarto-categories > a.quarto-category.cat--fisica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#fisica"],
+main .quarto-categories > a.quarto-category[href*="#fisica"]{
+  background:#f3eaff !important; border-color:#e0d1ff !important; color:#5a31b6 !important;
+}
+
+/* ---- MATEMATICA ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--matematica,
+main .quarto-categories > a.quarto-category.cat--matematica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#matematica"],
+main .quarto-categories > a.quarto-category[href*="#matematica"]{
+  background:#eaf2ff !important; border-color:#cfe0ff !important; color:#0b4abf !important;
+}
+
+/* ---- ESTATISTICA ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--estatistica,
+main .quarto-categories > a.quarto-category.cat--estatistica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#estatistica"],
+main .quarto-categories > a.quarto-category[href*="#estatistica"]{
+  background:#eafaf3 !important; border-color:#c9eedb !important; color:#0f6848 !important;
+}
+
+/* ---- PROGRAMACAO ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--programacao,
+main .quarto-categories > a.quarto-category.cat--programacao,
+#title-block-header .quarto-categories > a.quarto-category[href*="#programacao"],
+main .quarto-categories > a.quarto-category[href*="#programacao"]{
+  background:#e8f9fb !important; border-color:#c9eef2 !important; color:#0b6b78 !important;
+}
+
+/* ---- CURSO ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--curso,
+main .quarto-categories > a.quarto-category.cat--curso,
+#title-block-header .quarto-categories > a.quarto-category[href*="#curso"],
+main .quarto-categories > a.quarto-category[href*="#curso"]{
+  background:#eef6ff !important; border-color:#d5e8ff !important; color:#0b4a7a !important;
+}
+
+/* ---- ARTIGO ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--artigo,
+main .quarto-categories > a.quarto-category.cat--artigo,
+#title-block-header .quarto-categories > a.quarto-category[href*="#artigo"],
+main .quarto-categories > a.quarto-category[href*="#artigo"]{
+  background:#f6f7fb !important; border-color:#e5e7eb !important; color:#374151 !important;
+}
+
+/* ---- SERIE ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--serie,
+main .quarto-categories > a.quarto-category.cat--serie,
+#title-block-header .quarto-categories > a.quarto-category[href*="#serie"],
+main .quarto-categories > a.quarto-category[href*="#serie"]{
+  background:#ffeef2 !important; border-color:#ffd4de !important; color:#a62445 !important;
+}
+
+/* ---- SUMARIO ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--sumario,
+main .quarto-categories > a.quarto-category.cat--sumario,
+#title-block-header .quarto-categories > a.quarto-category[href*="#sumario"],
+main .quarto-categories > a.quarto-category[href*="#sumario"]{
+  background:#fff7e6 !important;        /* âmbar bem clarinho */
+  border-color:#ffe3b3 !important;
+  color:#8a5a00 !important;
+}
+
+/* Dark mode (opcional) — cole se quiser cores específicas também no escuro */
+/*
+@media (prefers-color-scheme: dark){
+  #title-block-header .quarto-categories > a.quarto-category[href*="#matematica"],
+  main .quarto-categories > a.quarto-category[href*="#matematica"]{
+    background:#0b1b34 !important; border-color:#1a3a6b !important; color:#c3d8ff !important;
+  }
+  #title-block-header .quarto-categories > a.quarto-category[href*="#fisica"],
+  main .quarto-categories > a.quarto-category[href*="#fisica"]{
+    background:#1a1330 !important; border-color:#3a2f6b !important; color:#e0d6ff !important;
+  }
+  ... (repita para as outras)
+}
+*/
+
+/* Mantém chips claros mesmo em dark mode (evita mistura claro/escuro) */
+@media (prefers-color-scheme: dark){
+  .quarto-category{
+    --chip-bg:#f5f7fb; --chip-fg:#1f2937; --chip-br:#e5e7eb;
+    --chip-bg-hover:#e9eef7; --chip-shadow:0 2px 10px rgba(0,0,0,.06);
+  }
+}
+
+/* ---- FORTE: use este bloco em vez do “Médio” se quiser ainda mais presença ---- */
+#title-block-header .quarto-categories > a.quarto-category.cat--matematica,
+main .quarto-categories > a.quarto-category.cat--matematica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#matematica"],
+main .quarto-categories > a.quarto-category[href*="#matematica"]{
+  background:#c5dcff !important; border-color:#8fbaff !important; color:#08307d !important;
+}
+
+#title-block-header .quarto-categories > a.quarto-category.cat--estatistica,
+main .quarto-categories > a.quarto-category.cat--estatistica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#estatistica"],
+main .quarto-categories > a.quarto-category[href*="#estatistica"]{
+  background:#c8efd9 !important; border-color:#98e1bf !important; color:#094b35 !important;
+}
+
+#title-block-header .quarto-categories > a.quarto-category.cat--fisica,
+main .quarto-categories > a.quarto-category.cat--fisica,
+#title-block-header .quarto-categories > a.quarto-category[href*="#fisica"],
+main .quarto-categories > a.quarto-category[href*="#fisica"]{
+  background:#dbc8ff !important; border-color:#b59bff !important; color:#3f238b !important;
+}
+
+#title-block-header .quarto-categories > a.quarto-category.cat--programacao,
+main .quarto-categories > a.quarto-category.cat--programacao,
+#title-block-header .quarto-categories > a.quarto-category[href*="#programacao"],
+main .quarto-categories > a.quarto-category[href*="#programacao"]{
+  background:#c7edf2 !important; border-color:#92dbe2 !important; color:#084d57 !important;
+}
+
+#title-block-header .quarto-categories > a.quarto-category.cat--curso,
+main .quarto-categories > a.quarto-category.cat--curso,
+#title-block-header .quarto-categories > a.quarto-category[href*="#curso"],
+main .quarto-categories > a.quarto-category[href*="#curso"]{
+  background:#cfe5ff !important; border-color:#9dcbff !important; color:#08365c !important;
+}
+
+#title-block-header .quarto-categories > a.quarto-category.cat--artigo,
+main .quarto-categories > a.quarto-category.cat--artigo,
+#title-block-header .quarto-categories > a.quarto-category[href*="#artigo"],
+main .quarto-categories > a.quarto-category[href*="#artigo"]{
+  background:#e3e6ec !important; border-color:#c9ced6 !important; color:#232a32 !important;
+}
+
+#title-block-header .quarto-categories > a.quarto-category.cat--serie,
+main .quarto-categories > a.quarto-category.cat--serie,
+#title-block-header .quarto-categories > a.quarto-category[href*="#serie"],
+main .quarto-categories > a.quarto-category[href*="#serie"]{
+  background:#ffc8d6 !important; border-color:#ff9db3 !important; color:#7a1833 !important;
+}
+
+#title-block-header .quarto-categories > a.quarto-category.cat--sumario,
+main .quarto-categories > a.quarto-category.cat--sumario,
+#title-block-header .quarto-categories > a.quarto-category[href*="#sumario"],
+main .quarto-categories > a.quarto-category[href*="#sumario"]{
+  background:#ffdca0 !important; border-color:#ffc56b !important; color:#663a00 !important;
+}
+
+/* ==== AJUSTES EXTRAS (clareza/contraste) — cole no FINAL do chips.css ==== */
+
+/* Borda um pouco mais grossa (ganha da base e da paleta) */
+#title-block-header .quarto-categories > .quarto-category,
+main .quarto-categories > .quarto-category{
+  border-width: 2px !important;
+  font-weight: 600; /* troque para 500 se quiser mais leve */
+}
+
+/* Hover um tiquinho mais escuro (independente das variáveis) */
+#title-block-header .quarto-categories > .quarto-category:hover,
+main .quarto-categories > .quarto-category:hover{
+  filter: brightness(0.96);
+}
+
+/* Em redução de movimento, não altere brilho no hover */
+@media (prefers-reduced-motion: reduce){
+  #title-block-header .quarto-categories > .quarto-category:hover,
+  main .quarto-categories > .quarto-category:hover{
+    filter: none;
+  }
+}
+

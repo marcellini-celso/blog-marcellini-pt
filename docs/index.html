@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -145,6 +110,8 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="assets/css/cards.css">
+<link rel="stylesheet" href="assets/css/chips.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -169,10 +136,10 @@ window.Quarto = {
 <span class="menu-text">Início</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tags-📂-categorias" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">🏷️ Tags 📂 Categorias</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explorar" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧭 Explorar</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tags-📂-categorias">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explorar">    
         <li>
     <a class="dropdown-item" href="./tags.html">
  <span class="dropdown-text">🏷️ Tags</span></a>
@@ -263,7 +230,8 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#últimos-posts" id="toc-últimos-posts" class="nav-link active" data-scroll-target="#últimos-posts">🆕 Últimos Posts</a></li>
+  <li><a href="#destaques" id="toc-destaques" class="nav-link active" data-scroll-target="#destaques">✨ Destaques</a></li>
+  <li><a href="#últimos-posts" id="toc-últimos-posts" class="nav-link" data-scroll-target="#últimos-posts">🆕 Últimos Posts</a></li>
   <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links Úteis</a></li>
   </ul>
 </nav>
@@ -314,9 +282,10 @@ window.Quarto = {
 — <em>Galileu Galilei</em></p>
 </blockquote>
 </div><div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">🎓 Cursos</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">📘 Projetos Especiais</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">🏷️ Tags e 🗂️ Categorias</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">🗺️ Mapa do Site</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">🎓 Cursos</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">📘 Projetos Especiais</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">🧭 Explorar</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">🗺️ Mapa do Site</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><em>Trilhas completas passo a passo</em></p>
 <ul>
 <li>🧮 <a href="posts/cursos/matematica/">Matemática</a></li>
 <li>📊 <a href="posts/cursos/estatistica/">Estatística</a></li>
@@ -324,9 +293,9 @@ window.Quarto = {
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ul>
-<li>🔭 <a href="./posts/fisica/guia-100-anos-mecanica-quantica.html">Série 100 Anos da Mecânica Quântica</a></li>
-<li>🧠 <a href="./posts/fisica/guia-relatividade-especial.html">Série Relatividade Especial</a></li>
-<li>🌠 <a href="./posts/fisica/guia-relatividade-geral.html">Série Relatividade Geral</a></li>
+<li>🧬 <a href="./posts/fisica/guia-100-anos-mecanica-quantica.html">Série 100 Anos da Mecânica Quântica</a></li>
+<li>🌟 <a href="./posts/fisica/guia-relatividade-especial.html">Série Relatividade Especial</a></li>
+<li>🌌 <a href="./posts/fisica/guia-relatividade-geral.html">Série Relatividade Geral</a></li>
 </ul>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
@@ -341,189 +310,88 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-</div><div class="callout callout-style-default callout-note callout-titled" title="✨ Fórmulas que Marcaram a História">
+</div>
+</div>
+<hr>
+<section id="destaques" class="level2">
+<h2 class="anchored" data-anchor-id="destaques">✨ Destaques</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="🧠 Equações Históricas (Matemática + Física)">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-✨ Fórmulas que Marcaram a História
+🧠 Equações Históricas (Matemática + Física)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Ao longo dos séculos, certas fórmulas se destacaram por sua beleza, profundidade e impacto. Este post celebra essas joias da matemática e da física.</p>
-<hr>
-<section id="a-identidade-de-euler" class="level3">
-<h3 class="anchored" data-anchor-id="a-identidade-de-euler">🧠 A Identidade de Euler</h3>
-<p><span class="math display">\[
-e^{i\pi} + 1 = 0
-\]</span></p>
-<p>Conecta os cinco números mais fundamentais da matemática em uma equação simples e elegante.</p>
-<hr>
-</section>
-<section id="a-equação-de-onda" class="level3">
-<h3 class="anchored" data-anchor-id="a-equação-de-onda">📡 A Equação de Onda</h3>
-<p><span class="math display">\[
-\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}
-\]</span></p>
-<p>Modela vibrações, sons, luz e outras ondas. Aparece naturalmente em física e equações diferenciais.</p>
-<hr>
-</section>
-<section id="a-fórmula-de-ramanujan-para-frac1pi" class="level3">
-<h3 class="anchored" data-anchor-id="a-fórmula-de-ramanujan-para-frac1pi">🔢 A Fórmula de Ramanujan para <span class="math inline">\(\frac{1}{\pi}\)</span></h3>
-<p><span class="math display">\[
-\frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^{\infty} \frac{(4k)!\,(1103 + 26390k)}{(k!)^4\,396^{4k}}
-\]</span></p>
-<p>Uma das fórmulas mais rápidas para calcular <span class="math inline">\(\pi\)</span>, descoberta por Ramanujan com intuição extraordinária.</p>
-<hr>
-<p>🔍 <a href="./posts/matematica/equacoes-historicas.html" class="button button-outline">Ver o post completo: Equações Históricas ›</a></p>
-</section>
+<p>Uma seleção de fórmulas que marcaram a ciência, como a <strong>Identidade de Euler</strong> <span class="math inline">\(e^{i\pi}+1=0\)</span> e a <strong>Equação de Onda</strong>.<br>
+<a href="./posts/matematica/equacoes-historicas.html" class="button button-outline">Explorar Equações Históricas ›</a></p>
 </div>
 </div>
-</div><div class="callout callout-style-default callout-note callout-titled" title="🌍 Distribuição Normal (Parte 1): Curso">
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="🌍 Distribuição Normal — Curso (Estatística)">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🌍 Distribuição Normal (Parte 1): Curso
+🌍 Distribuição Normal — Curso (Estatística)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<section id="importância-da-distribuição-normal" class="level2 callout-body-container callout-body">
-<h2 class="anchored" data-anchor-id="importância-da-distribuição-normal">🌍 Importância da Distribuição Normal</h2>
-<p>A distribuição normal é um modelo estatístico essencial porque descreve com precisão muitos fenômenos do mundo real — tanto naturais quanto sociais. Ela surge, sobretudo, quando <strong>várias causas aleatórias e independentes</strong> influenciam um resultado final. Nessas situações, os dados tendem a se concentrar em torno de uma média, formando a clássica curva em forma de sino.</p>
-<p>🔎 <strong>Por que isso importa?</strong><br>
-Porque a normalidade <strong>simplifica a análise estatística</strong> e viabiliza o uso de ferramentas poderosas de inferência.</p>
-<p>📌 <strong>Exemplos práticos</strong>:</p>
-<ul>
-<li><p>📚 <strong>Notas em provas padronizadas</strong>: os escores se distribuem em torno da média, com poucos alunos obtendo notas muito altas ou muito baixas.</p></li>
-<li><p>🌿 <strong>Altura de plantas</strong> de uma mesma espécie cultivadas sob condições semelhantes tende a se agrupar em torno de um valor central.</p></li>
-<li><p>📉 <strong>Retornos de ativos financeiros</strong> (ações, moedas) se aproximam de uma curva normal em períodos curtos — embora com ressalvas quanto a eventos extremos.</p></li>
-</ul>
-<p>📈 <strong>Com a suposição de normalidade, podemos</strong>:</p>
-<ul>
-<li><p>Calcular probabilidades com fórmulas e tabelas conhecidas;</p></li>
-<li><p>Estimar intervalos de confiança;</p></li>
-<li><p>Aplicar testes de hipóteses;</p></li>
-<li><p>Visualizar dados de forma clara e comparável.</p></li>
-</ul>
-<hr>
-<p>🔍 <a href="./posts/cursos/estatistica/distribuicao_normal/index.html" class="button button-outline">Ver o curso completo: Distribuição Normal (Curso) ›</a></p>
-</section>
+<div class="callout-body-container callout-body">
+<p>Por que a normalidade aparece tanto? Probabilidades, intervalos de confiança e testes — com gráficos e exercícios.<br>
+<a href="./posts/cursos/estatistica/distribuicao_normal/index.html" class="button button-outline">Ver o curso ›</a></p>
 </div>
-</div><div class="callout callout-style-default callout-note callout-titled" title="🌊🌊 Interferência de Duas Ondas">
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📘 Curso de Cálculo — Introdução">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🌊🌊 Interferência de Duas Ondas
+📘 Curso de Cálculo — Introdução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>🧠 <strong>Este exemplo mostra o poder da visualização computacional para entender fenômenos físicos e faz parte dos estudos sobre visualizações no blog.</strong></p>
-<p>Na física, a <strong>interferência</strong> ocorre quando duas ondas se encontram no espaço. O padrão resultante depende da fase relativa entre elas.</p>
-<p>A superposição de duas ondas senoidais com mesma frequência pode ser representada como:</p>
-<p><span class="math display">\[
-u(x,t) = A \sin(kx - \omega t) + A \sin(kx + \omega t)
-\]</span></p>
-<p>Essa soma resulta numa <strong>onda estacionária</strong> (que oscila mas não se propaga):</p>
-<p><span class="math display">\[
-u(x,t) = 2A \sin(kx) \cos(\omega t)
-\]</span></p>
-<p>🎬 Abaixo, veja a animação da interferência entre duas ondas idênticas que se propagam em direções opostas:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/interferencia_ondas.gif" class="img-fluid figure-img"></p>
-<figcaption>Interferência de Ondas</figcaption>
-</figure>
+<p>Um curso progressivo que combina <strong>rigor matemático</strong>, <strong>qualidade tipográfica em LaTeX</strong> e <strong>exemplos práticos em R e Python</strong>.</p>
+<p>📌 Tópicos já abordados:</p>
+<ul>
+<li>Conjuntos numéricos e propriedades fundamentais<br>
+</li>
+<li>Exercícios resolvidos passo a passo</li>
+</ul>
+<p><a href="./posts/cursos/matematica/calculo/index.html" class="button button-outline">👉 Acompanhar o Curso de Cálculo ›</a></p>
 </div>
 </div>
 </div>
-</div><div class="callout callout-style-default callout-note callout-titled" title="🌊🌊 Interferência de Duas Ondas: Código em Python">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div style="margin-top: .25rem">
+
 </div>
-<div class="callout-title-container flex-fill">
-🌊🌊 Interferência de Duas Ondas: Código em Python
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># interferencia_ondas.py</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.animation <span class="im">as</span> animation</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Domínio</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">4</span> <span class="op">*</span> np.pi, <span class="dv">1000</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>omega <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>line, <span class="op">=</span> ax.plot([], [], lw<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">'crimson'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">4</span> <span class="op">*</span> np.pi)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">2.5</span>, <span class="fl">2.5</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Interferência de Duas Ondas Opostas"</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"u(x,t)"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> init():</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    line.set_data([], [])</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> line,</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> animate(i):</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> i <span class="op">*</span> <span class="fl">0.1</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> A <span class="op">*</span> np.sin(k <span class="op">*</span> x <span class="op">-</span> omega <span class="op">*</span> t)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    y2 <span class="op">=</span> A <span class="op">*</span> np.sin(k <span class="op">*</span> x <span class="op">+</span> omega <span class="op">*</span> t)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y1 <span class="op">+</span> y2  <span class="co"># Superposição das ondas</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    line.set_data(x, y)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> line,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>ani <span class="op">=</span> animation.FuncAnimation(fig, animate, init_func<span class="op">=</span>init, frames<span class="op">=</span><span class="dv">100</span>, interval<span class="op">=</span><span class="dv">50</span>, blit<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>ani.save(<span class="st">"interferencia_ondas.gif"</span>, writer<span class="op">=</span><span class="st">'pillow'</span>, fps<span class="op">=</span><span class="dv">20</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div><div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Dica
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>👉 <a href="./posts/programacao/modelos-python-quarto.html">Ver outros exemplos em Python</a></p>
-<p>👉 <a href="./posts/programacao/modelos-r-quarto.html">Ver outros exemplos em R</a></p>
-</div>
-</div><p>🔝 <a href="./index.html">Voltar ao Topo</a></p>
-</div>
+<blockquote class="blockquote">
+<p>🔧 Exemplos programáveis:<br>
+👉 <a href="./posts/programacao/modelos-python-quarto.html">Modelos em Python</a> · 👉 <a href="./posts/programacao/modelos-r-quarto.html">Modelos em R</a></p>
+</blockquote>
 <hr>
+<p>🔝 <a href="./index.html">Voltar ao Topo</a></p>
+<hr>
+</section>
 <section id="últimos-posts" class="level2">
 <h2 class="anchored" data-anchor-id="últimos-posts">🆕 Últimos Posts</h2>
 <!-- inicio-ultimos-posts -->
 <ul>
-<li><a href="posts/programacao/index.html">👨‍💻 Programação</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">🔢 Módulo 1.2: Conjuntos Numéricos</a></li>
-<li><a href="posts/programacao/guia-programacao.html">🧭 👨‍💻 Guia de Leitura — Programação</a></li>
-<li><a href="posts/fisica/guia-fisica.html">🧭 ⚛️ Guia de Leitura — Física</a></li>
-<li><a href="posts/pessoal/guia-pessoal.html">🧭 🧑‍🏫 Guia de Leitura — Blog Pessoal</a></li>
-<li><a href="posts/pessoal/index.html">🧑‍🏫 Blog Pessoal</a></li>
-<li><a href="posts/programacao/outros-modelos-markdown.html">📘 👨‍💻 📄 Modelo de Markdown com Quarto – Parte 2</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">🧠 🔢 Módulo 1.2 AP: Conjuntos Numéricos – Aprofundamento</a></li>
-<li><a href="posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 3): Gráficos, TCL e Normalidade Aproximada</a></li>
-<li><a href="posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 2): Escore-z e Tabela Z</a> <!-- fim-ultimos-posts --></li>
+<li><a href="posts/fisica/guia-relatividade-geral.html">🧭 📚 🌠 Guia de Leitura da Série Relatividade Geral</a></li>
+<li><a href="posts/cursos/estatistica/distribuicao_normal/index.html">🎓 📊 Curso de Estatística: A Distribuição Normal</a></li>
+<li><a href="posts/cursos/matematica/calculo/index.html">🎓 Curso de Cálculo Diferencial e Integral</a></li>
+<li><a href="posts/fisica/guia-100-anos-mecanica-quantica.html">🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica</a></li>
+<li><a href="posts/fisica/relatividade-geral-parte1.html">📚 🌠 Relatividade Geral — Parte 1: O Problema da Gravidade</a> <!-- fim-ultimos-posts --></li>
 </ul>
 <blockquote class="blockquote">
 <p>Esta seção é atualizada automaticamente a cada nova publicação.</p>
@@ -556,6 +424,78 @@ Nota
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const rmDiacritics = (s) => s
+    .replace(/[ÁÀÂÃÄ]/g,'A').replace(/[áàâãä]/g,'a')
+    .replace(/[ÉÈÊË]/g,'E').replace(/[éèêë]/g,'e')
+    .replace(/[ÍÌÎÏ]/g,'I').replace(/[íìîï]/g,'i')
+    .replace(/[ÓÒÔÕÖ]/g,'O').replace(/[óòôõö]/g,'o')
+    .replace(/[ÚÙÛÜ]/g,'U').replace(/[úùûü]/g,'u')
+    .replace(/[Ç]/g,'C').replace(/[ç]/g,'c')
+    .replace(/[Ñ]/g,'N').replace(/[ñ]/g,'n');
+  const toSlug = (s) => rmDiacritics(String(s||"")).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
+  const classMap = [
+    ["matematica","cat--matematica"],
+    ["estatistica","cat--estatistica"],
+    ["fisica","cat--fisica"],
+    ["programacao","cat--programacao"],
+    ["curso","cat--curso"],
+    ["artigo","cat--artigo"],
+    ["serie","cat--serie"],
+    ["sumario","cat--sumario"],
+  ];
+
+  const enhanceWrap = (wrap, sortDedup=false) => {
+    if(!wrap) return;
+
+    if (sortDedup) {
+      const items = Array.from(wrap.querySelectorAll(':scope > .quarto-category'));
+      const seen = new Map();
+      for (const el of items) {
+        const key = el.textContent.trim().toLowerCase();
+        if (seen.has(key)) el.remove(); else seen.set(key, el);
+      }
+      const sorted = Array.from(wrap.querySelectorAll(':scope > .quarto-category'))
+        .sort((a,b)=>a.textContent.trim().localeCompare(b.textContent.trim(),'pt-BR'));
+      sorted.forEach(el => wrap.appendChild(el));
+    }
+
+    wrap.querySelectorAll(':scope > .quarto-category').forEach((el) => {
+      if (el.dataset.enhancedChip === "1") return;
+      const label = el.textContent.trim();
+      const slug  = toSlug(label);
+      const plain = rmDiacritics(label.toLowerCase());
+
+      for (const [needle, cls] of classMap) {
+        if (slug===needle || slug.includes(needle) || plain.includes(needle)) { el.classList.add(cls); break; }
+      }
+
+      let chip = el;
+      if (el.tagName !== "A") {
+        const a = document.createElement('a');
+        a.className = el.className;
+        a.textContent = label;
+        a.href = `${offset}categories.html#${slug}`;
+        chip = a;
+        el.replaceWith(a);
+      } else if (!el.getAttribute('href')) {
+        el.setAttribute('href', `${offset}categories.html#${slug}`);
+      }
+
+      chip.setAttribute('aria-label', `Ver posts em ${label}`);
+      chip.setAttribute('title', `Ver posts em ${label}`);
+      chip.dataset.enhancedChip = "1";
+    });
+  };
+
+  enhanceWrap(document.querySelector('#title-block-header .quarto-categories'), true);
+  document.querySelectorAll('main .quarto-categories').forEach(wrap => enhanceWrap(wrap, false));
+});
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -965,7 +905,7 @@ Nota
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-V2.git" target="_blank">GitHub do Projeto</a></p>
+<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></p>
 </div>
   </div>
 </footer>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="495.45px" width="230px" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 184 396.36">
+<defs>
+<pattern id="a" xlink:href="#b" patternTransform="matrix(.098162 0 0 .078864 -234.76 -58.759)"/>
+<pattern id="b" width="63.05494" patternUnits="userSpaceOnUse" patternTransform="matrix(.8 0 0 .8 44.744 -100.21)" height="63.03619">
+<path d="m60.917 60.917-60.917-60.917" stroke="#000" stroke-dasharray="6, 12" stroke-width="6" fill="none"/>
+</pattern>
+<radialGradient id="e" gradientUnits="userSpaceOnUse" cy="360.75" cx="-282.39" gradientTransform="matrix(-.82112 -.0052057 .013465 -2.1239 -519.04 1113)" r="11.306">
+<stop stop-color="#f00" offset="0"/>
+<stop stop-color="#ffd700" offset="1"/>
+</radialGradient>
+<radialGradient id="d" gradientUnits="userSpaceOnUse" cy="114.89" cx="103.05" gradientTransform="matrix(1 0 0 1.0257 0 -2.9512)" r="5.606">
+<stop stop-color="#f00" offset="0"/>
+<stop stop-color="#800000" offset="1"/>
+</radialGradient>
+</defs>
+<rect fill-rule="evenodd" height="264.06" width="184" y="132.3" x=".012199" fill="#000039"/>
+<rect fill-rule="evenodd" height="122.59" width="183.2" stroke="#000039" y=".41093" x=".4165" stroke-width=".8" fill="#e1f3ff"/>
+<g id="c" transform="translate(2.4605 .99693)">
+<path d="m94.509 43.847c-6.372 11.455-12.018 28.739-10.827 41.724" stroke="#000" stroke-dasharray="1.36, 2.72" stroke-width="1.36" fill="none"/>
+<g stroke="#00008f">
+<path stroke-width="6" fill="none" d="m171.87 77.444-13.11-25.524-37.93 2.888m12.38 68.232 24.53-40.009 15.27 39.789m-15.51-39.174 0.06-40.487" transform="matrix(.8 0 0 .8 0 -.000011512)"/>
+<path stroke-linejoin="round" d="m166.28 30.736c0 4.645-3.76 8.411-8.41 8.411s-8.41-3.766-8.41-8.411 3.76-8.41 8.41-8.41 8.41 3.765 8.41 8.41z" fill-rule="evenodd" transform="matrix(.97366 0 0 .97377 -29.892 -4.1486)" stroke-width="4.9296" fill="#ffbfbf"/>
+</g>
+<path d="m108.66 114.89c0 3.18-2.51 5.75-5.6 5.75-3.101 0-5.612-2.57-5.612-5.75s2.511-5.75 5.612-5.75c3.09 0 5.6 2.57 5.6 5.75z" fill-rule="evenodd" transform="matrix(.96134 0 0 .96134 -15.545 -17.841)" fill="url(#d)"/>
+</g>
+<rect fill-rule="evenodd" height="24" width="183.22" stroke="#808080" y="99.399" x=".40231" stroke-width=".8" fill="#933a00"/>
+<rect fill-rule="evenodd" height="24" width="183.22" stroke="#808080" y="99.399" x=".40231" stroke-width=".8" fill="url(#a)"/>
+<rect height="49.312" width="49.281" y="-100.5" x="44.481" fill="none"/>
+<rect height="122.59" width="183.2" stroke="#000039" y=".41093" x=".4165" stroke-width=".8" fill="none"/>
+<path fill="#fff" d="m64.526 200.36-21.658 83.24 74.252 19.31 21.65-83.23z"/>
+<use xlink:href="#c" transform="matrix(.96778 .2518 -.2518 .96778 -3.4331 169.1)" height="396.3615" width="187.1552" y="0" x="0"/>
+<path fill="#008f8f" d="m117.31 145.89c-1.31-0.31-2.96 0.73-5.27 2.97l-50.591 45.25-28.018 108.96 30.989 8.06-16.057 26.17 38.256 9.95-1.411-30.71 30.962 8.05 28.32-108.87-23.93-64.64c-0.96-3.19-1.94-4.87-3.25-5.19zm-52.736 54.48 74.196 19.31-21.65 83.22-74.278-19.32z"/>
+<g transform="matrix(.96778 .2518 -.2518 .96778 425.65 85.999)">
+<path d="m-291.57 338.21h17.86c5.27 11.77 2.49 24.56-5.95 35.63-1.56 2.04-4.72 1.93-5.96 0-7.07-11.04-10.53-22.86-5.95-35.63z" fill="url(#e)"/>
+</g>
+</svg>

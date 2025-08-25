@@ -133,6 +133,8 @@ window.Quarto = {
 };
 </script><link rel="stylesheet" href="../../../../../styles.css">
 <link rel="stylesheet" href="../../../../../assets/css/custom.css">
+<link rel="stylesheet" href="../../../../../assets/css/cards.css">
+<link rel="stylesheet" href="../../../../../assets/css/chips.css">
 </head>
 <body class="nav-fixed quarto-light">
 
@@ -154,10 +156,10 @@ window.Quarto = {
 <span class="menu-text">Início</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tags-📂-categorias" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">🏷️ Tags 📂 Categorias</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explorar" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧭 Explorar</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tags-📂-categorias">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explorar">
 <li>
     <a class="dropdown-item" href="../../../../../tags.html">
  <span class="dropdown-text">🏷️ Tags</span></a>
@@ -295,7 +297,7 @@ window.Quarto = {
   <ul class="collapse">
 <li><a href="#interpreta%C3%A7%C3%A3o-1" id="toc-interpretação-1" class="nav-link" data-scroll-target="#interpreta%C3%A7%C3%A3o-1"><span class="header-section-number">1.16.1</span> 🔍 Interpretação:</a></li>
   <li><a href="#por-que-%C3%A9-%C3%BAtil" id="toc-por-que-é-útil" class="nav-link" data-scroll-target="#por-que-%C3%A9-%C3%BAtil"><span class="header-section-number">1.16.2</span> 🎯 Por que é útil?</a></li>
-  <li><a href="#resumo-visual-interpretando-o-escore-z" id="toc-resumo-visual-interpretando-o-escore-z" class="nav-link" data-scroll-target="#resumo-visual-interpretando-o-escore-z"><span class="header-section-number">1.16.3</span> 📊 Resumo Visual: Interpretando o Escore-(z)</a></li>
+  <li><a href="#resumo-visual-interpretando-o-escore-z" id="toc-resumo-visual-interpretando-o-escore-z" class="nav-link" data-scroll-target="#resumo-visual-interpretando-o-escore-z"><span class="header-section-number">1.16.3</span> 📊 Resumo Visual: Interpretando o Escore-<span class="math inline">\(z\)</span></a></li>
   </ul>
 </li>
   <li>
@@ -1218,7 +1220,8 @@ z = \frac{x - \mu}{\sigma} = \frac{120 - 100}{16} = 1{,}25
 <li>Comparar valores entre <strong>distribuições com médias e desvios diferentes</strong>.</li>
 </ul>
 <hr></section><section id="resumo-visual-interpretando-o-escore-z" class="level3" data-number="1.16.3"><h3 data-number="1.16.3" class="anchored" data-anchor-id="resumo-visual-interpretando-o-escore-z">
-<span class="header-section-number">1.16.3</span> 📊 Resumo Visual: Interpretando o Escore-(z)</h3>
+<span class="header-section-number">1.16.3</span> 📊 Resumo Visual: Interpretando o Escore-<span class="math inline">\(z\)</span>
+</h3>
 <p>Suponha que <span class="math inline">\(x = 124\)</span>, com média <span class="math inline">\(\mu = 100\)</span> e desvio padrão <span class="math inline">\(\sigma = 16\)</span>.<br>
 O escore-<span class="math inline">\(z\)</span> é calculado como:</p>
 <p><span class="math display">\[
@@ -1638,7 +1641,77 @@ Nota
 </ul>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const rmDiacritics = (s) => s
+    .replace(/[ÁÀÂÃÄ]/g,'A').replace(/[áàâãä]/g,'a')
+    .replace(/[ÉÈÊË]/g,'E').replace(/[éèêë]/g,'e')
+    .replace(/[ÍÌÎÏ]/g,'I').replace(/[íìîï]/g,'i')
+    .replace(/[ÓÒÔÕÖ]/g,'O').replace(/[óòôõö]/g,'o')
+    .replace(/[ÚÙÛÜ]/g,'U').replace(/[úùûü]/g,'u')
+    .replace(/[Ç]/g,'C').replace(/[ç]/g,'c')
+    .replace(/[Ñ]/g,'N').replace(/[ñ]/g,'n');
+  const toSlug = (s) => rmDiacritics(String(s||"")).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
+  const classMap = [
+    ["matematica","cat--matematica"],
+    ["estatistica","cat--estatistica"],
+    ["fisica","cat--fisica"],
+    ["programacao","cat--programacao"],
+    ["curso","cat--curso"],
+    ["artigo","cat--artigo"],
+    ["serie","cat--serie"],
+    ["sumario","cat--sumario"],
+  ];
+
+  const enhanceWrap = (wrap, sortDedup=false) => {
+    if(!wrap) return;
+
+    if (sortDedup) {
+      const items = Array.from(wrap.querySelectorAll(':scope > .quarto-category'));
+      const seen = new Map();
+      for (const el of items) {
+        const key = el.textContent.trim().toLowerCase();
+        if (seen.has(key)) el.remove(); else seen.set(key, el);
+      }
+      const sorted = Array.from(wrap.querySelectorAll(':scope > .quarto-category'))
+        .sort((a,b)=>a.textContent.trim().localeCompare(b.textContent.trim(),'pt-BR'));
+      sorted.forEach(el => wrap.appendChild(el));
+    }
+
+    wrap.querySelectorAll(':scope > .quarto-category').forEach((el) => {
+      if (el.dataset.enhancedChip === "1") return;
+      const label = el.textContent.trim();
+      const slug  = toSlug(label);
+      const plain = rmDiacritics(label.toLowerCase());
+
+      for (const [needle, cls] of classMap) {
+        if (slug===needle || slug.includes(needle) || plain.includes(needle)) { el.classList.add(cls); break; }
+      }
+
+      let chip = el;
+      if (el.tagName !== "A") {
+        const a = document.createElement('a');
+        a.className = el.className;
+        a.textContent = label;
+        a.href = `${offset}categories.html#${slug}`;
+        chip = a;
+        el.replaceWith(a);
+      } else if (!el.getAttribute('href')) {
+        el.setAttribute('href', `${offset}categories.html#${slug}`);
+      }
+
+      chip.setAttribute('aria-label', `Ver posts em ${label}`);
+      chip.setAttribute('title', `Ver posts em ${label}`);
+      chip.dataset.enhancedChip = "1";
+    });
+  };
+
+  enhanceWrap(document.querySelector('#title-block-header .quarto-categories'), true);
+  document.querySelectorAll('main .quarto-categories').forEach(wrap => enhanceWrap(wrap, false));
+});
+</script><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -2046,7 +2119,7 @@ Nota
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-V2.git" target="_blank">GitHub do Projeto</a></p>
+<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></p>
 </div>
   </div>
 </footer>

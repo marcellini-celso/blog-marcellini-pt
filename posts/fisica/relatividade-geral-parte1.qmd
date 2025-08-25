@@ -2,7 +2,7 @@
 title: "📚 🌠 Relatividade Geral — Parte 1: O Problema da Gravidade"
 description: "Entenda por que a gravidade precisou ser reinventada. Neste post, exploramos os limites da teoria de Newton, o papel da Relatividade Especial e o princípio da equivalência que levou Einstein à formulação da Relatividade Geral."
 author: "Blog do Marcellini"
-date: 2025-07-20
+date: 2025-08-20
 lang: pt-BR
 categories: [física, relatividade, relatividade geral, gravidade, einstein, princípio da equivalência, série]
 tags: [física, relatividade, relatividade geral, gravidade, einstein, princípio da equivalência, série]
@@ -355,7 +355,7 @@ $$
 ::: {.callout-note collapse=true title="Queda Livre no Vácuo: Código em Python"}
 
 
-```{python}
+```{python queda livre}
 import matplotlib.pyplot as plt
 import numpy as np
 

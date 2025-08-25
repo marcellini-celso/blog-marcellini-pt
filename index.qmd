@@ -52,174 +52,52 @@ O objetivo é explorar ideias profundas com **simplicidade**, **intuição** e *
 
 {{< include /_includes/menu-principal.qmd >}}
 
-
-::: {.callout-note collapse=true title="✨ Fórmulas que Marcaram a História"}
-
-Ao longo dos séculos, certas fórmulas se destacaram por sua beleza, profundidade e impacto. Este post celebra essas joias da matemática e da física.
+:::
 
 ---
 
-### 🧠 A Identidade de Euler
+## ✨ Destaques
 
-$$
-e^{i\pi} + 1 = 0
-$$
+::: {.callout-note collapse=true title="🧠 Equações Históricas (Matemática + Física)"}
+Uma seleção de fórmulas que marcaram a ciência, como a **Identidade de Euler** \(e^{i\pi}+1=0\) e a **Equação de Onda**.  
+[Explorar Equações Históricas ›](posts/matematica/equacoes-historicas.qmd){.button .button-outline}
+:::
 
-Conecta os cinco números mais fundamentais da matemática em uma equação simples e elegante.
+::: {.callout-note collapse=true title="🌍 Distribuição Normal — Curso (Estatística)"}
+Por que a normalidade aparece tanto? Probabilidades, intervalos de confiança e testes — com gráficos e exercícios.  
+[Ver o curso ›](posts/cursos/estatistica/distribuicao_normal/index.qmd){.button .button-outline}
+:::
+
+::: {.callout-note collapse=true title="📘 Curso de Cálculo — Introdução"}
+Um curso progressivo que combina **rigor matemático**, **qualidade tipográfica em LaTeX** e **exemplos práticos em R e Python**.
+
+📌 Tópicos já abordados:
+
+- Conjuntos numéricos e propriedades fundamentais  
+- Exercícios resolvidos passo a passo  
+
+[👉 Acompanhar o Curso de Cálculo ›](posts/cursos/matematica/calculo/index.qmd){.button .button-outline}
+:::
+
+<div style="margin-top: .25rem"></div>
+
+> 🔧 Exemplos programáveis:  
+> 👉 [Modelos em Python](posts/programacao/modelos-python-quarto.qmd) · 👉 [Modelos em R](posts/programacao/modelos-r-quarto.qmd)
 
 ---
-
-### 📡 A Equação de Onda
-
-$$
-\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2}
-$$
-
-Modela vibrações, sons, luz e outras ondas. Aparece naturalmente em física e equações diferenciais.
-
----
-
-### 🔢 A Fórmula de Ramanujan para $\frac{1}{\pi}$
-
-$$
-\frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^{\infty} \frac{(4k)!\,(1103 + 26390k)}{(k!)^4\,396^{4k}}
-$$
-
-Uma das fórmulas mais rápidas para calcular $\pi$, descoberta por Ramanujan com intuição extraordinária.
-
----
-
-🔍 [Ver o post completo: Equações Históricas ›](posts/matematica/equacoes-historicas.qmd){.button .button-outline}
-
-:::
-
-
-::: {.callout-note collapse=true title="🌍 Distribuição Normal (Parte 1): Curso"}
-
-## 🌍 Importância da Distribuição Normal
-
-A distribuição normal é um modelo estatístico essencial porque descreve com precisão muitos fenômenos do mundo real — tanto naturais quanto sociais. Ela surge, sobretudo, quando **várias causas aleatórias e independentes** influenciam um resultado final. Nessas situações, os dados tendem a se concentrar em torno de uma média, formando a clássica curva em forma de sino.
-
-🔎 **Por que isso importa?**  
-Porque a normalidade **simplifica a análise estatística** e viabiliza o uso de ferramentas poderosas de inferência.
-
-📌 **Exemplos práticos**:
-
-- 📚 **Notas em provas padronizadas**: os escores se distribuem em torno da média, com poucos alunos obtendo notas muito altas ou muito baixas.
-
-- 🌿 **Altura de plantas** de uma mesma espécie cultivadas sob condições semelhantes tende a se agrupar em torno de um valor central.
-
-- 📉 **Retornos de ativos financeiros** (ações, moedas) se aproximam de uma curva normal em períodos curtos — embora com ressalvas quanto a eventos extremos.
-
-📈 **Com a suposição de normalidade, podemos**:
-
-- Calcular probabilidades com fórmulas e tabelas conhecidas;
-
-- Estimar intervalos de confiança;
-
-- Aplicar testes de hipóteses;
-
-- Visualizar dados de forma clara e comparável.
-
----
-
-🔍 [Ver o curso completo: Distribuição Normal (Curso) ›](posts/cursos/estatistica/distribuicao_normal/index.qmd){.button .button-outline}
-
-:::
-
-
-::: {.callout-note collapse=true title="🌊🌊 Interferência de Duas Ondas"}
-
-🧠 **Este exemplo mostra o poder da visualização computacional para entender fenômenos físicos e faz parte dos estudos sobre visualizações no blog.**
-
-Na física, a **interferência** ocorre quando duas ondas se encontram no espaço. O padrão resultante depende da fase relativa entre elas.
-
-A superposição de duas ondas senoidais com mesma frequência pode ser representada como:
-
-$$
-u(x,t) = A \sin(kx - \omega t) + A \sin(kx + \omega t)
-$$
-
-Essa soma resulta numa **onda estacionária** (que oscila mas não se propaga):
-
-$$
-u(x,t) = 2A \sin(kx) \cos(\omega t)
-$$
-
-🎬 Abaixo, veja a animação da interferência entre duas ondas idênticas que se propagam em direções opostas:
-
-![Interferência de Ondas](images/interferencia_ondas.gif)
-
-:::
-
-::: {.callout-note collapse=true title="🌊🌊 Interferência de Duas Ondas: Código em Python"}
-
-```python
-# interferencia_ondas.py
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-
-# Domínio
-x = np.linspace(0, 4 * np.pi, 1000)
-A = 1
-k = 2
-omega = 2
-
-fig, ax = plt.subplots(figsize=(8, 4))
-line, = ax.plot([], [], lw=2, color='crimson')
-ax.set_xlim(0, 4 * np.pi)
-ax.set_ylim(-2.5, 2.5)
-ax.set_title("Interferência de Duas Ondas Opostas")
-ax.set_xlabel("x")
-ax.set_ylabel("u(x,t)")
-ax.grid(True)
-
-def init():
-    line.set_data([], [])
-    return line,
-
-def animate(i):
-    t = i * 0.1
-    y1 = A * np.sin(k * x - omega * t)
-    y2 = A * np.sin(k * x + omega * t)
-    y = y1 + y2  # Superposição das ondas
-    line.set_data(x, y)
-    return line,
-
-ani = animation.FuncAnimation(fig, animate, init_func=init, frames=100, interval=50, blit=True)
-ani.save("interferencia_ondas.gif", writer='pillow', fps=20)
-```
-
-:::
-
-::: {.callout-tip}
-👉 [Ver outros exemplos em Python](posts/programacao/modelos-python-quarto.qmd)
-
-👉 [Ver outros exemplos em R](posts/programacao/modelos-r-quarto.qmd)
-:::
 
 🔝 [Voltar ao Topo](index.qmd)
-
-
-:::
-
 
 ---
 
 ## 🆕 Últimos Posts
 
 <!-- inicio-ultimos-posts -->
-- [👨‍💻 Programação](posts/programacao/index.html)
-- [🔢 Módulo 1.2: Conjuntos Numéricos](posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html)
-- [🧭 👨‍💻 Guia de Leitura — Programação](posts/programacao/guia-programacao.html)
-- [🧭 ⚛️ Guia de Leitura — Física](posts/fisica/guia-fisica.html)
-- [🧭 🧑‍🏫 Guia de Leitura — Blog Pessoal](posts/pessoal/guia-pessoal.html)
-- [🧑‍🏫 Blog Pessoal](posts/pessoal/index.html)
-- [📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 2](posts/programacao/outros-modelos-markdown.html)
-- [🧠 🔢 Módulo 1.2 AP: Conjuntos Numéricos -- Aprofundamento](posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html)
-- [🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 3): Gráficos, TCL e Normalidade Aproximada](posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html)
-- [🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 2): Escore-z e Tabela Z](posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html)
+- [🧭 📚 🌠 Guia de Leitura da Série Relatividade Geral](posts/fisica/guia-relatividade-geral.html)
+- [🎓 📊 Curso de Estatística: A Distribuição Normal](posts/cursos/estatistica/distribuicao_normal/index.html)
+- [🎓 Curso de Cálculo Diferencial e Integral](posts/cursos/matematica/calculo/index.html)
+- [🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica](posts/fisica/guia-100-anos-mecanica-quantica.html)
+- [📚 🌠 Relatividade Geral — Parte 1: O Problema da Gravidade](posts/fisica/relatividade-geral-parte1.html)
 <!-- fim-ultimos-posts -->
 
 > Esta seção é atualizada automaticamente a cada nova publicação.

@@ -12,7 +12,7 @@ website:
     left:
       - href: index.qmd
         text: Início
-      - text: "🏷️ Tags 📂 Categorias"
+      - text: "🧭 Explorar"
         menu:
           - text: "🏷️ Tags"
             href: tags.qmd
@@ -51,7 +51,7 @@ website:
     left: "© 2025 - Blog do Marcellini"
     right: >
       📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)<br>
-      💻 <a href="https://github.com/marcellini-celso/blog-marcellini-V2.git" target="_blank">GitHub do Projeto</a>
+      💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 
 format:
   html:
@@ -59,10 +59,14 @@ format:
     css: 
       - styles.css
       - assets/css/custom.css
+      - assets/css/cards.css
+      - assets/css/chips.css
     toc: true
     toc-title: "Nesta página"
     highlight-style: github
     include-in-header: analytics.html
+    include-after-body:
+      - assets/js/enhance-categories.js
 
 search: true
 
@@ -71,5 +75,7 @@ publish:
 
 resources:
   - posts.json
+  - images/**
 
+from: markdown+tex_math_dollars+tex_math_single_backslash
 
