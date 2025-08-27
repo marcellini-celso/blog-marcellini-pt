@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.">
-<title>🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 3): Gráficos, TCL e Normalidade Aproximada – Blog do Marcellini</title>
+<meta name="description" content="Fundamentos visuais e teóricos: histogramas, Q-Q plots, Lei dos Grandes Números e Teorema Central do Limite como base para a normalidade aproximada.">
+<title>🎓📊 Distribuição Normal — Parte 3: Gráficos, TCL e Normalidade Aproximada – Blog do Marcellini</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +73,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -243,13 +244,13 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Neste post</h2>
    
   <ul>
 <li>
-<a href="#a-distribui%C3%A7%C3%A3o-normal-parte-3" id="toc-a-distribuição-normal-parte-3" class="nav-link active" data-scroll-target="#a-distribui%C3%A7%C3%A3o-normal-parte-3"><span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal – Parte 3</a>
+<a href="#distribui%C3%A7%C3%A3o-normal-parte-3" id="toc-distribuição-normal-parte-3" class="nav-link active" data-scroll-target="#distribui%C3%A7%C3%A3o-normal-parte-3"><span class="header-section-number">1</span> 🎓📊 Distribuição Normal — Parte 3</a>
   <ul class="collapse">
-<li><a href="#complementos-entendendo-a-normalidade-no-mundo-real" id="toc-complementos-entendendo-a-normalidade-no-mundo-real" class="nav-link" data-scroll-target="#complementos-entendendo-a-normalidade-no-mundo-real"><span class="header-section-number">1.1</span> 🧠 Complementos: Entendendo a Normalidade no Mundo Real</a></li>
+<li><a href="#complementos-entendendo-a-normalidade-no-mundo-real" id="toc-complementos-entendendo-a-normalidade-no-mundo-real" class="nav-link" data-scroll-target="#complementos-entendendo-a-normalidade-no-mundo-real"><span class="header-section-number">1.1</span> 🧠 Complementos — Entendendo a Normalidade no Mundo Real</a></li>
   <li><a href="#o-que-%C3%A9-uma-distribui%C3%A7%C3%A3o-aproximadamente-normal" id="toc-o-que-é-uma-distribuição-aproximadamente-normal" class="nav-link" data-scroll-target="#o-que-%C3%A9-uma-distribui%C3%A7%C3%A3o-aproximadamente-normal"><span class="header-section-number">1.2</span> 📈 ❓ O que é uma Distribuição Aproximadamente Normal?</a></li>
   <li><a href="#o-que-%C3%A9-um-gr%C3%A1fico-q-q-plot" id="toc-o-que-é-um-gráfico-q-q-plot" class="nav-link" data-scroll-target="#o-que-%C3%A9-um-gr%C3%A1fico-q-q-plot"><span class="header-section-number">1.3</span> 📈 ❓ O que é um Gráfico Q-Q Plot?</a></li>
   <li><a href="#passo-a-passo-para-gerar-os-gr%C3%A1ficos-no-rstudio" id="toc-passo-a-passo-para-gerar-os-gráficos-no-rstudio" class="nav-link" data-scroll-target="#passo-a-passo-para-gerar-os-gr%C3%A1ficos-no-rstudio"><span class="header-section-number">1.4</span> 🧭 Passo a Passo para Gerar os Gráficos no RStudio</a></li>
@@ -267,12 +268,11 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 3): Gráficos, TCL e Normalidade Aproximada</h1>
+<h1 class="title">🎓📊 Distribuição Normal — Parte 3: Gráficos, TCL e Normalidade Aproximada</h1>
   <div class="quarto-categories">
     <div class="quarto-category">estatística</div>
     <div class="quarto-category">distribuição normal</div>
     <div class="quarto-category">cursos</div>
-    <div class="quarto-category">exercícios</div>
     <div class="quarto-category">teorema central do limite</div>
     <div class="quarto-category">lei dos grandes números</div>
     <div class="quarto-category">normalidade aproximada</div>
@@ -281,7 +281,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.
+    Fundamentos visuais e teóricos: histogramas, Q-Q plots, Lei dos Grandes Números e Teorema Central do Limite como base para a normalidade aproximada.
   </div>
 </div>
 
@@ -307,207 +307,206 @@ window.Quarto = {
   
 
 
-</header><hr>
-<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊</a></p>
-<p><a href="../../../../../posts/cursos/estatistica/index.html">← Voltar para os Cursos de Estatística 🎓 📊</a></p>
-<p><a href="../../../../../posts/estatistica/">← Voltar para a Seção de Estatística 📊</a></p>
+</header><!-- Breadcrumbs --><p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/estatistica/index.html">← Cursos de Estatística</a> · <a href="../../../../../posts/estatistica/index.html">← Seção de Estatística</a></p>
 <hr>
-<div class="quarto-figure quarto-figure-center" style="margin-bottom: 2rem;">
-<figure class="figure"><p><img src="../images/curva-normal-fundo-preto.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Distribuição Normal</figcaption></figure>
-</div>
-<section id="a-distribuição-normal-parte-3" class="level1" data-number="1"><h1 data-number="1">
-<span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal – Parte 3</h1>
-<p>Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
+<p><img src="../images/curva-normal-fundo-preto.png" class="img-fluid" style="margin-bottom:1.25rem;;width:100.0%" alt="Curva da distribuição normal (Gauss), simétrica em torno da média."></p>
+<section id="distribuição-normal-parte-3" class="level1" data-number="1"><h1 data-number="1">
+<span class="header-section-number">1</span> 🎓📊 Distribuição Normal — Parte 3</h1>
+<p>Nesta parte, abordaremos a <strong>avaliação da normalidade de dados reais</strong>, tanto de forma <strong>visual</strong> (histogramas, Q-Q plots) quanto <strong>teórica</strong> (Lei dos Grandes Números e Teorema Central do Limite). A normalidade aproximada é a ponte entre análise descritiva e inferência estatística.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📌 Objetivos do Post
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><strong>📌 Objetivos deste post</strong></p>
 <ul>
-<li>A identificar variáveis que seguem uma distribuição aproximadamente normal.</li>
-<li>A reconhecer que a normalidade é uma suposição chave para muitos métodos estatísticos.</li>
-<li>A utilizar gráficos como histogramas e diagramas de probabilidade normal (Q-Q plots) para avaliar a normalidade dos dados.</li>
-<li>A interpretar os resultados da análise de normalidade de forma prática e aplicada.</li>
+<li>Identificar variáveis que seguem aproximadamente a distribuição normal.<br>
+</li>
+<li>Reconhecer que a normalidade é uma <strong>suposição-chave</strong> para muitos métodos estatísticos.<br>
+</li>
+<li>Utilizar gráficos (histogramas, Q-Q plots) para avaliar a normalidade dos dados.<br>
+</li>
+<li>Interpretar de forma prática e aplicada os resultados da análise de normalidade.<br>
+</li>
 </ul>
 </div>
 </div>
-<hr>
 <section id="complementos-entendendo-a-normalidade-no-mundo-real" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="complementos-entendendo-a-normalidade-no-mundo-real">
-<span class="header-section-number">1.1</span> 🧠 Complementos: Entendendo a Normalidade no Mundo Real</h2>
-<p>Nesta parte, baseados no livro <strong>Statistics for Managers Using Microsoft Excel (Levine et al.)</strong>, exploraremos conceitos importantes sobre quando e como a distribuição normal pode ser utilizada como uma aproximação válida em contextos reais.</p>
+<span class="header-section-number">1.1</span> 🧠 Complementos — Entendendo a Normalidade no Mundo Real</h2>
+<p>Nesta parte, com base em <strong>Levine et al., <em>Statistics for Managers Using Microsoft Excel</em></strong>, exploramos quando e como a <strong>distribuição normal</strong> pode ser utilizada como uma <strong>aproximação válida</strong> em contextos reais.</p>
 <p><strong>🎯 Objetivos:</strong></p>
 <ul>
-<li><p>Entender as condições em que variáveis aleatórias podem ser tratadas como aproximadamente normais.</p></li>
-<li><p>Reconhecer a importância da normalidade para inferência estatística.</p></li>
-<li><p>Utilizar critérios práticos e gráficos para avaliar a normalidade de dados.</p></li>
+<li>Compreender em que condições variáveis podem ser tratadas como <strong>aproximadamente normais</strong>.<br>
+</li>
+<li>Reconhecer a importância da normalidade para métodos de <strong>inferência estatística</strong>.<br>
+</li>
+<li>Utilizar critérios práticos e gráficos para avaliar a normalidade dos dados.</li>
 </ul>
 <p>🧠 <strong>Vamos aprofundar nossa compreensão!</strong></p>
 <hr></section><section id="o-que-é-uma-distribuição-aproximadamente-normal" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="o-que-é-uma-distribuição-aproximadamente-normal">
 <span class="header-section-number">1.2</span> 📈 ❓ O que é uma Distribuição Aproximadamente Normal?</h2>
-<p><strong>Distribuições aproximadamente normais</strong> são variáveis que, mesmo sem seguirem perfeitamente a forma da curva normal, apresentam características suficientes para que métodos estatísticos baseados na normalidade sejam aplicáveis.</p>
-<p>👉 <strong>Principais características:</strong></p>
+<p>Chamamos de <strong>distribuições aproximadamente normais</strong> aquelas variáveis que, mesmo sem seguir exatamente a curva normal, apresentam características suficientes para que métodos estatísticos baseados na normalidade sejam aplicados.</p>
+<p>👉 <strong>Características principais:</strong></p>
 <ul>
-<li><p>Forma de sino (bell-shaped) e simetria em torno da média.</p></li>
-<li><p>Maior concentração de dados próximos da média, com poucas observações extremas.</p></li>
-<li><p>A maioria dos valores dentro de 1 ou 2 desvios-padrão da média.</p></li>
+<li>Forma de <strong>sino</strong> (<em>bell-shaped</em>) e simetria em torno da média.<br>
+</li>
+<li>Maior concentração de observações próximas da média, com poucas ocorrências extremas.<br>
+</li>
+<li>A maioria dos valores concentrada dentro de <strong>1 a 2 desvios-padrão</strong> da média.</li>
 </ul>
-<p><strong>❗ Importante:</strong></p>
+<p>❗ <strong>Observações importantes:</strong></p>
 <ul>
-<li><p>Nem toda variável precisa ser perfeitamente normal para usar testes estatísticos.</p></li>
-<li><p>Pequenas assimetrias ou irregularidades geralmente são toleráveis.</p></li>
-<li><p>Nem toda distribuição real é perfeitamente normal.</p></li>
-<li><p>Muitas variáveis são <strong>aproximadamente normais</strong>.</p></li>
-<li><p>Altura de adultos, tempos de atendimento, processos industriais.</p></li>
+<li>Nem toda variável precisa ser <strong>perfeitamente normal</strong> para que possamos aplicar testes estatísticos.<br>
+</li>
+<li>
+<strong>Pequenas assimetrias</strong> ou irregularidades geralmente são toleráveis.<br>
+</li>
+<li>Muitas distribuições reais não são exatamente normais, mas sim <strong>aproximadamente normais</strong>.</li>
+</ul>
+<p>📌 <strong>Exemplos típicos:</strong></p>
+<ul>
+<li>Altura de adultos.<br>
+</li>
+<li>Tempos de atendimento em serviços.<br>
+</li>
+<li>Processos industriais sob controle estatístico.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 📈 📝 Exemplos de Distribuições: Normais e Não Normais
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><strong>📈 Exemplos de variáveis aproximadamente normais:</strong></p>
+<p><strong>✅ Variáveis aproximadamente normais:</strong></p>
 <ul>
-<li><p>Altura de adultos de uma mesma população.</p></li>
-<li><p>Tempo de atendimento em serviços padronizados.</p></li>
-<li><p>Erros de medição sob condições controladas.</p></li>
+<li>Altura de adultos de uma mesma população.<br>
+</li>
+<li>Tempo de atendimento em serviços padronizados.<br>
+</li>
+<li>Erros de medição sob condições controladas.</li>
 </ul>
-<p><strong>📈 Exemplos de variáveis não normalmente distribuídas:</strong></p>
+<p><strong>❌ Variáveis não normalmente distribuídas:</strong></p>
 <ul>
-<li><p>Renda de famílias (tendência à direita - distribuição assimétrica positiva).</p></li>
-<li><p>Número de filhos por família (discreta, assimétrica).</p></li>
-<li><p>Tempo de vida de equipamentos eletrônicos (pode ter cauda longa à direita).</p></li>
+<li>Renda de famílias (tendência à direita — assimetria positiva).<br>
+</li>
+<li>Número de filhos por família (discreta, assimétrica).<br>
+</li>
+<li>Tempo de vida de equipamentos eletrônicos (cauda longa à direita).</li>
 </ul>
-<p>📌 <strong>Observação:</strong></p>
-<ul>
-<li>Algumas variáveis podem se aproximar de uma normalidade após transformações (ex.: logaritmo, raiz quadrada).</li>
-</ul>
+<p>📌 <strong>Observação:</strong><br>
+Algumas variáveis podem se aproximar da normalidade após <strong>transformações</strong>, como logaritmo ou raiz quadrada.</p>
 </div>
 </div>
-</div>
+<hr>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 📈 📝 Exemplos Reais de Normalidade Aproximada
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><strong>📈 Exemplos de variáveis com distribuição aproximadamente normal:</strong></p>
+<p><strong>Exemplos de variáveis com distribuição aproximadamente normal:</strong></p>
 <ul>
-<li><p>Alturas de estudantes universitários.</p></li>
-<li><p>Tempos de atendimento telefônico em call centers padronizados.</p></li>
-<li><p>Pesos de recém-nascidos em hospitais.</p></li>
-<li><p>Notas em testes padronizados (como exames de proficiência).</p></li>
-<li><p>Erros de medição em experimentos físicos controlados.</p></li>
-<li><p>Idades de aposentadoria em grandes populações.</p></li>
+<li>Alturas de estudantes universitários.<br>
+</li>
+<li>Tempos de atendimento telefônico em <em>call centers</em> padronizados.<br>
+</li>
+<li>Pesos de recém-nascidos em hospitais.<br>
+</li>
+<li>Notas em testes padronizados (ex.: exames de proficiência).<br>
+</li>
+<li>Erros de medição em experimentos físicos controlados.<br>
+</li>
+<li>Idades de aposentadoria em grandes populações.</li>
 </ul>
-<blockquote class="blockquote">
-<p>❗ <strong>Importante:</strong> Mesmo que a distribuição real não seja perfeitamente normal, uma aproximação normal geralmente é suficiente para aplicações práticas e inferências estatísticas.</p>
-</blockquote>
-</div>
+<p>❗ <strong>Importante:</strong><br>
+Mesmo que a distribuição real não seja <strong>perfeitamente normal</strong>, uma aproximação normal geralmente é suficiente para aplicações práticas e inferências estatísticas.</p>
 </div>
 </div>
 </section><section id="o-que-é-um-gráfico-q-q-plot" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="o-que-é-um-gráfico-q-q-plot">
 <span class="header-section-number">1.3</span> 📈 ❓ O que é um Gráfico Q-Q Plot?</h2>
-<p>📈 <strong>Q-Q Plot (Quantile-Quantile Plot)</strong> é um gráfico utilizado para comparar a distribuição dos dados amostrais com uma distribuição teórica, geralmente a normal.</p>
+<p>📊 O <strong>Q-Q Plot (Quantile–Quantile Plot)</strong> é um gráfico usado para comparar a distribuição de dados amostrais com uma distribuição teórica — geralmente a <strong>normal</strong>.</p>
 <p>🎯 <strong>Objetivos:</strong></p>
 <ul>
-<li><p>Avaliar se os dados seguem aproximadamente uma distribuição normal.</p></li>
-<li><p>Identificar desvios como assimetrias ou caudas pesadas.</p></li>
+<li>Avaliar se os dados seguem aproximadamente uma distribuição normal.<br>
+</li>
+<li>Identificar desvios relevantes, como <strong>assimetrias</strong> ou <strong>caudas pesadas</strong>.</li>
 </ul>
 <p>🔎 <strong>Como interpretar:</strong></p>
 <ul>
-<li><p>Se os pontos se alinham próximos de uma linha reta, os dados são aproximadamente normais.</p></li>
-<li><p>Desvios sistemáticos indicam assimetria ou distribuição não normal.</p></li>
-</ul>
-<p>📌 <strong>Observação:</strong></p>
-<ul>
+<li>Se os pontos se alinham próximos a uma <strong>linha reta diagonal</strong>, os dados são aproximadamente normais.<br>
+</li>
 <li>
-<strong>Q-Q Plots</strong> são especialmente úteis em amostras grandes, onde pequenas imperfeições são toleradas.</li>
+<strong>Desvios sistemáticos</strong> (curvaturas ou caudas afastadas) indicam falta de normalidade.</li>
 </ul>
+<p>📌 <strong>Observação:</strong><br>
+O Q-Q Plot é especialmente útil em <strong>amostras grandes</strong>, pois pequenas imperfeições são esperadas e não comprometem a interpretação global.</p>
+<hr>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📈 📝 Exemplo Visual: Histograma de uma Distribuição Normal
+📈 📝 Exemplo Visual — Histograma de uma Distribuição Normal
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>👉 <strong>Situação:</strong></p>
 <ul>
-<li><p>Uma amostra de 200 alturas de adultos foi coletada.</p></li>
-<li><p>A média observada foi de 170 cm e o desvio padrão de 8 cm .</p></li>
+<li>Amostra de 200 alturas de adultos.<br>
+</li>
+<li>Média observada: <span class="math inline">\(170\)</span> cm.<br>
+</li>
+<li>Desvio padrão observado: <span class="math inline">\(8\)</span> cm.</li>
 </ul>
 <p>📈 <strong>Gráfico:</strong></p>
-<div class="quarto-figure quarto-figure-center" style="margin-bottom: 2rem;">
-<figure class="figure"><p><img src="../images/histograma_normal.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Histograma das Alturas (Normal Aproximada)</figcaption></figure>
-</div>
+<p><img src="../images/histograma_normal.png" class="img-fluid" style="margin-bottom: 1.25rem;;width:100.0%" alt="Histograma de 200 alturas de adultos, com média 170 e desvio padrão 8, mostrando formato de sino."></p>
 <blockquote class="blockquote">
-<p><strong>Gráficos gerados no R com 200 observações simuladas de uma distribuição normal ( <span class="math inline">\(\mu=170, \sigma=8\)</span> ).</strong></p>
+<p>Gráfico gerado no R a partir de 200 observações simuladas de <span class="math inline">\(X \sim \mathcal N(170,\,8^2)\)</span>.</p>
 </blockquote>
-<p>🔎 <strong>Interpretação:</strong></p>
-<p>👉 <strong>O histograma apresenta formato de sino, simétrico em torno da média.</strong></p>
-<blockquote class="blockquote">
-<ul>
-<li>Pequenas variações são esperadas, mas a aproximação à distribuição normal é boa.</li>
-</ul>
-</blockquote>
-</div>
+<p>🔎 <strong>Interpretação:</strong><br>
+O histograma apresenta <strong>formato de sino</strong>, simétrico em torno da média.<br>
+Pequenas variações são esperadas, mas a aproximação à distribuição normal é <strong>muito boa</strong>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📈 📝 Exemplo Visual: Gráfico Q-Q Plot (Levine)
+📈 📝 Exemplo Visual — Gráfico Q-Q Plot (Levine)
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>👉 <strong>Situação:</strong></p>
-<ul>
-<li>A mesma amostra de alturas foi utilizada para construir o Q-Q plot.</li>
-</ul>
-<p>📈 Gráfico:</p>
-<div class="quarto-figure quarto-figure-center" style="margin-bottom: 2rem;">
-<figure class="figure"><p><img src="../images/qqplot_normal.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Q-Q Plot das Alturas</figcaption></figure>
-</div>
+<p>👉 <strong>Situação:</strong><br>
+A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\; \sigma=8\)</span>) foi utilizada para construir o <strong>Q-Q plot</strong>.</p>
+<p>📈 <strong>Gráfico:</strong></p>
+<p><img src="../images/qqplot_normal.png" class="img-fluid" style="margin-bottom:1.25rem;;width:100.0%" alt="Q-Q Plot de 200 alturas simuladas de uma distribuição normal com média 170 e desvio padrão 8."></p>
 <blockquote class="blockquote">
-<p><strong>Gráficos gerados no R com 200 observações simuladas de uma distribuição normal ( <span class="math inline">\(\mu=170, \sigma=8\)</span> ).</strong></p>
+<p>Gráfico gerado no R com 200 observações simuladas de <span class="math inline">\(X \sim \mathcal N(170,\,8^2)\)</span>.</p>
 </blockquote>
 <p>🔎 <strong>Interpretação:</strong></p>
-<p>Se os pontos se alinham aproximadamente sobre a linha reta, a distribuição é aproximadamente normal.</p>
-<blockquote class="blockquote">
 <ul>
-<li>Pequenas flutuações são aceitáveis em amostras reais.</li>
+<li>Quando os pontos se alinham aproximadamente sobre a linha reta, concluímos que a distribuição é <strong>aproximadamente normal</strong>.<br>
+</li>
+<li>
+<strong>Pequenas flutuações</strong> são esperadas em amostras reais e não invalidam a análise.<br>
+</li>
 </ul>
-</blockquote>
-</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Gerando Gráficos em R: Histograma e Q-Q Plot">
@@ -773,28 +772,41 @@ Atividade 1: Gerando e Interpretando Novos Gráficos no RStudio
 </ul>
 <hr></section></section><section id="referências" class="level1" data-number="2"><h1 data-number="2">
 <span class="header-section-number">2</span> 📚 Referências</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
-<li>Schmuller, Joseph. <em>Statistical Analysis with Excel® For Dummies®</em>, <span class="math inline">\(5^{\underline{a}}\)</span> Edição. John Wiley &amp; Sons, 2016.<br>
+<li>Schmuller, Joseph. <em>Statistical Analysis with Excel® For Dummies®</em>, 5ª ed.&nbsp;Wiley, 2016.<br>
 </li>
-<li>Schmuller, Joseph. <em>Análise Estatística com R Para Leigos</em>, <span class="math inline">\(2^{\underline{a}}\)</span> Edição. Alta Books, 2021.<br>
+<li>Schmuller, Joseph. <em>Análise Estatística com R Para Leigos</em>, 2ª ed.&nbsp;Alta Books, 2021.<br>
 </li>
-<li>Levine, David M.; Stephan, David; Szabat, Kathryn A. <em>Statistics for Managers Using Microsoft Excel</em>, <span class="math inline">\(8^{\underline{a}}\)</span> Edição. Pearson, 2017.<br>
+<li>Levine, D. M.; Stephan, D.; Szabat, K. A. <em>Statistics for Managers Using Microsoft Excel</em>, 8ª ed.&nbsp;Pearson, 2017.<br>
 </li>
-<li>Morettin, Luiz Gonzaga. <em>Estatística Básica: Probabilidade e Inferência</em>, <span class="math inline">\(7^{\underline{\mathrm{a}}}\)</span> Edição. Pearson, 2017.<br>
+<li>Morettin, L. G. <em>Estatística Básica: Probabilidade e Inferência</em>, 7ª ed.&nbsp;Pearson, 2017.<br>
 </li>
-<li>Morettin, Pedro Alberto; Bussab, Wilton de Oliveira. <em>Estatística Básica</em>, <span class="math inline">\(10^{\underline{a}}\)</span> Edição. São Paulo: SaraivaUni, 2023.</li>
+<li>Morettin, P. A.; Bussab, W. O. <em>Estatística Básica</em>, 10ª ed.&nbsp;SaraivaUni, 2023.</li>
 </ul>
+</div>
+</div>
+</div>
 <hr></section><section id="acesso-rápido-às-partes-do-curso" class="level1" data-number="3"><h1 data-number="3">
 <span class="header-section-number">3</span> 🔗 Acesso Rápido às Partes do Curso</h1>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html">Parte 1: Introdução à Distribuição Normal</a></p>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">Parte 2: Escore-z e Tabela Z</a></p>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">Parte 3: Gráficos, TCL e Normalidade Aproximada</a>(👉 Você está aqui!)</p>
+<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html">Parte 1: Introdução à Distribuição Normal</a><br>
+🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">Parte 2: Escore-z e Tabela Z</a><br>
+🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">Parte 3: Gráficos, TCL e Normalidade Aproximada</a> <strong>(👉 você está aqui!)</strong></p>
 <hr>
-<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊</a></p>
-<p><a href="../../../../../posts/cursos/estatistica/index.html">← Voltar para os Cursos de Estatística 🎓 📊</a></p>
-<p><a href="../../../../../posts/estatistica/">← Voltar para a Seção de Estatística 📊</a></p>
+<!-- Breadcrumbs --><p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/estatistica/index.html">← Cursos de Estatística</a> · <a href="../../../../../posts/estatistica/index.html">← Seção de Estatística</a></p>
 <hr>
-<p>🔝 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">Voltar ao Topo</a></p>
+<p>🔝 <a href="#top">Voltar ao Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Estatística com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -807,17 +819,17 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p>📌 Criado por Blog do Marcellini com ❤️ e código.</p>
 </div>
 </div>
 </section><section id="links-úteis" class="level1" data-number="4"><h1 data-number="4">
 <span class="header-section-number">4</span> 🔗 Links Úteis</h1>
 <ul>
-<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a>
+<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a><br>
 </li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">Repositório no GitHub</a><br>
 </li>
-<li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a>
+<li>📬 <a href="mailto:prof.marcellini@gmail.com">Entre em contato por e-mail</a>
 </li>
 </ul>
 
@@ -1306,4 +1318,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </footer>
 
 
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

@@ -7,47 +7,69 @@ lang: pt-BR
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     fig-align: center
     code-overflow: scroll
     highlight-style: github
+    code-link: true
 page-layout: full
 categories: [programação, R, sumário de R, sumário, Quarto]
 tags: [programação, R, sumário de R, sumário, Quarto]
 ---
 
----
-
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-# 📘 📄 📊 Artigos e Reflexões
+## 📚 Séries e Projetos (relacionados)
 
-## [📘 📄 📊 Modelos R para Quarto](../modelos-r-quarto.qmd)
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="📊 Modelos em R (Quarto)"}
+Snippets e exemplos para estatística, visualizações e relatórios reprodutíveis.
+
+[Ver a série ›](../modelos-r-quarto.qmd){.button .button-outline}
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="🧭 Guia de Programação"}
+Trilha sugerida com ordem progressiva de leitura.
+
+[Ir para o guia ›](../guia-programacao.qmd){.button .button-outline}
+:::
+:::
+:::
+
+## 📘 📄 📊 Artigos e Reflexões
+
+### [📘 📄 📊 Modelos R para Quarto](../modelos-r-quarto.qmd)
 Uso da linguagem R em documentos Quarto, com foco em análise de dados, gráficos e reprodutibilidade.
 
-# 🧭 📘 📄 📊 Guia de Leitura
+## 🧭 📘 📄 📊 Guia de Leitura
 
-1. **[📘 📄 📊 Modelos R para Quarto](../modelos-r-quarto.qmd)** — Inicie com este material para aprender a usar R no contexto do Quarto e criar documentos interativos e bem estruturados.
+1. **[📘 📄 📊 Modelos R para Quarto](../modelos-r-quarto.qmd)** — Inicie por aqui para aprender a usar R no Quarto e criar documentos interativos e bem estruturados.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
 
-# 🔗 Links Úteis
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
 
-- 🧑‍🏫 [Sobre o Blog](../../../posts/pessoal/sobre-o-blog.qmd)
+## 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](../../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

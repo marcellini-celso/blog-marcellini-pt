@@ -1,6 +1,6 @@
 ---
 title: "🎓 Curso de Cálculo Diferencial e Integral"
-description: "Introdução ao curso de Cálculo com teoria, aplicações e muitos exemplos resolvidos."
+description: "Introdução ao Cálculo com teoria elegante (LaTeX), visual Quarto e exemplos em R/Python — com trilhas de Aprofundamento (AP)."
 author: "Blog do Marcellini"
 date: "2025-08-23"
 lang: pt-BR
@@ -19,96 +19,97 @@ format:
 page-layout: full
 ---
 
----
-
-[← Voltar para os Cursos de Matemática 🎓 🧮](../index.qmd)
-
-[← Voltar para a Seção de Matemática 🧮](../../../matematica/index.qmd)
+<!-- Breadcrumbs -->
+[← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](../../../matematica/index.qmd)
 
 ---
 
-<div style="display: flex; gap: 1em; justify-content: center;">
-  <figure style="width: 45%; text-align: center;">
-    <img src="images/500px-GodfreyKneller-IsaacNewton-1689.jpeg" alt="Isaac Newton" style="width: 100%;">
+<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start;flex-wrap:wrap;">
+  <figure style="width:340px;text-align:center;margin:.25rem;">
+    <img src="images/500px-GodfreyKneller-IsaacNewton-1689.jpeg"
+         alt="Retrato de Isaac Newton, um dos fundadores do Cálculo" style="width:100%;border-radius:12px;">
     <figcaption><strong>Isaac Newton</strong></figcaption>
   </figure>
-  <figure style="width: 45%; text-align: center;">
-    <img src="images/Gottfried_Wilhelm_von_Leibniz.jpeg" alt="Gottfried Leibniz" style="width: 100%;">
+  <figure style="width:340px;text-align:center;margin:.25rem;">
+    <img src="images/Gottfried_Wilhelm_von_Leibniz.jpeg"
+         alt="Retrato de Gottfried Wilhelm Leibniz, um dos fundadores do Cálculo" style="width:100%;border-radius:12px;">
     <figcaption><strong>Gottfried Wilhelm Leibniz</strong></figcaption>
   </figure>
 </div>
 
-# 🎓 Curso de Cálculo Diferencial e Integral
+# 🧮 Bem-vindo ao Curso
 
-::: {.callout-note title="🧮 Bem-vindo ao Curso de Cálculo!"}
-Este curso foi cuidadosamente desenvolvido para estudantes que desejam dominar o **Cálculo Diferencial e Integral** de forma clara, visual e aplicada. Aqui, você encontrará uma introdução sólida à teoria, acompanhada de exemplos práticos e diversas aplicações reais que facilitam o entendimento — com o apoio de ferramentas computacionais modernas para visualizações, simulações e resolução de problemas.
-
-::: {.callout-tip} 
-
-Além disso, todos os módulos incluem um **módulo extra de aprofundamento (AP)**, com tópicos mais avançados e discussões teóricas adicionais, que podem ser omitidas em uma primeira leitura, conforme o ritmo e interesse do estudante.
-
+::: callout-note
+Este curso foi planejado para dominar **Limites, Derivadas e Integrais** com **rigor**, **visualizações** e **exercícios resolvidos**, integrando **LaTeX**, **Quarto**, **R** e **Python**.
 :::
 
-
+::: callout-tip
+**Trilhas AP (Aprofundamento).** Cada módulo inclui uma trilha **AP** com tópicos mais avançados que podem ser lidos depois, sem quebrar o fluxo principal.
 :::
 
+## 📘 Objetivos
+- Desenvolver raciocínio matemático em limites, derivadas e integrais;
+- Apresentar aplicações (Física, Engenharia, Economia, Computação);
+- Explorar solução de problemas com gráficos e ferramentas computacionais.
 
-## 📘 Objetivos do Curso
+## 🧩 Pré-requisitos rápidos  {.unnumbered}
+- Álgebra básica: manipulação algébrica, inequações, fatoração;
+- Noções de funções e gráficos cartesianos;
+- Conforto com notação matemática (∑, ε–δ aparecerá nos AP).
 
-- Desenvolver o raciocínio matemático necessário para trabalhar com limites, derivadas e integrais;
-- Apresentar aplicações do cálculo na Física, Engenharia, Economia e Computação;
-- Explorar técnicas de resolução de problemas com apoio de gráficos e ferramentas computacionais.
+## 📚 Sumário do Curso  {.unnumbered}
 
-## 📚 Estrutura dos Módulos
+::: panel-tabset
+## 🔹 Módulo 1 — Fundamentos de Cálculo
+- [1.1 O que é Cálculo? História e aplicações](modulo-1/1.1-introducao.qmd)  
+- [1.2 Conjuntos Numéricos](modulo-1/1.2-conjuntos.qmd)  
+- [1.2 AP — Conjuntos Numéricos (Aprofundamento)](modulo-1/1.2-conjuntos-ap.qmd)  
+- 1.3 Intervalos e Inequações *(em produção)*  
+- 1.4 Funções: definição, domínio e imagem *(em produção)*  
+- 1.5 Gráficos de funções e transformações *(em produção)*  
+- 1.6 Funções elementares *(em produção)*  
+- 1.7 Limites: definição e propriedades *(em produção)*  
+- 1.8 Limites laterais e infinitos *(em produção)*  
+- 1.9 Continuidade *(em produção)*  
 
-### 🔹 Módulo 1 — Fundamentos de Cálculo
-- [1.1 O que é Cálculo? História e aplicações](modulo-1/1.1-introducao.qmd)
-- [1.2 Conjuntos Numéricos](modulo-1/1.2-conjuntos.qmd)
-- [1.2 AP Conjuntos Numéricos -- Aprofundamento](modulo-1/1.2-conjuntos-ap.qmd)
-- 1.3 Intervalos e Inequações
-- 1.4 Funções: definição, domínio e imagem
-- 1.5 Gráficos de funções e transformações
-- 1.6 Funções elementares
-- 1.7 Limites: definição e propriedades
-- 1.8 Limites laterais e infinitos
-- 1.9 Continuidade
+## 🔹 Módulo 2 — Derivadas
+- Definição de derivada *(em produção)*  
+- Regras de derivação *(em produção)*  
+- Aplicações: máximos, mínimos e otimização *(em produção)*  
+- Derivadas implícitas e logarítmicas *(em produção)*  
 
-### 🔹 Módulo 2 — Derivadas
-- Definição de derivada
-- Regras de derivação
-- Aplicações: máximos, mínimos e otimização
-- Derivadas implícitas e logarítmicas
+## 🔹 Módulo 3 — Integrais
+- Integral definida e indefinida *(em produção)*  
+- Técnicas de integração *(em produção)*  
+- Áreas e volumes *(em produção)*  
+- Aplicações físicas *(em produção)*  
 
-### 🔹 Módulo 3 — Integrais
-- Integral definida e indefinida
-- Técnicas de integração
-- Áreas e volumes
-- Aplicações físicas
+## 🔹 Módulo 4 — Tópicos Avançados e Aplicações
+- Equações diferenciais *(em produção)*  
+- Séries de Taylor *(em produção)*  
+- Modelagem com cálculo *(em produção)*  
+- Ferramentas computacionais *(em produção)*  
+:::
 
-### 🔹 Módulo 4 — Tópicos Avançados e Aplicações
-- Equações diferenciais
-- Séries de Taylor
-- Modelagem com cálculo
-- Ferramentas computacionais
+## 🚀 Como estudar
+- Siga a ordem sugerida. Leia a **ideia central** antes da prova formal.  
+- Resolva os **exercícios propostos** e, depois, confira o **gabarito comentado**.  
+- Rode os **scripts R/Python** (pasta `code/`) para explorar os exemplos.  
+- Use os tópicos **AP** para aprofundar conceitos sem perder o ritmo.
 
-## 🚀 Como acompanhar o curso
-
-- Os posts são numerados por módulos e tópicos (ex: 1.2, 2.4...);
-- Cada post contém explicação teórica, exemplos resolvidos, exercícios e visualizações;
-- Acompanhe as novidades do blog:
-
-  👉  [🎓 📚 Blog do Marcellini](https://blogdomarcellini.com.br)
-
-  👉  [📸 Instagram](https://www.instagram.com/profmarcellini/)
+> **Código:** os scripts R e Python ficam em `posts/cursos/matematica/calculo/code/` e são incluídos nas aulas.
+>
+> **Padrão do projeto:** gráficos gerados por scripts `.py`/`.R` dedicados (fora do `.qmd`) para facilitar reuso e rastreabilidade.
 
 ---
 
 # 📚 Referências
-
-- Anton, Howard; Bivens, Irl; Davis, Stephen. *Cálculo - Volume I*, $10^{\underline{a}}$ Edição. Bookman, 2014.  
-- Courant, Richard; John, Fritz. *Introduction to Calculus and Analysis - Volume I*. John Wiley and Sons, 1965.  
-- Guidorizzi, Hamilton Luiz. *Um Curso de Cálculo - Volume 1*, $5^{\underline{a}}$ Edição. LTC, 2001.  
-- Lima, Elon Lages. *Curso de Análise - Volume 1*, $11^{\underline{\mathrm{a}}}$ Edição. IMPA, 2004.
+- Anton, Howard; Bivens, Irl; Davis, Stephen. *Cálculo - Volume I*, 10ª ed. Bookman, 2014.
+- Courant, Richard; John, Fritz. *Introduction to Calculus and Analysis - Volume I*. Wiley, 1965.
+- Guidorizzi, Hamilton Luiz. *Um Curso de Cálculo - Volume 1*, 5ª ed. LTC, 2001. 
+- Leithold, Louis. *O Cálculo com Geometria Analítica - Volume 1*, 3ª ed. Harbra, 1994.  
+- Lima, Elon Lages. *Curso de Análise - Volume 1*, 11ª ed. IMPA, 2004.
+- Simmons, George F. *Calculus With Analytic Geometry*, 2ª ed. McGraw-Hill, 1985. 
 
 ---
 
@@ -116,25 +117,13 @@ Além disso, todos os módulos incluem um **módulo extra de aprofundamento (AP)
 
 ---
 
-[← Voltar para os Cursos de Matemática 🎓 🧮](../index.qmd)
-
-[← Voltar para a Seção de Matemática 🧮](../../../matematica/index.qmd)
-
----
-
-🔝 [Voltar ao Topo](index.qmd)
+[← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](../../../matematica/index.qmd) · 🔝 [Topo](index.qmd)
 
 ---
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 
-:::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+::: callout-note
+Criado por Blog do Marcellini com ❤️ e código.
 :::
-
-# 🔗 Links Úteis
-
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
-- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
-- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

@@ -9,7 +9,7 @@ tags: [pessoal, sumário do blog pessoal, sumário, sobre, sobre o blog, sobre m
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,24 +19,39 @@ format:
 page-layout: full
 ---
 
----
+## 📚 Séries e Textos
 
-# 📘 🧑‍🏫 Artigos e Reflexões
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="📘 🧑‍🏫 Sobre Mim & Sobre o Blog"}
+Propósito, estrutura editorial e bastidores do projeto.
 
-## [📘 🧑‍🏫 Sobre Mim e Sobre o Blog](sobre-o-blog.qmd)
-Apresentação do propósito, estrutura e linha editorial do Blog do Marcellini.
+[Ir para o texto ›](sobre-o-blog.qmd){.button .button-outline}
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="🧭 Guia do Blog Pessoal"}
+Trilha sugerida de leitura com ordem progressiva.
 
-Breve apresentação do autor, formação, interesses e motivações.
+[Ver o guia ›](guia-pessoal.qmd){.button .button-outline}
+:::
+:::
+:::
 
-# 🧭 📘 🧑‍🏫 Guia de Leitura
+## 📘 🧑‍🏫 Artigos e Reflexões
 
-1. **[🧭 📊 Guia de Leitura da Seção de Blog Pessoal](guia-pessoal.qmd)** — A proposta é compartilhar uma ordem de leitura sugerida, combinando cursos, artigos e textos autorais de forma estruturada — da introdução ao aprofundamento — sempre com rigor conceitual e uma linguagem acessível.
+### [📘 🧑‍🏫 Sobre Mim e Sobre o Blog](sobre-o-blog.qmd)
+Apresentação do propósito, estrutura e linha editorial, além de uma breve apresentação do autor (formação, interesses e motivações).
+
+## 🧭 🧑‍🏫 Guia de Leitura
+
+1. **[🧭 🧑‍🏫 Guia de Leitura — Blog Pessoal](guia-pessoal.qmd)** — Ordem de leitura sugerida, combinando textos autorais e bastidores com foco em clareza e rigor.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
@@ -46,9 +61,9 @@ Breve apresentação do autor, formação, interesses e motivações.
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

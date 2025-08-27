@@ -73,7 +73,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -247,7 +248,7 @@ window.Quarto = {
    
   <ul>
 <li>
-<a href="#a-distribui%C3%A7%C3%A3o-normal-parte-1" id="toc-a-distribuição-normal-parte-1" class="nav-link active" data-scroll-target="#a-distribui%C3%A7%C3%A3o-normal-parte-1"><span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal – Parte 1</a>
+<a href="#a-distribui%C3%A7%C3%A3o-normal-parte-1" id="toc-a-distribuição-normal-parte-1" class="nav-link active" data-scroll-target="#a-distribui%C3%A7%C3%A3o-normal-parte-1"><span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal — Parte 1</a>
   <ul class="collapse">
 <li>
 <a href="#curva-normal-padr%C3%A3o" id="toc-curva-normal-padrão" class="nav-link" data-scroll-target="#curva-normal-padr%C3%A3o"><span class="header-section-number">1.1</span> 📏 Curva Normal Padrão</a>
@@ -275,76 +276,75 @@ window.Quarto = {
 </li>
   <li><a href="#regra-emp%C3%ADrica-aplicada-%C3%A0-distribui%C3%A7%C3%A3o-de-qi" id="toc-regra-empírica-aplicada-à-distribuição-de-qi" class="nav-link" data-scroll-target="#regra-emp%C3%ADrica-aplicada-%C3%A0-distribui%C3%A7%C3%A3o-de-qi"><span class="header-section-number">1.8</span> 📐 Regra Empírica Aplicada à Distribuição de QI</a></li>
   <li><a href="#exemplo-com-c%C3%B3digo-python-visualizando-a-regra-emp%C3%ADrica" id="toc-exemplo-com-código-python-visualizando-a-regra-empírica" class="nav-link" data-scroll-target="#exemplo-com-c%C3%B3digo-python-visualizando-a-regra-emp%C3%ADrica"><span class="header-section-number">1.9</span> 🧪 Exemplo com Código Python: Visualizando a Regra Empírica</a></li>
-  <li><a href="#visualiza%C3%A7%C3%A3o-com-ggplot2-r" id="toc-visualização-com-ggplot2-r" class="nav-link" data-scroll-target="#visualiza%C3%A7%C3%A3o-com-ggplot2-r"><span class="header-section-number">1.10</span> 📊 Visualização com <code>ggplot2</code> (R)</a></li>
   <li>
-<a href="#fundamento-da-regra-emp%C3%ADrica" id="toc-fundamento-da-regra-empírica" class="nav-link" data-scroll-target="#fundamento-da-regra-emp%C3%ADrica"><span class="header-section-number">1.11</span> 📐 Fundamento da Regra Empírica</a>
+<a href="#fundamento-da-regra-emp%C3%ADrica" id="toc-fundamento-da-regra-empírica" class="nav-link" data-scroll-target="#fundamento-da-regra-emp%C3%ADrica"><span class="header-section-number">1.10</span> 📐 Fundamento da Regra Empírica</a>
   <ul class="collapse">
-<li><a href="#fun%C3%A7%C3%A3o-densidade-da-normal-padr%C3%A3o" id="toc-função-densidade-da-normal-padrão" class="nav-link" data-scroll-target="#fun%C3%A7%C3%A3o-densidade-da-normal-padr%C3%A3o"><span class="header-section-number">1.11.1</span> 🔢 Função densidade da normal padrão</a></li>
+<li><a href="#fun%C3%A7%C3%A3o-densidade-da-normal-padr%C3%A3o" id="toc-função-densidade-da-normal-padrão" class="nav-link" data-scroll-target="#fun%C3%A7%C3%A3o-densidade-da-normal-padr%C3%A3o"><span class="header-section-number">1.10.1</span> 🔢 Função densidade da normal padrão</a></li>
   </ul>
 </li>
-  <li><a href="#fun%C3%A7%C3%B5es-para-distribui%C3%A7%C3%A3o-normal-excel-e-r" id="toc-funções-para-distribuição-normal-excel-e-r" class="nav-link" data-scroll-target="#fun%C3%A7%C3%B5es-para-distribui%C3%A7%C3%A3o-normal-excel-e-r"><span class="header-section-number">1.12</span> Funções para Distribuição Normal: Excel e R</a></li>
-  <li><a href="#exemplo-pr%C3%A1tico-com-r" id="toc-exemplo-prático-com-r" class="nav-link" data-scroll-target="#exemplo-pr%C3%A1tico-com-r"><span class="header-section-number">1.13</span> Exemplo Prático com R</a></li>
-  <li><a href="#exemplo-pr%C3%A1tico-probabilidade-de-qi-abaixo-de-120" id="toc-exemplo-prático-probabilidade-de-qi-abaixo-de-120" class="nav-link" data-scroll-target="#exemplo-pr%C3%A1tico-probabilidade-de-qi-abaixo-de-120"><span class="header-section-number">1.14</span> Exemplo Prático – Probabilidade de QI abaixo de 120</a></li>
+  <li><a href="#fun%C3%A7%C3%B5es-para-distribui%C3%A7%C3%A3o-normal-excel-e-r" id="toc-funções-para-distribuição-normal-excel-e-r" class="nav-link" data-scroll-target="#fun%C3%A7%C3%B5es-para-distribui%C3%A7%C3%A3o-normal-excel-e-r"><span class="header-section-number">1.11</span> Funções para Distribuição Normal: Excel e R</a></li>
+  <li><a href="#exemplo-pr%C3%A1tico-com-r" id="toc-exemplo-prático-com-r" class="nav-link" data-scroll-target="#exemplo-pr%C3%A1tico-com-r"><span class="header-section-number">1.12</span> Exemplo Prático com R</a></li>
+  <li><a href="#exemplo-pr%C3%A1tico-probabilidade-de-qi-abaixo-de-120" id="toc-exemplo-prático-probabilidade-de-qi-abaixo-de-120" class="nav-link" data-scroll-target="#exemplo-pr%C3%A1tico-probabilidade-de-qi-abaixo-de-120"><span class="header-section-number">1.13</span> Exemplo Prático – Probabilidade de QI abaixo de 120</a></li>
   <li>
-<a href="#exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z" id="toc-exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z" class="nav-link" data-scroll-target="#exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z"><span class="header-section-number">1.15</span> Exemplo: Resolvendo sem Excel ou R — Usando o Escore-<span class="math inline">\(z\)</span></a>
+<a href="#exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z" id="toc-exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z" class="nav-link" data-scroll-target="#exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z"><span class="header-section-number">1.14</span> Exemplo: Resolvendo sem Excel ou R — Usando o Escore-<span class="math inline">\(z\)</span></a>
   <ul class="collapse">
-<li><a href="#passo-1-padroniza%C3%A7%C3%A3o-com-o-escore-z" id="toc-passo-1-padronização-com-o-escore-z" class="nav-link" data-scroll-target="#passo-1-padroniza%C3%A7%C3%A3o-com-o-escore-z"><span class="header-section-number">1.15.1</span> 🧮 Passo 1: Padronização com o escore-<span class="math inline">\(z\)</span></a></li>
-  <li><a href="#passo-2-consulta-%C3%A0-tabela-z" id="toc-passo-2-consulta-à-tabela-z" class="nav-link" data-scroll-target="#passo-2-consulta-%C3%A0-tabela-z"><span class="header-section-number">1.15.2</span> 📖 Passo 2: Consulta à Tabela Z</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#entendendo-o-escore-z" id="toc-entendendo-o-escore-z" class="nav-link" data-scroll-target="#entendendo-o-escore-z"><span class="header-section-number">1.16</span> 📏 Entendendo o Escore-<span class="math inline">\(z\)</span></a>
-  <ul class="collapse">
-<li><a href="#interpreta%C3%A7%C3%A3o-1" id="toc-interpretação-1" class="nav-link" data-scroll-target="#interpreta%C3%A7%C3%A3o-1"><span class="header-section-number">1.16.1</span> 🔍 Interpretação:</a></li>
-  <li><a href="#por-que-%C3%A9-%C3%BAtil" id="toc-por-que-é-útil" class="nav-link" data-scroll-target="#por-que-%C3%A9-%C3%BAtil"><span class="header-section-number">1.16.2</span> 🎯 Por que é útil?</a></li>
-  <li><a href="#resumo-visual-interpretando-o-escore-z" id="toc-resumo-visual-interpretando-o-escore-z" class="nav-link" data-scroll-target="#resumo-visual-interpretando-o-escore-z"><span class="header-section-number">1.16.3</span> 📊 Resumo Visual: Interpretando o Escore-<span class="math inline">\(z\)</span></a></li>
+<li><a href="#passo-1-padroniza%C3%A7%C3%A3o-com-o-escore-z" id="toc-passo-1-padronização-com-o-escore-z" class="nav-link" data-scroll-target="#passo-1-padroniza%C3%A7%C3%A3o-com-o-escore-z"><span class="header-section-number">1.14.1</span> 🧮 Passo 1: Padronização com o escore-<span class="math inline">\(z\)</span></a></li>
+  <li><a href="#passo-2-consulta-%C3%A0-tabela-z" id="toc-passo-2-consulta-à-tabela-z" class="nav-link" data-scroll-target="#passo-2-consulta-%C3%A0-tabela-z"><span class="header-section-number">1.14.2</span> 📖 Passo 2: Consulta à Tabela Z</a></li>
   </ul>
 </li>
   <li>
-<a href="#c%C3%A1lculos-com-tabela-z-r-e-excel" id="toc-cálculos-com-tabela-z-r-e-excel" class="nav-link" data-scroll-target="#c%C3%A1lculos-com-tabela-z-r-e-excel"><span class="header-section-number">1.17</span> 🧮 Cálculos com Tabela Z, R e Excel</a>
+<a href="#entendendo-o-escore-z" id="toc-entendendo-o-escore-z" class="nav-link" data-scroll-target="#entendendo-o-escore-z"><span class="header-section-number">1.15</span> 📏 Entendendo o Escore-<span class="math inline">\(z\)</span></a>
   <ul class="collapse">
-<li><a href="#exemplo-1-%C3%A1rea-acumulada-at%C3%A9-z-15" id="toc-exemplo-1-área-acumulada-até-z-15" class="nav-link" data-scroll-target="#exemplo-1-%C3%A1rea-acumulada-at%C3%A9-z-15"><span class="header-section-number">1.17.1</span> 🔹 Exemplo 1 — Área acumulada até <span class="math inline">\(z = 1{,}5\)</span></a></li>
-  <li><a href="#exemplo-2-%C3%A1rea-entre--15-z-15" id="toc-exemplo-2-área-entre--15-z-15" class="nav-link" data-scroll-target="#exemplo-2-%C3%A1rea-entre--15-z-15"><span class="header-section-number">1.17.2</span> 🔹 Exemplo 2 — Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span></a></li>
-  <li><a href="#exemplo-3-%C3%A1rea-%C3%A0-direita-de-z-15" id="toc-exemplo-3-área-à-direita-de-z-15" class="nav-link" data-scroll-target="#exemplo-3-%C3%A1rea-%C3%A0-direita-de-z-15"><span class="header-section-number">1.17.3</span> 🔹 Exemplo 3 — Área à direita de <span class="math inline">\(z = 1{,}5\)</span></a></li>
+<li><a href="#interpreta%C3%A7%C3%A3o-1" id="toc-interpretação-1" class="nav-link" data-scroll-target="#interpreta%C3%A7%C3%A3o-1"><span class="header-section-number">1.15.1</span> 🔍 Interpretação:</a></li>
+  <li><a href="#por-que-%C3%A9-%C3%BAtil" id="toc-por-que-é-útil" class="nav-link" data-scroll-target="#por-que-%C3%A9-%C3%BAtil"><span class="header-section-number">1.15.2</span> 🎯 Por que é útil?</a></li>
+  <li><a href="#resumo-visual-interpretando-o-escore-z" id="toc-resumo-visual-interpretando-o-escore-z" class="nav-link" data-scroll-target="#resumo-visual-interpretando-o-escore-z"><span class="header-section-number">1.15.3</span> 📊 Resumo Visual: Interpretando o Escore-<span class="math inline">\(z\)</span></a></li>
   </ul>
 </li>
   <li>
-<a href="#quadro-resumo-c%C3%A1lculos-com-escore-z" id="toc-quadro-resumo-cálculos-com-escore-z" class="nav-link" data-scroll-target="#quadro-resumo-c%C3%A1lculos-com-escore-z"><span class="header-section-number">1.18</span> 🧾 Quadro-Resumo — Cálculos com Escore-<span class="math inline">\(z\)</span></a>
+<a href="#c%C3%A1lculos-com-tabela-z-r-e-excel" id="toc-cálculos-com-tabela-z-r-e-excel" class="nav-link" data-scroll-target="#c%C3%A1lculos-com-tabela-z-r-e-excel"><span class="header-section-number">1.16</span> 🧮 Cálculos com Tabela Z, R e Excel</a>
   <ul class="collapse">
-<li><a href="#%C3%A1rea-at%C3%A9-z-15" id="toc-área-até-z-15" class="nav-link" data-scroll-target="#%C3%A1rea-at%C3%A9-z-15"><span class="header-section-number">1.18.1</span> 🔵 Área até <span class="math inline">\(z = 1{,}5\)</span></a></li>
-  <li><a href="#%C3%A1rea-entre--15-z-15-1" id="toc-área-entre--15-z-15-1" class="nav-link" data-scroll-target="#%C3%A1rea-entre--15-z-15-1"><span class="header-section-number">1.18.2</span> 🟢 Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span></a></li>
-  <li><a href="#%C3%A1rea-%C3%A0-direita-de-z-15-1" id="toc-área-à-direita-de-z-15-1" class="nav-link" data-scroll-target="#%C3%A1rea-%C3%A0-direita-de-z-15-1"><span class="header-section-number">1.18.3</span> 🔴 Área à direita de <span class="math inline">\(z = 1{,}5\)</span></a></li>
+<li><a href="#exemplo-1-%C3%A1rea-acumulada-at%C3%A9-z-15" id="toc-exemplo-1-área-acumulada-até-z-15" class="nav-link" data-scroll-target="#exemplo-1-%C3%A1rea-acumulada-at%C3%A9-z-15"><span class="header-section-number">1.16.1</span> 🔹 Exemplo 1 — Área acumulada até <span class="math inline">\(z = 1{,}5\)</span></a></li>
+  <li><a href="#exemplo-2-%C3%A1rea-entre--15-z-15" id="toc-exemplo-2-área-entre--15-z-15" class="nav-link" data-scroll-target="#exemplo-2-%C3%A1rea-entre--15-z-15"><span class="header-section-number">1.16.2</span> 🔹 Exemplo 2 — Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span></a></li>
+  <li><a href="#exemplo-3-%C3%A1rea-%C3%A0-direita-de-z-15" id="toc-exemplo-3-área-à-direita-de-z-15" class="nav-link" data-scroll-target="#exemplo-3-%C3%A1rea-%C3%A0-direita-de-z-15"><span class="header-section-number">1.16.3</span> 🔹 Exemplo 3 — Área à direita de <span class="math inline">\(z = 1{,}5\)</span></a></li>
   </ul>
 </li>
   <li>
-<a href="#encontrando-o-valor-original-x-a-partir-de-um-escore-z" id="toc-encontrando-o-valor-original-x-a-partir-de-um-escore-z" class="nav-link" data-scroll-target="#encontrando-o-valor-original-x-a-partir-de-um-escore-z"><span class="header-section-number">1.19</span> 🔄 Encontrando o Valor Original <span class="math inline">\(x\)</span> a Partir de um Escore-<span class="math inline">\(z\)</span></a>
+<a href="#quadro-resumo-c%C3%A1lculos-com-escore-z" id="toc-quadro-resumo-cálculos-com-escore-z" class="nav-link" data-scroll-target="#quadro-resumo-c%C3%A1lculos-com-escore-z"><span class="header-section-number">1.17</span> 🧾 Quadro-Resumo — Cálculos com Escore-<span class="math inline">\(z\)</span></a>
   <ul class="collapse">
-<li><a href="#f%C3%B3rmula-inversa" id="toc-fórmula-inversa" class="nav-link" data-scroll-target="#f%C3%B3rmula-inversa"><span class="header-section-number">1.19.1</span> 🧮 Fórmula Inversa</a></li>
-  <li><a href="#exemplo" id="toc-exemplo" class="nav-link" data-scroll-target="#exemplo"><span class="header-section-number">1.19.2</span> ✏️ Exemplo</a></li>
+<li><a href="#%C3%A1rea-at%C3%A9-z-15" id="toc-área-até-z-15" class="nav-link" data-scroll-target="#%C3%A1rea-at%C3%A9-z-15"><span class="header-section-number">1.17.1</span> 🔵 Área até <span class="math inline">\(z = 1{,}5\)</span></a></li>
+  <li><a href="#%C3%A1rea-entre--15-z-15-1" id="toc-área-entre--15-z-15-1" class="nav-link" data-scroll-target="#%C3%A1rea-entre--15-z-15-1"><span class="header-section-number">1.17.2</span> 🟢 Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span></a></li>
+  <li><a href="#%C3%A1rea-%C3%A0-direita-de-z-15-1" id="toc-área-à-direita-de-z-15-1" class="nav-link" data-scroll-target="#%C3%A1rea-%C3%A0-direita-de-z-15-1"><span class="header-section-number">1.17.3</span> 🔴 Área à direita de <span class="math inline">\(z = 1{,}5\)</span></a></li>
   </ul>
 </li>
   <li>
-<a href="#exemplo-com-escore-z-negativo" id="toc-exemplo-com-escore-z-negativo" class="nav-link" data-scroll-target="#exemplo-com-escore-z-negativo"><span class="header-section-number">1.20</span> 🧠 Exemplo: com Escore-<span class="math inline">\(z\)</span> Negativo</a>
+<a href="#encontrando-o-valor-original-x-a-partir-de-um-escore-z" id="toc-encontrando-o-valor-original-x-a-partir-de-um-escore-z" class="nav-link" data-scroll-target="#encontrando-o-valor-original-x-a-partir-de-um-escore-z"><span class="header-section-number">1.18</span> 🔄 Encontrando o Valor Original <span class="math inline">\(x\)</span> a Partir de um Escore-<span class="math inline">\(z\)</span></a>
   <ul class="collapse">
-<li><a href="#passo-1-padroniza%C3%A7%C3%A3o" id="toc-passo-1-padronização" class="nav-link" data-scroll-target="#passo-1-padroniza%C3%A7%C3%A3o"><span class="header-section-number">1.20.1</span> 🧮 Passo 1 — Padronização:</a></li>
-  <li><a href="#passo-2-consulta-%C3%A0-tabela-z-1" id="toc-passo-2-consulta-à-tabela-z-1" class="nav-link" data-scroll-target="#passo-2-consulta-%C3%A0-tabela-z-1"><span class="header-section-number">1.20.2</span> 📖 Passo 2 — Consulta à Tabela Z:</a></li>
-  <li><a href="#usando-o-r" id="toc-usando-o-r" class="nav-link" data-scroll-target="#usando-o-r"><span class="header-section-number">1.20.3</span> 🧪 Usando o R:</a></li>
-  <li><a href="#usando-o-excel" id="toc-usando-o-excel" class="nav-link" data-scroll-target="#usando-o-excel"><span class="header-section-number">1.20.4</span> 🧮 Usando o Excel:</a></li>
-  <li><a href="#visualiza%C3%A7%C3%A3o-gr%C3%A1fica" id="toc-visualização-gráfica" class="nav-link" data-scroll-target="#visualiza%C3%A7%C3%A3o-gr%C3%A1fica"><span class="header-section-number">1.20.5</span> 📊 Visualização Gráfica</a></li>
-  <li><a href="#conclus%C3%A3o-2" id="toc-conclusão-2" class="nav-link" data-scroll-target="#conclus%C3%A3o-2"><span class="header-section-number">1.20.6</span> ✅ Conclusão</a></li>
+<li><a href="#f%C3%B3rmula-inversa" id="toc-fórmula-inversa" class="nav-link" data-scroll-target="#f%C3%B3rmula-inversa"><span class="header-section-number">1.18.1</span> 🧮 Fórmula Inversa</a></li>
+  <li><a href="#exemplo" id="toc-exemplo" class="nav-link" data-scroll-target="#exemplo"><span class="header-section-number">1.18.2</span> ✏️ Exemplo</a></li>
   </ul>
 </li>
-  <li><a href="#visualizando-pz--125-com-simetria" id="toc-visualizando-pz--125-com-simetria" class="nav-link" data-scroll-target="#visualizando-pz--125-com-simetria"><span class="header-section-number">1.21</span> 🔄 Visualizando <span class="math inline">\(P(Z &lt; -1{,}25)\)</span> com Simetria</a></li>
   <li>
-<a href="#exemplo-num%C3%A9rico-com-simetria" id="toc-exemplo-numérico-com-simetria" class="nav-link" data-scroll-target="#exemplo-num%C3%A9rico-com-simetria"><span class="header-section-number">1.22</span> 📊 Exemplo Numérico com Simetria</a>
+<a href="#exemplo-com-escore-z-negativo" id="toc-exemplo-com-escore-z-negativo" class="nav-link" data-scroll-target="#exemplo-com-escore-z-negativo"><span class="header-section-number">1.19</span> 🧠 Exemplo: com Escore-<span class="math inline">\(z\)</span> Negativo</a>
   <ul class="collapse">
-<li><a href="#passo-1-padroniza%C3%A7%C3%A3o-1" id="toc-passo-1-padronização-1" class="nav-link" data-scroll-target="#passo-1-padroniza%C3%A7%C3%A3o-1"><span class="header-section-number">1.22.1</span> 🧮 Passo 1 — Padronização</a></li>
-  <li><a href="#passo-2-usando-a-simetria-e-a-tabela-z" id="toc-passo-2-usando-a-simetria-e-a-tabela-z" class="nav-link" data-scroll-target="#passo-2-usando-a-simetria-e-a-tabela-z"><span class="header-section-number">1.22.2</span> 📈 Passo 2 — Usando a Simetria e a Tabela Z</a></li>
-  <li><a href="#c%C3%A1lculo-no-r" id="toc-cálculo-no-r" class="nav-link" data-scroll-target="#c%C3%A1lculo-no-r"><span class="header-section-number">1.22.3</span> 🧪 Cálculo no R</a></li>
-  <li><a href="#c%C3%A1lculo-no-excel" id="toc-cálculo-no-excel" class="nav-link" data-scroll-target="#c%C3%A1lculo-no-excel"><span class="header-section-number">1.22.4</span> 📊 Cálculo no Excel</a></li>
+<li><a href="#passo-1-padroniza%C3%A7%C3%A3o" id="toc-passo-1-padronização" class="nav-link" data-scroll-target="#passo-1-padroniza%C3%A7%C3%A3o"><span class="header-section-number">1.19.1</span> 🧮 Passo 1 — Padronização:</a></li>
+  <li><a href="#passo-2-consulta-%C3%A0-tabela-z-1" id="toc-passo-2-consulta-à-tabela-z-1" class="nav-link" data-scroll-target="#passo-2-consulta-%C3%A0-tabela-z-1"><span class="header-section-number">1.19.2</span> 📖 Passo 2 — Consulta à Tabela Z:</a></li>
+  <li><a href="#usando-o-r" id="toc-usando-o-r" class="nav-link" data-scroll-target="#usando-o-r"><span class="header-section-number">1.19.3</span> 🧪 Usando o R:</a></li>
+  <li><a href="#usando-o-excel" id="toc-usando-o-excel" class="nav-link" data-scroll-target="#usando-o-excel"><span class="header-section-number">1.19.4</span> 🧮 Usando o Excel:</a></li>
+  <li><a href="#visualiza%C3%A7%C3%A3o-gr%C3%A1fica" id="toc-visualização-gráfica" class="nav-link" data-scroll-target="#visualiza%C3%A7%C3%A3o-gr%C3%A1fica"><span class="header-section-number">1.19.5</span> 📊 Visualização Gráfica</a></li>
+  <li><a href="#conclus%C3%A3o-2" id="toc-conclusão-2" class="nav-link" data-scroll-target="#conclus%C3%A3o-2"><span class="header-section-number">1.19.6</span> ✅ Conclusão</a></li>
   </ul>
 </li>
-  <li><a href="#conclus%C3%A3o-da-parte-1-introdu%C3%A7%C3%A3o-%C3%A0-distribui%C3%A7%C3%A3o-normal" id="toc-conclusão-da-parte-1-introdução-à-distribuição-normal" class="nav-link" data-scroll-target="#conclus%C3%A3o-da-parte-1-introdu%C3%A7%C3%A3o-%C3%A0-distribui%C3%A7%C3%A3o-normal"><span class="header-section-number">1.23</span> 📌 Conclusão da Parte 1: Introdução à Distribuição Normal</a></li>
+  <li><a href="#visualizando-pz--125-com-simetria" id="toc-visualizando-pz--125-com-simetria" class="nav-link" data-scroll-target="#visualizando-pz--125-com-simetria"><span class="header-section-number">1.20</span> 🔄 Visualizando <span class="math inline">\(P(Z &lt; -1{,}25)\)</span> com Simetria</a></li>
+  <li>
+<a href="#exemplo-num%C3%A9rico-com-simetria" id="toc-exemplo-numérico-com-simetria" class="nav-link" data-scroll-target="#exemplo-num%C3%A9rico-com-simetria"><span class="header-section-number">1.21</span> 📊 Exemplo Numérico com Simetria</a>
+  <ul class="collapse">
+<li><a href="#passo-1-padroniza%C3%A7%C3%A3o-1" id="toc-passo-1-padronização-1" class="nav-link" data-scroll-target="#passo-1-padroniza%C3%A7%C3%A3o-1"><span class="header-section-number">1.21.1</span> 🧮 Passo 1 — Padronização</a></li>
+  <li><a href="#passo-2-usando-a-simetria-e-a-tabela-z" id="toc-passo-2-usando-a-simetria-e-a-tabela-z" class="nav-link" data-scroll-target="#passo-2-usando-a-simetria-e-a-tabela-z"><span class="header-section-number">1.21.2</span> 📈 Passo 2 — Usando a Simetria e a Tabela Z</a></li>
+  <li><a href="#c%C3%A1lculo-no-r" id="toc-cálculo-no-r" class="nav-link" data-scroll-target="#c%C3%A1lculo-no-r"><span class="header-section-number">1.21.3</span> 🧪 Cálculo no R</a></li>
+  <li><a href="#c%C3%A1lculo-no-excel" id="toc-cálculo-no-excel" class="nav-link" data-scroll-target="#c%C3%A1lculo-no-excel"><span class="header-section-number">1.21.4</span> 📊 Cálculo no Excel</a></li>
+  </ul>
+</li>
+  <li><a href="#conclus%C3%A3o-da-parte-1-introdu%C3%A7%C3%A3o-%C3%A0-distribui%C3%A7%C3%A3o-normal" id="toc-conclusão-da-parte-1-introdução-à-distribuição-normal" class="nav-link" data-scroll-target="#conclus%C3%A3o-da-parte-1-introdu%C3%A7%C3%A3o-%C3%A0-distribui%C3%A7%C3%A3o-normal"><span class="header-section-number">1.22</span> 📌 Conclusão da Parte 1: Introdução à Distribuição Normal</a></li>
   </ul>
 </li>
   <li><a href="#refer%C3%AAncias" id="toc-referências" class="nav-link" data-scroll-target="#refer%C3%AAncias"><span class="header-section-number">2</span> 📚 Referências</a></li>
@@ -391,17 +391,14 @@ window.Quarto = {
   
 
 
-</header><hr>
-<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊</a></p>
-<p><a href="../../../../../posts/cursos/estatistica/index.html">← Voltar para os Cursos de Estatística 🎓 📊</a></p>
-<p><a href="../../../../../posts/estatistica/">← Voltar para a Seção de Estatística 📊</a></p>
+</header><!-- Breadcrumbs --><p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/estatistica/index.html">← Cursos de Estatística</a> · <a href="../../../../../posts/estatistica/index.html">← Seção de Estatística</a></p>
 <hr>
 <div class="quarto-figure quarto-figure-center" style="margin-bottom: 2rem;">
 <figure class="figure"><p><img src="../images/curva-normal-fundo-preto.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Distribuição Normal</figcaption></figure>
 </div>
 <section id="a-distribuição-normal-parte-1" class="level1" data-number="1"><h1 data-number="1">
-<span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal – Parte 1</h1>
+<span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal — Parte 1</h1>
 <p>Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
 <div class="callout-header d-flex align-content-center">
@@ -811,7 +808,19 @@ Nota
 </section><section id="exemplo-com-código-python-visualizando-a-regra-empírica" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="exemplo-com-código-python-visualizando-a-regra-empírica">
 <span class="header-section-number">1.9</span> 🧪 Exemplo com Código Python: Visualizando a Regra Empírica</h2>
 <p>Vamos representar graficamente uma distribuição de QI usando a regra empírica. Suponha que os escores de QI sigam uma distribuição normal com média <span class="math inline">\(\mu = 100\)</span> e desvio padrão <span class="math inline">\(\sigma = 16\)</span>. O gráfico abaixo mostra as <strong>faixas não sobrepostas</strong> da regra empírica:</p>
-<div class="cell">
+<div class="callout callout-style-default callout-note callout-titled" title="👨‍💻 🐍 Código Python — gerar a figura">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+👨‍💻 🐍 Código Python — gerar a figura
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -831,8 +840,8 @@ Nota
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'label'</span>: <span class="st">'3σ: 132 a 148'</span>, <span class="st">'x1'</span>: mu <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>sigma, <span class="st">'x2'</span>: mu <span class="op">+</span> <span class="dv">3</span><span class="op">*</span>sigma, <span class="st">'color'</span>: <span class="st">'#FFC0CB'</span>}</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Criar figura</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Criar figura (sem figsize para usar fig-width/fig-height do Quarto)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, color<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Preencher faixas</span></span>
@@ -849,16 +858,21 @@ Nota
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'QI'</span>)</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Densidade de probabilidade'</span>)</span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="distribuicao-normal_files/figure-html/Criar figura no Python-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="distribuicao-normal_files/figure-html/regra-empirica-py-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Distribuição de QI — Regra Empírica com faixas separadas.</figcaption></figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -867,7 +881,7 @@ Nota
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>Este gráfico evidencia como os valores de QI estão distribuídos em torno da média, com áreas coloridas representando:</p>
 <ul>
@@ -882,10 +896,19 @@ Nota
 <div class="text-center">
 <p><img src="../images/regra-empirica-qi-faixas-separadas.png" class="img-fluid" style="width:100.0%"></p>
 </div>
-</section><section id="visualização-com-ggplot2-r" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="visualização-com-ggplot2-r">
-<span class="header-section-number">1.10</span> 📊 Visualização com <code>ggplot2</code> (R)</h2>
-<p>Vamos recriar o gráfico da Regra Empírica usando <code>R</code> e o pacote <code>ggplot2</code> para ilustrar os intervalos de 1, 2 e 3 desvios padrão com faixas coloridas distintas.</p>
-<div class="cell">
+<div class="callout callout-style-default callout-note callout-titled" title="📊 R — gerar figura com ggplot2">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📊 R — gerar figura com ggplot2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Parâmetros</span></span>
@@ -921,14 +944,17 @@ Nota
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="distribuicao-normal_files/figure-html/Criar figura no R-3.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="distribuicao-normal_files/figure-html/regra-empirica-r-3.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Distribuição de QI — Regra Empírica com ggplot2.</figcaption></figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -937,16 +963,15 @@ Nota
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>Neste gráfico, cada intervalo da curva normal representa uma proporção da população:</p>
 <ul>
 <li>
-<strong>Rosa claro</strong>: 68,27% dos indivíduos entre <span class="math inline">\(\mu \pm 1\sigma\)</span><br>
+<strong>Rosa claro</strong>: 68,27% dos indivíduos entre <span class="math inline">\(\mu \pm 1\sigma\)</span>
 </li>
 <li>
-<strong>Azul claro</strong>: de 68,27% até 95,45% (entre <span class="math inline">\(\mu \pm 1\sigma\)</span> e <span class="math inline">\(\mu \pm 2\sigma\)</span>)<br>
-</li>
+<strong>Azul claro</strong>: de 68,27% até 95,45% (entre <span class="math inline">\(\mu \pm 1\sigma\)</span> e <span class="math inline">\(\mu \pm 2\sigma\)</span>)</li>
 <li>
 <strong>Rosa claro</strong>: de 95,45% até 99,73% (entre <span class="math inline">\(\mu \pm 2\sigma\)</span> e <span class="math inline">\(\mu \pm 3\sigma\)</span>)</li>
 </ul>
@@ -954,8 +979,8 @@ Nota
 </div>
 </div>
 </div>
-</section><section id="fundamento-da-regra-empírica" class="level2" data-number="1.11"><h2 data-number="1.11" class="anchored" data-anchor-id="fundamento-da-regra-empírica">
-<span class="header-section-number">1.11</span> 📐 Fundamento da Regra Empírica</h2>
+</section><section id="fundamento-da-regra-empírica" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="fundamento-da-regra-empírica">
+<span class="header-section-number">1.10</span> 📐 Fundamento da Regra Empírica</h2>
 <p>A <strong>Regra Empírica</strong> baseia-se na <strong>forma simétrica</strong> da curva normal e nas <strong>áreas sob a curva</strong>, que representam <strong>probabilidades</strong>.</p>
 <ul>
 <li>A área total sob a curva normal é igual a <strong>1</strong> (ou <strong>100%</strong>).</li>
@@ -975,8 +1000,8 @@ Dica
 <p>Na distribuição normal padrão, a probabilidade de um valor estar entre dois pontos <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> é dada pela <strong>integral da função densidade</strong> entre esses limites.</p>
 </div>
 </div>
-<section id="função-densidade-da-normal-padrão" class="level3" data-number="1.11.1"><h3 data-number="1.11.1" class="anchored" data-anchor-id="função-densidade-da-normal-padrão">
-<span class="header-section-number">1.11.1</span> 🔢 Função densidade da normal padrão</h3>
+<section id="função-densidade-da-normal-padrão" class="level3" data-number="1.10.1"><h3 data-number="1.10.1" class="anchored" data-anchor-id="função-densidade-da-normal-padrão">
+<span class="header-section-number">1.10.1</span> 🔢 Função densidade da normal padrão</h3>
 <p><span class="math display">\[
 \boxed{f(z) = \frac{1}{\sqrt{2\pi}}\, e^{-z^2/2}}
 \]</span></p>
@@ -995,7 +1020,7 @@ Dica
 <p><img src="../images/regra-empirica-normal-padrao.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1004,7 +1029,7 @@ Nota
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p><strong>Distribuição Normal Padrão e a Regra Empírica</strong></p>
 <p>A imagem ilustra as faixas simétricas em torno da média <span class="math inline">\(\mu = 0\)</span>:</p>
@@ -1020,8 +1045,8 @@ Nota
 </div>
 </div>
 </div>
-</section></section><section id="funções-para-distribuição-normal-excel-e-r" class="level2" data-number="1.12"><h2 data-number="1.12" class="anchored" data-anchor-id="funções-para-distribuição-normal-excel-e-r">
-<span class="header-section-number">1.12</span> Funções para Distribuição Normal: Excel e R</h2>
+</section></section><section id="funções-para-distribuição-normal-excel-e-r" class="level2" data-number="1.11"><h2 data-number="1.11" class="anchored" data-anchor-id="funções-para-distribuição-normal-excel-e-r">
+<span class="header-section-number">1.11</span> Funções para Distribuição Normal: Excel e R</h2>
 <p>Podemos calcular probabilidades, valores acumulados e gerar gráficos com funções específicas:</p>
 <div class="callout callout-style-default callout-note callout-titled" title="No Excel">
 <div class="callout-header d-flex align-content-center">
@@ -1080,8 +1105,8 @@ Dica
 <p><strong>Observação:</strong> no Excel, <code>cumulativo = VERDADEIRO</code> retorna a probabilidade acumulada; <code>FALSO</code> retorna a densidade.</p>
 </div>
 </div>
-</section><section id="exemplo-prático-com-r" class="level2" data-number="1.13"><h2 data-number="1.13" class="anchored" data-anchor-id="exemplo-prático-com-r">
-<span class="header-section-number">1.13</span> Exemplo Prático com R</h2>
+</section><section id="exemplo-prático-com-r" class="level2" data-number="1.12"><h2 data-number="1.12" class="anchored" data-anchor-id="exemplo-prático-com-r">
+<span class="header-section-number">1.12</span> Exemplo Prático com R</h2>
 <p>Vamos visualizar a curva da <strong>distribuição normal padrão</strong> <span class="math inline">\(N(0, 1)\)</span> e destacar as faixas de 1, 2 e 3 desvios-padrão da média — conhecidas pela <strong>Regra Empírica</strong>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Sequência de valores z</span></span>
@@ -1110,8 +1135,8 @@ Dica
 </div>
 </div>
 </div>
-<hr></section><section id="exemplo-prático-probabilidade-de-qi-abaixo-de-120" class="level2" data-number="1.14"><h2 data-number="1.14" class="anchored" data-anchor-id="exemplo-prático-probabilidade-de-qi-abaixo-de-120">
-<span class="header-section-number">1.14</span> Exemplo Prático – Probabilidade de QI abaixo de 120</h2>
+<hr></section><section id="exemplo-prático-probabilidade-de-qi-abaixo-de-120" class="level2" data-number="1.13"><h2 data-number="1.13" class="anchored" data-anchor-id="exemplo-prático-probabilidade-de-qi-abaixo-de-120">
+<span class="header-section-number">1.13</span> Exemplo Prático – Probabilidade de QI abaixo de 120</h2>
 <p><strong>Problema:</strong> Qual a probabilidade de que uma pessoa tenha QI menor que 120?</p>
 <p>Suponha que os QIs sigam uma distribuição normal com média <span class="math inline">\(\mu = 100\)</span> e desvio padrão <span class="math inline">\(\sigma = 16\)</span>.<br>
 Queremos calcular:</p>
@@ -1147,8 +1172,8 @@ Resultado: <span class="math inline">\(\approx 0.8944\)</span> ou 89,44%</p>
 </div>
 </div>
 <p><strong>Interpretação:</strong> aproximadamente <strong>89,44%</strong> da população possui QI abaixo de 120, de acordo com a distribuição normal assumida.</p>
-<hr></section><section id="exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z" class="level2" data-number="1.15"><h2 data-number="1.15" class="anchored" data-anchor-id="exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z">
-<span class="header-section-number">1.15</span> Exemplo: Resolvendo sem Excel ou R — Usando o Escore-<span class="math inline">\(z\)</span>
+<hr></section><section id="exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z" class="level2" data-number="1.14"><h2 data-number="1.14" class="anchored" data-anchor-id="exemplo-resolvendo-sem-excel-ou-r-usando-o-escore-z">
+<span class="header-section-number">1.14</span> Exemplo: Resolvendo sem Excel ou R — Usando o Escore-<span class="math inline">\(z\)</span>
 </h2>
 <p>Queremos calcular a probabilidade de que uma pessoa tenha QI inferior a 120, assumindo que os QIs seguem uma distribuição normal com:</p>
 <ul>
@@ -1162,15 +1187,15 @@ Resultado: <span class="math inline">\(\approx 0.8944\)</span> ou 89,44%</p>
 P(X &lt; 120)
 \]</span></p>
 <hr>
-<section id="passo-1-padronização-com-o-escore-z" class="level3" data-number="1.15.1"><h3 data-number="1.15.1" class="anchored" data-anchor-id="passo-1-padronização-com-o-escore-z">
-<span class="header-section-number">1.15.1</span> 🧮 Passo 1: Padronização com o escore-<span class="math inline">\(z\)</span>
+<section id="passo-1-padronização-com-o-escore-z" class="level3" data-number="1.14.1"><h3 data-number="1.14.1" class="anchored" data-anchor-id="passo-1-padronização-com-o-escore-z">
+<span class="header-section-number">1.14.1</span> 🧮 Passo 1: Padronização com o escore-<span class="math inline">\(z\)</span>
 </h3>
 <p>Para usar a <strong>tabela da distribuição normal padrão</strong>, devemos primeiro padronizar o valor observado (120):</p>
 <p><span class="math display">\[
 z = \frac{x - \mu}{\sigma} = \frac{120 - 100}{16} = 1{,}25
 \]</span></p>
-<hr></section><section id="passo-2-consulta-à-tabela-z" class="level3" data-number="1.15.2"><h3 data-number="1.15.2" class="anchored" data-anchor-id="passo-2-consulta-à-tabela-z">
-<span class="header-section-number">1.15.2</span> 📖 Passo 2: Consulta à Tabela Z</h3>
+<hr></section><section id="passo-2-consulta-à-tabela-z" class="level3" data-number="1.14.2"><h3 data-number="1.14.2" class="anchored" data-anchor-id="passo-2-consulta-à-tabela-z">
+<span class="header-section-number">1.14.2</span> 📖 Passo 2: Consulta à Tabela Z</h3>
 <p>Agora usamos a tabela da normal padrão <span class="math inline">\(Z \sim N(0,1)\)</span> para encontrar <span class="math inline">\(P(Z &lt; 1{,}25)\)</span>:</p>
 <table class="caption-top table">
 <thead><tr class="header">
@@ -1194,8 +1219,8 @@ z = \frac{x - \mu}{\sigma} = \frac{120 - 100}{16} = 1{,}25
 </table>
 <p><strong>Tabela Z:</strong> <span class="math inline">\(P(Z &lt; 1{,}25) = 0{,}8944\)</span></p>
 <p>Cerca de <strong>89,44%</strong> da população tem QI menor que 120, de acordo com a tabela da distribuição normal padrão.</p>
-<hr></section></section><section id="entendendo-o-escore-z" class="level2" data-number="1.16"><h2 data-number="1.16" class="anchored" data-anchor-id="entendendo-o-escore-z">
-<span class="header-section-number">1.16</span> 📏 Entendendo o Escore-<span class="math inline">\(z\)</span>
+<hr></section></section><section id="entendendo-o-escore-z" class="level2" data-number="1.15"><h2 data-number="1.15" class="anchored" data-anchor-id="entendendo-o-escore-z">
+<span class="header-section-number">1.15</span> 📏 Entendendo o Escore-<span class="math inline">\(z\)</span>
 </h2>
 <p>O <strong>escore-<span class="math inline">\(z\)</span></strong> é uma padronização que transforma qualquer valor <span class="math inline">\(x\)</span> de uma distribuição normal <span class="math inline">\(N(\mu, \sigma^2)\)</span> em um valor na <strong>distribuição normal padrão</strong> <span class="math inline">\(N(0, 1)\)</span>, com média 0 e desvio padrão 1.</p>
 <p>Ele nos diz <strong>quantos desvios padrão</strong> o valor <span class="math inline">\(x\)</span> está <strong>acima ou abaixo da média</strong> <span class="math inline">\(\mu\)</span>.</p>
@@ -1204,23 +1229,23 @@ z = \frac{x - \mu}{\sigma} = \frac{120 - 100}{16} = 1{,}25
 \boxed{z = \frac{x - \mu}{\sigma}}
 \]</span></p>
 <hr>
-<section id="interpretação-1" class="level3" data-number="1.16.1"><h3 data-number="1.16.1" class="anchored" data-anchor-id="interpretação-1">
-<span class="header-section-number">1.16.1</span> 🔍 Interpretação:</h3>
+<section id="interpretação-1" class="level3" data-number="1.15.1"><h3 data-number="1.15.1" class="anchored" data-anchor-id="interpretação-1">
+<span class="header-section-number">1.15.1</span> 🔍 Interpretação:</h3>
 <ul>
 <li>Se <span class="math inline">\(z = 0\)</span>: o valor <span class="math inline">\(x\)</span> está exatamente na média <span class="math inline">\(\mu\)</span>.</li>
 <li>Se <span class="math inline">\(z &gt; 0\)</span>: o valor <span class="math inline">\(x\)</span> está <strong>acima</strong> da média.</li>
 <li>Se <span class="math inline">\(z &lt; 0\)</span>: o valor <span class="math inline">\(x\)</span> está <strong>abaixo</strong> da média.</li>
 </ul>
-<hr></section><section id="por-que-é-útil" class="level3" data-number="1.16.2"><h3 data-number="1.16.2" class="anchored" data-anchor-id="por-que-é-útil">
-<span class="header-section-number">1.16.2</span> 🎯 Por que é útil?</h3>
+<hr></section><section id="por-que-é-útil" class="level3" data-number="1.15.2"><h3 data-number="1.15.2" class="anchored" data-anchor-id="por-que-é-útil">
+<span class="header-section-number">1.15.2</span> 🎯 Por que é útil?</h3>
 <p>O escore-<span class="math inline">\(z\)</span> <strong>unifica diferentes distribuições</strong> numa forma padrão, permitindo que possamos:</p>
 <ul>
 <li>Consultar a <strong>Tabela Z</strong> da normal padrão <span class="math inline">\(N(0,1)\)</span>;</li>
 <li>Calcular <strong>probabilidades acumuladas</strong> com facilidade;</li>
 <li>Comparar valores entre <strong>distribuições com médias e desvios diferentes</strong>.</li>
 </ul>
-<hr></section><section id="resumo-visual-interpretando-o-escore-z" class="level3" data-number="1.16.3"><h3 data-number="1.16.3" class="anchored" data-anchor-id="resumo-visual-interpretando-o-escore-z">
-<span class="header-section-number">1.16.3</span> 📊 Resumo Visual: Interpretando o Escore-<span class="math inline">\(z\)</span>
+<hr></section><section id="resumo-visual-interpretando-o-escore-z" class="level3" data-number="1.15.3"><h3 data-number="1.15.3" class="anchored" data-anchor-id="resumo-visual-interpretando-o-escore-z">
+<span class="header-section-number">1.15.3</span> 📊 Resumo Visual: Interpretando o Escore-<span class="math inline">\(z\)</span>
 </h3>
 <p>Suponha que <span class="math inline">\(x = 124\)</span>, com média <span class="math inline">\(\mu = 100\)</span> e desvio padrão <span class="math inline">\(\sigma = 16\)</span>.<br>
 O escore-<span class="math inline">\(z\)</span> é calculado como:</p>
@@ -1229,32 +1254,32 @@ z = \frac{x - \mu}{\sigma} = \frac{124 - 100}{16} = 1{,}5
 \]</span></p>
 <p>Esse valor representa a posição relativa de <span class="math inline">\(x\)</span> em uma <strong>distribuição normal padrão</strong>.</p>
 <hr>
-<section id="área-acumulada-até-z-15" class="level4" data-number="1.16.3.1"><h4 data-number="1.16.3.1" class="anchored" data-anchor-id="área-acumulada-até-z-15">
-<span class="header-section-number">1.16.3.1</span> 🔹 Área acumulada até <span class="math inline">\(z = 1{,}5\)</span>
+<section id="área-acumulada-até-z-15" class="level4" data-number="1.15.3.1"><h4 data-number="1.15.3.1" class="anchored" data-anchor-id="área-acumulada-até-z-15">
+<span class="header-section-number">1.15.3.1</span> 🔹 Área acumulada até <span class="math inline">\(z = 1{,}5\)</span>
 </h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/escore_z_destaque.png" class="img-fluid figure-img" style="width:90.0%"></p>
 <figcaption>Área até z = 1,5</figcaption></figure>
 </div>
 <p>Aproximadamente <strong>93,32%</strong> dos valores estão abaixo de <span class="math inline">\(x = 124\)</span>.</p>
-<hr></section><section id="área-entre--15-z-15" class="level4" data-number="1.16.3.2"><h4 data-number="1.16.3.2" class="anchored" data-anchor-id="área-entre--15-z-15">
-<span class="header-section-number">1.16.3.2</span> 🔹 Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span>
+<hr></section><section id="área-entre--15-z-15" class="level4" data-number="1.15.3.2"><h4 data-number="1.15.3.2" class="anchored" data-anchor-id="área-entre--15-z-15">
+<span class="header-section-number">1.15.3.2</span> 🔹 Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span>
 </h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/area_entre_-1.5_e_1.5.png" class="img-fluid figure-img" style="width:90.0%"></p>
 <figcaption>Área entre -1,5 e 1,5</figcaption></figure>
 </div>
 <p>Aproximadamente <strong>86,64%</strong> dos valores estão <strong>a até 1,5 desvios da média</strong>, em ambos os lados.</p>
-<hr></section><section id="área-à-direita-de-z-15" class="level4" data-number="1.16.3.3"><h4 data-number="1.16.3.3" class="anchored" data-anchor-id="área-à-direita-de-z-15">
-<span class="header-section-number">1.16.3.3</span> 🔹 Área à direita de <span class="math inline">\(z = 1{,}5\)</span>
+<hr></section><section id="área-à-direita-de-z-15" class="level4" data-number="1.15.3.3"><h4 data-number="1.15.3.3" class="anchored" data-anchor-id="área-à-direita-de-z-15">
+<span class="header-section-number">1.15.3.3</span> 🔹 Área à direita de <span class="math inline">\(z = 1{,}5\)</span>
 </h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/area_direita_z_1.5.png" class="img-fluid figure-img" style="width:90.0%"></p>
 <figcaption>Área à direita de z = 1,5</figcaption></figure>
 </div>
 <p>Apenas <strong>6,68%</strong> da distribuição está acima de <span class="math inline">\(x = 124\)</span>.</p>
-<hr></section><section id="conclusão-1" class="level4" data-number="1.16.3.4"><h4 data-number="1.16.3.4" class="anchored" data-anchor-id="conclusão-1">
-<span class="header-section-number">1.16.3.4</span> ✅ Conclusão</h4>
+<hr></section><section id="conclusão-1" class="level4" data-number="1.15.3.4"><h4 data-number="1.15.3.4" class="anchored" data-anchor-id="conclusão-1">
+<span class="header-section-number">1.15.3.4</span> ✅ Conclusão</h4>
 <p>O escore-<span class="math inline">\(z\)</span> permite:</p>
 <ul>
 <li>Padronizar valores de diferentes distribuições;</li>
@@ -1268,8 +1293,8 @@ z = \frac{x - \mu}{\sigma} = \frac{124 - 100}{16} = 1{,}5
 \]</span></p>
 <p>Essa fórmula é a <strong>ponte entre qualquer valor</strong> <span class="math inline">\(x\)</span> de uma distribuição normal e sua <strong>posição padronizada</strong> na curva <span class="math inline">\(N(0,1)\)</span>.</p>
 </blockquote>
-<hr></section></section></section><section id="cálculos-com-tabela-z-r-e-excel" class="level2" data-number="1.17"><h2 data-number="1.17" class="anchored" data-anchor-id="cálculos-com-tabela-z-r-e-excel">
-<span class="header-section-number">1.17</span> 🧮 Cálculos com Tabela Z, R e Excel</h2>
+<hr></section></section></section><section id="cálculos-com-tabela-z-r-e-excel" class="level2" data-number="1.16"><h2 data-number="1.16" class="anchored" data-anchor-id="cálculos-com-tabela-z-r-e-excel">
+<span class="header-section-number">1.16</span> 🧮 Cálculos com Tabela Z, R e Excel</h2>
 <p>A seguir, apresentamos os cálculos usados nos três exemplos do escore-<span class="math inline">\(z\)</span>, reforçando os gráficos anteriores. Mostramos como resolver com:</p>
 <ul>
 <li>📖 <strong>Tabela Z</strong>
@@ -1280,8 +1305,8 @@ z = \frac{x - \mu}{\sigma} = \frac{124 - 100}{16} = 1{,}5
 </li>
 </ul>
 <hr>
-<section id="exemplo-1-área-acumulada-até-z-15" class="level3" data-number="1.17.1"><h3 data-number="1.17.1" class="anchored" data-anchor-id="exemplo-1-área-acumulada-até-z-15">
-<span class="header-section-number">1.17.1</span> 🔹 Exemplo 1 — Área acumulada até <span class="math inline">\(z = 1{,}5\)</span>
+<section id="exemplo-1-área-acumulada-até-z-15" class="level3" data-number="1.16.1"><h3 data-number="1.16.1" class="anchored" data-anchor-id="exemplo-1-área-acumulada-até-z-15">
+<span class="header-section-number">1.16.1</span> 🔹 Exemplo 1 — Área acumulada até <span class="math inline">\(z = 1{,}5\)</span>
 </h3>
 <p>Queremos calcular:<br><span class="math display">\[
 P(Z &lt; 1{,}5)
@@ -1316,8 +1341,8 @@ P(Z &lt; 1{,}5) = \boxed{0{,}9332}
 <p><strong>📊 No Excel:</strong></p>
 <pre class="excel"><code>=NORM.S.DIST(1,5; VERDADEIRO)</code></pre>
 <p>Resultado: <code>0,9332</code></p>
-<hr></section><section id="exemplo-2-área-entre--15-z-15" class="level3" data-number="1.17.2"><h3 data-number="1.17.2" class="anchored" data-anchor-id="exemplo-2-área-entre--15-z-15">
-<span class="header-section-number">1.17.2</span> 🔹 Exemplo 2 — Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span>
+<hr></section><section id="exemplo-2-área-entre--15-z-15" class="level3" data-number="1.16.2"><h3 data-number="1.16.2" class="anchored" data-anchor-id="exemplo-2-área-entre--15-z-15">
+<span class="header-section-number">1.16.2</span> 🔹 Exemplo 2 — Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span>
 </h3>
 <p>Queremos calcular: <span class="math display">\[
 P(-1{,}5 &lt; Z &lt; 1{,}5) =
@@ -1339,8 +1364,8 @@ P(-1{,}5 &lt; Z &lt; 1{,}5) = 0{,}9332 - 0{,}0668 = \boxed{0{,}8664}
 <p><strong>📊 No Excel:</strong></p>
 <pre class="excel"><code>=NORM.S.DIST(1,5; VERDADEIRO) - NORM.S.DIST(-1,5; VERDADEIRO)</code></pre>
 <p>Resultado: <code>0,8664</code></p>
-<hr></section><section id="exemplo-3-área-à-direita-de-z-15" class="level3" data-number="1.17.3"><h3 data-number="1.17.3" class="anchored" data-anchor-id="exemplo-3-área-à-direita-de-z-15">
-<span class="header-section-number">1.17.3</span> 🔹 Exemplo 3 — Área à direita de <span class="math inline">\(z = 1{,}5\)</span>
+<hr></section><section id="exemplo-3-área-à-direita-de-z-15" class="level3" data-number="1.16.3"><h3 data-number="1.16.3" class="anchored" data-anchor-id="exemplo-3-área-à-direita-de-z-15">
+<span class="header-section-number">1.16.3</span> 🔹 Exemplo 3 — Área à direita de <span class="math inline">\(z = 1{,}5\)</span>
 </h3>
 <p>Queremos calcular: <span class="math display">\[
 P(Z &gt; 1{,}5) = 1 - P(Z &lt; 1{,}5)
@@ -1359,11 +1384,11 @@ P(Z &gt; 1{,}5) = 1 - 0{,}9332 = \boxed{0{,}0668}
 <blockquote class="blockquote">
 <p>Esses cálculos mostram como o escore-<span class="math inline">\(z\)</span> conecta valores observados a probabilidades em diferentes ferramentas — seja com a <strong>Tabela Z tradicional</strong>, ou com <strong>cálculo automatizado via R ou Excel</strong>.</p>
 </blockquote>
-<hr></section></section><section id="quadro-resumo-cálculos-com-escore-z" class="level2" data-number="1.18"><h2 data-number="1.18" class="anchored" data-anchor-id="quadro-resumo-cálculos-com-escore-z">
-<span class="header-section-number">1.18</span> 🧾 Quadro-Resumo — Cálculos com Escore-<span class="math inline">\(z\)</span>
+<hr></section></section><section id="quadro-resumo-cálculos-com-escore-z" class="level2" data-number="1.17"><h2 data-number="1.17" class="anchored" data-anchor-id="quadro-resumo-cálculos-com-escore-z">
+<span class="header-section-number">1.17</span> 🧾 Quadro-Resumo — Cálculos com Escore-<span class="math inline">\(z\)</span>
 </h2>
-<section id="área-até-z-15" class="level3" data-number="1.18.1"><h3 data-number="1.18.1" class="anchored" data-anchor-id="área-até-z-15">
-<span class="header-section-number">1.18.1</span> 🔵 Área até <span class="math inline">\(z = 1{,}5\)</span>
+<section id="área-até-z-15" class="level3" data-number="1.17.1"><h3 data-number="1.17.1" class="anchored" data-anchor-id="área-até-z-15">
+<span class="header-section-number">1.17.1</span> 🔵 Área até <span class="math inline">\(z = 1{,}5\)</span>
 </h3>
 <ul>
 <li>
@@ -1379,8 +1404,8 @@ P(Z &gt; 1{,}5) = 1 - 0{,}9332 = \boxed{0{,}0668}
 <strong>Excel:</strong> <code>=NORM.S.DIST(1,5; VERDADEIRO)</code>
 </li>
 </ul>
-<hr></section><section id="área-entre--15-z-15-1" class="level3" data-number="1.18.2"><h3 data-number="1.18.2" class="anchored" data-anchor-id="área-entre--15-z-15-1">
-<span class="header-section-number">1.18.2</span> 🟢 Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span>
+<hr></section><section id="área-entre--15-z-15-1" class="level3" data-number="1.17.2"><h3 data-number="1.17.2" class="anchored" data-anchor-id="área-entre--15-z-15-1">
+<span class="header-section-number">1.17.2</span> 🟢 Área entre <span class="math inline">\(-1{,}5 &lt; Z &lt; 1{,}5\)</span>
 </h3>
 <ul>
 <li>
@@ -1396,8 +1421,8 @@ P(Z &gt; 1{,}5) = 1 - 0{,}9332 = \boxed{0{,}0668}
 <strong>Excel:</strong> <code>=NORM.S.DIST(1,5; VERDADEIRO) - NORM.S.DIST(-1,5; VERDADEIRO)</code>
 </li>
 </ul>
-<hr></section><section id="área-à-direita-de-z-15-1" class="level3" data-number="1.18.3"><h3 data-number="1.18.3" class="anchored" data-anchor-id="área-à-direita-de-z-15-1">
-<span class="header-section-number">1.18.3</span> 🔴 Área à direita de <span class="math inline">\(z = 1{,}5\)</span>
+<hr></section><section id="área-à-direita-de-z-15-1" class="level3" data-number="1.17.3"><h3 data-number="1.17.3" class="anchored" data-anchor-id="área-à-direita-de-z-15-1">
+<span class="header-section-number">1.17.3</span> 🔴 Área à direita de <span class="math inline">\(z = 1{,}5\)</span>
 </h3>
 <ul>
 <li>
@@ -1415,8 +1440,8 @@ P(Z &gt; 1{,}5) = 1 - 0{,}9332 = \boxed{0{,}0668}
 </ul>
 <hr>
 <p>📌 <strong>Observação:</strong> Os resultados apresentados foram arredondados para 4 casas decimais, conforme a Tabela Z tradicional. Pequenas diferenças podem ocorrer nos softwares por causa da precisão interna das funções.</p>
-<hr></section></section><section id="encontrando-o-valor-original-x-a-partir-de-um-escore-z" class="level2" data-number="1.19"><h2 data-number="1.19" class="anchored" data-anchor-id="encontrando-o-valor-original-x-a-partir-de-um-escore-z">
-<span class="header-section-number">1.19</span> 🔄 Encontrando o Valor Original <span class="math inline">\(x\)</span> a Partir de um Escore-<span class="math inline">\(z\)</span>
+<hr></section></section><section id="encontrando-o-valor-original-x-a-partir-de-um-escore-z" class="level2" data-number="1.18"><h2 data-number="1.18" class="anchored" data-anchor-id="encontrando-o-valor-original-x-a-partir-de-um-escore-z">
+<span class="header-section-number">1.18</span> 🔄 Encontrando o Valor Original <span class="math inline">\(x\)</span> a Partir de um Escore-<span class="math inline">\(z\)</span>
 </h2>
 <p>Podemos também fazer o processo <strong>inverso da padronização</strong>:</p>
 <ul>
@@ -1433,21 +1458,21 @@ P(Z &gt; 1{,}5) = 1 - 0{,}9332 = \boxed{0{,}0668}
 </ul>
 <p>então podemos <strong>recuperar o valor original <span class="math inline">\(x\)</span></strong> da variável.</p>
 <hr>
-<section id="fórmula-inversa" class="level3" data-number="1.19.1"><h3 data-number="1.19.1" class="anchored" data-anchor-id="fórmula-inversa">
-<span class="header-section-number">1.19.1</span> 🧮 Fórmula Inversa</h3>
+<section id="fórmula-inversa" class="level3" data-number="1.18.1"><h3 data-number="1.18.1" class="anchored" data-anchor-id="fórmula-inversa">
+<span class="header-section-number">1.18.1</span> 🧮 Fórmula Inversa</h3>
 <p><span class="math display">\[
 \boxed{x = \mu + z \cdot \sigma}
 \]</span></p>
-<hr></section><section id="exemplo" class="level3" data-number="1.19.2"><h3 data-number="1.19.2" class="anchored" data-anchor-id="exemplo">
-<span class="header-section-number">1.19.2</span> ✏️ Exemplo</h3>
+<hr></section><section id="exemplo" class="level3" data-number="1.18.2"><h3 data-number="1.18.2" class="anchored" data-anchor-id="exemplo">
+<span class="header-section-number">1.18.2</span> ✏️ Exemplo</h3>
 <p><strong>Qual o valor correspondente a</strong> <span class="math inline">\(z = 1{,}5\)</span>, com <span class="math inline">\(\mu = 100\)</span> e <span class="math inline">\(\sigma = 16\)</span> ?</p>
 <p>Aplicando a fórmula:</p>
 <p><span class="math display">\[
 x = 100 + 1{,}5 \times 16 = 124
 \]</span></p>
 <p>✅ Conclusão: Um escore-<span class="math inline">\(z\)</span> de <strong>1,5</strong> corresponde ao valor <strong><span class="math inline">\(x=124\)</span></strong> nessa distribuição.</p>
-<hr></section></section><section id="exemplo-com-escore-z-negativo" class="level2" data-number="1.20"><h2 data-number="1.20" class="anchored" data-anchor-id="exemplo-com-escore-z-negativo">
-<span class="header-section-number">1.20</span> 🧠 Exemplo: com Escore-<span class="math inline">\(z\)</span> Negativo</h2>
+<hr></section></section><section id="exemplo-com-escore-z-negativo" class="level2" data-number="1.19"><h2 data-number="1.19" class="anchored" data-anchor-id="exemplo-com-escore-z-negativo">
+<span class="header-section-number">1.19</span> 🧠 Exemplo: com Escore-<span class="math inline">\(z\)</span> Negativo</h2>
 <p>Suponha que os escores de QI sigam uma distribuição normal com:</p>
 <ul>
 <li>Média: <span class="math inline">\(\mu = 100\)</span>
@@ -1457,13 +1482,13 @@ x = 100 + 1{,}5 \times 16 = 124
 <li>Objetivo: Qual a probabilidade de uma pessoa ter QI inferior a 80?</li>
 </ul>
 <hr>
-<section id="passo-1-padronização" class="level3" data-number="1.20.1"><h3 data-number="1.20.1" class="anchored" data-anchor-id="passo-1-padronização">
-<span class="header-section-number">1.20.1</span> 🧮 Passo 1 — Padronização:</h3>
+<section id="passo-1-padronização" class="level3" data-number="1.19.1"><h3 data-number="1.19.1" class="anchored" data-anchor-id="passo-1-padronização">
+<span class="header-section-number">1.19.1</span> 🧮 Passo 1 — Padronização:</h3>
 <p><span class="math display">\[
 z = \frac{80 - 100}{16} = \frac{-20}{16} = -1{,}25
 \]</span></p>
-<hr></section><section id="passo-2-consulta-à-tabela-z-1" class="level3" data-number="1.20.2"><h3 data-number="1.20.2" class="anchored" data-anchor-id="passo-2-consulta-à-tabela-z-1">
-<span class="header-section-number">1.20.2</span> 📖 Passo 2 — Consulta à Tabela Z:</h3>
+<hr></section><section id="passo-2-consulta-à-tabela-z-1" class="level3" data-number="1.19.2"><h3 data-number="1.19.2" class="anchored" data-anchor-id="passo-2-consulta-à-tabela-z-1">
+<span class="header-section-number">1.19.2</span> 📖 Passo 2 — Consulta à Tabela Z:</h3>
 <p>Como a tabela Z fornece valores para <span class="math inline">\(P(Z &lt; z)\)</span> com <span class="math inline">\(z\)</span> positivo, usamos a simetria:</p>
 <p><span class="math display">\[
 P(Z &lt; -1{,}25) = 1 - P(Z &lt; 1{,}25) =
@@ -1491,26 +1516,26 @@ P(Z &lt; -1{,}25) = 1 - P(Z &lt; 1{,}25) =
 <td><strong>0.8944</strong></td>
 </tr></tbody>
 </table>
-<hr></section><section id="usando-o-r" class="level3" data-number="1.20.3"><h3 data-number="1.20.3" class="anchored" data-anchor-id="usando-o-r">
-<span class="header-section-number">1.20.3</span> 🧪 Usando o R:</h3>
+<hr></section><section id="usando-o-r" class="level3" data-number="1.19.3"><h3 data-number="1.19.3" class="anchored" data-anchor-id="usando-o-r">
+<span class="header-section-number">1.19.3</span> 🧪 Usando o R:</h3>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Probabilidade de QI &lt; 80</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">80</span>, mean <span class="op">=</span> <span class="fl">100</span>, sd <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span>
 <span><span class="co"># Resultado: 0.1056498</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr></section><section id="usando-o-excel" class="level3" data-number="1.20.4"><h3 data-number="1.20.4" class="anchored" data-anchor-id="usando-o-excel">
-<span class="header-section-number">1.20.4</span> 🧮 Usando o Excel:</h3>
+<hr></section><section id="usando-o-excel" class="level3" data-number="1.19.4"><h3 data-number="1.19.4" class="anchored" data-anchor-id="usando-o-excel">
+<span class="header-section-number">1.19.4</span> 🧮 Usando o Excel:</h3>
 <pre class="excel"><code>=NORM.DIST(80; 100; 16; VERDADEIRO)</code></pre>
 <p>Retorna: <code>0,1056498</code> → Aproximadamente <strong>10,56%</strong></p>
-<hr></section><section id="visualização-gráfica" class="level3" data-number="1.20.5"><h3 data-number="1.20.5" class="anchored" data-anchor-id="visualização-gráfica">
-<span class="header-section-number">1.20.5</span> 📊 Visualização Gráfica</h3>
+<hr></section><section id="visualização-gráfica" class="level3" data-number="1.19.5"><h3 data-number="1.19.5" class="anchored" data-anchor-id="visualização-gráfica">
+<span class="header-section-number">1.19.5</span> 📊 Visualização Gráfica</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="../images/qi_menor_que_80.png" class="img-fluid figure-img" style="width:75.0%"></p>
 <figcaption>Distribuição Normal com área destacada para <span class="math inline">\(P(X &lt; 80)\)</span></figcaption></figure>
 </div>
-<hr></section><section id="conclusão-2" class="level3" data-number="1.20.6"><h3 data-number="1.20.6" class="anchored" data-anchor-id="conclusão-2">
-<span class="header-section-number">1.20.6</span> ✅ Conclusão</h3>
+<hr></section><section id="conclusão-2" class="level3" data-number="1.19.6"><h3 data-number="1.19.6" class="anchored" data-anchor-id="conclusão-2">
+<span class="header-section-number">1.19.6</span> ✅ Conclusão</h3>
 <p>Cerca de <strong><span class="math inline">\(\mathbf{10{,}56\%}\)</span></strong> da população tem QI inferior a 80, o que corresponde a estar <strong>1,25 desvios padrão abaixo da média</strong>.</p>
-<hr></section></section><section id="visualizando-pz--125-com-simetria" class="level2" data-number="1.21"><h2 data-number="1.21" class="anchored" data-anchor-id="visualizando-pz--125-com-simetria">
-<span class="header-section-number">1.21</span> 🔄 Visualizando <span class="math inline">\(P(Z &lt; -1{,}25)\)</span> com Simetria</h2>
+<hr></section></section><section id="visualizando-pz--125-com-simetria" class="level2" data-number="1.20"><h2 data-number="1.20" class="anchored" data-anchor-id="visualizando-pz--125-com-simetria">
+<span class="header-section-number">1.20</span> 🔄 Visualizando <span class="math inline">\(P(Z &lt; -1{,}25)\)</span> com Simetria</h2>
 <p>A <strong>distribuição normal padrão</strong> é simétrica em torno de <span class="math inline">\(z = 0\)</span>.<br>
 Isso significa que as áreas abaixo da curva, à mesma distância da média, são iguais:</p>
 <ul>
@@ -1533,8 +1558,8 @@ P(Z &lt; -1{,}25) = 1 - P(Z &lt; 1{,}25)
 <figure class="figure"><p><img src="../images/normal-simetria.png" class="img-fluid figure-img" style="width:75.0%"></p>
 <figcaption>Distribuição normal padrão: simetria entre <span class="math inline">\(P(Z &lt; -1{,}25)\)</span> e <span class="math inline">\(P(Z &gt; 1{,}25)\)</span></figcaption></figure>
 </div>
-<hr></section><section id="exemplo-numérico-com-simetria" class="level2" data-number="1.22"><h2 data-number="1.22" class="anchored" data-anchor-id="exemplo-numérico-com-simetria">
-<span class="header-section-number">1.22</span> 📊 Exemplo Numérico com Simetria</h2>
+<hr></section><section id="exemplo-numérico-com-simetria" class="level2" data-number="1.21"><h2 data-number="1.21" class="anchored" data-anchor-id="exemplo-numérico-com-simetria">
+<span class="header-section-number">1.21</span> 📊 Exemplo Numérico com Simetria</h2>
 <p>Vamos calcular a probabilidade de uma pessoa ter <strong>QI inferior a 80</strong>, sabendo que:</p>
 <ul>
 <li>A distribuição dos escores de QI é normal, com <span class="math inline">\(\mu = 100\)</span> e <span class="math inline">\(\sigma = 16\)</span>
@@ -1542,13 +1567,13 @@ P(Z &lt; -1{,}25) = 1 - P(Z &lt; 1{,}25)
 <li>Queremos: <span class="math inline">\(P(X &lt; 80)\)</span>
 </li>
 </ul>
-<section id="passo-1-padronização-1" class="level3" data-number="1.22.1"><h3 data-number="1.22.1" class="anchored" data-anchor-id="passo-1-padronização-1">
-<span class="header-section-number">1.22.1</span> 🧮 Passo 1 — Padronização</h3>
+<section id="passo-1-padronização-1" class="level3" data-number="1.21.1"><h3 data-number="1.21.1" class="anchored" data-anchor-id="passo-1-padronização-1">
+<span class="header-section-number">1.21.1</span> 🧮 Passo 1 — Padronização</h3>
 <p><span class="math display">\[
 z = \frac{80 - 100}{16} = -1{,}25
 \]</span></p>
-</section><section id="passo-2-usando-a-simetria-e-a-tabela-z" class="level3" data-number="1.22.2"><h3 data-number="1.22.2" class="anchored" data-anchor-id="passo-2-usando-a-simetria-e-a-tabela-z">
-<span class="header-section-number">1.22.2</span> 📈 Passo 2 — Usando a Simetria e a Tabela Z</h3>
+</section><section id="passo-2-usando-a-simetria-e-a-tabela-z" class="level3" data-number="1.21.2"><h3 data-number="1.21.2" class="anchored" data-anchor-id="passo-2-usando-a-simetria-e-a-tabela-z">
+<span class="header-section-number">1.21.2</span> 📈 Passo 2 — Usando a Simetria e a Tabela Z</h3>
 <p>Sabemos que:</p>
 <p><span class="math display">\[
 P(Z &lt; -1{,}25) = 1 - P(Z &lt; 1{,}25)
@@ -1561,8 +1586,8 @@ P(Z &lt; -1{,}25) = 1 - P(Z &lt; 1{,}25)
 P(Z &lt; -1{,}25) = 1 - 0{,}8944 = 0{,}1056
 \]</span></p>
 <p>✅ <strong>Conclusão:</strong> Cerca de <strong>10,56% da população</strong> tem QI inferior a 80.</p>
-<hr></section><section id="cálculo-no-r" class="level3" data-number="1.22.3"><h3 data-number="1.22.3" class="anchored" data-anchor-id="cálculo-no-r">
-<span class="header-section-number">1.22.3</span> 🧪 Cálculo no R</h3>
+<hr></section><section id="cálculo-no-r" class="level3" data-number="1.21.3"><h3 data-number="1.21.3" class="anchored" data-anchor-id="cálculo-no-r">
+<span class="header-section-number">1.21.3</span> 🧪 Cálculo no R</h3>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Média e desvio padrão</span></span>
 <span><span class="va">mu</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
 <span><span class="va">sigma</span> <span class="op">&lt;-</span> <span class="fl">16</span></span>
@@ -1570,8 +1595,8 @@ P(Z &lt; -1{,}25) = 1 - 0{,}8944 = 0{,}1056
 <span><span class="co"># Probabilidade de QI &lt; 80</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">80</span>, mean <span class="op">=</span> <span class="va">mu</span>, sd <span class="op">=</span> <span class="va">sigma</span><span class="op">)</span></span>
 <span><span class="co"># Resultado: 0.1056498</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr></section><section id="cálculo-no-excel" class="level3" data-number="1.22.4"><h3 data-number="1.22.4" class="anchored" data-anchor-id="cálculo-no-excel">
-<span class="header-section-number">1.22.4</span> 📊 Cálculo no Excel</h3>
+<hr></section><section id="cálculo-no-excel" class="level3" data-number="1.21.4"><h3 data-number="1.21.4" class="anchored" data-anchor-id="cálculo-no-excel">
+<span class="header-section-number">1.21.4</span> 📊 Cálculo no Excel</h3>
 <p>Use a fórmula:</p>
 <pre><code>=NORM.DIST(80; 100; 16; VERDADEIRO)</code></pre>
 <p>👉 Resultado: <code>0,1056498</code> (ou aproximadamente <strong>10,56%</strong>)</p>
@@ -1580,8 +1605,8 @@ P(Z &lt; -1{,}25) = 1 - 0{,}8944 = 0{,}1056
 <p>🧠 <strong>Resumo</strong>:<br>
 Este exemplo mostra como a <strong>simetria da distribuição normal</strong> e a <strong>padronização via escore-<span class="math inline">\(z\)</span></strong> nos permitem calcular rapidamente a probabilidade de valores abaixo da média — inclusive com o apoio de ferramentas como Tabela Z, R e Excel.</p>
 </blockquote>
-<hr></section></section><section id="conclusão-da-parte-1-introdução-à-distribuição-normal" class="level2" data-number="1.23"><h2 data-number="1.23" class="anchored" data-anchor-id="conclusão-da-parte-1-introdução-à-distribuição-normal">
-<span class="header-section-number">1.23</span> 📌 Conclusão da Parte 1: Introdução à Distribuição Normal</h2>
+<hr></section></section><section id="conclusão-da-parte-1-introdução-à-distribuição-normal" class="level2" data-number="1.22"><h2 data-number="1.22" class="anchored" data-anchor-id="conclusão-da-parte-1-introdução-à-distribuição-normal">
+<span class="header-section-number">1.22</span> 📌 Conclusão da Parte 1: Introdução à Distribuição Normal</h2>
 <p>A Parte 1 do curso explorou os principais fundamentos da <strong>distribuição normal</strong>, incluindo:</p>
 <ul>
 <li>A curva de Gauss e a <strong>Regra Empírica</strong>;</li>
@@ -1592,28 +1617,41 @@ Este exemplo mostra como a <strong>simetria da distribuição normal</strong> e 
 <p>Com esse conhecimento, você já está apto a compreender fenômenos que seguem (ou se aproximam) de uma distribuição normal.</p>
 <hr></section></section><section id="referências" class="level1" data-number="2"><h1 data-number="2">
 <span class="header-section-number">2</span> 📚 Referências</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
-<li>Schmuller, Joseph. <em>Statistical Analysis with Excel® For Dummies®</em>, <span class="math inline">\(5^{\underline{a}}\)</span> Edição. John Wiley &amp; Sons, 2016.<br>
+<li>Schmuller, Joseph. <em>Statistical Analysis with Excel® For Dummies®</em>, 5ª ed.&nbsp;Wiley, 2016.<br>
 </li>
-<li>Schmuller, Joseph. <em>Análise Estatística com R Para Leigos</em>, <span class="math inline">\(2^{\underline{a}}\)</span> Edição. Alta Books, 2021.<br>
+<li>Schmuller, Joseph. <em>Análise Estatística com R Para Leigos</em>, 2ª ed.&nbsp;Alta Books, 2021.<br>
 </li>
-<li>Levine, David M.; Stephan, David; Szabat, Kathryn A. <em>Statistics for Managers Using Microsoft Excel</em>, <span class="math inline">\(8^{\underline{a}}\)</span> Edição. Pearson, 2017.<br>
+<li>Levine, D. M.; Stephan, D.; Szabat, K. A. <em>Statistics for Managers Using Microsoft Excel</em>, 8ª ed.&nbsp;Pearson, 2017.<br>
 </li>
-<li>Morettin, Luiz Gonzaga. <em>Estatística Básica: Probabilidade e Inferência</em>, <span class="math inline">\(7^{\underline{\mathrm{a}}}\)</span> Edição. Pearson, 2017.<br>
+<li>Morettin, L. G. <em>Estatística Básica: Probabilidade e Inferência</em>, 7ª ed.&nbsp;Pearson, 2017.<br>
 </li>
-<li>Morettin, Pedro Alberto; Bussab, Wilton de Oliveira. <em>Estatística Básica</em>, <span class="math inline">\(10^{\underline{a}}\)</span> Edição. São Paulo: SaraivaUni, 2023.</li>
+<li>Morettin, P. A.; Bussab, W. O. <em>Estatística Básica</em>, 10ª ed.&nbsp;SaraivaUni, 2023.</li>
 </ul>
+</div>
+</div>
+</div>
 <hr></section><section id="acesso-rápido-às-partes-do-curso" class="level1" data-number="3"><h1 data-number="3">
 <span class="header-section-number">3</span> 🔗 Acesso Rápido às Partes do Curso</h1>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html">Parte 1: Introdução à Distribuição Normal</a> (👉 Você está aqui!)</p>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">Parte 2: Escore-z e Tabela Z</a></p>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">Parte 3: Gráficos, TCL e Normalidade Aproximada</a></p>
+<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html">Parte 1: Introdução à Distribuição Normal</a> <strong>(👉 você está aqui!)</strong><br>
+🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">Parte 2: Escore-z e Tabela Z</a><br>
+🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">Parte 3: Gráficos, TCL e Normalidade Aproximada</a></p>
 <hr>
-<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊</a></p>
-<p><a href="../../../../../posts/cursos/estatistica/index.html">← Voltar para os Cursos de Estatística 🎓 📊</a></p>
-<p><a href="../../../../../posts/estatistica/">← Voltar para a Seção de Estatística 📊</a></p>
+<!-- Breadcrumbs --><p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/estatistica/index.html">← Cursos de Estatística</a> · <a href="../../../../../posts/estatistica/index.html">← Seção de Estatística</a></p>
 <hr>
-<p>🔝 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html">Voltar ao Topo</a></p>
+<p>🔝 <a href="#top">Voltar ao Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Estatística com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1626,17 +1664,17 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p>📌 Criado por Blog do Marcellini com ❤️ e código.</p>
 </div>
 </div>
 </section><section id="links-úteis" class="level1" data-number="4"><h1 data-number="4">
 <span class="header-section-number">4</span> 🔗 Links Úteis</h1>
 <ul>
-<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a>
+<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a><br>
 </li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">Repositório no GitHub</a><br>
 </li>
-<li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a>
+<li>📬 <a href="mailto:prof.marcellini@gmail.com">Entre em contato por e-mail</a>
 </li>
 </ul>
 
@@ -2125,4 +2163,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </footer>
 
 
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

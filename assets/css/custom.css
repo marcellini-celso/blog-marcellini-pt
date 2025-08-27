@@ -60,3 +60,9 @@
   box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
 }
 
+.badge-ap {
+  display: inline-block; padding: 0.15rem 0.5rem;
+  border-radius: 999px; font-size: 0.78rem;
+  background: #f1f5ff; color: #2b5fd3; border: 1px solid #dbe6ff;
+}
+

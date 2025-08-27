@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.">
+<meta name="description" content="Fundamentos práticos para padronização (z-score), leitura de probabilidades na tabela-z e aplicações comparativas.">
 
-<title>🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 2): Escore-z e Tabela Z – Blog do Marcellini</title>
+<title>🎓📊 Distribuição Normal — Parte 2: Escore-z e Tabela-z – Blog do Marcellini</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,6 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -229,15 +230,15 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Nesta página</h2>
+    <h2 id="toc-title">Neste post</h2>
    
   <ul>
-  <li><a href="#a-distribuição-normal-parte-2" id="toc-a-distribuição-normal-parte-2" class="nav-link active" data-scroll-target="#a-distribuição-normal-parte-2"><span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal – Parte 2</a>
+  <li><a href="#distribuição-normal-parte-2" id="toc-distribuição-normal-parte-2" class="nav-link active" data-scroll-target="#distribuição-normal-parte-2"><span class="header-section-number">1</span> 🎓📊 Distribuição Normal — Parte 2</a>
   <ul class="collapse">
   <li><a href="#exercícios-resolvidos-e-análise-de-resultados" id="toc-exercícios-resolvidos-e-análise-de-resultados" class="nav-link" data-scroll-target="#exercícios-resolvidos-e-análise-de-resultados"><span class="header-section-number">1.1</span> 🧠 📖 Exercícios Resolvidos e Análise de Resultados</a></li>
   <li><a href="#comparando-desempenhos-com-escore-z" id="toc-comparando-desempenhos-com-escore-z" class="nav-link" data-scroll-target="#comparando-desempenhos-com-escore-z"><span class="header-section-number">1.2</span> 📏 Comparando Desempenhos com Escore-z</a></li>
-  <li><a href="#tabela-z---distribuição-normal-padrão" id="toc-tabela-z---distribuição-normal-padrão" class="nav-link" data-scroll-target="#tabela-z---distribuição-normal-padrão"><span class="header-section-number">1.3</span> 📊 Tabela Z - Distribuição Normal Padrão</a></li>
-  <li><a href="#tabela-z-acumulada-normal-padrão-pzz" id="toc-tabela-z-acumulada-normal-padrão-pzz" class="nav-link" data-scroll-target="#tabela-z-acumulada-normal-padrão-pzz"><span class="header-section-number">1.4</span> 📊 Tabela Z Acumulada – Normal Padrão [<span class="math inline">\(P(Z&lt;z)\)</span>]</a></li>
+  <li><a href="#tabela-z-distribuição-normal-padrão" id="toc-tabela-z-distribuição-normal-padrão" class="nav-link" data-scroll-target="#tabela-z-distribuição-normal-padrão"><span class="header-section-number">1.3</span> 📊 Tabela-z — Distribuição Normal Padrão</a></li>
+  <li><a href="#tabela-z-acumulada-normal-padrão-pzz" id="toc-tabela-z-acumulada-normal-padrão-pzz" class="nav-link" data-scroll-target="#tabela-z-acumulada-normal-padrão-pzz"><span class="header-section-number">1.4</span> 📊 Tabela-z Acumulada — Normal Padrão <span class="math inline">\([P(Z&lt;z)]\)</span></a></li>
   <li><a href="#importância-da-distribuição-normal-na-estatística" id="toc-importância-da-distribuição-normal-na-estatística" class="nav-link" data-scroll-target="#importância-da-distribuição-normal-na-estatística"><span class="header-section-number">1.5</span> Importância da Distribuição Normal na Estatística</a></li>
   <li><a href="#conclusão-da-parte-2-escore-z-e-tabela-z" id="toc-conclusão-da-parte-2-escore-z-e-tabela-z" class="nav-link" data-scroll-target="#conclusão-da-parte-2-escore-z-e-tabela-z"><span class="header-section-number">1.6</span> 📌 Conclusão da Parte 2: Escore-z e Tabela Z</a></li>
   </ul></li>
@@ -252,20 +253,19 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 2): Escore-z e Tabela Z</h1>
+<h1 class="title">🎓📊 Distribuição Normal — Parte 2: Escore-z e Tabela-z</h1>
   <div class="quarto-categories">
     <div class="quarto-category">estatística</div>
     <div class="quarto-category">distribuição normal</div>
     <div class="quarto-category">cursos</div>
-    <div class="quarto-category">exercícios</div>
     <div class="quarto-category">escore-z</div>
-    <div class="quarto-category">tabela Z</div>
+    <div class="quarto-category">tabela z</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.
+    Fundamentos práticos para padronização (z-score), leitura de probabilidades na tabela-z e aplicações comparativas.
   </div>
 </div>
 
@@ -294,66 +294,53 @@ window.Quarto = {
 </header>
 
 
-<hr>
-<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊</a></p>
-<p><a href="../../../../../posts/cursos/estatistica/index.html">← Voltar para os Cursos de Estatística 🎓 📊</a></p>
-<p><a href="../../../../../posts/estatistica/">← Voltar para a Seção de Estatística 📊</a></p>
-<hr>
-<div class="quarto-figure quarto-figure-center" style="margin-bottom: 2rem;">
-<figure class="figure">
-<p><img src="../images/curva-normal-fundo-preto.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Distribuição Normal</figcaption>
-</figure>
-</div>
-<section id="a-distribuição-normal-parte-2" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 🎓 📊 A Distribuição Normal – Parte 2</h1>
-<p>Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
+<!-- Breadcrumbs -->
+<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Índice da Distribuição Normal</a> · <a href="../../../../../posts/cursos/estatistica/index.html">← Cursos de Estatística</a> · <a href="../../../../../posts/estatistica/index.html">← Seção Estatística</a></p>
+<p><img src="../images/curva-normal-fundo-preto.png" class="img-fluid" style="margin-bottom:1.25rem;;width:100.0%" alt="Curva da distribuição normal (Gauss) destacando média e simetria."></p>
+<section id="distribuição-normal-parte-2" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 🎓📊 Distribuição Normal — Parte 2</h1>
+<p>Nesta parte, focamos em <strong>padronização</strong> (<em>escore-z</em>), <strong>leitura da tabela-z</strong> e <strong>aplicações</strong> para comparar desempenhos, interpretar probabilidades e preparar o terreno para a inferência.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📌 Objetivos do Post
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>Comparação de desempenhos</li>
-<li>Interpretação gráfica e computacional de probabilidades</li>
-<li>Fundamentação para estudos futuros em inferência estatística</li>
-</ul>
+<p><strong>📌 Objetivos</strong> - Padronizar <span class="math inline">\(X\)</span> via <span class="math inline">\(Z=\frac{X-\mu}{\sigma}\)</span> e interpretar o escore-z. - Obter probabilidades pela <strong>tabela-z</strong> e por software (R/Python). - Comparar desempenhos em escalas distintas usando <span class="math inline">\(z\)</span>. - Preparar o uso de percentis e da <strong>normal inversa</strong>.</p>
 </div>
 </div>
-<hr>
 <section id="exercícios-resolvidos-e-análise-de-resultados" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="exercícios-resolvidos-e-análise-de-resultados"><span class="header-section-number">1.1</span> 🧠 📖 Exercícios Resolvidos e Análise de Resultados</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 📖 Exercício 1: Aplicando o Escore-z
+🧠 📖 Exercício 1 — Aplicando o Escore-z
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><strong>Situação:</strong> Suponha que os escores de QI sigam uma distribuição normal com:</p>
+<p><strong>Situação:</strong> Suponha que os escores de QI sigam uma distribuição normal com parâmetros:</p>
 <ul>
-<li><p><span class="math inline">\(\mu=100\)</span></p></li>
-<li><p><span class="math inline">\(\sigma=16\)</span></p></li>
+<li><span class="math inline">\(\mu = 100\)</span> (média)<br>
+</li>
+<li><span class="math inline">\(\sigma = 16\)</span> (desvio padrão)</li>
 </ul>
-<p><strong>Pergunta:</strong> Qual a probabilidade de uma pessoa ter QI superior a 136?</p>
-<p><strong>Instruções:</strong></p>
-<ol type="1">
-<li><p>Calcule o escore- <span class="math inline">\(z\)</span> correspondente ao valor <span class="math inline">\(x=136\)</span></p></li>
-<li><p>Use a Tabela Z ou software para determinar <span class="math inline">\(P(Z&gt;z)\)</span></p></li>
-<li><p>Interprete o resultado: essa pontuação é comum ou rara?</p></li>
-</ol>
-<p><strong>💡Dica:</strong> lembre-se que <span class="math inline">\(\boxed{P(Z&gt;z)=1-P(Z&lt;z)}\)</span> e que <span class="math inline">\(\boxed{z=\frac{x-\mu}{\sigma}}\)</span></p>
-</div>
+<p><strong>Pergunta:</strong> Qual a probabilidade de uma pessoa ter QI <strong>superior a 136</strong>?</p>
+<p><strong>Instruções:</strong> 1. Calcule o escore-<span class="math inline">\(z\)</span> correspondente a <span class="math inline">\(x=136\)</span>.<br>
+2. Use a <strong>tabela-z</strong> ou software para determinar <span class="math inline">\(P(Z&gt;z)\)</span>.<br>
+3. Interprete o resultado: essa pontuação é <strong>comum</strong> ou <strong>rara</strong>?</p>
+<p>💡 <strong>Dica:</strong><br>
+<span class="math display">\[
+\boxed{\,z=\tfrac{x-\mu}{\sigma}\,},
+\quad
+\boxed{\,P(Z&gt;z)=1-P(Z&lt;z)\,}
+\]</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -362,71 +349,68 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 🔎 Resolução do Exercício 1: Qual a probabilidade de ter QI &gt; 136?
+🧠 🔎 Resolução — Exercício 1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Distribuição:</strong> <span class="math inline">\(\mu=100, \sigma=16\)</span></p>
-<p><strong>🧮 Passo 1 -</strong> Calcular o escore- <span class="math inline">\(z\)</span> :</p>
+<p><strong>Distribuição:</strong> <span class="math inline">\(X \sim \mathcal N(100,\,16^2)\)</span></p>
+<p><strong>🧮 Passo 1 — Escore-z</strong></p>
 <p><span class="math display">\[
-z=\frac{136-100}{16}=\frac{36}{16}=2,25
+z = \frac{136-100}{16} = \frac{36}{16} = 2,25
 \]</span></p>
-<p><strong>🧮 Passo 2 -</strong> Consultar a Tabela Z:</p>
+<p><strong>🧮 Passo 2 — Consulta na tabela-z</strong></p>
 <p><span class="math display">\[
-P(Z&lt;2,25) \approx 0,9878 \Rightarrow P(Z&gt;2,25)=1-0,9878=0,0122
+P(Z&lt;2{,}25) \approx 0{,}9878
+\quad\Rightarrow\quad
+P(Z&gt;2{,}25) = 1 - 0{,}9878 = 0{,}0122
 \]</span></p>
-<p><strong>📌 Conclusão:</strong></p>
-<blockquote class="blockquote">
-<p>Apenas cerca de <strong><span class="math inline">\(\mathbf{1 , 2 2 \%}\)</span></strong> da população tem QI superior a 136 .</p>
-</blockquote>
+<p><strong>📌 Conclusão</strong></p>
+<p>Apenas cerca de <strong><span class="math inline">\(\mathbf{1,22\%}\)</span></strong> da população tem QI superior a 136.<br>
+Ou seja, é um resultado <strong>raro</strong>, típico de indivíduos na cauda superior da distribuição.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="comparando-desempenhos-com-escore-z" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="comparando-desempenhos-com-escore-z"><span class="header-section-number">1.2</span> 📏 Comparando Desempenhos com Escore-z</h2>
-<p><strong>Situação:</strong></p>
+<p><strong>Situação inicial:</strong></p>
 <ul>
-<li><p>Aluno A obteve nota 80 em uma prova com <span class="math inline">\(\mu=70, \sigma=5\)</span>.</p></li>
-<li><p>Aluno B obteve nota 8 em uma prova com <span class="math inline">\(\mu=6, \sigma=1\)</span>.</p></li>
-<li><p>Quem teve o melhor desempenho relativo?</p></li>
+<li>Aluno A obteve nota 80 em uma prova com <span class="math inline">\(\mu=70,\; \sigma=5\)</span>.<br>
+</li>
+<li>Aluno B obteve nota 8 em uma prova com <span class="math inline">\(\mu=6,\; \sigma=1\)</span>.</li>
 </ul>
-<p>Cálculo dos escores- <span class="math inline">\(z\)</span> :</p>
+<p><strong>Cálculo dos escores-<span class="math inline">\(z\)</span>:</strong></p>
 <p><span class="math display">\[
-z_A=\frac{80-70}{5}=2,0 \quad z_B=\frac{8-6}{1}=2,0
+z_A = \frac{80-70}{5} = 2,0
+\qquad
+z_B = \frac{8-6}{1} = 2,0
 \]</span></p>
-<p><strong>📌 Conclusão:</strong></p>
-<blockquote class="blockquote">
-<p>Ambos os alunos tiveram desempenho <strong>2 desvios padrão acima da média</strong> de suas turmas. Ou seja, o desempenho relativo foi <strong>equivalente</strong>.</p>
-</blockquote>
+<p><strong>📌 Conclusão:</strong><br>
+Ambos os alunos tiveram desempenho <strong>2 desvios-padrão acima da média</strong> de suas turmas.<br>
+Ou seja, o desempenho relativo foi <strong>equivalente</strong>.</p>
+<hr>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 📖 Exercício 2: Comparando Desempenhos com Escore-z
+🧠 📖 Exercício 2 — Comparando Desempenhos com Escore-z
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p><strong>Situação:</strong></p>
 <ul>
-<li><p>Aluno A obteve nota 65 em uma prova com <span class="math inline">\(\mu=60, \sigma=4\)</span>.</p></li>
-<li><p>Aluno B obteve nota 7 em uma prova com <span class="math inline">\(\mu=5,5, \sigma=1\)</span>.</p></li>
-<li><p>Quem teve o melhor desempenho relativo?</p></li>
+<li>Aluno A obteve nota 65 em uma prova com <span class="math inline">\(\mu=60,\; \sigma=4\)</span>.<br>
+</li>
+<li>Aluno B obteve nota 7 em uma prova com <span class="math inline">\(\mu=5,5,\; \sigma=1\)</span>.</li>
 </ul>
-<p><strong>Tarefa:</strong></p>
-<ol type="1">
-<li><p>Calcule o escore- <span class="math inline">\(z\)</span> para os dois alunos.</p></li>
-<li><p>Compare os valores.</p></li>
-<li><p>Interprete: qual deles se destacou mais em relação à média da sua turma?</p></li>
-</ol>
-<p><strong>💡 Dica:</strong> lembre-se que quanto maior o <span class="math inline">\(z\)</span>, melhor o desempenho relativo.</p>
-</div>
+<p><strong>Tarefa:</strong> 1. Calcule o escore-<span class="math inline">\(z\)</span> para os dois alunos.<br>
+2. Compare os valores.<br>
+3. Interprete: qual deles se destacou mais em relação à média da sua turma?</p>
+<p>💡 <strong>Dica:</strong> quanto maior o valor de <span class="math inline">\(z\)</span>, melhor o desempenho relativo.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -435,7 +419,7 @@ z_A=\frac{80-70}{5}=2,0 \quad z_B=\frac{8-6}{1}=2,0
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 🔎 Resolução do Exercício 2: Comparando Desempenhos com Escore-z
+🧠 🔎 Resolução — Exercício 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -443,86 +427,73 @@ z_A=\frac{80-70}{5}=2,0 \quad z_B=\frac{8-6}{1}=2,0
 <div class="callout-body-container callout-body">
 <p><strong>Aluno A:</strong></p>
 <p><span class="math display">\[
-z_A=\frac{65-60}{4}=\frac{5}{4}=1,25
+z_A = \frac{65-60}{4} = \frac{5}{4} = 1,25
 \]</span></p>
 <p><strong>Aluno B:</strong></p>
 <p><span class="math display">\[
-z_B=\frac{7-5,5}{1}=\frac{1,5}{1}=1,5
+z_B = \frac{7-5{,}5}{1} = \frac{1{,}5}{1} = 1,5
 \]</span></p>
-<p><strong>📌 Conclusão:</strong></p>
-<blockquote class="blockquote">
-<p>O Aluno B teve um escore-z maior que o Aluno A.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Portanto, <strong>o Aluno B apresentou melhor desempenho relativo</strong> em relação à sua turma.</p>
-</blockquote>
+<p><strong>📌 Conclusão:</strong><br>
+O Aluno B obteve <span class="math inline">\(z_B=1,5\)</span>, maior que o <span class="math inline">\(z_A=1,25\)</span>.<br>
+Portanto, <strong>o Aluno B apresentou melhor desempenho relativo</strong> em relação à sua turma.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-✏️📄 Resumo: Distribuição Normal e Escore-z
+✏️📄 Resumo — Distribuição Normal e Escore-z
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Distribuição Normal:</strong></li>
 </ul>
 <p><span class="math display">\[
-\boxed{f(x)=\frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}}
+\boxed{\, f(x)=\tfrac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\tfrac{(x-\mu)^2}{2 \sigma^2}} \,}
 \]</span></p>
 <ul>
-<li><strong>Distribuição Normal Padrão: <span class="math inline">\(\mu=0, \sigma=1\)</span></strong></li>
+<li><strong>Distribuição Normal Padrão (<span class="math inline">\(\mu=0,\; \sigma=1\)</span>):</strong></li>
 </ul>
 <p><span class="math display">\[
-\boxed{f(z)=\frac{1}{\sqrt{2 \pi}} e^{-z^2 / 2}}
+\boxed{\, f(z)=\tfrac{1}{\sqrt{2 \pi}} \, e^{-z^2/2} \,}
 \]</span></p>
 <ul>
-<li><strong>Escore-z: transforma <span class="math inline">\(x\)</span> em um valor padronizado</strong></li>
+<li><strong>Escore-z (padronização):</strong></li>
 </ul>
 <p><span class="math display">\[
-\boxed{z=\frac{x-\mu}{\sigma}}
+\boxed{\, z=\tfrac{x-\mu}{\sigma} \,}
 \]</span></p>
 <ul>
-<li><strong>Valor original a partir de <span class="math inline">\(z\)</span> :</strong></li>
+<li><strong>Valor original a partir de <span class="math inline">\(z\)</span>:</strong></li>
 </ul>
 <p><span class="math display">\[
-\boxed{x=\mu+z \sigma}
+\boxed{\, x=\mu+z\sigma \,}
 \]</span></p>
 <ul>
-<li><p><strong>Regra Empírica:</strong></p></li>
-<li><p><span class="math inline">\(68 \%\)</span> : entre <span class="math inline">\(\mu \pm 1 \sigma\)</span></p></li>
-<li><p><span class="math inline">\(95 \%\)</span> : entre <span class="math inline">\(\mu \pm 2 \sigma\)</span></p></li>
-<li><p><span class="math inline">\(99,7 \%\)</span> : entre <span class="math inline">\(\mu \pm 3 \sigma\)</span></p></li>
+<li><strong>Regra Empírica (68–95–99,7):</strong>
+<ul>
+<li><span class="math inline">\(68\%\)</span>: entre <span class="math inline">\(\mu \pm 1\sigma\)</span><br>
+</li>
+<li><span class="math inline">\(95\%\)</span>: entre <span class="math inline">\(\mu \pm 2\sigma\)</span><br>
+</li>
+<li><span class="math inline">\(99{,}7\%\)</span>: entre <span class="math inline">\(\mu \pm 3\sigma\)</span><br>
+</li>
+</ul></li>
 </ul>
 </div>
 </div>
-</div>
+<hr>
 </section>
-<section id="tabela-z---distribuição-normal-padrão" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="tabela-z---distribuição-normal-padrão"><span class="header-section-number">1.3</span> 📊 Tabela Z - Distribuição Normal Padrão</h2>
-<p>Como usar a Tabela Z:</p>
-<ul>
-<li><p>O valor da linha indica a parte inteira e a primeira casa decimal do escore-<span class="math inline">\(z\)</span>.</p></li>
-<li><p>A coluna indica a segunda casa decimal.</p></li>
-<li><p>A interseção fornece <span class="math inline">\(P(Z&lt;z)\)</span>, ou seja, a probabilidade acumulada até o valor de <span class="math inline">\(z\)</span>.</p></li>
-</ul>
+<section id="tabela-z-distribuição-normal-padrão" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="tabela-z-distribuição-normal-padrão"><span class="header-section-number">1.3</span> 📊 Tabela-z — Distribuição Normal Padrão</h2>
+<p><strong>Como usar a tabela-z:</strong> - A <strong>linha</strong> indica a parte inteira e a 1ª casa decimal do escore-<span class="math inline">\(z\)</span>.<br>
+- A <strong>coluna</strong> indica a 2ª casa decimal.<br>
+- A interseção fornece <span class="math inline">\(P(Z&lt;z)\)</span>, isto é, a probabilidade acumulada até <span class="math inline">\(z\)</span>.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 29%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;"><strong>z</strong></th>
@@ -546,148 +517,147 @@ z_B=\frac{7-5,5}{1}=\frac{1,5}{1}=1,5
 </tr>
 </tbody>
 </table>
-<hr>
-<p><strong>🧠 Exemplo:</strong></p>
-<p>Para <span class="math inline">\(z=1,25\)</span>, usamos a linha 1.2 e a coluna <span class="math inline">\(0.05 \rightarrow P(Z&lt;1,25)=0,8944\)</span></p>
+<p><strong>🧠 Exemplo:</strong><br>
+Para <span class="math inline">\(z=1,25\)</span>, usamos a linha <strong>1.2</strong> e a coluna <strong>0.05</strong>, obtendo:<br>
+<span class="math display">\[
+P(Z&lt;1{,}25)=0{,}8944
+\]</span></p>
 <hr>
 </section>
 <section id="tabela-z-acumulada-normal-padrão-pzz" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="tabela-z-acumulada-normal-padrão-pzz"><span class="header-section-number">1.4</span> 📊 Tabela Z Acumulada – Normal Padrão [<span class="math inline">\(P(Z&lt;z)\)</span>]</h2>
+<h2 data-number="1.4" class="anchored" data-anchor-id="tabela-z-acumulada-normal-padrão-pzz"><span class="header-section-number">1.4</span> 📊 Tabela-z Acumulada — Normal Padrão <span class="math inline">\([P(Z&lt;z)]\)</span></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/tabela_z_vetorial.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="../images/tabela_z_vetorial.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Tabela-z acumulada com valores de probabilidade até z."></p>
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><em>Fonte: Gerada com scipy.stats.norm.cdf para valores de z entre 0,00 e 3,09.</em></p>
+<p><em>Fonte: gerada com <code>scipy.stats.norm.cdf</code> para valores de <span class="math inline">\(z\)</span> entre 0,00 e 3,09.</em></p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-💻 Atividades Práticas - Excel e R
+💻 Atividades Práticas — Excel e R
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><strong>Objetivo:</strong> Aplicar os conceitos de distribuição normal e escore-<span class="math inline">\(z\)</span> em ambiente computacional.</p>
+<p><strong>Objetivo:</strong> aplicar os conceitos de distribuição normal e escore-<span class="math inline">\(z\)</span> em ambiente computacional.</p>
 <p><strong>No Excel:</strong></p>
 <ul>
-<li><p>Use =NORM.DIST(120; 100; 16; VERDADEIRO) para calcular <span class="math inline">\(P(X&lt;120)\)</span>.</p></li>
-<li><p>Use =NORM. INV (0,90; 100; 16) para obter o valor correspondente ao percentil 90.</p></li>
-<li><p>Gere uma tabela com valores de <span class="math inline">\(x\)</span>, calcule seus escore-<span class="math inline">\(z\)</span> e destaque quem está acima da média.</p></li>
+<li><code>=NORM.DIST(120;100;16;VERDADEIRO)</code> → calcula <span class="math inline">\(P(X&lt;120)\)</span>.<br>
+</li>
+<li><code>=NORM.INV(0,90;100;16)</code> → retorna o valor correspondente ao percentil 90.<br>
+</li>
+<li>Gere uma tabela com valores de <span class="math inline">\(x\)</span>, calcule os escores-<span class="math inline">\(z\)</span> e destaque quem está acima da média.</li>
 </ul>
-<p><strong>No R :</strong></p>
+<p><strong>No R:</strong></p>
 <ul>
-<li><p><span class="math inline">\(\operatorname{pnorm}(120\)</span>, mean <span class="math inline">\(=100, \mathrm{sd}=16)\)</span> retorna <span class="math inline">\(P(X&lt;120)\)</span>.</p></li>
-<li><p><span class="math inline">\(\operatorname{qnorm}(0.90\)</span>, mean <span class="math inline">\(=100, \mathrm{sd}=16)\)</span> retorna o valor para o percentil 90.</p></li>
-<li><p>z &lt;- (x - mean) / sd para calcular escore-<span class="math inline">\(z\)</span> de vetores.</p></li>
+<li><code>pnorm(120, mean=100, sd=16)</code> → retorna <span class="math inline">\(P(X&lt;120)\)</span>.<br>
+</li>
+<li><code>qnorm(0.90, mean=100, sd=16)</code> → retorna o valor do percentil 90.<br>
+</li>
+<li><code>z &lt;- (x - mean)/sd</code> → calcula escore-<span class="math inline">\(z\)</span> de um vetor.</li>
 </ul>
-<p><strong>💡 Sugestão:</strong> comparar alunos de diferentes turmas com diferentes médias e desvios, usando escore-<span class="math inline">\(z\)</span>.</p>
+<p>💡 <strong>Sugestão:</strong> compare alunos de diferentes turmas (com diferentes médias e desvios), usando o escore-<span class="math inline">\(z\)</span>.</p>
 </div>
 </div>
-</div>
+<hr>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 🧠 Desafio com Gráfico - Distribuição Normal
+🧠 📈 Desafio com Gráfico — Distribuição Normal
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><strong>Situação:</strong></p>
-<ul>
-<li>O tempo de atendimento (em minutos) em um serviço segue uma distribuição normal com:</li>
-</ul>
-<p><span class="math display">\[
-\mu=50, \quad \sigma=10
-\]</span></p>
-<ul>
-<li>O gráfico abaixo mostra a distribuição dos tempos de atendimento.</li>
-</ul>
+<p><strong>Situação:</strong><br>
+O tempo de atendimento (em minutos) em um serviço segue <span class="math inline">\(X \sim \mathcal N(50, 10^2)\)</span>.</p>
 <p><strong>Tarefa:</strong></p>
 <ol type="1">
-<li>Marque no gráfico as regiões correspondentes a:</li>
-</ol>
+<li>Marque no gráfico as regiões correspondentes a:
 <ul>
-<li><p><span class="math inline">\(P(40&lt;X&lt;60)\)</span></p></li>
-<li><p><span class="math inline">\(P(X&gt;70)\)</span></p></li>
-</ul>
-<ol start="2" type="1">
-<li><p>Calcule os escores-<span class="math inline">\(z\)</span> correspondentes aos valores 40, 60 e 70.</p></li>
-<li><p>Use Excel ou R para calcular as probabilidades dessas regiões.</p></li>
-<li><p>Interprete: são tempos de atendimento comuns ou raros?</p></li>
+<li><span class="math inline">\(P(40&lt;X&lt;60)\)</span><br>
+</li>
+<li><span class="math inline">\(P(X&gt;70)\)</span><br>
+</li>
+</ul></li>
+<li>Calcule os escores-<span class="math inline">\(z\)</span> correspondentes a 40, 60 e 70.<br>
+</li>
+<li>Use Excel ou R para calcular as probabilidades dessas regiões.<br>
+</li>
+<li>Interprete: são tempos de atendimento comuns ou raros?</li>
 </ol>
-<p><strong>Dica:</strong> use a Regra Empírica e a simetria da curva como apoio visual.</p>
-<p><strong>Gráfico para o Desafio: Interprete as Áreas</strong></p>
-<p><img src="../images/distribuicao_normal_desafio.png" class="img-fluid" style="width:100.0%"></p>
+<p>💡 <strong>Dica:</strong> use a <strong>regra empírica</strong> e a simetria da curva como apoio visual.</p>
+<p><img src="../images/distribuicao_normal_desafio.png" class="img-fluid" style="width:100.0%" alt="Gráfico da distribuição normal N(50,10²) com áreas destacadas entre 40–60 e acima de 70."></p>
 <div class="small">
-<blockquote class="blockquote">
-<p>A curva mostra a distribuição de <span class="math inline">\(X \sim N(50, 10^2)\)</span>.<br>
-As áreas coloridas representam:<br>
-<strong>Azul:</strong> <span class="math inline">\(P(40 &lt; X &lt; 60)\)</span>, <strong>Vermelho:</strong> <span class="math inline">\(P(X &gt; 70)\)</span>.</p>
-</blockquote>
+<p>A curva mostra a distribuição <span class="math inline">\(X \sim \mathcal N(50, 10^2)\)</span>.<br>
+As áreas coloridas representam: <strong>Azul:</strong> <span class="math inline">\(P(40&lt;X&lt;60)\)</span>, <strong>Vermelho:</strong> <span class="math inline">\(P(X&gt;70)\)</span>.</p>
 </div>
 </div>
 </div>
-</div>
+<hr>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 🔎 Gabarito - Desafio com Gráfico da Normal
+🧠 🔎 Gabarito — Desafio com Gráfico
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Distribuição:</strong> Tempo de atendimento <span class="math inline">\(X \sim N\left(50,10^2\right)\)</span></p>
+<p><strong>Distribuição:</strong> <span class="math inline">\(X \sim \mathcal N(50, 10^2)\)</span></p>
 <ol type="1">
-<li><strong>Escore-<span class="math inline">\(z\)</span>:</strong></li>
-</ol>
-<p><span class="math display">\[
-z_{40}=\frac{40-50}{10}=-1 \quad z_{60}=\frac{60-50}{10}=1 \quad z_{70}=\frac{70-50}{10}=2
-\]</span></p>
-<ol start="2" type="1">
-<li><strong>Probabilidades:</strong></li>
+<li><p><strong>Escore-<span class="math inline">\(z\)</span>:</strong> <span class="math display">\[
+z_{40} = \frac{40-50}{10} = -1,
+\quad
+z_{60} = \frac{60-50}{10} = 1,
+\quad
+z_{70} = \frac{70-50}{10} = 2
+\]</span></p></li>
+<li><p><strong>Probabilidades:</strong></p></li>
 </ol>
 <ul>
-<li><p><span class="math inline">\(P(40&lt;X&lt;60)=P(-1&lt;Z&lt;1) \approx 0,6826\)</span></p></li>
-<li><p><span class="math inline">\(P(X&gt;70)=P(Z&gt;2)=1-P(Z&lt;2) \approx 1-0,9772=0,0228\)</span></p></li>
+<li><span class="math inline">\(P(40&lt;X&lt;60) = P(-1&lt;Z&lt;1) \approx 0{,}6826\)</span><br>
+</li>
+<li><span class="math inline">\(P(X&gt;70) = P(Z&gt;2) = 1-P(Z&lt;2) \approx 0{,}0228\)</span></li>
 </ul>
-<p><strong>📌 Interpretação:</strong></p>
-<blockquote class="blockquote">
-<p>Aproximadamente <span class="math inline">\(\mathbf{6 8 , 2 6 \%}\)</span> dos atendimentos duram entre 40 e 60 minutos. Apenas <span class="math inline">\(\mathbf{2 , 2 8 \%}\)</span> dos atendimentos duram mais de 70 minutos - são considerados raros.</p>
-</blockquote>
+<p><strong>📌 Interpretação:</strong><br>
+- Cerca de <strong><span class="math inline">\(\mathbf{68,26\%}\)</span></strong> dos atendimentos duram entre 40 e 60 minutos.<br>
+- Apenas <strong><span class="math inline">\(\mathbf{2,28\%}\)</span></strong> dos atendimentos duram mais de 70 minutos → são <strong>raros</strong>.</p>
 </div>
 </div>
 </div>
+<hr>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 🔎 💻 Gabarito: Usando Excel e R
+💻 Gabarito — Usando Excel e R
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Distribuição:</strong> Tempo de atendimento <span class="math inline">\(X \sim N\left(50,10^2\right)\)</span></p>
+<p><strong>Distribuição:</strong> <span class="math inline">\(X \sim \mathcal N(50, 10^2)\)</span></p>
 <p><strong>No Excel:</strong></p>
 <ul>
-<li><p><span class="math inline">\(P(40&lt;X&lt;60)\)</span> : =NORM.DIST(60; 50; 10; VERDADEIRO) NORM.DIST(40; 50; 10; VERDADEIRO) Resultado: <span class="math inline">\(\approx 0,6826\)</span></p></li>
-<li><p><span class="math inline">\(P(X&gt;70):=1\)</span> - NORM.DIST(70; 50; 10; VERDADEIRO) Resultado: <span class="math inline">\(\approx 0,0228\)</span></p></li>
+<li><span class="math inline">\(P(40&lt;X&lt;60)\)</span>:<br>
+<code>=NORM.DIST(60;50;10;VERDADEIRO) - NORM.DIST(40;50;10;VERDADEIRO)</code><br>
+→ <span class="math inline">\(\approx 0{,}6826\)</span><br>
+</li>
+<li><span class="math inline">\(P(X&gt;70)\)</span>:<br>
+<code>=1 - NORM.DIST(70;50;10;VERDADEIRO)</code><br>
+→ <span class="math inline">\(\approx 0{,}0228\)</span></li>
 </ul>
 <p><strong>No R:</strong></p>
 <ul>
@@ -734,28 +704,42 @@ z_{40}=\frac{40-50}{10}=-1 \quad z_{60}=\frac{60-50}{10}=1 \quad z_{70}=\frac{70
 </section>
 <section id="referências" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> 📚 Referências</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
-<li>Schmuller, Joseph. <em>Statistical Analysis with Excel® For Dummies®</em>, <span class="math inline">\(5^{\underline{a}}\)</span> Edição. John Wiley &amp; Sons, 2016.<br>
+<li>Schmuller, Joseph. <em>Statistical Analysis with Excel® For Dummies®</em>, 5ª ed.&nbsp;Wiley, 2016.<br>
 </li>
-<li>Schmuller, Joseph. <em>Análise Estatística com R Para Leigos</em>, <span class="math inline">\(2^{\underline{a}}\)</span> Edição. Alta Books, 2021.<br>
+<li>Schmuller, Joseph. <em>Análise Estatística com R Para Leigos</em>, 2ª ed.&nbsp;Alta Books, 2021.<br>
 </li>
-<li>Levine, David M.; Stephan, David; Szabat, Kathryn A. <em>Statistics for Managers Using Microsoft Excel</em>, <span class="math inline">\(8^{\underline{a}}\)</span> Edição. Pearson, 2017.<br>
+<li>Levine, D. M.; Stephan, D.; Szabat, K. A. <em>Statistics for Managers Using Microsoft Excel</em>, 8ª ed.&nbsp;Pearson, 2017.<br>
 </li>
-<li>Morettin, Luiz Gonzaga. <em>Estatística Básica: Probabilidade e Inferência</em>, <span class="math inline">\(7^{\underline{\mathrm{a}}}\)</span> Edição. Pearson, 2017.<br>
+<li>Morettin, L. G. <em>Estatística Básica: Probabilidade e Inferência</em>, 7ª ed.&nbsp;Pearson, 2017.<br>
 </li>
-<li>Morettin, Pedro Alberto; Bussab, Wilton de Oliveira. <em>Estatística Básica</em>, <span class="math inline">\(10^{\underline{a}}\)</span> Edição. São Paulo: SaraivaUni, 2023.</li>
+<li>Morettin, P. A.; Bussab, W. O. <em>Estatística Básica</em>, 10ª ed.&nbsp;SaraivaUni, 2023.</li>
 </ul>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="acesso-rápido-às-partes-do-curso" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> 🔗 Acesso Rápido às Partes do Curso</h1>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html">Parte 1: Introdução à Distribuição Normal</a></p>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">Parte 2: Escore-z e Tabela Z</a>(👉 Você está aqui!)</p>
-<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">Parte 3: Gráficos, TCL e Normalidade Aproximada</a></p>
+<p>🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html">Parte 1: Introdução à Distribuição Normal</a><br>
+🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">Parte 2: Escore-z e Tabela-z</a> <strong>(👉 você está aqui!)</strong><br>
+🎯 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-3/distribuicao-normal-parte3.html">Parte 3: Gráficos, TCL e Normalidade Aproximada</a></p>
 <hr>
-<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊</a></p>
-<p><a href="../../../../../posts/cursos/estatistica/index.html">← Voltar para os Cursos de Estatística 🎓 📊</a></p>
-<p><a href="../../../../../posts/estatistica/">← Voltar para a Seção de Estatística 📊</a></p>
+<!-- Breadcrumbs -->
+<p><a href="../../../../../posts/cursos/estatistica/distribuicao_normal/index.html">← Índice da Distribuição Normal</a> · <a href="../../../../../posts/cursos/estatistica/index.html">← Cursos de Estatística</a> · <a href="../../../../../posts/estatistica/index.html">← Seção Estatística</a></p>
 <hr>
 <p>🔝 <a href="../../../../../posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html">Voltar ao Topo</a></p>
 <hr>
@@ -770,15 +754,17 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p>📌 Criado por <strong>Blog do Marcellini</strong> com ❤️ e código.</p>
 </div>
 </div>
 </section>
 <section id="links-úteis" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 🔗 Links Úteis</h1>
 <ul>
-<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
+<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a><br>
+</li>
+<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a><br>
+</li>
 <li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
 </ul>
 
@@ -1275,4 +1261,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

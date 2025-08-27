@@ -19,19 +19,14 @@ format:
 page-layout: full
 ---
 
----
-
-[← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊](/posts/cursos/estatistica/distribuicao_normal/index.qmd)
-
-[← Voltar para os Cursos de Estatística 🎓 📊](/posts/cursos/estatistica/index.qmd)
-
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+<!-- Breadcrumbs -->
+[← Sumário do Curso](../index.qmd) · [← Cursos de Estatística](../../index.qmd) · [← Seção de Estatística](../../../../estatistica/index.qmd)
 
 ---
 
 ![Distribuição Normal](../images/curva-normal-fundo-preto.png){width=100% style="margin-bottom: 2rem;"}
 
-# 🎓 📊 A Distribuição Normal -- Parte 1
+# 🎓 📊 A Distribuição Normal — Parte 1
 
 Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.
 
@@ -80,7 +75,6 @@ Antes de mergulhar na distribuição normal, é fundamental compreender alguns c
   _Exemplo_: se a média de QI é 100 e $\sigma = 15$, a maioria das pessoas terá QI entre 85 e 115.
 
 :::
-
 
 ::: {.callout-note collapse=false icon="🌍"}
 ## 🌍 Importância da Distribuição Normal
@@ -144,7 +138,6 @@ Na versão **padrão**, a média é $\mu = 0$ e o desvio padrão $\sigma = 1$.
 A área sob a curva corresponde à totalidade da população observada.
 :::
 
-
 ## 🎯 Medindo o Invisível
 
 Nem sempre conseguimos observar diretamente as características de uma população. Em muitos casos, lidamos com **conceitos abstratos** — como inteligência, habilidade musical, produtividade ou motivação — que não podem ser medidos de forma direta e objetiva.
@@ -198,7 +191,6 @@ Na forma **padrão**, temos $\mu = 0$ e $\sigma = 1$.
 A curva é centrada em $\mu = 0$ e o desvio padrão é $\sigma = 1$.  
 A área sob a curva representa a distribuição da população em torno da média.
 :::
-
 
 ## 📏 Regra Empírica — 68% - 95% - 99,7%
 
@@ -263,7 +255,6 @@ Essa transformação converte qualquer valor $x$ em um **escore-z**, possibilita
 A média define a posição central das curvas.  
 A forma (altura e largura) é controlada exclusivamente pelo desvio padrão $\sigma$.
 :::
-
 
 ## 🎓 Exemplo: Distribuição de QI (Stanford–Binet)
 
@@ -346,12 +337,20 @@ A distribuição de QI (com média $\mu = 100$ e desvio padrão $\sigma = 16$) p
 Cada faixa da curva representa uma porção da população e foi desenhada com cores **não sobrepostas** para destacar suas contribuições individuais.
 :::
 
-
 ## 🧪 Exemplo com Código Python: Visualizando a Regra Empírica
 
 Vamos representar graficamente uma distribuição de QI usando a regra empírica. Suponha que os escores de QI sigam uma distribuição normal com média $\mu = 100$ e desvio padrão $\sigma = 16$. O gráfico abaixo mostra as **faixas não sobrepostas** da regra empírica:
 
-```{python Criar figura no Python}
+::: {.callout-note collapse=true title="👨‍💻 🐍 Código Python — gerar a figura"}
+```{python}
+#| label: regra-empirica-py
+#| echo: true
+#| fig-cap: "Distribuição de QI — Regra Empírica com faixas separadas."
+#| fig-align: center
+#| fig-width: 6
+#| fig-height: 3.6
+#| out-width: 70%
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -371,8 +370,8 @@ faixas = [
     {'label': '3σ: 132 a 148', 'x1': mu + 2*sigma, 'x2': mu + 3*sigma, 'color': '#FFC0CB'}
 ]
 
-# Criar figura
-fig, ax = plt.subplots(figsize=(10, 5))
+# Criar figura (sem figsize para usar fig-width/fig-height do Quarto)
+fig, ax = plt.subplots()
 ax.plot(x, y, color='black')
 
 # Preencher faixas
@@ -390,7 +389,10 @@ ax.set_xlabel('QI')
 ax.set_ylabel('Densidade de probabilidade')
 ax.grid(True, linestyle="--", alpha=0.3)
 ax.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
 ```
+:::
 
 ::: {.callout-note collapse=false icon="📘"}
 Este gráfico evidencia como os valores de QI estão distribuídos em torno da média, com áreas coloridas representando:
@@ -406,12 +408,16 @@ A linha pontilhada azul marca a **média populacional**.
 ![](../images/regra-empirica-qi-faixas-separadas.png){width=100%}
 :::
 
+::: {.callout-note collapse=true title="📊 R — gerar figura com ggplot2"}
+```{r}
+#| label: regra-empirica-r
+#| echo: true
+#| fig-cap: "Distribuição de QI — Regra Empírica com ggplot2."
+#| fig-align: center
+#| fig-width: 6
+#| fig-height: 3.6
+#| out-width: 70%
 
-## 📊 Visualização com `ggplot2` (R)
-
-Vamos recriar o gráfico da Regra Empírica usando `R` e o pacote `ggplot2` para ilustrar os intervalos de 1, 2 e 3 desvios padrão com faixas coloridas distintas.
-
-```{r Criar figura no R}
 library(ggplot2)
 
 # Parâmetros
@@ -447,17 +453,17 @@ ggplot(df, aes(x, y)) +
   ) +
   theme_minimal()
 ```
-
-::: {.callout-note collapse=false icon="📘"}
-Neste gráfico, cada intervalo da curva normal representa uma proporção da população:
-
-- **Rosa claro**: 68,27% dos indivíduos entre $\mu \pm 1\sigma$  
-- **Azul claro**: de 68,27% até 95,45% (entre $\mu \pm 1\sigma$ e $\mu \pm 2\sigma$)  
-- **Rosa claro**: de 95,45% até 99,73% (entre $\mu \pm 2\sigma$ e $\mu \pm 3\sigma$)  
-
-O traço azul pontilhado indica a média $\mu = 100$.
 :::
 
+::: {.callout-note collapse=false icon="📘"} 
+Neste gráfico, cada intervalo da curva normal representa uma proporção da população:
+
+ - **Rosa claro**: 68,27% dos indivíduos entre $\mu \pm 1\sigma$ 
+ - **Azul claro**: de 68,27% até 95,45% (entre $\mu \pm 1\sigma$ e $\mu \pm 2\sigma$) 
+ - **Rosa claro**: de 95,45% até 99,73% (entre $\mu \pm 2\sigma$ e $\mu \pm 3\sigma$) 
+ 
+ O traço azul pontilhado indica a média $\mu = 100$.
+:::
 
 ## 📐 Fundamento da Regra Empírica
 
@@ -506,7 +512,6 @@ A imagem ilustra as faixas simétricas em torno da média $\mu = 0$:
 
 A área sob a curva representa a probabilidade do valor $Z$ estar nesse intervalo.
 :::
-
 
 ## Funções para Distribuição Normal: Excel e R
 
@@ -1097,46 +1102,42 @@ Com esse conhecimento, você já está apto a compreender fenômenos que seguem 
 ---
 
 # 📚 Referências
-
-- Schmuller, Joseph. *Statistical Analysis with Excel® For Dummies®*, $5^{\underline{a}}$ Edição. John Wiley & Sons, 2016.  
-- Schmuller, Joseph. *Análise Estatística com R Para Leigos*, $2^{\underline{a}}$ Edição. Alta Books, 2021.  
-- Levine, David M.; Stephan, David; Szabat, Kathryn A. *Statistics for Managers Using Microsoft Excel*, $8^{\underline{a}}$ Edição. Pearson, 2017.  
-- Morettin, Luiz Gonzaga. *Estatística Básica: Probabilidade e Inferência*, $7^{\underline{\mathrm{a}}}$ Edição. Pearson, 2017.  
-- Morettin, Pedro Alberto; Bussab, Wilton de Oliveira. *Estatística Básica*, $10^{\underline{a}}$ Edição. São Paulo: SaraivaUni, 2023.
+::: {.callout-important collapse=true}
+- Schmuller, Joseph. *Statistical Analysis with Excel® For Dummies®*, 5ª ed. Wiley, 2016.  
+- Schmuller, Joseph. *Análise Estatística com R Para Leigos*, 2ª ed. Alta Books, 2021.  
+- Levine, D. M.; Stephan, D.; Szabat, K. A. *Statistics for Managers Using Microsoft Excel*, 8ª ed. Pearson, 2017.  
+- Morettin, L. G. *Estatística Básica: Probabilidade e Inferência*, 7ª ed. Pearson, 2017.  
+- Morettin, P. A.; Bussab, W. O. *Estatística Básica*, 10ª ed. SaraivaUni, 2023.
+:::
 
 ---
 
 # 🔗 Acesso Rápido às Partes do Curso
 
-🎯 [Parte 1: Introdução à Distribuição Normal](../parte-1/distribuicao-normal.qmd) (👉 Você está aqui!)
-
-🎯 [Parte 2: Escore-z e Tabela Z](../parte-2/distribuicao-normal-parte2.qmd)
-
+🎯 [Parte 1: Introdução à Distribuição Normal](../parte-1/distribuicao-normal.qmd) **(👉 você está aqui!)**  
+🎯 [Parte 2: Escore-z e Tabela Z](../parte-2/distribuicao-normal-parte2.qmd)  
 🎯 [Parte 3: Gráficos, TCL e Normalidade Aproximada](../parte-3/distribuicao-normal-parte3.qmd)
 
 ---
 
-[← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊](/posts/cursos/estatistica/distribuicao_normal/index.qmd)
-
-[← Voltar para os Cursos de Estatística 🎓 📊](/posts/cursos/estatistica/index.qmd)
-
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+<!-- Breadcrumbs -->
+[← Sumário do Curso](../index.qmd) · [← Cursos de Estatística](../../index.qmd) · [← Seção de Estatística](../../../../estatistica/index.qmd)
 
 ---
 
-🔝 [Voltar ao Topo](distribuicao-normal.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Estatística com Rigor e Beleza.*
 
 :::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+📌 Criado por Blog do Marcellini com ❤️ e código.
 :::
 
 # 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
-- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
-- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
+- 🧑‍🏫 [Sobre o Blog](../../../../pessoal/sobre-o-blog.qmd)  
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">Repositório no GitHub</a>  
+- 📬 [Entre em contato por e-mail](mailto:prof.marcellini@gmail.com)
 

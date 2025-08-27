@@ -7,7 +7,7 @@ lang: pt-BR
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,38 +19,59 @@ categories: [programação, LaTeX, sumário de LaTeX, sumário, Quarto]
 tags: [programação, LaTeX, sumário de LaTeX, sumário, Quarto]
 ---
 
----
-
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-# 📘 📄 📐 Artigos e Reflexões
+## 📚 Séries e Projetos (relacionados)
 
-## [📘 📄 📐 Modelos LaTeX para Quarto](../modelos-latex-quarto.qmd)
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="📐 LaTeX + Quarto: Templates"}
+Padrões para artigos, slides e posts técnicos.
+  
+[Ver os templates ›](../outros-modelos-markdown.html){.button .button-outline}
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="🧭 Guia de Programação"}
+Trilha sugerida com ordem progressiva de leitura.
+  
+[Ir para o guia ›](../guia-programacao.qmd){.button .button-outline}
+:::
+:::
+:::
+
+## 📘 📄 📐 Artigos e Reflexões
+
+### [📘 📄 📐 Modelos LaTeX para Quarto](../modelos-latex-quarto.qmd)
 Exemplos e explicações sobre como usar LaTeX no Quarto, com foco em formatação matemática, ambientes e personalização.
 
-# 🧭 📄 📐 Guia de Leitura
+## 🧭 📄 📐 Guia de Leitura
 
-1. **[📘 📐Modelos LaTeX para Quarto](../modelos-latex-quarto.qmd)** — Comece por aqui para explorar como LaTeX pode ser integrado ao Quarto para produção científica elegante e estruturada.
+1. **[📘 📐 Modelos LaTeX para Quarto](../modelos-latex-quarto.qmd)** — Comece por aqui para explorar como LaTeX se integra ao Quarto para produção científica elegante e estruturada.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Clareza e Paixão.*
 
-# 🔗 Links Úteis
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
 
-- 🧑‍🏫 [Sobre o Blog](../../../posts/pessoal/sobre-o-blog.qmd)
+## 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](../../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

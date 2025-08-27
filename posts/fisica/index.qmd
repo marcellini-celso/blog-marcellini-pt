@@ -9,7 +9,7 @@ tags: [física, sumário de física, sumário]
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,40 +19,70 @@ format:
 page-layout: full
 ---
 
----
+## 📚 Séries Especiais
 
-# 📘 ⚛️ Artigos e Reflexões
+::: {.columns}
+::: {.column width="33%"}
+::: {.callout-note title="🧬 100 Anos da Mecânica Quântica"}
+Panorama histórico e conceitual.
 
-## [📘 🛰️ Relatividade Especial — Uma Visão Geral](relatividade-especial.qmd)
+[Ver a série ›](guia-100-anos-mecanica-quantica.qmd){.button .button-outline}
+:::
+:::
+
+::: {.column width="33%"}
+::: {.callout-note title="🛰️ Relatividade Especial"}
+Fundamentos, efeitos e paradoxos.
+
+[Ver a série ›](guia-relatividade-especial.qmd){.button .button-outline}
+:::
+:::
+
+::: {.column width="33%"}
+::: {.callout-note title="🌠 Relatividade Geral"}
+Geometria do espaço-tempo e gravitação.
+
+[Ver a série ›](guia-relatividade-geral.qmd){.button .button-outline}
+:::
+:::
+:::
+
+{{< include /_includes/politica-editorial.qmd >}}
+
+## 📘 ⚛️ Artigos e Reflexões
+
+### [📘 🛰️ Relatividade Especial — Uma Visão Geral](relatividade-especial.qmd)
 Introdução didática aos conceitos de espaço-tempo, transformações de Lorentz e o paradoxo dos gêmeos.
 
-## [📘 🛰️ Relatividade Especial — Uma Visão Acadêmica](relatividade-especial-academico.qmd)
-Versão mais formal e aprofundada da teoria da relatividade restrita, com base em fontes como Resnick.
+### [📘 🛰️ Relatividade Especial — Uma Visão Acadêmica](relatividade-especial-academico.qmd)
+Versão mais formal e aprofundada da teoria da relatividade restrita, com base em fontes clássicas (ex.: Resnick).
 
-## [📘 🧬 100 Anos da Mecânica Quântica](100-anos-mecanica-quantica.qmd)
+### [📘 🧬 100 Anos da Mecânica Quântica](100-anos-mecanica-quantica.qmd)
 Introdução histórica e conceitual sobre os cem anos da teoria quântica.
 
-# 🧭 ⚛️ Guia de Leitura
+## 🧭 ⚛️ Guia de Leitura
 
-1. **[🧭 🧮 Guia de Leitura da Seção de Física](guia-fisica.qmd)** — Uma trilha sugerida de leitura com ordem progressiva, interligando os principais conteúdos da seção. Ideal para quem quer aprender física passo a passo.
+1. **[🧭 ⚛️ Guia de Leitura da Seção de Física](guia-fisica.qmd)** — Trilha sugerida de leitura com ordem progressiva, interligando os principais conteúdos da seção.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Física com Rigor e Beleza.*
 
+{{< include /_includes/sobre-projeto.qmd >}}
+
 :::{.callout-note}
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

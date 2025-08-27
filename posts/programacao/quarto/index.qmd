@@ -7,51 +7,69 @@ lang: pt-BR
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     fig-align: center
     code-overflow: scroll
     highlight-style: github
+    code-link: true
 page-layout: full
 categories: [programação, Quarto, sumário de Quarto, sumário, YAML]
 tags: [programação, Quarto, sumário de Quarto, sumário, YAML]
 ---
 
----
-
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-# 📘 📄 Artigos e Reflexões
+## 📚 Séries e Projetos (relacionados)
 
-## [📘 📄 Modelos de index.qmd no Quarto](../modelos-index-quarto.qmd)
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="📄 Quarto Markdown: Modelos & Templates"}
+Coleção de modelos e boas práticas para páginas e seções.
+
+[Ver os modelos ›](../modelos-index-quarto.qmd){.button .button-outline}
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="🧭 Guia de Programação"}
+Trilha sugerida com ordem progressiva de leitura.
+
+[Ir para o guia ›](../guia-programacao.qmd){.button .button-outline}
+:::
+:::
+:::
+
+## 📘 📄 Artigos e Reflexões
+
+### [📘 📄 Modelos de index.qmd no Quarto](../modelos-index-quarto.qmd)
 Modelos organizados de arquivos `index.qmd` para seções temáticas em projetos Quarto.
 
-## [📘 📄 YAML no Quarto](../yaml-no-quarto.qmd)
+### [📘 📄 YAML no Quarto](../yaml-no-quarto.qmd)
 Explicação dos campos do cabeçalho YAML em arquivos `.qmd`, com boas práticas e exemplos prontos para reutilização.
 
-## [📘 📄 Modelos em Quarto Markdown -- Parte 1](../modelos-markdown.qmd)
+### [📘 📄 Modelos em Quarto Markdown — Parte 1](../modelos-markdown.qmd)
 Demonstração de estilos, sintaxe e boas práticas para escrever textos em Markdown dentro do Quarto.
 
-## [📘 📄 Modelos em Quarto Markdown -- Parte 2](../outros-modelos-markdown.qmd)
-Quarto Markdown é a solução ideal para produção de documentos reprodutíveis, bonitos e interativos, combinando código, matemática e explicações.
+### [📘 📄 Modelos em Quarto Markdown — Parte 2](../outros-modelos-markdown.qmd)
+Continuação com recursos práticos para produção de documentos reprodutíveis e bem formatados.
 
-# 🧭 📘 📄 Guia de Leitura
+## 🧭 📘 📄 Guia de Leitura
 
-1. **[📘 📄 YAML no Quarto](../yaml-no-quarto.qmd)** — Comece entendendo a estrutura de metadados dos arquivos `.qmd`.
-2. **[📘 📄 Modelos em Quarto Markdown -- Parte 1](../modelos-markdown.qmd)** — Aprenda a escrever com clareza usando Quarto Markdown.
-3. **[📘 📄 Modelos em Quarto Markdown -- Parte 2](../outros-modelos-markdown.qmd)** -- Aprenda a escrever com clareza usando Quarto Markdown -- Parte 2.
-4. **[📘 📄 Modelos de index.qmd](../modelos-index-quarto.qmd)** — Organize seu projeto com boas práticas na construção de seções.
+1. **[📘 📄 YAML no Quarto](../yaml-no-quarto.qmd)** — Comece entendendo a estrutura de metadados dos arquivos `.qmd`.  
+2. **[📘 📄 Modelos em Quarto Markdown — Parte 1](../modelos-markdown.qmd)** — Escreva com clareza usando Quarto Markdown.  
+3. **[📘 📄 Modelos em Quarto Markdown — Parte 2](../outros-modelos-markdown.qmd)** — Aprofunde recursos e padrões.  
+4. **[📘 📄 Modelos de index.qmd](../modelos-index-quarto.qmd)** — Organize o projeto com seções consistentes.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
@@ -61,9 +79,9 @@ Quarto Markdown é a solução ideal para produção de documentos reprodutívei
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

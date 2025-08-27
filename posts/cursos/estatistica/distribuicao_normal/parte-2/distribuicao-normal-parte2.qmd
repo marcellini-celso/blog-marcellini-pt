@@ -1,14 +1,15 @@
 ---
-title: "🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 2): Escore-z e Tabela Z"
-description: "Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais."
+title: "🎓📊 Distribuição Normal — Parte 2: Escore-z e Tabela-z"
+description: "Fundamentos práticos para padronização (z-score), leitura de probabilidades na tabela-z e aplicações comparativas."
 author: "Blog do Marcellini"
 date: 2025-07-24
 lang: pt-BR
-categories: [estatística, distribuição normal, cursos, exercícios, escore-z, tabela Z]
-tags: [estatística, distribuição normal, cursos, exercícios, escore-z, tabela Z]
+categories: [estatística, distribuição normal, cursos, escore-z, tabela z]
+tags: [normal, z-score, tabela-z, probabilidades, exercícios]
 format:
   html:
     toc: true
+    toc-title: "Neste post"
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -19,324 +20,280 @@ format:
 page-layout: full
 ---
 
----
+<!-- Breadcrumbs -->
+[← Índice da Distribuição Normal](../index.qmd)
+· [← Cursos de Estatística](../../index.qmd)
+· [← Seção Estatística](../../../../estatistica/index.qmd)
 
-[← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊](/posts/cursos/estatistica/distribuicao_normal/index.qmd)
 
-[← Voltar para os Cursos de Estatística 🎓 📊](/posts/cursos/estatistica/index.qmd)
+![](../images/curva-normal-fundo-preto.png){fig-alt="Curva da distribuição normal (Gauss) destacando média e simetria." width="100%" style="margin-bottom:1.25rem;"}
 
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+# 🎓📊 Distribuição Normal — Parte 2
 
----
+Nesta parte, focamos em **padronização** (*escore-z*\footnote{*z-score*: escore padronizado.}), **leitura da tabela-z** e **aplicações** para comparar desempenhos, interpretar probabilidades e preparar o terreno para a inferência.
 
-![Distribuição Normal](../images/curva-normal-fundo-preto.png){width=100% style="margin-bottom: 2rem;"}
-
-# 🎓 📊 A Distribuição Normal -- Parte 2
-
-Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.
-
-::: {.callout-note title="📌 Objetivos do Post"}
-- Comparação de desempenhos
-- Interpretação gráfica e computacional de probabilidades
-- Fundamentação para estudos futuros em inferência estatística
+::: callout-note
+**📌 Objetivos**
+- Padronizar \(X\) via \(Z=\frac{X-\mu}{\sigma}\) e interpretar o escore-z.
+- Obter probabilidades pela **tabela-z** e por software (R/Python).
+- Comparar desempenhos em escalas distintas usando \(z\).
+- Preparar o uso de percentis e da **normal inversa**.
 :::
-
----
 
 ## 🧠 📖 Exercícios Resolvidos e Análise de Resultados
 
-::: {.callout-note collapse=false icon="🧠 📖"}
-## 🧠 📖 Exercício 1: Aplicando o Escore-z
+::: callout-note
+## 🧠 📖 Exercício 1 — Aplicando o Escore-z
 
-**Situação:** Suponha que os escores de QI sigam uma distribuição normal com:
+**Situação:** Suponha que os escores de QI sigam uma distribuição normal com parâmetros:
 
-- $\mu=100$
+- \(\mu = 100\) (média)  
+- \(\sigma = 16\) (desvio padrão)
 
-- $\sigma=16$
-
-**Pergunta:** Qual a probabilidade de uma pessoa ter QI superior a 136?
+**Pergunta:** Qual a probabilidade de uma pessoa ter QI **superior a 136**?
 
 **Instruções:**
+1. Calcule o escore-\(z\) correspondente a \(x=136\).  
+2. Use a **tabela-z** ou software para determinar \(P(Z>z)\).  
+3. Interprete o resultado: essa pontuação é **comum** ou **rara**?
 
-(1) Calcule o escore- $z$ correspondente ao valor $x=136$
-
-(2) Use a Tabela Z ou software para determinar $P(Z>z)$
-
-(3) Interprete o resultado: essa pontuação é comum ou rara?
-
-**💡Dica:** lembre-se que $\boxed{P(Z>z)=1-P(Z<z)}$ e que $\boxed{z=\frac{x-\mu}{\sigma}}$
-
-
+💡 **Dica:**  
+\[
+\boxed{\,z=\tfrac{x-\mu}{\sigma}\,}, 
+\quad 
+\boxed{\,P(Z>z)=1-P(Z<z)\,}
+\]
 :::
 
+::: {.callout-important collapse=true}
+## 🧠 🔎 Resolução — Exercício 1
 
-::: {.callout-important collapse=true icon="🧠 🔎"}
-## 🧠 🔎 Resolução do Exercício 1: Qual a probabilidade de ter QI > 136?
+**Distribuição:** \(X \sim \mathcal N(100,\,16^2)\)
 
-**Distribuição:** $\mu=100, \sigma=16$
+**🧮 Passo 1 — Escore-z**
 
-**🧮 Passo 1 -** Calcular o escore- $z$ :
+\[
+z = \frac{136-100}{16} = \frac{36}{16} = 2,25
+\]
 
-$$
-z=\frac{136-100}{16}=\frac{36}{16}=2,25
-$$
+**🧮 Passo 2 — Consulta na tabela-z**
 
+\[
+P(Z<2{,}25) \approx 0{,}9878
+\quad\Rightarrow\quad
+P(Z>2{,}25) = 1 - 0{,}9878 = 0{,}0122
+\]
 
-**🧮 Passo 2 -** Consultar a Tabela Z:
+**📌 Conclusão**
 
-$$
-P(Z<2,25) \approx 0,9878 \Rightarrow P(Z>2,25)=1-0,9878=0,0122
-$$
-
-
-**📌 Conclusão:**
-
-> Apenas cerca de **$\mathbf{1 , 2 2 \%}$** da população tem QI superior a 136 .
-
+Apenas cerca de **\(\mathbf{1,22\%}\)** da população tem QI superior a 136.  
+Ou seja, é um resultado **raro**, típico de indivíduos na cauda superior da distribuição.
 :::
-
 
 ## 📏 Comparando Desempenhos com Escore-z
 
-**Situação:**
+**Situação inicial:**
 
-- Aluno A obteve nota 80 em uma prova com $\mu=70, \sigma=5$.
+- Aluno A obteve nota 80 em uma prova com \(\mu=70,\; \sigma=5\).  
+- Aluno B obteve nota 8 em uma prova com \(\mu=6,\; \sigma=1\).  
 
-- Aluno B obteve nota 8 em uma prova com $\mu=6, \sigma=1$.
+**Cálculo dos escores-\(z\):**
 
-- Quem teve o melhor desempenho relativo?
+\[
+z_A = \frac{80-70}{5} = 2,0 
+\qquad
+z_B = \frac{8-6}{1} = 2,0
+\]
 
-Cálculo dos escores- $z$ :
-
-$$
-z_A=\frac{80-70}{5}=2,0 \quad z_B=\frac{8-6}{1}=2,0
-$$
-
-
-**📌 Conclusão:**
-
-> Ambos os alunos tiveram desempenho **2 desvios padrão acima da média** de suas turmas.
+**📌 Conclusão:**  
+Ambos os alunos tiveram desempenho **2 desvios-padrão acima da média** de suas turmas.  
 Ou seja, o desempenho relativo foi **equivalente**.
 
+---
 
-::: {.callout-note collapse=false icon="🧠 🔎"}
-## 🧠 📖 Exercício 2: Comparando Desempenhos com Escore-z
+::: callout-note
+## 🧠 📖 Exercício 2 — Comparando Desempenhos com Escore-z
 
 **Situação:**
 
-- Aluno A obteve nota 65 em uma prova com $\mu=60, \sigma=4$.
-
-- Aluno B obteve nota 7 em uma prova com $\mu=5,5, \sigma=1$.
-
-- Quem teve o melhor desempenho relativo?
+- Aluno A obteve nota 65 em uma prova com \(\mu=60,\; \sigma=4\).  
+- Aluno B obteve nota 7 em uma prova com \(\mu=5,5,\; \sigma=1\).  
 
 **Tarefa:**
+1. Calcule o escore-\(z\) para os dois alunos.  
+2. Compare os valores.  
+3. Interprete: qual deles se destacou mais em relação à média da sua turma?
 
-(1) Calcule o escore- $z$ para os dois alunos.
-
-(2) Compare os valores.
-
-(3) Interprete: qual deles se destacou mais em relação à média da sua turma?
-
-**💡 Dica:** lembre-se que quanto maior o $z$, melhor o desempenho relativo.
-
+💡 **Dica:** quanto maior o valor de \(z\), melhor o desempenho relativo.
 :::
 
-
-::: {.callout-important collapse=true icon="🧠 🔎"}
-## 🧠 🔎 Resolução do Exercício 2: Comparando Desempenhos com Escore-z
+::: {.callout-important collapse=true}
+## 🧠 🔎 Resolução — Exercício 2
 
 **Aluno A:**
 
-$$
-z_A=\frac{65-60}{4}=\frac{5}{4}=1,25
-$$
-
+\[
+z_A = \frac{65-60}{4} = \frac{5}{4} = 1,25
+\]
 
 **Aluno B:**
 
-$$
-z_B=\frac{7-5,5}{1}=\frac{1,5}{1}=1,5
-$$
+\[
+z_B = \frac{7-5{,}5}{1} = \frac{1{,}5}{1} = 1,5
+\]
 
-
-**📌 Conclusão:**
-
-> O Aluno B teve um escore-z maior que o Aluno A.
-
-> Portanto, **o Aluno B apresentou melhor desempenho relativo** em relação à sua turma.
-
+**📌 Conclusão:**  
+O Aluno B obteve \(z_B=1,5\), maior que o \(z_A=1,25\).  
+Portanto, **o Aluno B apresentou melhor desempenho relativo** em relação à sua turma.
 :::
 
-
-::: {.callout-warning collapse=false icon="🧠 🔎"}
-## ✏️📄 Resumo: Distribuição Normal e Escore-z
+::: callout-warning
+## ✏️📄 Resumo — Distribuição Normal e Escore-z
 
 - **Distribuição Normal:**
 
-$$
-\boxed{f(x)=\frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}}
-$$
+\[
+\boxed{\, f(x)=\tfrac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\tfrac{(x-\mu)^2}{2 \sigma^2}} \,}
+\]
 
-- **Distribuição Normal Padrão: $\mu=0, \sigma=1$**
+- **Distribuição Normal Padrão (\(\mu=0,\; \sigma=1\)):**
 
-$$
-\boxed{f(z)=\frac{1}{\sqrt{2 \pi}} e^{-z^2 / 2}}
-$$
+\[
+\boxed{\, f(z)=\tfrac{1}{\sqrt{2 \pi}} \, e^{-z^2/2} \,}
+\]
 
-- **Escore-z: transforma $x$ em um valor padronizado**
+- **Escore-z (padronização):**
 
-$$
-\boxed{z=\frac{x-\mu}{\sigma}}
-$$
+\[
+\boxed{\, z=\tfrac{x-\mu}{\sigma} \,}
+\]
 
-- **Valor original a partir de $z$ :**
+- **Valor original a partir de \(z\):**
 
-$$
-\boxed{x=\mu+z \sigma}
-$$
+\[
+\boxed{\, x=\mu+z\sigma \,}
+\]
 
-- **Regra Empírica:**
-
-- $68 \%$ : entre $\mu \pm 1 \sigma$
-
-- $95 \%$ : entre $\mu \pm 2 \sigma$
-
-- $99,7 \%$ : entre $\mu \pm 3 \sigma$
-
+- **Regra Empírica (68–95–99,7):**
+  - \(68\%\): entre \(\mu \pm 1\sigma\)  
+  - \(95\%\): entre \(\mu \pm 2\sigma\)  
+  - \(99{,}7\%\): entre \(\mu \pm 3\sigma\)  
 :::
 
+---
 
-## 📊 Tabela Z - Distribuição Normal Padrão
+## 📊 Tabela-z — Distribuição Normal Padrão
 
-Como usar a Tabela Z:
+**Como usar a tabela-z:**
+- A **linha** indica a parte inteira e a 1ª casa decimal do escore-\(z\).  
+- A **coluna** indica a 2ª casa decimal.  
+- A interseção fornece \(P(Z<z)\), isto é, a probabilidade acumulada até \(z\).
 
-- O valor da linha indica a parte inteira e a primeira casa decimal do escore-$z$.
+| **z**  | 0.00   | 0.01   | 0.02   | 0.03   | 0.04   | 0.05       |
+|:------:|:------:|:------:|:------:|:------:|:------:|:----------:|
+| 1.2    | 0.8849 | 0.8869 | 0.8888 | 0.8907 | 0.8925 | **0.8944** |
 
-- A coluna indica a segunda casa decimal.
-
-- A interseção fornece $P(Z<z)$, ou seja, a probabilidade acumulada até o valor de $z$.
-
-| **z**  | 0.00   | 0.01   | 0.02   | 0.03   | 0.04   | 0.05                |
-|:------:|:------:|:------:|:------:|:------:|:------:|:------------------:|
-| 1.2    | 0.8849 | 0.8869 | 0.8888 | 0.8907 | 0.8925 | **0.8944**         |
+**🧠 Exemplo:**  
+Para \(z=1,25\), usamos a linha **1.2** e a coluna **0.05**, obtendo:  
+\[
+P(Z<1{,}25)=0{,}8944
+\]
 
 ---
 
-**🧠 Exemplo:**
+## 📊 Tabela-z Acumulada — Normal Padrão \([P(Z<z)]\)
 
-Para $z=1,25$, usamos a linha 1.2 e a coluna $0.05 \rightarrow P(Z<1,25)=0,8944$
+![](../images/tabela_z_vetorial.png){fig-alt="Tabela-z acumulada com valores de probabilidade até z." fig-align="center" width="100%"}
 
----
+> *Fonte: gerada com `scipy.stats.norm.cdf` para valores de \(z\) entre 0,00 e 3,09.*
 
-## 📊 Tabela Z Acumulada – Normal Padrão [$P(Z<z)$]
+::: callout-note
+## 💻 Atividades Práticas — Excel e R
 
-![](../images/tabela_z_vetorial.png){fig-align="center" width="100%"}
-
-> *Fonte: Gerada com scipy.stats.norm.cdf para valores de z entre 0,00 e 3,09.*
-
-
-::: {.callout-note collapse=false icon="🧠 🔎"}
-## 💻 Atividades Práticas - Excel e R
-
-**Objetivo:** Aplicar os conceitos de distribuição normal e escore-$z$ em ambiente computacional.
+**Objetivo:** aplicar os conceitos de distribuição normal e escore-\(z\) em ambiente computacional.
 
 **No Excel:**
 
-- Use =NORM.DIST(120; 100; 16; VERDADEIRO) para calcular $P(X<120)$.
+- `=NORM.DIST(120;100;16;VERDADEIRO)` → calcula \(P(X<120)\).  
+- `=NORM.INV(0,90;100;16)` → retorna o valor correspondente ao percentil 90.  
+- Gere uma tabela com valores de \(x\), calcule os escores-\(z\) e destaque quem está acima da média.
 
-- Use =NORM. INV (0,90; 100; 16) para obter o valor correspondente ao percentil 90.
+**No R:**
 
-- Gere uma tabela com valores de $x$, calcule seus escore-$z$ e destaque quem está acima da média.
+- `pnorm(120, mean=100, sd=16)` → retorna \(P(X<120)\).  
+- `qnorm(0.90, mean=100, sd=16)` → retorna o valor do percentil 90.  
+- `z <- (x - mean)/sd` → calcula escore-\(z\) de um vetor.  
 
-**No R :**
-
-- $\operatorname{pnorm}(120$, mean $=100, \mathrm{sd}=16)$ retorna $P(X<120)$.
-
-- $\operatorname{qnorm}(0.90$, mean $=100, \mathrm{sd}=16)$ retorna o valor para o percentil 90.
-
-- z <- (x - mean) / sd para calcular escore-$z$ de vetores.
-
-**💡 Sugestão:** comparar alunos de diferentes turmas com diferentes médias e desvios, usando escore-$z$.
-
+💡 **Sugestão:** compare alunos de diferentes turmas (com diferentes médias e desvios), usando o escore-\(z\).
 :::
 
+---
 
-::: {.callout-note collapse=false}
-## 🧠 🧠 Desafio com Gráfico - Distribuição Normal
+::: callout-note
+## 🧠 📈 Desafio com Gráfico — Distribuição Normal
 
-**Situação:**
-
-- O tempo de atendimento (em minutos) em um serviço segue uma distribuição normal com:
-
-$$
-\mu=50, \quad \sigma=10
-$$
-
-- O gráfico abaixo mostra a distribuição dos tempos de atendimento.
+**Situação:**  
+O tempo de atendimento (em minutos) em um serviço segue \(X \sim \mathcal N(50, 10^2)\).
 
 **Tarefa:**
 
-(1) Marque no gráfico as regiões correspondentes a:
+1. Marque no gráfico as regiões correspondentes a:
+   - \(P(40<X<60)\)  
+   - \(P(X>70)\)  
+2. Calcule os escores-\(z\) correspondentes a 40, 60 e 70.  
+3. Use Excel ou R para calcular as probabilidades dessas regiões.  
+4. Interprete: são tempos de atendimento comuns ou raros?
 
-- $P(40<X<60)$
+💡 **Dica:** use a **regra empírica** e a simetria da curva como apoio visual.
 
-- $P(X>70)$
-
-(2) Calcule os escores-$z$ correspondentes aos valores 40, 60 e 70.
-
-(3) Use Excel ou R para calcular as probabilidades dessas regiões.
-
-(9) Interprete: são tempos de atendimento comuns ou raros?
-
-**Dica:** use a Regra Empírica e a simetria da curva como apoio visual.
-
-**Gráfico para o Desafio: Interprete as Áreas**
-
-![](../images/distribuicao_normal_desafio.png){width=100%}
+![](../images/distribuicao_normal_desafio.png){fig-alt="Gráfico da distribuição normal N(50,10²) com áreas destacadas entre 40–60 e acima de 70." width="100%"}
 
 ::: {.small}
-> A curva mostra a distribuição de $X \sim N(50, 10^2)$.  
-> As áreas coloridas representam:  
-**Azul:** $P(40 < X < 60)$, **Vermelho:** $P(X > 70)$.
+A curva mostra a distribuição \(X \sim \mathcal N(50, 10^2)\).  
+As áreas coloridas representam: **Azul:** \(P(40<X<60)\), **Vermelho:** \(P(X>70)\).
+:::
 :::
 
-:::
+---
 
 ::: {.callout-important collapse=true}
-## 🧠 🔎 Gabarito - Desafio com Gráfico da Normal
+## 🧠 🔎 Gabarito — Desafio com Gráfico
 
-**Distribuição:** Tempo de atendimento $X \sim N\left(50,10^2\right)$
+**Distribuição:** \(X \sim \mathcal N(50, 10^2)\)
 
-1. **Escore-$z$:**
-
-$$
-z_{40}=\frac{40-50}{10}=-1 \quad z_{60}=\frac{60-50}{10}=1 \quad z_{70}=\frac{70-50}{10}=2
-$$
+1. **Escore-\(z\):**
+\[
+z_{40} = \frac{40-50}{10} = -1,
+\quad
+z_{60} = \frac{60-50}{10} = 1,
+\quad
+z_{70} = \frac{70-50}{10} = 2
+\]
 
 2. **Probabilidades:**
+- \(P(40<X<60) = P(-1<Z<1) \approx 0{,}6826\)  
+- \(P(X>70) = P(Z>2) = 1-P(Z<2) \approx 0{,}0228\)
 
-- $P(40<X<60)=P(-1<Z<1) \approx 0,6826$
-
-- $P(X>70)=P(Z>2)=1-P(Z<2) \approx 1-0,9772=0,0228$
-
-**📌 Interpretação:**
-
-> Aproximadamente $\mathbf{6 8 , 2 6 \%}$ dos atendimentos duram entre 40 e 60 minutos.
-Apenas $\mathbf{2 , 2 8 \%}$ dos atendimentos duram mais de 70 minutos - são considerados raros.
+**📌 Interpretação:**  
+- Cerca de **\(\mathbf{68,26\%}\)** dos atendimentos duram entre 40 e 60 minutos.  
+- Apenas **\(\mathbf{2,28\%}\)** dos atendimentos duram mais de 70 minutos → são **raros**.
 :::
 
+---
 
 ::: {.callout-important collapse=true}
-## 🧠 🔎 💻 Gabarito: Usando Excel e R
+## 💻 Gabarito — Usando Excel e R
 
-**Distribuição:** Tempo de atendimento $X \sim N\left(50,10^2\right)$
+**Distribuição:** \(X \sim \mathcal N(50, 10^2)\)
 
 **No Excel:**
 
-- $P(40<X<60)$ : =NORM.DIST(60; 50; 10; VERDADEIRO) NORM.DIST(40; 50; 10; VERDADEIRO) Resultado: $\approx 0,6826$
-
-- $P(X>70):=1$ - NORM.DIST(70; 50; 10; VERDADEIRO) Resultado: $\approx 0,0228$
+- \(P(40<X<60)\):  
+  `=NORM.DIST(60;50;10;VERDADEIRO) - NORM.DIST(40;50;10;VERDADEIRO)`  
+  → \(\approx 0{,}6826\)  
+- \(P(X>70)\):  
+  `=1 - NORM.DIST(70;50;10;VERDADEIRO)`  
+  → \(\approx 0{,}0228\)
 
 **No R:**
 
@@ -370,7 +327,6 @@ Apenas $\mathbf{2 , 2 8 \%}$ dos atendimentos duram mais de 70 minutos - são co
 
 :::
 
-
 ## 📌 Conclusão da Parte 2: Escore-z e Tabela Z
 
 A Parte 2 do curso aprofundou o uso prático da distribuiçāo normal e do escore-$z$:
@@ -384,30 +340,28 @@ A Parte 2 do curso aprofundou o uso prático da distribuiçāo normal e do escor
 ---
 
 # 📚 Referências
-
-- Schmuller, Joseph. *Statistical Analysis with Excel® For Dummies®*, $5^{\underline{a}}$ Edição. John Wiley & Sons, 2016.  
-- Schmuller, Joseph. *Análise Estatística com R Para Leigos*, $2^{\underline{a}}$ Edição. Alta Books, 2021.  
-- Levine, David M.; Stephan, David; Szabat, Kathryn A. *Statistics for Managers Using Microsoft Excel*, $8^{\underline{a}}$ Edição. Pearson, 2017.  
-- Morettin, Luiz Gonzaga. *Estatística Básica: Probabilidade e Inferência*, $7^{\underline{\mathrm{a}}}$ Edição. Pearson, 2017.  
-- Morettin, Pedro Alberto; Bussab, Wilton de Oliveira. *Estatística Básica*, $10^{\underline{a}}$ Edição. São Paulo: SaraivaUni, 2023.
+::: {.callout-important collapse=true}
+- Schmuller, Joseph. *Statistical Analysis with Excel® For Dummies®*, 5ª ed. Wiley, 2016.  
+- Schmuller, Joseph. *Análise Estatística com R Para Leigos*, 2ª ed. Alta Books, 2021.  
+- Levine, D. M.; Stephan, D.; Szabat, K. A. *Statistics for Managers Using Microsoft Excel*, 8ª ed. Pearson, 2017.  
+- Morettin, L. G. *Estatística Básica: Probabilidade e Inferência*, 7ª ed. Pearson, 2017.  
+- Morettin, P. A.; Bussab, W. O. *Estatística Básica*, 10ª ed. SaraivaUni, 2023.
+:::
 
 ---
 
 # 🔗 Acesso Rápido às Partes do Curso
 
-🎯 [Parte 1: Introdução à Distribuição Normal](../parte-1/distribuicao-normal.qmd)
-
-🎯 [Parte 2: Escore-z e Tabela Z](../parte-2/distribuicao-normal-parte2.qmd)(👉 Você está aqui!)
-
+🎯 [Parte 1: Introdução à Distribuição Normal](../parte-1/distribuicao-normal.qmd)  
+🎯 [Parte 2: Escore-z e Tabela-z](../parte-2/distribuicao-normal-parte2.qmd) **(👉 você está aqui!)**  
 🎯 [Parte 3: Gráficos, TCL e Normalidade Aproximada](../parte-3/distribuicao-normal-parte3.qmd)
 
 ---
 
-[← Voltar para o Sumário do Curso de Distribuição Normal 🎓 📊](/posts/cursos/estatistica/distribuicao_normal/index.qmd)
-
-[← Voltar para os Cursos de Estatística 🎓 📊](/posts/cursos/estatistica/index.qmd)
-
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+<!-- Breadcrumbs -->
+[← Índice da Distribuição Normal](../index.qmd)
+· [← Cursos de Estatística](../../index.qmd)
+· [← Seção Estatística](../../../../estatistica/index.qmd)
 
 ---
 
@@ -417,13 +371,13 @@ A Parte 2 do curso aprofundou o uso prático da distribuiçāo normal e do escor
 
 *Blog do Marcellini — Explorando a Estatística com Rigor e Beleza.*
 
-:::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+::: callout-note
+📌 Criado por **Blog do Marcellini** com ❤️ e código.
 :::
 
 # 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
-- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)  
+- 💻 [GitHub do Projeto](https://github.com/marcellini-celso/blog-marcellini-pt.git){target="_blank"}  
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

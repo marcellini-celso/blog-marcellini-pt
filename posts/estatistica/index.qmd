@@ -9,7 +9,7 @@ tags: [estatística, sumário de estatística, sumário]
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,39 +19,59 @@ format:
 page-layout: full
 ---
 
----
+## 📚 Séries e Cursos
 
-# 📘 📊 Artigos e Reflexões
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="📊 A Distribuição Normal (Curso)"}
+Definição, propriedades, gráficos, aplicações e exercícios resolvidos (R e Excel).
+
+[Ir para o curso ›](../cursos/estatistica/distribuicao_normal/index.qmd){.button .button-outline}
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="🧭 Guia de Estatística"}
+Trilha sugerida de leitura com ordem progressiva.
+
+[Ver o guia ›](guia-estatistica.qmd){.button .button-outline}
+:::
+:::
+:::
+
+{{< include /_includes/politica-editorial.qmd >}}
+
+## 📘 📊 Artigos e Reflexões
 
 Ainda não há artigos disponíveis nesta seção.
 
-# 🎓 📊 Cursos Disponíveis
+## 🎓 📊 Cursos Disponíveis
 
-## [🎓 📊 A Distribuição Normal](/posts/cursos/estatistica/distribuicao_normal/index.qmd)
+### [🎓 📊 A Distribuição Normal](../cursos/estatistica/distribuicao_normal/index.qmd)
 Curso completo sobre a distribuição normal: definição, propriedades, gráficos, aplicações práticas e exercícios resolvidos com R e Excel.
 
+## 🧭 📊 Guia de Leitura
 
-# 🧭 📊 Guia de Leitura
-
-1. **[🧭 📊 Guia de Leitura da Seção de Estatística](guia-estatistica.qmd)** — Uma trilha sugerida de leitura com ordem progressiva, interligando os principais conteúdos da seção. Ideal para quem quer aprender estatística passo a passo.
+1. **[🧭 📊 Guia de Leitura da Seção de Estatística](guia-estatistica.qmd)** — Trilha com ordem progressiva, interligando os principais conteúdos da seção.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Estatística com Rigor e Beleza.*
 
+{{< include /_includes/sobre-projeto.qmd >}}
+
 :::{.callout-note}
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

@@ -9,7 +9,8 @@ tags: [estatística, distribuição normal, cursos]
 format:
   html:
     toc: true
-    number-sections: true
+    toc-title: "Nesta página"
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,177 +20,114 @@ format:
 page-layout: full
 ---
 
----
-
-[← Voltar para os Cursos de Estatística 🎓 📊](../index.qmd)
-
-[← Voltar para a Seção de Estatística 📊](../../../estatistica/index.qmd)
+<!-- Breadcrumbs -->
+[← Cursos de Estatística](../index.qmd) · [← Seção de Estatística](../../../estatistica/index.qmd)
 
 ---
 
-::: {.callout-objectives title="🎯 Objetivos do Curso"}
-# 🎯 Objetivos do Curso
+## 🚀 Acesso rápido às partes
+- 🎯 👉 [Parte 1 — Introdução à Distribuição Normal](parte-1/distribuicao-normal.qmd)
+- 🎯 👉 [Parte 2 — Escore-z e Tabela Z](parte-2/distribuicao-normal-parte2.qmd)
+- 🎯 👉 [Parte 3 — Gráficos, TCL e Normalidade Aproximada](parte-3/distribuicao-normal-parte3.qmd)
 
-Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da **distribuição normal**, também conhecida como **distribuição de Gauss**, com apoio de visualizações gráficas e ferramentas computacionais. Ao final do curso, você será capaz de:
+---
 
-- ✅ Entender os conceitos básicos de população, amostra e variáveis aleatórias;
-- 📊 Compreender o papel da **função densidade de probabilidade (FDP)** na modelagem estatística;
-- 📐 Identificar as principais características da **curva normal padrão** ($\mu = 0$, $\sigma = 1$);
-- 📈 Aplicar a **Regra Empírica 68–95–99,7%** na análise de dados;
-- 🧮 Calcular probabilidades utilizando a distribuição normal com **Excel**, **R** e **Python**;
-- 🔁 Utilizar o **escore-z** para padronizar dados e fazer comparações entre diferentes distribuições;
-- 📉 Gerar e interpretar gráficos de distribuição normal em contextos reais;
-- 🧠 Aplicar os conceitos em situações práticas, como a distribuição de **QI** e fenômenos naturais ou sociais;
-- 🧩 Relacionar a distribuição normal ao **Teorema Central do Limite (TCL)** e à **Lei dos Grandes Números (LGN)**;
-- 🔍 Reconhecer quando uma variável pode ser considerada aproximadamente normal, com apoio de histogramas, Q-Q plots e testes exploratórios.
+## 🎯 Objetivos do curso
+::: {.callout-note}
+Ao final do curso, você será capaz de:
 
+- ✅ Entender os conceitos de **população**, **amostra** e **variáveis aleatórias**;
+- 📊 Compreender o papel da **função densidade de probabilidade (FDP)**;
+- 📐 Identificar as características da **curva normal padrão** ($\mu=0$, $\sigma=1$);
+- 📈 Aplicar a **Regra Empírica (68–95–99,7 %)**;
+- 🧮 Calcular probabilidades com **Excel**, **R** e **Python**;
+- 🔁 Usar o **escore-z** para padronização e comparações;
+- 📉 Gerar/interpretar gráficos de normais em contextos reais;
+- 🧠 Relacionar a normal ao **TCL** e à **LGN**;
+- 🔍 Reconhecer normalidade aproximada via **histogramas**, **Q-Q plots** e checagens exploratórias.
 :::
 
-
-# 📚 Conteúdo Programático — Parte 1: Introdução à Distribuição Normal
-
-🎯 👉 [Parte 1: Introdução à Distribuição Normal](parte-1/distribuicao-normal.qmd)
-
-## 🔍 Introdução
-
-- Conceitos fundamentais: população, amostra e variáveis
-- Tipos de variáveis: discretas vs. contínuas
-- Distribuições de probabilidade e função densidade (FDP)
-
-## 📈 A Distribuição Normal
-
-- Definição, importância e propriedades
-- Exemplos do mundo real
-- A curva normal padrão ($\mu = 0$, $\sigma = 1$)
-- Simetria e comportamento da curva
-
-## 🧮 Função Densidade da Normal
-
-- Expressão matemática
-- Área sob a curva como probabilidade
-- Efeitos da média ($\mu$) e do desvio padrão ($\sigma$)
-
-## 📏 Regra Empírica (68–95–99,7)
-
-- Interpretação visual e prática
-- Aplicações em análise de dados
-- Visualizações com Python e R
-
-## 💡 Aplicações Práticas
-
-- Estudo de caso: Distribuição de QI (Stanford–Binet)
-- Cálculo de probabilidades usando:
-  - Excel (`NORM.DIST`, `NORM.S.INV`)
-  - R (`pnorm`, `dnorm`, `qnorm`, `rnorm`)
-- Introdução ao escore-$z$ e à Tabela Z
-
-## 🧠 Padronização com Escore-$z$
-
-- Fórmula, interpretação e uso
-- Comparando desempenhos em diferentes distribuições
-- Conectando à curva normal padrão
+::: {.callout-tip}
+**Pré-requisitos recomendados:** noções de álgebra e funções; média, desvio-padrão e leitura de gráficos.  
+**Público-alvo:** estudantes e profissionais que precisam interpretar dados com base em modelos probabilísticos.
+:::
 
 ---
 
-# 📚 Conteúdo Programático — Parte 2: Escore-$z$ e Tabela Z
+## 📚 Conteúdo Programático — Parte 1: Introdução à Distribuição Normal
+🎯 👉 [Acessar a Parte 1](parte-1/distribuicao-normal.qmd)
 
-🎯 👉 [Parte 2: Escore-z e Tabela Z](parte-2/distribuicao-normal-parte2.qmd)
-
-## 🧠 Compreendendo o Escore-$z$
-
-- Definição e fórmula do escore-$z$
-- Interpretação do escore padronizado
-- Exemplos de uso: notas, alturas, desempenho em provas
-
-## 📊 Aplicações e Comparações
-
-- Comparação de valores em diferentes distribuições
-- Cálculo da probabilidade de $QI > 136$ (caso prático)
-- Exercício: interpretação e análise de escores
-
-## 📈 Leitura da Tabela Z
-
-- Como usar a Tabela Z acumulada: $P(Z < z)$
-- Interpretação gráfica da curva e áreas
-- Cálculo de áreas sombreadas com auxílio visual
-
-## 💻 Atividades Computacionais
-
-- Cálculos e gráficos no Excel: `NORM.S.DIST`, `NORM.S.INV`
-- Uso do R: `pnorm`, `qnorm`, `dnorm`
-- Exercício com gráficos de curva normal
-- Interpretação com base em resultados numéricos e gráficos
-
-## 🧩 Reflexão Final
-
-- Discussão: por que o escore-$z$ é uma ferramenta tão poderosa?
-- Conexão com práticas de análise de dados reais
+- Conceitos fundamentais: população, amostra e variáveis  
+- Variáveis **discretas** vs. **contínuas**  
+- Distribuições e **FDP**  
+- Definição, importância e propriedades da normal  
+- Exemplos do mundo real  
+- Curva **padrão** ($\mu=0$, $\sigma=1$), simetria e forma  
+- **Fórmula da FDP**, área como probabilidade, efeito de $\mu$ e $\sigma$  
+- **Regra Empírica (68–95–99,7 %)** — interpretação e aplicações  
+- Visualizações com **Python** e **R**
 
 ---
 
-# 📚 Conteúdo Programático — Parte 3: Gráficos, TCL e Normalidade Aproximada
+## 📚 Conteúdo Programático — Parte 2: Escore-z e Tabela Z
+🎯 👉 [Acessar a Parte 2](parte-2/distribuicao-normal-parte2.qmd)
 
-🎯 👉 [Parte 3: Gráficos, TCL e Normalidade Aproximada](parte-3/distribuicao-normal-parte3.qmd)
-
-## 📉 Visualizando Distribuições
-
-- Construção de histogramas e interpretação
-- Q-Q Plot: o que é e como interpretar
-- Gráficos no Excel e R: visualização da normalidade
-
-## 🔬 Normalidade Aproximada
-
-- O que significa “distribuição aproximadamente normal”?
-- Exemplos de variáveis com e sem distribuição normal
-- Testes visuais e heurísticas para avaliação rápida
-
-## 📚 Fundamentos Teóricos Adicionais
-
-- 📏 Lei dos Grandes Números (LGN)
-  - Intuição e implicações práticas
-- 🔁 Teorema Central do Limite (TCL)
-  - Entendimento gradual
-  - Exemplos de aplicação com médias amostrais
+- Definição, fórmula e interpretação do **escore-z**  
+- Comparação de valores em distribuições diferentes  
+- Caso prático: probabilidade de **QI > 136**  
+- **Leitura da Tabela Z** (acumulada $P(Z<z)$) e áreas sombreadas  
+- Cálculos no **Excel** (`NORM.S.DIST`, `NORM.S.INV`) e no **R** (`pnorm`, `qnorm`, `dnorm`)  
+- Exercícios guiados
 
 ---
 
-# 📚 Referências
+## 📚 Conteúdo Programático — Parte 3: Gráficos, TCL e Normalidade Aproximada
+🎯 👉 [Acessar a Parte 3](parte-3/distribuicao-normal-parte3.qmd)
 
-- Schmuller, Joseph. *Statistical Analysis with Excel® For Dummies®*, $5^{\underline{a}}$ Edição. John Wiley & Sons, 2016.  
-- Schmuller, Joseph. *Análise Estatística com R Para Leigos*, $2^{\underline{a}}$ Edição. Alta Books, 2021.  
-- Levine, David M.; Stephan, David; Szabat, Kathryn A. *Statistics for Managers Using Microsoft Excel*, $8^{\underline{a}}$ Edição. Pearson, 2017.  
-- Morettin, Luiz Gonzaga. *Estatística Básica: Probabilidade e Inferência*, $7^{\underline{\mathrm{a}}}$ Edição. Pearson, 2017.  
-- Morettin, Pedro Alberto; Bussab, Wilton de Oliveira. *Estatística Básica*, $10^{\underline{a}}$ Edição. São Paulo: SaraivaUni, 2023.
-
----
-
-# 🔗 Acesso Rápido às Partes do Curso
-
-🎯 👉 [Parte 1: Introdução à Distribuição Normal](parte-1/distribuicao-normal.qmd)  
-🎯 👉 [Parte 2: Escore-z e Tabela Z](parte-2/distribuicao-normal-parte2.qmd)  
-🎯 👉 [Parte 3: Gráficos, TCL e Normalidade Aproximada](parte-3/distribuicao-normal-parte3.qmd)
+- **Histogramas** e interpretação  
+- **Q-Q plots**: o que são e como ler  
+- O que significa “**aproximadamente normal**”  
+- Exemplos de variáveis com/sem normalidade  
+- **LGN** — intuição e implicações práticas  
+- **TCL** — médias amostrais e exemplos computacionais
 
 ---
 
-[← Voltar para os Cursos de Estatística 🎓 📊](../index.qmd)
-
-[← Voltar para a Seção de Estatística 📊](../../../estatistica/index.qmd)
+## 📖 Referências
+::: {.callout-important collapse=true}
+- Schmuller, Joseph. *Statistical Analysis with Excel® For Dummies®*, 5ª ed. Wiley, 2016.  
+- Schmuller, Joseph. *Análise Estatística com R Para Leigos*, 2ª ed. Alta Books, 2021.  
+- Levine, D. M.; Stephan, D.; Szabat, K. A. *Statistics for Managers Using Microsoft Excel*, 8ª ed. Pearson, 2017.  
+- Morettin, L. G. *Estatística Básica: Probabilidade e Inferência*, 7ª ed. Pearson, 2017.  
+- Morettin, P. A.; Bussab, W. O. *Estatística Básica*, 10ª ed. SaraivaUni, 2023.
+:::
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+## 🔗 Acesso rápido (novamente)
+- 🎯 👉 [Parte 1 — Introdução à Distribuição Normal](parte-1/distribuicao-normal.qmd)  
+- 🎯 👉 [Parte 2 — Escore-z e Tabela Z](parte-2/distribuicao-normal-parte2.qmd)  
+- 🎯 👉 [Parte 3 — Gráficos, TCL e Normalidade Aproximada](parte-3/distribuicao-normal-parte3.qmd)
 
 ---
 
-*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+<!-- Breadcrumbs -->
+[← Cursos de Estatística](../index.qmd) · [← Seção de Estatística](../../../estatistica/index.qmd)
+
+---
+
+🔝 [Voltar ao Topo](#top)
+
+---
+
+*Blog do Marcellini — Explorando a Estatística com Rigor e Beleza.*
 
 :::{.callout-note}
 📌 Criado por Blog do Marcellini com ❤️ e código.
 :::
 
-# 🔗 Links Úteis
-
+## 🔗 Links Úteis
 - 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)  
-- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">Repositório no GitHub</a>  
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank" rel="noopener">Repositório no GitHub</a>  
 - 📬 [Entre em contato por e-mail](mailto:prof.marcellini@gmail.com)
 

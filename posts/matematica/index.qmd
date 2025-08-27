@@ -9,7 +9,7 @@ tags: [matemática, sumário de matemática, sumário]
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,52 +19,70 @@ format:
 page-layout: full
 ---
 
----
+## 📚 Séries e Cursos
 
-# 📘 🧮 Artigos e Reflexões
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="🎓 🧮 Curso de Cálculo Diferencial e Integral"}
+Teoria clara, exemplos práticos e aplicações — com módulos de **Aprofundamento (AP)**.
 
-## [📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte](beleza-matematica.qmd)
-Uma reflexão sobre o famoso ensaio de G. H. Hardy, destacando a conexão entre estética e matemática pura.
+[Ir para o curso ›](../cursos/matematica/calculo/index.qmd){.button .button-outline}
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="🧭 🧮 Guia de Leitura de Matemática"}
+Trilha de leitura com ordem progressiva e conexões entre temas.
 
-## [📘 🧮 Por que \(0! = 1\)?](fatorial-zero.qmd)
-Explicação intuitiva e formal sobre por que o fatorial de zero é igual a 1.
-
-## [📘 🧮 Equações Históricas](equacoes-historicas.qmd)
-Ao longo dos séculos, certas fórmulas se destacaram por sua beleza, profundidade e impacto. Este post celebra essas joias da matemática e da física.
-
-
-# 🎓 🧮 Cursos Disponíveis
-
-## [🎓 🧮 Curso de Cálculo Diferencial e Integral](../cursos/matematica/calculo/index.qmd)
-Este curso foi cuidadosamente desenvolvido para estudantes que desejam dominar o Cálculo Diferencial e Integral de forma clara, visual e aplicada. Aqui, você encontrará uma introdução sólida à teoria, acompanhada de exemplos práticos e diversas aplicações reais que facilitam o entendimento.
-
-::: {.callout-tip} 
-
-Além disso, todos os módulos incluem um **módulo extra de aprofundamento (AP)**, com tópicos mais avançados e discussões teóricas adicionais, que podem ser omitidas em uma primeira leitura, conforme o ritmo e interesse do estudante.
-
+[Ver o guia ›](guia-matematica.qmd){.button .button-outline}
+:::
+:::
 :::
 
-# 🧭 🧮 Guia de Leitura
+{{< include /_includes/politica-editorial.qmd >}}
 
-1. **[🧭 🧮 Guia de Leitura da Seção de Matemática](guia-matematica.qmd)** — Uma trilha sugerida de leitura com ordem progressiva, interligando os principais conteúdos da seção. Ideal para quem quer aprender matemática passo a passo.
+## 📘 🧮 Artigos e Reflexões
+
+### [📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte](beleza-matematica.qmd)
+Reflexão sobre a estética na matemática pura, com exemplos clássicos.
+
+### [📘 🧮 Por que \(0! = 1\)?](fatorial-zero.qmd)
+Intuição e formalismo para a definição do fatorial de zero.
+
+### [📘 🧮 Equações Históricas](equacoes-historicas.qmd)
+Fórmulas que marcaram a história da matemática e da física.
+
+## 🎓 🧮 Cursos Disponíveis
+
+### [🎓 🧮 Cálculo Diferencial e Integral](../cursos/matematica/calculo/index.qmd)
+Curso para dominar limites, derivadas e integrais com **visualizações**, **R** e **Python**.
+
+::: {.callout-tip}
+Todos os módulos incluem um **Aprofundamento (AP)** com tópicos mais avançados que podem ser omitidos em uma primeira leitura.
+:::
+
+## 🧭 🧮 Guia de Leitura
+
+1. **[🧭 🧮 Guia de Leitura — Matemática](guia-matematica.qmd)** — Trilha sugerida com ordem progressiva, conectando os principais conteúdos.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 
+{{< include /_includes/sobre-projeto.qmd >}}
+
 :::{.callout-note}
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

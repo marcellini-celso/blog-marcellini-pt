@@ -19,28 +19,24 @@ format:
 page-layout: full
 ---
 
----
-
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+[← Voltar para a Seção de Estatística 📊](../../estatistica/index.qmd)
 
 ---
 
-# 🎓 📊 Cursos Disponíveis
+## 🎓 📊 Cursos Disponíveis
 
-## [🎓 📊 A Distribuição Normal](/posts/cursos/estatistica/distribuicao_normal/index.qmd)
+### [🎓 📊 A Distribuição Normal](distribuicao_normal/index.qmd)
 Curso completo sobre a distribuição normal: definição, propriedades, gráficos, aplicações práticas e exercícios resolvidos com R e Excel.
 
+## 📖 📊 Guia de Leitura
 
-# 📖 📊 Guia de Leitura
-
-1. **[🎓 📊 A Distribuição Normal](/posts/cursos/estatistica/distribuicao_normal/index.qmd)** — Recomendado como ponto de partida para o estudo de distribuições estatísticas. Ideal após conceitos iniciais de variáveis e gráficos.
-
+1. **[🎓 📊 A Distribuição Normal](distribuicao_normal/index.qmd)** — Recomendado como ponto de partida para o estudo de distribuições estatísticas. Ideal após conceitos iniciais de variáveis e gráficos.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+[← Voltar para a Seção de Estatística 📊](../../estatistica/index.qmd)
 
 ---
 
@@ -54,9 +50,9 @@ Curso completo sobre a distribuição normal: definição, propriedades, gráfic
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

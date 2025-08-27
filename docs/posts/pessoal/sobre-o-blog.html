@@ -43,6 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,35 +81,6 @@ ul.task-list li input[type="checkbox"] {
   gtag('config', 'G-P2KY6K26MG');
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../../assets/css/custom.css">
@@ -232,17 +204,17 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#sobre-mim" id="toc-sobre-mim" class="nav-link active" data-scroll-target="#sobre-mim"><span class="header-section-number">1</span> 👋 Sobre Mim</a></li>
-  <li><a href="#sobre-o-blog" id="toc-sobre-o-blog" class="nav-link" data-scroll-target="#sobre-o-blog"><span class="header-section-number">2</span> 💡 Sobre o Blog</a>
+  <li><a href="#sobre-mim" id="toc-sobre-mim" class="nav-link active" data-scroll-target="#sobre-mim">👋 Sobre Mim</a></li>
+  <li><a href="#sobre-o-blog" id="toc-sobre-o-blog" class="nav-link" data-scroll-target="#sobre-o-blog">💡 Sobre o Blog</a>
   <ul class="collapse">
-  <li><a href="#tecnologias-utilizadas" id="toc-tecnologias-utilizadas" class="nav-link" data-scroll-target="#tecnologias-utilizadas"><span class="header-section-number">2.1</span> Tecnologias utilizadas</a></li>
-  <li><a href="#estrutura-geral" id="toc-estrutura-geral" class="nav-link" data-scroll-target="#estrutura-geral"><span class="header-section-number">2.2</span> Estrutura geral</a></li>
-  <li><a href="#como-este-projeto-funciona" id="toc-como-este-projeto-funciona" class="nav-link" data-scroll-target="#como-este-projeto-funciona"><span class="header-section-number">2.3</span> 🛠️ Como Este Projeto Funciona</a>
+  <li><a href="#tecnologias-utilizadas" id="toc-tecnologias-utilizadas" class="nav-link" data-scroll-target="#tecnologias-utilizadas">Tecnologias utilizadas</a></li>
+  <li><a href="#estrutura-geral" id="toc-estrutura-geral" class="nav-link" data-scroll-target="#estrutura-geral">Estrutura geral</a></li>
+  <li><a href="#como-este-projeto-funciona" id="toc-como-este-projeto-funciona" class="nav-link" data-scroll-target="#como-este-projeto-funciona">🛠️ Como Este Projeto Funciona</a>
   <ul class="collapse">
-  <li><a href="#scripts-ativos" id="toc-scripts-ativos" class="nav-link" data-scroll-target="#scripts-ativos"><span class="header-section-number">2.3.1</span> 📜 Scripts ativos</a></li>
+  <li><a href="#scripts-ativos" id="toc-scripts-ativos" class="nav-link" data-scroll-target="#scripts-ativos">📜 Scripts ativos</a></li>
   </ul></li>
+  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links Úteis</a></li>
   </ul></li>
-  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis"><span class="header-section-number">3</span> 🔗 Links Úteis</a></li>
   </ul>
 </nav>
     </div>
@@ -291,11 +263,10 @@ window.Quarto = {
 </header>
 
 
+<p><a href="../../posts/pessoal/index.html">← Voltar para a Seção do Blog Pessoal 🧑‍🏫</a></p>
 <hr>
-<p><a href="../../posts/pessoal/">← Voltar para a Seção do Blog Pessoal 🧑‍🏫</a></p>
-<hr>
-<section id="sobre-mim" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 👋 Sobre Mim</h1>
+<section id="sobre-mim" class="level1">
+<h1>👋 Sobre Mim</h1>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -312,88 +283,107 @@ Dica
 </div>
 </div>
 </div>
-<p>Meu nome é Celso Marcellini, sou Bacharel em Matemática pelo Instituto de Matemática e Estatística da Universidade de São Paulo (IME-USP), e este blog nasceu do desejo de explorar matemática, estatística, física, LaTeX, Quarto e programação de forma acessível e visual.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="✍️ Reflexão do autor">
+<p>Meu nome é <strong>Celso Marcellini</strong>, sou <strong>Bacharel em Matemática</strong> pelo IME-USP. Aqui exploro <strong>matemática, estatística, física, LaTeX, Quarto</strong> e <strong>programação</strong> de forma <strong>acessível</strong> e <strong>visual</strong> — com boa tipografia, gráficos e código reproduzível.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="🎨 Beleza como critério (Hardy)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-✍️ Reflexão do autor
+🎨 Beleza como critério (Hardy)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Sou formado em matemática pura, e sempre fui apaixonado pela teoria da relatividade, tanto especial quanto geral.<br>
-A matemática que estrutura essas teorias físicas é, para mim, de uma beleza indescritível.</p>
-<p>Uma das ideias mais marcantes que encontrei foi a noção de <strong>quadrivetor velocidade</strong> no espaço-tempo quadridimensional.<br>
-Perceber que uma grandeza física como a velocidade pode ser expressa como um vetor no espaço de Minkowski — com a soma quadrática de suas componentes igual a <span class="math inline">\(c^2\)</span> — me revelou algo de extrema profundidade.</p>
-<p>Quando compreendi que, para qualquer corpo com massa, a <strong>norma do quadrivetor velocidade</strong> é sempre <span class="math inline">\(c\)</span>, entendi também o seguinte:<br>
-se estamos em repouso, nossa velocidade espacial é zero, e nossa velocidade temporal é <span class="math inline">\(c\)</span>;<br>
-à medida que nos movemos, parte dessa “velocidade total” é transferida ao espaço, reduzindo nossa velocidade no tempo.<br>
-Mas a soma vetorial — no sentido da métrica pseudo-euclideana — permanece constante.<br>
-Isso implica, de forma direta, a <strong>dilatação temporal</strong>: envelhecemos menos quando estamos em movimento.</p>
-<p>Mais tarde, ao estudar relatividade geral, descobri que o espaço-tempo é uma <strong>variedade diferencial pseudo-riemanniana</strong>, com uma métrica que se curva em resposta à presença de massa e energia.<br>
-A frase de Wheeler me acompanhou desde então:</p>
-<blockquote class="blockquote">
-<p><em>“O espaço diz à matéria como ela deve se mover, e a matéria diz ao espaço como ele deve se curvar.”</em></p>
-</blockquote>
-<p>Essa síntese é, para mim, de uma beleza ímpar.</p>
-<p>Também me encanta a ideia de que a física ainda busca uma <strong>teoria unificada</strong> — algo que integre a relatividade geral com a mecânica quântica.<br>
-Se um dia conseguirmos explicar o macro e o micro com uma só estrutura matemática coerente, isso será, sem dúvida, um triunfo supremo do pensamento humano.</p>
-<p>Por fim, como matemático, reconheço a mesma beleza nos alicerces formais da própria matemática.<br>
-A forma axiomática como desenvolvemos teoremas, estruturas e teorias exige elegância, coerência e inevitabilidade.<br>
-Não é por acaso que Hardy disse que <strong>a beleza é o primeiro teste</strong>.<br>
-Essa afirmação não é apenas filosófica — é um critério silencioso que nos guia enquanto provamos.</p>
+<p>O que mais me move é a <strong>beleza das ideias</strong> na matemática pura e na física teórica.<br>
+Sigo a intuição de Hardy — <em>“a beleza é o primeiro teste”</em> — e tento mostrar que a beleza aqui é <strong>conceitual</strong>: definições naturais, demonstrações enxutas e conexões inevitáveis entre temas.<br>
+A tipografia e os gráficos são o <strong>invólucro</strong>; o centro é a <strong>elegância das construções</strong>.</p>
 </div>
 </div>
+<hr>
 </section>
-<section id="sobre-o-blog" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 💡 Sobre o Blog</h1>
-<p>Este blog foi construído com o <a href="https://quarto.org">Quarto</a>, uma poderosa ferramenta para criar documentos científicos e apresentações com Markdown e LaTeX.</p>
-<section id="tecnologias-utilizadas" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="tecnologias-utilizadas"><span class="header-section-number">2.1</span> Tecnologias utilizadas</h2>
+<section id="sobre-o-blog" class="level1">
+<h1>💡 Sobre o Blog</h1>
+<div class="callout callout-style-default callout-tip callout-titled" title="🧮 Por que dar destaque a Cálculo e Estatística?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧮 Por que dar destaque a Cálculo e Estatística?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Porque são <strong>disciplinas obrigatórias e essenciais</strong> em grande parte dos cursos universitários.<br>
+No blog, esse destaque aparece sobretudo nos <strong>cursos</strong> — com trilhas, exemplos resolvidos e visualizações para consolidar a base que sustenta o restante.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📚 Escopo editorial">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📚 Escopo editorial
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fora os cursos, <strong>artigos e séries</strong> podem versar sobre <strong>qualquer tema</strong> de ciência, matemática, estatística, computação e tecnologia.<br>
+Compromisso editorial: <strong>rigor, beleza e clareza</strong>.<br>
+Não há espaço para apresentação <strong>hermética</strong> “só para especialistas”.</p>
+<p>Assuntos avançados (por exemplo, <strong>variedades diferenciáveis</strong>, <strong>grupos de Lie</strong>, <strong>teoria quântica de campos</strong>, <strong>relatividade geral</strong>) <strong>aparecem</strong> aqui — <strong>com profundidade clara</strong> e <strong>fundação conceitual</strong>.<br>
+Exposições superficiais costumam dificultar o que é, por si, belo e natural; por isso, a ideia é construir as <strong>bases</strong> que sustentam cada conceito.</p>
+</div>
+</div>
+<p>Este site foi construído com o <strong><a href="https://quarto.org">Quarto</a></strong>, uma ferramenta para criar documentos científicos, relatórios e sites estáticos usando Markdown e LaTeX.</p>
+<section id="tecnologias-utilizadas" class="level2">
+<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias utilizadas</h2>
 <ul>
-<li><strong>Quarto</strong>: para renderização de arquivos <code>.qmd</code> em HTML</li>
-<li><strong>RevealJS</strong>: para apresentações interativas</li>
-<li><strong>MathJax</strong>: para fórmulas matemáticas</li>
-<li><strong>AWS S3</strong> ou <strong>GitHub Pages</strong>: para hospedagem como site estático</li>
-<li><strong>TikZ + PNG</strong>: diagramas convertidos e incorporados</li>
-<li><strong>Tema Bootstrap <code>cosmo</code></strong> e <code>styles.scss</code> customizado</li>
+<li><strong>Quarto</strong>: renderização de arquivos <code>.qmd</code> para HTML<br>
+</li>
+<li><strong>RevealJS</strong>: apresentações interativas<br>
+</li>
+<li><strong>MathJax</strong>: fórmulas matemáticas<br>
+</li>
+<li><strong>AWS S3</strong> ou <strong>GitHub Pages</strong>: hospedagem estática<br>
+</li>
+<li><strong>TikZ (exportado para PNG/SVG)</strong>: diagramas<br>
+</li>
+<li><strong>Tema Bootstrap <code>cosmo</code></strong> + <code>styles.scss</code> customizado</li>
 </ul>
 </section>
-<section id="estrutura-geral" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="estrutura-geral"><span class="header-section-number">2.2</span> Estrutura geral</h2>
+<section id="estrutura-geral" class="level2">
+<h2 class="anchored" data-anchor-id="estrutura-geral">Estrutura geral</h2>
 <ul>
 <li><code>index.qmd</code>: página inicial</li>
-<li><code>posts/*.qmd</code>: cada post individual</li>
-<li><code>sobre.qmd</code>: sobre o autor</li>
-<li><code>images/</code>: imagens utilizadas</li>
+<li><code>posts/*.qmd</code>: posts individuais</li>
+<li><code>posts/pessoal/sobre-o-blog.qmd</code>: esta página “Sobre”</li>
+<li><code>images/</code>: imagens</li>
 <li><code>_quarto.yml</code>: configurações do site</li>
 </ul>
 <hr>
 </section>
-<section id="como-este-projeto-funciona" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="como-este-projeto-funciona"><span class="header-section-number">2.3</span> 🛠️ Como Este Projeto Funciona</h2>
-<section id="scripts-ativos" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="scripts-ativos"><span class="header-section-number">2.3.1</span> 📜 Scripts ativos</h3>
+<section id="como-este-projeto-funciona" class="level2">
+<h2 class="anchored" data-anchor-id="como-este-projeto-funciona">🛠️ Como Este Projeto Funciona</h2>
+<section id="scripts-ativos" class="level3">
+<h3 class="anchored" data-anchor-id="scripts-ativos">📜 Scripts ativos</h3>
 <ul>
-<li><p><code>atualizar-ultimos-posts.sh</code>:<br>
+<li><p><code>atualizar-ultimos-posts.sh</code><br>
 Gera a lista dos últimos posts publicados com base na data e salva em um bloco reutilizável (por exemplo, <code>ultimos_posts.qmd</code>).</p></li>
-<li><p><code>gerar_posts_json.py</code>:<br>
-Percorre todos os arquivos <code>.qmd</code> do blog e extrai metadados (título, tags, caminho) para gerar o arquivo <code>docs/posts.json</code>, que é usado em scripts de tags e navegação.</p></li>
-<li><p><code>gerar_tags.py</code>:<br>
-Lê o arquivo <code>posts.json</code> e gera os arquivos <code>tags_freq.txt</code>, <code>tags.qmd</code>, <code>lista_tags_gerada.html</code> com a contagem de cada tag usada no blog.</p></li>
-<li><p><code>nuvem_tags.py</code>:<br>
-Gera a imagem <code>nuvem_tags.png</code> com uma nuvem de palavras baseada na frequência das tags, usada no post de navegação por tags.</p></li>
-<li><p><code>atualizar_tags.sh</code>:<br>
-Gera as páginas individuais para cada tag (<code>tags/*.qmd</code>), atualiza o arquivo <code>tags.qmd</code> com links, e executa a geração da nuvem de tags.</p></li>
-<li><p><code>atualizar_tudo.sh</code>:<br>
-Executa todos os scripts anteriores em ordem lógica (últimos posts → JSON → tags → nuvem), garantindo que tudo esteja atualizado com um único comando.</p></li>
+<li><p><code>gerar_posts_json.py</code><br>
+Percorre todos os <code>.qmd</code> e extrai metadados (título, tags, caminho) para gerar <code>docs/posts.json</code>, usado em páginas de tags e navegação.</p></li>
+<li><p><code>gerar_tags.py</code><br>
+Lê <code>posts.json</code> e gera <code>tags_freq.txt</code>, <code>tags.qmd</code> e <code>lista_tags_gerada.html</code> com a contagem de cada tag.</p></li>
+<li><p><code>nuvem_tags.py</code><br>
+Gera <code>nuvem_tags.png</code> (nuvem de palavras com frequência de tags), exibida na página de navegação por tags.</p></li>
+<li><p><code>atualizar_tags.sh</code><br>
+Cria páginas individuais de cada tag (<code>tags/*.qmd</code>), atualiza <code>tags.qmd</code> com links e roda a geração da nuvem.</p></li>
+<li><p><code>atualizar_tudo.sh</code><br>
+Executa tudo na ordem (últimos posts → JSON → tags → nuvem), garantindo que o site fique atualizado em um comando.</p></li>
 </ul>
 <hr>
-<p><a href="../../posts/pessoal/">← Voltar para a Seção do Blog Pessoal 🧑‍🏫</a></p>
+<p><a href="../../posts/pessoal/index.html">← Voltar para a Seção do Blog Pessoal 🧑‍🏫</a></p>
 <hr>
-<p>🔝 <a href="../../posts/pessoal/sobre-o-blog.html">Voltar ao Topo</a></p>
+<p>🔝 <a href="#top">Voltar ao Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -411,16 +401,16 @@ Nota
 </div>
 </section>
 </section>
-</section>
-<section id="links-úteis" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 🔗 Links Úteis</h1>
+<section id="links-úteis" class="level2">
+<h2 class="anchored" data-anchor-id="links-úteis">🔗 Links Úteis</h2>
 <ul>
-<li>🧑‍🏫 <a href="../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
+<li>🗂️ <a href="../../posts/pessoal/index.html">Seção do Blog Pessoal</a></li>
+<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank" rel="noopener">GitHub do Projeto</a></li>
 <li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -913,4 +903,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+<script src="../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

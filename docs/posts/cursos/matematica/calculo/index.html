@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Introdução ao curso de Cálculo com teoria, aplicações e muitos exemplos resolvidos.">
+<meta name="description" content="Introdução ao Cálculo com teoria elegante (LaTeX), visual Quarto e exemplos em R/Python — com trilhas de Aprofundamento (AP).">
 
 <title>🎓 Curso de Cálculo Diferencial e Integral – Blog do Marcellini</title>
 <style>
@@ -43,6 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,35 +81,6 @@ ul.task-list li input[type="checkbox"] {
   gtag('config', 'G-P2KY6K26MG');
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../../styles.css">
 <link rel="stylesheet" href="../../../../assets/css/custom.css">
@@ -232,20 +204,14 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#curso-de-cálculo-diferencial-e-integral" id="toc-curso-de-cálculo-diferencial-e-integral" class="nav-link active" data-scroll-target="#curso-de-cálculo-diferencial-e-integral"><span class="header-section-number">1</span> 🎓 Curso de Cálculo Diferencial e Integral</a>
+  <li><a href="#bem-vindo-ao-curso" id="toc-bem-vindo-ao-curso" class="nav-link active" data-scroll-target="#bem-vindo-ao-curso"><span class="header-section-number">1</span> 🧮 Bem-vindo ao Curso</a>
   <ul class="collapse">
-  <li><a href="#objetivos-do-curso" id="toc-objetivos-do-curso" class="nav-link" data-scroll-target="#objetivos-do-curso"><span class="header-section-number">1.1</span> 📘 Objetivos do Curso</a></li>
-  <li><a href="#estrutura-dos-módulos" id="toc-estrutura-dos-módulos" class="nav-link" data-scroll-target="#estrutura-dos-módulos"><span class="header-section-number">1.2</span> 📚 Estrutura dos Módulos</a>
-  <ul class="collapse">
-  <li><a href="#módulo-1-fundamentos-de-cálculo" id="toc-módulo-1-fundamentos-de-cálculo" class="nav-link" data-scroll-target="#módulo-1-fundamentos-de-cálculo"><span class="header-section-number">1.2.1</span> 🔹 Módulo 1 — Fundamentos de Cálculo</a></li>
-  <li><a href="#módulo-2-derivadas" id="toc-módulo-2-derivadas" class="nav-link" data-scroll-target="#módulo-2-derivadas"><span class="header-section-number">1.2.2</span> 🔹 Módulo 2 — Derivadas</a></li>
-  <li><a href="#módulo-3-integrais" id="toc-módulo-3-integrais" class="nav-link" data-scroll-target="#módulo-3-integrais"><span class="header-section-number">1.2.3</span> 🔹 Módulo 3 — Integrais</a></li>
-  <li><a href="#módulo-4-tópicos-avançados-e-aplicações" id="toc-módulo-4-tópicos-avançados-e-aplicações" class="nav-link" data-scroll-target="#módulo-4-tópicos-avançados-e-aplicações"><span class="header-section-number">1.2.4</span> 🔹 Módulo 4 — Tópicos Avançados e Aplicações</a></li>
-  </ul></li>
-  <li><a href="#como-acompanhar-o-curso" id="toc-como-acompanhar-o-curso" class="nav-link" data-scroll-target="#como-acompanhar-o-curso"><span class="header-section-number">1.3</span> 🚀 Como acompanhar o curso</a></li>
+  <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos"><span class="header-section-number">1.1</span> 📘 Objetivos</a></li>
+  <li><a href="#pré-requisitos-rápidos" id="toc-pré-requisitos-rápidos" class="nav-link" data-scroll-target="#pré-requisitos-rápidos">🧩 Pré-requisitos rápidos</a></li>
+  <li><a href="#sumário-do-curso" id="toc-sumário-do-curso" class="nav-link" data-scroll-target="#sumário-do-curso">📚 Sumário do Curso</a></li>
+  <li><a href="#como-estudar" id="toc-como-estudar" class="nav-link" data-scroll-target="#como-estudar"><span class="header-section-number">1.2</span> 🚀 Como estudar</a></li>
   </ul></li>
   <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências"><span class="header-section-number">2</span> 📚 Referências</a></li>
-  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis"><span class="header-section-number">3</span> 🔗 Links Úteis</a></li>
   </ul>
 </nav>
     </div>
@@ -270,7 +236,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Introdução ao curso de Cálculo com teoria, aplicações e muitos exemplos resolvidos.
+    Introdução ao Cálculo com teoria elegante (LaTeX), visual Quarto e exemplos em R/Python — com trilhas de Aprofundamento (AP).
   </div>
 </div>
 
@@ -299,37 +265,38 @@ window.Quarto = {
 </header>
 
 
+<!-- Breadcrumbs -->
+<p><a href="../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
 <hr>
-<p><a href="../../../../posts/cursos/matematica/index.html">← Voltar para os Cursos de Matemática 🎓 🧮</a></p>
-<p><a href="../../../../posts/matematica/index.html">← Voltar para a Seção de Matemática 🧮</a></p>
-<hr>
-<div style="display: flex; gap: 1em; justify-content: center;">
-<figure style="width: 45%; text-align: center;" class="figure">
-<img src="images/500px-GodfreyKneller-IsaacNewton-1689.jpeg" alt="Isaac Newton" style="width: 100%;" class="figure-img">
+<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start;flex-wrap:wrap;">
+<figure style="width:340px;text-align:center;margin:.25rem;" class="figure">
+<img src="images/500px-GodfreyKneller-IsaacNewton-1689.jpeg" alt="Retrato de Isaac Newton, um dos fundadores do Cálculo" style="width:100%;border-radius:12px;" class="figure-img">
 <figcaption>
 <strong>Isaac Newton</strong>
 </figcaption>
 </figure>
-<figure style="width: 45%; text-align: center;" class="figure">
-<img src="images/Gottfried_Wilhelm_von_Leibniz.jpeg" alt="Gottfried Leibniz" style="width: 100%;" class="figure-img">
+<figure style="width:340px;text-align:center;margin:.25rem;" class="figure">
+<img src="images/Gottfried_Wilhelm_von_Leibniz.jpeg" alt="Retrato de Gottfried Wilhelm Leibniz, um dos fundadores do Cálculo" style="width:100%;border-radius:12px;" class="figure-img">
 <figcaption>
 <strong>Gottfried Wilhelm Leibniz</strong>
 </figcaption>
 </figure>
 </div>
-<section id="curso-de-cálculo-diferencial-e-integral" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 🎓 Curso de Cálculo Diferencial e Integral</h1>
-<div class="callout callout-style-default callout-note callout-titled" title="🧮 Bem-vindo ao Curso de Cálculo!">
+<section id="bem-vindo-ao-curso" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 🧮 Bem-vindo ao Curso</h1>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧮 Bem-vindo ao Curso de Cálculo!
+Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Este curso foi cuidadosamente desenvolvido para estudantes que desejam dominar o <strong>Cálculo Diferencial e Integral</strong> de forma clara, visual e aplicada. Aqui, você encontrará uma introdução sólida à teoria, acompanhada de exemplos práticos e diversas aplicações reais que facilitam o entendimento — com o apoio de ferramentas computacionais modernas para visualizações, simulações e resolução de problemas.</p>
+<p>Este curso foi planejado para dominar <strong>Limites, Derivadas e Integrais</strong> com <strong>rigor</strong>, <strong>visualizações</strong> e <strong>exercícios resolvidos</strong>, integrando <strong>LaTeX</strong>, <strong>Quarto</strong>, <strong>R</strong> e <strong>Python</strong>.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -340,94 +307,123 @@ Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Além disso, todos os módulos incluem um <strong>módulo extra de aprofundamento (AP)</strong>, com tópicos mais avançados e discussões teóricas adicionais, que podem ser omitidas em uma primeira leitura, conforme o ritmo e interesse do estudante.</p>
+<p><strong>Trilhas AP (Aprofundamento).</strong> Cada módulo inclui uma trilha <strong>AP</strong> com tópicos mais avançados que podem ser lidos depois, sem quebrar o fluxo principal.</p>
+</div>
+</div>
+<section id="objetivos" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="objetivos"><span class="header-section-number">1.1</span> 📘 Objetivos</h2>
+<ul>
+<li>Desenvolver raciocínio matemático em limites, derivadas e integrais;</li>
+<li>Apresentar aplicações (Física, Engenharia, Economia, Computação);</li>
+<li>Explorar solução de problemas com gráficos e ferramentas computacionais.</li>
+</ul>
+</section>
+<section id="pré-requisitos-rápidos" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="pré-requisitos-rápidos">🧩 Pré-requisitos rápidos</h2>
+<ul>
+<li>Álgebra básica: manipulação algébrica, inequações, fatoração;</li>
+<li>Noções de funções e gráficos cartesianos;</li>
+<li>Conforto com notação matemática (∑, ε–δ aparecerá nos AP).</li>
+</ul>
+</section>
+<section id="sumário-do-curso" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sumário-do-curso">📚 Sumário do Curso</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">🔹 Módulo 1 — Fundamentos de Cálculo</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">🔹 Módulo 2 — Derivadas</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">🔹 Módulo 3 — Integrais</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">🔹 Módulo 4 — Tópicos Avançados e Aplicações</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ul>
+<li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">1.1 O que é Cálculo? História e aplicações</a><br>
+</li>
+<li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a><br>
+</li>
+<li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">1.2 AP — Conjuntos Numéricos (Aprofundamento)</a><br>
+</li>
+<li>1.3 Intervalos e Inequações <em>(em produção)</em><br>
+</li>
+<li>1.4 Funções: definição, domínio e imagem <em>(em produção)</em><br>
+</li>
+<li>1.5 Gráficos de funções e transformações <em>(em produção)</em><br>
+</li>
+<li>1.6 Funções elementares <em>(em produção)</em><br>
+</li>
+<li>1.7 Limites: definição e propriedades <em>(em produção)</em><br>
+</li>
+<li>1.8 Limites laterais e infinitos <em>(em produção)</em><br>
+</li>
+<li>1.9 Continuidade <em>(em produção)</em></li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ul>
+<li>Definição de derivada <em>(em produção)</em><br>
+</li>
+<li>Regras de derivação <em>(em produção)</em><br>
+</li>
+<li>Aplicações: máximos, mínimos e otimização <em>(em produção)</em><br>
+</li>
+<li>Derivadas implícitas e logarítmicas <em>(em produção)</em></li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ul>
+<li>Integral definida e indefinida <em>(em produção)</em><br>
+</li>
+<li>Técnicas de integração <em>(em produção)</em><br>
+</li>
+<li>Áreas e volumes <em>(em produção)</em><br>
+</li>
+<li>Aplicações físicas <em>(em produção)</em></li>
+</ul>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<ul>
+<li>Equações diferenciais <em>(em produção)</em><br>
+</li>
+<li>Séries de Taylor <em>(em produção)</em><br>
+</li>
+<li>Modelagem com cálculo <em>(em produção)</em><br>
+</li>
+<li>Ferramentas computacionais <em>(em produção)</em><br>
+</li>
+</ul>
 </div>
 </div>
 </div>
-</div>
-<section id="objetivos-do-curso" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="objetivos-do-curso"><span class="header-section-number">1.1</span> 📘 Objetivos do Curso</h2>
-<ul>
-<li>Desenvolver o raciocínio matemático necessário para trabalhar com limites, derivadas e integrais;</li>
-<li>Apresentar aplicações do cálculo na Física, Engenharia, Economia e Computação;</li>
-<li>Explorar técnicas de resolução de problemas com apoio de gráficos e ferramentas computacionais.</li>
-</ul>
 </section>
-<section id="estrutura-dos-módulos" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="estrutura-dos-módulos"><span class="header-section-number">1.2</span> 📚 Estrutura dos Módulos</h2>
-<section id="módulo-1-fundamentos-de-cálculo" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="módulo-1-fundamentos-de-cálculo"><span class="header-section-number">1.2.1</span> 🔹 Módulo 1 — Fundamentos de Cálculo</h3>
+<section id="como-estudar" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="como-estudar"><span class="header-section-number">1.2</span> 🚀 Como estudar</h2>
 <ul>
-<li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">1.1 O que é Cálculo? História e aplicações</a></li>
-<li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></li>
-<li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">1.2 AP Conjuntos Numéricos – Aprofundamento</a></li>
-<li>1.3 Intervalos e Inequações</li>
-<li>1.4 Funções: definição, domínio e imagem</li>
-<li>1.5 Gráficos de funções e transformações</li>
-<li>1.6 Funções elementares</li>
-<li>1.7 Limites: definição e propriedades</li>
-<li>1.8 Limites laterais e infinitos</li>
-<li>1.9 Continuidade</li>
+<li>Siga a ordem sugerida. Leia a <strong>ideia central</strong> antes da prova formal.<br>
+</li>
+<li>Resolva os <strong>exercícios propostos</strong> e, depois, confira o <strong>gabarito comentado</strong>.<br>
+</li>
+<li>Rode os <strong>scripts R/Python</strong> (pasta <code>code/</code>) para explorar os exemplos.<br>
+</li>
+<li>Use os tópicos <strong>AP</strong> para aprofundar conceitos sem perder o ritmo.</li>
 </ul>
-</section>
-<section id="módulo-2-derivadas" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="módulo-2-derivadas"><span class="header-section-number">1.2.2</span> 🔹 Módulo 2 — Derivadas</h3>
-<ul>
-<li>Definição de derivada</li>
-<li>Regras de derivação</li>
-<li>Aplicações: máximos, mínimos e otimização</li>
-<li>Derivadas implícitas e logarítmicas</li>
-</ul>
-</section>
-<section id="módulo-3-integrais" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="módulo-3-integrais"><span class="header-section-number">1.2.3</span> 🔹 Módulo 3 — Integrais</h3>
-<ul>
-<li>Integral definida e indefinida</li>
-<li>Técnicas de integração</li>
-<li>Áreas e volumes</li>
-<li>Aplicações físicas</li>
-</ul>
-</section>
-<section id="módulo-4-tópicos-avançados-e-aplicações" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="módulo-4-tópicos-avançados-e-aplicações"><span class="header-section-number">1.2.4</span> 🔹 Módulo 4 — Tópicos Avançados e Aplicações</h3>
-<ul>
-<li>Equações diferenciais</li>
-<li>Séries de Taylor</li>
-<li>Modelagem com cálculo</li>
-<li>Ferramentas computacionais</li>
-</ul>
-</section>
-</section>
-<section id="como-acompanhar-o-curso" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="como-acompanhar-o-curso"><span class="header-section-number">1.3</span> 🚀 Como acompanhar o curso</h2>
-<ul>
-<li><p>Os posts são numerados por módulos e tópicos (ex: 1.2, 2.4…);</p></li>
-<li><p>Cada post contém explicação teórica, exemplos resolvidos, exercícios e visualizações;</p></li>
-<li><p>Acompanhe as novidades do blog:</p>
-<p>👉 <a href="https://blogdomarcellini.com.br">🎓 📚 Blog do Marcellini</a></p>
-<p>👉 <a href="https://www.instagram.com/profmarcellini/">📸 Instagram</a></p></li>
-</ul>
+<blockquote class="blockquote">
+<p><strong>Código:</strong> os scripts R e Python ficam em <code>posts/cursos/matematica/calculo/code/</code> e são incluídos nas aulas.</p>
+<p><strong>Padrão do projeto:</strong> gráficos gerados por scripts <code>.py</code>/<code>.R</code> dedicados (fora do <code>.qmd</code>) para facilitar reuso e rastreabilidade.</p>
+</blockquote>
 <hr>
 </section>
 </section>
 <section id="referências" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> 📚 Referências</h1>
 <ul>
-<li>Anton, Howard; Bivens, Irl; Davis, Stephen. <em>Cálculo - Volume I</em>, <span class="math inline">\(10^{\underline{a}}\)</span> Edição. Bookman, 2014.<br>
+<li>Anton, Howard; Bivens, Irl; Davis, Stephen. <em>Cálculo - Volume I</em>, 10ª ed.&nbsp;Bookman, 2014.</li>
+<li>Courant, Richard; John, Fritz. <em>Introduction to Calculus and Analysis - Volume I</em>. Wiley, 1965.</li>
+<li>Guidorizzi, Hamilton Luiz. <em>Um Curso de Cálculo - Volume 1</em>, 5ª ed.&nbsp;LTC, 2001.</li>
+<li>Leithold, Louis. <em>O Cálculo com Geometria Analítica - Volume 1</em>, 3ª ed.&nbsp;Harbra, 1994.<br>
 </li>
-<li>Courant, Richard; John, Fritz. <em>Introduction to Calculus and Analysis - Volume I</em>. John Wiley and Sons, 1965.<br>
-</li>
-<li>Guidorizzi, Hamilton Luiz. <em>Um Curso de Cálculo - Volume 1</em>, <span class="math inline">\(5^{\underline{a}}\)</span> Edição. LTC, 2001.<br>
-</li>
-<li>Lima, Elon Lages. <em>Curso de Análise - Volume 1</em>, <span class="math inline">\(11^{\underline{\mathrm{a}}}\)</span> Edição. IMPA, 2004.</li>
+<li>Lima, Elon Lages. <em>Curso de Análise - Volume 1</em>, 11ª ed.&nbsp;IMPA, 2004.</li>
+<li>Simmons, George F. <em>Calculus With Analytic Geometry</em>, 2ª ed.&nbsp;McGraw-Hill, 1985.</li>
 </ul>
 <hr>
 <p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">1.1 O que é Cálculo? História e aplicações</a></p>
 <hr>
-<p><a href="../../../../posts/cursos/matematica/index.html">← Voltar para os Cursos de Matemática 🎓 🧮</a></p>
-<p><a href="../../../../posts/matematica/index.html">← Voltar para a Seção de Matemática 🧮</a></p>
-<hr>
-<p>🔝 <a href="../../../../posts/cursos/matematica/calculo/index.html">Voltar ao Topo</a></p>
+<p><a href="../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="../../../../posts/cursos/matematica/calculo/index.html">Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -440,17 +436,9 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
 </div>
 </div>
-</section>
-<section id="links-úteis" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 🔗 Links Úteis</h1>
-<ul>
-<li>🧑‍🏫 <a href="../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
-<li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
-</ul>
 
 
 </section>
@@ -945,4 +933,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+<script src="../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

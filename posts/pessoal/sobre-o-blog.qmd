@@ -7,7 +7,7 @@ lang: pt-BR
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,9 +19,7 @@ categories: [pessoal, sobre, sobre o blog, sobre mim]
 tags: [pessoal, sobre, sobre o blog, sobre mim]
 ---
 
----
-
-[← Voltar para a Seção do Blog Pessoal 🧑‍🏫](/posts/pessoal/)
+[← Voltar para a Seção do Blog Pessoal 🧑‍🏫](index.qmd)
 
 ---
 
@@ -31,94 +29,82 @@ tags: [pessoal, sobre, sobre o blog, sobre mim]
 Este blog nasceu do desejo de compartilhar ideias, experiências e aprendizados sobre ciência, matemática e programação com pessoas curiosas e interessadas.
 :::
 
-Meu nome é Celso Marcellini, sou Bacharel em Matemática pelo Instituto de Matemática e Estatística da Universidade de São Paulo (IME-USP), e este blog nasceu do desejo de explorar matemática, estatística, física, LaTeX, Quarto e programação de forma acessível e visual.
+Meu nome é **Celso Marcellini**, sou **Bacharel em Matemática** pelo IME-USP. Aqui exploro **matemática, estatística, física, LaTeX, Quarto** e **programação** de forma **acessível** e **visual** — com boa tipografia, gráficos e código reproduzível.
 
-
-::: {.callout-note icon="✍️" title="✍️ Reflexão do autor"}
-
-Sou formado em matemática pura, e sempre fui apaixonado pela teoria da relatividade, tanto especial quanto geral.  
-A matemática que estrutura essas teorias físicas é, para mim, de uma beleza indescritível.
-
-Uma das ideias mais marcantes que encontrei foi a noção de **quadrivetor velocidade** no espaço-tempo quadridimensional.  
-Perceber que uma grandeza física como a velocidade pode ser expressa como um vetor no espaço de Minkowski — com a soma quadrática de suas componentes igual a $c^2$ — me revelou algo de extrema profundidade.
-
-Quando compreendi que, para qualquer corpo com massa, a **norma do quadrivetor velocidade** é sempre $c$, entendi também o seguinte:  
-se estamos em repouso, nossa velocidade espacial é zero, e nossa velocidade temporal é $c$;  
-à medida que nos movemos, parte dessa “velocidade total” é transferida ao espaço, reduzindo nossa velocidade no tempo.  
-Mas a soma vetorial — no sentido da métrica pseudo-euclideana — permanece constante.  
-Isso implica, de forma direta, a **dilatação temporal**: envelhecemos menos quando estamos em movimento.
-
-Mais tarde, ao estudar relatividade geral, descobri que o espaço-tempo é uma **variedade diferencial pseudo-riemanniana**, com uma métrica que se curva em resposta à presença de massa e energia.  
-A frase de Wheeler me acompanhou desde então:
-
-> *“O espaço diz à matéria como ela deve se mover, e a matéria diz ao espaço como ele deve se curvar.”*
-
-Essa síntese é, para mim, de uma beleza ímpar.
-
-Também me encanta a ideia de que a física ainda busca uma **teoria unificada** — algo que integre a relatividade geral com a mecânica quântica.  
-Se um dia conseguirmos explicar o macro e o micro com uma só estrutura matemática coerente, isso será, sem dúvida, um triunfo supremo do pensamento humano.
-
-Por fim, como matemático, reconheço a mesma beleza nos alicerces formais da própria matemática.  
-A forma axiomática como desenvolvemos teoremas, estruturas e teorias exige elegância, coerência e inevitabilidade.  
-Não é por acaso que Hardy disse que **a beleza é o primeiro teste**.  
-Essa afirmação não é apenas filosófica — é um critério silencioso que nos guia enquanto provamos.
-
+::: {.callout-note icon="🎨" title="🎨 Beleza como critério (Hardy)"}
+O que mais me move é a **beleza das ideias** na matemática pura e na física teórica.  
+Sigo a intuição de Hardy — *“a beleza é o primeiro teste”* — e tento mostrar que a beleza aqui é **conceitual**: definições naturais, demonstrações enxutas e conexões inevitáveis entre temas.  
+A tipografia e os gráficos são o **invólucro**; o centro é a **elegância das construções**.
 :::
 
+---
 
 # 💡 Sobre o Blog
 
-Este blog foi construído com o [Quarto](https://quarto.org), uma poderosa ferramenta para criar documentos científicos e apresentações com Markdown e LaTeX.
+::: {.callout-tip icon="🧮" title="🧮 Por que dar destaque a Cálculo e Estatística?"}
+Porque são **disciplinas obrigatórias e essenciais** em grande parte dos cursos universitários.  
+No blog, esse destaque aparece sobretudo nos **cursos** — com trilhas, exemplos resolvidos e visualizações para consolidar a base que sustenta o restante.
+:::
+
+::: {.callout-note icon="📚" title="📚 Escopo editorial"}
+Fora os cursos, **artigos e séries** podem versar sobre **qualquer tema** de ciência, matemática, estatística, computação e tecnologia.  
+Compromisso editorial: **rigor, beleza e clareza**.  
+Não há espaço para apresentação **hermética** “só para especialistas”.
+
+Assuntos avançados (por exemplo, **variedades diferenciáveis**, **grupos de Lie**, **teoria quântica de campos**, **relatividade geral**) **aparecem** aqui — **com profundidade clara** e **fundação conceitual**.  
+Exposições superficiais costumam dificultar o que é, por si, belo e natural; por isso, a ideia é construir as **bases** que sustentam cada conceito.
+:::
+
+Este site foi construído com o **[Quarto](https://quarto.org)**, uma ferramenta para criar documentos científicos, relatórios e sites estáticos usando Markdown e LaTeX.
 
 ## Tecnologias utilizadas
 
-- **Quarto**: para renderização de arquivos `.qmd` em HTML
-- **RevealJS**: para apresentações interativas
-- **MathJax**: para fórmulas matemáticas
-- **AWS S3** ou **GitHub Pages**: para hospedagem como site estático
-- **TikZ + PNG**: diagramas convertidos e incorporados
-- **Tema Bootstrap `cosmo`** e `styles.scss` customizado
+- **Quarto**: renderização de arquivos `.qmd` para HTML  
+- **RevealJS**: apresentações interativas  
+- **MathJax**: fórmulas matemáticas  
+- **AWS S3** ou **GitHub Pages**: hospedagem estática  
+- **TikZ (exportado para PNG/SVG)**: diagramas  
+- **Tema Bootstrap `cosmo`** + `styles.scss` customizado
 
 ## Estrutura geral
 
 - `index.qmd`: página inicial
-- `posts/*.qmd`: cada post individual
-- `sobre.qmd`: sobre o autor
-- `images/`: imagens utilizadas
+- `posts/*.qmd`: posts individuais
+- `posts/pessoal/sobre-o-blog.qmd`: esta página “Sobre”
+- `images/`: imagens
 - `_quarto.yml`: configurações do site
 
 ---
 
 ## 🛠️ Como Este Projeto Funciona
 
-
 ### 📜 Scripts ativos
 
-- `atualizar-ultimos-posts.sh`:  
+- `atualizar-ultimos-posts.sh`  
   Gera a lista dos últimos posts publicados com base na data e salva em um bloco reutilizável (por exemplo, `ultimos_posts.qmd`).
 
-- `gerar_posts_json.py`:  
-  Percorre todos os arquivos `.qmd` do blog e extrai metadados (título, tags, caminho) para gerar o arquivo `docs/posts.json`, que é usado em scripts de tags e navegação.
+- `gerar_posts_json.py`  
+  Percorre todos os `.qmd` e extrai metadados (título, tags, caminho) para gerar `docs/posts.json`, usado em páginas de tags e navegação.
 
-- `gerar_tags.py`:  
-  Lê o arquivo `posts.json` e gera os arquivos `tags_freq.txt`, `tags.qmd`, `lista_tags_gerada.html` com a contagem de cada tag usada no blog.
+- `gerar_tags.py`  
+  Lê `posts.json` e gera `tags_freq.txt`, `tags.qmd` e `lista_tags_gerada.html` com a contagem de cada tag.
 
-- `nuvem_tags.py`:  
-  Gera a imagem `nuvem_tags.png` com uma nuvem de palavras baseada na frequência das tags, usada no post de navegação por tags.
+- `nuvem_tags.py`  
+  Gera `nuvem_tags.png` (nuvem de palavras com frequência de tags), exibida na página de navegação por tags.
 
-- `atualizar_tags.sh`:  
-  Gera as páginas individuais para cada tag (`tags/*.qmd`), atualiza o arquivo `tags.qmd` com links, e executa a geração da nuvem de tags.
+- `atualizar_tags.sh`  
+  Cria páginas individuais de cada tag (`tags/*.qmd`), atualiza `tags.qmd` com links e roda a geração da nuvem.
 
-- `atualizar_tudo.sh`:  
-  Executa todos os scripts anteriores em ordem lógica (últimos posts → JSON → tags → nuvem), garantindo que tudo esteja atualizado com um único comando.
-
----
-
-[← Voltar para a Seção do Blog Pessoal 🧑‍🏫](/posts/pessoal/)
+- `atualizar_tudo.sh`  
+  Executa tudo na ordem (últimos posts → JSON → tags → nuvem), garantindo que o site fique atualizado em um comando.
 
 ---
 
-🔝 [Voltar ao Topo](sobre-o-blog.qmd)
+[← Voltar para a Seção do Blog Pessoal 🧑‍🏫](index.qmd)
+
+---
+
+🔝 [Voltar ao Topo](#top)
 
 ---
 
@@ -128,9 +114,9 @@ Este blog foi construído com o [Quarto](https://quarto.org), uma poderosa ferra
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
-- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 🗂️ [Seção do Blog Pessoal](index.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank" rel="noopener">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

@@ -19,31 +19,43 @@ format:
 page-layout: full
 ---
 
----
-
-[← Voltar para a Seção do Blog Pessoal 🧑‍💻](/posts/pessoal/)
+[← Voltar para a Seção do Blog Pessoal 🧑‍🏫](index.qmd)
 
 ---
 
-# 🧭 🧑‍💻 Guia de Leitura — Blog Pessoal
+## Sobre este guia
 
-Este espaço reúne reflexões, anotações e caminhos que venho trilhando no estudo da Matemática e áreas afins. A proposta é compartilhar uma ordem de leitura sugerida, combinando cursos, artigos e textos autorais de forma estruturada — da introdução ao aprofundamento — sempre com rigor conceitual e uma linguagem acessível.
+Este espaço reúne reflexões, anotações e caminhos que venho trilhando no estudo da Matemática e áreas afins. A proposta é compartilhar uma **ordem de leitura sugerida**, combinando textos autorais e bastidores de forma estruturada — da introdução ao aprofundamento — sempre com rigor conceitual e linguagem acessível.
 
 ---
 
-## ✅ Ordem Sugerida
+## ✅ Ordem sugerida
 
-1. **[📘 🧑‍🏫 Sobre Mim e Sobre o Blog](sobre-o-blog.qmd)** — Ideal para novos visitantes que desejam entender o projeto. Conheça um pouco mais sobre o autor e sua trajetória.
+1. **[📘 🧑‍🏫 Sobre Mim e Sobre o Blog](sobre-o-blog.qmd)** — Ideal para novos visitantes entenderem o projeto. Traz propósito, estrutura e uma breve apresentação do autor.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-[← Voltar para a Seção do Blog Pessoal 🧑‍💻](/posts/pessoal/)
+## 📅 Em breve
+
+Uma amostra dos próximos textos planejados para o Blog Pessoal:
+
+- **Como estudo matemática no dia a dia** — rotina, leituras e anotações.
+- **Ferramentas que uso** — Quarto, LaTeX, R/Python, e organização dos projetos.
+- **Bastidores do Blog** — pipeline de publicação (estrutura de pastas, Git, deploy).
+- **Design científico** — escolhas tipográficas, figuras e padrões de diagramas.
+- **Roteiro editorial** — como decido sequências de posts e séries.
+
+> Quando cada texto for publicado, ele aparecerá automaticamente aqui e no índice da seção.
 
 ---
 
-🔝 [Voltar ao Topo](guia-pessoal.qmd)
+[← Voltar para a Seção do Blog Pessoal 🧑‍🏫](index.qmd)
+
+---
+
+🔝 [Voltar ao Topo](#top)
 
 ---
 
@@ -53,9 +65,9 @@ Este espaço reúne reflexões, anotações e caminhos que venho trilhando no es
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

@@ -9,7 +9,7 @@ tags: [programação, sumário de programação, sumário, Python, R, LaTeX, Qua
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,43 +19,73 @@ format:
 page-layout: full
 ---
 
----
+## 📚 Séries e Projetos
 
-# 📘 👨‍💻 Artigos e Reflexões
+::: {.columns}
+::: {.column width="33%"}
+::: {.callout-note title="🐍 Modelos em Python (Quarto)"}
+Exemplos prontos para gráficos, animações e integração com Quarto.
 
-## [📘 📄 📐 LaTeX](latex/index.qmd)
+[Ver a série ›](modelos-python-quarto.qmd){.button .button-outline}
+:::
+:::
+
+::: {.column width="33%"}
+::: {.callout-note title="📊 Modelos em R (Quarto)"}
+Snippets de R para estatística, visualizações e relatórios reprodutíveis.
+
+[Ver a série ›](modelos-r-quarto.qmd){.button .button-outline}
+:::
+:::
+
+::: {.column width="33%"}
+::: {.callout-note title="📐 LaTeX + Quarto: Templates"}
+Templates e padrões para artigos, slides e posts técnicos.
+
+[Ver os templates ›](outros-modelos-markdown.html){.button .button-outline}
+:::
+:::
+:::
+
+{{< include /_includes/politica-editorial.qmd >}}
+
+## 📘 👨‍💻 Artigos e Reflexões
+
+### [📘 📄 📐 LaTeX](latex/index.qmd)
 Dicas sobre como escrever documentos científicos com LaTeX: fórmulas matemáticas, apresentações e artigos bem formatados.
 
-## [📘 📄 Quarto](quarto/index.qmd)
+### [📘 📄 Quarto](quarto/index.qmd)
 Publicações sobre a ferramenta Quarto para criação de sites, artigos dinâmicos e relatórios reprodutíveis.
 
-## [📘 📄 🐍 Python](python/index.qmd)
+### [📘 📄 🐍 Python](python/index.qmd)
 Conteúdos introdutórios e práticos sobre Python com foco em automação e análise de dados.
 
-## [📘 📄 📊 R](r/index.qmd)
+### [📘 📄 📊 R](r/index.qmd)
 Dicas e exemplos com a linguagem R voltada à estatística, gráficos e relatórios interativos.
 
-# 🧭 📘 👨‍💻 Guia de Leitura
+## 🧭 📘 👨‍💻 Guia de Leitura
 
-1. **[🧭  👨‍💻 Guia de Leitura da Seção de Programação](guia-programacao.qmd)** — Uma trilha sugerida de leitura com ordem progressiva, interligando os principais conteúdos da seção. Ideal para quem quer aprender Programação passo a passo.
+1. **[🧭 👨‍💻 Guia de Leitura da Seção de Programação](guia-programacao.qmd)** — Trilha sugerida com ordem progressiva, interligando os principais conteúdos da seção.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
 
+{{< include /_includes/sobre-projeto.qmd >}}
+
 :::{.callout-note}
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

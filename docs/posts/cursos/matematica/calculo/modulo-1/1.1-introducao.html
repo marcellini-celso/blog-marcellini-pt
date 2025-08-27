@@ -43,6 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,6 +81,35 @@ ul.task-list li input[type="checkbox"] {
   gtag('config', 'G-P2KY6K26MG');
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../../../styles.css">
 <link rel="stylesheet" href="../../../../../assets/css/custom.css">
@@ -205,13 +235,27 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#módulo-1.1-o-que-é-cálculo-história-e-aplicações" id="toc-módulo-1.1-o-que-é-cálculo-história-e-aplicações" class="nav-link active" data-scroll-target="#módulo-1.1-o-que-é-cálculo-história-e-aplicações"><span class="header-section-number">1</span> 🧠 Módulo 1.1: O que é Cálculo? História e aplicações</a>
   <ul class="collapse">
-  <li><a href="#o-que-é-o-cálculo" id="toc-o-que-é-o-cálculo" class="nav-link" data-scroll-target="#o-que-é-o-cálculo"><span class="header-section-number">1.1</span> O que é o Cálculo?</a></li>
-  <li><a href="#breve-história" id="toc-breve-história" class="nav-link" data-scroll-target="#breve-história"><span class="header-section-number">1.2</span> 🧭 Breve História</a></li>
-  <li><a href="#por-que-estudar-cálculo" id="toc-por-que-estudar-cálculo" class="nav-link" data-scroll-target="#por-que-estudar-cálculo"><span class="header-section-number">1.3</span> ⚙️ Por que estudar Cálculo?</a></li>
-  <li><a href="#aplicações-do-cálculo" id="toc-aplicações-do-cálculo" class="nav-link" data-scroll-target="#aplicações-do-cálculo"><span class="header-section-number">1.4</span> 🌍 Aplicações do Cálculo</a></li>
-  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão"><span class="header-section-number">1.5</span> 📌 Conclusão</a></li>
+  <li><a href="#o-que-é-o-cálculo" id="toc-o-que-é-o-cálculo" class="nav-link" data-scroll-target="#o-que-é-o-cálculo"><span class="header-section-number">1.1</span> ✨ O que é o Cálculo?</a>
+  <ul class="collapse">
+  <li><a href="#intuição-inicial" id="toc-intuição-inicial" class="nav-link" data-scroll-target="#intuição-inicial"><span class="header-section-number">1.1.1</span> 🌱 Intuição inicial</a></li>
+  <li><a href="#formulação-matemática-enxuta" id="toc-formulação-matemática-enxuta" class="nav-link" data-scroll-target="#formulação-matemática-enxuta"><span class="header-section-number">1.1.2</span> 📐 Formulação matemática (enxuta)</a></li>
   </ul></li>
-  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis"><span class="header-section-number">2</span> 🔗 Links Úteis</a></li>
+  <li><a href="#os-dois-problemas-fundamentais-do-cálculo" id="toc-os-dois-problemas-fundamentais-do-cálculo" class="nav-link" data-scroll-target="#os-dois-problemas-fundamentais-do-cálculo"><span class="header-section-number">1.2</span> Os dois problemas fundamentais do cálculo</a>
+  <ul class="collapse">
+  <li><a href="#intuição-tangentes-e-áreas" id="toc-intuição-tangentes-e-áreas" class="nav-link" data-scroll-target="#intuição-tangentes-e-áreas"><span class="header-section-number">1.2.1</span> 🌱 Intuição: tangentes e áreas</a></li>
+  <li><a href="#formulação-matemática" id="toc-formulação-matemática" class="nav-link" data-scroll-target="#formulação-matemática"><span class="header-section-number">1.2.2</span> 📐 Formulação matemática</a></li>
+  </ul></li>
+  <li><a href="#motivação-visual-o-problema-da-tangente" id="toc-motivação-visual-o-problema-da-tangente" class="nav-link" data-scroll-target="#motivação-visual-o-problema-da-tangente"><span class="header-section-number">1.3</span> 🔎 Motivação visual — o problema da tangente</a>
+  <ul class="collapse">
+  <li><a href="#mini-exemplo-numérico-sem-notação-de-limite" id="toc-mini-exemplo-numérico-sem-notação-de-limite" class="nav-link" data-scroll-target="#mini-exemplo-numérico-sem-notação-de-limite"><span class="header-section-number">1.3.1</span> 🧮 Mini exemplo numérico (sem notação de limite)</a></li>
+  </ul></li>
+  <li><a href="#motivação-visual-o-problema-da-área-método-de-exaustão" id="toc-motivação-visual-o-problema-da-área-método-de-exaustão" class="nav-link" data-scroll-target="#motivação-visual-o-problema-da-área-método-de-exaustão"><span class="header-section-number">1.4</span> 🔎 Motivação visual — o problema da área (método de exaustão)</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-numérico-área-de-polígono-inscrito" id="toc-exemplo-numérico-área-de-polígono-inscrito" class="nav-link" data-scroll-target="#exemplo-numérico-área-de-polígono-inscrito"><span class="header-section-number">1.4.1</span> 🧮 Exemplo numérico (área de polígono inscrito)</a></li>
+  </ul></li>
+  <li><a href="#breve-história-do-cálculo" id="toc-breve-história-do-cálculo" class="nav-link" data-scroll-target="#breve-história-do-cálculo"><span class="header-section-number">1.5</span> 📜 Breve história do Cálculo</a></li>
+  <li><a href="#encerrando-a-introdução" id="toc-encerrando-a-introdução" class="nav-link" data-scroll-target="#encerrando-a-introdução"><span class="header-section-number">1.6</span> ✅ Encerrando a introdução</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -261,85 +305,232 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<hr>
-<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Voltar para o Sumário do Curso de Cálculo Diferencial e Integral 🎓 🧮</a></p>
-<p><a href="../../../../../posts/cursos/matematica/index.html">← Voltar para os Cursos de Matemática 🎓 🧮</a></p>
-<p><a href="../../../../../posts/matematica/index.html">← Voltar para a Seção de Matemática 🧮</a></p>
-<hr>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Objetivos e Sumário do Curso de Cálculo</a></p>
-<hr>
+<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
 <section id="módulo-1.1-o-que-é-cálculo-história-e-aplicações" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 🧠 Módulo 1.1: O que é Cálculo? História e aplicações</h1>
-<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
+<div class="callout callout-style-default callout-tip callout-titled" title="📚 Pré-requisitos (leves)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📌 Objetivos do Post
+📚 Pré-requisitos (leves)
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Entender o que é o cálculo diferencial e integral;</li>
-<li>Conhecer um breve histórico da disciplina;</li>
-<li>Apresentar algumas aplicações práticas do cálculo.</li>
+<li>Noções básicas de <strong>álgebra</strong> (operações com expressões, equações simples).<br>
+</li>
+<li>Familiaridade com <strong>funções elementares</strong> (reta, parábola, exponencial, logaritmo).<br>
+</li>
+<li>Capacidade de interpretar <strong>gráficos cartesianos</strong>.</li>
 </ul>
+<blockquote class="blockquote">
+<p>As fórmulas deste curso são preparadas em <strong>LaTeX</strong>, o padrão acadêmico para escrita matemática,<br>
+o que garante <strong>clareza</strong> e <strong>qualidade tipográfica</strong> na apresentação.<br>
+👉 Você verá apenas o resultado final, sem precisar conhecer LaTeX.</p>
+</blockquote>
 </div>
 </div>
+<hr>
 <section id="o-que-é-o-cálculo" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="o-que-é-o-cálculo"><span class="header-section-number">1.1</span> O que é o Cálculo?</h2>
-<p>O <strong>Cálculo Diferencial e Integral</strong>, ou simplesmente <strong>Cálculo</strong>, é um ramo da Matemática que estuda:</p>
-<ul>
-<li><strong>Mudanças</strong> (como uma função varia);</li>
-<li><strong>Taxas de variação</strong> (velocidade, crescimento);</li>
-<li><strong>Acúmulo de quantidades</strong> (áreas, volumes, somatórios contínuos).</li>
-</ul>
-<p>É uma das ferramentas mais poderosas da ciência moderna, presente em praticamente todas as áreas do conhecimento científico e tecnológico.</p>
+<h2 data-number="1.1" class="anchored" data-anchor-id="o-que-é-o-cálculo"><span class="header-section-number">1.1</span> ✨ O que é o Cálculo?</h2>
+<section id="intuição-inicial" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="intuição-inicial"><span class="header-section-number">1.1.1</span> 🌱 Intuição inicial</h3>
+<p>Imagine um carro na estrada: o velocímetro mostra <strong>como a velocidade muda agora</strong>; já a distância total depende de <strong>somar pequenos trechos</strong>.<br>
+Esse é o espírito do cálculo: <strong>estudar a mudança e o acúmulo</strong> no mundo real.</p>
 </section>
-<section id="breve-história" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="breve-história"><span class="header-section-number">1.2</span> 🧭 Breve História</h2>
-<p>O cálculo foi desenvolvido no século XVII por dois matemáticos independentes:</p>
+<section id="formulação-matemática-enxuta" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="formulação-matemática-enxuta"><span class="header-section-number">1.1.2</span> 📐 Formulação matemática (enxuta)</h3>
 <ul>
-<li><strong>Isaac Newton</strong> (1642–1727), motivado por problemas de Física (movimento dos corpos);</li>
-<li><strong>Gottfried Leibniz</strong> (1646–1716), com foco na simbologia e no aspecto matemático geral.</li>
+<li><strong>Mudança</strong> → taxas de variação (derivadas).<br>
+</li>
+<li><strong>Acúmulo</strong> → totais e áreas (integrais).<br>
+</li>
+<li><strong>Limite</strong> → base formal que dá precisão ao “instantâneo” e ao “contínuo”.</li>
 </ul>
-<p>Apesar de disputas históricas, hoje reconhecemos a contribuição essencial de ambos.</p>
+<hr>
 </section>
-<section id="por-que-estudar-cálculo" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="por-que-estudar-cálculo"><span class="header-section-number">1.3</span> ⚙️ Por que estudar Cálculo?</h2>
-<p>O cálculo permite:</p>
+</section>
+<section id="os-dois-problemas-fundamentais-do-cálculo" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="os-dois-problemas-fundamentais-do-cálculo"><span class="header-section-number">1.2</span> Os dois problemas fundamentais do cálculo</h2>
+<section id="intuição-tangentes-e-áreas" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="intuição-tangentes-e-áreas"><span class="header-section-number">1.2.1</span> 🌱 Intuição: tangentes e áreas</h3>
+<ol type="1">
+<li><strong>Problema da tangente:</strong> qual é a inclinação de uma curva em um ponto?<br>
+</li>
+<li><strong>Problema da área:</strong> qual é a área de uma região limitada por curvas?</li>
+</ol>
+</section>
+<section id="formulação-matemática" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="formulação-matemática"><span class="header-section-number">1.2.2</span> 📐 Formulação matemática</h3>
 <ul>
-<li>Determinar a velocidade instantânea de um objeto;</li>
-<li>Calcular o volume de um sólido com formato irregular;</li>
-<li>Otimizar processos (por exemplo, minimizar custos);</li>
-<li>Modelar sistemas físicos, biológicos ou econômicos;</li>
-<li>Desenvolver gráficos de funções complexas;</li>
-<li>Prever comportamentos com base em taxas de mudança.</li>
+<li><strong>Tangente</strong> em <span class="math inline">\(A=(a,f(a))\)</span>: a inclinação da tangente é o valor para o qual as <strong>secantes</strong> convergem quando o segundo ponto se aproxima de <span class="math inline">\(A\)</span>.<br>
+</li>
+<li><strong>Área</strong> em <span class="math inline">\([a,b]\)</span>: a área sob <span class="math inline">\(y=f(x)\)</span> é o valor para o qual as <strong>somas de pequenos retângulos</strong> convergem quando refinamos a partição.</li>
 </ul>
+<hr>
 </section>
-<section id="aplicações-do-cálculo" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="aplicações-do-cálculo"><span class="header-section-number">1.4</span> 🌍 Aplicações do Cálculo</h2>
+</section>
+<section id="motivação-visual-o-problema-da-tangente" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="motivação-visual-o-problema-da-tangente"><span class="header-section-number">1.3</span> 🔎 Motivação visual — o problema da tangente</h2>
+<p>Usaremos a função <span class="math inline">\(y=e^x\)</span> no ponto <span class="math inline">\(A(0,1)\)</span>. Na figura, retas <strong>secantes</strong> <span class="math inline">\((A–B, A–C, A–D)\)</span> vão “girando” até a <strong>reta verde</strong>, que representa a <strong>tangente</strong> em <span class="math inline">\(A\)</span>.</p>
+<p><strong>Figura — Aproximação da tangente por secantes para <span class="math inline">\(y=e^x\)</span></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tangente.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<section id="mini-exemplo-numérico-sem-notação-de-limite" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="mini-exemplo-numérico-sem-notação-de-limite"><span class="header-section-number">1.3.1</span> 🧮 Mini exemplo numérico (sem notação de limite)</h3>
+<p>Para <span class="math inline">\(y=e^x\)</span> em <span class="math inline">\(x=0\)</span>, considere a secante entre <span class="math inline">\(x=0\)</span> e <span class="math inline">\(x=h\)</span>.<br>
+A inclinação dessa secante é <span class="math display">\[
+m(h)=\frac{e^{h}-e^{0}}{h}=\frac{e^{h}-1}{h}.
+\]</span></p>
+<p>Tabela (valores ilustrativos):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(h\)</span></th>
+<th style="text-align: left;">Expressão de <span class="math inline">\(m(h)\)</span></th>
+<th style="text-align: center;">Valor aproximado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"><span class="math inline">\(\dfrac{e-1}{1}\)</span></td>
+<td style="text-align: center;">1.7183</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.5</td>
+<td style="text-align: left;"><span class="math inline">\(\dfrac{e^{0.5}-1}{0.5}\)</span></td>
+<td style="text-align: center;">1.2974</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.1</td>
+<td style="text-align: left;"><span class="math inline">\(\dfrac{e^{0.1}-1}{0.1}\)</span></td>
+<td style="text-align: center;">1.0517</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.01</td>
+<td style="text-align: left;"><span class="math inline">\(\dfrac{e^{0.01}-1}{0.01}\)</span></td>
+<td style="text-align: center;">1.0050</td>
+</tr>
+</tbody>
+</table>
+<p>📌 Observação: os valores numéricos mostram que, <strong>à medida que <span class="math inline">\(h \to 0\)</span>, <span class="math inline">\(m(h)\)</span> se aproxima de 1</strong>.<br>
+Logo, a inclinação da <strong>reta tangente</strong> ao gráfico de <span class="math inline">\(y=e^x\)</span> em <span class="math inline">\(x=0\)</span> é 1.</p>
+<p>Esse é o <strong>problema da tangente</strong>, um dos dois problemas fundamentais do cálculo.</p>
+<hr>
+</section>
+</section>
+<section id="motivação-visual-o-problema-da-área-método-de-exaustão" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="motivação-visual-o-problema-da-área-método-de-exaustão"><span class="header-section-number">1.4</span> 🔎 Motivação visual — o problema da área (método de exaustão)</h2>
+<p>Considere um <strong>círculo de raio 1</strong>. Inscrevemos <strong>polígonos regulares</strong> de <span class="math inline">\(n\)</span> lados.<br>
+Quando <span class="math inline">\(n\)</span> cresce, a área do polígono se aproxima da <strong>área do círculo</strong> — este é o método de <strong>exaustão</strong> de Arquimedes.</p>
+<p><strong>Figura — Polígonos inscritos aproximando a área do círculo (R=1)</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/area_exaustao.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<section id="exemplo-numérico-área-de-polígono-inscrito" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="exemplo-numérico-área-de-polígono-inscrito"><span class="header-section-number">1.4.1</span> 🧮 Exemplo numérico (área de polígono inscrito)</h3>
+<p>Para um polígono de <span class="math inline">\(n\)</span> lados inscrito no círculo unitário, a área é <span class="math display">\[
+A_n=\frac{n}{2}\,\sin\!\left(\frac{2\pi}{n}\right).
+\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A_n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\pi - A_n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2.0000</td>
+<td style="text-align: center;">1.1416</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2.5981</td>
+<td style="text-align: center;">0.5435</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">3.0000</td>
+<td style="text-align: center;">0.1416</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">3.1058</td>
+<td style="text-align: center;">0.0358</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">3.1326</td>
+<td style="text-align: center;">0.0090</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">96</td>
+<td style="text-align: center;">3.1394</td>
+<td style="text-align: center;">0.0022</td>
+</tr>
+</tbody>
+</table>
+<p>📌 <strong>Lembrete:</strong> a área do círculo é dada por <span class="math inline">\(\pi r^2\)</span>.<br>
+No caso <span class="math inline">\(r=1\)</span>, a área é <span class="math inline">\(\pi \approx 3.1416\)</span>.<br>
+Portanto, a última coluna da tabela mostra como a diferença <span class="math inline">\(\pi - A_n\)</span> tende a zero à medida que <span class="math inline">\(n\)</span> cresce.</p>
+<p><a href="../data/area_exaustao_table.csv">Baixar tabela (CSV)</a></p>
+<p>Esse raciocínio antecipa a <strong>integral</strong> como ferramenta para medir áreas e acúmulos — o <strong>problema da área</strong>, o outro problema fundamental do cálculo.</p>
+<hr>
+</section>
+</section>
+<section id="breve-história-do-cálculo" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="breve-história-do-cálculo"><span class="header-section-number">1.5</span> 📜 Breve história do Cálculo</h2>
 <ul>
-<li><strong>Física</strong>: movimento, força, energia, eletricidade;</li>
-<li><strong>Engenharia</strong>: estruturas, circuitos, controle de sistemas;</li>
-<li><strong>Biologia</strong>: crescimento populacional, dinâmica de epidemias;</li>
-<li><strong>Economia</strong>: custo marginal, receita, lucro máximo;</li>
-<li><strong>Computação</strong>: gráficos 3D, inteligência artificial, análise de algoritmos;</li>
-<li><strong>Medicina</strong>: tomografia, modelos farmacocinéticos.</li>
+<li><strong>Arquimedes (séc. III a.C.)</strong>: método da <strong>exaustão</strong> (áreas e volumes) — semente do cálculo integral.<br>
+</li>
+<li><strong>Fermat (séc. XVII)</strong>: técnicas para <strong>tangentes</strong> — semente do cálculo diferencial.<br>
+</li>
+<li><strong>Newton (1643–1727)</strong>: focado em movimento e Física; chamou derivadas de <em>fluxões</em>.<br>
+</li>
+<li><strong>Leibniz (1646–1716)</strong>: notação clara e geral (símbolos que usamos até hoje).</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Teorema Fundamental do Cálculo (ideia)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Teorema Fundamental do Cálculo (ideia)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mais adiante veremos que <strong>mudança</strong> (derivadas) e <strong>acúmulo</strong> (integrais) estão conectados por um resultado central — o <strong>Teorema Fundamental do Cálculo</strong> — que dá unidade à disciplina.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="conclusão" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="conclusão"><span class="header-section-number">1.5</span> 📌 Conclusão</h2>
-<p>O cálculo está em todo lugar. Ao longo deste curso, vamos entender passo a passo como essa poderosa linguagem matemática funciona e como podemos aplicá-la para resolver problemas reais.</p>
+<section id="encerrando-a-introdução" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="encerrando-a-introdução"><span class="header-section-number">1.6</span> ✅ Encerrando a introdução</h2>
+<ul>
+<li>O cálculo responde a duas perguntas universais:
+<ol type="1">
+<li><strong>Quão rápido algo muda agora?</strong> (tangentes/derivadas)<br>
+</li>
+<li><strong>Quanto se acumulou no intervalo?</strong> (áreas/integral)</li>
+</ol></li>
+<li>Nesta abertura, evitamos símbolos formais de limite/derivada/integral — focamos na <strong>intuição visual e histórica</strong>.<br>
+</li>
+<li>A formalização virá passo a passo, sempre conectada a <strong>figuras</strong> e <strong>exemplos numéricos</strong>.</li>
+</ul>
 <hr>
 <p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></p>
-<hr>
-<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Voltar para o Sumário do Curso de Cálculo Diferencial e Integral 🎓 🧮</a></p>
-<p><a href="../../../../../posts/cursos/matematica/index.html">← Voltar para os Cursos de Matemática 🎓 🧮</a></p>
-<p><a href="../../../../../posts/matematica/index.html">← Voltar para a Seção de Matemática 🧮</a></p>
-<hr>
-<p>🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">Voltar ao Topo</a></p>
+<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -352,20 +543,12 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
 </div>
 </div>
-</section>
-</section>
-<section id="links-úteis" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 🔗 Links Úteis</h1>
-<ul>
-<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
-<li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
-</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -858,4 +1041,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

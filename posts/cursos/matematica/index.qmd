@@ -19,35 +19,29 @@ format:
 page-layout: full
 ---
 
----
-
-[← Voltar para a Seção de Matemática 🧮](/posts/matematica/)
+[← Voltar para a Seção de Matemática 🧮](../../matematica/index.qmd)
 
 ---
 
-# 🎓 🧮 Cursos Disponíveis
+## 🎓 🧮 Cursos Disponíveis
 
-
-## [🎓 🧮 Curso de Cálculo Diferencial e Integral](calculo/index.qmd)
+### [🎓 🧮 Curso de Cálculo Diferencial e Integral](calculo/index.qmd)
 
 Este curso foi cuidadosamente desenvolvido para estudantes que desejam dominar o **Cálculo Diferencial e Integral** de forma clara, visual e aplicada. Aqui, você encontrará uma introdução sólida à teoria, acompanhada de exemplos práticos e diversas aplicações reais que facilitam o entendimento — com o apoio de ferramentas computacionais modernas para visualizações, simulações e resolução de problemas.
 
-::: {.callout-tip} 
-
+::: {.callout-tip}
 Além disso, todos os módulos incluem um **módulo extra de aprofundamento (AP)**, com tópicos mais avançados e discussões teóricas adicionais, que podem ser omitidas em uma primeira leitura, conforme o ritmo e interesse do estudante.
-
 :::
 
-# 📖 🧮 Guia de Leitura
+## 📖 🧮 Guia de Leitura
 
 1. **[🎓 🧮 Curso de Cálculo Diferencial e Integral](calculo/index.qmd)** — Teoria sólida, exemplos práticos e aplicações reais. Acesse o índice completo do curso.
-
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-[← Voltar para a Seção de Matemática 🧮](/posts/matematica/)
+[← Voltar para a Seção de Matemática 🧮](../../matematica/index.qmd)
 
 ---
 
@@ -61,9 +55,9 @@ Além disso, todos os módulos incluem um **módulo extra de aprofundamento (AP)
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

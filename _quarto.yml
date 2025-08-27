@@ -72,6 +72,9 @@ search: true
 
 publish:
   provider: gh-pages
+  
+filters:
+  - naquiz
 
 resources:
   - posts.json

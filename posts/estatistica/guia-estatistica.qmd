@@ -19,31 +19,24 @@ format:
 page-layout: full
 ---
 
----
+[← Voltar para a Seção de Estatística 📊](index.qmd)
 
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+<img src="../../images/Standard_Normal_Distribution-en.svg.png" alt="Distribuição Normal Padrão" width="40%" style="margin-bottom: 2rem;">
 
----
-
-![Distribuição Normal Padrão](../../images/Standard_Normal_Distribution-en.svg.png){width=40% style="margin-bottom: 2rem;"}
-
-# 🧭 📊 Guia de Leitura — Estatística
+## Sobre este guia
 
 Este guia oferece uma ordem de leitura sugerida para quem deseja estudar Estatística de maneira estruturada. Ele reúne os principais conteúdos disponíveis na seção, organizando cursos, artigos e reflexões em uma trilha coerente — da introdução ao aprofundamento.
 
----
+## ✅ Ordem sugerida
 
-## ✅ Ordem Sugerida
-
-1. **[🎓 📊 Distribuição Normal (Curso)](/posts/cursos/estatistica/distribuicao_normal/index.qmd)**  
+1. **[🎓 📊 A Distribuição Normal (Curso)](../cursos/estatistica/distribuicao_normal/index.qmd)**  
    Curso completo sobre a distribuição normal: definição, propriedades, gráficos, aplicações práticas e exercícios resolvidos com R e Excel.
-
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
 ---
 
-[← Voltar para a Seção de Estatística 📊](/posts/estatistica/)
+[← Voltar para a Seção de Estatística 📊](index.qmd)
 
 ---
 
@@ -57,9 +50,9 @@ Este guia oferece uma ordem de leitura sugerida para quem deseja estudar Estatí
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../posts/pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

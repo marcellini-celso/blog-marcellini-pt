@@ -9,7 +9,7 @@ tags: [programação, Python, sumário de Python, sumário, Quarto]
 format:
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     fig-align: center
     code-overflow: scroll
@@ -19,18 +19,35 @@ format:
 page-layout: full
 ---
 
----
-
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-# 📘 📄 🐍 Artigos e Reflexões
+## 📚 Séries e Projetos (relacionados)
 
-## [📘 📄 🐍 Modelos Python para uso no Quarto](../modelos-python-quarto.qmd)
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="🐍 Modelos em Python (Quarto)"}
+Exemplos prontos com gráficos, animações e integração com Quarto.
+
+[Ver a série ›](../modelos-python-quarto.qmd){.button .button-outline}
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="🧭 Guia de Programação"}
+Trilha sugerida com ordem progressiva de leitura.
+
+[Ir para o guia ›](../guia-programacao.qmd){.button .button-outline}
+:::
+:::
+:::
+
+## 📘 📄 🐍 Artigos e Reflexões
+
+### [📘 📄 🐍 Modelos Python para uso no Quarto](../modelos-python-quarto.qmd)
 Exemplos de uso do Python com Quarto, integração de código com visualizações e análise de dados.
 
-# 🧭 📘 📄 🐍 Guia de Leitura
+## 🧭 📘 📄 🐍 Guia de Leitura
 
 1. **[📘 📄 🐍 Modelos Python para uso no Quarto](../modelos-python-quarto.qmd)** — Veja como utilizar Python para gerar visualizações e resultados dinâmicos dentro de documentos Quarto.
 
@@ -38,19 +55,23 @@ Exemplos de uso do Python com Quarto, integração de código com visualizaçõe
 
 ---
 
-[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+[← Voltar para a Seção de Programação 👨‍💻](../index.qmd)
 
 ---
 
-🔝 [Voltar ao Topo](index.qmd)
+🔝 [Voltar ao Topo](#top)
 
 ---
 
 *Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
 
-# 🔗 Links Úteis
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
 
-- 🧑‍🏫 [Sobre o Blog](../../../posts/pessoal/sobre-o-blog.qmd)
+## 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](../../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

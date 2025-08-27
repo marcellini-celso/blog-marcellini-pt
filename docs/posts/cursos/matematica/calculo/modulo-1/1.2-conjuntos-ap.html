@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Neste módulo, exploramos os conjuntos numéricos fundamentais que serão utilizados ao longo do curso, com ênfase em suas principais propriedades e exemplos característicos, oferecendo uma visão mais aprofundada de cada um.">
+<meta name="description" content="Exploramos conceitos estruturais (irracionalidade de √2, enumerabilidade, diagonal de Cantor, finitude decimal) e as propriedades que tornam ℝ um corpo ordenado completo.">
 
-<title>🧠 🔢 Módulo 1.2 AP: Conjuntos Numéricos – Aprofundamento – Blog do Marcellini</title>
+<title>🧠 🔢 Módulo 1.2 AP: Conjuntos Numéricos — Aprofundamento – Blog do Marcellini</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,6 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -267,21 +268,19 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#módulo-1.2-ap-conjuntos-numéricos-aprofundamento" id="toc-módulo-1.2-ap-conjuntos-numéricos-aprofundamento" class="nav-link active" data-scroll-target="#módulo-1.2-ap-conjuntos-numéricos-aprofundamento"><span class="header-section-number">1</span> 🔢 Módulo 1.2 AP: Conjuntos Numéricos – Aprofundamento</a>
+  <li><a href="#módulo-1.2-ap-conjuntos-numéricos-aprofundamento" id="toc-módulo-1.2-ap-conjuntos-numéricos-aprofundamento" class="nav-link active" data-scroll-target="#módulo-1.2-ap-conjuntos-numéricos-aprofundamento"><span class="header-section-number">1</span> 🔢 Módulo 1.2 AP: Conjuntos Numéricos — Aprofundamento</a>
   <ul class="collapse">
   <li><a href="#aprofundamento-demonstração-de-que-sqrt2-não-é-racional" id="toc-aprofundamento-demonstração-de-que-sqrt2-não-é-racional" class="nav-link" data-scroll-target="#aprofundamento-demonstração-de-que-sqrt2-não-é-racional"><span class="header-section-number">1.1</span> 🧠 Aprofundamento: Demonstração de que <span class="math inline">\(\sqrt{2}\)</span> não é racional</a></li>
-  <li><a href="#aprofundamento-comentário-sobre-o-método-de-demonstração-por-redução-ao-absurdo" id="toc-aprofundamento-comentário-sobre-o-método-de-demonstração-por-redução-ao-absurdo" class="nav-link" data-scroll-target="#aprofundamento-comentário-sobre-o-método-de-demonstração-por-redução-ao-absurdo"><span class="header-section-number">1.2</span> 🧠 Aprofundamento: Comentário sobre o método de demonstração por <em>redução ao absurdo</em></a></li>
-  <li><a href="#aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis" id="toc-aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis" class="nav-link" data-scroll-target="#aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis"><span class="header-section-number">1.3</span> 🧠 Aprofundamento: Conjuntos Enumeráveis e Não Enumeráveis</a></li>
-  <li><a href="#aprofundamento-o-método-diagonal-de-cantor-e-a-não-enumerabilidade-dos-reais" id="toc-aprofundamento-o-método-diagonal-de-cantor-e-a-não-enumerabilidade-dos-reais" class="nav-link" data-scroll-target="#aprofundamento-o-método-diagonal-de-cantor-e-a-não-enumerabilidade-dos-reais"><span class="header-section-number">1.4</span> 🧠 Aprofundamento: O Método Diagonal de Cantor e a Não Enumerabilidade dos Reais</a></li>
-  <li><a href="#aprofundamento-o-método-diagonal-de-cantor-e-a-enumerabilidade-dos-racionais" id="toc-aprofundamento-o-método-diagonal-de-cantor-e-a-enumerabilidade-dos-racionais" class="nav-link" data-scroll-target="#aprofundamento-o-método-diagonal-de-cantor-e-a-enumerabilidade-dos-racionais"><span class="header-section-number">1.5</span> 🧠 Aprofundamento: O Método Diagonal de Cantor e a Enumerabilidade dos Racionais</a></li>
-  <li><a href="#aprofundamento-demonstração-da-finitude-da-representação-decimal" id="toc-aprofundamento-demonstração-da-finitude-da-representação-decimal" class="nav-link" data-scroll-target="#aprofundamento-demonstração-da-finitude-da-representação-decimal"><span class="header-section-number">1.6</span> 🧠 Aprofundamento: Demonstração da Finitude da Representação Decimal</a></li>
-  <li><a href="#aprofundamento-propriedades-dos-números-reais-e-a-estrutura-de-corpo-ordenado-completo" id="toc-aprofundamento-propriedades-dos-números-reais-e-a-estrutura-de-corpo-ordenado-completo" class="nav-link" data-scroll-target="#aprofundamento-propriedades-dos-números-reais-e-a-estrutura-de-corpo-ordenado-completo"><span class="header-section-number">1.7</span> 🧠 Aprofundamento: Propriedades dos Números Reais e a Estrutura de Corpo Ordenado Completo</a></li>
-  <li><a href="#aprofundamento-a-propriedade-de-completude-dos-números-reais" id="toc-aprofundamento-a-propriedade-de-completude-dos-números-reais" class="nav-link" data-scroll-target="#aprofundamento-a-propriedade-de-completude-dos-números-reais"><span class="header-section-number">1.8</span> 🧠 Aprofundamento: A Propriedade de Completude dos Números Reais</a></li>
-  <li><a href="#aprofundamento-código-python-visualizando-o-conjunto-x-in-mathbbq-mid-x2-2" id="toc-aprofundamento-código-python-visualizando-o-conjunto-x-in-mathbbq-mid-x2-2" class="nav-link" data-scroll-target="#aprofundamento-código-python-visualizando-o-conjunto-x-in-mathbbq-mid-x2-2"><span class="header-section-number">1.9</span> 👨‍💻 🐍 Aprofundamento: Código Python – Visualizando o Conjunto <span class="math inline">\(\{ x \in \mathbb{Q} \mid x^2 &lt; 2 \}\)</span></a></li>
-  <li><a href="#exercícios-de-revisão" id="toc-exercícios-de-revisão" class="nav-link" data-scroll-target="#exercícios-de-revisão"><span class="header-section-number">1.10</span> 🧠 Exercícios de Revisão</a></li>
-  <li><a href="#resoluções-comentadas" id="toc-resoluções-comentadas" class="nav-link" data-scroll-target="#resoluções-comentadas"><span class="header-section-number">1.11</span> 📝 Resoluções Comentadas</a></li>
+  <li><a href="#aprofundamento-comentário-sobre-redução-ao-absurdo" id="toc-aprofundamento-comentário-sobre-redução-ao-absurdo" class="nav-link" data-scroll-target="#aprofundamento-comentário-sobre-redução-ao-absurdo"><span class="header-section-number">1.2</span> 🧠 Aprofundamento: Comentário sobre redução ao absurdo</a></li>
+  <li><a href="#aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis" id="toc-aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis" class="nav-link" data-scroll-target="#aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis"><span class="header-section-number">1.3</span> 🧠 Aprofundamento: Conjuntos enumeráveis e não enumeráveis</a></li>
+  <li><a href="#aprofundamento-o-método-diagonal-e-os-reais-não-enumeráveis" id="toc-aprofundamento-o-método-diagonal-e-os-reais-não-enumeráveis" class="nav-link" data-scroll-target="#aprofundamento-o-método-diagonal-e-os-reais-não-enumeráveis"><span class="header-section-number">1.4</span> 🧠 Aprofundamento: O método diagonal e os reais não enumeráveis</a></li>
+  <li><a href="#aprofundamento-enumerabilidade-de-mathbbq" id="toc-aprofundamento-enumerabilidade-de-mathbbq" class="nav-link" data-scroll-target="#aprofundamento-enumerabilidade-de-mathbbq"><span class="header-section-number">1.5</span> 🧠 Aprofundamento: Enumerabilidade de <span class="math inline">\(\mathbb{Q}\)</span></a></li>
+  <li><a href="#aprofundamento-finitude-da-representação-decimal" id="toc-aprofundamento-finitude-da-representação-decimal" class="nav-link" data-scroll-target="#aprofundamento-finitude-da-representação-decimal"><span class="header-section-number">1.6</span> 🧠 Aprofundamento: Finitude da representação decimal</a></li>
+  <li><a href="#aprofundamento-mathbbr-como-corpo-ordenado-completo" id="toc-aprofundamento-mathbbr-como-corpo-ordenado-completo" class="nav-link" data-scroll-target="#aprofundamento-mathbbr-como-corpo-ordenado-completo"><span class="header-section-number">1.7</span> 🧠 Aprofundamento: <span class="math inline">\(\mathbb{R}\)</span> como corpo ordenado completo</a></li>
+  <li><a href="#a-propriedade-de-completude-exemplo-central" id="toc-a-propriedade-de-completude-exemplo-central" class="nav-link" data-scroll-target="#a-propriedade-de-completude-exemplo-central"><span class="header-section-number">1.8</span> 🧠 A propriedade de completude: exemplo central</a></li>
+  <li><a href="#exercícios-de-revisão" id="toc-exercícios-de-revisão" class="nav-link" data-scroll-target="#exercícios-de-revisão"><span class="header-section-number">1.9</span> 🧠 Exercícios de Revisão</a></li>
+  <li><a href="#resoluções-comentadas" id="toc-resoluções-comentadas" class="nav-link" data-scroll-target="#resoluções-comentadas"><span class="header-section-number">1.10</span> 📝 Resoluções Comentadas</a></li>
   </ul></li>
-  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis"><span class="header-section-number">2</span> 🔗 Links Úteis</a></li>
   </ul>
 </nav>
     </div>
@@ -290,7 +289,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧠 🔢 Módulo 1.2 AP: Conjuntos Numéricos – Aprofundamento</h1>
+<h1 class="title">🧠 🔢 Módulo 1.2 AP: Conjuntos Numéricos — Aprofundamento</h1>
   <div class="quarto-categories">
     <div class="quarto-category">matemática</div>
     <div class="quarto-category">cálculo</div>
@@ -306,7 +305,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Neste módulo, exploramos os conjuntos numéricos fundamentais que serão utilizados ao longo do curso, com ênfase em suas principais propriedades e exemplos característicos, oferecendo uma visão mais aprofundada de cada um.
+    Exploramos conceitos estruturais (irracionalidade de √2, enumerabilidade, diagonal de Cantor, finitude decimal) e as propriedades que tornam ℝ um corpo ordenado completo.
   </div>
 </div>
 
@@ -335,15 +334,11 @@ window.Quarto = {
 </header>
 
 
-<hr>
-<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Voltar para o Sumário do Curso de Cálculo Diferencial e Integral 🎓 🧮</a></p>
-<p><a href="../../../../../posts/cursos/matematica/index.html">← Voltar para os Cursos de Matemática 🎓 🧮</a></p>
-<p><a href="../../../../../posts/matematica/index.html">← Voltar para a Seção de Matemática 🧮</a></p>
-<hr>
+<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso 🎓🧮</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Seção de Matemática</a></p>
 <p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></p>
 <hr>
 <section id="módulo-1.2-ap-conjuntos-numéricos-aprofundamento" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 🔢 Módulo 1.2 AP: Conjuntos Numéricos – Aprofundamento</h1>
+<h1 data-number="1"><span class="header-section-number">1</span> 🔢 Módulo 1.2 AP: Conjuntos Numéricos — Aprofundamento</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -355,415 +350,266 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Demonstrar que <span class="math inline">\(\sqrt{2}\)</span> não é um número racional utilizando o método de redução ao absurdo;</li>
-<li>Discutir o conceito de conjuntos enumeráveis e não enumeráveis;</li>
-<li>Apresentar o Método Diagonal de Cantor e suas aplicações aos conjuntos dos números racionais e reais. Utilizamos o Método Diagonal de Cantor para demonstrar a não enumerabilidade do conjunto dos números reais, em contraste com a enumerabilidade dos racionais;</li>
-<li>Estudar a finitude na representação decimal de números racionais;</li>
-<li>Explorar propriedades estruturais dos números reais, com ênfase na completude e na estrutura de corpo ordenado completo;</li>
-<li>Visualizar subconjuntos de <span class="math inline">\(\mathbb{Q}\)</span> com auxílio de código em Python;</li>
-<li>Consolidar os conhecimentos por meio de exercícios de revisão.</li>
+<li>Demonstrar que <span class="math inline">\(\sqrt{2}\)</span> é irracional (redução ao absurdo);</li>
+<li>Discutir <strong>enumeráveis</strong> vs.&nbsp;<strong>não enumeráveis</strong>;</li>
+<li>Apresentar o <strong>método diagonal de Cantor</strong> (reais não enumeráveis; racionais enumeráveis com filtragem por <span class="math inline">\(mdc\)</span>);</li>
+<li>Provar quando um racional tem <strong>decimal finita</strong> (denominador com fatores só 2 e/ou 5);</li>
+<li>Resumir por que <span class="math inline">\(\mathbb{R}\)</span> é um <strong>corpo ordenado completo</strong> (axioma do supremo);</li>
+<li>Visualizar <span class="math inline">\(\{x\in\mathbb{Q}\mid x^2&lt;2\}\)</span> via Python;</li>
+<li>Consolidar com exercícios comentados.</li>
 </ul>
 </div>
 </div>
 <section id="aprofundamento-demonstração-de-que-sqrt2-não-é-racional" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="aprofundamento-demonstração-de-que-sqrt2-não-é-racional"><span class="header-section-number">1.1</span> 🧠 Aprofundamento: Demonstração de que <span class="math inline">\(\sqrt{2}\)</span> não é racional</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="🧠 Aprofundamento: Demonstração de que $\sqrt{2}$ não é racional">
+<div class="callout callout-style-default callout-note callout-titled" title="🧠 Prova por redução ao absurdo: $\sqrt{2}\notin\mathbb{Q}$">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Aprofundamento: Demonstração de que <span class="math inline">\(\sqrt{2}\)</span> não é racional
+🧠 Prova por redução ao absurdo: <span class="math inline">\(\sqrt{2}\notin\mathbb{Q}\)</span>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><strong>Proposição:</strong> <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, ou seja, <span class="math inline">\(\sqrt{2}\)</span> é irracional.</p>
-<p><strong>Demonstração (por redução ao absurdo):</strong></p>
-<p>Suponha, por absurdo, que <span class="math inline">\(\sqrt{2}\)</span> seja um número racional. Então, existem inteiros <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span>, com <span class="math inline">\(b \ne 0\)</span>, tais que:</p>
-<p><span class="math display">\[
-\sqrt{2} = \frac{a}{b}
-\]</span></p>
-<p>Além disso, podemos supor que a fração <span class="math inline">\(\dfrac{a}{b}\)</span> está <strong>irredutível</strong>, ou seja, <span class="math inline">\(\mathrm{mdc}(a, b) = 1\)</span>.</p>
-<p>Elevando ambos os lados ao quadrado:</p>
-<p><span class="math display">\[
-2 = \frac{a^2}{b^2} \Rightarrow a^2 = 2b^2
-\]</span></p>
-<p>Portanto, <span class="math inline">\(a^2\)</span> é <strong>par</strong>, o que implica que <span class="math inline">\(a\)</span> também é par, pois se <span class="math inline">\(a\)</span> fosse ímpar, <span class="math inline">\(a^2\)</span> também seria ímpar. Assim, existe um inteiro <span class="math inline">\(k\)</span> tal que <span class="math inline">\(a = 2k\)</span>.</p>
-<p>Substituindo:</p>
-<p><span class="math display">\[
-(2k)^2 = 2b^2 \Rightarrow 4k^2 = 2b^2 \Rightarrow b^2 = 2k^2
-\]</span></p>
-<p>Logo, <span class="math inline">\(b^2\)</span> também é par, e portanto <span class="math inline">\(b\)</span> é par.</p>
-<p><strong>Contradição</strong>: <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são pares ⇒ <span class="math inline">\(\mathrm{mdc}(a, b) \geq 2\)</span>,<br>
-contrariando a hipótese de que a fração <span class="math inline">\(\dfrac{a}{b}\)</span> era irredutível.</p>
-<p>Logo, a suposição de que <span class="math inline">\(\sqrt{2}\)</span> é racional é falsa.<br>
-<span class="math display">\[
-\therefore \sqrt{2} \notin \mathbb{Q}
-\]</span></p>
+<p><strong>Proposição.</strong> <span class="math inline">\(\sqrt{2}\)</span> é irracional.</p>
+<p><strong>Prova.</strong> Suponha, por absurdo, <span class="math inline">\(\sqrt{2}=\frac{a}{b}\)</span> com <span class="math inline">\(a,b\in\mathbb{Z}\)</span>, <span class="math inline">\(b\neq 0\)</span>, e <span class="math inline">\(mdc(a,b)=1\)</span>. Elevando ao quadrado: <span class="math inline">\(2=\frac{a^2}{b^2}\Rightarrow a^2=2b^2\)</span>. Logo, <span class="math inline">\(a^2\)</span> é par, então <span class="math inline">\(a=2k\)</span>. Substituindo: <span class="math inline">\(4k^2=2b^2\Rightarrow b^2=2k^2\)</span>, portanto <span class="math inline">\(b\)</span> é par. Contradição, pois <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> seriam ambos pares <span class="math inline">\(\Rightarrow mdc(a,b)\ge2\)</span>. Conclui-se que <span class="math inline">\(\sqrt{2}\notin\mathbb{Q}\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="aprofundamento-comentário-sobre-o-método-de-demonstração-por-redução-ao-absurdo" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="aprofundamento-comentário-sobre-o-método-de-demonstração-por-redução-ao-absurdo"><span class="header-section-number">1.2</span> 🧠 Aprofundamento: Comentário sobre o método de demonstração por <em>redução ao absurdo</em></h2>
-<div class="callout callout-style-default callout-important callout-titled" title="🧠 Aprofundamento: Comentário sobre o método de demonstração por *redução ao absurdo*">
+<section id="aprofundamento-comentário-sobre-redução-ao-absurdo" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="aprofundamento-comentário-sobre-redução-ao-absurdo"><span class="header-section-number">1.2</span> 🧠 Aprofundamento: Comentário sobre redução ao absurdo</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="🧠 Sobre a técnica de prova">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Aprofundamento: Comentário sobre o método de demonstração por <em>redução ao absurdo</em>
+🧠 Sobre a técnica de prova
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>A demonstração da irracionalidade de <span class="math inline">\(\sqrt{2}\)</span> é um clássico exemplo de <strong>prova por redução ao absurdo</strong> (ou <strong>prova indireta</strong>).</p>
-<p>Nesse método, parte-se da <strong>suposição contrária</strong> ao que se deseja provar — no caso, supõe-se que <span class="math inline">\(\sqrt{2} \in \mathbb{Q}\)</span>, ou seja, que pode ser escrita como uma fração <span class="math inline">\(\dfrac{a}{b}\)</span> com <span class="math inline">\(a\)</span> e <span class="math inline">\(b \in \mathbb{Z}\)</span> e <span class="math inline">\(\mathrm{mdc}(a,b) = 1\)</span>.</p>
-<p>A partir dessa hipótese, deduz-se logicamente que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> seriam ambos pares — o que contradiz a condição inicial de que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> não têm fatores comuns.</p>
-<p>Essa contradição mostra que a suposição original não pode ser verdadeira.<br>
-Assim, conclui-se que <span class="math inline">\(\sqrt{2}\)</span> <strong>não</strong> é um número racional.</p>
-<p>Esse método é bastante utilizado em várias áreas da Matemática, principalmente quando não se conhece uma forma direta de prova.</p>
+<p>A técnica assume a <strong>negação</strong> do que se quer provar e extrai uma <strong>contradição</strong> lógica. No caso de <span class="math inline">\(\sqrt{2}\)</span>, a hipótese de racionalidade força <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> a serem <strong>ambos pares</strong>, contrariando a irredutibilidade. Logo, a hipótese é falsa.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis"><span class="header-section-number">1.3</span> 🧠 Aprofundamento: Conjuntos Enumeráveis e Não Enumeráveis</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="🧠 Aprofundamento: Conjuntos Enumeráveis e Não Enumeráveis">
+<h2 data-number="1.3" class="anchored" data-anchor-id="aprofundamento-conjuntos-enumeráveis-e-não-enumeráveis"><span class="header-section-number">1.3</span> 🧠 Aprofundamento: Conjuntos enumeráveis e não enumeráveis</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="🧠 Enumerável vs. não enumerável">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Aprofundamento: Conjuntos Enumeráveis e Não Enumeráveis
+🧠 Enumerável vs.&nbsp;não enumerável
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Conjunto Enumerável</strong> (ou <strong>contável</strong>): é um conjunto cujos elementos podem ser colocados em correspondência biunívoca com os números naturais. Ou seja, podemos listar seus elementos numa sequência (mesmo que infinita).<br>
-Exemplos:
-<ul>
-<li>Conjunto dos números naturais <span class="math inline">\(\mathbb{N}\)</span>.</li>
-<li>Conjunto dos inteiros <span class="math inline">\(\mathbb{Z}\)</span>.</li>
-<li>Conjunto dos racionais <span class="math inline">\(\mathbb{Q}\)</span>.</li>
-</ul></li>
-<li><strong>Conjunto Não Enumerável</strong> (ou <strong>incontável</strong>): é um conjunto tão “grande” que <strong>não pode ser listado</strong> em sequência, mesmo infinita.<br>
-O <strong>exemplo</strong> mais famoso é:
-<ul>
-<li>O conjunto dos números reais <span class="math inline">\(\mathbb{R}\)</span> <span class="math inline">\((\text{e, portanto, dos irracionais } \mathbb{R} \setminus \mathbb{Q})\)</span>.</li>
-</ul></li>
+<li><strong>Enumerável</strong> (contável): admite bijeção com <span class="math inline">\(\mathbb{N}\)</span> → pode-se <strong>listar</strong> os elementos (talvez com ordem não natural). Exemplos: <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>.</li>
+<li><strong>Não enumerável</strong> (incontável): <strong>não</strong> admite tal listagem; tem “mais” elementos que <span class="math inline">\(\mathbb{N}\)</span>. Ex.: <span class="math inline">\(\mathbb{R}\)</span> (e, portanto, <span class="math inline">\(\mathbb{R}\setminus\mathbb{Q}\)</span>).</li>
 </ul>
-<p><strong>Resumo:</strong><br>
-Enumerável → Pode listar (como uma fila infinita).<br>
-Não enumerável → Não pode listar; tem “mais” elementos que os naturais.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="aprofundamento-o-método-diagonal-de-cantor-e-a-não-enumerabilidade-dos-reais" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="aprofundamento-o-método-diagonal-de-cantor-e-a-não-enumerabilidade-dos-reais"><span class="header-section-number">1.4</span> 🧠 Aprofundamento: O Método Diagonal de Cantor e a Não Enumerabilidade dos Reais</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="🧠 Aprofundamento: O Método Diagonal de Cantor e a Não Enumerabilidade dos Reais">
+<section id="aprofundamento-o-método-diagonal-e-os-reais-não-enumeráveis" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="aprofundamento-o-método-diagonal-e-os-reais-não-enumeráveis"><span class="header-section-number">1.4</span> 🧠 Aprofundamento: O método diagonal e os reais não enumeráveis</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="🧠 Método diagonal de Cantor: $[0,1]$ não é enumerável">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Aprofundamento: O Método Diagonal de Cantor e a Não Enumerabilidade dos Reais
+🧠 Método diagonal de Cantor: <span class="math inline">\([0,1]\)</span> não é enumerável
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>O <strong>método diagonal de Cantor</strong> é uma prova elegante e poderosa criada por <strong>Georg Cantor</strong> para demonstrar que <strong>os números reais são mais numerosos do que os números naturais</strong>, ou seja, que o conjunto dos reais não é enumerável.</p>
-<p>🧩 <strong>Ideia principal</strong></p>
-<p>Cantor mostrou que <strong>nenhuma lista que tente enumerar todos os números reais entre 0 e 1 pode ser completa</strong>. Ele faz isso construindo um número novo, que <strong>difere de todos os números da lista</strong>, alterando <strong>diagonalmente</strong> os dígitos da representação decimal.</p>
-<p>🔍 <strong>Passo a passo simplificado:</strong></p>
-<ol type="1">
-<li><p>Suponha que seja possível listar todos os números reais entre 0 e 1 como:</p>
-<p><span class="math display">\[\begin{equation}
-   \begin{aligned}
-      &amp; x_1=0 . a_{11} a_{12} a_{13} a_{14} \\
-      &amp; x_2=0 . a_{21} a_{22} a_{23} a_{24} \\
-      &amp; x_3=0 . a_{31} a_{32} a_{33} a_{34} \\
-      &amp; \cdots
-   \end{aligned}
-\end{equation}\]</span></p></li>
-<li><p>Cantor constrói um novo número real, alterando <strong>os dígitos da diagonal</strong>:</p>
-<ul>
-<li>Escolhe o 1º dígito do 1º número, o 2º dígito do 2º número, o 3º dígito do 3º número, etc.<br>
-</li>
-<li>Em cada posição, troca o dígito por um diferente (por exemplo, se for 5, troca por 6).</li>
-</ul></li>
-<li><p>O novo número, assim construído, <strong>difere de cada número da lista em ao menos um dígito</strong> — o da diagonal.</p></li>
-</ol>
-<p>✅ <strong>Conclusão:</strong></p>
-<p>Esse número <strong>não pode estar na lista original</strong>, o que leva à contradição: portanto, <strong>os reais não são enumeráveis</strong>.</p>
+<p>Suponha que se liste todos os reais em <span class="math inline">\([0,1]\)</span>: <span class="math inline">\(x_1,x_2,\dots\)</span>, com expansões decimais <span class="math inline">\(x_i=0.a_{i1}a_{i2}\ldots\)</span>. Constrói-se <span class="math inline">\(y=0.b_1b_2\ldots\)</span> escolhendo <span class="math inline">\(b_n\neq a_{nn}\)</span>. Assim, <span class="math inline">\(y\)</span> difere de <strong>todo</strong> <span class="math inline">\(x_n\)</span> no dígito <span class="math inline">\(n\)</span>, logo não está na lista. Contradição. Portanto, <span class="math inline">\(\mathbb{R}\)</span> (já em <span class="math inline">\([0,1]\)</span>) é <strong>não enumerável</strong>.</p>
 <div style="text-align: center;">
-<img src="../images/Diagonal_argument_01_svg.svg" alt="Argumento diagonal de Cantor" width="60%">
+<img src="../images/Diagonal_argument_01_svg.svg" alt="Método Diagonal de Cantor (reais não enumeráveis)" width="60%">
 <figcaption>
-<strong>Método Diagonal de Cantor</strong>
+<strong>Método diagonal de Cantor — reais</strong>
 </figcaption>
 <p style="font-size: 0.8em; margin-top: 0.5em;">
-Crédito: Por Jochen Burghardt — Obra do próprio, <a href="https://commons.wikimedia.org/w/index.php?curid=30402203" target="_blank">CC BY-SA 3.0</a>
+Crédito: Jochen Burghardt — CC BY-SA 3.0.
 </p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="aprofundamento-o-método-diagonal-de-cantor-e-a-enumerabilidade-dos-racionais" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="aprofundamento-o-método-diagonal-de-cantor-e-a-enumerabilidade-dos-racionais"><span class="header-section-number">1.5</span> 🧠 Aprofundamento: O Método Diagonal de Cantor e a Enumerabilidade dos Racionais</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="O Método Diagonal de Cantor e a Enumerabilidade dos Racionais">
+<section id="aprofundamento-enumerabilidade-de-mathbbq" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="aprofundamento-enumerabilidade-de-mathbbq"><span class="header-section-number">1.5</span> 🧠 Aprofundamento: Enumerabilidade de <span class="math inline">\(\mathbb{Q}\)</span></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Enumerar racionais sem duplicatas (diagonais + mdc)">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-O Método Diagonal de Cantor e a Enumerabilidade dos Racionais
+Enumerar racionais sem duplicatas (diagonais + mdc)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Uma descoberta surpreendente sobre os números racionais foi feita no final do século XIX e impulsionou a criação da <strong>Teoria dos Conjuntos</strong> por <strong>Georg Cantor</strong>, a partir de 1872. Embora os números racionais sejam densos e não possam ser ordenados de forma simples por magnitude, eles podem ser dispostos como uma sequência infinita <span class="math inline">\(r_1, r_2, \ldots, r_n, \ldots\)</span> na qual todo número racional aparece uma vez.</p>
-<p>Dessa forma, os números racionais podem ser enumerados ou contados como primeiro, segundo, …, enésimo número racional, mesmo que essa ordem não corresponda à ordem de grandeza dos números. Esse resultado — que também vale para os racionais contidos em qualquer intervalo — é expressado assim: <strong>os números racionais são enumeráveis</strong>, ou formam um <strong>conjunto enumerável</strong>.</p>
-<p>Para provar esse resultado, basta fornecer uma regra para organizar os números racionais positivos em uma sequência. Todo número racional positivo pode ser escrito como <span class="math inline">\(p/q\)</span>, onde <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span> são naturais. Para cada inteiro positivo <span class="math inline">\(k\)</span>, há exatamente <span class="math inline">\(k-1\)</span> frações da forma <span class="math inline">\(p/q\)</span> em que <span class="math inline">\(p + q = k\)</span>. Estas são organizadas em ordem crescente de <span class="math inline">\(p\)</span>.</p>
-<p>Escrevendo essas listas para <span class="math inline">\(k = 2, 3, 4, \ldots\)</span>, obtemos (ver Figura abaixo) uma sequência que contém todos os racionais positivos. Omitindo as frações cujos numeradores e denominadores têm um fator comum maior que 1 — pois representam o mesmo número racional que uma fração anterior — obtemos a sequência:</p>
-<p><span class="math display">\[
-\frac{1}{1}, \frac{1}{2}, \frac{2}{1}, \frac{1}{3}, \frac{3}{1}, \frac{1}{4}, \frac{2}{3}, \frac{3}{2}, \frac{4}{1}, \frac{1}{5}, \frac{5}{1}, \frac{1}{6}, \frac{2}{5}, \ldots
-\]</span></p>
-<p>na qual todo número racional positivo aparece exatamente uma vez. Uma sequência similar contendo todos os números racionais (positivos e negativos) ou apenas os contidos em um intervalo particular pode ser facilmente construída.</p>
+<ul>
+<li>Escreva todos os pares <span class="math inline">\((p,q)\in\mathbb{N}\times\mathbb{N}\)</span> numa <strong>tabela</strong>;</li>
+<li>Percorra por <strong>diagonais</strong> de soma <span class="math inline">\(p+q=k\)</span> (para <span class="math inline">\(k=2,3,4,\ldots\)</span>);</li>
+<li>Liste <span class="math inline">\(\tfrac{p}{q}\)</span> <strong>somente</strong> quando <span class="math inline">\(\gcd(p,q)=1\)</span> (irredutível) → evita repetições.</li>
+</ul>
+<p>Sequência inicial (positivos):<br>
+<span class="math display">\[
+\frac{1}{1},\ \frac{1}{2},\ \frac{2}{1},\ \frac{1}{3},\ \frac{3}{1},\ \frac{1}{4},\ \frac{2}{3},\ \frac{3}{2},\ \frac{4}{1},\ \ldots
+\]</span> Para <strong>negativos</strong> e <span class="math inline">\(0\)</span>, intercale sinais e inclua <span class="math inline">\(0=\frac{0}{1}\)</span>.</p>
+<blockquote class="blockquote">
+<p>Ideia clássica (ver, por exemplo, Courant &amp; John).</p>
+</blockquote>
+</div>
+</div>
+</div>
 <div style="text-align: center;">
-<img src="../images/Diagonal_argument.svg" alt="Método Diagonal de CantorMétodo Diagonal de Cantor" width="60%">
+<img src="../images/Diagonal_argument.svg" alt="Método diagonal para enumerar racionais" width="60%">
 <figcaption>
-<strong>🧠 Método Diagonal de Cantor: Enumerabilidade dos Racionais Positivos</strong>
+<strong>Método diagonal — racionais</strong>
 </figcaption>
 <p style="font-size: 0.8em; margin-top: 0.5em;">
-Crédito: Por <a href="//commons.wikimedia.org/wiki/User:Cronholm144" title="User:Cronholm144">Cronholm144</a> - <span class="int-own-work" lang="pt">Obra do próprio</span>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=2203732">Hiperligação</a>
+Crédito: Cronholm144 — CC BY-SA 3.0.
 </p>
 </div>
-<blockquote class="blockquote">
-<p>A demonstração do teorema segue a apresentação clássica encontrada em Courant e John (1996).</p>
-</blockquote>
-</div>
-</div>
-</div>
 </section>
-<section id="aprofundamento-demonstração-da-finitude-da-representação-decimal" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="aprofundamento-demonstração-da-finitude-da-representação-decimal"><span class="header-section-number">1.6</span> 🧠 Aprofundamento: Demonstração da Finitude da Representação Decimal</h2>
-<blockquote class="blockquote">
-<p>🔍 <strong>Teorema:</strong> A fração <span class="math inline">\(\dfrac{a}{b}\)</span> tem representação decimal finita <strong>se e somente se</strong> o denominador <span class="math inline">\(b\)</span> (na forma irredutível) tem como fatores <strong>apenas 2 e 5.</strong></p>
-</blockquote>
-<div class="callout callout-style-default callout-important callout-titled" title="🧠 Aprofundamento: Demonstração da Finitude da Representação Decimal">
+<section id="aprofundamento-finitude-da-representação-decimal" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="aprofundamento-finitude-da-representação-decimal"><span class="header-section-number">1.6</span> 🧠 Aprofundamento: Finitude da representação decimal</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="🧠 Teorema: decimal finita ⇔ denominador (irredutível) com fatores só 2 e/ou 5">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Aprofundamento: Demonstração da Finitude da Representação Decimal
+🧠 Teorema: decimal finita ⇔ denominador (irredutível) com fatores só 2 e/ou 5
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>🔍 <strong>Teorema:</strong> A fração <span class="math inline">\(\dfrac{a}{b}\)</span> tem representação decimal finita <strong>se e somente se</strong> o denominador <span class="math inline">\(b\)</span> (na forma irredutível) tem como fatores <strong>apenas 2 e 5.</strong></p>
-<hr>
-<p>✍️ <strong>Demonstração:</strong></p>
-<p>Seja uma fração racional irredutível <span class="math inline">\(\dfrac{a}{b}\)</span>, com <span class="math inline">\(a \in \mathbb{Z}\)</span> e <span class="math inline">\(b \in \mathbb{N}\)</span>.</p>
-<p>A representação decimal de <span class="math inline">\(\dfrac{a}{b}\)</span> será <strong>finita</strong> se e somente se for possível escrevê-la como uma fração com denominador da forma <span class="math inline">\(10^n\)</span>.</p>
-<p>Sabemos que <span class="math inline">\(10^n = 2^n \cdot 5^n\)</span>, ou seja, os únicos fatores primos de <span class="math inline">\(10^n\)</span> são <strong>2</strong> e <strong>5</strong>.</p>
-<p>Logo, se a fração <span class="math inline">\(\dfrac{a}{b}\)</span> puder ser reescrita com denominador <span class="math inline">\(10^n\)</span>, então o denominador original <span class="math inline">\(b\)</span> (já simplificado com <span class="math inline">\(a\)</span>) <strong>só pode conter os fatores primos 2 e 5</strong>.</p>
-<p>Se <span class="math inline">\(b\)</span> tiver algum outro fator primo (como 3, 7, 11, etc.), então <strong>não será possível transformá-lo em uma potência de 10</strong>, e sua representação decimal será <strong>infinita periódica</strong> (isto é, uma <strong>dízima periódica</strong>).</p>
-<hr>
-<p>🔢 <strong>Exemplos</strong>:</p>
-<ul>
-<li><p><span class="math inline">\(\dfrac{3}{8} = 0{,}375\)</span> ✅<br>
-(Denominador <span class="math inline">\(8 = 2^3\)</span>, apenas fator 2 → decimal finita)</p></li>
-<li><p><span class="math inline">\(\dfrac{7}{20} = 0{,}35\)</span> ✅<br>
-(Denominador <span class="math inline">\(20 = 2^2 \cdot 5\)</span>, apenas fatores 2 e 5 → decimal finita)</p></li>
-<li><p><span class="math inline">\(\dfrac{4}{15} = 0{,}\overline{26}\)</span> ❌<br>
-(Denominador <span class="math inline">\(15 = 3 \cdot 5\)</span>, contém fator 3 → dízima periódica)</p></li>
-<li><p><span class="math inline">\(\dfrac{5}{6} = 0{,}\overline{83}\)</span> ❌<br>
-(Denominador <span class="math inline">\(6 = 2 \cdot 3\)</span>, contém fator 3 → dízima periódica)</p></li>
-</ul>
-<p>✅ <strong>Conclusão:</strong> A fração <span class="math inline">\(\dfrac{a}{b}\)</span> tem representação decimal finita <strong>se e somente se</strong> o denominador <span class="math inline">\(b\)</span> (na forma irredutível) tem como fatores <strong>apenas 2 e 5</strong>.</p>
+<p>Se <span class="math inline">\(\tfrac{a}{b}\)</span> está <strong>irredutível</strong>, então sua decimal é <strong>finita</strong> <strong>se e somente se</strong> <span class="math inline">\(b\)</span> tem apenas fatores primos <span class="math inline">\(2\)</span> e <span class="math inline">\(5\)</span>. <strong>Ideia da prova:</strong> escrever <span class="math inline">\(\tfrac{a}{b}\)</span> com denominador <span class="math inline">\(10^n=2^n\cdot5^n\)</span>; isso só é possível se <span class="math inline">\(b\)</span> (já simplificado) não contiver primos além de <span class="math inline">\(2\)</span> e <span class="math inline">\(5\)</span>.</p>
+<p><strong>Exemplos:</strong><br>
+<span class="math inline">\(\tfrac{3}{8}=0{,}375\)</span> (ok: <span class="math inline">\(8=2^3\)</span>) · <span class="math inline">\(\tfrac{7}{20}=0{,}35\)</span> (ok: <span class="math inline">\(20=2^2\cdot5\)</span>) ·<br>
+<span class="math inline">\(\tfrac{4}{15}=0{,}\overline{26}\)</span> (tem <span class="math inline">\(3\)</span>) · <span class="math inline">\(\tfrac{5}{6}=0{,}\overline{83}\)</span> (tem <span class="math inline">\(3\)</span>).</p>
 </div>
 </div>
 </div>
 </section>
-<section id="aprofundamento-propriedades-dos-números-reais-e-a-estrutura-de-corpo-ordenado-completo" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="aprofundamento-propriedades-dos-números-reais-e-a-estrutura-de-corpo-ordenado-completo"><span class="header-section-number">1.7</span> 🧠 Aprofundamento: Propriedades dos Números Reais e a Estrutura de Corpo Ordenado Completo</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="🧠 Aprofundamento: Propriedades dos Números Reais e a Estrutura de Corpo Ordenado Completo">
+<section id="aprofundamento-mathbbr-como-corpo-ordenado-completo" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="aprofundamento-mathbbr-como-corpo-ordenado-completo"><span class="header-section-number">1.7</span> 🧠 Aprofundamento: <span class="math inline">\(\mathbb{R}\)</span> como corpo ordenado completo</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="🧠 Estrutura de $\mathbb{R}$">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Aprofundamento: Propriedades dos Números Reais e a Estrutura de Corpo Ordenado Completo
+🧠 Estrutura de <span class="math inline">\(\mathbb{R}\)</span>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Para compreender melhor as propriedades dos números reais, é útil adotar uma perspectiva mais abstrata e estrutural. A seguir, apresentamos um resumo das propriedades que caracterizam <span class="math inline">\(\mathbb{R}\)</span> como um <strong>corpo ordenado completo</strong>.</p>
-<hr>
-<p>🔷 <strong>1. Corpo <span class="math inline">\((\mathbb{R}, +, \cdot)\)</span></strong></p>
-<p>Um <strong>corpo</strong> (ou <strong>campo</strong>) é um conjunto não vazio munido de duas operações, adição (<span class="math inline">\(+\)</span>) e multiplicação (<span class="math inline">\(\cdot\)</span>), satisfazendo as seguintes propriedades:</p>
-<p><strong>Aditivas:</strong></p>
-<ul>
-<li><em>Fechamento:</em> Se <span class="math inline">\(a, b \in \mathbb{R}\)</span>, então <span class="math inline">\(a + b \in \mathbb{R}\)</span>.</li>
-<li><em>Associatividade:</em> <span class="math inline">\((a + b) + c = a + (b + c)\)</span>.</li>
-<li><em>Elemento neutro:</em> Existe <span class="math inline">\(0 \in \mathbb{R}\)</span> tal que <span class="math inline">\(a + 0 = a\)</span>.</li>
-<li><em>Elemento simétrico:</em> Para cada <span class="math inline">\(a \in \mathbb{R}\)</span>, existe <span class="math inline">\(-a\)</span> tal que <span class="math inline">\(a + (-a) = 0\)</span>.</li>
-<li><em>Comutatividade:</em> <span class="math inline">\(a + b = b + a\)</span>.</li>
-</ul>
-<p><strong>Multiplicativas:</strong></p>
-<ul>
-<li><em>Fechamento:</em> Se <span class="math inline">\(a, b \in \mathbb{R}\)</span>, então <span class="math inline">\(a \cdot b \in \mathbb{R}\)</span>.</li>
-<li><em>Associatividade:</em> <span class="math inline">\((a \cdot b) \cdot c = a \cdot (b \cdot c)\)</span>.</li>
-<li><em>Elemento neutro:</em> Existe <span class="math inline">\(1 \in \mathbb{R}\)</span>, com <span class="math inline">\(1 \ne 0\)</span>, tal que <span class="math inline">\(a \cdot 1 = a\)</span>.</li>
-<li><em>Inverso multiplicativo:</em> Se <span class="math inline">\(a \ne 0\)</span>, existe <span class="math inline">\(a^{-1} \in \mathbb{R}\)</span> tal que <span class="math inline">\(a \cdot a^{-1} = 1\)</span>.</li>
-<li><em>Comutatividade:</em> <span class="math inline">\(a \cdot b = b \cdot a\)</span>.</li>
-</ul>
-<p><strong>Distributividade:</strong></p>
-<ul>
-<li><span class="math inline">\(a \cdot (b + c) = a \cdot b + a \cdot c\)</span>.</li>
-</ul>
-<hr>
-<p>🔶 <strong>2. Corpo Ordenado</strong></p>
-<p>Além das propriedades anteriores, o conjunto dos reais possui uma <strong>relação de ordem total</strong> <span class="math inline">\((\leq)\)</span> compatível com as operações, ou seja:</p>
-<ul>
-<li><p><strong>Tricotomia</strong>: Para todo <span class="math inline">\(a \in \mathbb{R}\)</span>, vale exatamente uma das alternativas: <span class="math display">\[a &gt; 0 \text{, } a = 0 \text{ ou } a &lt; 0\]</span>.</p></li>
-<li><p><strong>Fechamento da ordem</strong>:</p>
-<ul>
-<li><p>Se <span class="math inline">\(a \leq b\)</span>, então <span class="math inline">\(a + c \leq b + c\)</span>.</p></li>
-<li><p>Se <span class="math inline">\(0 \leq a\)</span> e <span class="math inline">\(0 \leq b\)</span>, então <span class="math inline">\(0 \leq a \cdot b\)</span>.</p></li>
-</ul></li>
-</ul>
-<p>Essa estrutura torna <span class="math inline">\(\mathbb{R}\)</span> um <strong>corpo ordenado</strong>.</p>
-<hr>
-<p>🟩 <strong>3. Corpo Ordenado Completo</strong></p>
-<p>A <strong>completude</strong> é a propriedade que distingue os números reais dos racionais:</p>
-<ul>
-<li><strong>Propriedade de completude</strong>: Todo subconjunto não vazio de <span class="math inline">\(\mathbb{R}\)</span> que é limitado superiormente possui um <strong>supremo</strong> (menor dos majorantes) em <span class="math inline">\(\mathbb{R}\)</span>.</li>
-</ul>
-<p>Essa propriedade não é satisfeita pelos racionais <span class="math inline">\((\mathbb{Q})\)</span>, o que justifica a construção dos reais como extensão de <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<hr>
-<p>📌 <strong>Resumo</strong>: O conjunto dos números reais <span class="math inline">\(\mathbb{R}\)</span> é um <strong>corpo ordenado completo</strong>, estrutura fundamental para a Análise Matemática e outras áreas da Matemática pura e aplicada.</p>
+<p><strong>Corpo <span class="math inline">\((\mathbb{R},+,\cdot)\)</span></strong>: leis aditivas e multiplicativas usuais, distributividade e inversos (exceto para <span class="math inline">\(0\)</span> na multiplicação).<br>
+<strong>Ordem total <span class="math inline">\(\le\)</span></strong> compatível: tricotomia; <span class="math inline">\(a\le b\Rightarrow a+c\le b+c\)</span>; <span class="math inline">\(0\le a,0\le b\Rightarrow 0\le ab\)</span>.<br>
+<strong>Completude (axioma do supremo)</strong>: todo subconjunto <strong>não vazio</strong> e <strong>limitado superiormente</strong> tem <strong>supremo</strong> em <span class="math inline">\(\mathbb{R}\)</span>.<br>
+Isso <strong>falha</strong> em <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="aprofundamento-a-propriedade-de-completude-dos-números-reais" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="aprofundamento-a-propriedade-de-completude-dos-números-reais"><span class="header-section-number">1.8</span> 🧠 Aprofundamento: A Propriedade de Completude dos Números Reais</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="🧠 Aprofundamento: A Propriedade de Completude dos Números Reais">
+<section id="a-propriedade-de-completude-exemplo-central" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="a-propriedade-de-completude-exemplo-central"><span class="header-section-number">1.8</span> 🧠 A propriedade de completude: exemplo central</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="🧠 Exemplo: $\sup$ {$x\in\mathbb{Q}\mid x^2<2$}">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Aprofundamento: A Propriedade de Completude dos Números Reais
+🧠 Exemplo: <span class="math inline">\(\sup\)</span> {<span class="math inline">\(x\in\mathbb{Q}\mid x^2&lt;2\)</span>}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>No conjunto dos números reais <span class="math inline">\(\mathbb{R}\)</span>, todo subconjunto <strong>não vazio</strong> e <strong>limitado superiormente</strong> possui um <strong>supremo</strong> (também chamado de <strong>mínimo limite superior</strong>). Essa é a <strong>propriedade de completude</strong> (ou <strong>axioma do supremo</strong>) dos reais — algo que <strong>não ocorre</strong> nos racionais <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<p>Vamos entender melhor alguns termos importantes:</p>
-<ul>
-<li><p><strong>Limitado superiormente</strong>: um conjunto <span class="math inline">\(A \subset \mathbb{R}\)</span> é <strong>limitado superiormente</strong> se existe um número real <span class="math inline">\(M\)</span> tal que <strong>todo elemento</strong> <span class="math inline">\(a \in A\)</span> satisfaz <span class="math inline">\(a \leq M\)</span>.</p></li>
-<li><p><strong>Limitado inferiormente</strong>: um conjunto <span class="math inline">\(A \subset \mathbb{R}\)</span> é <strong>limitado inferiormente</strong> se existe <span class="math inline">\(m \in \mathbb{R}\)</span> tal que <span class="math inline">\(a \geq m\)</span> para todo <span class="math inline">\(a \in A\)</span>.</p></li>
-<li><p><strong>Majorante</strong>: é qualquer número real <span class="math inline">\(M\)</span> que seja maior ou igual a <strong>todos</strong> os elementos do conjunto. Ex: <span class="math inline">\(10\)</span> é majorante de <span class="math inline">\(A = \{1, 2, 5\}\)</span>, mas também é majorante de <span class="math inline">\(A = \{1, 2, 5, 9.9\}\)</span>.</p></li>
-<li><p><strong>Minorante</strong>: é um número real <span class="math inline">\(m\)</span> tal que <span class="math inline">\(m \leq a\)</span>, para todo <span class="math inline">\(a \in A\)</span>.</p></li>
-<li><p><strong>Supremo (limite superior mínimo)</strong>: é o <strong>menor</strong> dos majorantes de um conjunto. Mesmo que ele <strong>não pertença ao conjunto</strong>, ele representa a menor “barreira superior”.</p></li>
-<li><p><strong>Ínfimo (limite inferior máximo)</strong>: é o <strong>maior</strong> dos minorantes. Análogo ao supremo, mas inferior.</p></li>
-</ul>
-<hr>
-<p><strong>Exemplo:</strong> Considere o conjunto<br>
-<span class="math display">\[
-A = \{x \in \mathbb{Q} \mid x^2 &lt; 2\}.
-\]</span> Esse conjunto é formado por todos os números racionais cujo quadrado é estritamente menor que 2.</p>
-<p>Note que <span class="math inline">\(A\)</span> é <strong>limitado superiormente em <span class="math inline">\(\mathbb{Q}\)</span></strong>, pois há racionais maiores do que todos os seus elementos. Por exemplo, <span class="math inline">\(x = 2\)</span> é um majorante racional, já que <span class="math inline">\(2^2 = 4 &gt; 2\)</span>, e todos os elementos de <span class="math inline">\(A\)</span> são menores que 2.</p>
-<p>No entanto, <strong>não existe um supremo racional para esse conjunto</strong>, ou seja, não há um menor dos majorantes de <span class="math inline">\(A\)</span> que pertença a <span class="math inline">\(\mathbb{Q}\)</span>. O número que melhor cumpriria esse papel seria <span class="math inline">\(\sqrt{2}\)</span>, que é irracional <span class="math inline">\((\sqrt{2} \notin \mathbb{Q})\)</span>.</p>
-<p>Assim, qualquer racional <strong>menor que <span class="math inline">\(\sqrt{2}\)</span> não é majorante</strong> de <span class="math inline">\(A\)</span>, e qualquer racional <strong>maior que <span class="math inline">\(\sqrt{2}\)</span></strong> não pertence ao conjunto, o que impede que o supremo exista dentro dos racionais.</p>
-<p>Já no conjunto dos reais <span class="math inline">\(\mathbb{R}\)</span>, o número <span class="math inline">\(\sqrt{2}\)</span> existe e pertence ao corpo dos reais. Assim, em <span class="math inline">\(\mathbb{R}\)</span>, o <strong>supremo de <span class="math inline">\(A\)</span></strong> é:<br>
-<span class="math display">\[
-\sup A = \sqrt{2}.
-\]</span></p>
+<p>Considere <span class="math inline">\(A=\{x\in\mathbb{Q}\mid x^2&lt;2\}\)</span>. <span class="math inline">\(A\)</span> é limitado superiormente (por exemplo, por <span class="math inline">\(2\)</span>, ou mesmo por <span class="math inline">\(1{,}5\)</span>, <span class="math inline">\(1{,}42\)</span>, <strong>9,9</strong>, etc.). Em <span class="math inline">\(\mathbb{Q}\)</span>, <strong>não</strong> existe o supremo: o candidato natural seria <span class="math inline">\(\sqrt{2}\)</span>, mas <span class="math inline">\(\sqrt{2}\notin\mathbb{Q}\)</span>. Em <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(\sup A=\sqrt{2}\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/supremo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="sup de A"></p>
+<p><img src="../images/supremo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Axioma do supremo: existência do menor majorante em ℝ"></p>
 </figure>
 </div>
-<p>Este exemplo mostra que <strong><span class="math inline">\(\mathbb{Q}\)</span> não é um corpo completo</strong> — existem subconjuntos de <span class="math inline">\(\mathbb{Q}\)</span> que são limitados superiormente, mas <strong>não possuem supremo em <span class="math inline">\(\mathbb{Q}\)</span></strong>.</p>
-<p>Por outro lado, <span class="math inline">\(\mathbb{R}\)</span> é <strong>um corpo completo</strong>, pois todo subconjunto limitado superiormente possui um supremo em <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<hr>
-<p>💡 <strong>Resumo importante</strong>:<br>
-A propriedade de completude garante que os reais “preenchem todos os buracos” da reta numérica. É isso que faz <span class="math inline">\(\mathbb{R}\)</span> ser um <strong>corpo ordenado completo</strong>.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="aprofundamento-código-python-visualizando-o-conjunto-x-in-mathbbq-mid-x2-2" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="aprofundamento-código-python-visualizando-o-conjunto-x-in-mathbbq-mid-x2-2"><span class="header-section-number">1.9</span> 👨‍💻 🐍 Aprofundamento: Código Python – Visualizando o Conjunto <span class="math inline">\(\{ x \in \mathbb{Q} \mid x^2 &lt; 2 \}\)</span></h2>
-<div class="callout callout-style-default callout-tip callout-titled" title="👨‍💻 🐍 Aprofundamento: Código Python -- Visualizando o Conjunto $\{ x \in \mathbb{Q} \mid x^2 < 2 \}$">
+<div class="callout callout-style-default callout-note callout-titled" title="👨‍💻 🐍 Python — Visualização de {$x\in\mathbb{Q}\mid x^2<2$}">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-👨‍💻 🐍 Aprofundamento: Código Python – Visualizando o Conjunto <span class="math inline">\(\{ x \in \mathbb{Q} \mid x^2 &lt; 2 \}\)</span>
+👨‍💻 🐍 Python — Visualização de {<span class="math inline">\(x\in\mathbb{Q}\mid x^2&lt;2\)</span>}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Use o código abaixo no Jupyter para visualizar o conjunto de racionais cujo quadrado é menor que 2. A curva <span class="math inline">\(y = x^2\)</span>, os racionais <span class="math inline">\(1\)</span>, <span class="math inline">\(1.2\)</span>, <span class="math inline">\(1.3\)</span>, <span class="math inline">\(1.4\)</span> e o supremo <span class="math inline">\(\sqrt{2}\)</span> também são exibidos.</p>
-<div id="e5d90ade" class="cell" data-execution_count="1">
+<div id="cell-completude" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Valores de x em um domínio visual interessante</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">400</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Conjunto dos racionais x com x^2 &lt; 2</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Escolhendo alguns pontos racionais específicos</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>rational_x <span class="op">=</span> np.array([<span class="fl">1.0</span>, <span class="fl">1.2</span>, <span class="fl">1.3</span>, <span class="fl">1.4</span>])</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>rational_y <span class="op">=</span> rational_x<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Valor de sqrt(2)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Domínio e curva</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">400</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Alguns racionais com x^2 &lt; 2</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>rational_x <span class="op">=</span> np.array([<span class="fl">1.0</span>, <span class="fl">1.2</span>, <span class="fl">1.3</span>, <span class="fl">1.4</span>])</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>rational_y <span class="op">=</span> rational_x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>sqrt2 <span class="op">=</span> np.sqrt(<span class="dv">2</span>)</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando a imagem</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y = x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">2</span>, color<span class="op">=</span><span class="st">'gray'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y = 2</span><span class="dv">$</span><span class="vs">'</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.scatter(rational_x, rational_y, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$\m</span><span class="vs">athbb{Q}</span><span class="dv">$</span><span class="vs"> com </span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2 &lt; 2</span><span class="dv">$</span><span class="vs">'</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Marcação do supremo</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.axvline(sqrt2, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$\s</span><span class="vs">up = </span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{2}</span><span class="dv">$</span><span class="vs">'</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.text(sqrt2 <span class="op">+</span> <span class="fl">0.02</span>, <span class="dv">1</span>, <span class="vs">r'</span><span class="dv">$\s</span><span class="vs">qrt</span><span class="op">{2}</span><span class="dv">$</span><span class="vs"> </span><span class="kw">(</span><span class="vs">irracional</span><span class="kw">)</span><span class="vs">'</span>, color<span class="op">=</span><span class="st">'green'</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajustes visuais</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="vs">r'Exemplo: </span><span class="dv">$</span><span class="vs">x </span><span class="er">\</span><span class="vs">in </span><span class="dv">\m</span><span class="vs">athbb{Q} </span><span class="dv">\m</span><span class="vs">id x</span><span class="dv">^</span><span class="vs">2 &lt; 2</span><span class="dv">$</span><span class="vs">'</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar imagem</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y = x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">2</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y = 2</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.scatter(rational_x, rational_y, label<span class="op">=</span><span class="vs">r'Alguns racionais com </span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2 &lt; 2</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Marca do supremo em ℝ</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.axvline(sqrt2, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$\s</span><span class="vs">up = </span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{2}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.text(sqrt2 <span class="op">+</span> <span class="fl">0.02</span>, <span class="dv">1</span>, <span class="vs">r'</span><span class="dv">$\s</span><span class="vs">qrt</span><span class="op">{2}</span><span class="dv">$</span><span class="vs"> </span><span class="kw">(</span><span class="vs">irracional</span><span class="kw">)</span><span class="vs">'</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="vs">r'Exemplo: </span><span class="dv">$</span><span class="ch">\{</span><span class="vs">x </span><span class="er">\</span><span class="vs">in </span><span class="dv">\m</span><span class="vs">athbb{Q} </span><span class="dv">\m</span><span class="vs">id x</span><span class="dv">^</span><span class="vs">2 &lt; 2</span><span class="ch">\}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)<span class="op">;</span> plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)<span class="op">;</span> plt.legend()<span class="op">;</span> plt.tight_layout()</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Salvar figura (para reutilizar no site)</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    base <span class="op">=</span> Path(<span class="va">__file__</span>).parent.resolve()</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">NameError</span>:</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    base <span class="op">=</span> Path(os.getcwd()).resolve()</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>out <span class="op">=</span> (base <span class="op">/</span> <span class="st">".."</span> <span class="op">/</span> <span class="st">"images"</span> <span class="op">/</span> <span class="st">"grafico_completude.png"</span>).resolve()</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>plt.savefig(out, dpi<span class="op">=</span><span class="dv">150</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
+<div id="completude" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="1.2-conjuntos-ap_files/figure-html/cell-2-output-1.png" width="566" height="373" class="figure-img"></p>
+<p><img src="1.2-conjuntos-ap_files/figure-html/completude-output-1.png" width="566" height="373" class="figure-img"></p>
+<figcaption>Conjunto {x ∈ ℚ | x² &lt; 2} frente a y=x², com marcação de √2 como supremo em ℝ.</figcaption>
 </figure>
 </div>
 </div>
@@ -771,51 +617,48 @@ A propriedade de completude garante que os reais “preenchem todos os buracos�
 </div>
 </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/grafico_completude.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Completude da variável observada ao longo do tempo</figcaption>
-</figure>
-</div>
-<hr>
 </section>
-<section id="exercícios-de-revisão" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="exercícios-de-revisão"><span class="header-section-number">1.10</span> 🧠 Exercícios de Revisão</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="🧠 Exercícios de Revisão — Módulo 1.2: Conjuntos Numéricos">
+<section id="exercícios-de-revisão" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="exercícios-de-revisão"><span class="header-section-number">1.9</span> 🧠 Exercícios de Revisão</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="🧠 Exercícios de Revisão — Aprofundamento">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Exercícios de Revisão — Módulo 1.2: Conjuntos Numéricos
+🧠 Exercícios de Revisão — Aprofundamento
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Determine se os conjuntos abaixo são enumeráveis ou não enumeráveis:</p>
-<ol type="a">
-<li><span class="math inline">\(\mathbb{N}\)</span> (b) <span class="math inline">\(\mathbb{Z}\)</span> (c) <span class="math inline">\(\mathbb{Q}\)</span> (d) <span class="math inline">\(\mathbb{R}\)</span> (e) Conjunto dos números irracionais positivos</li>
-</ol></li>
-<li><p>Use o Método Diagonal de Cantor para demonstrar que os números reais entre 0 e 1 são não enumeráveis.</p></li>
-<li><p>O conjunto <span class="math inline">\(\mathbb{R}\)</span> é um corpo ordenado completo. Explique o que isso significa com suas próprias palavras.</p></li>
-<li><p>Utilize <strong>redução ao absurdo</strong> para demonstrar que <span class="math inline">\(\sqrt{2}\)</span> não é racional.</p></li>
-<li><p>Mostre que a representação decimal de um número racional é sempre <strong>finita ou periódica</strong>.</p></li>
-<li><p>Explique por que não existem números racionais cuja expansão decimal seja infinita <strong>não periódica</strong>.</p></li>
-<li><p>Escreva uma definição formal de <strong>conjunto enumerável</strong>, e justifique por que <span class="math inline">\(\mathbb{Q}\)</span> é enumerável.</p></li>
-<li><p>Mostre por que o conjunto <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> (pares ordenados de naturais) é enumerável.</p></li>
-<li><p>Por que a propriedade de completude não vale em <span class="math inline">\(\mathbb{Q}\)</span>? Dê um exemplo.</p></li>
-<li><p>Escreva a fração geratriz da dízima periódica abaixo e simplifique o resultado: <span class="math display">\[
-x = 0,142857\;142857\ldots
-\]</span></p></li>
+<li>Classifique como <strong>enumerável</strong> ou <strong>não enumerável</strong>: <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>, <span class="math inline">\(\mathbb{R}\)</span>, irracionais positivos.<br>
+</li>
+<li>Descreva o método diagonal para provar que <span class="math inline">\([0,1]\)</span> é não enumerável.<br>
+</li>
+<li>Explique “corpo ordenado completo” com suas palavras.<br>
+</li>
+<li>Prove por absurdo que <span class="math inline">\(\sqrt{2}\notin\mathbb{Q}\)</span>.<br>
+</li>
+<li>Mostre que a decimal de um racional é <strong>finita ou periódica</strong>.<br>
+</li>
+<li>Por que <strong>não</strong> existe racional com decimal <strong>infinita não periódica</strong>?<br>
+</li>
+<li>Defina <strong>conjunto enumerável</strong> e justifique por que <span class="math inline">\(\mathbb{Q}\)</span> é enumerável (esboço por diagonais).<br>
+</li>
+<li>Mostre que <span class="math inline">\(\mathbb{N}\times\mathbb{N}\)</span> é enumerável.<br>
+</li>
+<li>Dê um exemplo que mostre que a completude <strong>falha</strong> em <span class="math inline">\(\mathbb{Q}\)</span>.<br>
+</li>
+<li>Encontre a fração geratriz de <span class="math inline">\(x=0{,}142857\,142857\ldots\)</span>.</li>
 </ol>
 </div>
 </div>
 </div>
 </section>
-<section id="resoluções-comentadas" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="resoluções-comentadas"><span class="header-section-number">1.11</span> 📝 Resoluções Comentadas</h2>
+<section id="resoluções-comentadas" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="resoluções-comentadas"><span class="header-section-number">1.10</span> 📝 Resoluções Comentadas</h2>
 <div class="callout callout-style-default callout-important callout-titled" title="📝 Resoluções Comentadas">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -829,64 +672,32 @@ x = 0,142857\;142857\ldots
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><ol type="a">
-<li>Enumerável<br>
+<li><span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>: <strong>enumeráveis</strong>. <span class="math inline">\(\mathbb{R}\)</span> e os irracionais positivos: <strong>não enumeráveis</strong>.<br>
 </li>
-<li>Enumerável<br>
+<li>Construa um número que difere da <strong>diagonal</strong> de uma lista supostamente completa de decimais; o número construído não está na lista.<br>
 </li>
-<li>Enumerável<br>
+<li>Estrutura com <span class="math inline">\(+,\times,\le\)</span> usuais e <strong>axioma do supremo</strong>: todo conjunto não vazio e limitado superiormente tem <strong>supremo</strong> em <span class="math inline">\(\mathbb{R}\)</span>.<br>
 </li>
-<li>Não enumerável<br>
+<li>Hipótese <span class="math inline">\(\sqrt{2}=\tfrac{p}{q}\)</span> irredutível <span class="math inline">\(\Rightarrow p,q\)</span> pares <span class="math inline">\(\Rightarrow\)</span> contradição.<br>
 </li>
-<li>Não enumerável</li>
-</ol></li>
-<li><p>O método diagonal constrói um número diferente de cada número de uma lista supostamente completa, mostrando que tal lista <strong>nunca é completa</strong>, então ℝ não é enumerável.</p></li>
-<li><p>Corpo ordenado completo: <span class="math inline">\(\mathbb{R}\)</span> tem as operações +, ×, ≤ bem definidas, com propriedades usuais, e satisfaz a <strong>propriedade de completude</strong>: todo conjunto limitado superiormente possui supremo.</p></li>
-<li><p>Suponha que <span class="math inline">\(\sqrt{2} = \frac{p}{q}\)</span> seja racional e irredutível. Então <span class="math inline">\(2q^2 = p^2\)</span>, logo <span class="math inline">\(p^2\)</span> é par, e <span class="math inline">\(p\)</span> também é par. Seja <span class="math inline">\(p = 2k\)</span>. Substituindo, temos <span class="math inline">\(2q^2 = (2k)^2 = 4k^2 \Rightarrow q^2 = 2k^2\)</span>, então <span class="math inline">\(q\)</span> também é par — o que contradiz a suposição de que <span class="math inline">\(\frac{p}{q}\)</span> é irredutível.<br>
-<strong>Conclusão:</strong> <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>.</p></li>
-<li><p>Se um número racional é escrito como fração <span class="math inline">\(\frac{p}{q}\)</span>, com <span class="math inline">\(q \in \mathbb{N}\)</span>, a divisão de <span class="math inline">\(p \div q\)</span> terá, no máximo, <span class="math inline">\(q\)</span> restos possíveis: <span class="math inline">\(0, 1, \ldots, q-1\)</span>. Como o conjunto de restos é finito, o processo de divisão entra em <strong>repetição</strong> após certo ponto → a expansão decimal será <strong>finita ou periódica</strong>.</p></li>
-<li><p>Números racionais sempre têm divisão com restos finitos. Uma expansão decimal infinita <strong>não periódica</strong> indica que <strong>não há repetição nos restos</strong>, o que só pode ocorrer com irracionais.<br>
-Portanto, apenas irracionais têm expansão infinita <strong>não periódica</strong>.</p></li>
-<li><p>Um conjunto <span class="math inline">\(A\)</span> é <strong>enumerável</strong> se existe uma bijeção <span class="math inline">\(f: \mathbb{N} \to A\)</span>.<br>
-O conjunto <span class="math inline">\(\mathbb{Q}\)</span> é enumerável porque seus elementos podem ser escritos como frações <span class="math inline">\(\frac{p}{q}\)</span>, organizadas em uma tabela e percorridas por diagonais — como mostrou Cantor.</p></li>
-<li><p>O conjunto <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> pode ser listado diagonalmente:<br>
-<span class="math display">\[
-   (1,1), (1,2), (2,1), (1,3), (2,2), (3,1), \ldots
-   \]</span> Essa técnica estabelece uma bijeção com <span class="math inline">\(\mathbb{N}\)</span>, mostrando que o produto cartesiano de dois conjuntos enumeráveis também é enumerável.</p></li>
-<li><p>Exemplo clássico:<br>
-O conjunto <span class="math inline">\(A = \{x \in \mathbb{Q} \mid x^2 &lt; 2\}\)</span> é limitado superiormente em <span class="math inline">\(\mathbb{Q}\)</span>, mas não possui supremo racional (pois <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>).<br>
-Portanto, <span class="math inline">\(\mathbb{Q}\)</span> <strong>não satisfaz a propriedade de completude</strong>.</p></li>
-<li><p>Essa é uma dízima periódica de período 6. Seja:</p></li>
+<li>Na divisão <span class="math inline">\(p\div q\)</span>, há no máx. <span class="math inline">\(q\)</span> restos; algum resto repete <span class="math inline">\(\Rightarrow\)</span> decimal <strong>finita</strong> ou <strong>periódica</strong>.<br>
+</li>
+<li>Decimal infinita <strong>não periódica</strong> implica ausência de repetição de restos <span class="math inline">\(\Rightarrow\)</span> <strong>irracional</strong>.<br>
+</li>
+<li><strong>Enumerável</strong>: existe bijeção com <span class="math inline">\(\mathbb{N}\)</span>. Para <span class="math inline">\(\mathbb{Q}\)</span>: arranjo por <strong>diagonais</strong> com filtro <span class="math inline">\(mdc=1\)</span>.<br>
+</li>
+<li><span class="math inline">\(\mathbb{N}\times\mathbb{N}\)</span> é listado por diagonais <span class="math inline">\((1,1),(1,2),(2,1),(1,3),\ldots\)</span>; estabelece-se bijeção com <span class="math inline">\(\mathbb{N}\)</span>.<br>
+</li>
+<li><span class="math inline">\(A=\{x\in\mathbb{Q}\mid x^2&lt;2\}\)</span> é limitado sup., mas <strong>não</strong> tem supremo em <span class="math inline">\(\mathbb{Q}\)</span> (seria <span class="math inline">\(\sqrt{2}\)</span>).<br>
+</li>
+<li>Período 6. <span class="math inline">\(10^6x=142857{,}142857\ldots\)</span>; <span class="math inline">\(10^6x-x=142857\Rightarrow 999999x=142857\Rightarrow x=\tfrac{142857}{999999}=\tfrac{1}{7}\)</span>.</li>
 </ol>
-<p><span class="math display">\[
-x = 0,142857\;142857\ldots
-\]</span></p>
-<p>Multiplicamos ambos os lados por <span class="math inline">\(10^6=1.000.000\)</span>:</p>
-<p><span class="math display">\[
-10^6 x = 142857,142857\dots
-\]</span></p>
-<p>Subtraindo as equações:</p>
-<p><span class="math display">\[
-10^6 x - x = 142857,142857\ldots - 0,142857\ldots
-\]</span> <span class="math display">\[
-(10^6 - 1)x = 142857
-\]</span> <span class="math display">\[
-999999x = 142857
-\]</span> <span class="math display">\[
-x = \frac{142857}{999999}
-\]</span></p>
-<p>Simplificando:</p>
-<p><span class="math display">\[
-x = \frac{1}{7}
-\]</span></p>
-<p>Portanto, <span class="math inline">\(0,142857\;142857\ldots = \frac{1}{7}\)</span>.</p>
 </div>
 </div>
 </div>
 <hr>
-<p>🎯 <strong>Próximo Post: 👉 [1.3: Intervalos e Inequações] ⏳ </strong>Em Breve!**</p>
-<hr>
-<p>🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">Voltar ao Topo</a></p>
+<p>🎯 <strong>Próximo Post:</strong> 👉 <em>1.3 — Intervalos e Inequações</em> (em breve)</p>
+<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -899,20 +710,12 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
 </div>
 </div>
-</section>
-</section>
-<section id="links-úteis" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 🔗 Links Úteis</h1>
-<ul>
-<li>🧑‍🏫 <a href="../../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
-<li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
-</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1405,4 +1208,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>
