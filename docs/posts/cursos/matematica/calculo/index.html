@@ -71,21 +71,40 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P2KY6K26MG');
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
 </script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
 
 <link rel="stylesheet" href="../../../../styles.css">
 <link rel="stylesheet" href="../../../../assets/css/custom.css">
 <link rel="stylesheet" href="../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../assets/css/chips.css">
+<meta property="og:title" content="🎓 Curso de Cálculo Diferencial e Integral – Blog do Marcellini">
+<meta property="og:description" content="Introdução ao Cálculo com teoria elegante (LaTeX), visual Quarto e exemplos em R/Python — com trilhas de Aprofundamento (AP).">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="🎓 Curso de Cálculo Diferencial e Integral – Blog do Marcellini">
+<meta name="twitter:description" content="Introdução ao Cálculo com teoria elegante (LaTeX), visual Quarto e exemplos em R/Python — com trilhas de Aprofundamento (AP).">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -184,6 +203,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
 </i> 
 <span class="menu-text">Contato</span></a>
@@ -212,6 +235,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#como-estudar" id="toc-como-estudar" class="nav-link" data-scroll-target="#como-estudar"><span class="header-section-number">1.2</span> 🚀 Como estudar</a></li>
   </ul></li>
   <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências"><span class="header-section-number">2</span> 📚 Referências</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">3</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -339,7 +363,7 @@ Dica
 </li>
 <li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">1.2 AP — Conjuntos Numéricos (Aprofundamento)</a><br>
 </li>
-<li>1.3 Intervalos e Inequações <em>(em produção)</em><br>
+<li><a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">1.3 Intervalos e Inequações</a><br>
 </li>
 <li>1.4 Funções: definição, domínio e imagem <em>(em produção)</em><br>
 </li>
@@ -421,6 +445,9 @@ Dica
 <li>Simmons, George F. <em>Calculus With Analytic Geometry</em>, 2ª ed.&nbsp;McGraw-Hill, 1985.</li>
 </ul>
 <hr>
+</section>
+<section id="navegação" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 🔗 Navegação</h1>
 <p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">1.1 O que é Cálculo? História e aplicações</a></p>
 <hr>
 <p><a href="../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="../../../../posts/cursos/matematica/calculo/index.html">Topo</a></p>

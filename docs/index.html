@@ -69,15 +69,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P2KY6K26MG');
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
 </script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -113,6 +118,20 @@ window.Quarto = {
 <link rel="stylesheet" href="assets/css/custom.css">
 <link rel="stylesheet" href="assets/css/cards.css">
 <link rel="stylesheet" href="assets/css/chips.css">
+<meta property="og:title" content="Blog do Marcellini">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="Blog do Marcellini">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -211,6 +230,10 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
 </i> 
 <span class="menu-text">Contato</span></a>
@@ -243,6 +266,9 @@ window.Quarto = {
 
 
 
+<div style="text-align:right; font-size:0.95em;">
+<p>🌐 <span aria-current="page">Português</span> · <a href="https://en.blogdomarcellini.com.br/">English</a></p>
+</div>
 <p><img src="images/banner.png" class="img-fluid" style="margin-bottom: 2rem;;width:100.0%"></p>
 <div class="columns">
 <div class="column" style="width:65%;">
@@ -408,11 +434,11 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 <h2 class="anchored" data-anchor-id="últimos-posts">🆕 Últimos Posts</h2>
 <!-- inicio-ultimos-posts -->
 <ul>
+<li><a href="posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">📘 Módulo 1.3: Intervalos e Inequações</a></li>
 <li><a href="posts/fisica/guia-relatividade-geral.html">🧭 📚 🌠 Guia de Leitura da Série Relatividade Geral</a></li>
 <li><a href="posts/cursos/estatistica/distribuicao_normal/index.html">🎓 📊 Curso de Estatística: A Distribuição Normal</a></li>
 <li><a href="posts/cursos/matematica/calculo/index.html">🎓 Curso de Cálculo Diferencial e Integral</a></li>
-<li><a href="posts/fisica/guia-100-anos-mecanica-quantica.html">🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica</a></li>
-<li><a href="posts/fisica/relatividade-geral-parte1.html">📚 🌠 Relatividade Geral — Parte 1: O Problema da Gravidade</a> <!-- fim-ultimos-posts --></li>
+<li><a href="posts/fisica/guia-100-anos-mecanica-quantica.html">🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica</a> <!-- fim-ultimos-posts --></li>
 </ul>
 <blockquote class="blockquote">
 <p>Esta seção é atualizada automaticamente a cada nova publicação.</p>

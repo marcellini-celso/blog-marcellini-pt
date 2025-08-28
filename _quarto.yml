@@ -3,6 +3,8 @@ project:
   output-dir: docs
   pre-render: "python3 gerar_posts_json.py"
 
+lang: pt-BR
+
 website:
   title: "Blog do Marcellini"
   favicon: images/banner.jpeg
@@ -16,7 +18,7 @@ website:
         menu:
           - text: "🏷️ Tags"
             href: tags.qmd
-          - text: 📂 Categorias
+          - text: "📂 Categorias"
             href: categories.qmd
       - text: "🧠 Ciências Exatas"
         menu:
@@ -43,6 +45,10 @@ website:
       - href: guia.qmd
         text: "🗺️ Mapa do Site"
     right:
+      - text: "EN 🇬🇧"
+        href: "https://marcellini-celso.github.io/blog-marcellini-en/"
+        target: _blank
+        rel: noopener
       - icon: envelope
         text: "Contato"
         href: "mailto:prof.marcellini@gmail.com" 
@@ -64,7 +70,16 @@ format:
     toc: true
     toc-title: "Nesta página"
     highlight-style: github
-    include-in-header: analytics.html
+    open-graph: true
+    twitter-card: true
+    image: images/banner.png
+    include-in-header: 
+      - "analytics.html"
+      - text: |
+          <link rel="alternate" hreflang="en"
+                href="https://en.blogdomarcellini.com.br/" />
+          <link rel="alternate" hreflang="x-default"
+                href="https://blogdomarcellini.com.br/" />
     include-after-body:
       - assets/js/enhance-categories.js
 
@@ -72,6 +87,7 @@ search: true
 
 publish:
   provider: gh-pages
+  domain: blogdomarcellini.com.br
   
 filters:
   - naquiz

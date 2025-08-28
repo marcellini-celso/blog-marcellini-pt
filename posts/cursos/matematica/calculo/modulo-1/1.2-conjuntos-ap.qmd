@@ -19,7 +19,7 @@ format:
 page-layout: full
 ---
 
-[← Sumário do Curso 🎓🧮](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](../../../matematica/index.qmd)
+[← Sumário do Curso 🎓🧮](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
 🎯 **Post Anterior:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
 
@@ -209,8 +209,9 @@ plt.show()
 :::
 
 ---
+# 🔗 Navegação
 
-🎯 **Próximo Post:** 👉 *1.3 — Intervalos e Inequações* (em breve)
+🎯 **Próximo Post:** 👉 [1.3 — Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
 
 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.2-conjuntos-ap.qmd)
 

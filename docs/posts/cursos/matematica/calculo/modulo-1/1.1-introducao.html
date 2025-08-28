@@ -71,15 +71,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P2KY6K26MG');
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
 </script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -115,6 +120,20 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/custom.css">
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
+<meta property="og:title" content="🧠 Módulo 1.1: O que é Cálculo? História e aplicações – Blog do Marcellini">
+<meta property="og:description" content="Entenda o que é cálculo diferencial e integral, de onde surgiu e por que ele é tão importante.">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="🧠 Módulo 1.1: O que é Cálculo? História e aplicações – Blog do Marcellini">
+<meta name="twitter:description" content="Entenda o que é cálculo diferencial e integral, de onde surgiu e por que ele é tão importante.">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -213,6 +232,10 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
 </i> 
 <span class="menu-text">Contato</span></a>
@@ -256,6 +279,7 @@ window.Quarto = {
   <li><a href="#breve-história-do-cálculo" id="toc-breve-história-do-cálculo" class="nav-link" data-scroll-target="#breve-história-do-cálculo"><span class="header-section-number">1.5</span> 📜 Breve história do Cálculo</a></li>
   <li><a href="#encerrando-a-introdução" id="toc-encerrando-a-introdução" class="nav-link" data-scroll-target="#encerrando-a-introdução"><span class="header-section-number">1.6</span> ✅ Encerrando a introdução</a></li>
   </ul></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">2</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -529,6 +553,10 @@ Teorema Fundamental do Cálculo (ideia)
 <li>A formalização virá passo a passo, sempre conectada a <strong>figuras</strong> e <strong>exemplos numéricos</strong>.</li>
 </ul>
 <hr>
+</section>
+</section>
+<section id="navegação" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🔗 Navegação</h1>
 <p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></p>
 <p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">Topo</a></p>
 <hr>
@@ -548,7 +576,6 @@ Nota
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

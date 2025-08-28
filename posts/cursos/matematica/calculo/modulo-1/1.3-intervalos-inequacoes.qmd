@@ -1,0 +1,142 @@
+---
+title: "📘 Módulo 1.3: Intervalos e Inequações"
+description: "Definição e representação de intervalos numéricos. Resolução e interpretação de inequações lineares e quadráticas."
+author: "Blog do Marcellini"
+date: "2025-08-28"
+lang: pt-BR
+categories: [cálculo, matemática, intervalos, inequações, funções, cursos]
+tags: [cálculo, intervalos, inequações, matemática, cursos]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+[← Sumário do Curso 🎓🧮](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.2 AP — Conjuntos Numéricos (Aprofundamento)](1.2-conjuntos-ap.qmd)
+
+---
+
+# 🎯 Objetivos de Aprendizagem
+
+- Compreender a noção de **intervalos** na reta real.  
+- Representar intervalos em **notação matemática** e em **diagramas na reta real**.  
+- Resolver **inequações lineares** e **quadráticas**.  
+- Interpretar soluções em termos de **conjuntos numéricos**.  
+
+---
+
+# Introdução
+
+Ao estudar funções e limites, é essencial compreender como **intervalos** e **inequações** descrevem subconjuntos dos números reais.  
+Eles aparecem constantemente em **domínios de funções**, **condições de existência** e na solução de **problemas práticos**.
+
+---
+
+# Intervalos na Reta Real
+
+Um **intervalo** é um subconjunto de \(\mathbb{R}\) delimitado por dois números reais (ou ilimitado em uma direção).
+
+- **Intervalo fechado:** \([a,b] = \{ x \in \mathbb{R} \mid a \leq x \leq b \}\).  
+- **Intervalo aberto:** \((a,b) = \{ x \in \mathbb{R} \mid a < x < b \}\).  
+- **Intervalo semiaberto:** \([a,b)\) ou \((a,b]\).  
+- **Intervalos infinitos:** \((-\infty, b]\), \([a, +\infty)\), etc.
+
+📌 **Exemplo 1:**  
+O domínio da função \(f(x) = \sqrt{x-2}\) é o intervalo \([2, +\infty)\).
+
+---
+
+# Representação Gráfica
+
+Podemos representar intervalos na **reta real**:  
+
+- Bolinha **preenchida** → extremidade incluída (fechado).  
+- Bolinha **vazia** → extremidade excluída (aberto).  
+- Seta → prolongamento ao infinito.
+
+---
+
+# Inequações Lineares
+
+Uma inequação linear tem a forma:
+\[
+ax + b \, \{<, \leq, >, \geq\} \, c
+\]
+
+📌 **Exemplo 2:**  
+Resolver \(2x - 3 < 5\).  
+
+\[
+2x - 3 < 5 \implies 2x < 8 \implies x < 4
+\]
+
+Solução: \((-\infty, 4)\).
+
+---
+
+# Inequações Quadráticas
+
+Uma inequação quadrática envolve \(ax^2 + bx + c\).  
+A solução é obtida analisando o **sinal da parábola**.
+
+📌 **Exemplo 3:**  
+Resolver \(x^2 - 5x + 6 > 0\).
+
+1. Zerar o polinômio: \(x^2 - 5x + 6 = 0 \implies (x-2)(x-3) = 0\).  
+2. Raízes: \(x=2\) e \(x=3\).  
+3. Testando intervalos:  
+   - Para \(x < 2\), \(f(x)>0\).  
+   - Para \(2 < x < 3\), \(f(x)<0\).  
+   - Para \(x > 3\), \(f(x)>0\).  
+
+Solução: \((-\infty,2) \cup (3,+\infty)\).
+
+---
+
+# Exercícios Propostos
+
+::: {.callout-note collapse=false title="Exercícios Propostos"}
+**Exercício 1** — Represente na reta real:  
+a) \((1,5]\)  
+b) \((-\infty, -2)\)  
+c) \([-3,3]\)  
+
+**Exercício 2** — Resolva as inequações:  
+a) \(3x+1 \geq 7\)  
+b) \(x^2 - 4 \leq 0\)  
+c) \((x-1)(x-4) < 0\)  
+:::
+
+---
+
+# ✅ Gabarito
+
+::: {.callout-important collapse=true title="Gabarito"}
+
+- **Exercício 1:**  
+a) Bolinha vazia em 1 e cheia em 5.  
+b) Intervalo aberto até \(-2\).  
+c) Intervalo fechado de \(-3\) a \(3\).  
+
+- **Exercício 2:**  
+a) \(x \geq 2\) → \([2, +\infty)\)  
+b) \(-2 \leq x \leq 2\) → \([-2, 2]\)  
+c) \(1 < x < 4\) → \((1,4)\)
+:::
+
+---
+
+# 🔗 Navegação
+ 
+🎯 **Próximo Post:** 👉 [1.4 Funções] (Em Breve!)
+
+[← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.3-intervalos-inequacoes.qmd)
+
