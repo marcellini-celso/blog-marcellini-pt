@@ -93,6 +93,7 @@ filters:
   - naquiz
 
 resources:
+  - robots.txt
   - posts.json
   - images/**
 
