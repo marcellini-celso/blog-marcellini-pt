@@ -1,0 +1,226 @@
+---
+title: "📘 👨‍💻 📐 Modelos de LaTeX para Usar com Quarto"
+description: "O Quarto permite o uso de **fórmulas matemáticas com LaTeX** dentro de arquivos `.qmd`, tanto em linha quanto em blocos."
+author: "Blog do Marcellini"
+date: 2025-06-27
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+editor: visual
+categories: [programação, LaTeX, Quarto, artigo]
+tags: [programação, LaTeX, Quarto, artigo]
+---
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de LaTeX 📐](/posts/programacao/latex/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+![LaTeX](../../../images/LaTeX_logo.svg.png){width=50% style="margin-bottom: 2rem;"}
+
+# 📘 👨‍💻 📐 Modelos de LaTeX para Usar com Quarto
+
+## Introdução
+
+O Quarto permite o uso de **fórmulas matemáticas com LaTeX** dentro de arquivos `.qmd`, tanto em linha quanto em blocos.  
+Isso torna possível criar documentos científicos, técnicos e educacionais com notação matemática precisa e elegante.
+
+---
+
+## Equações Inline
+
+As equações inline são escritas entre `$` e `$`:
+
+Exemplo:
+
+```markdown
+A identidade de Euler é: $e^{i\pi} + 1 = 0$
+```
+
+Resultado:
+
+A identidade de Euler é: $e^{i\pi} + 1 = 0$
+
+---
+
+## Equações em Bloco
+
+As equações em bloco usam `$$` para delimitar e são centralizadas:
+
+```markdown
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+```
+
+Resultado:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+---
+
+## Sistemas de Equações
+
+Você pode usar `\begin{align}` ou `\begin{cases}`:
+
+```markdown
+$$
+\begin{cases}
+x + y = 2 \\
+2x - y = 3
+\end{cases}
+$$
+```
+
+Resultado:
+
+$$
+\begin{cases}
+x + y = 2 \\
+2x - y = 3
+\end{cases}
+$$
+
+---
+
+## Matrizes
+
+```markdown
+$$
+A = \begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}
+$$
+```
+
+Resultado:
+
+$$
+A = \begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}
+$$
+
+---
+
+## Somatórios, Produtos, Integrais
+
+```markdown
+$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$
+
+$$
+\prod_{k=1}^{n} k = n!
+$$
+
+$$
+\int_0^\infty e^{-x} dx = 1
+$$
+```
+
+Resultado:
+
+$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$
+
+$$
+\prod_{k=1}^{n} k = n!
+$$
+
+$$
+\int_0^\infty e^{-x} dx = 1
+$$
+
+---
+
+## Frações, Potências e Raízes
+
+```markdown
+$$
+\frac{a + b}{c}, \quad x^2, \quad \sqrt{x}, \quad \sqrt[3]{x}
+$$
+```
+
+Resultado:
+
+$$
+\frac{a + b}{c}, \quad x^2, \quad \sqrt{x}, \quad \sqrt[3]{x}
+$$
+
+---
+
+## Lógicas e Conjuntos
+
+```markdown
+$$
+A \cap B, \quad A \cup B, \quad A \subseteq B, \quad A \in B
+$$
+
+$$
+\forall x \in \mathbb{R}, \quad \exists y > 0
+$$
+```
+
+Resultado:
+
+$$
+A \cap B, \quad A \cup B, \quad A \subseteq B, \quad A \in B
+$$
+
+$$
+\forall x \in \mathbb{R}, \quad \exists y > 0
+$$
+
+---
+
+## Conclusão
+
+O suporte a LaTeX no Quarto permite escrever expressões matemáticas com o mesmo poder e precisão de um artigo científico.  
+Esses modelos servem como base para produzir conteúdos técnicos e educacionais com alto padrão visual.
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de LaTeX 📐](/posts/programacao/latex/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+🔝 [Voltar ao Topo](modelos-latex-quarto.qmd)
+
+---
+
+*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
+
+# 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
+

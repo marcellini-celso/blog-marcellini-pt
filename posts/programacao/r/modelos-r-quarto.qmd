@@ -1,0 +1,191 @@
+---
+title: "📘 👨‍💻 📄 📊 Modelos de Código em R para Usar com Quarto"
+description: "O Quarto permite a execução direta de blocos de código R em arquivos `.qmd`.  
+Isso torna possível gerar relatórios dinâmicos, gráficos, análises estatísticas e visualizações interativas, tudo integrado ao texto."
+author: "Blog do Marcellini"
+date: 2025-06-29
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+editor: visual
+categories: [programação, R, Quarto, artigo]
+tags: [programação, R, Quarto, artigo]
+
+execute:
+  engine: knitr
+  echo: true
+  warning: false
+  message: false
+---
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de R 📊](/posts/programacao/r/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+![Linguagem R](../../../images/R_logo.svg.png){width=30% style="margin-bottom: 2rem;"}
+
+# 📘 👨‍💻 📄 📊 Modelos de Código em R para Usar com Quarto
+
+## Introdução
+
+O Quarto permite a execução direta de blocos de código R em arquivos `.qmd`.  
+Isso torna possível gerar relatórios dinâmicos, gráficos, análises estatísticas e visualizações interativas, tudo integrado ao texto.
+
+O trecho abaixo é o **cabeçalho YAML** do documento `.qmd`, que define título, autor, data, formato de saída e opções de execução do código R:
+
+```yaml
+---
+title: "Modelos de Código em R para Usar com Quarto"
+author: "Blog do Marcellini"
+date: 2025-06-23
+format: html
+editor: visual
+lang: pt-BR
+execute:
+  engine: knitr
+  echo: true
+  warning: false
+  message: false
+---
+```
+
+
+---
+
+## Bloco de código simples em R
+
+```{r simples}
+x <- 1:10
+y <- x^2
+y
+```
+
+---
+
+## Criando um gráfico base
+
+```{r plot}
+plot(x, y, type = "b", col = "blue", main = "Gráfico de x²", xlab = "x", ylab = "y = x²")
+```
+
+---
+
+## Usando ggplot2
+
+```{r ggplot2}
+library(ggplot2)
+
+df <- data.frame(x = x, y = y)
+
+ggplot(df, aes(x, y)) +
+  geom_line(color = "red", size = 1.2) +
+  geom_point(color = "blue") +
+  labs(title = "Gráfico com ggplot2", x = "x", y = "x²")
+```
+
+---
+
+## Estatísticas descritivas
+
+```{r summary}
+summary(mtcars)
+```
+
+---
+
+## Histograma
+
+```{r hist}
+hist(mtcars$mpg, col = "lightblue", main = "Distribuição de MPG", xlab = "Milhas por galão")
+```
+
+---
+
+## Regressão linear simples
+
+```{r lm}
+modelo <- lm(mpg ~ hp, data = mtcars)
+summary(modelo)
+```
+
+---
+
+## Gráfico com linha de regressão
+
+```{r abline}
+plot(mtcars$hp, mtcars$mpg, pch = 19, col = "gray", main = "MPG vs HP")
+abline(modelo, col = "red", lwd = 2)
+```
+
+---
+
+## Tabela formatada com knitr::kable
+
+```{r kable}
+library(knitr)
+kable(head(mtcars), caption = "Primeiras linhas do dataset mtcars")
+```
+
+---
+
+## Resultados condicionais com `if`
+
+```{r if}
+valor <- mean(mtcars$mpg)
+
+if (valor > 20) {
+  print("A média de MPG é alta.")
+} else {
+  print("A média de MPG é baixa.")
+}
+```
+
+---
+
+## Conclusão
+
+Com Quarto e R, é possível integrar texto, código e resultados em um único documento dinâmico e reprodutível.  
+Esses modelos são um ponto de partida para criar relatórios estatísticos e científicos com alto padrão profissional.
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de R 📊](/posts/programacao/r/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+🔝 [Voltar ao Topo](modelos-r-quarto.qmd)
+
+---
+
+*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
+
+# 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
+
+

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,14 +33,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="./images/banner.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-f9d2e688c83043042fa051765c26f29b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d0cbc992f0efc7cc645d720160ede72c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -98,7 +99,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -141,6 +142,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -278,7 +281,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-👋 Bem-vindo ao Blog do Marcellini
+<span class="screen-reader-only">Nota</span>👋 Bem-vindo ao Blog do Marcellini
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -299,12 +302,12 @@ window.Quarto = {
 <li>📝 Reflexões sobre ciência, método e linguagem</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Política editorial (resumo)">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Política editorial (resumo)
+<span class="screen-reader-only">Nota</span>Política editorial (resumo)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -363,12 +366,12 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 <section id="destaques" class="level2">
 <h2 class="anchored" data-anchor-id="destaques">✨ Destaques</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="🧠 Equações Históricas (Matemática + Física)">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Equações Históricas (Matemática + Física)
+<span class="screen-reader-only">Nota</span>🧠 Equações Históricas (Matemática + Física)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -380,12 +383,12 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="🌍 Distribuição Normal — Curso (Estatística)">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🌍 Distribuição Normal — Curso (Estatística)
+<span class="screen-reader-only">Nota</span>🌍 Distribuição Normal — Curso (Estatística)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -397,12 +400,12 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="📘 Curso de Cálculo — Introdução">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📘 Curso de Cálculo — Introdução
+<span class="screen-reader-only">Nota</span>📘 Curso de Cálculo — Introdução
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -424,7 +427,7 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 </div>
 <blockquote class="blockquote">
 <p>🔧 Exemplos programáveis:<br>
-👉 <a href="./posts/programacao/modelos-python-quarto.html">Modelos em Python</a> · 👉 <a href="./posts/programacao/modelos-r-quarto.html">Modelos em R</a></p>
+👉 <a href="./posts/programacao/python/modelos-python-quarto.html">Modelos em Python</a> · 👉 <a href="./posts/programacao/r/modelos-r-quarto.html">Modelos em R</a></p>
 </blockquote>
 <hr>
 <p>🔝 <a href="./index.html">Voltar ao Topo</a></p>
@@ -451,7 +454,7 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Sobre o projeto
+<span class="screen-reader-only">Dica</span>Sobre o projeto
 </div>
 </div>
 <div class="callout-body-container callout-body">

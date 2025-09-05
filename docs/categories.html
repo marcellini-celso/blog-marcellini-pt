@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-f9d2e688c83043042fa051765c26f29b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d0cbc992f0efc7cc645d720160ede72c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -130,7 +131,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -171,6 +172,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -281,7 +284,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todos <span class="quarto-category-count">(122)</span></div><div class="category" data-category="YW4lQzMlQTFsaXNlJTIwY29tYmluYXQlQzMlQjNyaWE=">análise combinatória <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXBsaWNhJUMzJUE3JUMzJUI1ZXM=">aplicações <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXJ0aWdv">artigo <span class="quarto-category-count">(12)</span></div><div class="category" data-category="YmxvZyUyMHBlc3NvYWw=">blog pessoal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YyVDMyVBMWxjdWxv">cálculo <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Q2FudG9y">Cantor <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uanVudG9z">conjuntos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29uanVudG9zJTIwbnVtJUMzJUE5cmljb3M=">conjuntos numéricos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29ycG8=">corpo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3Vyc29z">cursos <span class="quarto-category-count">(11)</span></div><div class="category" data-category="ZGVyaXZhZGFz">derivadas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlzdHJpYnVpJUMzJUE3JUMzJUEzbyUyMG5vcm1hbA==">distribuição normal <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ZWluc3RlaW4=">einstein <span class="quarto-category-count">(5)</span></div><div class="category" data-category="ZW51bWVyYWJpbGlkYWRl">enumerabilidade <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXF1YSVDMyVBNyVDMyVCNWVzJTIwZGlmZXJlbmNpYWlz">equações diferenciais <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXNjb3JlLXo=">escore-z <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXN0YXQlQzMlQURzdGljYQ==">estatística <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ZXhlcmMlQzMlQURjaW9z">exercícios <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ZmF0b3JpYWw=">fatorial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zmlsb3NvZmlhJTIwZGElMjBtYXRlbSVDMyVBMXRpY2E=">filosofia da matemática <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZiVDMyVBRHNpY2E=">física <span class="quarto-category-count">(11)</span></div><div class="category" data-category="ZiVDMyVCM3JtdWxhcw==">fórmulas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZnVuJUMzJUE3JUMzJUI1ZXM=">funções <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z3JhdmlkYWRl">gravidade <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z3VpYSUyMGRlJTIwbGVpdHVyYQ==">guia de leitura <span class="quarto-category-count">(10)</span></div><div class="category" data-category="aGlzdCVDMyVCM3JpYSUyMGRhJTIwY2klQzMlQUFuY2lh">história da ciência <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGlzdCVDMyVCM3JpYSUyMGRvJTIwYyVDMyVBMWxjdWxv">história do cálculo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5lcXVhJUMzJUE3JUMzJUI1ZXM=">inequações <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZWdyYWlz">integrais <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZXJ2YWxvcw==">intervalos <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFUZVg=">LaTeX <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGVpJTIwZG9zJTIwZ3JhbmRlcyUyMG4lQzMlQkFtZXJvcw==">lei dos grandes números <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGltaXRlcw==">limites <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFwYSUyMGRvJTIwc2l0ZQ==">mapa do site <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWF0ZW0lQzMlQTF0aWNh">matemática <span class="quarto-category-count">(11)</span></div><div class="category" data-category="bWVjJUMzJUEybmljYSUyMHF1JUMzJUEybnRpY2E=">mecânica quântica <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bm9ybWFsaWRhZGUlMjBhcHJveGltYWRh">normalidade aproximada <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVzc29hbA==">pessoal <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJpbmMlQzMlQURwaW8lMjBkYSUyMGVxdWl2YWwlQzMlQUFuY2lh">princípio da equivalência <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZ3JhbWElQzMlQTclQzMlQTNv">programação <span class="quarto-category-count">(13)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVsYXRpdmlkYWRl">relatividade <span class="quarto-category-count">(5)</span></div><div class="category" data-category="cmVsYXRpdmlkYWRlJTIwZXNwZWNpYWw=">relatividade especial <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVsYXRpdmlkYWRlJTIwZ2VyYWw=">relatividade geral <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cyVDMyVBOXJpZQ==">série <span class="quarto-category-count">(5)</span></div><div class="category" data-category="cyVDMyVBOXJpZXMlMjBkZSUyMFRheWxvcg==">séries de Taylor <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c29icmU=">sobre <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c29icmUlMjBtaW0=">sobre mim <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c29icmUlMjBvJTIwYmxvZw==">sobre o blog <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3VtJUMzJUExcmlv">sumário <span class="quarto-category-count">(11)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBlc3RhdCVDMyVBRHN0aWNh">sumário de estatística <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBmJUMzJUFEc2ljYQ==">sumário de física <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBMYVRlWA==">sumário de LaTeX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBtYXRlbSVDMyVBMXRpY2E=">sumário de matemática <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBwcm9ncmFtYSVDMyVBNyVDMyVBM28=">sumário de programação <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBQeXRob24=">sumário de Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBRdWFydG8=">sumário de Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBS">sumário de R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZG8lMjBibG9nJTIwcGVzc29hbA==">sumário do blog pessoal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGFiZWxhJTIweg==">tabela z <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVvcmVtYSUyMGNlbnRyYWwlMjBkbyUyMGxpbWl0ZQ==">teorema central do limite <span class="quarto-category-count">(1)</span></div><div class="category" data-category="WUFNTA==">YAML <span class="quarto-category-count">(4)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todos <span class="quarto-category-count">(118)</span></div><div class="category" data-category="YW4lQzMlQTFsaXNlJTIwY29tYmluYXQlQzMlQjNyaWE=">análise combinatória <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXBsaWNhJUMzJUE3JUMzJUI1ZXM=">aplicações <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXJ0aWdv">artigo <span class="quarto-category-count">(12)</span></div><div class="category" data-category="YmxvZyUyMHBlc3NvYWw=">blog pessoal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YyVDMyVBMWxjdWxv">cálculo <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Q2FudG9y">Cantor <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uanVudG9z">conjuntos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29uanVudG9zJTIwbnVtJUMzJUE5cmljb3M=">conjuntos numéricos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29ycG8=">corpo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3Vyc29z">cursos <span class="quarto-category-count">(11)</span></div><div class="category" data-category="ZGVyaXZhZGFz">derivadas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlzdHJpYnVpJUMzJUE3JUMzJUEzbyUyMG5vcm1hbA==">distribuição normal <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ZWluc3RlaW4=">einstein <span class="quarto-category-count">(5)</span></div><div class="category" data-category="ZW51bWVyYWJpbGlkYWRl">enumerabilidade <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXF1YSVDMyVBNyVDMyVCNWVzJTIwZGlmZXJlbmNpYWlz">equações diferenciais <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXNjb3JlLXo=">escore-z <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXN0YXQlQzMlQURzdGljYQ==">estatística <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ZXhlcmMlQzMlQURjaW9z">exercícios <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ZmF0b3JpYWw=">fatorial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zmlsb3NvZmlhJTIwZGElMjBtYXRlbSVDMyVBMXRpY2E=">filosofia da matemática <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZiVDMyVBRHNpY2E=">física <span class="quarto-category-count">(11)</span></div><div class="category" data-category="ZiVDMyVCM3JtdWxhcw==">fórmulas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZnVuJUMzJUE3JUMzJUI1ZXM=">funções <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z3JhdmlkYWRl">gravidade <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z3VpYSUyMGRlJTIwbGVpdHVyYQ==">guia de leitura <span class="quarto-category-count">(10)</span></div><div class="category" data-category="aGlzdCVDMyVCM3JpYSUyMGRhJTIwY2klQzMlQUFuY2lh">história da ciência <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGlzdCVDMyVCM3JpYSUyMGRvJTIwYyVDMyVBMWxjdWxv">história do cálculo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5lcXVhJUMzJUE3JUMzJUI1ZXM=">inequações <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZWdyYWlz">integrais <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZXJ2YWxvcw==">intervalos <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFUZVg=">LaTeX <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGVpJTIwZG9zJTIwZ3JhbmRlcyUyMG4lQzMlQkFtZXJvcw==">lei dos grandes números <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGltaXRlcw==">limites <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFwYSUyMGRvJTIwc2l0ZQ==">mapa do site <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWF0ZW0lQzMlQTF0aWNh">matemática <span class="quarto-category-count">(11)</span></div><div class="category" data-category="bWVjJUMzJUEybmljYSUyMHF1JUMzJUEybnRpY2E=">mecânica quântica <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bm9ybWFsaWRhZGUlMjBhcHJveGltYWRh">normalidade aproximada <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVzc29hbA==">pessoal <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJpbmMlQzMlQURwaW8lMjBkYSUyMGVxdWl2YWwlQzMlQUFuY2lh">princípio da equivalência <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZ3JhbWElQzMlQTclQzMlQTNv">programação <span class="quarto-category-count">(13)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVsYXRpdmlkYWRl">relatividade <span class="quarto-category-count">(5)</span></div><div class="category" data-category="cmVsYXRpdmlkYWRlJTIwZXNwZWNpYWw=">relatividade especial <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVsYXRpdmlkYWRlJTIwZ2VyYWw=">relatividade geral <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cyVDMyVBOXJpZQ==">série <span class="quarto-category-count">(5)</span></div><div class="category" data-category="cyVDMyVBOXJpZXMlMjBkZSUyMFRheWxvcg==">séries de Taylor <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c29icmU=">sobre <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c29icmUlMjBtaW0=">sobre mim <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c29icmUlMjBvJTIwYmxvZw==">sobre o blog <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3VtJUMzJUExcmlv">sumário <span class="quarto-category-count">(11)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBlc3RhdCVDMyVBRHN0aWNh">sumário de estatística <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBmJUMzJUFEc2ljYQ==">sumário de física <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBMYVRlWA==">sumário de LaTeX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBtYXRlbSVDMyVBMXRpY2E=">sumário de matemática <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBwcm9ncmFtYSVDMyVBNyVDMyVBM28=">sumário de programação <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBQeXRob24=">sumário de Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBRdWFydG8=">sumário de Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZGUlMjBS">sumário de R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtJUMzJUExcmlvJTIwZG8lMjBibG9nJTIwcGVzc29hbA==">sumário do blog pessoal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGFiZWxhJTIweg==">tabela z <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVvcmVtYSUyMGNlbnRyYWwlMjBkbyUyMGxpbWl0ZQ==">teorema central do limite <span class="quarto-category-count">(1)</span></div><div class="category" data-category="WUFNTA==">YAML <span class="quarto-category-count">(4)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -1436,8 +1439,8 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="32" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDTGFUZVglMkNRdWFydG8lMkNhcnRpZ28=" data-listing-date-sort="1750993200000" data-listing-file-modified-sort="1755509429970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="348">
-<a href="./posts/programacao/modelos-latex-quarto.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="32" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDTGFUZVglMkNRdWFydG8lMkNhcnRpZ28=" data-listing-date-sort="1750993200000" data-listing-file-modified-sort="1757084467216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="348">
+<a href="./posts/programacao/latex/modelos-latex-quarto.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
@@ -1471,7 +1474,7 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="33" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDTGFUZVglMkNzdW0lQzMlQTFyaW8lMjBkZSUyMExhVGVYJTJDc3VtJUMzJUExcmlvJTJDUXVhcnRv" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1756222672867" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
+<div class="g-col-1" data-index="33" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDTGFUZVglMkNzdW0lQzMlQTFyaW8lMjBkZSUyMExhVGVYJTJDc3VtJUMzJUExcmlvJTJDUXVhcnRv" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1757087013875" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
 <a href="./posts/programacao/latex/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1508,8 +1511,8 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="34" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUHl0aG9uJTJDUXVhcnRvJTJDYXJ0aWdv" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1755509497839" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="295">
-<a href="./posts/programacao/modelos-python-quarto.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="34" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUHl0aG9uJTJDUXVhcnRvJTJDYXJ0aWdv" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1757084881889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="295">
+<a href="./posts/programacao/python/modelos-python-quarto.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
@@ -1543,7 +1546,7 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="35" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUHl0aG9uJTJDc3VtJUMzJUExcmlvJTIwZGUlMjBQeXRob24lMkNzdW0lQzMlQTFyaW8lMkNRdWFydG8=" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1756222852159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
+<div class="g-col-1" data-index="35" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUHl0aG9uJTJDc3VtJUMzJUExcmlvJTIwZGUlMjBQeXRob24lMkNzdW0lQzMlQTFyaW8lMkNRdWFydG8=" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1757086182215" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
 <a href="./posts/programacao/python/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1580,8 +1583,8 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="36" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDWUFNTCUyQ2FydGlnbw==" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1755509407870" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="413">
-<a href="./posts/programacao/modelos-index-quarto.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="36" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDWUFNTCUyQ2FydGlnbw==" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1757086853501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="413">
+<a href="./posts/programacao/quarto/modelos-index-quarto.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
@@ -1615,8 +1618,8 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="37" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDYXJ0aWdv" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1755509466659" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1230">
-<a href="./posts/programacao/modelos-markdown.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="37" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDYXJ0aWdv" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1757086291861" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1230">
+<a href="./posts/programacao/quarto/modelos-markdown.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
@@ -1648,8 +1651,8 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="38" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDYXJ0aWdv" data-listing-date-sort="1753671600000" data-listing-file-modified-sort="1755509564840" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1745">
-<a href="./posts/programacao/outros-modelos-markdown.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="38" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDYXJ0aWdv" data-listing-date-sort="1753671600000" data-listing-file-modified-sort="1757084301228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1745">
+<a href="./posts/programacao/quarto/outros-modelos-markdown.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
@@ -1681,7 +1684,7 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="39" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDc3VtJUMzJUExcmlvJTIwZGUlMjBRdWFydG8lMkNzdW0lQzMlQTFyaW8lMkNZQU1M" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1756223101085" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="266">
+<div class="g-col-1" data-index="39" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUXVhcnRvJTJDc3VtJUMzJUExcmlvJTIwZGUlMjBRdWFydG8lMkNzdW0lQzMlQTFyaW8lMkNZQU1M" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1757086877405" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="266">
 <a href="./posts/programacao/quarto/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1718,8 +1721,8 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="40" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUiUyQ1F1YXJ0byUyQ2FydGlnbw==" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1755509532652" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="378">
-<a href="./posts/programacao/modelos-r-quarto.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="40" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUiUyQ1F1YXJ0byUyQ2FydGlnbw==" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1757085808002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="378">
+<a href="./posts/programacao/r/modelos-r-quarto.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
@@ -1753,7 +1756,7 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="41" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUiUyQ3N1bSVDMyVBMXJpbyUyMGRlJTIwUiUyQ3N1bSVDMyVBMXJpbyUyQ1F1YXJ0bw==" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1756223927379" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="169">
+<div class="g-col-1" data-index="41" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDUiUyQ3N1bSVDMyVBMXJpbyUyMGRlJTIwUiUyQ3N1bSVDMyVBMXJpbyUyQ1F1YXJ0bw==" data-listing-date-sort="1752202800000" data-listing-file-modified-sort="1757086793652" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="169">
 <a href="./posts/programacao/r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1790,8 +1793,8 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="42" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDWUFNTCUyQ1F1YXJ0byUyQ2FydGlnbw==" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1755509596297" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="672">
-<a href="./posts/programacao/yaml-no-quarto.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="42" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDWUFNTCUyQ1F1YXJ0byUyQ2FydGlnbw==" data-listing-date-sort="1751166000000" data-listing-file-modified-sort="1757086498384" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="672">
+<a href="./posts/programacao/quarto/yaml-no-quarto.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
@@ -1825,7 +1828,7 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="43" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDZ3VpYSUyMGRlJTIwbGVpdHVyYQ==" data-listing-date-sort="1753844400000" data-listing-file-modified-sort="1755509370017" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="255">
+<div class="g-col-1" data-index="43" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDZ3VpYSUyMGRlJTIwbGVpdHVyYQ==" data-listing-date-sort="1753844400000" data-listing-file-modified-sort="1757086640578" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="255">
 <a href="./posts/programacao/guia-programacao.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1856,7 +1859,7 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="44" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDc3VtJUMzJUExcmlvJTIwZGUlMjBwcm9ncmFtYSVDMyVBNyVDMyVBM28lMkNzdW0lQzMlQTFyaW8lMkNQeXRob24lMkNSJTJDTGFUZVglMkNRdWFydG8lMkNZQU1M" data-listing-date-sort="1753844400000" data-listing-file-modified-sort="1756253340358" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="223">
+<div class="g-col-1" data-index="44" data-categories="cHJvZ3JhbWElQzMlQTclQzMlQTNvJTJDc3VtJUMzJUExcmlvJTIwZGUlMjBwcm9ncmFtYSVDMyVBNyVDMyVBM28lMkNzdW0lQzMlQTFyaW8lMkNQeXRob24lMkNSJTJDTGFUZVglMkNRdWFydG8lMkNZQU1M" data-listing-date-sort="1753844400000" data-listing-file-modified-sort="1757085487085" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="223">
 <a href="./posts/programacao/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1899,66 +1902,7 @@ Blog do Marcellini
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="45" data-listing-file-modified-sort="1756401952048" data-listing-reading-time-sort="3" data-listing-word-count-sort="461">
-<a href="./index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-🌟 O que você vai encontrar aqui:
-</h5>
-<div class="card-text listing-description delink">
-🌐 <span aria-current="page">Português</span> · English
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="46" data-listing-file-modified-sort="1756152698433" data-listing-reading-time-sort="1" data-listing-word-count-sort="166">
-<a href="./nareal_template/example.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Quiz example
-</h5>
-<div class="card-text listing-description delink">
-This document illustrates the usage of the <code>naquiz</code> quarto extension.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Nelson Areal
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="47" data-listing-file-modified-sort="1756152698433" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
-<a href="./nareal_template/example_presentation.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Quiz example
-</h5>
-<div class="card-text listing-description delink">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Nelson Areal
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="48" data-listing-file-modified-sort="1756401649084" data-listing-reading-time-sort="2" data-listing-word-count-sort="249">
+<div class="g-col-1" data-index="45" data-listing-file-modified-sort="1757087084289" data-listing-reading-time-sort="2" data-listing-word-count-sort="249">
 <a href="./tags.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1979,41 +1923,18 @@ programação (13) Quarto (12) artigo (12) física (11) matemática (11) sumári
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="49" data-listing-file-modified-sort="1755505939622" data-listing-reading-time-sort="2" data-listing-word-count-sort="276">
-<a href="./lista_tags_gerada.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="46" data-listing-file-modified-sort="1757087083641" data-listing-reading-time-sort="3" data-listing-word-count-sort="461">
+<a href="./index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
 </p>
 <div class="card-body post-contents">
-<div class="card-text listing-description delink">
-
-<li><code>albert einstein</code> (1 post)</li>
-<li><code>análise combinatória</code> (1 post)</li>
-<li><code>análise de dados</code> (2 posts)</li>
-<li><code>ano milagroso</code> (1 post)</li>
-<li><code>arte e matemática</code> (1 post)</li>
-<li><code>artigos de 1905</code> (1 post)</li>
-<li><code>beleza matemática</code>…</li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="50" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
-<a href="./tags/filosofia-da-matematica.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-filosofia da matemática
+🌟 O que você vai encontrar aqui:
 </h5>
 <div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
+🌐 <span aria-current="page">Português</span> · English
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -2023,64 +1944,7 @@ filosofia da matemática
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="51" data-listing-file-modified-sort="1756285657043" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
-<a href="./tags/teorema-central-do-limite.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-teorema central do limite
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="52" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<a href="./tags/historia-do-calculo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-história do cálculo
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="53" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/analise-combinatoria.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-análise combinatória
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="54" data-listing-file-modified-sort="1756401653544" data-listing-reading-time-sort="1" data-listing-word-count-sort="42">
+<div class="g-col-1" data-index="47" data-listing-file-modified-sort="1757087085841" data-listing-reading-time-sort="1" data-listing-word-count-sort="42">
 <a href="./tags/estatistica.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -2099,311 +1963,7 @@ estatística
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="55" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./tags/sumario-de-latex.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sumário de LaTeX
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="56" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
-<a href="./tags/latex.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LaTeX
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="57" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/derivadas.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-derivadas
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="58" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/limites.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-limites
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="59" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="98">
-<a href="./tags/quarto.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Quarto
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="60" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/formulas.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-fórmulas
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="61" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<a href="./tags/sumario-de-matematica.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sumário de matemática
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="62" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
-<a href="./tags/relatividade-especial.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-relatividade especial
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="63" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
-<a href="./tags/mecanica-quantica.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-mecânica quântica
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="64" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
-<a href="./tags/conjuntos-numericos.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-conjuntos numéricos
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="65" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/probabilidades.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-probabilidades
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="66" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
-<a href="./tags/relatividade.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-relatividade
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="67" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/historia-da-ciencia.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-história da ciência
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="68" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
-<a href="./tags/artigo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-artigo
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="69" data-listing-file-modified-sort="1756401653544" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/pessoal.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-pessoal
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="70" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="31">
-<a href="./tags/yaml.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-YAML
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="71" data-listing-file-modified-sort="1756401653544" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
+<div class="g-col-1" data-index="48" data-listing-file-modified-sort="1757087085841" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
 <a href="./tags/sumario.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -2422,881 +1982,7 @@ sumário
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="72" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/graficos.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-gráficos
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="73" data-listing-file-modified-sort="1756401653544" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/sobre.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sobre
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="74" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
-<a href="./tags/fisica.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-física
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="75" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
-<a href="./tags/einstein.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-einstein
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="76" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/lgn.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LGN
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="77" data-listing-file-modified-sort="1756401653544" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<a href="./tags/sumario-de-estatistica.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sumário de estatística
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="78" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/z-score.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-z-score
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="79" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/tabela-z.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-tabela-z
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="80" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<a href="./tags/aplicacoes.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-aplicações
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="81" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
-<a href="./tags/python.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Python
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="82" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/tcl.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-TCL
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="83" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/principio-da-equivalencia.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-princípio da equivalência
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="84" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
-<a href="./tags/serie.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-série
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="85" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
-<a href="./tags/conjuntos.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-conjuntos
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="86" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/fatorial.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-fatorial
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="87" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<a href="./tags/blog-pessoal.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-blog pessoal
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="88" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
-<a href="./tags/normal.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-normal
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="89" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<a href="./tags/sumario-de-programacao.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sumário de programação
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="90" data-listing-file-modified-sort="1756401653544" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./tags/sumario-do-blog-pessoal.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sumário do blog pessoal
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="91" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/sobre-mim.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sobre mim
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="92" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
-<a href="./tags/relatividade-geral.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-relatividade geral
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="93" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/corpo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-corpo
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="94" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
-<a href="./tags/cursos.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-cursos
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="95" data-listing-file-modified-sort="1756401653544" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
-<a href="./tags/guia-de-leitura.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-guia de leitura
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="96" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./tags/sumario-de-python.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sumário de Python
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="97" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
-<a href="./tags/programacao.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-programação
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="98" data-listing-file-modified-sort="1756285657043" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
-<a href="./tags/lei-dos-grandes-numeros.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-lei dos grandes números
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="99" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/gravidade.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-gravidade
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="100" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
-<a href="./tags/distribuicao-normal.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-distribuição normal
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="101" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
-<a href="./tags/inequacoes.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-inequações
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="102" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/qqplot.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-qqplot
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="103" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
-<a href="./tags/r.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-R
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="104" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
-<a href="./tags/exercicios.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-exercícios
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="105" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
-<a href="./tags/calculo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-cálculo
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="106" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/histogramas.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-histogramas
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="107" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/sobre-o-blog.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sobre o blog
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="108" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/enumerabilidade.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-enumerabilidade
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="109" data-listing-file-modified-sort="1756285657043" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
-<a href="./tags/escore-z.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-escore-z
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="110" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
-<a href="./tags/intervalos.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-intervalos
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="111" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./tags/sumario-de-r.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sumário de R
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="112" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/equacoes-diferenciais.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-equações diferenciais
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="113" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/funcoes.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-funções
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="114" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<a href="./tags/inferencia.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-inferência
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="115" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/integrais.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-integrais
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="116" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<a href="./tags/series-de-taylor.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-séries de Taylor
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="117" data-listing-file-modified-sort="1756401653552" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./tags/cantor.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Cantor
-</h5>
-<div class="card-text listing-description delink">
-⬅ Voltar para Todas as Tags
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="118" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<div class="g-col-1" data-index="49" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
 <a href="./tags/sumario-de-quarto.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -3315,13 +2001,13 @@ sumário de Quarto
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="119" data-listing-file-modified-sort="1756401653548" data-listing-reading-time-sort="1" data-listing-word-count-sort="90">
-<a href="./tags/matematica.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="50" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="./tags/sumario-do-blog-pessoal.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-matemática
+sumário do blog pessoal
 </h5>
 <div class="card-text listing-description delink">
 ⬅ Voltar para Todas as Tags
@@ -3334,7 +2020,102 @@ matemática
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="120" data-listing-file-modified-sort="1756401653556" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<div class="g-col-1" data-index="51" data-listing-file-modified-sort="1757087085885" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<a href="./tags/filosofia-da-matematica.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+filosofia da matemática
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="52" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/enumerabilidade.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+enumerabilidade
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="53" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<a href="./tags/conjuntos.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+conjuntos
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="54" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/sobre.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sobre
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="55" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
+<a href="./tags/einstein.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+einstein
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="56" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
 <a href="./tags/sumario-de-fisica.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -3353,16 +2134,1162 @@ sumário de física
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="121" data-listing-file-modified-sort="1756285657043" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
-<a href="./tags/normalidade-aproximada.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="57" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/graficos.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-normalidade aproximada
+gráficos
 </h5>
 <div class="card-text listing-description delink">
 ⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="58" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<a href="./tags/calculo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+cálculo
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="59" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="98">
+<a href="./tags/quarto.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Quarto
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="60" data-listing-file-modified-sort="1757087085873" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/inferencia.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+inferência
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="61" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
+<a href="./tags/relatividade-especial.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+relatividade especial
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="62" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
+<a href="./tags/normal.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+normal
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="63" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
+<a href="./tags/artigo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+artigo
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="64" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="./tags/sumario-de-estatistica.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sumário de estatística
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="65" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/pessoal.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+pessoal
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="66" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/equacoes-diferenciais.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+equações diferenciais
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="67" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
+<a href="./tags/python.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Python
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="68" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/fatorial.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+fatorial
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="69" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/principio-da-equivalencia.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+princípio da equivalência
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="70" data-listing-file-modified-sort="1757087085841" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
+<a href="./tags/cursos.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+cursos
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="71" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
+<a href="./tags/intervalos.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+intervalos
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="72" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
+<a href="./tags/inequacoes.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+inequações
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="73" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/integrais.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+integrais
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="74" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="./tags/sumario-de-matematica.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sumário de matemática
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="75" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/z-score.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+z-score
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="76" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
+<a href="./tags/relatividade.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+relatividade
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="77" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/sobre-mim.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sobre mim
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="78" data-listing-file-modified-sort="1757087085841" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<a href="./tags/distribuicao-normal.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+distribuição normal
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="79" data-listing-file-modified-sort="1757087085873" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/qqplot.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+qqplot
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="80" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/tabela-z.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+tabela-z
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="81" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<a href="./tags/conjuntos-numericos.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+conjuntos numéricos
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="82" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/formulas.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+fórmulas
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="83" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/funcoes.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+funções
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="84" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/cantor.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cantor
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="85" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
+<a href="./tags/relatividade-geral.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+relatividade geral
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="86" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
+<a href="./tags/fisica.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+física
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="87" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
+<a href="./tags/aplicacoes.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+aplicações
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="88" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/analise-combinatoria.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+análise combinatória
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="89" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/series-de-taylor.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+séries de Taylor
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="90" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
+<a href="./tags/blog-pessoal.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+blog pessoal
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="91" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
+<a href="./tags/mecanica-quantica.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+mecânica quântica
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="92" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/corpo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+corpo
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="93" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
+<a href="./tags/guia-de-leitura.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+guia de leitura
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="94" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/sobre-o-blog.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sobre o blog
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="95" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<a href="./tags/sumario-de-programacao.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sumário de programação
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="96" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<a href="./tags/latex.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LaTeX
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="97" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
+<a href="./tags/serie.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+série
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="98" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/probabilidades.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+probabilidades
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="99" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
+<a href="./tags/historia-do-calculo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+história do cálculo
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="100" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/tcl.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+TCL
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="101" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="90">
+<a href="./tags/matematica.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+matemática
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="102" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<a href="./tags/historia-da-ciencia.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+história da ciência
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="103" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/derivadas.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+derivadas
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="104" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/lgn.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LGN
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="105" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="31">
+<a href="./tags/yaml.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+YAML
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="106" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<a href="./tags/limites.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+limites
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="107" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
+<a href="./tags/r.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+R
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="108" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<a href="./tags/exercicios.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+exercícios
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="109" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/gravidade.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+gravidade
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="110" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="./tags/sumario-de-r.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sumário de R
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="111" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="./tags/sumario-de-latex.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sumário de LaTeX
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="112" data-listing-file-modified-sort="1757087085877" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
+<a href="./tags/programacao.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+programação
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="113" data-listing-file-modified-sort="1757087085845" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<a href="./tags/histogramas.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+histogramas
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="114" data-listing-file-modified-sort="1757087085881" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="./tags/sumario-de-python.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sumário de Python
+</h5>
+<div class="card-text listing-description delink">
+⬅ Voltar para Todas as Tags
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="115" data-listing-file-modified-sort="1756152698433" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
+<a href="./nareal_template/example_presentation.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Quiz example
+</h5>
+<div class="card-text listing-description delink">
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Nelson Areal
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="116" data-listing-file-modified-sort="1756152698433" data-listing-reading-time-sort="1" data-listing-word-count-sort="166">
+<a href="./nareal_template/example.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Quiz example
+</h5>
+<div class="card-text listing-description delink">
+This document illustrates the usage of the <code>naquiz</code> quarto extension.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Nelson Areal
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="117" data-listing-file-modified-sort="1755505939622" data-listing-reading-time-sort="2" data-listing-word-count-sort="276">
+<a href="./lista_tags_gerada.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./images/placeholder-dark.png" class="thumbnail-image card-img" style="height: 150px;" alt="Blog do Marcellini">
+</p>
+<div class="card-body post-contents">
+<div class="card-text listing-description delink">
+
+<li><code>albert einstein</code> (1 post)</li>
+<li><code>análise combinatória</code> (1 post)</li>
+<li><code>análise de dados</code> (2 posts)</li>
+<li><code>ano milagroso</code> (1 post)</li>
+<li><code>arte e matemática</code> (1 post)</li>
+<li><code>artigos de 1905</code> (1 post)</li>
+<li><code>beleza matemática</code>…</li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li><li><code></code></li>
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">

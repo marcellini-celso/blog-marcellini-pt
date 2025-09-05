@@ -30,7 +30,7 @@ page-layout: full
 ::: {.callout-note title="🐍 Modelos em Python (Quarto)"}
 Exemplos prontos com gráficos, animações e integração com Quarto.
 
-[Ver a série ›](../modelos-python-quarto.qmd){.button .button-outline}
+[Ver a série ›](modelos-python-quarto.qmd){.button .button-outline}
 :::
 :::
 ::: {.column width="50%"}
@@ -44,12 +44,12 @@ Trilha sugerida com ordem progressiva de leitura.
 
 ## 📘 📄 🐍 Artigos e Reflexões
 
-### [📘 📄 🐍 Modelos Python para uso no Quarto](../modelos-python-quarto.qmd)
+### [📘 📄 🐍 Modelos Python para uso no Quarto](modelos-python-quarto.qmd)
 Exemplos de uso do Python com Quarto, integração de código com visualizações e análise de dados.
 
 ## 🧭 📘 📄 🐍 Guia de Leitura
 
-1. **[📘 📄 🐍 Modelos Python para uso no Quarto](../modelos-python-quarto.qmd)** — Veja como utilizar Python para gerar visualizações e resultados dinâmicos dentro de documentos Quarto.
+1. **[📘 📄 🐍 Modelos Python para uso no Quarto](modelos-python-quarto.qmd)** — Veja como utilizar Python para gerar visualizações e resultados dinâmicos dentro de documentos Quarto.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
@@ -71,7 +71,7 @@ Exemplos de uso do Python com Quarto, integração de código com visualizaçõe
 
 ## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](../../pessoal/sobre-o-blog.qmd)
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 

@@ -26,7 +26,7 @@ page-layout: full
 ::: {.callout-note title="🐍 Modelos em Python (Quarto)"}
 Exemplos prontos para gráficos, animações e integração com Quarto.
 
-[Ver a série ›](modelos-python-quarto.qmd){.button .button-outline}
+[Ver a série ›](python/modelos-python-quarto.qmd){.button .button-outline}
 :::
 :::
 
@@ -34,7 +34,7 @@ Exemplos prontos para gráficos, animações e integração com Quarto.
 ::: {.callout-note title="📊 Modelos em R (Quarto)"}
 Snippets de R para estatística, visualizações e relatórios reprodutíveis.
 
-[Ver a série ›](modelos-r-quarto.qmd){.button .button-outline}
+[Ver a série ›](r/modelos-r-quarto.qmd){.button .button-outline}
 :::
 :::
 
@@ -42,7 +42,7 @@ Snippets de R para estatística, visualizações e relatórios reprodutíveis.
 ::: {.callout-note title="📐 LaTeX + Quarto: Templates"}
 Templates e padrões para artigos, slides e posts técnicos.
 
-[Ver os templates ›](outros-modelos-markdown.html){.button .button-outline}
+[Ver os templates ›](quarto/outros-modelos-markdown.qmd){.button .button-outline}
 :::
 :::
 :::

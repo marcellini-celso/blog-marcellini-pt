@@ -1,0 +1,198 @@
+---
+title: "📘 👨‍💻 📄 🐍 Modelos de Código em Python para Usar com Quarto"
+description: "O Quarto permite a execução direta de blocos de código Python."
+author: "Blog do Marcellini"
+date: 2025-06-29
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+editor: visual
+categories: [programação, Python, Quarto, artigo]
+tags: [programação, Python, Quarto, artigo]
+
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de Python 🐍](/posts/programacao/python/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+![Python](../../../images/Python.svg.png){width=30% style="margin-bottom: 2rem;"}
+
+# 📘 👨‍💻 📄 🐍 Modelos de Código em Python para Usar com Quarto
+
+## Introdução
+
+O Quarto permite a execução direta de blocos de código Python em arquivos `.qmd`, tornando possível criar relatórios interativos e reprodutíveis com análises, gráficos e visualizações em Python.
+
+O trecho abaixo é o **cabeçalho YAML** do documento `.qmd`, que define título, autor, data, formato de saída e opções de execução do código:
+
+```yaml
+---
+title: "Modelos de Código em Python para Usar com Quarto"
+author: "Blog do Marcellini"
+date: 2025-06-23
+format: html
+editor: visual
+lang: pt-BR
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+```
+
+---
+
+## Bloco de código simples em Python
+
+```{python}
+x = list(range(1, 11))
+y = [i**2 for i in x]
+y
+```
+
+---
+
+## Gráfico com matplotlib
+
+```{python}
+import matplotlib.pyplot as plt
+
+plt.plot(x, y, marker='o', color='blue')
+plt.title("Gráfico de x²")
+plt.xlabel("x")
+plt.ylabel("y = x²")
+plt.grid(True)
+plt.show()
+```
+
+---
+
+## Usando numpy e seaborn
+
+```{python}
+import numpy as np
+import seaborn as sns
+
+data = np.random.normal(size=1000)
+sns.histplot(data, kde=True)
+```
+---
+
+## Análise com pandas
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("data/iris.csv")
+df.head()
+```
+
+---
+
+## Estatísticas descritivas com pandas
+
+```{python}
+df.describe()
+```
+
+---
+
+## Gráfico de dispersão
+
+```{python}
+sns.scatterplot(data=df, x="sepal_length", y="petal_length", hue="species")
+```
+
+---
+
+## Regressão linear com scikit-learn
+
+```{python}
+from sklearn.linear_model import LinearRegression
+
+X = df[["sepal_length"]]
+y = df["petal_length"]
+
+modelo = LinearRegression()
+modelo.fit(X, y)
+
+print(f"Coeficiente angular: {modelo.coef_[0]:.2f}")
+print(f"Intercepto: {modelo.intercept_:.2f}")
+```
+
+---
+
+## Gráfico com linha de regressão
+
+```{python}
+plt.scatter(X, y, color='gray')
+plt.plot(X, modelo.predict(X), color='red')
+plt.xlabel("Sepal Length")
+plt.ylabel("Petal Length")
+plt.title("Regressão Linear Simples")
+plt.show()
+```
+
+---
+
+## Tabela formatada com tabulate
+
+```{python}
+from tabulate import tabulate
+
+tabela = df.head(5)
+print(tabulate(tabela, headers='keys', tablefmt='github'))
+```
+
+---
+
+## Conclusão
+
+Com Quarto e Python, é possível gerar relatórios e documentos ricos em conteúdo visual e analítico, integrando texto, código, gráficos e resultados de forma automatizada e elegante.
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de Python 🐍](/posts/programacao/python/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+🔝 [Voltar ao Topo](modelos-python-quarto.qmd)
+
+---
+
+*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
+
+# 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
+

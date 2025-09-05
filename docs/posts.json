@@ -1,99 +1,5 @@
 [
   {
-    "title": "📊 Estatística",
-    "href": "posts/estatistica/index.html",
-    "tags": [
-      "estatística",
-      "sumário de estatística",
-      "sumário"
-    ]
-  },
-  {
-    "title": "🧭 📊 Guia de Leitura — Estatística",
-    "href": "posts/estatistica/guia-estatistica.html",
-    "tags": [
-      "estatística",
-      "guia de leitura"
-    ]
-  },
-  {
-    "title": "🧑‍🏫 Blog Pessoal",
-    "href": "posts/pessoal/index.html",
-    "tags": [
-      "pessoal",
-      "sumário do blog pessoal",
-      "sumário",
-      "sobre",
-      "sobre o blog",
-      "sobre mim"
-    ]
-  },
-  {
-    "title": "🧭 🧑‍🏫 Guia de Leitura — Blog Pessoal",
-    "href": "posts/pessoal/guia-pessoal.html",
-    "tags": [
-      "blog pessoal",
-      "guia de leitura"
-    ]
-  },
-  {
-    "title": "📘 🧑‍💻 Sobre o Blog e Sobre Mim",
-    "href": "posts/pessoal/sobre-o-blog.html",
-    "tags": [
-      "pessoal",
-      "sobre",
-      "sobre o blog",
-      "sobre mim"
-    ]
-  },
-  {
-    "title": "🧮 Matemática",
-    "href": "posts/matematica/index.html",
-    "tags": [
-      "matemática",
-      "sumário de matemática",
-      "sumário"
-    ]
-  },
-  {
-    "title": "🧭 🧮 Guia de Leitura — Matemática",
-    "href": "posts/matematica/guia-matematica.html",
-    "tags": [
-      "matemática",
-      "guia de leitura"
-    ]
-  },
-  {
-    "title": "📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte",
-    "href": "posts/matematica/beleza-matematica.html",
-    "tags": [
-      "matemática",
-      "filosofia da matemática",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 🧮 Por que 0! = 1?",
-    "href": "posts/matematica/fatorial-zero.html",
-    "tags": [
-      "matemática",
-      "análise combinatória",
-      "fatorial",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 ✨ 🧮 ⚛️ Fórmulas que Marcaram a História",
-    "href": "posts/matematica/equacoes-historicas.html",
-    "tags": [
-      "matemática",
-      "física",
-      "história da ciência",
-      "artigo",
-      "fórmulas"
-    ]
-  },
-  {
     "title": "🎓 📊 Cursos de Estatística",
     "href": "posts/cursos/estatistica/index.html",
     "tags": [
@@ -170,13 +76,14 @@
     ]
   },
   {
-    "title": "🧠 Módulo 1.1: O que é Cálculo? História e aplicações",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html",
     "tags": [
-      "cálculo",
       "matemática",
-      "história do cálculo",
-      "aplicações",
+      "cálculo",
+      "conjuntos",
+      "conjuntos numéricos",
+      "exercícios",
       "cursos"
     ]
   },
@@ -195,14 +102,13 @@
     ]
   },
   {
-    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html",
+    "title": "🧠 Módulo 1.1: O que é Cálculo? História e aplicações",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html",
     "tags": [
-      "matemática",
       "cálculo",
-      "conjuntos",
-      "conjuntos numéricos",
-      "exercícios",
+      "matemática",
+      "história do cálculo",
+      "aplicações",
       "cursos"
     ]
   },
@@ -218,6 +124,187 @@
     ]
   },
   {
+    "title": "🧭 👨‍💻 Guia de Leitura — Programação",
+    "href": "posts/programacao/guia-programacao.html",
+    "tags": [
+      "programação",
+      "guia de leitura"
+    ]
+  },
+  {
+    "title": "👨‍💻 Programação",
+    "href": "posts/programacao/index.html",
+    "tags": [
+      "programação",
+      "sumário de programação",
+      "sumário",
+      "Python",
+      "R",
+      "LaTeX",
+      "Quarto",
+      "YAML"
+    ]
+  },
+  {
+    "title": "📄 📊 R",
+    "href": "posts/programacao/r/index.html",
+    "tags": [
+      "programação",
+      "R",
+      "sumário de R",
+      "sumário",
+      "Quarto"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 📊 Modelos de Código em R para Usar com Quarto",
+    "href": "posts/programacao/r/modelos-r-quarto.html",
+    "tags": [
+      "programação",
+      "R",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 🐍 Modelos de Código em Python para Usar com Quarto",
+    "href": "posts/programacao/python/modelos-python-quarto.html",
+    "tags": [
+      "programação",
+      "Python",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📄 🐍 Python",
+    "href": "posts/programacao/python/index.html",
+    "tags": [
+      "programação",
+      "Python",
+      "sumário de Python",
+      "sumário",
+      "Quarto"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 1",
+    "href": "posts/programacao/quarto/modelos-markdown.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📄 Quarto",
+    "href": "posts/programacao/quarto/index.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "sumário de Quarto",
+      "sumário",
+      "YAML"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 2",
+    "href": "posts/programacao/quarto/outros-modelos-markdown.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 YAML no Quarto: O Coração Invisível dos Seus Documentos",
+    "href": "posts/programacao/quarto/yaml-no-quarto.html",
+    "tags": [
+      "programação",
+      "YAML",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 Modelos de index.qmd para Projetos Quarto",
+    "href": "posts/programacao/quarto/modelos-index-quarto.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "YAML",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📄 📐 LaTeX",
+    "href": "posts/programacao/latex/index.html",
+    "tags": [
+      "programação",
+      "LaTeX",
+      "sumário de LaTeX",
+      "sumário",
+      "Quarto"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📐 Modelos de LaTeX para Usar com Quarto",
+    "href": "posts/programacao/latex/modelos-latex-quarto.html",
+    "tags": [
+      "programação",
+      "LaTeX",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "🧭 🧑‍🏫 Guia de Leitura — Blog Pessoal",
+    "href": "posts/pessoal/guia-pessoal.html",
+    "tags": [
+      "blog pessoal",
+      "guia de leitura"
+    ]
+  },
+  {
+    "title": "🧑‍🏫 Blog Pessoal",
+    "href": "posts/pessoal/index.html",
+    "tags": [
+      "pessoal",
+      "sumário do blog pessoal",
+      "sumário",
+      "sobre",
+      "sobre o blog",
+      "sobre mim"
+    ]
+  },
+  {
+    "title": "📘 🧑‍💻 Sobre o Blog e Sobre Mim",
+    "href": "posts/pessoal/sobre-o-blog.html",
+    "tags": [
+      "pessoal",
+      "sobre",
+      "sobre o blog",
+      "sobre mim"
+    ]
+  },
+  {
+    "title": "📊 Estatística",
+    "href": "posts/estatistica/index.html",
+    "tags": [
+      "estatística",
+      "sumário de estatística",
+      "sumário"
+    ]
+  },
+  {
+    "title": "🧭 📊 Guia de Leitura — Estatística",
+    "href": "posts/estatistica/guia-estatistica.html",
+    "tags": [
+      "estatística",
+      "guia de leitura"
+    ]
+  },
+  {
     "title": "🧭 🛰️ Guia de Leitura — Série Relatividade Especial",
     "href": "posts/fisica/guia-relatividade-especial.html",
     "tags": [
@@ -227,26 +314,6 @@
       "guia de leitura",
       "einstein",
       "série"
-    ]
-  },
-  {
-    "title": "⚛️ Física",
-    "href": "posts/fisica/index.html",
-    "tags": [
-      "física",
-      "sumário de física",
-      "sumário"
-    ]
-  },
-  {
-    "title": "📘 🛰️ Relatividade Especial: Einstein, o Tempo e a Velocidade da Luz",
-    "href": "posts/fisica/relatividade-especial.html",
-    "tags": [
-      "física",
-      "relatividade",
-      "relatividade especial",
-      "einstein",
-      "artigo"
     ]
   },
   {
@@ -268,6 +335,17 @@
     ]
   },
   {
+    "title": "📘 🛰️ Relatividade Especial: Einstein, o Tempo e a Velocidade da Luz",
+    "href": "posts/fisica/relatividade-especial.html",
+    "tags": [
+      "física",
+      "relatividade",
+      "relatividade especial",
+      "einstein",
+      "artigo"
+    ]
+  },
+  {
     "title": "🧭 📚 🌠 Guia de Leitura da Série Relatividade Geral",
     "href": "posts/fisica/guia-relatividade-geral.html",
     "tags": [
@@ -280,6 +358,15 @@
     ]
   },
   {
+    "title": "⚛️ Física",
+    "href": "posts/fisica/index.html",
+    "tags": [
+      "física",
+      "sumário de física",
+      "sumário"
+    ]
+  },
+  {
     "title": "📘 🧬 100 Anos da Mecânica Quântica (1925–2025)",
     "href": "posts/fisica/100-anos-mecanica-quantica.html",
     "tags": [
@@ -289,13 +376,13 @@
     ]
   },
   {
-    "title": "📘 🛰️ A Teoria da Relatividade Especial — Uma Visão Mais Acadêmica",
-    "href": "posts/fisica/relatividade-especial-academico.html",
+    "title": "🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica",
+    "href": "posts/fisica/guia-100-anos-mecanica-quantica.html",
     "tags": [
       "física",
-      "relatividade",
-      "relatividade especial",
-      "einstein"
+      "mecânica quântica",
+      "guia de leitura",
+      "série"
     ]
   },
   {
@@ -312,147 +399,60 @@
     ]
   },
   {
-    "title": "🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica",
-    "href": "posts/fisica/guia-100-anos-mecanica-quantica.html",
+    "title": "📘 🛰️ A Teoria da Relatividade Especial — Uma Visão Mais Acadêmica",
+    "href": "posts/fisica/relatividade-especial-academico.html",
     "tags": [
       "física",
-      "mecânica quântica",
-      "guia de leitura",
-      "série"
+      "relatividade",
+      "relatividade especial",
+      "einstein"
     ]
   },
   {
-    "title": "👨‍💻 Programação",
-    "href": "posts/programacao/index.html",
+    "title": "📘 🧮 Por que 0! = 1?",
+    "href": "posts/matematica/fatorial-zero.html",
     "tags": [
-      "programação",
-      "sumário de programação",
-      "sumário",
-      "Python",
-      "R",
-      "LaTeX",
-      "Quarto",
-      "YAML"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📐 Modelos de LaTeX para Usar com Quarto",
-    "href": "posts/programacao/modelos-latex-quarto.html",
-    "tags": [
-      "programação",
-      "LaTeX",
-      "Quarto",
+      "matemática",
+      "análise combinatória",
+      "fatorial",
       "artigo"
     ]
   },
   {
-    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 1",
-    "href": "posts/programacao/modelos-markdown.html",
+    "title": "📘 ✨ 🧮 ⚛️ Fórmulas que Marcaram a História",
+    "href": "posts/matematica/equacoes-historicas.html",
     "tags": [
-      "programação",
-      "Quarto",
+      "matemática",
+      "física",
+      "história da ciência",
+      "artigo",
+      "fórmulas"
+    ]
+  },
+  {
+    "title": "🧮 Matemática",
+    "href": "posts/matematica/index.html",
+    "tags": [
+      "matemática",
+      "sumário de matemática",
+      "sumário"
+    ]
+  },
+  {
+    "title": "📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte",
+    "href": "posts/matematica/beleza-matematica.html",
+    "tags": [
+      "matemática",
+      "filosofia da matemática",
       "artigo"
     ]
   },
   {
-    "title": "🧭 👨‍💻 Guia de Leitura — Programação",
-    "href": "posts/programacao/guia-programacao.html",
+    "title": "🧭 🧮 Guia de Leitura — Matemática",
+    "href": "posts/matematica/guia-matematica.html",
     "tags": [
-      "programação",
+      "matemática",
       "guia de leitura"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 🐍 Modelos de Código em Python para Usar com Quarto",
-    "href": "posts/programacao/modelos-python-quarto.html",
-    "tags": [
-      "programação",
-      "Python",
-      "Quarto",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 Modelos de index.qmd para Projetos Quarto",
-    "href": "posts/programacao/modelos-index-quarto.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "YAML",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 📊 Modelos de Código em R para Usar com Quarto",
-    "href": "posts/programacao/modelos-r-quarto.html",
-    "tags": [
-      "programação",
-      "R",
-      "Quarto",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 YAML no Quarto: O Coração Invisível dos Seus Documentos",
-    "href": "posts/programacao/yaml-no-quarto.html",
-    "tags": [
-      "programação",
-      "YAML",
-      "Quarto",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 2",
-    "href": "posts/programacao/outros-modelos-markdown.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📄 Quarto",
-    "href": "posts/programacao/quarto/index.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "sumário de Quarto",
-      "sumário",
-      "YAML"
-    ]
-  },
-  {
-    "title": "📄 🐍 Python",
-    "href": "posts/programacao/python/index.html",
-    "tags": [
-      "programação",
-      "Python",
-      "sumário de Python",
-      "sumário",
-      "Quarto"
-    ]
-  },
-  {
-    "title": "📄 📐 LaTeX",
-    "href": "posts/programacao/latex/index.html",
-    "tags": [
-      "programação",
-      "LaTeX",
-      "sumário de LaTeX",
-      "sumário",
-      "Quarto"
-    ]
-  },
-  {
-    "title": "📄 📊 R",
-    "href": "posts/programacao/r/index.html",
-    "tags": [
-      "programação",
-      "R",
-      "sumário de R",
-      "sumário",
-      "Quarto"
     ]
   }
 ]
