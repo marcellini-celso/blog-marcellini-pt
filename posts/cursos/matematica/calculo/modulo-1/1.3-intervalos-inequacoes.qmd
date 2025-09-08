@@ -1,8 +1,8 @@
 ---
 title: "📘 Módulo 1.3: Intervalos e Inequações"
-description: "Definição e representação de intervalos numéricos. Resolução e interpretação de inequações lineares e quadráticas."
+description: "Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas."
 author: "Blog do Marcellini"
-date: "2025-08-28"
+date: "2025-09-07"
 lang: pt-BR
 categories: [cálculo, matemática, intervalos, inequações, funções, cursos]
 tags: [cálculo, intervalos, inequações, matemática, cursos]
@@ -18,125 +18,376 @@ format:
 page-layout: full
 ---
 
-[← Sumário do Curso 🎓🧮](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+# Ordem em $\mathbb{R}$
 
-🎯 **Post Anterior:** 👉 [1.2 AP — Conjuntos Numéricos (Aprofundamento)](1.2-conjuntos-ap.qmd)
+::: {.callout-note title="📖 Definição — Ordem Estrita"}
+Sejam $a,b \in \mathbb{R}$:
+1. $a < b \iff b-a > 0$;
+2. $a > b \iff a-b > 0$.
+:::
 
----
+## Exemplos
+- $3<7$, pois $7-3=4>0$.
 
-# 🎯 Objetivos de Aprendizagem
+![](../images/diagrama-A1.svg){fig-align="center" width="80%" fig-cap="Exemplo"}
 
-- Compreender a noção de **intervalos** na reta real.  
-- Representar intervalos em **notação matemática** e em **diagramas na reta real**.  
-- Resolver **inequações lineares** e **quadráticas**.  
-- Interpretar soluções em termos de **conjuntos numéricos**.  
+- $-5<-2$, pois $-2-(-5)=3>0$.
 
----
+![](../images/diagrama-A2.svg){fig-align="center" width="80%" fig-cap="Exemplo"}
 
-# Introdução
+**Diagrama genérico:**
 
-Ao estudar funções e limites, é essencial compreender como **intervalos** e **inequações** descrevem subconjuntos dos números reais.  
-Eles aparecem constantemente em **domínios de funções**, **condições de existência** e na solução de **problemas práticos**.
-
----
-
-# Intervalos na Reta Real
-
-Um **intervalo** é um subconjunto de \(\mathbb{R}\) delimitado por dois números reais (ou ilimitado em uma direção).
-
-- **Intervalo fechado:** \([a,b] = \{ x \in \mathbb{R} \mid a \leq x \leq b \}\).  
-- **Intervalo aberto:** \((a,b) = \{ x \in \mathbb{R} \mid a < x < b \}\).  
-- **Intervalo semiaberto:** \([a,b)\) ou \((a,b]\).  
-- **Intervalos infinitos:** \((-\infty, b]\), \([a, +\infty)\), etc.
-
-📌 **Exemplo 1:**  
-O domínio da função \(f(x) = \sqrt{x-2}\) é o intervalo \([2, +\infty)\).
+![](../images/diagrama1.svg){fig-align="center" width="100%" fig-cap="Diagrama genérico"}
 
 ---
 
-# Representação Gráfica
+# Desigualdades Não-Estritas
 
-Podemos representar intervalos na **reta real**:  
+::: {.callout-note title="📖 Definição — Ordem Não-Estrita"}
+Sejam $a,b \in \mathbb{R}$:
 
-- Bolinha **preenchida** → extremidade incluída (fechado).  
-- Bolinha **vazia** → extremidade excluída (aberto).  
-- Seta → prolongamento ao infinito.
+1. $a \leqslant b \iff (a<b) \text{ ou } (a=b)$;
+2. $a \geqslant b \iff (a>b) \text{ ou } (a=b)$.
+:::
+
+- $a<b$ e $a>b$: **desigualdades estritas**.  
+- $a\leqslant b$ e $a\geqslant b$: **desigualdades não-estritas**.
+
+---
+
+# Teoremas Fundamentais da Ordem
+
+::: {.callout-important title="📐 Teorema 1 — Sinais"}
+1. $a>0 \iff a$ é positivo.  
+2. $a<0 \iff a$ é negativo.
+:::
+
+::: {.callout-important title="📐 Teorema 2 — Transitividade"}
+Se $a<b$ e $b<c$, então $a<c$.
+:::
+
+::: {.callout-important title="📐 Teorema 3 — Adição e Multiplicação"}
+1. Se $a<b$, então $a+c<b+c$.  
+2. Se $a<b$ e $c>0$, então $ac<bc$.  
+3. Se $a<b$ e $c<0$, então $ac>bc$.
+:::
+
+::: {.callout-important title="📐 Teorema 4 — Soma de Desigualdades"}
+Se $a<b$ e $c<d$, então $a+c<b+d$.
+:::
+
+---
+
+# Cadeias de Desigualdades
+
+Um número $x$ está **entre** $a$ e $b$ se $a<x<b$.  
+Exemplo: $2<x<5$.  
+
+Outras formas:  
+- $a \leqslant x \leqslant b$ → intervalo fechado;  
+- $a \leqslant x < b$, $a < x \leqslant b$ → intervalos semiabertos.
+
+---
+
+# Intervalos
+
+## Intervalo aberto
+\[(a,b) = \{x\in\mathbb{R}\mid a<x<b\}\]
+
+![](../images/figura2.svg){fig-align="center" width="100%" fig-cap="Intervalo aberto"}
+
+## Intervalo fechado
+\[[a,b] = \{x\in\mathbb{R}\mid a\leqslant x\leqslant b\}\]
+
+![](../images/figura3.svg){fig-align="center" width="100%" fig-cap="Intervalo fechado"}
+
+## Semiabertos
+- $(a,b] = \{x \mid a<x\leqslant b\}$  
+![](../images/diagrama-B1.svg){fig-align="center" width="100%" fig-cap="Intervalo semiaberto à esquerda"}
+
+- $[a,b) = \{x \mid a\leqslant x<b\}$
+![](../images/diagrama-B2.svg){fig-align="center" width="100%" fig-cap="Intervalo semiaberto à direita"}
+
+## Infinitos
+- $(a,+\infty) = \{x \mid x>a\}$  
+![](../images/diagrama-B3.svg){fig-align="center" width="100%" fig-cap="Intervalo infinito ilimitado à direita"}
+
+- $(-\infty,b) = \{x \mid x<b\}$  
+![](../images/diagrama-B5.svg){fig-align="center" width="100%" fig-cap="Intervalo infinito ilimitado à esquerda"}
+
+- $[a,+\infty) = \{x \mid x\geqslant a\}$
+![](../images/diagrama-B4.svg){fig-align="center" width="100%" fig-cap="Intervalo infinito ilimitado à direita"}
+
+- $(-\infty,b] = \{x \mid x\leqslant b\}$
+![](../images/diagrama-B6.svg){fig-align="center" width="100%" fig-cap="Intervalo infinito ilimitado à esquerda"}
+
+- $(-\infty,+\infty)=\mathbb{R}$
+![](../images/diagrama-B8.svg){fig-align="center" width="100%" fig-cap="Reta real"}
 
 ---
 
 # Inequações Lineares
 
-Uma inequação linear tem a forma:
-\[
-ax + b \, \{<, \leq, >, \geq\} \, c
-\]
-
-📌 **Exemplo 2:**  
-Resolver \(2x - 3 < 5\).  
+Forma geral (com $a \neq 0$):
 
 \[
-2x - 3 < 5 \implies 2x < 8 \implies x < 4
+ax+b < c
+\]
+\[
+ax+b \leqslant c
+\]
+\[
+ax+b > c
+\]
+\[
+ax+b \geqslant c
 \]
 
-Solução: \((-\infty, 4)\).
+---
+
+📌 **Observação importante:**  
+- Se $a=0$, a inequação se reduz a uma **afirmação constante** ($b<c$, $b\leqslant c$, etc.), sem variável.  
+- Se $a\neq 0$, podemos isolar $x$:
+
+  - Para $a>0$, a ordem é preservada.  
+  - Para $a<0$, a desigualdade inverte o sinal.
+
+::: {.callout-note title="🧮 Exemplos — Inequações Lineares"}
+
+## Casos com \(a>0\)
+
+1. \(2x-3<5 \;\;\Rightarrow\;\; x<4\)  
+   Solução: \((-\infty,4)\).
+
+2. \(3x+1\leqslant 7 \;\;\Rightarrow\;\; x\leqslant 2\)  
+   Solução: \((-\infty,2]\).
+
+3. \(5x-4>11 \;\;\Rightarrow\;\; x>3\)  
+   Solução: \((3,+\infty)\).
+
+4. \(4x+2\geqslant 10 \;\;\Rightarrow\;\; x\geqslant 2\)  
+   Solução: \([2,+\infty)\).
+
+---
+
+## Casos com \(a<0\)
+
+5. \(-2x+3<7 \;\;\Rightarrow\;\; x>-2\)  
+   Solução: \((-2,+\infty)\).
+
+6. \(-3x+1\leqslant -8 \;\;\Rightarrow\;\; x\geqslant 3\)  
+   Solução: \([3,+\infty)\).
+
+7. \(-4x+5>1 \;\;\Rightarrow\;\; x<1\)  
+   Solução: \((-\infty,1)\).
+
+8. \(-x-2\geqslant 5 \;\;\Rightarrow\;\; x\leqslant -7\)  
+   Solução: \((-\infty,-7]\).
+
+---
+
+📌 **Resumo importante:**  
+- Se \(a>0\), a desigualdade **mantém** o sentido.  
+- Se \(a<0\), a desigualdade **inverte** o sentido.  
+
+:::
+
+::: {.callout-note title="🧮 Exemplos resolvidos em detalhes"}
+
+- **Exemplo 1:** \(2x-3<5\)  (coeficiente \(a>0\))
+
+\[
+\begin{aligned}
+2x-3 &< 5 && \text{(dado)}\\
+2x &< 5+3 = 8 && \text{(somar 3 dos dois lados)}\\
+x &< \frac{8}{2} = 4 && \text{(dividir por 2>0, preserva o sinal)}
+\end{aligned}
+\]
+
+✅ **Solução (intervalo):** \((-\infty,4)\).  
+📌 **Checagem:** \(x=3 \Rightarrow 3<5\) (verdadeiro); \(x=4 \Rightarrow 5\not<5\) (falso).
+
+---
+
+- **Exemplo 5:** \(-2x+3<7\)  (coeficiente \(a<0\))
+
+\[
+\begin{aligned}
+-2x+3 &< 7 && \text{(dado)}\\
+-2x &< 7-3 = 4 && \text{(subtrair 3 dos dois lados)}\\
+x &> \frac{4}{-2} = -2 && \text{(dividir por -2<0, \textbf{inverte} o sinal)}
+\end{aligned}
+\]
+
+✅ **Solução (intervalo):** \((-2,+\infty)\).  
+📌 **Checagem:** \(x=0 \Rightarrow 3<7\) (verdadeiro); \(x=-2 \Rightarrow 7\not<7\) (falso).
+
+---
+
+**Resumo didático:**  
+- Somar/subtrair: mantém o sentido.  
+- Multiplicar/dividir por número positivo: mantém o sentido.  
+- Multiplicar/dividir por número negativo: **inverte** o sentido.
+
+:::
+
 
 ---
 
 # Inequações Quadráticas
 
-Uma inequação quadrática envolve \(ax^2 + bx + c\).  
-A solução é obtida analisando o **sinal da parábola**.
+Resolver analisando a parábola $y=ax^2+bx+c$.
 
-📌 **Exemplo 3:**  
-Resolver \(x^2 - 5x + 6 > 0\).
+📌 **Exemplo:** $x^2-5x+6>0$  
+- Raízes: $x=2,3$  
+- Parábola abre para cima.  
+- Sinal positivo fora de $(2,3)$.  
+- Solução: $(-\infty,2)\cup(3,+\infty)$.
 
-1. Zerar o polinômio: \(x^2 - 5x + 6 = 0 \implies (x-2)(x-3) = 0\).  
-2. Raízes: \(x=2\) e \(x=3\).  
-3. Testando intervalos:  
-   - Para \(x < 2\), \(f(x)>0\).  
-   - Para \(2 < x < 3\), \(f(x)<0\).  
-   - Para \(x > 3\), \(f(x)>0\).  
+**Diagrama na reta real:**
 
-Solução: \((-\infty,2) \cup (3,+\infty)\).
+![](../images/diagrama-C1.svg){fig-align="center" width="100%" fig-cap="Exemplo"}
 
----
-
-# Exercícios Propostos
-
-::: {.callout-note collapse=false title="Exercícios Propostos"}
-**Exercício 1** — Represente na reta real:  
-a) \((1,5]\)  
-b) \((-\infty, -2)\)  
-c) \([-3,3]\)  
-
-**Exercício 2** — Resolva as inequações:  
-a) \(3x+1 \geq 7\)  
-b) \(x^2 - 4 \leq 0\)  
-c) \((x-1)(x-4) < 0\)  
-:::
+**Gráfico da parábola:**
+![](../images/diagrama-C2.svg){fig-align="center" width="100%" fig-cap="Estudo do sinal"}
 
 ---
 
-# ✅ Gabarito
+📌 **Exemplo:** $x^2-5x+6>0$
 
-::: {.callout-important collapse=true title="Gabarito"}
+::: {.callout-note title="🧮 Resolução detalhada"}
 
-- **Exercício 1:**  
-a) Bolinha vazia em 1 e cheia em 5.  
-b) Intervalo aberto até \(-2\).  
-c) Intervalo fechado de \(-3\) a \(3\).  
+1. **Identificação:** trata-se de uma inequação quadrática com $a=1>0$, $b=-5$, $c=6$.
 
-- **Exercício 2:**  
-a) \(x \geq 2\) → \([2, +\infty)\)  
-b) \(-2 \leq x \leq 2\) → \([-2, 2]\)  
-c) \(1 < x < 4\) → \((1,4)\)
+2. **Equação associada:**  
+   \[
+   x^2 - 5x + 6 = 0
+   \]
+
+3. **Discriminante (Δ):**  
+   \[
+   \Delta = b^2 - 4ac = (-5)^2 - 4\cdot 1 \cdot 6 = 25 - 24 = 1
+   \]
+
+4. **Raízes reais:**  
+   \[
+   x = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{5 \pm 1}{2}
+   \]
+   Logo, $x_1=2$ e $x_2=3$.
+
+5. **Esboço da parábola:** como $a=1>0$, a parábola é **côncava para cima**.
+
+6. **Sinal da parábola:**  
+   - Para $x<2$, a parábola está acima do eixo ($f(x)>0$).  
+   - Para $2<x<3$, a parábola está abaixo do eixo ($f(x)<0$).  
+   - Para $x>3$, a parábola volta a ficar acima do eixo ($f(x)>0$).
+
+7. **Conclusão (solução da inequação $f(x)>0$):**  
+   \[
+   x \in (-\infty,2)\cup(3,+\infty)
+   \]
+
 :::
+
+**Diagrama na reta real:**
+
+![](../images/diagrama-C1.svg){fig-align="center" width="100%" fig-cap="Exemplo"}
+
+**Gráfico da parábola e estudo do sinal:**
+
+![](../images/diagrama-C2.svg){fig-align="center" width="100%" fig-cap="Estudo do sinal"}
+
+---
+
+📌 **Exemplo:** $-x^2+4x-3 \geqslant 0$
+
+::: {.callout-note title="🧮 Resolução detalhada"}
+
+1. **Identificação:** inequação quadrática com $a=-1<0$, $b=4$, $c=-3$.  
+
+2. **Equação associada:**  
+   \[
+   -x^2+4x-3=0
+   \]
+
+3. **Determinante (Δ):**  
+   \[
+   \Delta = b^2-4ac = (4)^2 - 4\cdot(-1)\cdot(-3) = 16 - 12 = 4
+   \]
+
+4. **Raízes reais:**  
+   \[
+   x=\frac{-b\pm\sqrt{\Delta}}{2a} = \frac{-4\pm 2}{-2}
+   \]
+   Logo, $x_1=1$ e $x_2=3$.
+
+5. **Esboço da parábola:** como $a=-1<0$, a parábola é **côncava para baixo**.  
+   Isso significa que a parábola está **acima do eixo $x$ entre as raízes** e **abaixo fora delas**.
+
+6. **Sinal da parábola:**  
+   - Para $x<1$, $f(x)<0$.  
+   - Para $1\leqslant x\leqslant 3$, $f(x)\geqslant 0$.  
+   - Para $x>3$, $f(x)<0$ novamente.
+
+7. **Conclusão (solução da inequação $f(x)\geqslant 0$):**  
+   \[
+   x \in [1,3]
+   \]
+
+:::
+
+**Diagrama na reta real:**
+
+![](../images/diagrama-C3.svg){fig-align="center" width="100%" fig-cap="Exemplo com $a<0$"}
+
+**Gráfico da parábola e estudo do sinal:**
+
+![](../images/diagrama-C4.svg){fig-align="center" width="100%" fig-cap="Parábola côncava para baixo e regiões de sinal"}
+
+---
+
+::: {.callout-note title="📝 Exercícios Propostos"}
+
+1. Represente na reta real:  
+   a) $(1,5]$  
+   b) $(-\infty,-2)$  
+   c) $[-3,3]$  
+
+2. Resolva:  
+   a) $3x+1\geqslant 7$  
+   b) $x^2-4\leqslant 0$  
+   c) $(x-1)(x-4)<0$  
+
+:::
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+1. a) bolinha aberta em 1, fechada em 5  
+   b) até $-2$ aberto  
+   c) fechado de $-3$ a $3$  
+
+2. a) $[2,+\infty)$  
+   b) $[-2,2]$  
+   c) $(1,4)$  
+
+:::
+
 
 ---
 
 # 🔗 Navegação
- 
-🎯 **Próximo Post:** 👉 [1.4 Funções] (Em Breve!)
+
+🎯 **Próximo Post:** 👉 **1.4 Funções** (Em Produção!)
 
 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.3-intervalos-inequacoes.qmd)
+
+---
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+
+
 

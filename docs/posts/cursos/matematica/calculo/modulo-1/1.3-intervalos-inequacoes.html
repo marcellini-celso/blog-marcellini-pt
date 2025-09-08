@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.21">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Definição e representação de intervalos numéricos. Resolução e interpretação de inequações lineares e quadráticas.">
+<meta name="description" content="Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.">
 
 <title>📘 Módulo 1.3: Intervalos e Inequações – Blog do Marcellini</title>
 <style>
@@ -35,15 +35,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
 <script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-f9d2e688c83043042fa051765c26f29b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-d0cbc992f0efc7cc645d720160ede72c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -101,7 +100,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -122,14 +121,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="📘 Módulo 1.3: Intervalos e Inequações – Blog do Marcellini">
-<meta property="og:description" content="Definição e representação de intervalos numéricos. Resolução e interpretação de inequações lineares e quadráticas.">
+<meta property="og:description" content="Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="📘 Módulo 1.3: Intervalos e Inequações – Blog do Marcellini">
-<meta name="twitter:description" content="Definição e representação de intervalos numéricos. Resolução e interpretação de inequações lineares e quadráticas.">
+<meta name="twitter:description" content="Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -144,8 +143,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -259,15 +256,23 @@ window.Quarto = {
     <h2 id="toc-title">Neste Módulo</h2>
    
   <ul>
-  <li><a href="#objetivos-de-aprendizagem" id="toc-objetivos-de-aprendizagem" class="nav-link active" data-scroll-target="#objetivos-de-aprendizagem"><span class="header-section-number">1</span> 🎯 Objetivos de Aprendizagem</a></li>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link" data-scroll-target="#introdução"><span class="header-section-number">2</span> Introdução</a></li>
-  <li><a href="#intervalos-na-reta-real" id="toc-intervalos-na-reta-real" class="nav-link" data-scroll-target="#intervalos-na-reta-real"><span class="header-section-number">3</span> Intervalos na Reta Real</a></li>
-  <li><a href="#representação-gráfica" id="toc-representação-gráfica" class="nav-link" data-scroll-target="#representação-gráfica"><span class="header-section-number">4</span> Representação Gráfica</a></li>
-  <li><a href="#inequações-lineares" id="toc-inequações-lineares" class="nav-link" data-scroll-target="#inequações-lineares"><span class="header-section-number">5</span> Inequações Lineares</a></li>
-  <li><a href="#inequações-quadráticas" id="toc-inequações-quadráticas" class="nav-link" data-scroll-target="#inequações-quadráticas"><span class="header-section-number">6</span> Inequações Quadráticas</a></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">7</span> Exercícios Propostos</a></li>
-  <li><a href="#gabarito" id="toc-gabarito" class="nav-link" data-scroll-target="#gabarito"><span class="header-section-number">8</span> ✅ Gabarito</a></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">9</span> 🔗 Navegação</a></li>
+  <li><a href="#ordem-em-mathbbr" id="toc-ordem-em-mathbbr" class="nav-link active" data-scroll-target="#ordem-em-mathbbr"><span class="header-section-number">1</span> Ordem em <span class="math inline">\(\mathbb{R}\)</span></a>
+  <ul class="collapse">
+  <li><a href="#exemplos" id="toc-exemplos" class="nav-link" data-scroll-target="#exemplos"><span class="header-section-number">1.1</span> Exemplos</a></li>
+  </ul></li>
+  <li><a href="#desigualdades-não-estritas" id="toc-desigualdades-não-estritas" class="nav-link" data-scroll-target="#desigualdades-não-estritas"><span class="header-section-number">2</span> Desigualdades Não-Estritas</a></li>
+  <li><a href="#teoremas-fundamentais-da-ordem" id="toc-teoremas-fundamentais-da-ordem" class="nav-link" data-scroll-target="#teoremas-fundamentais-da-ordem"><span class="header-section-number">3</span> Teoremas Fundamentais da Ordem</a></li>
+  <li><a href="#cadeias-de-desigualdades" id="toc-cadeias-de-desigualdades" class="nav-link" data-scroll-target="#cadeias-de-desigualdades"><span class="header-section-number">4</span> Cadeias de Desigualdades</a></li>
+  <li><a href="#intervalos" id="toc-intervalos" class="nav-link" data-scroll-target="#intervalos"><span class="header-section-number">5</span> Intervalos</a>
+  <ul class="collapse">
+  <li><a href="#intervalo-aberto" id="toc-intervalo-aberto" class="nav-link" data-scroll-target="#intervalo-aberto"><span class="header-section-number">5.1</span> Intervalo aberto</a></li>
+  <li><a href="#intervalo-fechado" id="toc-intervalo-fechado" class="nav-link" data-scroll-target="#intervalo-fechado"><span class="header-section-number">5.2</span> Intervalo fechado</a></li>
+  <li><a href="#semiabertos" id="toc-semiabertos" class="nav-link" data-scroll-target="#semiabertos"><span class="header-section-number">5.3</span> Semiabertos</a></li>
+  <li><a href="#infinitos" id="toc-infinitos" class="nav-link" data-scroll-target="#infinitos"><span class="header-section-number">5.4</span> Infinitos</a></li>
+  </ul></li>
+  <li><a href="#inequações-lineares" id="toc-inequações-lineares" class="nav-link" data-scroll-target="#inequações-lineares"><span class="header-section-number">6</span> Inequações Lineares</a></li>
+  <li><a href="#inequações-quadráticas" id="toc-inequações-quadráticas" class="nav-link" data-scroll-target="#inequações-quadráticas"><span class="header-section-number">7</span> Inequações Quadráticas</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">8</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -289,7 +294,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Definição e representação de intervalos numéricos. Resolução e interpretação de inequações lineares e quadráticas.
+    Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.
   </div>
 </div>
 
@@ -306,7 +311,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">28 de agosto de 2025</p>
+      <p class="date">7 de setembro de 2025</p>
     </div>
   </div>
   
@@ -318,164 +323,506 @@ window.Quarto = {
 </header>
 
 
-<p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso 🎓🧮</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">1.2 AP — Conjuntos Numéricos (Aprofundamento)</a></p>
-<hr>
-<section id="objetivos-de-aprendizagem" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 🎯 Objetivos de Aprendizagem</h1>
+<section id="ordem-em-mathbbr" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Ordem em <span class="math inline">\(\mathbb{R}\)</span></h1>
+<div class="callout callout-style-default callout-note callout-titled" title="📖 Definição — Ordem Estrita">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📖 Definição — Ordem Estrita
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sejam <span class="math inline">\(a,b \in \mathbb{R}\)</span>: 1. <span class="math inline">\(a &lt; b \iff b-a &gt; 0\)</span>; 2. <span class="math inline">\(a &gt; b \iff a-b &gt; 0\)</span>.</p>
+</div>
+</div>
+<section id="exemplos" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="exemplos"><span class="header-section-number">1.1</span> Exemplos</h2>
 <ul>
-<li>Compreender a noção de <strong>intervalos</strong> na reta real.<br>
-</li>
-<li>Representar intervalos em <strong>notação matemática</strong> e em <strong>diagramas na reta real</strong>.<br>
-</li>
-<li>Resolver <strong>inequações lineares</strong> e <strong>quadráticas</strong>.<br>
-</li>
-<li>Interpretar soluções em termos de <strong>conjuntos numéricos</strong>.</li>
+<li><span class="math inline">\(3&lt;7\)</span>, pois <span class="math inline">\(7-3=4&gt;0\)</span>.</li>
 </ul>
-<hr>
-</section>
-<section id="introdução" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Introdução</h1>
-<p>Ao estudar funções e limites, é essencial compreender como <strong>intervalos</strong> e <strong>inequações</strong> descrevem subconjuntos dos números reais.<br>
-Eles aparecem constantemente em <strong>domínios de funções</strong>, <strong>condições de existência</strong> e na solução de <strong>problemas práticos</strong>.</p>
-<hr>
-</section>
-<section id="intervalos-na-reta-real" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Intervalos na Reta Real</h1>
-<p>Um <strong>intervalo</strong> é um subconjunto de <span class="math inline">\(\mathbb{R}\)</span> delimitado por dois números reais (ou ilimitado em uma direção).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama-A1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap="Exemplo"></p>
+</figure>
+</div>
 <ul>
-<li><strong>Intervalo fechado:</strong> <span class="math inline">\([a,b] = \{ x \in \mathbb{R} \mid a \leq x \leq b \}\)</span>.<br>
-</li>
-<li><strong>Intervalo aberto:</strong> <span class="math inline">\((a,b) = \{ x \in \mathbb{R} \mid a &lt; x &lt; b \}\)</span>.<br>
-</li>
-<li><strong>Intervalo semiaberto:</strong> <span class="math inline">\([a,b)\)</span> ou <span class="math inline">\((a,b]\)</span>.<br>
-</li>
-<li><strong>Intervalos infinitos:</strong> <span class="math inline">\((-\infty, b]\)</span>, <span class="math inline">\([a, +\infty)\)</span>, etc.</li>
+<li><span class="math inline">\(-5&lt;-2\)</span>, pois <span class="math inline">\(-2-(-5)=3&gt;0\)</span>.</li>
 </ul>
-<p>📌 <strong>Exemplo 1:</strong><br>
-O domínio da função <span class="math inline">\(f(x) = \sqrt{x-2}\)</span> é o intervalo <span class="math inline">\([2, +\infty)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama-A2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap="Exemplo"></p>
+</figure>
+</div>
+<p><strong>Diagrama genérico:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Diagrama genérico"></p>
+</figure>
+</div>
 <hr>
 </section>
-<section id="representação-gráfica" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Representação Gráfica</h1>
-<p>Podemos representar intervalos na <strong>reta real</strong>:</p>
-<ul>
-<li>Bolinha <strong>preenchida</strong> → extremidade incluída (fechado).<br>
-</li>
-<li>Bolinha <strong>vazia</strong> → extremidade excluída (aberto).<br>
-</li>
-<li>Seta → prolongamento ao infinito.</li>
-</ul>
-<hr>
 </section>
-<section id="inequações-lineares" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Inequações Lineares</h1>
-<p>Uma inequação linear tem a forma: <span class="math display">\[
-ax + b \, \{&lt;, \leq, &gt;, \geq\} \, c
-\]</span></p>
-<p>📌 <strong>Exemplo 2:</strong><br>
-Resolver <span class="math inline">\(2x - 3 &lt; 5\)</span>.</p>
-<p><span class="math display">\[
-2x - 3 &lt; 5 \implies 2x &lt; 8 \implies x &lt; 4
-\]</span></p>
-<p>Solução: <span class="math inline">\((-\infty, 4)\)</span>.</p>
-<hr>
-</section>
-<section id="inequações-quadráticas" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Inequações Quadráticas</h1>
-<p>Uma inequação quadrática envolve <span class="math inline">\(ax^2 + bx + c\)</span>.<br>
-A solução é obtida analisando o <strong>sinal da parábola</strong>.</p>
-<p>📌 <strong>Exemplo 3:</strong><br>
-Resolver <span class="math inline">\(x^2 - 5x + 6 &gt; 0\)</span>.</p>
+<section id="desigualdades-não-estritas" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Desigualdades Não-Estritas</h1>
+<div class="callout callout-style-default callout-note callout-titled" title="📖 Definição — Ordem Não-Estrita">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📖 Definição — Ordem Não-Estrita
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sejam <span class="math inline">\(a,b \in \mathbb{R}\)</span>:</p>
 <ol type="1">
-<li>Zerar o polinômio: <span class="math inline">\(x^2 - 5x + 6 = 0 \implies (x-2)(x-3) = 0\)</span>.<br>
-</li>
-<li>Raízes: <span class="math inline">\(x=2\)</span> e <span class="math inline">\(x=3\)</span>.<br>
-</li>
-<li>Testando intervalos:
+<li><span class="math inline">\(a \leqslant b \iff (a&lt;b) \text{ ou } (a=b)\)</span>;</li>
+<li><span class="math inline">\(a \geqslant b \iff (a&gt;b) \text{ ou } (a=b)\)</span>.</li>
+</ol>
+</div>
+</div>
 <ul>
-<li>Para <span class="math inline">\(x &lt; 2\)</span>, <span class="math inline">\(f(x)&gt;0\)</span>.<br>
+<li><span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(a&gt;b\)</span>: <strong>desigualdades estritas</strong>.<br>
 </li>
-<li>Para <span class="math inline">\(2 &lt; x &lt; 3\)</span>, <span class="math inline">\(f(x)&lt;0\)</span>.<br>
+<li><span class="math inline">\(a\leqslant b\)</span> e <span class="math inline">\(a\geqslant b\)</span>: <strong>desigualdades não-estritas</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="teoremas-fundamentais-da-ordem" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Teoremas Fundamentais da Ordem</h1>
+<div class="callout callout-style-default callout-important callout-titled" title="📐 Teorema 1 — Sinais">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📐 Teorema 1 — Sinais
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><span class="math inline">\(a&gt;0 \iff a\)</span> é positivo.<br>
 </li>
-<li>Para <span class="math inline">\(x &gt; 3\)</span>, <span class="math inline">\(f(x)&gt;0\)</span>.</li>
+<li><span class="math inline">\(a&lt;0 \iff a\)</span> é negativo.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="📐 Teorema 2 — Transitividade">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📐 Teorema 2 — Transitividade
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se <span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(b&lt;c\)</span>, então <span class="math inline">\(a&lt;c\)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="📐 Teorema 3 — Adição e Multiplicação">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📐 Teorema 3 — Adição e Multiplicação
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Se <span class="math inline">\(a&lt;b\)</span>, então <span class="math inline">\(a+c&lt;b+c\)</span>.<br>
+</li>
+<li>Se <span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(c&gt;0\)</span>, então <span class="math inline">\(ac&lt;bc\)</span>.<br>
+</li>
+<li>Se <span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(c&lt;0\)</span>, então <span class="math inline">\(ac&gt;bc\)</span>.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="📐 Teorema 4 — Soma de Desigualdades">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📐 Teorema 4 — Soma de Desigualdades
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se <span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(c&lt;d\)</span>, então <span class="math inline">\(a+c&lt;b+d\)</span>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="cadeias-de-desigualdades" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Cadeias de Desigualdades</h1>
+<p>Um número <span class="math inline">\(x\)</span> está <strong>entre</strong> <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> se <span class="math inline">\(a&lt;x&lt;b\)</span>.<br>
+Exemplo: <span class="math inline">\(2&lt;x&lt;5\)</span>.</p>
+<p>Outras formas:<br>
+- <span class="math inline">\(a \leqslant x \leqslant b\)</span> → intervalo fechado;<br>
+- <span class="math inline">\(a \leqslant x &lt; b\)</span>, <span class="math inline">\(a &lt; x \leqslant b\)</span> → intervalos semiabertos.</p>
+<hr>
+</section>
+<section id="intervalos" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Intervalos</h1>
+<section id="intervalo-aberto" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="intervalo-aberto"><span class="header-section-number">5.1</span> Intervalo aberto</h2>
+<p><span class="math display">\[(a,b) = \{x\in\mathbb{R}\mid a&lt;x&lt;b\}\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/figura2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Intervalo aberto"></p>
+</figure>
+</div>
+</section>
+<section id="intervalo-fechado" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="intervalo-fechado"><span class="header-section-number">5.2</span> Intervalo fechado</h2>
+<p><span class="math display">\[[a,b] = \{x\in\mathbb{R}\mid a\leqslant x\leqslant b\}\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/figura3.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Intervalo fechado"></p>
+</figure>
+</div>
+</section>
+<section id="semiabertos" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="semiabertos"><span class="header-section-number">5.3</span> Semiabertos</h2>
+<ul>
+<li><p><span class="math inline">\((a,b] = \{x \mid a&lt;x\leqslant b\}\)</span><br>
+<img src="../images/diagrama-B1.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Intervalo semiaberto à esquerda"></p></li>
+<li><p><span class="math inline">\([a,b) = \{x \mid a\leqslant x&lt;b\}\)</span> <img src="../images/diagrama-B2.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Intervalo semiaberto à direita"></p></li>
+</ul>
+</section>
+<section id="infinitos" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="infinitos"><span class="header-section-number">5.4</span> Infinitos</h2>
+<ul>
+<li><p><span class="math inline">\((a,+\infty) = \{x \mid x&gt;a\}\)</span><br>
+<img src="../images/diagrama-B3.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Intervalo infinito ilimitado à direita"></p></li>
+<li><p><span class="math inline">\((-\infty,b) = \{x \mid x&lt;b\}\)</span><br>
+<img src="../images/diagrama-B5.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Intervalo infinito ilimitado à esquerda"></p></li>
+<li><p><span class="math inline">\([a,+\infty) = \{x \mid x\geqslant a\}\)</span> <img src="../images/diagrama-B4.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Intervalo infinito ilimitado à direita"></p></li>
+<li><p><span class="math inline">\((-\infty,b] = \{x \mid x\leqslant b\}\)</span> <img src="../images/diagrama-B6.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Intervalo infinito ilimitado à esquerda"></p></li>
+<li><p><span class="math inline">\((-\infty,+\infty)=\mathbb{R}\)</span> <img src="../images/diagrama-B8.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Reta real"></p></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="inequações-lineares" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Inequações Lineares</h1>
+<p>Forma geral (com <span class="math inline">\(a \neq 0\)</span>):</p>
+<p><span class="math display">\[
+ax+b &lt; c
+\]</span> <span class="math display">\[
+ax+b \leqslant c
+\]</span> <span class="math display">\[
+ax+b &gt; c
+\]</span> <span class="math display">\[
+ax+b \geqslant c
+\]</span></p>
+<hr>
+<p>📌 <strong>Observação importante:</strong><br>
+- Se <span class="math inline">\(a=0\)</span>, a inequação se reduz a uma <strong>afirmação constante</strong> (<span class="math inline">\(b&lt;c\)</span>, <span class="math inline">\(b\leqslant c\)</span>, etc.), sem variável.<br>
+- Se <span class="math inline">\(a\neq 0\)</span>, podemos isolar <span class="math inline">\(x\)</span>:</p>
+<ul>
+<li>Para <span class="math inline">\(a&gt;0\)</span>, a ordem é preservada.<br>
+</li>
+<li>Para <span class="math inline">\(a&lt;0\)</span>, a desigualdade inverte o sinal.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="🧮 Exemplos — Inequações Lineares">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧮 Exemplos — Inequações Lineares
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="casos-com-a0" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="casos-com-a0"><span class="header-section-number">6.1</span> Casos com <span class="math inline">\(a&gt;0\)</span></h2>
+<ol type="1">
+<li><p><span class="math inline">\(2x-3&lt;5 \;\;\Rightarrow\;\; x&lt;4\)</span><br>
+Solução: <span class="math inline">\((-\infty,4)\)</span>.</p></li>
+<li><p><span class="math inline">\(3x+1\leqslant 7 \;\;\Rightarrow\;\; x\leqslant 2\)</span><br>
+Solução: <span class="math inline">\((-\infty,2]\)</span>.</p></li>
+<li><p><span class="math inline">\(5x-4&gt;11 \;\;\Rightarrow\;\; x&gt;3\)</span><br>
+Solução: <span class="math inline">\((3,+\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(4x+2\geqslant 10 \;\;\Rightarrow\;\; x\geqslant 2\)</span><br>
+Solução: <span class="math inline">\([2,+\infty)\)</span>.</p></li>
+</ol>
+<hr>
+</section>
+<section id="casos-com-a0-1" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="casos-com-a0-1"><span class="header-section-number">6.2</span> Casos com <span class="math inline">\(a&lt;0\)</span></h2>
+<ol start="5" type="1">
+<li><p><span class="math inline">\(-2x+3&lt;7 \;\;\Rightarrow\;\; x&gt;-2\)</span><br>
+Solução: <span class="math inline">\((-2,+\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(-3x+1\leqslant -8 \;\;\Rightarrow\;\; x\geqslant 3\)</span><br>
+Solução: <span class="math inline">\([3,+\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(-4x+5&gt;1 \;\;\Rightarrow\;\; x&lt;1\)</span><br>
+Solução: <span class="math inline">\((-\infty,1)\)</span>.</p></li>
+<li><p><span class="math inline">\(-x-2\geqslant 5 \;\;\Rightarrow\;\; x\leqslant -7\)</span><br>
+Solução: <span class="math inline">\((-\infty,-7]\)</span>.</p></li>
+</ol>
+<hr>
+<p>📌 <strong>Resumo importante:</strong><br>
+- Se <span class="math inline">\(a&gt;0\)</span>, a desigualdade <strong>mantém</strong> o sentido.<br>
+- Se <span class="math inline">\(a&lt;0\)</span>, a desigualdade <strong>inverte</strong> o sentido.</p>
+</section>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="🧮 Exemplos resolvidos em detalhes">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧮 Exemplos resolvidos em detalhes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Exemplo 1:</strong> <span class="math inline">\(2x-3&lt;5\)</span> (coeficiente <span class="math inline">\(a&gt;0\)</span>)</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+2x-3 &amp;&lt; 5 &amp;&amp; \text{(dado)}\\
+2x &amp;&lt; 5+3 = 8 &amp;&amp; \text{(somar 3 dos dois lados)}\\
+x &amp;&lt; \frac{8}{2} = 4 &amp;&amp; \text{(dividir por 2&gt;0, preserva o sinal)}
+\end{aligned}
+\]</span></p>
+<p>✅ <strong>Solução (intervalo):</strong> <span class="math inline">\((-\infty,4)\)</span>.<br>
+📌 <strong>Checagem:</strong> <span class="math inline">\(x=3 \Rightarrow 3&lt;5\)</span> (verdadeiro); <span class="math inline">\(x=4 \Rightarrow 5\not&lt;5\)</span> (falso).</p>
+<hr>
+<ul>
+<li><strong>Exemplo 5:</strong> <span class="math inline">\(-2x+3&lt;7\)</span> (coeficiente <span class="math inline">\(a&lt;0\)</span>)</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+-2x+3 &amp;&lt; 7 &amp;&amp; \text{(dado)}\\
+-2x &amp;&lt; 7-3 = 4 &amp;&amp; \text{(subtrair 3 dos dois lados)}\\
+x &amp;&gt; \frac{4}{-2} = -2 &amp;&amp; \text{(dividir por -2&lt;0, \textbf{inverte} o sinal)}
+\end{aligned}
+\]</span></p>
+<p>✅ <strong>Solução (intervalo):</strong> <span class="math inline">\((-2,+\infty)\)</span>.<br>
+📌 <strong>Checagem:</strong> <span class="math inline">\(x=0 \Rightarrow 3&lt;7\)</span> (verdadeiro); <span class="math inline">\(x=-2 \Rightarrow 7\not&lt;7\)</span> (falso).</p>
+<hr>
+<p><strong>Resumo didático:</strong><br>
+- Somar/subtrair: mantém o sentido.<br>
+- Multiplicar/dividir por número positivo: mantém o sentido.<br>
+- Multiplicar/dividir por número negativo: <strong>inverte</strong> o sentido.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="inequações-quadráticas" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Inequações Quadráticas</h1>
+<p>Resolver analisando a parábola <span class="math inline">\(y=ax^2+bx+c\)</span>.</p>
+<p>📌 <strong>Exemplo:</strong> <span class="math inline">\(x^2-5x+6&gt;0\)</span><br>
+- Raízes: <span class="math inline">\(x=2,3\)</span><br>
+- Parábola abre para cima.<br>
+- Sinal positivo fora de <span class="math inline">\((2,3)\)</span>.<br>
+- Solução: <span class="math inline">\((-\infty,2)\cup(3,+\infty)\)</span>.</p>
+<p><strong>Diagrama na reta real:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama-C1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Exemplo"></p>
+</figure>
+</div>
+<p><strong>Gráfico da parábola:</strong> <img src="../images/diagrama-C2.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Estudo do sinal"></p>
+<hr>
+<p>📌 <strong>Exemplo:</strong> <span class="math inline">\(x^2-5x+6&gt;0\)</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="🧮 Resolução detalhada">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧮 Resolução detalhada
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Identificação:</strong> trata-se de uma inequação quadrática com <span class="math inline">\(a=1&gt;0\)</span>, <span class="math inline">\(b=-5\)</span>, <span class="math inline">\(c=6\)</span>.</p></li>
+<li><p><strong>Equação associada:</strong><br>
+<span class="math display">\[
+x^2 - 5x + 6 = 0
+\]</span></p></li>
+<li><p><strong>Discriminante (Δ):</strong><br>
+<span class="math display">\[
+\Delta = b^2 - 4ac = (-5)^2 - 4\cdot 1 \cdot 6 = 25 - 24 = 1
+\]</span></p></li>
+<li><p><strong>Raízes reais:</strong><br>
+<span class="math display">\[
+x = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{5 \pm 1}{2}
+\]</span> Logo, <span class="math inline">\(x_1=2\)</span> e <span class="math inline">\(x_2=3\)</span>.</p></li>
+<li><p><strong>Esboço da parábola:</strong> como <span class="math inline">\(a=1&gt;0\)</span>, a parábola é <strong>côncava para cima</strong>.</p></li>
+<li><p><strong>Sinal da parábola:</strong></p>
+<ul>
+<li>Para <span class="math inline">\(x&lt;2\)</span>, a parábola está acima do eixo (<span class="math inline">\(f(x)&gt;0\)</span>).<br>
+</li>
+<li>Para <span class="math inline">\(2&lt;x&lt;3\)</span>, a parábola está abaixo do eixo (<span class="math inline">\(f(x)&lt;0\)</span>).<br>
+</li>
+<li>Para <span class="math inline">\(x&gt;3\)</span>, a parábola volta a ficar acima do eixo (<span class="math inline">\(f(x)&gt;0\)</span>).</li>
 </ul></li>
+<li><p><strong>Conclusão (solução da inequação <span class="math inline">\(f(x)&gt;0\)</span>):</strong><br>
+<span class="math display">\[
+x \in (-\infty,2)\cup(3,+\infty)
+\]</span></p></li>
 </ol>
-<p>Solução: <span class="math inline">\((-\infty,2) \cup (3,+\infty)\)</span>.</p>
+</div>
+</div>
+<p><strong>Diagrama na reta real:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama-C1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Exemplo"></p>
+</figure>
+</div>
+<p><strong>Gráfico da parábola e estudo do sinal:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama-C2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Estudo do sinal"></p>
+</figure>
+</div>
 <hr>
-</section>
-<section id="exercícios-propostos" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Exercícios Propostos</h1>
-<div class="callout callout-style-default callout-note callout-titled" title="Exercícios Propostos">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<p>📌 <strong>Exemplo:</strong> <span class="math inline">\(-x^2+4x-3 \geqslant 0\)</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="🧮 Resolução detalhada">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Exercícios Propostos
+🧮 Resolução detalhada
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><strong>Exercício 1</strong> — Represente na reta real:<br>
-a) <span class="math inline">\((1,5]\)</span><br>
-b) <span class="math inline">\((-\infty, -2)\)</span><br>
-c) <span class="math inline">\([-3,3]\)</span></p>
-<p><strong>Exercício 2</strong> — Resolva as inequações:<br>
-a) <span class="math inline">\(3x+1 \geq 7\)</span><br>
-b) <span class="math inline">\(x^2 - 4 \leq 0\)</span><br>
-c) <span class="math inline">\((x-1)(x-4) &lt; 0\)</span></p>
+<ol type="1">
+<li><p><strong>Identificação:</strong> inequação quadrática com <span class="math inline">\(a=-1&lt;0\)</span>, <span class="math inline">\(b=4\)</span>, <span class="math inline">\(c=-3\)</span>.</p></li>
+<li><p><strong>Equação associada:</strong><br>
+<span class="math display">\[
+-x^2+4x-3=0
+\]</span></p></li>
+<li><p><strong>Determinante (Δ):</strong><br>
+<span class="math display">\[
+\Delta = b^2-4ac = (4)^2 - 4\cdot(-1)\cdot(-3) = 16 - 12 = 4
+\]</span></p></li>
+<li><p><strong>Raízes reais:</strong><br>
+<span class="math display">\[
+x=\frac{-b\pm\sqrt{\Delta}}{2a} = \frac{-4\pm 2}{-2}
+\]</span> Logo, <span class="math inline">\(x_1=1\)</span> e <span class="math inline">\(x_2=3\)</span>.</p></li>
+<li><p><strong>Esboço da parábola:</strong> como <span class="math inline">\(a=-1&lt;0\)</span>, a parábola é <strong>côncava para baixo</strong>.<br>
+Isso significa que a parábola está <strong>acima do eixo <span class="math inline">\(x\)</span> entre as raízes</strong> e <strong>abaixo fora delas</strong>.</p></li>
+<li><p><strong>Sinal da parábola:</strong></p>
+<ul>
+<li>Para <span class="math inline">\(x&lt;1\)</span>, <span class="math inline">\(f(x)&lt;0\)</span>.<br>
+</li>
+<li>Para <span class="math inline">\(1\leqslant x\leqslant 3\)</span>, <span class="math inline">\(f(x)\geqslant 0\)</span>.<br>
+</li>
+<li>Para <span class="math inline">\(x&gt;3\)</span>, <span class="math inline">\(f(x)&lt;0\)</span> novamente.</li>
+</ul></li>
+<li><p><strong>Conclusão (solução da inequação <span class="math inline">\(f(x)\geqslant 0\)</span>):</strong><br>
+<span class="math display">\[
+x \in [1,3]
+\]</span></p></li>
+</ol>
 </div>
 </div>
+<p><strong>Diagrama na reta real:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama-C3.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Exemplo com $a<0$"></p>
+</figure>
+</div>
+<p><strong>Gráfico da parábola e estudo do sinal:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/diagrama-C4.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Parábola côncava para baixo e regiões de sinal"></p>
+</figure>
 </div>
 <hr>
-</section>
-<section id="gabarito" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> ✅ Gabarito</h1>
-<div class="callout callout-style-default callout-important callout-titled" title="Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios Propostos">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>Gabarito
+📝 Exercícios Propostos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Represente na reta real:
+<ol type="a">
+<li><span class="math inline">\((1,5]\)</span><br>
+</li>
+<li><span class="math inline">\((-\infty,-2)\)</span><br>
+</li>
+<li><span class="math inline">\([-3,3]\)</span></li>
+</ol></li>
+<li>Resolva:
+<ol type="a">
+<li><span class="math inline">\(3x+1\geqslant 7\)</span><br>
+</li>
+<li><span class="math inline">\(x^2-4\leqslant 0\)</span><br>
+</li>
+<li><span class="math inline">\((x-1)(x-4)&lt;0\)</span></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+✅ Gabarito
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ul>
-<li><strong>Exercício 1:</strong><br>
+<ol type="1">
+<li><ol type="a">
+<li>bolinha aberta em 1, fechada em 5<br>
 </li>
-</ul>
-<ol type="a">
-<li>Bolinha vazia em 1 e cheia em 5.<br>
+<li>até <span class="math inline">\(-2\)</span> aberto<br>
 </li>
-<li>Intervalo aberto até <span class="math inline">\(-2\)</span>.<br>
+<li>fechado de <span class="math inline">\(-3\)</span> a <span class="math inline">\(3\)</span></li>
+</ol></li>
+<li><ol type="a">
+<li><span class="math inline">\([2,+\infty)\)</span><br>
 </li>
-<li>Intervalo fechado de <span class="math inline">\(-3\)</span> a <span class="math inline">\(3\)</span>.</li>
-</ol>
-<ul>
-<li><strong>Exercício 2:</strong><br>
+<li><span class="math inline">\([-2,2]\)</span><br>
 </li>
-</ul>
-<ol type="a">
-<li><span class="math inline">\(x \geq 2\)</span> → <span class="math inline">\([2, +\infty)\)</span><br>
-</li>
-<li><span class="math inline">\(-2 \leq x \leq 2\)</span> → <span class="math inline">\([-2, 2]\)</span><br>
-</li>
-<li><span class="math inline">\(1 &lt; x &lt; 4\)</span> → <span class="math inline">\((1,4)\)</span></li>
+<li><span class="math inline">\((1,4)\)</span></li>
+</ol></li>
 </ol>
 </div>
 </div>
 </div>
 <hr>
 </section>
-<section id="navegação" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Próximo Post:</strong> 👉 [1.4 Funções] (Em Breve!)</p>
+<section id="navegação" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Próximo Post:</strong> 👉 <strong>1.4 Funções</strong> (Em Produção!)</p>
 <p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">Topo</a></p>
+<hr>
+<p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
+</div>
+</div>
 
 
 </section>

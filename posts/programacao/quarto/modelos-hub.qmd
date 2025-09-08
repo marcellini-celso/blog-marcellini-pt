@@ -1,0 +1,110 @@
+---
+title: "📚 📄 Hub de Modelos & Templates (Quarto)"
+description: "Página-índice com links organizados para posts de modelos e boas práticas em Quarto."
+author: "Blog do Marcellini"
+date: "2025-09-06"
+lang: pt-BR
+categories: [programação, Quarto, modelos, templates]
+tags: [programação, Quarto, modelos, templates]
+format:
+  html:
+    toc: true
+    toc-title: "Nesta página"
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+editor: visual
+---
+
+<!-- Breadcrumbs -->
+
+[← Guia de Programação](../guia-programacao.qmd)  · [← Seção de Programação](../index.qmd)  · 🔝 [Topo](#top)
+
+---
+
+# 📚 Hub de Modelos & Templates
+
+Bem-vindo ao **hub oficial** de *Modelos & Templates* do Blog do Marcellini. Aqui você encontra, em um único lugar, os posts com **modelos prontos**, **boas práticas** e **exemplos reutilizáveis** para acelerar sua produção em Quarto.
+
+> 💡 **Dica:** Este hub é o destino recomendado para o botão do seu callout:
+> `[Ver os modelos ›](quarto/modelos-hub.qmd){.button .button-outline}`
+
+---
+
+## 📦 Coleções Principais
+
+::: {.columns}
+::: {.column width="50%"}
+
+### 📘 📄 Modelos de `index.qmd`
+
+Modelos organizados de arquivos `index.qmd` para seções temáticas em projetos Quarto.
+
+[Abrir ▶](modelos-index-quarto.qmd){.button}
+:::
+
+::: {.column width="50%"}
+
+### 🧭 YAML no Quarto
+
+Explicação dos campos do **cabeçalho YAML** em arquivos `.qmd`, com boas práticas e exemplos prontos para reutilização.
+
+[Abrir ▶](yaml-no-quarto.qmd){.button}
+:::
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+
+### ✍️ Modelos em Quarto Markdown — Parte 1
+
+Demonstração de estilos, **sintaxe** e **boas práticas** para escrever textos em Markdown dentro do Quarto.
+
+[Abrir ▶](modelos-markdown.qmd){.button}
+:::
+
+::: {.column width="50%"}
+
+### ✍️ Modelos em Quarto Markdown — Parte 2
+
+Continuação com **recursos práticos** para produção de documentos **reprodutíveis** e **bem formatados**.
+
+[Abrir ▶](outros-modelos-markdown.qmd){.button}
+:::
+:::
+
+---
+
+## ✅ Guia Consolidado (Recomendado)
+
+> **Novo/Consolidado:** Se preferir **um único post** que reúna as partes 1 e 2 (sem repetições), use o guia a seguir:
+
+* **📘 📄 Modelos em Quarto Markdown — Guia Completo**
+  *Consolida os conteúdos de “Modelo de Markdown com Quarto — Parte 1” e “Parte 2”, com exemplos fluídos e reorganizados.*
+  [Abrir ▶](modelos-quarto-markdown.qmd){.button .button-outline}
+
+---
+
+<!-- Breadcrumbs -->
+
+[← Guia de Programação](../guia-programacao.qmd)  · [← Seção de Programação](../index.qmd)  · 🔝 [Topo](#top)
+
+---
+
+*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
+
+## 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
+

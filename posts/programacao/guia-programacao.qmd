@@ -35,11 +35,12 @@ Este guia oferece uma ordem de leitura sugerida para quem deseja estudar Program
 
 1. **[📘 📐Modelos LaTeX para Quarto](latex/modelos-latex-quarto.qmd)** — Comece por aqui para explorar como LaTeX pode ser integrado ao Quarto para produção científica elegante e estruturada.
 2. **[📘 📄 YAML no Quarto](quarto/yaml-no-quarto.qmd)** — Comece entendendo a estrutura de metadados dos arquivos `.qmd`.
-3. **[📘 📄 Modelos em Quarto Markdown -- Parte 1](quarto/modelos-markdown.qmd)** — Aprenda a escrever com clareza usando Quarto Markdown.
-4. **[📘 📄 Modelos em Quarto Markdown -- Parte 2](quarto/outros-modelos-markdown.qmd)** -- Aprenda a escrever com clareza usando Quarto Markdown -- Parte 2.
-5. **[📘 📄 Modelos de index.qmd](quarto/modelos-index-quarto.qmd)** — Organize seu projeto com boas práticas na construção de seções.
-6. **[📘 📄 🐍 Modelos Python para uso no Quarto](python/modelos-python-quarto.qmd)** — Veja como utilizar Python para gerar visualizações e resultados dinâmicos dentro de documentos Quarto.
-7. **[📘 📄 📊 Modelos R para Quarto](r/modelos-r-quarto.qmd)** — Inicie com este material para aprender a usar R no contexto do Quarto e criar documentos interativos e bem estruturados.
+3. **[📘 📄 Modelos em Quarto Markdown -- Guia Completo](quarto/modelos-quarto-markdown.qmd)** — Este post consolida, em um único lugar, os conteúdos de **“Modelo de Markdown com Quarto — Parte 1”** e **“Parte 2”**, removendo repetições e organizando exemplos de forma fluida.
+4. **[📘 📄 Modelos em Quarto Markdown -- Parte 1](quarto/modelos-markdown.qmd)** — Aprenda a escrever com clareza usando Quarto Markdown.
+5. **[📘 📄 Modelos em Quarto Markdown -- Parte 2](quarto/outros-modelos-markdown.qmd)** -- Aprenda a escrever com clareza usando Quarto Markdown -- Parte 2.
+6. **[📘 📄 Modelos de index.qmd](quarto/modelos-index-quarto.qmd)** — Organize seu projeto com boas práticas na construção de seções.
+7. **[📘 📄 🐍 Modelos Python para uso no Quarto](python/modelos-python-quarto.qmd)** — Veja como utilizar Python para gerar visualizações e resultados dinâmicos dentro de documentos Quarto.
+8. **[📘 📄 📊 Modelos R para Quarto](r/modelos-r-quarto.qmd)** — Inicie com este material para aprender a usar R no contexto do Quarto e criar documentos interativos e bem estruturados.
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 

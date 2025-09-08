@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.21">
+<meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Blog do Marcellini">
 <meta name="description" content="Este curso tem como propósito apresentar, de forma acessível e aplicada, os fundamentos da distribuição normal, também conhecida como distribuição de Gauss, com apoio de visualizações gráficas e ferramentas computacionais.">
@@ -66,15 +66,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
 <script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-f9d2e688c83043042fa051765c26f29b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-d0cbc992f0efc7cc645d720160ede72c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -124,7 +123,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -162,8 +161,6 @@ window.Quarto = {
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -432,7 +429,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📌 Objetivos do Post
+📌 Objetivos do Post
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -451,7 +448,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🌱 Introdução: O que Estamos Estudando?
+🌱 Introdução: O que Estamos Estudando?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -492,7 +489,7 @@ Mede a <strong>dispersão</strong> dos dados em torno da média. Quanto maior <s
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🌍 Importância da Distribuição Normal
+🌍 Importância da Distribuição Normal
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -835,19 +832,19 @@ Nota
 <span class="header-section-number">1.9</span> 🧪 Exemplo com Código Python: Visualizando a Regra Empírica</h2>
 <p>Vamos representar graficamente uma distribuição de QI usando a regra empírica. Suponha que os escores de QI sigam uma distribuição normal com média <span class="math inline">\(\mu = 100\)</span> e desvio padrão <span class="math inline">\(\sigma = 16\)</span>. O gráfico abaixo mostra as <strong>faixas não sobrepostas</strong> da regra empírica:</p>
 <div class="callout callout-style-default callout-note callout-titled" title="👨‍💻 🐍 Código Python — gerar a figura">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>👨‍💻 🐍 Código Python — gerar a figura
+👨‍💻 🐍 Código Python — gerar a figura
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Parâmetros da distribuição</span></span>
@@ -886,7 +883,7 @@ Nota
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="distribuicao-normal_files/figure-html/regra-empirica-py-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
@@ -923,19 +920,19 @@ Nota
 <p><img src="../images/regra-empirica-qi-faixas-separadas.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="📊 R — gerar figura com ggplot2">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📊 R — gerar figura com ggplot2
+📊 R — gerar figura com ggplot2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Parâmetros</span></span>
 <span><span class="va">mu</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
@@ -968,7 +965,7 @@ Nota
 <span>    y <span class="op">=</span> <span class="st">"Densidade de Probabilidade"</span>,</span>
 <span>    fill <span class="op">=</span> <span class="st">"Intervalo"</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="distribuicao-normal_files/figure-html/regra-empirica-r-3.png" class="img-fluid figure-img" style="width:70.0%"></p>
@@ -1080,7 +1077,7 @@ Nota
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>No Excel
+No Excel
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1102,7 +1099,7 @@ Nota
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>No R
+No R
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1135,7 +1132,7 @@ Dica
 <span class="header-section-number">1.12</span> Exemplo Prático com R</h2>
 <p>Vamos visualizar a curva da <strong>distribuição normal padrão</strong> <span class="math inline">\(N(0, 1)\)</span> e destacar as faixas de 1, 2 e 3 desvios-padrão da média — conhecidas pela <strong>Regra Empírica</strong>.</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Sequência de valores z</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Sequência de valores z</span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">4</span>, <span class="fl">4</span>, length.out <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span>
 <span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">dnorm</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
@@ -1153,7 +1150,7 @@ Dica
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="st">"topright"</span>,</span>
 <span>       legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"±1σ (68%)"</span>, <span class="st">"±2σ (95%)"</span>, <span class="st">"±3σ (99,7%)"</span><span class="op">)</span>,</span>
 <span>       col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"orange"</span>, <span class="st">"green"</span>, <span class="st">"red"</span><span class="op">)</span>,</span>
-<span>       lty <span class="op">=</span> <span class="fl">2</span>, lwd <span class="op">=</span> <span class="fl">1.5</span>, cex <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span>       lty <span class="op">=</span> <span class="fl">2</span>, lwd <span class="op">=</span> <span class="fl">1.5</span>, cex <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="distribuicao-normal_files/figure-html/Gerar gráfico no R-1.png" class="img-fluid figure-img" width="672"></p>
@@ -1175,7 +1172,7 @@ P(X &lt; 120)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>No Excel
+No Excel
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1189,7 +1186,7 @@ Resultado: <span class="math inline">\(\approx 0{,}8944\)</span> ou 89,44%</p>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>No R
+No R
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1362,8 +1359,8 @@ P(Z &lt; 1{,}5)
 P(Z &lt; 1{,}5) = \boxed{0{,}9332}
 \]</span></p>
 <p><strong>💻 No R:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">1.5</span><span class="op">)</span></span>
-<span><span class="co"># [1] 0.9331928</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">1.5</span><span class="op">)</span></span>
+<span><span class="co"># [1] 0.9331928</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>📊 No Excel:</strong></p>
 <pre class="excel"><code>=NORM.S.DIST(1,5; VERDADEIRO)</code></pre>
 <p>Resultado: <code>0,9332</code></p>
@@ -1385,8 +1382,8 @@ P(-1{,}5 &lt; Z &lt; 1{,}5) =
 P(-1{,}5 &lt; Z &lt; 1{,}5) = 0{,}9332 - 0{,}0668 = \boxed{0{,}8664}
 \]</span></p>
 <p><strong>💻 No R:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">1.5</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span><span class="op">)</span></span>
-<span><span class="co"># [1] 0.8663856</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">1.5</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.5</span><span class="op">)</span></span>
+<span><span class="co"># [1] 0.8663856</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>📊 No Excel:</strong></p>
 <pre class="excel"><code>=NORM.S.DIST(1,5; VERDADEIRO) - NORM.S.DIST(-1,5; VERDADEIRO)</code></pre>
 <p>Resultado: <code>0,8664</code></p>
@@ -1401,8 +1398,8 @@ P(Z &gt; 1{,}5) = 1 - P(Z &lt; 1{,}5)
 P(Z &gt; 1{,}5) = 1 - 0{,}9332 = \boxed{0{,}0668}
 \]</span></p>
 <p><strong>💻 No R:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">1.5</span><span class="op">)</span></span>
-<span><span class="co"># [1] 0.0668072</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">1.5</span><span class="op">)</span></span>
+<span><span class="co"># [1] 0.0668072</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>📊 No Excel:</strong></p>
 <pre class="excel"><code>=1 - NORM.S.DIST(1,5; VERDADEIRO)</code></pre>
 <p>Resultado: <code>0,0668</code></p>
@@ -1544,9 +1541,9 @@ P(Z &lt; -1{,}25) = 1 - P(Z &lt; 1{,}25) =
 </table>
 <hr></section><section id="usando-o-r" class="level3" data-number="1.19.3"><h3 data-number="1.19.3" class="anchored" data-anchor-id="usando-o-r">
 <span class="header-section-number">1.19.3</span> 🧪 Usando o R:</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Probabilidade de QI &lt; 80</span></span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Probabilidade de QI &lt; 80</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">80</span>, mean <span class="op">=</span> <span class="fl">100</span>, sd <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span>
-<span><span class="co"># Resultado: 0.1056498</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="co"># Resultado: 0.1056498</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr></section><section id="usando-o-excel" class="level3" data-number="1.19.4"><h3 data-number="1.19.4" class="anchored" data-anchor-id="usando-o-excel">
 <span class="header-section-number">1.19.4</span> 🧮 Usando o Excel:</h3>
 <pre class="excel"><code>=NORM.DIST(80; 100; 16; VERDADEIRO)</code></pre>
@@ -1614,13 +1611,13 @@ P(Z &lt; -1{,}25) = 1 - 0{,}8944 = 0{,}1056
 <p>✅ <strong>Conclusão:</strong> Cerca de <strong>10,56% da população</strong> tem QI inferior a 80.</p>
 <hr></section><section id="cálculo-no-r" class="level3" data-number="1.21.3"><h3 data-number="1.21.3" class="anchored" data-anchor-id="cálculo-no-r">
 <span class="header-section-number">1.21.3</span> 🧪 Cálculo no R</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Média e desvio padrão</span></span>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Média e desvio padrão</span></span>
 <span><span class="va">mu</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
 <span><span class="va">sigma</span> <span class="op">&lt;-</span> <span class="fl">16</span></span>
 <span></span>
 <span><span class="co"># Probabilidade de QI &lt; 80</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">80</span>, mean <span class="op">=</span> <span class="va">mu</span>, sd <span class="op">=</span> <span class="va">sigma</span><span class="op">)</span></span>
-<span><span class="co"># Resultado: 0.1056498</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="co"># Resultado: 0.1056498</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr></section><section id="cálculo-no-excel" class="level3" data-number="1.21.4"><h3 data-number="1.21.4" class="anchored" data-anchor-id="cálculo-no-excel">
 <span class="header-section-number">1.21.4</span> 📊 Cálculo no Excel</h3>
 <p>Use a fórmula:</p>
@@ -1644,7 +1641,7 @@ Este exemplo mostra como a <strong>simetria da distribuição normal</strong> e 
 <hr></section></section><section id="referências" class="level1" data-number="2"><h1 data-number="2">
 <span class="header-section-number">2</span> 📚 Referências</h1>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>

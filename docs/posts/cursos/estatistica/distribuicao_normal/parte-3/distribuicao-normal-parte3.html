@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.21">
+<meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Blog do Marcellini">
 <meta name="description" content="Fundamentos visuais e teóricos: histogramas, Q-Q plots, Lei dos Grandes Números e Teorema Central do Limite como base para a normalidade aproximada.">
@@ -66,15 +66,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
 <script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-f9d2e688c83043042fa051765c26f29b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-d0cbc992f0efc7cc645d720160ede72c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -124,7 +123,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -162,8 +161,6 @@ window.Quarto = {
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -408,7 +405,7 @@ Nota
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📈 📝 Exemplos de Distribuições: Normais e Não Normais
+📈 📝 Exemplos de Distribuições: Normais e Não Normais
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -439,7 +436,7 @@ Algumas variáveis podem se aproximar da normalidade após <strong>transformaç�
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📈 📝 Exemplos Reais de Normalidade Aproximada
+📈 📝 Exemplos Reais de Normalidade Aproximada
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -486,7 +483,7 @@ O Q-Q Plot é especialmente útil em <strong>amostras grandes</strong>, pois peq
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📈 📝 Exemplo Visual — Histograma de uma Distribuição Normal
+📈 📝 Exemplo Visual — Histograma de uma Distribuição Normal
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -514,7 +511,7 @@ Pequenas variações são esperadas, mas a aproximação à distribuição norma
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📈 📝 Exemplo Visual — Gráfico Q-Q Plot (Levine)
+📈 📝 Exemplo Visual — Gráfico Q-Q Plot (Levine)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -536,12 +533,12 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Gerando Gráficos em R: Histograma e Q-Q Plot">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Gerando Gráficos em R: Histograma e Q-Q Plot
+Gerando Gráficos em R: Histograma e Q-Q Plot
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -549,7 +546,7 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <div class="callout-body-container callout-body">
 <p>🎯 <strong>Objetivo:</strong> Gerar uma amostra de alturas e visualizar o histograma e o Q-Q plot diretamente no RStudio.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Gerar a amostra de alturas</span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Gerar a amostra de alturas</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span> <span class="co"># Garante reprodutibilidade</span></span>
 <span><span class="va">alturas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">200</span>, mean <span class="op">=</span> <span class="fl">170</span>, sd <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></span>
 <span></span>
@@ -559,17 +556,17 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <span>main <span class="op">=</span> <span class="st">"Histograma das Alturas (Normal Aproximada)"</span>,</span>
 <span>xlab <span class="op">=</span> <span class="st">"Altura (cm)"</span>,</span>
 <span>col <span class="op">=</span> <span class="st">"lightblue"</span>,</span>
-<span>border <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span>border <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="distribuicao-normal-parte3_files/figure-html/Gerar Amostra - Histograma - Q-Q Plot-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Exibir o Q-Q Plot</span></span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Exibir o Q-Q Plot</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/qqnorm.html">qqnorm</a></span><span class="op">(</span><span class="va">alturas</span>,</span>
 <span>main <span class="op">=</span> <span class="st">"Q-Q Plot das Alturas"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/qqnorm.html">qqline</a></span><span class="op">(</span><span class="va">alturas</span>, col <span class="op">=</span> <span class="st">"red"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/qqnorm.html">qqline</a></span><span class="op">(</span><span class="va">alturas</span>, col <span class="op">=</span> <span class="st">"red"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="distribuicao-normal-parte3_files/figure-html/Gerar Amostra - Histograma - Q-Q Plot-2.png" class="img-fluid figure-img" width="672"></p>
@@ -604,7 +601,7 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Dica</span>🔍 Por que visualizar os gráficos antes da análise?
+🔍 Por que visualizar os gráficos antes da análise?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -618,7 +615,7 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Atividade 1: Gerando e Interpretando Novos Gráficos no RStudio
+Atividade 1: Gerando e Interpretando Novos Gráficos no RStudio
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -646,12 +643,12 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>🧠 🔎 Gabarito da Atividade 1: Novos Gráficos Gerados no RStudio
+🧠 🔎 Gabarito da Atividade 1: Novos Gráficos Gerados no RStudio
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -659,7 +656,7 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <div class="callout-body-container callout-body">
 <p>🧑‍💻 <strong>Código no R :</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Gerar nova amostra</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Gerar nova amostra</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">456</span><span class="op">)</span> <span class="co"># Nova semente para variar os dados</span></span>
 <span><span class="va">alturas_novas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">200</span>, mean <span class="op">=</span> <span class="fl">160</span>, sd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span></span>
@@ -669,17 +666,17 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <span>main <span class="op">=</span> <span class="st">"Histograma das Alturas (Nova Amostra)"</span>,</span>
 <span>xlab <span class="op">=</span> <span class="st">"Altura (cm)"</span>,</span>
 <span>col <span class="op">=</span> <span class="st">"lightgreen"</span>,</span>
-<span>border <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span>border <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="distribuicao-normal-parte3_files/figure-html/gabarito da atividade 1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Q-Q Plot</span></span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Q-Q Plot</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/qqnorm.html">qqnorm</a></span><span class="op">(</span><span class="va">alturas_novas</span>,</span>
 <span>main <span class="op">=</span> <span class="st">"Q-Q Plot das Alturas (Nova Amostra)"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/qqnorm.html">qqline</a></span><span class="op">(</span><span class="va">alturas_novas</span>, col <span class="op">=</span> <span class="st">"blue"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/qqnorm.html">qqline</a></span><span class="op">(</span><span class="va">alturas_novas</span>, col <span class="op">=</span> <span class="st">"blue"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="distribuicao-normal-parte3_files/figure-html/gabarito da atividade 1-2.png" class="img-fluid figure-img" width="672"></p>
@@ -743,7 +740,7 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🧠 📖 Teste Rápido: Verdadeiro ou Falso?
+🧠 📖 Teste Rápido: Verdadeiro ou Falso?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -758,12 +755,12 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="🧠 🔎 Gabarito do Teste Rápido">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>🧠 🔎 Gabarito do Teste Rápido
+🧠 🔎 Gabarito do Teste Rápido
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -799,7 +796,7 @@ A mesma amostra de 200 alturas de adultos (<span class="math inline">\(\mu=170,\
 <hr></section></section><section id="referências" class="level1" data-number="2"><h1 data-number="2">
 <span class="header-section-number">2</span> 📚 Referências</h1>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>

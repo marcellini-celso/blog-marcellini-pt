@@ -1,0 +1,384 @@
+---
+title: "📘 👨‍💻 📄 Modelos de Quarto Markdown — Guia Completo"
+description: "**Quarto Markdown** é uma extensão poderosa do Markdown para criar documentos científicos e técnicos de alta qualidade, unindo texto, código, equações, gráficos e tabelas em um único fluxo reprodutível."
+author: "Blog do Marcellini"
+date: 2025-06-29
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+editor: visual
+categories: [programação, Quarto, artigo, Markdown]
+tags: [programação, Quarto, artigo, Markdown, modelos]
+---
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de Quarto 📄](/posts/programacao/quarto/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+![Quarto](../../../images/thumbnail-2.jpg){width=50% style="margin-bottom: 2rem;"}
+
+# 📘 👨‍💻 📄 Modelos de Quarto Markdown — Guia Completo
+
+Este post consolida, em um único lugar, os conteúdos de **“Modelo de Markdown com Quarto — Parte 1”** e **“Parte 2”**, removendo repetições e organizando exemplos de forma fluida.
+
+## 🔷 O que é Quarto Markdown?
+
+**Quarto Markdown** estende o Markdown tradicional para **comunicação científica e técnica**. Permite misturar **texto formatado**, **código executável** (R, Python, Julia, Observable), **equações LaTeX**, **gráficos** e **tabelas** em um arquivo `.qmd`, gerando automaticamente:
+
+- **HTML** interativo
+- **PDF** com qualidade tipográfica
+- **EPUB** (eBooks)
+- **Slides** (Reveal.js, Beamer)
+- **Sites e blogs**
+
+---
+
+## 🔷 Diferença entre Markdown e Quarto Markdown
+
+| Característica               | Markdown (.md)                       | Quarto Markdown (.qmd)                          |
+|--|--|--|
+| Formatação básica de texto  | ✅                                    | ✅                                              |
+| Suporte a HTML              | ✅                                    | ✅                                              |
+| Equações com LaTeX          | ❌ (limitado ou por extensões)       | ✅ (nativo)                                     |
+| Código executável           | ❌                                    | ✅ (R, Python, Julia, Observable)               |
+| Geração de EPUB/PDF/Slides  | ❌                                    | ✅                                              |
+| Suporte a YAML              | Parcial                              | ✅ (metadados e config. de projeto)             |
+| Foco/Público-alvo           | Texto simples                        | Publicações científicas/técnicas com código     |
+
+> ✅ **Resumo:** use Markdown tradicional para textos simples; use **Quarto Markdown** quando precisar de **código, matemática e visualizações** em documentos reprodutíveis.
+
+---
+
+## 🔷 Sintaxe Markdown essencial (com Quarto)
+
+### Títulos
+
+```markdown
+# Título Nível 1
+## Título Nível 2
+### Título Nível 3
+```
+
+**Visualização:**
+
+# Título Nível 1
+## Título Nível 2
+### Título Nível 3
+
+### Ênfase
+
+```markdown
+Você pode usar **negrito**, *itálico*, ou ambos: ***negrito e itálico***.
+```
+
+**Visualização:**  
+Você pode usar **negrito**, *itálico*, ou ambos: ***negrito e itálico***.
+
+### Citação
+
+```markdown
+> A matemática é a linguagem com a qual Deus escreveu o universo. — Galileu
+```
+
+**Visualização:**  
+> A matemática é a linguagem com a qual Deus escreveu o universo. — Galileu
+
+---
+
+## 🔷 Listas
+
+### Lista com marcadores
+
+```markdown
+- Item A
+- Item B
+  - Subitem B.1
+  - Subitem B.2
+```
+
+**Visualização:**
+
+- Item A
+- Item B
+  - Subitem B.1
+  - Subitem B.2
+
+### Lista numerada
+
+```markdown
+1. Primeiro
+2. Segundo
+3. Terceiro
+```
+
+**Visualização:**
+
+1. Primeiro
+2. Segundo
+3. Terceiro
+
+---
+
+## 🔷 Links e Imagens
+
+### Link
+
+```markdown
+[Site oficial do Quarto](https://quarto.org)
+```
+
+**Visualização:**  
+[Site oficial do Quarto](https://quarto.org)
+
+### Imagem
+
+```markdown
+![Imagem exemplo](../images/exemplo.png){width=20% style="margin-bottom: 2rem;"}
+```
+
+**Visualização:**
+
+![Imagem exemplo](../images/exemplo.png)
+
+---
+
+## 🔷 Tabelas
+
+```markdown
+| Nome     | Idade | Cidade      |
+|-|-|-|
+| Alice    | 25    | São Paulo   |
+| Bernardo | 30    | Salvador    |
+| Carla    | 22    | Curitiba    |
+```
+
+**Visualização:**
+
+| Nome     | Idade | Cidade      |
+|-|-|-|
+| Alice    | 25    | São Paulo   |
+| Bernardo | 30    | Salvador    |
+| Carla    | 22    | Curitiba    |
+
+---
+
+## 🔷 Equações com LaTeX
+
+### Inline
+
+```markdown
+A famosa identidade de Euler: $e^{i\pi} + 1 = 0$
+```
+
+**Visualização:**  
+A famosa identidade de Euler: $e^{i\pi} + 1 = 0$
+
+### Bloco
+
+```markdown
+$$
+\int_0^\infty e^{-x^2} \, dx = rac{\sqrt{\pi}}{2}
+$$
+```
+
+**Visualização:**
+
+$$
+\int_0^\infty e^{-x^2} \, dx = rac{\sqrt{\pi}}{2}
+$$
+
+---
+
+## 🔷 🧑‍💻 Blocos de Código (executáveis)
+
+### Python
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 2*np.pi, 100)
+plt.plot(x, np.sin(x))
+plt.title("Função Seno")
+plt.show()
+```
+
+### R
+
+```{r}
+x <- seq(0, 2*pi, length.out = 100)
+plot(x, sin(x), type = "l", col = "blue", lwd = 2)
+```
+
+---
+
+## 🔷 💻 Exibir código sem execução no Quarto (estático)
+
+Para mostrar código **sem executar**, use um bloco de **fenced code** comum (três crases) e uma linguagem para realce de sintaxe (por exemplo, `python`). Você pode combinar com **callouts colapsáveis** para organização.
+
+````markdown
+::: {.callout-note collapse=true title="💡 Código estático com realce de sintaxe (conteúdo colapsado)"}
+
+```python
+# Exemplo de cálculo de área de um círculo
+import math
+
+raio = 5
+area = math.pi * raio**2
+print(f"A área do círculo é {area:.2f}")
+```
+
+:::
+````
+
+**Visualização:**
+
+::: {.callout-note collapse=true title="💡 Código estático com realce de sintaxe (conteúdo colapsado)"}
+
+```python
+# Exemplo de cálculo de área de um círculo
+import math
+
+raio = 5
+area = math.pi * raio**2
+print(f"A área do círculo é {area:.2f}")
+```
+
+:::
+
+---
+
+## 🔷 💡 Callouts (Caixas de Destaque)
+
+Use callouts para destacar informações importantes:
+
+### 🔔 Note
+
+```markdown
+::: {.callout-note}
+Esta é uma nota informativa.
+:::
+```
+
+**Visualização:**
+
+::: {.callout-note}
+Esta é uma nota informativa.
+:::
+
+### 💡 Tip
+
+```markdown
+::: {.callout-tip}
+Dica: use `{.callout-tip}` para boas práticas.
+:::
+```
+
+**Visualização:**
+
+::: {.callout-tip}
+Dica: use `{.callout-tip}` para boas práticas.
+:::
+
+### ⚠️ Warning
+
+```markdown
+::: {.callout-warning}
+Atenção: certifique-se de que o código esteja corretamente indentado.
+:::
+```
+
+**Visualização:**
+
+::: {.callout-warning}
+Atenção: certifique-se de que o código esteja corretamente indentado.
+:::
+
+### 🚫 Caution
+
+```markdown
+::: {.callout-caution}
+Cuidado: alterações em arquivos `.qmd` podem sobrescrever `.md` gerados.
+:::
+```
+
+**Visualização:**
+
+::: {.callout-caution}
+Cuidado: alterações em arquivos `.qmd` podem sobrescrever `.md` gerados.
+:::
+
+### 📣 Important
+
+```markdown
+::: {.callout-important}
+Importante: Quarto substitui RMarkdown com recursos mais modernos!
+:::
+```
+
+**Visualização:**
+
+::: {.callout-important}
+Importante: Quarto substitui RMarkdown com recursos mais modernos!
+:::
+
+---
+
+## 🔷 🎯 Emojis úteis (referência rápida)
+
+- **Tags & Categorias:** 🏷️ 📚 🧠 🧮 📈 🔬 🧪 💻 📊 🧰 🌐 📝 🔧 🎓 🚀 📰  
+- **Educação:** 📚 🧠 ✏️ 📖 🏫 📝 📊 🎯  
+- **Computação:** 💻 🖥️ 📱 ⌨️ 🖱️ ⚙️ 🔧 🔒 🧮  
+- **Estatística & Dados:** 📊 📈 📉 📋 🔢 🧮 🗃️  
+- **Matemática:** ➕ ➖ ✖️ ➗ √ ∑ ∫ ∞ 📐 📏 🎲  
+- **Ciência:** 🧪 🔬 ⚗️ 🧫 🌡️ 🧬 🚀 🧲 🌌  
+- **Tempo/Organização:** 🕒 📅 ⏳ 📌 🗓️ 🗂️ 📦  
+- **Navegação:** 🌍 🧭 📍 🗺️  
+- **Destaque/Engajamento:** 💡 ❗ ✅ ❓ ⚠️ 🛠️ ⏱️ 📢 🔍 🔎 🚀 🎉 👏 🤝 🤔 🙌 🔁 🔄 💬
+
+---
+
+## 🔷 ✅ Conclusão
+
+**Quarto Markdown** é ideal para produção **reprodutível**, **bonita** e **interativa**. Com ele, você cria desde **anotações simples** até **relatórios científicos completos**, mantendo tudo versionável e automatizado.
+
+---
+
+[← Voltar para o Guia de Leitura de Programação 👨‍💻](/posts/programacao/guia-programacao.qmd)
+
+[← Voltar para a Seção de Quarto 📄](/posts/programacao/quarto/)
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+🔝 [Voltar ao Topo](modelos-quarto-markdown.qmd)
+
+---
+
+*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
+
+# 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
