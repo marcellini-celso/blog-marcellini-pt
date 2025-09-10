@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
 <script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-f9d2e688c83043042fa051765c26f29b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-d0cbc992f0efc7cc645d720160ede72c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -100,7 +101,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -143,6 +144,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -340,7 +343,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📌 Objetivos do Post
+<span class="screen-reader-only">Nota</span>📌 Objetivos do Post
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -402,7 +405,7 @@ Crédito: Mortalmoth (Domínio público).
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Saiba Mais: O que é um número irracional?
+<span class="screen-reader-only">Dica</span>🧠 Saiba Mais: O que é um número irracional?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -424,7 +427,7 @@ Historicamente, a irracionalidade de <span class="math inline">\(\sqrt{2}\)</spa
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📐 A Escola Pitagórica e os Irracionais
+<span class="screen-reader-only">Nota</span>📐 A Escola Pitagórica e os Irracionais
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -446,7 +449,7 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📘 🧠 Exercícios — Identificando Números Irracionais
+<span class="screen-reader-only">Nota</span>📘 🧠 Exercícios — Identificando Números Irracionais
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -477,12 +480,12 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 <section id="gabarito-identificação" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="gabarito-identificação"><span class="header-section-number">1.6</span> 📘 Gabarito (identificação)</h2>
 <div class="callout callout-style-default callout-important callout-titled" title="📘 Gabarito">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📘 Gabarito
+<span class="screen-reader-only">Importante</span>📘 Gabarito
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -512,7 +515,7 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📜 Nota Histórica: Georg Cantor
+<span class="screen-reader-only">Dica</span>📜 Nota Histórica: Georg Cantor
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -553,7 +556,7 @@ Provou que <span class="math inline">\(\mathbb{R}\)</span> (logo, os irracionais
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Observação importante
+<span class="screen-reader-only">Nota</span>🧠 Observação importante
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -574,7 +577,7 @@ Caso contrário, a expansão é uma <strong>dízima periódica</strong>.</p>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📘 Exercícios Resolvidos: Dízimas → Fração
+<span class="screen-reader-only">Nota</span>📘 Exercícios Resolvidos: Dízimas → Fração
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -602,7 +605,7 @@ Seja <span class="math inline">\(x=0{,}\overline{72}\)</span>. <span class="math
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧩 Exercícios: Dízimas → Fração
+<span class="screen-reader-only">Nota</span>🧩 Exercícios: Dízimas → Fração
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -624,12 +627,12 @@ Seja <span class="math inline">\(x=0{,}\overline{72}\)</span>. <span class="math
 <section id="gabarito-fração-geratriz" class="level2" data-number="1.12">
 <h2 data-number="1.12" class="anchored" data-anchor-id="gabarito-fração-geratriz"><span class="header-section-number">1.12</span> ✅ Gabarito — Fração Geratriz</h2>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito — Fração Geratriz">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-✅ Gabarito — Fração Geratriz
+<span class="screen-reader-only">Importante</span>✅ Gabarito — Fração Geratriz
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -676,7 +679,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📌 Resumo: Propriedades dos Conjuntos
+<span class="screen-reader-only">Dica</span>📌 Resumo: Propriedades dos Conjuntos
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -735,7 +738,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📚 Propriedades Algébricas Básicas em ()
+<span class="screen-reader-only">Nota</span>📚 Propriedades Algébricas Básicas em ()
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -766,7 +769,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Operações Auxiliares
+<span class="screen-reader-only">Nota</span>Operações Auxiliares
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -791,7 +794,7 @@ Operações Auxiliares
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧠 Exercícios de Revisão — Módulo 1.2
+<span class="screen-reader-only">Nota</span>🧠 Exercícios de Revisão — Módulo 1.2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -825,12 +828,12 @@ Operações Auxiliares
 <section id="resoluções" class="level2" data-number="1.18">
 <h2 data-number="1.18" class="anchored" data-anchor-id="resoluções"><span class="header-section-number">1.18</span> 📝 Resoluções</h2>
 <div class="callout callout-style-default callout-important callout-titled" title="📝 Resoluções">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📝 Resoluções
+<span class="screen-reader-only">Importante</span>📝 Resoluções
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>

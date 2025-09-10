@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
 <script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-f9d2e688c83043042fa051765c26f29b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-e28fa06dceaec2a7426ae06d0768fcab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-d0cbc992f0efc7cc645d720160ede72c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -100,7 +101,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -143,6 +144,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -272,7 +275,14 @@ window.Quarto = {
   </ul></li>
   <li><a href="#inequações-lineares" id="toc-inequações-lineares" class="nav-link" data-scroll-target="#inequações-lineares"><span class="header-section-number">6</span> Inequações Lineares</a></li>
   <li><a href="#inequações-quadráticas" id="toc-inequações-quadráticas" class="nav-link" data-scroll-target="#inequações-quadráticas"><span class="header-section-number">7</span> Inequações Quadráticas</a></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">8</span> 🔗 Navegação</a></li>
+  <li><a href="#inequações-produto" id="toc-inequações-produto" class="nav-link" data-scroll-target="#inequações-produto"><span class="header-section-number">8</span> Inequações Produto</a></li>
+  <li><a href="#inequações-quociente" id="toc-inequações-quociente" class="nav-link" data-scroll-target="#inequações-quociente"><span class="header-section-number">9</span> Inequações Quociente</a>
+  <ul class="collapse">
+  <li><a href="#o-que-são-assíntotas" id="toc-o-que-são-assíntotas" class="nav-link" data-scroll-target="#o-que-são-assíntotas"><span class="header-section-number">9.1</span> 📌 O que são Assíntotas?</a></li>
+  <li><a href="#exercícios-de-revisão" id="toc-exercícios-de-revisão" class="nav-link" data-scroll-target="#exercícios-de-revisão"><span class="header-section-number">9.2</span> 🧠 Exercícios de Revisão</a></li>
+  </ul></li>
+  <li><a href="#quadro-resumo-módulo-1.3-ordem-intervalos-e-inequações" id="toc-quadro-resumo-módulo-1.3-ordem-intervalos-e-inequações" class="nav-link" data-scroll-target="#quadro-resumo-módulo-1.3-ordem-intervalos-e-inequações"><span class="header-section-number">10</span> 🔎 Quadro-Resumo — Módulo 1.3 (Ordem, Intervalos e Inequações)</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">11</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -331,7 +341,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📖 Definição — Ordem Estrita
+<span class="screen-reader-only">Nota</span>📖 Definição — Ordem Estrita
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -373,7 +383,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📖 Definição — Ordem Não-Estrita
+<span class="screen-reader-only">Nota</span>📖 Definição — Ordem Não-Estrita
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -399,7 +409,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📐 Teorema 1 — Sinais
+<span class="screen-reader-only">Importante</span>📐 Teorema 1 — Sinais
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -416,7 +426,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📐 Teorema 2 — Transitividade
+<span class="screen-reader-only">Importante</span>📐 Teorema 2 — Transitividade
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -429,7 +439,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📐 Teorema 3 — Adição e Multiplicação
+<span class="screen-reader-only">Importante</span>📐 Teorema 3 — Adição e Multiplicação
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -448,7 +458,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📐 Teorema 4 — Soma de Desigualdades
+<span class="screen-reader-only">Importante</span>📐 Teorema 4 — Soma de Desigualdades
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -512,13 +522,16 @@ Exemplo: <span class="math inline">\(2&lt;x&lt;5\)</span>.</p>
 <h1 data-number="6"><span class="header-section-number">6</span> Inequações Lineares</h1>
 <p>Forma geral (com <span class="math inline">\(a \neq 0\)</span>):</p>
 <p><span class="math display">\[
-ax+b &lt; c
-\]</span> <span class="math display">\[
-ax+b \leqslant c
-\]</span> <span class="math display">\[
-ax+b &gt; c
-\]</span> <span class="math display">\[
-ax+b \geqslant c
+\boxed{\, ax+b &lt; c \,}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\, ax+b \leqslant c \,}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\, ax+b &gt; c \,}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\, ax+b \geqslant c \,}
 \]</span></p>
 <hr>
 <p>📌 <strong>Observação importante:</strong><br>
@@ -535,7 +548,7 @@ ax+b \geqslant c
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧮 Exemplos — Inequações Lineares
+<span class="screen-reader-only">Nota</span>🧮 Exemplos — Inequações Lineares
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -578,7 +591,7 @@ Solução: <span class="math inline">\((-\infty,-7]\)</span>.</p></li>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧮 Exemplos resolvidos em detalhes
+<span class="screen-reader-only">Nota</span>🧮 Exemplos resolvidos em detalhes
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -618,8 +631,22 @@ x &amp;&gt; \frac{4}{-2} = -2 &amp;&amp; \text{(dividir por -2&lt;0, \textbf{inv
 </section>
 <section id="inequações-quadráticas" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Inequações Quadráticas</h1>
+<p>Forma geral (com <span class="math inline">\(a \neq 0\)</span>):</p>
+<p><span class="math display">\[
+\boxed{ax^2 +bx + c &lt; 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{ax^2 +bx + c &gt; 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{ax^2 +bx + c \leqslant 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{ax^2 +bx + c \geqslant 0}
+\]</span></p>
+<hr>
 <p>Resolver analisando a parábola <span class="math inline">\(y=ax^2+bx+c\)</span>.</p>
-<p>📌 <strong>Exemplo:</strong> <span class="math inline">\(x^2-5x+6&gt;0\)</span><br>
+<p>📌 <strong>Exemplo 1:</strong> <span class="math inline">\(x^2-5x+6&gt;0\)</span><br>
 - Raízes: <span class="math inline">\(x=2,3\)</span><br>
 - Parábola abre para cima.<br>
 - Sinal positivo fora de <span class="math inline">\((2,3)\)</span>.<br>
@@ -632,14 +659,14 @@ x &amp;&gt; \frac{4}{-2} = -2 &amp;&amp; \text{(dividir por -2&lt;0, \textbf{inv
 </div>
 <p><strong>Gráfico da parábola:</strong> <img src="../images/diagrama-C2.svg" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" data-fig-cap="Estudo do sinal"></p>
 <hr>
-<p>📌 <strong>Exemplo:</strong> <span class="math inline">\(x^2-5x+6&gt;0\)</span></p>
+<p>📌 <strong>Exemplo 1:</strong> <span class="math inline">\(x^2-5x+6&gt;0\)</span></p>
 <div class="callout callout-style-default callout-note callout-titled" title="🧮 Resolução detalhada">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧮 Resolução detalhada
+<span class="screen-reader-only">Nota</span>🧮 Resolução detalhada
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -671,8 +698,6 @@ x = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{5 \pm 1}{2}
 x \in (-\infty,2)\cup(3,+\infty)
 \]</span></p></li>
 </ol>
-</div>
-</div>
 <p><strong>Diagrama na reta real:</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -685,15 +710,17 @@ x \in (-\infty,2)\cup(3,+\infty)
 <p><img src="../images/diagrama-C2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Estudo do sinal"></p>
 </figure>
 </div>
+</div>
+</div>
 <hr>
-<p>📌 <strong>Exemplo:</strong> <span class="math inline">\(-x^2+4x-3 \geqslant 0\)</span></p>
+<p>📌 <strong>Exemplo 2:</strong> <span class="math inline">\(-x^2+4x-3 \geqslant 0\)</span></p>
 <div class="callout callout-style-default callout-note callout-titled" title="🧮 Resolução detalhada">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🧮 Resolução detalhada
+<span class="screen-reader-only">Nota</span>🧮 Resolução detalhada
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -726,8 +753,6 @@ Isso significa que a parábola está <strong>acima do eixo <span class="math inl
 x \in [1,3]
 \]</span></p></li>
 </ol>
-</div>
-</div>
 <p><strong>Diagrama na reta real:</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -740,6 +765,268 @@ x \in [1,3]
 <p><img src="../images/diagrama-C4.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Parábola côncava para baixo e regiões de sinal"></p>
 </figure>
 </div>
+</div>
+</div>
+<hr>
+</section>
+<section id="inequações-produto" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Inequações Produto</h1>
+<p>Forma geral:</p>
+<p><span class="math display">\[
+\boxed{(x-a)(x-b) &lt; 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{(x-a)(x-b) &gt; 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{(x-a)(x-b) \leqslant 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{(x-a)(x-b) \geqslant 0}
+\]</span></p>
+<p>A solução é determinada pelo <strong>sinal dos fatores</strong> em cada intervalo definido pelas raízes.</p>
+<hr>
+<p>📌 <strong>Exemplo 1:</strong> Produto positivo Resolva: <span class="math display">\[
+x(x-1) &gt; 0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução detalhada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução detalhada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Raízes: <span class="math inline">\(x=0\)</span> e <span class="math inline">\(x=1\)</span>.<br>
+</li>
+<li>Intervalos: <span class="math inline">\((-\infty,0),\ (0,1),\ (1,+\infty)\)</span>.<br>
+</li>
+<li>Teste de sinais:
+<ul>
+<li>Para <span class="math inline">\(x&lt;0\)</span>: ambos fatores negativos ⇒ produto positivo.<br>
+</li>
+<li>Para <span class="math inline">\(0&lt;x&lt;1\)</span>: um positivo, outro negativo ⇒ produto negativo.<br>
+</li>
+<li>Para <span class="math inline">\(x&gt;1\)</span>: ambos positivos ⇒ produto positivo.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/produto-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Exemplo $x(x-1) > 0$"></p>
+</figure>
+</div>
+<p>✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,0)\cup(1,+\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>📌 <strong>Exemplo 2:</strong> Produto negativo Resolva: <span class="math display">\[
+(x-1)(x+2) &lt; 0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução detalhada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução detalhada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Raízes: <span class="math inline">\(x=-2\)</span> e <span class="math inline">\(x=1\)</span>.<br>
+</li>
+<li>Intervalos: <span class="math inline">\((-\infty,-2),\ (-2,1),\ (1,+\infty)\)</span>.<br>
+</li>
+<li>Teste de sinais:
+<ul>
+<li>Para <span class="math inline">\(x&lt;-2\)</span>: ambos negativos ⇒ produto positivo.<br>
+</li>
+<li>Para <span class="math inline">\(-2&lt;x&lt;1\)</span>: sinais diferentes ⇒ produto negativo.<br>
+</li>
+<li>Para <span class="math inline">\(x&gt;1\)</span>: ambos positivos ⇒ produto positivo.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/produto-2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Exemplo $(x-1)(x+2) < 0$"></p>
+</figure>
+</div>
+<p>✅ <strong>Solução:</strong> <span class="math inline">\((-2,1)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="inequações-quociente" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Inequações Quociente</h1>
+<p>Forma geral:</p>
+<p><span class="math display">\[
+\boxed{\dfrac{f(x)}{g(x)} &lt; 0,\quad g(x)\neq 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\dfrac{f(x)}{g(x)} &gt; 0,\quad g(x)\neq 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\dfrac{f(x)}{g(x)} \leqslant 0,\quad g(x)\neq 0}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\dfrac{f(x)}{g(x)} \geqslant 0,\quad g(x)\neq 0}
+\]</span></p>
+<p>A solução é determinada pela <strong>tabela de sinais</strong> de numerador e denominador.</p>
+<hr>
+<section id="o-que-são-assíntotas" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="o-que-são-assíntotas"><span class="header-section-number">9.1</span> 📌 O que são Assíntotas?</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="📖 Definições">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📖 Definições
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Seja uma função racional <span class="math inline">\(f(x)=\dfrac{p(x)}{q(x)}\)</span>.</p>
+<ul>
+<li><strong>Assíntota vertical:</strong><br>
+Dizemos que <span class="math inline">\(x=a\)</span> é uma assíntota vertical se:
+<ul>
+<li><span class="math inline">\(q(a)=0\)</span> (o denominador se anula em <span class="math inline">\(a\)</span>); e</li>
+<li><span class="math inline">\(p(a)\ne0\)</span> (o numerador não se anula em <span class="math inline">\(a\)</span>).<br>
+Nesse caso, <span class="math inline">\(f(x)\)</span> <strong>não está definida em <span class="math inline">\(x=a\)</span></strong> e o gráfico da função se aproxima de uma linha vertical na reta <span class="math inline">\(x=a\)</span>.</li>
+</ul></li>
+<li><strong>Assíntota horizontal:</strong><br>
+Dizemos que <span class="math inline">\(y=L\)</span> é uma assíntota horizontal se <span class="math display">\[
+\lim_{x\to\pm\infty} f(x) = L.
+\]</span> Isso significa que, para valores muito grandes (positivos ou negativos) de <span class="math inline">\(x\)</span>, o gráfico de <span class="math inline">\(f(x)\)</span> se aproxima da reta horizontal <span class="math inline">\(y=L\)</span>.</li>
+</ul>
+<p>📌 Estes conceitos serão explorados em detalhes no <strong>Módulo de Funções Racionais</strong> e, de forma mais rigorosa, no <strong>Módulo de Limites</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="🔎 Observação">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>🔎 Observação
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Nos problemas de inequações racionais, os valores que <strong>anulam o denominador</strong> nunca pertencem à solução, pois a expressão fica indefinida.<br>
+</li>
+<li>Por isso, tratamos esses pontos como <strong>fronteiras da análise de sinais</strong>, e os chamamos de <strong>assíntotas verticais</strong>.<br>
+</li>
+<li>Já as assíntotas horizontais ajudam a descrever o <strong>comportamento no infinito</strong> de uma função racional.</li>
+</ul>
+</div>
+</div>
+<hr>
+<p>📌 <strong>Exemplo 1:</strong> Quociente positivo Resolva: <span class="math display">\[
+\frac{x+1}{x-3} &gt; 0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução detalhada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução detalhada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Zeros: numerador <span class="math inline">\(x=-1\)</span>.<br>
+</li>
+<li>Assíntota: denominador <span class="math inline">\(x=3\)</span>.<br>
+</li>
+<li>Intervalos: <span class="math inline">\((-\infty,-1),\ (-1,3),\ (3,+\infty)\)</span>.<br>
+</li>
+<li>Sinais:
+<ul>
+<li><span class="math inline">\((-\infty,-1)\)</span>: ambos negativos ⇒ quociente positivo.<br>
+</li>
+<li><span class="math inline">\((-1,3)\)</span>: numerador positivo, denominador negativo ⇒ quociente negativo.<br>
+</li>
+<li><span class="math inline">\((3,+\infty)\)</span>: ambos positivos ⇒ quociente positivo.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/quociente-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Exemplo $\frac{x+1}{x-3} > 0$"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/assintotas.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Assíntotas"></p>
+</figure>
+</div>
+<p>✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-1)\cup(3,+\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<p>📌 <strong>Exemplo 2:</strong> Quociente com mais fatores Resolva: <span class="math display">\[
+\frac{x^2-1}{x^2-3x} &gt; 0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução detalhada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução detalhada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{(x-1)(x+1)}{x(x-3)} &gt; 0, \quad x\neq 0,3.
+\]</span></p>
+<ul>
+<li>Zeros/assíntotas: <span class="math inline">\(-1,\,0,\,1,\,3\)</span>.<br>
+</li>
+<li>Intervalos: <span class="math inline">\((-\infty,-1),\ (-1,0),\ (0,1),\ (1,3),\ (3,\infty)\)</span>.<br>
+</li>
+<li>Teste de sinais:
+<ul>
+<li><span class="math inline">\((-\infty,-1)\)</span>: positivo.<br>
+</li>
+<li><span class="math inline">\((-1,0)\)</span>: negativo.<br>
+</li>
+<li><span class="math inline">\((0,1)\)</span>: positivo.<br>
+</li>
+<li><span class="math inline">\((1,3)\)</span>: negativo.<br>
+</li>
+<li><span class="math inline">\((3,\infty)\)</span>: positivo.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/quociente-2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Exemplo $\frac{x^2-1}{x^2-3x} > 0$"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/assintotas-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Assíntotas"></p>
+</figure>
+</div>
+<p>✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-1)\cup(0,1)\cup(3,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
 <hr>
 <div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios Propostos">
 <div class="callout-header d-flex align-content-center">
@@ -747,7 +1034,7 @@ x \in [1,3]
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📝 Exercícios Propostos
+<span class="screen-reader-only">Nota</span>📝 Exercícios Propostos
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -772,16 +1059,16 @@ x \in [1,3]
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-✅ Gabarito
+<span class="screen-reader-only">Importante</span>✅ Gabarito
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><ol type="a">
@@ -804,8 +1091,1022 @@ x \in [1,3]
 </div>
 <hr>
 </section>
-<section id="navegação" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 🔗 Navegação</h1>
+<section id="exercícios-de-revisão" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="exercícios-de-revisão"><span class="header-section-number">9.2</span> 🧠 Exercícios de Revisão</h2>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 1 — Desigualdade composta e intervalo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 1 — Desigualdade composta e intervalo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Resolva e escreva a solução em notação de intervalo: <span class="math display">\[
+1&lt;2x+3\le 9
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{aligned}
+1&lt;2x+3\le 9
+&amp;\iff 1-3&lt;2x\le 9-3 \\
+&amp;\iff -2&lt;2x\le 6 \\
+&amp;\iff -1&lt;x\le 3 \quad (\text{dividir por }2&gt;0)
+\end{aligned}
+\]</span> <strong>Solução:</strong> <span class="math inline">\((-1,3]\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 2 — Coeficiente negativo (troca de sinal)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 2 — Coeficiente negativo (troca de sinal)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Resolva: <span class="math display">\[
+-3x+5\ge 2
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{aligned}
+-3x+5\ge 2
+&amp;\iff -3x\ge -3 \\
+&amp;\iff x\le 1 \quad (\text{dividir por }-3&lt;0 \Rightarrow \text{inverte})
+\end{aligned}
+\]</span> <strong>Solução:</strong> <span class="math inline">\((-\infty,1]\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 3 — Inequação quadrática fatorável (< 0)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 3 — Inequação quadrática fatorável (&lt; 0)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Resolva: <span class="math display">\[
+x^2-x-6&lt;0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Fatorando: <span class="math inline">\(x^2-x-6=(x-3)(x+2)\)</span>.<br>
+Raízes: <span class="math inline">\(x=-2\)</span> e <span class="math inline">\(x=3\)</span>. Como <span class="math inline">\(a=1&gt;0\)</span>, a parábola é <strong>côncava para cima</strong>.<br>
+Logo, <span class="math inline">\(f(x)&lt;0\)</span> <strong>entre</strong> as raízes: <span class="math display">\[
+x\in(-2,3).
+\]</span> <strong>Solução:</strong> <span class="math inline">\((-2,3)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 4 — Inequação quadrática (raízes não inteiras) (≥ 0)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 4 — Inequação quadrática (raízes não inteiras) (≥ 0)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Resolva: <span class="math display">\[
+2x^2+3x-2\ge 0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Discriminante: <span class="math inline">\(\Delta=b^2-4ac=3^2-4\cdot2\cdot(-2)=9+16=25\)</span>.<br>
+Raízes: <span class="math display">\[
+x=\frac{-3\pm\sqrt{25}}{2\cdot2}=\frac{-3\pm5}{4}\;\Rightarrow\;x_1=-2,\;x_2=\tfrac12.
+\]</span> Com <span class="math inline">\(a=2&gt;0\)</span>, a parábola é <strong>côncava para cima</strong>; então <span class="math inline">\(f(x)\ge 0\)</span> <strong>fora</strong> do intervalo entre as raízes (e inclui as raízes porque é <span class="math inline">\(\geqslant\)</span>): <span class="math display">\[
+x\in(-\infty,-2]\cup\left[\tfrac12,\infty\right).
+\]</span> <strong>Solução:</strong> <span class="math inline">\((-\infty,-2]\cup[0{,}5,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 5 — Operações com intervalos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 5 — Operações com intervalos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sejam <span class="math inline">\(A=(-\infty,4)\)</span> e <span class="math inline">\(B=[1,7)\)</span>.<br>
+(a) <span class="math inline">\(A\cap B\)</span> (b) <span class="math inline">\(A\cup B\)</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><span class="math inline">\(A\cap B\)</span>: pontos que estão <strong>nos dois</strong>.<br>
+<span class="math inline">\(A\)</span> vai até <span class="math inline">\(4\)</span> (aberto), <span class="math inline">\(B\)</span> começa em <span class="math inline">\(1\)</span> (fechado) e vai até <span class="math inline">\(7\)</span> (aberto).<br>
+Interseção: de <span class="math inline">\(1\)</span> até <span class="math inline">\(4\)</span>, incluindo <span class="math inline">\(1\)</span> e <strong>excluindo</strong> <span class="math inline">\(4\)</span>: <span class="math inline">\([1,4)\)</span>.</p></li>
+<li><p><span class="math inline">\(A\cup B\)</span>: pontos que estão <strong>em pelo menos um</strong>.<br>
+A união cobre de <span class="math inline">\(-\infty\)</span> até <span class="math inline">\(7\)</span> aberto (porque <span class="math inline">\(B\)</span> já cobre <span class="math inline">\([1,7)\)</span> e <span class="math inline">\(A\)</span> cobre <span class="math inline">\((-\infty,4)\)</span>): <span class="math inline">\((-\infty,7)\)</span>.</p></li>
+</ul>
+<p><strong>Respostas:</strong> (a) <span class="math inline">\([1,4)\)</span> (b) <span class="math inline">\((-\infty,7)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 6 — Resolva as inequações abaixo.">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 6 — Resolva as inequações abaixo.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Produto: <span class="math inline">\(x(x-1)&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Raízes em <span class="math inline">\(x=0\)</span> e <span class="math inline">\(x=1\)</span>. Como o coeficiente líder é <span class="math inline">\(+1\)</span>, o produto é <strong>positivo fora</strong> do intervalo entre as raízes.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,0)\cup(1,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="2" type="a">
+<li>Produto: <span class="math inline">\((x-1)(x+2)&lt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Raízes em <span class="math inline">\(x=-2\)</span> e <span class="math inline">\(x=1\)</span>. Coeficiente líder <span class="math inline">\(+1\)</span> ⇒ negativo <strong>entre</strong> as raízes.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-2,1)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="3" type="a">
+<li>Quadrática: <span class="math inline">\(x^2+4x-21&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\Delta=4^2-4\cdot1\cdot(-21)=100\)</span>.<br>
+Raízes: <span class="math inline">\(x=\tfrac{-4\pm10}{2}\Rightarrow x=-7,\,3\)</span>.<br>
+Parábola abre para cima ⇒ <span class="math inline">\(&gt;0\)</span> <strong>fora</strong>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-7)\cup(3,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="4" type="a">
+<li>Quadrática: <span class="math inline">\(2x^2+x&lt;3\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(2x^2+x-3&lt;0\)</span>.<br>
+<span class="math inline">\(\Delta=1+24=25\)</span>.<br>
+Raízes: <span class="math inline">\(x=\tfrac{-1\pm5}{4}\Rightarrow x=-\tfrac32,\,1\)</span>.<br>
+<span class="math inline">\(&lt;0\)</span> <strong>entre</strong> as raízes.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\(\left(-\tfrac32,\,1\right)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="5" type="a">
+<li>Quadrática: <span class="math inline">\(4x^2+10x-6&lt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\Delta=10^2-4\cdot4\cdot(-6)=196\)</span>.<br>
+Raízes: <span class="math inline">\(x=\tfrac{-10\pm14}{8}\Rightarrow x=-3,\,\tfrac12\)</span>.<br>
+<span class="math inline">\(&lt;0\)</span> <strong>entre</strong> as raízes.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-3,\,\tfrac12)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="6" type="a">
+<li>Quadrática: <span class="math inline">\(x^2+2x+4&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\Delta=2^2-4\cdot1\cdot4=-12&lt;0\)</span> e <span class="math inline">\(a=1&gt;0\)</span> ⇒ a expressão é <strong>sempre positiva</strong>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 7 — Radicais reais (radicando ≥ 0)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 7 — Radicais reais (radicando ≥ 0)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><span class="math inline">\(\sqrt{4-x^2}\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Precisamos <span class="math inline">\(4-x^2\ge0 \Rightarrow -2\le x\le 2\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\([-2,2]\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="2" type="a">
+<li><span class="math inline">\(\dfrac{1}{\sqrt{4-3x}}\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O radicando deve ser <strong>positivo</strong> (e o denominador <span class="math inline">\(\ne0\)</span>): <span class="math inline">\(4-3x&gt;0 \Rightarrow x&lt;\tfrac43\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,\tfrac43)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="3" type="a">
+<li><span class="math inline">\(\dfrac{1}{\sqrt{x^2-x-12}}\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Exigimos <span class="math inline">\(x^2-x-12&gt;0\Rightarrow(x-4)(x+3)&gt;0\)</span> ⇒ fora das raízes.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-3)\cup(4,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 8 — Positividade de funções racionais">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 8 — Positividade de funções racionais
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><span class="math inline">\(\dfrac{x}{x^2+4}&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Denominador <span class="math inline">\(x^2+4&gt;0\)</span> para todo <span class="math inline">\(x\)</span>. Sinal da fração = sinal de <span class="math inline">\(x\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((0,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="2" type="a">
+<li><span class="math inline">\(\dfrac{x}{x^2-4}&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Críticos: <span class="math inline">\(x=0,\pm2\)</span> (em <span class="math inline">\(\pm2\)</span> é indefinida). Tabela de sinais ⇒ positivo em <span class="math inline">\((-2,0)\)</span> e <span class="math inline">\((2,\infty)\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-2,0)\cup(2,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="3" type="a">
+<li><span class="math inline">\(\dfrac{x+1}{x-3}&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Zero: <span class="math inline">\(-1\)</span>. Assíntota: <span class="math inline">\(3\)</span>. Sinais por intervalos ⇒ <span class="math inline">\((-\infty,-1)\)</span> e <span class="math inline">\((3,\infty)\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-1)\cup(3,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="4" type="a">
+<li><span class="math inline">\(\dfrac{x^2-1}{x^2-3x}&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\dfrac{(x-1)(x+1)}{x(x-3)}&gt;0\)</span>, com <span class="math inline">\(x\ne0,3\)</span>. Críticos: <span class="math inline">\(-1,0,1,3\)</span>.<br>
+Sinais ⇒ <span class="math inline">\((-\infty,-1)\cup(0,1)\cup(3,\infty)\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-1)\cup(0,1)\cup(3,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 9 — Descrever e diagramar o conjunto (em $\mathbb{R}$)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 9 — Descrever e diagramar o conjunto (em <span class="math inline">\(\mathbb{R}\)</span>)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><span class="math inline">\(x^2&lt;4\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(-2&lt;x&lt;2\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-2,2)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="2" type="a">
+<li><span class="math inline">\(x^2+3x-4&gt;0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\((x+4)(x-1)&gt;0\)</span> ⇒ fora das raízes.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-4)\cup(1,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="3" type="a">
+<li><span class="math inline">\(x^2+6x+8\le0\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\((x+2)(x+4)\le0\)</span> ⇒ entre as raízes, incluindo-as.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\([-4,-2]\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="4" type="a">
+<li><span class="math inline">\(x^2&lt;5x+14\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x^2-5x-14&lt;0\Rightarrow(x-7)(x+2)&lt;0\)</span> ⇒ entre as raízes.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-2,7)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="5" type="a">
+<li><span class="math inline">\(2x^2&gt;x+6\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(2x^2-x-6&gt;0\)</span>. <span class="math inline">\(\Delta=49\)</span>. Raízes: <span class="math inline">\(-\tfrac32\)</span> e <span class="math inline">\(2\)</span>.<br>
+<span class="math inline">\(&gt;0\)</span> <strong>fora</strong>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-\tfrac32)\cup(2,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="6" type="a">
+<li><span class="math inline">\(6x^2+13x&lt;5\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(6x^2+13x-5&lt;0\)</span>. <span class="math inline">\(\Delta=289\)</span>. Raízes: <span class="math inline">\(-\tfrac52\)</span> e <span class="math inline">\(\tfrac13\)</span>.<br>
+<span class="math inline">\(&lt;0\)</span> <strong>entre</strong>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\tfrac52,\,\tfrac13)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="7" type="a">
+<li><span class="math inline">\(x^3+3x^2&gt;10x\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x(x^2+3x-10)=x(x+5)(x-2)&gt;0\)</span>.<br>
+Sinais por intervalos com críticos <span class="math inline">\(-5,0,2\)</span> ⇒<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-5,0)\cup(2,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Exercício 10 — Resolva">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exercício 10 — Resolva
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><span class="math inline">\(-4&lt;2-x&lt;7\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Somando <span class="math inline">\(-2\)</span>: <span class="math inline">\(-6&lt;-x&lt;5\)</span>. Multiplicando por <span class="math inline">\(-1\)</span> (inverte): <span class="math inline">\(6&gt;x&gt;-5\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-5,6)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="2" type="a">
+<li><span class="math inline">\(\dfrac{2x-1}{x}&lt;3\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{2x-1}{x}-3=\frac{-x-1}{x}&lt;0 \ \Longleftrightarrow\ \frac{x+1}{x}&gt;0.
+\]</span> Críticos: <span class="math inline">\(-1,0\)</span>. Sinais ⇒ positivo em <span class="math inline">\((-\infty,-1)\)</span> e <span class="math inline">\((0,\infty)\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-\infty,-1)\cup(0,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+<hr>
+<ol start="3" type="a">
+<li><span class="math inline">\(\dfrac{x}{x+2}&lt;1\)</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Resolução comentada">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resolução comentada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{x}{x+2}-1=\frac{-2}{x+2}&lt;0 \ \Longleftrightarrow\ \frac{2}{x+2}&gt;0
+\]</span> (numerador <span class="math inline">\(&gt;0\)</span>) ⇒ <span class="math inline">\(x+2&gt;0 \Rightarrow x&gt;-2\)</span>, com <span class="math inline">\(x\ne-2\)</span>.<br>
+✅ <strong>Solução:</strong> <span class="math inline">\((-2,\infty)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="quadro-resumo-módulo-1.3-ordem-intervalos-e-inequações" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> 🔎 Quadro-Resumo — Módulo 1.3 (Ordem, Intervalos e Inequações)</h1>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled" title="📖 Definições de Ordem em $\mathbb{R}$">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>📖 Definições de Ordem em <span class="math inline">\(\mathbb{R}\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="math inline">\(a&lt;b \iff b-a&gt;0\)</span>; <span class="math inline">\(a&gt;b \iff a-b&gt;0\)</span>.</li>
+<li><span class="math inline">\(a\le b \iff (a&lt;b \text{ ou } a=b)\)</span>; <span class="math inline">\(a\ge b \iff (a&gt;b \text{ ou } a=b)\)</span>.</li>
+<li><strong>Desigualdades estritas:</strong> <span class="math inline">\(&lt;,&gt;\)</span>. <strong>Não-estritas:</strong> <span class="math inline">\(\le,\ge\)</span>.</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="📏 Propriedades de Ordem — Uso rápido">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📏 Propriedades de Ordem — Uso rápido
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Soma:</strong> <span class="math inline">\(a&lt;b \Rightarrow a+c&lt;b+c\)</span>.</li>
+<li><strong>Produto por <span class="math inline">\(c&gt;0\)</span>:</strong> preserva o sentido.</li>
+<li><strong>Produto por <span class="math inline">\(c&lt;0\)</span>:</strong> inverte o sentido.</li>
+<li><strong>Transitividade:</strong> se <span class="math inline">\(a&lt;b\)</span> e <span class="math inline">\(b&lt;c\)</span>, então <span class="math inline">\(a&lt;c\)</span>.</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="📦 Intervalos e Notação">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📦 Intervalos e Notação
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Aberto: <span class="math inline">\((a,b)=\{x\mid a&lt;x&lt;b\}\)</span>.</li>
+<li>Fechado: <span class="math inline">\([a,b]=\{x\mid a\le x\le b\}\)</span>.</li>
+<li>Semiabertos: <span class="math inline">\((a,b],\ [a,b)\)</span>.</li>
+<li>Infinitos: <span class="math inline">\((a,\infty),\ (-\infty,b),\ [a,\infty),\ (-\infty,b]\)</span>.</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled" title="🧮 Inequações Lineares (com (a\ne0))">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>🧮 Inequações Lineares (com (a))
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Forma geral: <span class="math inline">\(\boxed{\,ax+b\ \{&lt;,\le,&gt;,\ge\}\ c\,}\)</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Passo a passo">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Passo a passo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-60" class="callout-60-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Isolar o termo <span class="math inline">\(ax\)</span> (somando/subtraindo dos dois lados).<br>
+</li>
+<li>Dividir por <span class="math inline">\(a\)</span>. <strong>Se <span class="math inline">\(a&lt;0\)</span></strong>, <strong>inverter</strong> a desigualdade.<br>
+</li>
+<li>Escrever a solução em intervalo e, se útil, testar um valor.<br>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled" title="🟦 Inequações Quadráticas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>🟦 Inequações Quadráticas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Estudar o sinal de <span class="math inline">\(f(x)=ax^2+bx+c\)</span> via <strong>raízes</strong> e <strong>concavidade</strong>.</li>
+<li><span class="math inline">\(\Delta=b^2-4ac\)</span>.<br>
+</li>
+<li>Se <span class="math inline">\(a&gt;0\)</span>: <span class="math inline">\(f(x)\)</span> é <span class="math inline">\(&gt;0\)</span> <strong>fora</strong> das raízes e <span class="math inline">\(&lt;0\)</span> <strong>entre</strong>.<br>
+</li>
+<li>Se <span class="math inline">\(a&lt;0\)</span>: comportamento invertido.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Passo a passo">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Passo a passo
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-62" class="callout-62-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Resolver <span class="math inline">\(ax^2+bx+c=0\)</span> (fatorar/BC).<br>
+</li>
+<li>Marcar as raízes na reta e a concavidade (sinal de <span class="math inline">\(a\)</span>).<br>
+</li>
+<li>Escolher os intervalos que satisfazem <span class="math inline">\(&gt;,\ge,&lt;,\le\)</span>.<br>
+</li>
+<li><strong>Incluir</strong> as raízes se a desigualdade for não-estrita (<span class="math inline">\(\ge,\le\)</span>).<br>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="✖️ Inequações Produto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>✖️ Inequações Produto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Tipo: <span class="math inline">\((x-a)(x-b)\ \{&lt;,&gt;,\le,\ge\}\ 0\)</span>.<br>
+</li>
+<li><strong>Regra:</strong> montar <strong>tabela de sinais</strong> dos fatores; o produto é <span class="math inline">\(+\)</span> quando há número par de sinais negativos, e <span class="math inline">\(−\)</span> quando ímpar.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Exemplo enxuto">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-64-contents" aria-controls="callout-64" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exemplo enxuto
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-64" class="callout-64-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(x(x-1)&gt;0 \Rightarrow (-\infty,0)\cup(1,\infty)\)</span>.<br>
+(Raízes <span class="math inline">\(0,1\)</span>; sinais: <span class="math inline">\(+,-,+\)</span>; queremos <span class="math inline">\(+\)</span> → fora do intervalo.)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="➗ Inequações Quociente">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>➗ Inequações Quociente
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Tipo: <span class="math inline">\(\dfrac{f(x)}{g(x)}\ \{&lt;,&gt;,\le,\ge\}\ 0\)</span>, com <span class="math inline">\(g(x)\ne0\)</span>.<br>
+</li>
+<li><strong>Regra:</strong> sinais <strong>separam</strong> por zeros de <span class="math inline">\(f\)</span> (numerador) e por <strong>assíntotas</strong> <span class="math inline">\(g=0\)</span> (excluídas!).<br>
+</li>
+<li>Quociente é <span class="math inline">\(+\)</span> se numerador e denominador têm o <strong>mesmo</strong> sinal; <span class="math inline">\(−\)</span> se têm sinais <strong>opostos</strong>.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Exemplo enxuto">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-66-contents" aria-controls="callout-66" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Exemplo enxuto
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-66" class="callout-66-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\dfrac{x+1}{x-3}&gt;0 \Rightarrow (-\infty,-1)\cup(3,\infty)\)</span>.<br>
+(Críticos <span class="math inline">\(-1\)</span> [zero] e <span class="math inline">\(3\)</span> [assíntota]; sinais: <span class="math inline">\(+,-,+\)</span>; queremos <span class="math inline">\(+\)</span>.)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="🧰 Checklist rápido para resolver">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>🧰 Checklist rápido para resolver
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><label><input type="checkbox">Identifique <strong>tipo</strong>: linear / quadrática / produto / quociente.<br>
+</label></li>
+<li><label><input type="checkbox">Encontre <strong>pontos críticos</strong> (raízes, assíntotas).<br>
+</label></li>
+<li><label><input type="checkbox">Faça <strong>tabela de sinais</strong> por intervalos.<br>
+</label></li>
+<li><label><input type="checkbox">Aplique a <strong>regra do sinal</strong> pedida (<span class="math inline">\(&gt;,\ge,&lt;,\le\)</span>).<br>
+</label></li>
+<li><label><input type="checkbox">Decida <strong>inclusão/exclusão</strong> das bordas.<br>
+</label></li>
+<li><label><input type="checkbox">Escreva em <strong>notação de intervalo</strong> e <strong>teste</strong> um valor.</label></li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="⚠️ Erros comuns a evitar">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>⚠️ Erros comuns a evitar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Esquecer de <strong>inverter</strong> a desigualdade ao dividir por número <strong>negativo</strong>.<br>
+</li>
+<li><strong>Incluir</strong> assíntotas (<span class="math inline">\(g(x)=0\)</span>) em quocientes.<br>
+</li>
+<li>Não verificar se a raiz entra na solução quando a relação é <span class="math inline">\(\ge\)</span> ou <span class="math inline">\(\le\)</span>.<br>
+</li>
+<li>Perder pontos críticos ao simplificar fatores comuns (anote restrições antes!).<br>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="navegação" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> 🔗 Navegação</h1>
 <p>🎯 <strong>Próximo Post:</strong> 👉 <strong>1.4 Funções</strong> (Em Produção!)</p>
 <p><a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">Topo</a></p>
 <hr>
