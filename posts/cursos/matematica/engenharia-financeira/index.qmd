@@ -1,0 +1,100 @@
+---
+title: "📘 Curso: Matemática da Engenharia Financeira"
+description: "Curso baseado no livro *A Primer for the Mathematics of Financial Engineering* de Dan Stefanica. Conteúdo expandido com exemplos, exercícios resolvidos e aplicações computacionais em Python/R."
+author: "Blog do Marcellini"
+date: 2025-09-07
+lang: pt-BR
+categories: [engenharia financeira, matemática, finanças quantitativas, cursos]
+tags: [engenharia financeira, cálculo, probabilidade, opções, derivativos]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+---
+
+<!-- Breadcrumbs -->
+[← Cursos de Matemática](/posts/cursos/matematica/index.qmd) · 
+[← Seção Engenharia Financeira](/posts/cursos/matematica/engenharia-financeira/index.qmd)
+
+---
+
+# 👋 Bem-vindo ao Curso
+
+::: {.callout-note title="📌 Sobre o Curso"}
+Este curso segue o livro **Dan Stefanica – A Primer for the Mathematics of Financial Engineering** (segunda edição, 2011).  
+Nosso objetivo é:
+
+- Revisar conceitos matemáticos essenciais.  
+- Aplicar ferramentas a problemas de **Engenharia Financeira**.  
+- Resolver **exercícios passo a passo**.  
+- Usar **Python/R** para simulações e cálculos.  
+:::
+
+---
+
+# 🗂 Estrutura do Curso
+
+::: {.callout-tip title="📖 Módulos"}
+- **Módulo 0 – Preliminares Matemáticas**  
+  Funções pares/ímpares, somatórios úteis, recursões lineares, notações Big-O e little-o.  
+
+- **Módulo 1 – Cálculo e Opções**  
+  Revisão de derivadas, integrais, limites, funções multivariáveis, opções vanilla e arbitragem.  
+
+- **Módulo 2 – Integração Numérica e Renda Fixa**  
+  Integrais impróprias, métodos numéricos, curvas de juros, duration e convexidade de bonds.  
+
+- **Módulo 3 – Probabilidade e Black-Scholes**  
+  Probabilidade discreta/contínua, normal padrão, fórmula de Black-Scholes, gregas e hedging.  
+
+- **Módulo 4 – Lognormal e Precificação Neutra ao Risco**  
+  Variáveis lognormais, aproximações, séries, modelo de precificação risk-neutral.  
+
+- **Módulo 5 – Fórmula e Série de Taylor**  
+  Expansões, aproximações para Black-Scholes, conexões com duration e convexidade.  
+
+- **Módulo 6 – Diferenças Finitas e PDE Black-Scholes**  
+  Métodos numéricos, interpretação financeira da PDE, aproximação de gregas.  
+
+- **Módulo 7 – Cálculo Multivariável Avançado**  
+  Regra da cadeia, integrais múltiplas, Box-Muller, opções de barreira.  
+
+- **Módulo 8 – Otimização e Volatilidade Implícita**  
+  Multiplicadores de Lagrange, Newton, bootstrapping, portfólios ótimos.  
+:::
+
+---
+
+# 🎯 Metodologia
+
+::: {.callout-note title="🔎 Como Estudar"}
+- Cada módulo será dividido em **tópicos curtos**.  
+- Os posts terão:  
+  - **Resumo teórico**  
+  - **Exemplo resolvido**  
+  - **Exercícios propostos**  
+  - **Gabarito em box recolhível**  
+  - **Código Python/R** para prática  
+- Diagramas e gráficos serão incluídos para **visualização clara**.  
+:::
+
+---
+
+# 🚀 Próximos Passos
+
+::: {.callout-important title="👉 Primeiro Módulo"}
+Começaremos com o **Módulo 0 – Preliminares Matemáticas**, cobrindo:  
+1. Funções pares e ímpares  
+2. Somatórios úteis  
+3. Sequências e recursões lineares  
+4. Notações assintóticas (*Big O* e *little o*)  
+5. Exercícios resolvidos  
+:::
+
