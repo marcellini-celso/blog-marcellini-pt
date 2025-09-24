@@ -1,0 +1,74 @@
+---
+title: "📌 Cheatsheet Git para o Blog do Marcellini"
+description: "Um guia rápido e prático dos comandos Git mais usados no fluxo de trabalho do blog."
+author: "Celso Marcellini"
+date: "2025-09-19"
+categories: [Git, Programação, Tutoriais]
+image: ../../images/placeholder-dark.png
+---
+
+# 🚀 Fluxo básico de atualização
+
+1. Ver status dos arquivos  
+   `git status`
+
+2. Adicionar todos os arquivos modificados  
+   `git add .`
+
+3. Fazer commit com mensagem  
+   `git commit -m "Atualizações no blog"`
+
+4. Garantir que está atualizado com o remoto (rebase evita conflitos)  
+   `git pull --rebase`
+
+5. Enviar alterações para o GitHub  
+   `git push`
+
+---
+
+# 🔍 Consultas rápidas
+
+- Ver histórico resumido  
+  `git log --oneline --graph --decorate -n 10`
+
+- Ver diferenças antes do commit  
+  `git diff`
+
+---
+
+# 🛑 Se der problema no rebase
+
+- Cancelar rebase em andamento  
+  `git rebase --abort`
+
+- Continuar depois de resolver conflitos  
+  `git rebase --continue`
+
+---
+
+# 🌐 Conferir remoto (usar SSH sempre)
+
+- Mostrar a URL atual do remoto  
+  `git remote -v`
+
+- Se aparecer HTTPS, trocar para SSH  
+  `git remote set-url origin git@github.com:marcellini-celso/NOME_DO_REPO.git`
+
+---
+
+# ⚡ Configurações úteis (uma vez só)
+
+- Sempre rebasear ao fazer pull  
+  `git config --global pull.rebase true`
+
+- Guardar mudanças locais automaticamente durante rebase  
+  `git config --global rebase.autoStash true`
+
+- Mostrar branch atual ordenada pelo último commit  
+  `git config --global branch.sort -committerdate`
+
+---
+
+📌 **Dica:** mantenha este cheatsheet por perto para consulta rápida.  
+Ele cobre 99% do que você vai usar no fluxo de atualização dos blogs **PT** e **EN**.
+
