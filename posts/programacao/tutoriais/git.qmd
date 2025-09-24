@@ -3,8 +3,25 @@ title: "📌 Cheatsheet Git para o Blog do Marcellini"
 description: "Um guia rápido e prático dos comandos Git mais usados no fluxo de trabalho do blog."
 author: "Celso Marcellini"
 date: "2025-09-19"
-categories: [Git, Programação, Tutoriais]
-image: ../../images/placeholder-dark.png
+lang: pt-BR
+categories: [git, programação, tutoriais]
+tags: [git, programação, tutoriais]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+---
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
 ---
 
 # 🚀 Fluxo básico de atualização
@@ -71,4 +88,26 @@ image: ../../images/placeholder-dark.png
 
 📌 **Dica:** mantenha este cheatsheet por perto para consulta rápida.  
 Ele cobre 99% do que você vai usar no fluxo de atualização dos blogs **PT** e **EN**.
+
+---
+
+[← Voltar para a Seção de Programação 👨‍💻](/posts/programacao/)
+
+---
+
+🔝 [Voltar ao Topo](git.qmd)
+
+---
+
+*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤️ e código.*
+:::
+
+# 🔗 Links Úteis
+
+- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 
