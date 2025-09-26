@@ -84,6 +84,8 @@ $$
 Vamos visualizar como o tempo se dilata com a velocidade relativa. Suponha $\Delta t_0 = 1$ segundo.
 
 ```{r dilatação do tempo}
+# Código R:
+
 library(plotly)
 
 velocidade <- seq(0, 0.99, by = 0.01)
@@ -115,6 +117,8 @@ $$
 Vamos visualizar esse efeito graficamente com $L_0 = 1$ unidade:
 
 ```{r contração do comprimento}
+# Código R:
+
 library(plotly)
 
 v <- seq(0, 0.99, by = 0.01)

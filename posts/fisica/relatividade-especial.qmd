@@ -60,6 +60,8 @@ Um mergulho didático na teoria da Relatividade Especial, com gráficos, exemplo
 Quando um objeto se move muito rápido (próximo à velocidade da luz), o tempo **passa mais devagar** para ele em relação a um observador parado.
 
 ```{r dilatação do tempo}
+# Código R:
+
 library(plotly)
 velocidade <- seq(0, 0.99, by = 0.01)
 tempo <- 1 / sqrt(1 - velocidade^2)
@@ -84,6 +86,8 @@ L = L_0 \sqrt{1 - \frac{v^2}{c^2}}
 $$
 
 ```{r contração do comprimento}
+# Código R:
+
 velocidade <- seq(0, 0.99, by = 0.01)
 L <- sqrt(1 - velocidade^2)
 plot_ly(x = ~velocidade, y = ~L, type = "scatter", mode = "lines") %>%
