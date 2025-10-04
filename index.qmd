@@ -86,6 +86,24 @@ Um curso progressivo que combina **rigor matemático**, **qualidade tipográfica
 [👉 Acompanhar o Curso de Cálculo ›](posts/cursos/matematica/calculo/index.qmd){.button .button-outline}
 :::
 
+::: {.callout-note collapse=true title="📚 Hub de Modelos & Templates (Quarto)"}
+Página-índice com links organizados para **modelos prontos** e **boas práticas em Quarto**:  
+- Modelos de `index.qmd`  
+- YAML comentado  
+- Markdown estilizado  
+- Templates reutilizáveis  
+
+[👉 Acessar o Hub ›](posts/programacao/quarto/modelos-hub.qmd){.button .button-outline}
+:::
+
+::: {.callout-important title="🆕 Nova Série: Inteligência Artificial"}
+Acabamos de lançar a série **🧠 Inteligência Artificial** no Blog do Marcellini!  
+
+📌 Explore os **Large Language Models (LLMs)** e a **IA generativa**, entendendo desde as redes neurais e o mecanismo de atenção até aplicações práticas e tendências para o futuro.  
+
+👉 [Acesse a série completa ›](posts/programacao/ia/index.qmd){.button .button-outline}
+:::
+
 <div style="margin-top: .25rem"></div>
 
 > 🔧 Exemplos programáveis:  
@@ -100,11 +118,16 @@ Um curso progressivo que combina **rigor matemático**, **qualidade tipográfica
 ## 🆕 Últimos Posts
 
 <!-- inicio-ultimos-posts -->
+- [📚 Omar Khayyam: Rubaiyat (Parte 4)](posts/biografias/omar-khayyam/omar-khayyam-parte4.html)
+- [📚 Omar Khayyam (Parte 3): Rubaiyat](posts/biografias/omar-khayyam/omar-khayyam-parte3.html)
 - [✨ Viver como se tudo fosse um milagre](posts/pessoal/einstein.html)
-- [📌 Cheatsheet Git para o Blog do Marcellini](posts/programacao/tutoriais/git.html)
-- [📘 Módulo 1.3 AP: Valor Absoluto e Inequações Modulares](posts/cursos/matematica/calculo/modulo-1/1.3-valor-absoluto-AP.html)
-- [📘 Módulo 1.3: Intervalos e Inequações](posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html)
-- [📘 Curso: Matemática da Engenharia Financeira](posts/cursos/matematica/engenharia-financeira/index.html)
+- [📚 Omar Khayyam (Parte 2): Rubaiyat](posts/biografias/omar-khayyam/omar-khayyam-parte2.html)
+- [📚 Omar Khayyam (Parte 1): Matemático e Poeta](posts/biografias/omar-khayyam/omar-khayyam-parte1.html)
+- [🔮 O Futuro dos LLMs e da IA Generativa](posts/programacao/ia/llms/futuro-ia-llms.html)
+- [📚 Biografias Matemáticas](posts/biografias/index.html)
+- [🧠 Inteligência Artificial — Índice da Seção](posts/programacao/ia/index.html)
+- [🚀 Aplicações Práticas dos LLMs](posts/programacao/ia/llms/aplicacoes-praticas.html)
+- [⚠️ Desafios e Limitações dos LLMs](posts/programacao/ia/llms/desafios-limitacoes.html)
 <!-- fim-ultimos-posts -->
 
 > Esta seção é atualizada automaticamente a cada nova publicação.

@@ -78,3 +78,11 @@ code {
   box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
 }
 
+.bio-img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;    /* tamanho fixo */
+  max-height: 300px; /* garante altura uniforme */
+  object-fit: contain; /* evita distorção */
+}
+

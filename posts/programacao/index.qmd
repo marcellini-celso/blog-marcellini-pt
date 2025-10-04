@@ -42,7 +42,29 @@ Snippets de R para estatística, visualizações e relatórios reprodutíveis.
 ::: {.callout-note title="📐 LaTeX + Quarto: Templates"}
 Templates e padrões para artigos, slides e posts técnicos.
 
-[Ver os templates ›](quarto/index.qmd){.button .button-outline}
+[Ver os templates ›](latex/modelos-latex-quarto.qmd){.button .button-outline}
+:::
+:::
+:::
+
+<!-- NOVO: Série de Inteligência Artificial -->
+::: {.columns}
+::: {.column width="33%"}
+::: {.callout-note title="🤖 Inteligência Artificial (IA)"}
+Série especial sobre **LLMs e IA generativa**: fundamentos, história, arquitetura de Transformers, treinamento, desafios e aplicações práticas.
+
+[Ver a série ›](ia/index.qmd){.button .button-outline}
+:::
+:::
+:::
+
+<!-- NOVO: callout do Hub de Modelos & Templates -->
+::: {.columns}
+::: {.column width="33%"}
+::: {.callout-note title="📚 Hub de Modelos & Templates"}
+Página-índice com links organizados para **modelos prontos** e **boas práticas em Quarto**.
+
+[Ver o hub ›](quarto/modelos-hub.qmd){.button .button-outline}
 :::
 :::
 :::
@@ -57,6 +79,9 @@ Dicas sobre como escrever documentos científicos com LaTeX: fórmulas matemáti
 ### [📘 📄 Quarto](quarto/index.qmd)
 Publicações sobre a ferramenta Quarto para criação de sites, artigos dinâmicos e relatórios reprodutíveis.
 
+### [📘 📄 📚 Hub de Modelos & Templates (Quarto)](quarto/modelos-hub.qmd)
+Página consolidada com **modelos de Quarto**, **YAML** e **Markdown** prontos para uso e boas práticas de organização.
+
 ### [📘 📄 🧰 Git — Cheatsheet do Blog](tutoriais/git.qmd)
 Guia rápido com os comandos Git do fluxo do blog: `status`, `add/commit`, `pull --rebase`, `push`, troca **HTTPS→SSH** e configurações úteis.
 
@@ -66,6 +91,9 @@ Conteúdos introdutórios e práticos sobre Python com foco em automação e an�
 ### [📘 📄 📊 R](r/index.qmd)
 Dicas e exemplos com a linguagem R voltada à estatística, gráficos e relatórios interativos.
 
+### [📘 📄 🧠 Inteligência Artificial](ia/index.qmd)
+Série especial sobre **LLMs (Large Language Models)** e a evolução da **IA generativa**: fundamentos, atenção, treinamento, limitações, aplicações práticas e futuro.
+
 ## 🧭 📘 👨‍💻 Guia de Leitura
 
 1. **[🧭 👨‍💻 Guia de Leitura da Seção de Programação](guia-programacao.qmd)** — Trilha sugerida com ordem progressiva, interligando os principais conteúdos da seção.
@@ -74,7 +102,9 @@ Dicas e exemplos com a linguagem R voltada à estatística, gráficos e relatór
 
 ---
 
-🔝 [Voltar ao Topo](#top)
+<!-- Breadcrumbs -->
+
+· 🔝 [Topo](#top)
 
 ---
 
