@@ -13,8 +13,8 @@ format:
     highlight-style: github
     code-link: true
 page-layout: full
-categories: [inteligência artificial, IA, LLM, RLHF, Transformers, RNN, NLP, deep learning, LLM, sumário, programação, ética, atenção, aplicações]
-tags: [inteligência artificial, IA, LLM, RLHF, Transformers, RNN, NLP, deep learning, LLM, sumário, programação, ética, atenção, aplicações]
+categories: [inteligência artificial, IA, LLM, RLHF, Transformer, RNN, NLP, deep learning, sumário, programação, ética, atenção, aplicações, GPT, Claude, Gemini, LLaMA, Mistral, BERT, LSTM, GRU]
+tags: [inteligência artificial, IA, LLM, RLHF, Transformer, RNN, NLP, deep learning, sumário, programação, ética, atenção, aplicações, GPT, Claude, Gemini, LLaMA, Mistral, BERT, LSTM, GRU]
 ---
 
 <!-- Breadcrumbs -->
@@ -22,6 +22,14 @@ tags: [inteligência artificial, IA, LLM, RLHF, Transformers, RNN, NLP, deep lea
 · [← Seção de Programação](../index.qmd)
 
 ---
+
+::: {.callout-note title="🤖 Inteligência Artificial — Série de LLMs"}
+Tutoriais, exemplos práticos e aplicações de **IA e LLMs modernos**, como **GPT (OpenAI)**, **Claude (Anthropic)**, **Gemini (Google DeepMind)**, **LLaMA (Meta)** e **Mistral (França)** — integrados ao ecossistema **Quarto**.
+
+Explore como esses modelos funcionam, suas bases em **redes neurais**,  
+**Transformers**, **NLP**, **RNNs**, **BERT**, **LSTM**, **GRU** e a ascensão da **IA generativa**.
+:::
+
 
 # 🚀 Série Especial: Large Language Models (LLMs)
 
@@ -65,44 +73,63 @@ Nesta série você vai aprender:
 ```{python}
 import matplotlib.pyplot as plt
 
+# ---------- Dados ----------
 marcos = [
     (1956, "Dartmouth Workshop\n(nascimento da IA)"),
     (1986, "Backpropagation\n(popularização)"),
     (1997, "Deep Blue\n(derrota Kasparov)"),
-    (2012, "AlexNet\n(revolução em visão computacional)"),
+    (2012, "AlexNet\n(revolução em visão)"),
     (2017, "Attention is All You Need\n(Transformer)"),
     (2018, "BERT\n(encoder bidirecional)"),
     (2020, "GPT-3\n(175B parâmetros)"),
     (2022, "ChatGPT\n(popularização dos LLMs)"),
     (2023, "GPT-4\n(multimodal inicial)"),
+    (2023, "LLaMA 1 (Meta)\n(open-source)"),
+    (2023, "Gemini 1 (Google DeepMind)\n(multimodal)"),
+    (2023, "Mistral 7B\n(eficiência)"),
+    (2024, "Claude 3\n(alinhamento e contexto)"),
+    (2024, "LLaMA 3 (Meta)\n(ecossistema aberto)"),
+    (2024, "Mixtral 8x7B (Mistral)\n(Mixture of Experts)"),
+    (2024, "Gemini 1.5\n(janelas longas)"),
+    (2025, "GPT-5\n(modelo multimodal avançado)"),  # 👈 novo marco
 ]
 
-anos = [a for a, _ in marcos]
-labels = [f"{a} — {t}" for a, t in marcos]
+# ---------- Amplia o espaçamento entre eventos ----------
+# cria um eixo Y "esticado" multiplicando a posição de cada evento
+gap = 3.2  # controle de espaçamento (↑ aumenta a distância entre rótulos)
+anos = [i * gap for i in range(len(marcos))]
+labels = [f"{ano} — {texto}" for ano, texto in marcos]
 
-fig, ax = plt.subplots(figsize=(6, 8), dpi=150)
+# ---------- Figura ----------
+fig, ax = plt.subplots(figsize=(6.4, 11), dpi=150)
 
-# linha do tempo vertical
-ax.vlines(1, min(anos)-2, max(anos)+2, linewidth=2)
-ax.plot([1]*len(anos), anos, 'o', markersize=7)
+# linha do tempo central
+ax.vlines(1, min(anos) - gap, max(anos) + gap, linewidth=2)
+ax.plot([1]*len(anos), anos, 'o', markersize=7, color="black")
 
-# alternar rótulos à esquerda/direita
+# ---------- Anotações ----------
 for i, (y, text) in enumerate(zip(anos, labels)):
     is_left = (i % 2 == 0)
-    x_text = 0.88 if is_left else 1.12
+    x_text = 0.84 if is_left else 1.16
     ha = 'right' if is_left else 'left'
     ax.annotate(
-        text, xy=(1, y), xytext=(x_text, y),
-        textcoords='data', va='center', ha=ha, fontsize=10,
-        arrowprops=dict(arrowstyle='-', lw=0.8),
-        bbox=dict(boxstyle="round,pad=0.25", alpha=0.9)
+        text,
+        xy=(1, y),
+        xytext=(x_text, y),
+        textcoords='data',
+        va='center',
+        ha=ha,
+        fontsize=9,
+        arrowprops=dict(arrowstyle='-', lw=0.7, alpha=0.8),
+        bbox=dict(boxstyle="round,pad=0.25", alpha=0.85)
     )
 
+# ---------- Estilo geral ----------
 ax.set_xlim(0.7, 1.3)
 ax.set_xticks([])
-ax.set_ylabel("Ano")
-ax.set_ylim(min(anos)-2, max(anos)+2)
-ax.invert_yaxis()
+ax.set_yticks([])
+ax.set_title("Linha do Tempo — Evolução da Inteligência Artificial (até GPT-5)", fontsize=11.5, weight="bold", pad=12)
+ax.set_ylabel("")
 
 plt.tight_layout()
 plt.savefig("images/ia-timeline-vertical.png", bbox_inches="tight")

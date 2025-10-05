@@ -13,8 +13,8 @@ format:
     highlight-style: github
     code-link: true
 page-layout: full
-categories: [inteligência artificial, IA, LLM, machine learning, deep learning, modelos de linguagem, GPT, Quarto, redes neurais, Transformer, NLP, IA generativa, BERT, RNN, LSTM, GRU]
-tags: [inteligência artificial, IA, LLM, machine learning, deep learning, modelos de linguagem, GPT, Quarto, redes neurais, Transformer, NLP, IA generativa, BERT, RNN, LSTM, GRU]
+categories: [inteligência artificial, IA, LLM, machine learning, deep learning, modelos de linguagem, redes neurais, Transformer, NLP, IA generativa, GPT, Claude, Gemini, LLaMA, Mistral, BERT, RNN, LSTM, GRU]
+tags: [inteligência artificial, IA, LLM, machine learning, deep learning, modelos de linguagem, redes neurais, Transformer, NLP, IA generativa, GPT, Claude, Gemini, LLaMA, Mistral, BERT, RNN, LSTM, GRU]
 ---
 
 <!-- Breadcrumbs -->
@@ -143,6 +143,16 @@ Ambas: lentidão + dificuldade com dependências longas.
 ::::
 :::::
 
+## 🔁 LSTM e GRU — Evoluções das RNNs
+
+Para contornar os problemas de memória das RNNs, surgiram variantes como:
+
+- **LSTM (Long Short-Term Memory)** — introduz portas de entrada e esquecimento para manter informações relevantes por mais tempo.  
+- **GRU (Gated Recurrent Unit)** — simplifica a LSTM, usando menos parâmetros, mas com desempenho semelhante.  
+
+Essas arquiteturas dominaram o NLP entre 2015 e 2017, até a chegada dos Transformers.
+
+
 ## 🏗️ A revolução Transformer
 
 O **Transformer** (2017) mudou tudo.  
@@ -176,12 +186,17 @@ Eliminar o uso de embeddings.
 ::::
 :::::
 
+## 🧱 O que é o BERT?
+
+O **BERT (Bidirectional Encoder Representations from Transformers)**, criado pelo Google em 2018, foi o primeiro modelo a usar o Transformer de forma **bidirecional** — ele lê frases da esquerda e da direita ao mesmo tempo.  
+Isso o tornou excelente em tarefas de **entendimento de linguagem**, como perguntas e respostas ou análise de sentimentos.  
+
 
 ## 🌍 Exemplos de LLMs atuais
 
 ::: {.callout-note title="🤖 GPT, Claude, LLaMA e Mistral — os LLMs mais conhecidos"}
 - **GPT (OpenAI)**  
-  - Linha de modelos mais popular, com versões como **GPT-3.5** e **GPT-4**.  
+  - Linha de modelos mais popular, com versões como **GPT-3.5**, **GPT-4** e **GPT-5**.  
   - São usados no **ChatGPT**.  
   - Foco: **desempenho geral** e ampla integração em ferramentas (plugins, API, apps).  
   - Modelo **fechado**: não é de código aberto, mas muito usado comercialmente.
@@ -191,6 +206,12 @@ Eliminar o uso de embeddings.
   - Projetado com foco em **segurança e alinhamento**: tenta reduzir alucinações e respostas tóxicas.  
   - Muito usado em contextos corporativos e produtivos (resumos, análise de documentos).  
   - Também é modelo **fechado**, oferecido por API.
+
+- **Gemini (Google DeepMind)**
+  - Lançado oficialmente em 2023 como sucessor do Bard.
+  - Foco em multimodalidade — entende texto, imagem, áudio e vídeo.
+  - Altamente integrado ao ecossistema Google (Docs, Android, Search, Workspace).
+  - Modelo fechado, com versões especializadas: Gemini 1.5 Pro, Gemini 1.5 Flash e Gemini Nano.
 
 - **LLaMA (Meta)**  
   - Criado pela **Meta (Facebook)**.  
@@ -210,34 +231,38 @@ Eliminar o uso de embeddings.
 
 | Modelo | Empresa | Acesso | Foco principal | Observação |
 |--------|---------|--------|----------------|------------|
-| **GPT (3.5/4)** | OpenAI | API paga / ChatGPT | Versatilidade geral | Muito usado no mercado |
+| **GPT (3.5/4/5)** | OpenAI | API paga / ChatGPT | Versatilidade geral | Muito usado no mercado |
 | **Claude** | Anthropic | API paga | Segurança e alinhamento | Competidor direto do GPT |
+| **Gemini (1.5)** | Google DeepMind | Fechado / Google Apps | Multimodalidade e integração | Sucessor do Bard |
 | **LLaMA (2, 3)** | Meta (Facebook) | Aberto (pesquisa e comunidade) | Base para modelos customizados | Dele surgiram dezenas de variantes |
 | **Mistral (7B / Mixtral 8x7B)** | Mistral (França) | Aberto (pesos disponíveis) | Eficiência e custo menor | Forte impacto na comunidade open-source |
 
 
 ## 🖼️ Linha do Tempo: GPT, Claude, LLaMA e Mistral
 
-![](images/llms-timeline.png){fig-align="center" width="100%"}
+![](images/llms-timeline-v2.png){fig-align="center" width="100%"}
 
 ::: {.callout-important collapse="true" title="📦 Código (clique para expandir) — gera a linha do tempo"}
 ```{python}
 from pathlib import Path
 import matplotlib.pyplot as plt
 
-# saída
+# Diretório e arquivo de saída
 Path("images").mkdir(parents=True, exist_ok=True)
-outfile = "images/llms-timeline.png"
+outfile = "images/llms-timeline-v2.png"
 
-# dados principais (ano de lançamento)
+# Dados atualizados (ano de lançamento)
 models = [
     ("GPT-3", 2020, "OpenAI"),
     ("GPT-3.5", 2022, "OpenAI"),
     ("ChatGPT", 2022, "OpenAI"),
     ("GPT-4", 2023, "OpenAI"),
+    ("GPT-5", 2025, "OpenAI"),
     ("Claude 1", 2023, "Anthropic"),
     ("Claude 2", 2023, "Anthropic"),
     ("Claude 3", 2024, "Anthropic"),
+    ("Gemini 1", 2023, "Google DeepMind"),
+    ("Gemini 1.5", 2024, "Google DeepMind"),
     ("LLaMA 1", 2023, "Meta"),
     ("LLaMA 2", 2023, "Meta"),
     ("LLaMA 3", 2024, "Meta"),
@@ -245,25 +270,27 @@ models = [
     ("Mixtral 8x7B", 2024, "Mistral"),
 ]
 
+# Cores por organização
 colors = {
-    "OpenAI":"skyblue",
-    "Anthropic":"lightgreen",
-    "Meta":"lightcoral",
-    "Mistral":"plum"
+    "OpenAI": "skyblue",
+    "Anthropic": "lightgreen",
+    "Google DeepMind": "gold",
+    "Meta": "lightcoral",
+    "Mistral": "plum",
 }
 
-fig, ax = plt.subplots(figsize=(8.5,4.5), dpi=150)
+# Figura
+fig, ax = plt.subplots(figsize=(9, 4.8), dpi=150)
 
-# desenha pontos
-for (lab, year, org) in models:
+for (name, year, org) in models:
     ax.scatter(year, org, s=2000, c=colors[org], edgecolor="black", zorder=3)
-    ax.text(year, org, lab, ha="center", va="center", fontsize=8, weight="bold")
+    ax.text(year, org, name, ha="center", va="center", fontsize=8, weight="bold")
 
-# ajustes do gráfico
-ax.set_title("Linha do Tempo — Modelos GPT, Claude, LLaMA e Mistral", fontsize=12, weight="bold")
+# Estilo do gráfico
+ax.set_title("Linha do Tempo — Modelos GPT, Claude, Gemini, LLaMA e Mistral", fontsize=12, weight="bold")
 ax.set_xlabel("Ano de lançamento")
-ax.set_yticks(["OpenAI","Anthropic","Meta","Mistral"])
-ax.set_yticklabels(["OpenAI (GPT)", "Anthropic (Claude)", "Meta (LLaMA)", "Mistral (França)"])
+ax.set_yticks(["OpenAI", "Anthropic", "Google DeepMind", "Meta", "Mistral"])
+ax.set_yticklabels(["OpenAI (GPT)", "Anthropic (Claude)", "Google DeepMind (Gemini)", "Meta (LLaMA)", "Mistral (França)"])
 ax.grid(axis="x", linestyle="--", alpha=0.5)
 ax.set_xlim(2019.5, 2025.5)
 

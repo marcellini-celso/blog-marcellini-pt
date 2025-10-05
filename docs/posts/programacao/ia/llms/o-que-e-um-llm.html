@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,10 +75,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-a6e161b2431e1f94a14e0f5d32135a3c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-056a15991f255e6d0456d528ab1187a7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-380943d4bfe4c5c620fbe886fd83bb3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -275,8 +275,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#quiz-nlp" id="toc-quiz-nlp" class="nav-link" data-scroll-target="#quiz-nlp">🧩 Quiz — NLP</a></li>
   <li><a href="#antes-dos-transformers-as-rnns" id="toc-antes-dos-transformers-as-rnns" class="nav-link" data-scroll-target="#antes-dos-transformers-as-rnns">🌀 Antes dos Transformers: as RNNs</a></li>
   <li><a href="#quiz-rnn" id="toc-quiz-rnn" class="nav-link" data-scroll-target="#quiz-rnn">🧩 Quiz — RNN</a></li>
+  <li><a href="#lstm-e-gru-evoluções-das-rnns" id="toc-lstm-e-gru-evoluções-das-rnns" class="nav-link" data-scroll-target="#lstm-e-gru-evoluções-das-rnns">🔁 LSTM e GRU — Evoluções das RNNs</a></li>
   <li><a href="#a-revolução-transformer" id="toc-a-revolução-transformer" class="nav-link" data-scroll-target="#a-revolução-transformer">🏗️ A revolução Transformer</a></li>
   <li><a href="#quiz-transformer" id="toc-quiz-transformer" class="nav-link" data-scroll-target="#quiz-transformer">🧩 Quiz — Transformer</a></li>
+  <li><a href="#o-que-é-o-bert" id="toc-o-que-é-o-bert" class="nav-link" data-scroll-target="#o-que-é-o-bert">🧱 O que é o BERT?</a></li>
   <li><a href="#exemplos-de-llms-atuais" id="toc-exemplos-de-llms-atuais" class="nav-link" data-scroll-target="#exemplos-de-llms-atuais">🌍 Exemplos de LLMs atuais</a></li>
   <li><a href="#comparativo-rápido" id="toc-comparativo-rápido" class="nav-link" data-scroll-target="#comparativo-rápido">📊 Comparativo rápido</a></li>
   <li><a href="#linha-do-tempo-gpt-claude-llama-e-mistral" id="toc-linha-do-tempo-gpt-claude-llama-e-mistral" class="nav-link" data-scroll-target="#linha-do-tempo-gpt-claude-llama-e-mistral">🖼️ Linha do Tempo: GPT, Claude, LLaMA e Mistral</a></li>
@@ -300,12 +302,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-category">machine learning</div>
     <div class="quarto-category">deep learning</div>
     <div class="quarto-category">modelos de linguagem</div>
-    <div class="quarto-category">GPT</div>
-    <div class="quarto-category">Quarto</div>
     <div class="quarto-category">redes neurais</div>
     <div class="quarto-category">Transformer</div>
     <div class="quarto-category">NLP</div>
     <div class="quarto-category">IA generativa</div>
+    <div class="quarto-category">GPT</div>
+    <div class="quarto-category">Claude</div>
+    <div class="quarto-category">Gemini</div>
+    <div class="quarto-category">LLaMA</div>
+    <div class="quarto-category">Mistral</div>
     <div class="quarto-category">BERT</div>
     <div class="quarto-category">RNN</div>
     <div class="quarto-category">LSTM</div>
@@ -528,6 +533,16 @@ Esse é um mini-LLM atuando, mas em escala muito menor que os modelos atuais.</p
 </div>
 </div>
 </section>
+<section id="lstm-e-gru-evoluções-das-rnns" class="level2">
+<h2 class="anchored" data-anchor-id="lstm-e-gru-evoluções-das-rnns">🔁 LSTM e GRU — Evoluções das RNNs</h2>
+<p>Para contornar os problemas de memória das RNNs, surgiram variantes como:</p>
+<ul>
+<li><strong>LSTM (Long Short-Term Memory)</strong> — introduz portas de entrada e esquecimento para manter informações relevantes por mais tempo.<br>
+</li>
+<li><strong>GRU (Gated Recurrent Unit)</strong> — simplifica a LSTM, usando menos parâmetros, mas com desempenho semelhante.</li>
+</ul>
+<p>Essas arquiteturas dominaram o NLP entre 2015 e 2017, até a chegada dos Transformers.</p>
+</section>
 <section id="a-revolução-transformer" class="level2">
 <h2 class="anchored" data-anchor-id="a-revolução-transformer">🏗️ A revolução Transformer</h2>
 <p>O <strong>Transformer</strong> (2017) mudou tudo.<br>
@@ -564,6 +579,11 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 </div>
 </div>
 </section>
+<section id="o-que-é-o-bert" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-é-o-bert">🧱 O que é o BERT?</h2>
+<p>O <strong>BERT (Bidirectional Encoder Representations from Transformers)</strong>, criado pelo Google em 2018, foi o primeiro modelo a usar o Transformer de forma <strong>bidirecional</strong> — ele lê frases da esquerda e da direita ao mesmo tempo.<br>
+Isso o tornou excelente em tarefas de <strong>entendimento de linguagem</strong>, como perguntas e respostas ou análise de sentimentos.</p>
+</section>
 <section id="exemplos-de-llms-atuais" class="level2">
 <h2 class="anchored" data-anchor-id="exemplos-de-llms-atuais">🌍 Exemplos de LLMs atuais</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="🤖 GPT, Claude, LLaMA e Mistral — os LLMs mais conhecidos">
@@ -579,7 +599,7 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 <ul>
 <li><strong>GPT (OpenAI)</strong>
 <ul>
-<li>Linha de modelos mais popular, com versões como <strong>GPT-3.5</strong> e <strong>GPT-4</strong>.<br>
+<li>Linha de modelos mais popular, com versões como <strong>GPT-3.5</strong>, <strong>GPT-4</strong> e <strong>GPT-5</strong>.<br>
 </li>
 <li>São usados no <strong>ChatGPT</strong>.<br>
 </li>
@@ -596,6 +616,13 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 <li>Muito usado em contextos corporativos e produtivos (resumos, análise de documentos).<br>
 </li>
 <li>Também é modelo <strong>fechado</strong>, oferecido por API.</li>
+</ul></li>
+<li><strong>Gemini (Google DeepMind)</strong>
+<ul>
+<li>Lançado oficialmente em 2023 como sucessor do Bard.</li>
+<li>Foco em multimodalidade — entende texto, imagem, áudio e vídeo.</li>
+<li>Altamente integrado ao ecossistema Google (Docs, Android, Search, Workspace).</li>
+<li>Modelo fechado, com versões especializadas: Gemini 1.5 Pro, Gemini 1.5 Flash e Gemini Nano.</li>
 </ul></li>
 <li><strong>LLaMA (Meta)</strong>
 <ul>
@@ -643,7 +670,7 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>GPT (3.5/4)</strong></td>
+<td><strong>GPT (3.5/4/5)</strong></td>
 <td>OpenAI</td>
 <td>API paga / ChatGPT</td>
 <td>Versatilidade geral</td>
@@ -657,13 +684,20 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 <td>Competidor direto do GPT</td>
 </tr>
 <tr class="odd">
+<td><strong>Gemini (1.5)</strong></td>
+<td>Google DeepMind</td>
+<td>Fechado / Google Apps</td>
+<td>Multimodalidade e integração</td>
+<td>Sucessor do Bard</td>
+</tr>
+<tr class="even">
 <td><strong>LLaMA (2, 3)</strong></td>
 <td>Meta (Facebook)</td>
 <td>Aberto (pesquisa e comunidade)</td>
 <td>Base para modelos customizados</td>
 <td>Dele surgiram dezenas de variantes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Mistral (7B / Mixtral 8x7B)</strong></td>
 <td>Mistral (França)</td>
 <td>Aberto (pesos disponíveis)</td>
@@ -677,7 +711,7 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 <h2 class="anchored" data-anchor-id="linha-do-tempo-gpt-claude-llama-e-mistral">🖼️ Linha do Tempo: GPT, Claude, LLaMA e Mistral</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/llms-timeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="images/llms-timeline-v2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="📦 Código (clique para expandir) — gera a linha do tempo">
@@ -692,58 +726,63 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="5b483cdd" class="cell" data-execution_count="1">
+<div id="73eec440" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># saída</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Diretório e arquivo de saída</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(parents<span class="op">=</span><span class="va">True</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>outfile <span class="op">=</span> <span class="st">"images/llms-timeline.png"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>outfile <span class="op">=</span> <span class="st">"images/llms-timeline-v2.png"</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># dados principais (ano de lançamento)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados atualizados (ano de lançamento)</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>models <span class="op">=</span> [</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"GPT-3"</span>, <span class="dv">2020</span>, <span class="st">"OpenAI"</span>),</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"GPT-3.5"</span>, <span class="dv">2022</span>, <span class="st">"OpenAI"</span>),</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"ChatGPT"</span>, <span class="dv">2022</span>, <span class="st">"OpenAI"</span>),</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"GPT-4"</span>, <span class="dv">2023</span>, <span class="st">"OpenAI"</span>),</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Claude 1"</span>, <span class="dv">2023</span>, <span class="st">"Anthropic"</span>),</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Claude 2"</span>, <span class="dv">2023</span>, <span class="st">"Anthropic"</span>),</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Claude 3"</span>, <span class="dv">2024</span>, <span class="st">"Anthropic"</span>),</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"LLaMA 1"</span>, <span class="dv">2023</span>, <span class="st">"Meta"</span>),</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"LLaMA 2"</span>, <span class="dv">2023</span>, <span class="st">"Meta"</span>),</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"LLaMA 3"</span>, <span class="dv">2024</span>, <span class="st">"Meta"</span>),</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Mistral 7B"</span>, <span class="dv">2023</span>, <span class="st">"Mistral"</span>),</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Mixtral 8x7B"</span>, <span class="dv">2024</span>, <span class="st">"Mistral"</span>),</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> {</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"OpenAI"</span>:<span class="st">"skyblue"</span>,</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Anthropic"</span>:<span class="st">"lightgreen"</span>,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Meta"</span>:<span class="st">"lightcoral"</span>,</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mistral"</span>:<span class="st">"plum"</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">8.5</span>,<span class="fl">4.5</span>), dpi<span class="op">=</span><span class="dv">150</span>)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># desenha pontos</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (lab, year, org) <span class="kw">in</span> models:</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    ax.scatter(year, org, s<span class="op">=</span><span class="dv">2000</span>, c<span class="op">=</span>colors[org], edgecolor<span class="op">=</span><span class="st">"black"</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    ax.text(year, org, lab, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">8</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># ajustes do gráfico</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Linha do Tempo — Modelos GPT, Claude, LLaMA e Mistral"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Ano de lançamento"</span>)</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>ax.set_yticks([<span class="st">"OpenAI"</span>,<span class="st">"Anthropic"</span>,<span class="st">"Meta"</span>,<span class="st">"Mistral"</span>])</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>ax.set_yticklabels([<span class="st">"OpenAI (GPT)"</span>, <span class="st">"Anthropic (Claude)"</span>, <span class="st">"Meta (LLaMA)"</span>, <span class="st">"Mistral (França)"</span>])</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>ax.grid(axis<span class="op">=</span><span class="st">"x"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="fl">2019.5</span>, <span class="fl">2025.5</span>)</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>plt.savefig(outfile, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>plt.close()</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Figura salva em: </span><span class="sc">{</span>outfile<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"GPT-5"</span>, <span class="dv">2025</span>, <span class="st">"OpenAI"</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Claude 1"</span>, <span class="dv">2023</span>, <span class="st">"Anthropic"</span>),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Claude 2"</span>, <span class="dv">2023</span>, <span class="st">"Anthropic"</span>),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Claude 3"</span>, <span class="dv">2024</span>, <span class="st">"Anthropic"</span>),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Gemini 1"</span>, <span class="dv">2023</span>, <span class="st">"Google DeepMind"</span>),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Gemini 1.5"</span>, <span class="dv">2024</span>, <span class="st">"Google DeepMind"</span>),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"LLaMA 1"</span>, <span class="dv">2023</span>, <span class="st">"Meta"</span>),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"LLaMA 2"</span>, <span class="dv">2023</span>, <span class="st">"Meta"</span>),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"LLaMA 3"</span>, <span class="dv">2024</span>, <span class="st">"Meta"</span>),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Mistral 7B"</span>, <span class="dv">2023</span>, <span class="st">"Mistral"</span>),</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Mixtral 8x7B"</span>, <span class="dv">2024</span>, <span class="st">"Mistral"</span>),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Cores por organização</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> {</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"OpenAI"</span>: <span class="st">"skyblue"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Anthropic"</span>: <span class="st">"lightgreen"</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Google DeepMind"</span>: <span class="st">"gold"</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Meta"</span>: <span class="st">"lightcoral"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mistral"</span>: <span class="st">"plum"</span>,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Figura</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">4.8</span>), dpi<span class="op">=</span><span class="dv">150</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (name, year, org) <span class="kw">in</span> models:</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    ax.scatter(year, org, s<span class="op">=</span><span class="dv">2000</span>, c<span class="op">=</span>colors[org], edgecolor<span class="op">=</span><span class="st">"black"</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    ax.text(year, org, name, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">8</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Estilo do gráfico</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Linha do Tempo — Modelos GPT, Claude, Gemini, LLaMA e Mistral"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Ano de lançamento"</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>ax.set_yticks([<span class="st">"OpenAI"</span>, <span class="st">"Anthropic"</span>, <span class="st">"Google DeepMind"</span>, <span class="st">"Meta"</span>, <span class="st">"Mistral"</span>])</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>ax.set_yticklabels([<span class="st">"OpenAI (GPT)"</span>, <span class="st">"Anthropic (Claude)"</span>, <span class="st">"Google DeepMind (Gemini)"</span>, <span class="st">"Meta (LLaMA)"</span>, <span class="st">"Mistral (França)"</span>])</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>ax.grid(axis<span class="op">=</span><span class="st">"x"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="fl">2019.5</span>, <span class="fl">2025.5</span>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>plt.savefig(outfile, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>plt.close()</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Figura salva em: </span><span class="sc">{</span>outfile<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Figura salva em: images/llms-timeline.png</code></pre>
+<pre><code>Figura salva em: images/llms-timeline-v2.png</code></pre>
 </div>
 </div>
 </div>
@@ -769,7 +808,7 @@ para <strong>“telhado”</strong>, olha para <strong>“subiu”</strong>.</p>
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="1779dc21" class="cell" data-execution_count="2">
+<div id="05f8583d" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagrama "Ciclo de Vida de um LLM" — versão aprimorada</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - caixas com cantos arredondados + sombra</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - setas consistentes e bem posicionadas</span></span>
