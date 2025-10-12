@@ -1,8 +1,8 @@
 ---
 title: "🧠 Inteligência Artificial — Índice da Seção"
-description: "Página inicial da seção de IA do Blog do Marcellini: overview da série sobre LLMs, linha do tempo da IA e próximos conteúdos."
+description: "Página inicial da seção de IA do Blog do Marcellini: linha do tempo da IA, overview da série sobre LLMs e próximos conteúdos."
 author: "Blog do Marcellini"
-date: 2025-09-30
+date: 2025-10-06
 lang: pt-BR
 format:
   html:
@@ -23,53 +23,11 @@ tags: [inteligência artificial, IA, LLM, RLHF, Transformer, RNN, NLP, deep lear
 
 ---
 
-::: {.callout-note title="🤖 Inteligência Artificial — Série de LLMs"}
-Tutoriais, exemplos práticos e aplicações de **IA e LLMs modernos**, como **GPT (OpenAI)**, **Claude (Anthropic)**, **Gemini (Google DeepMind)**, **LLaMA (Meta)** e **Mistral (França)** — integrados ao ecossistema **Quarto**.
-
-Explore como esses modelos funcionam, suas bases em **redes neurais**,  
-**Transformers**, **NLP**, **RNNs**, **BERT**, **LSTM**, **GRU** e a ascensão da **IA generativa**.
-:::
-
-
-# 🚀 Série Especial: Large Language Models (LLMs)
-
-> Uma jornada para entender como funcionam os modelos que estão transformando o mundo digital.
-
----
-
-## ✨ Overview
-
-Os **Modelos de Linguagem de Grande Porte (LLMs)** são o coração da **IA generativa** moderna.  
-Eles conseguem **entender e gerar texto**, escrever código, resumir documentos, criar roteiros, responder perguntas e muito mais.  
-
-Nesta série você vai aprender:
-
-- 🔹 O que são os LLMs e como nasceram.  
-- 🔹 A evolução das redes neurais: de RNNs a Transformers.  
-- 🔹 Como funciona o **mecanismo de atenção**.  
-- 🔹 O processo de treinamento: pré-treinamento, fine-tuning e RLHF.  
-- 🔹 Quais os desafios, limitações e riscos éticos.  
-- 🔹 Aplicações práticas em educação, saúde, programação, negócios e arte.  
-- 🔹 O futuro da IA: multimodalidade, democratização e especialização.  
-
----
-
-## 📚 Série Completa
-
-- [**O que é um Large Language Model (LLM)?**](llms/o-que-e-um-llm.qmd)  
-- [**Atenção em Transformers: Q, K, V e Multi-Head Attention**](llms/atencao-transformers-qkv-mha.qmd)  
-- [**Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF**](llms/treinamento-pretrain-finetune-rlhf.qmd)  
-- [**Desafios e Limitações dos LLMs**](llms/desafios-limitacoes.qmd)  
-- [**Aplicações Práticas dos LLMs**](llms/aplicacoes-praticas.qmd)  
-- [**O Futuro dos LLMs e da IA Generativa**](llms/futuro-ia-llms.qmd)  
-
----
-
 ## 🧭 Linha do tempo da IA
 
 ![](images/ia-timeline-vertical.png){fig-align="center" width="100%"}
 
-:::: {.callout-important collapse="true" title="Código em Python - clique para expandir"}
+:::: {.callout-important collapse="true" title="Código em Python (clique para expandir) -- gera a linha do tempo acima"}
 ```{python}
 import matplotlib.pyplot as plt
 
@@ -136,6 +94,47 @@ plt.savefig("images/ia-timeline-vertical.png", bbox_inches="tight")
 plt.close()
 ```
 :::
+
+---
+::: {.callout-note title="🤖 Inteligência Artificial — Série de LLMs"}
+Tutoriais, exemplos práticos e aplicações de **IA e LLMs modernos**, como **GPT (OpenAI)**, **Claude (Anthropic)**, **Gemini (Google DeepMind)**, **LLaMA (Meta)** e **Mistral (França)** — integrados ao ecossistema **Quarto**.
+
+Explore como esses modelos funcionam, suas bases em **redes neurais**,  
+**Transformers**, **NLP**, **RNNs**, **BERT**, **LSTM**, **GRU** e a ascensão da **IA generativa**.
+:::
+
+
+# 🚀 Série Especial: Large Language Models (LLMs)
+
+> Uma jornada para entender como funcionam os modelos que estão transformando o mundo digital.
+
+---
+
+## ✨ Overview
+
+Os **Modelos de Linguagem de Grande Porte (LLMs)** são o coração da **IA generativa** moderna.  
+Eles conseguem **entender e gerar texto**, escrever código, resumir documentos, criar roteiros, responder perguntas e muito mais.  
+
+Nesta série você vai aprender:
+
+- 🔹 O que são os LLMs e como nasceram.  
+- 🔹 A evolução das redes neurais: de RNNs a Transformers.  
+- 🔹 Como funciona o **mecanismo de atenção**.  
+- 🔹 O processo de treinamento: pré-treinamento, fine-tuning e RLHF.  
+- 🔹 Quais os desafios, limitações e riscos éticos.  
+- 🔹 Aplicações práticas em educação, saúde, programação, negócios e arte.  
+- 🔹 O futuro da IA: multimodalidade, democratização e especialização.  
+
+---
+
+## 📚 Série Completa: Large Language Models (LLMs)
+
+- [**O que é um Large Language Model (LLM)?**](llms/o-que-e-um-llm.qmd)  
+- [**Atenção em Transformers: Q, K, V e Multi-Head Attention**](llms/atencao-transformers-qkv-mha.qmd)  
+- [**Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF**](llms/treinamento-pretrain-finetune-rlhf.qmd)  
+- [**Desafios e Limitações dos LLMs**](llms/desafios-limitacoes.qmd)  
+- [**Aplicações Práticas dos LLMs**](llms/aplicacoes-praticas.qmd)  
+- [**O Futuro dos LLMs e da IA Generativa**](llms/futuro-ia-llms.qmd)  
 
 ---
 

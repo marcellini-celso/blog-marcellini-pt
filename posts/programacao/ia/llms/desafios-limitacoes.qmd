@@ -2,7 +2,7 @@
 title: "⚠️ Desafios e Limitações dos LLMs"
 description: "Os Large Language Models são poderosos, mas não perfeitos. Descubra suas principais limitações: vieses, alucinações, custos de treinamento, impacto ambiental e questões éticas."
 author: "Blog do Marcellini"
-date: 2025-09-29
+date: 2025-10-06
 lang: pt-BR
 format:
   html:
@@ -147,7 +147,7 @@ A mesma tecnologia que gera **aulas acessíveis** pode ser usada para criar **pr
 
 ![](images/llm-challenges.png){fig-align="center" width="90%"}
 
-:::: {.callout-important collapse="true" title="Código em Python — clique para expandir"}
+:::: {.callout-important collapse="true" title="Código em Python (clique para expandir) -- gera a imagem  acima"}
 ```{python}
 # Gera e salva "images/llm-challenges.png"
 from pathlib import Path
@@ -251,7 +251,7 @@ Os LLMs são uma **tecnologia transformadora**, mas que traz riscos e responsabi
 ---
 
 ✍️ *Este post faz parte da série sobre LLMs no Blog do Marcellini.*  
-No próximo capítulo, vamos explorar as **aplicações práticas dos LLMs**: educação, saúde, programação, arte e muito mais. 🚀
+No próximo post, vamos explorar as **aplicações práticas dos LLMs**: educação, saúde, programação, arte e muito mais. 🚀
 
 ---
 

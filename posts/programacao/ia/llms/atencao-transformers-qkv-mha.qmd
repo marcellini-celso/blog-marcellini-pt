@@ -2,7 +2,7 @@
 title: "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention"
 description: "Entenda em detalhes como funciona o mecanismo de atenção nos Transformers: Query, Key, Value, a fórmula matemática com Softmax e o conceito de Multi-Head Attention."
 author: "Blog do Marcellini"
-date: 2025-09-27
+date: 2025-10-06
 lang: pt-BR
 format:
   html:
@@ -157,7 +157,7 @@ Multiplicar diretamente as Queries pelos Values.
 
 ![](images/atencao-heatmap.png){fig-align="center" width="85%"}
 
-:::: {.callout-important collapse="true" title="Código em Python — clique para expandir"}
+:::: {.callout-important collapse="true" title="Código em Python (clique para expandir) -- gera a matriz acima"}
 ```{python}
 # Gera e salva "images/atencao-heatmap.png"
 from pathlib import Path
@@ -219,9 +219,9 @@ O Transformer não usa apenas **uma** atenção, mas várias **em paralelo**:
 
 ## 📊 Visualizando Multi-Head Attention
 
-![](images/multihead-attention.png){fig-align="center" width="80%"}
+![](images/multihead-attention.png){fig-align="center" width="95%"}
 
-:::: {.callout-important collapse="true" title="Código em Python — clique para expandir"}
+:::: {.callout-important collapse="true" title="Código em Python (clique para expandir) -- gera a imagem acima"}
 ```{python}
 # Gera e salva "images/multihead-attention.png"
 from pathlib import Path
@@ -242,7 +242,7 @@ for i, head in enumerate(heads):
 
 ax.text(0.5, 0.9, "⚡ Multi-Head Attention", fontsize=12, weight="bold", ha="center")
 ax.text(0.5, 0.2, "Cada cabeça aprende relações diferentes\nda mesma frase",
-        fontsize=9, ha="center")
+        fontsize=11, ha="center")
 
 ax.axis("off")
 plt.tight_layout()
@@ -287,7 +287,7 @@ O **mecanismo de atenção** é o núcleo do Transformer:
 ---
 
 ✍️ *Este post faz parte da série sobre LLMs no Blog do Marcellini.*  
-No próximo capítulo, vamos explorar **o treinamento dos LLMs: pré-treinamento, fine-tuning e RLHF (aprendizado por reforço com feedback humano)**. 🚀
+No próximo post, vamos explorar **o treinamento dos LLMs: pré-treinamento, fine-tuning e RLHF (aprendizado por reforço com feedback humano)**. 🚀
 
 ---
 

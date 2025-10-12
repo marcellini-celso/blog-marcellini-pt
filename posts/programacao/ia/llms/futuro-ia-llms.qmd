@@ -2,7 +2,7 @@
 title: "🔮 O Futuro dos LLMs e da IA Generativa"
 description: "Para onde vão os Large Language Models e a Inteligência Artificial Generativa? Descubra tendências como multimodalidade, democratização, especialização e os principais riscos."
 author: "Blog do Marcellini"
-date: 2025-10-01
+date: 2025-10-06
 lang: pt-BR
 format:
   html:
@@ -106,7 +106,7 @@ Junto com os avanços, também crescem os desafios:
 
 ![](images/llm-future-trends.png){fig-align="center" width="80%"}
 
-:::: {.callout-important collapse="true" title="Código em Python — clique para expandir"}
+:::: {.callout-important collapse="true" title="Código em Python (clique para expandir) -- gera a imagem acima"}
 ```{python}
 # Gera e salva "images/llm-future-trends.png"
 from pathlib import Path

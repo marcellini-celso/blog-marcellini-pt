@@ -2,7 +2,7 @@
 title: "🤖 O que é um Large Language Model (LLM)?"
 description: "Entenda o que é um Large Language Model (LLM), como funciona, suas bases em redes neurais, NLP, RNNs, Transformers, BERT e a relação com a IA generativa."
 author: "Blog do Marcellini"
-date: 2025-09-26
+date: 2025-10-06
 lang: pt-BR
 format:
   html:
@@ -194,7 +194,7 @@ Isso o tornou excelente em tarefas de **entendimento de linguagem**, como pergun
 
 ## 🌍 Exemplos de LLMs atuais
 
-::: {.callout-note title="🤖 GPT, Claude, LLaMA e Mistral — os LLMs mais conhecidos"}
+::: {.callout-note title="🤖 GPT, Claude, Gemini, LLaMA e Mistral — os LLMs mais conhecidos"}
 - **GPT (OpenAI)**  
   - Linha de modelos mais popular, com versões como **GPT-3.5**, **GPT-4** e **GPT-5**.  
   - São usados no **ChatGPT**.  
@@ -226,6 +226,11 @@ Isso o tornou excelente em tarefas de **entendimento de linguagem**, como pergun
   - Tornou-se um dos símbolos da **IA aberta** na Europa.  
 :::
 
+::: {.callout-note title="📜 Curiosidade histórica"}
+O **Bard**, lançado em março de 2023, foi o primeiro chatbot do Google baseado em modelos como o **LaMDA** e o **PaLM 2**.  
+Com a chegada do **Gemini**, o nome “Bard” foi descontinuado — mas serviu como ponte para a atual fase de IAs multimodais do Google DeepMind.
+:::
+
 
 ## 📊 Comparativo rápido
 
@@ -242,7 +247,7 @@ Isso o tornou excelente em tarefas de **entendimento de linguagem**, como pergun
 
 ![](images/llms-timeline-v2.png){fig-align="center" width="100%"}
 
-::: {.callout-important collapse="true" title="📦 Código (clique para expandir) — gera a linha do tempo"}
+::: {.callout-important collapse="true" title="📦 Código em Python (clique para expandir) — gera a linha do tempo acima"}
 ```{python}
 from pathlib import Path
 import matplotlib.pyplot as plt
@@ -305,7 +310,7 @@ print(f"Figura salva em: {outfile}")
 
 ![](images/llm-lifecycle-v2.png){fig-align="center" width="95%"}
 
-::: {.callout-important collapse="true" title="📦 Código em Python — clique para expandir"}
+::: {.callout-important collapse="true" title="📦 Código em Python (clique para expandir) -- gera o ciclo de vida de um LLM"}
 ```{python}
 # Diagrama "Ciclo de Vida de um LLM" — versão aprimorada
 # - caixas com cantos arredondados + sombra
