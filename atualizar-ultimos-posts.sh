@@ -10,6 +10,7 @@ TMP_LISTA=$(mktemp)
 
 # Etapa 1: Filtrar apenas arquivos válidos
 find posts -name '*.qmd' ! -name '*-estatico.qmd' ! -name 'index.qmd' ! -name 'guia-*.qmd' -type f | while read -r FILE; do
+  git ls-files --error-unmatch "$FILE" >/dev/null 2>&1 || continue
   TITLE=$(grep -m 1 '^title:' "$FILE" | sed -E 's/^title:[[:space:]]*["'\'']?([^"'\'']+)["'\'']?/\1/')
   DATE=$(grep -m 1 '^date:' "$FILE" | sed -E 's/^date:[[:space:]]*//')
 
