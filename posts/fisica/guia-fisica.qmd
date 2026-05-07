@@ -1,8 +1,8 @@
 ---
 title: "🧭 ⚛️ Guia de Leitura — Física"
-description: "Trilha de leitura recomendada para a Seção de Física do Blog do Marcellini. Inclui ordem sugerida para séries especiais e artigos, com base no nível de complexidade e aplicação."
+description: "Trilha de leitura recomendada para a Seção de Física do Blog do Marcellini. Organiza conteúdos técnicos, históricos e epistemológicos em uma progressão conceitual coerente."
 author: "Blog do Marcellini"
-date: 2025-07-30
+date: 2026-05-07
 lang: pt-BR
 categories: [física, guia de leitura]
 tags: [física, guia de leitura]
@@ -25,25 +25,70 @@ page-layout: full
 
 ## Sobre este guia
 
-Este guia oferece uma ordem de leitura sugerida para quem deseja estudar Física de maneira estruturada. Ele reúne os principais conteúdos disponíveis na seção, organizando séries especiais, artigos e reflexões em uma trilha coerente — da introdução ao aprofundamento.
+Este guia propõe uma **ordem de leitura estruturada** para quem deseja estudar Física de forma progressiva e conceitualmente sólida.
+
+Os conteúdos da seção estão organizados em **camadas complementares**:
+
+- 📘 **Conteúdo técnico** — teorias, modelos e formalismo
+- 🕰️ **Conteúdo histórico** — contexto e desenvolvimento das ideias
+- 🧠 **Conteúdo epistemológico** — como a Física é pensada e construída
+
+A leitura não precisa ser rígida, mas a ordem sugerida ajuda a construir uma **visão integrada da Física**.
 
 ---
 
-## ✅ Ordem sugerida
+## ✅ Trilha principal — Fundamentos e Contexto
 
-1. **[📘 🛰️ Relatividade Especial — Uma Visão Geral](relatividade-especial.qmd)** — Introdução didática aos conceitos de espaço-tempo, transformações de Lorentz e o paradoxo dos gêmeos.
+1. **[📘 🛰️ Relatividade Especial — Uma Visão Geral](relatividade-especial.qmd)**
+   Introdução didática aos conceitos de espaço-tempo, transformações de Lorentz e o paradoxo dos gêmeos.
 
-2. **[📘 🛰️ Relatividade Especial — Uma Visão Acadêmica](relatividade-especial-academico.qmd)** — Versão mais formal e aprofundada da teoria da relatividade restrita, com base em fontes clássicas (ex.: Resnick).
+2. **[📘 🛰️ Relatividade Especial — Uma Visão Acadêmica](relatividade-especial-academico.qmd)**
+   Versão mais formal e aprofundada da relatividade restrita, com base em fontes clássicas (ex.: Resnick).
 
-3. **[📘 🧬 100 Anos da Mecânica Quântica](100-anos-mecanica-quantica.qmd)** — Introdução histórica e conceitual sobre os cem anos da teoria quântica.
+3. **[📘 🧬 100 Anos da Mecânica Quântica](100-anos-mecanica-quantica.qmd)**
+   Panorama histórico e conceitual sobre a formação e os desdobramentos da teoria quântica.
 
-4. **[🧭 🛰️ Guia de Leitura — Relatividade Especial](guia-relatividade-especial.qmd)** — Rota de leitura progressiva entre a versão introdutória e a acadêmica.
+---
 
-5. **[🧭 🧬 Guia de Leitura — 100 Anos da Mecânica Quântica](guia-100-anos-mecanica-quantica.qmd)** — Aprofundamento.  
+## 🧠 Física, História & Epistemologia
+
+Esta camada reúne textos voltados à **formação de visão científica**, indo além do formalismo matemático.
+Aqui, a Física aparece como uma atividade intelectual histórica, conceitual e humana, marcada por diferentes **estilos de pensamento** e **tradições científicas**.
+
+Essas leituras são especialmente recomendadas **após o primeiro contato** com os fundamentos técnicos.
+
+### 📘 Ensaios Epistemológicos — Estilos de Pensar a Física
+
+4. **[📘 🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia](feynman-gellmann-babilonia-grecia.qmd)**
+   Ensaio histórico e epistemológico sobre dois estilos de pensamento na física teórica moderna, contrastando pragmatismo e formalismo a partir das tradições babilônica e grega.
+
+5. **[📘 🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física](dirac-vs-feynman.qmd)**
+   Contraste entre o formalismo matemático de Dirac e a intuição pragmática de Feynman na criação teórica do século XX.
+
+6. **[📘 🧠 Einstein — Físico ou Filósofo Natural?](einstein-fisico-ou-filosofo-natural.qmd)**
+   Análise de Einstein como arquiteto conceitual da Física Moderna, destacando princípios, experimentos mentais e fundamentos filosóficos.
+
+7. **[📘 🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?](calculo-simbolico-vs-numerico.qmd)**
+   Reflexão sobre a Física contemporânea, discutindo simulações, soluções aproximadas e o significado de entendimento científico no século XXI.
+
+:::{.callout-note}
+🧠 *A Física avança não apenas por equações, mas pela convivência entre diferentes modos de pensar.*
+:::
+
+---
+
+## 🔁 Guias Temáticos (Aprofundamento)
+
+8. **[🧭 🛰️ Guia de Leitura — Relatividade Especial](guia-relatividade-especial.qmd)**
+   Trilha progressiva entre a abordagem introdutória e a acadêmica.
+
+9. **[🧭 🧬 Guia de Leitura — 100 Anos da Mecânica Quântica](guia-100-anos-mecanica-quantica.qmd)**
+   Aprofundamento histórico e conceitual.
    🔸 *Série em andamento — Parte 1 publicada.*
 
-6. **[🧭 🌠 Guia de Leitura — Relatividade Geral](guia-relatividade-geral.qmd)** — Visão geral.  
-   🔸 *Série em andamento — Parte 1 publicada.*
+10. **[🧭 🌠 Guia de Leitura — Relatividade Geral](guia-relatividade-geral.qmd)**
+    Visão geral da geometria do espaço-tempo e da gravitação relativística.
+    🔸 *Série em andamento — Parte 1 publicada.*
 
 📌 Este guia é atualizado à medida que novos conteúdos forem sendo publicados.
 
@@ -64,4 +109,3 @@ Este guia oferece uma ordem de leitura sugerida para quem deseja estudar Física
 - 🧑‍🏫 [Sobre o Blog](../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-

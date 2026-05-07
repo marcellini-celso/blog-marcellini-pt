@@ -2,7 +2,7 @@
 title: "⚛️ Física"
 description: "Reflexões e conteúdos sobre Mecânica Quântica e Relatividade Especial, com abordagens didáticas e acadêmicas, organizadas em partes e guias temáticos."
 author: "Blog do Marcellini"
-date: 2025-07-11
+date: 2026-05-07
 lang: pt-BR
 categories: [física, sumário de física, sumário]
 tags: [física, sumário de física, sumário]
@@ -60,6 +60,30 @@ Versão mais formal e aprofundada da teoria da relatividade restrita, com base e
 ### [📘 🧬 100 Anos da Mecânica Quântica](100-anos-mecanica-quantica.qmd)
 Introdução histórica e conceitual sobre os cem anos da teoria quântica.
 
+## 🧠 Física, História & Epistemologia
+
+Esta subseção reúne textos voltados à **reflexão sobre a construção do conhecimento físico**, indo além do formalismo matemático. Aqui, a Física é apresentada como uma atividade intelectual histórica, conceitual e humana, marcada por diferentes estilos de pensamento, tradições científicas e escolhas epistemológicas.
+
+Os textos desta seção funcionam como **leituras transversais**, ideais para ampliar a compreensão conceitual após o contato com conteúdos técnicos ou históricos.
+
+### 📘 Ensaios Epistemológicos — Estilos de Pensar a Física
+
+### [📘 🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia](feynman-gellmann-babilonia-grecia.qmd)
+Ensaio histórico e epistemológico sobre dois estilos de pensamento na física teórica moderna, contrastando abordagens intuitivas e formais a partir das tradições babilônica e grega na ciência.
+
+### [📘 🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física](dirac-vs-feynman.qmd)
+Análise do contraste entre o formalismo matemático de Paul Dirac e a intuição pragmática de Richard Feynman, explorando modos complementares de criação teórica na Física do século XX.
+
+### [📘 🧠 Einstein — Físico ou Filósofo Natural?](einstein-fisico-ou-filosofo-natural.qmd)
+Ensaio sobre Einstein como arquiteto conceitual da Física Moderna, destacando o papel dos princípios, dos experimentos mentais e da filosofia natural na formulação de teorias físicas.
+
+### [📘 🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?](calculo-simbolico-vs-numerico.qmd)
+Reflexão sobre a prática contemporânea da Física, discutindo o papel das simulações computacionais, das soluções aproximadas e o significado de “entendimento” científico no século XXI.
+
+:::{.callout-note}
+🧠 *A Física avança não apenas por novas equações, mas pela convivência entre diferentes modos de pensar.*
+:::
+
 ## 🧭 ⚛️ Guia de Leitura
 
 1. **[🧭 ⚛️ Guia de Leitura da Seção de Física](guia-fisica.qmd)** — Trilha sugerida de leitura com ordem progressiva, interligando os principais conteúdos da seção.
@@ -85,4 +109,3 @@ Introdução histórica e conceitual sobre os cem anos da teoria quântica.
 - 🧑‍🏫 [Sobre o Blog](../pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-

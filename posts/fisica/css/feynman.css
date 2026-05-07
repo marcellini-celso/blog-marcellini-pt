@@ -1,0 +1,130 @@
+/* =====================================================
+   Tema local — Feynman & Gell-Mann (modo escuro aprimorado)
+   ===================================================== */
+
+:root {
+  --bg-dark: #0e1117;
+  --panel-dark: #171c24;
+  --text-light: #e9eef7;
+  --muted: #b8c1d4;
+
+  --feynman-gold: #f5b642;    /* calor babilônico */
+  --gellmann-blue: #4fa3f7;   /* razão grega */
+  --accent-purple: #a66ef5;   /* equilíbrio final */
+}
+
+/* plano de fundo e texto */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Fira Sans", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* títulos */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+h1 {
+  color: var(--feynman-gold);
+}
+
+h2 {
+  color: var(--gellmann-blue);
+}
+
+h3 {
+  color: var(--muted);
+}
+
+/* callouts */
+.callout-tip {
+  border-left: 4px solid var(--feynman-gold);
+  background-color: rgba(245, 182, 66, 0.08);
+}
+
+.callout-note {
+  border-left: 4px solid var(--gellmann-blue);
+  background-color: rgba(79, 163, 247, 0.08);
+}
+
+.callout-important {
+  border-left: 4px solid var(--accent-purple);
+  background-color: rgba(166, 110, 245, 0.1);
+  font-style: italic;
+}
+
+/* tabela comparativa */
+table {
+  border-collapse: collapse;
+  margin: 1.5em auto;
+  width: 90%;
+}
+
+th, td {
+  border: 1px solid #2a2f3a;
+  padding: 0.6em 1em;
+}
+
+th {
+  background-color: var(--panel-dark);
+  color: var(--feynman-gold);
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* links */
+a {
+  color: var(--gellmann-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--feynman-gold);
+}
+
+/* gradiente sutil no topo */
+.quarto-title-block {
+  background: linear-gradient(
+    to right,
+    rgba(245, 182, 66, 0.15),
+    rgba(79, 163, 247, 0.15)
+  );
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* =====================================================
+   Harmonização do rodapé global (tema dark)
+   ===================================================== */
+
+.page-footer {
+  background-color: #0e1117 !important;
+  color: #b8c1d4 !important;
+  border-top: 1px solid #252a33;
+  padding: 1em 0;
+}
+
+.page-footer a {
+  color: #4fa3f7 !important; /* azul grego */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.page-footer a:hover {
+  color: #f5b642 !important; /* dourado babilônico */
+}
+
+/* centraliza e suaviza o texto */
+.page-footer .footer-content {
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
