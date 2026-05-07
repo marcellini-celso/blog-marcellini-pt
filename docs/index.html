@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Blog do Marcellini</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -33,15 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./images/banner.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a3d214e1f2e2714c6ce0cc408f4f4097.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9cdbd49fb92a4d7f9d8c4f710986121f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -86,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -142,8 +144,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Blog do Marcellini</span>
     </a>
@@ -193,6 +193,10 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="./posts/programacao/index.html">
  <span class="dropdown-text">💻 Programação</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./posts/inteligencia-artificial/index.html">
+ <span class="dropdown-text">🤖 Inteligência Artificial</span></a>
   </li>  
     </ul>
   </li>
@@ -285,7 +289,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Neste blog, você encontrará conteúdos de <strong>Matemática</strong>, <strong>Estatística</strong> e <strong>Física</strong> desenvolvidos com <strong>rigor</strong>, <strong>fundamentação teórica</strong> e uma abordagem <strong>didática</strong>. A proposta é combinar clareza conceitual com uma apresentação visual profissional, utilizando ferramentas como <strong>LaTeX</strong>, <strong>Quarto</strong>, <strong>Python</strong> e <strong>R</strong>.</p>
+<p>Neste blog, você encontrará conteúdos de <strong>Matemática</strong>, <strong>Estatística</strong>, <strong>Física</strong>, <strong>Programação</strong> e <strong>Tecnologia</strong> desenvolvidos com <strong>rigor</strong>, <strong>fundamentação teórica</strong> e uma abordagem <strong>didática</strong>. A proposta é combinar clareza conceitual com uma apresentação visual profissional, utilizando ferramentas como <strong>LaTeX</strong>, <strong>Quarto</strong>, <strong>Python</strong> e <strong>R</strong>.</p>
 <p>O objetivo é explorar ideias profundas com <strong>simplicidade</strong>, <strong>intuição</strong> e <strong>beleza</strong> — por meio de explicações acessíveis, <strong>visualizações gráficas</strong>, <strong>cursos completos com exercícios resolvidos</strong> e <strong>guias de leitura estruturados</strong>.</p>
 </div>
 </div>
@@ -434,28 +438,49 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Página-índice com links organizados para <strong>modelos prontos</strong> e <strong>boas práticas em Quarto</strong>:<br>
-- Modelos de <code>index.qmd</code><br>
-- YAML comentado<br>
-- Markdown estilizado<br>
-- Templates reutilizáveis</p>
+<p>Página-índice com links organizados para <strong>modelos prontos</strong> e <strong>boas práticas em Quarto</strong>:</p>
+<ul>
+<li>Modelos de <code>index.qmd</code><br>
+</li>
+<li>YAML comentado<br>
+</li>
+<li>Markdown estilizado<br>
+</li>
+<li>Templates reutilizáveis</li>
+</ul>
 <p><a href="./posts/programacao/quarto/modelos-hub.html" class="button button-outline">👉 Acessar o Hub ›</a></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled" title="🆕 Nova Série: Inteligência Artificial">
+<blockquote class="blockquote">
+<p><strong>“A questão não é se as máquinas podem pensar, mas se podemos entender o que significa pensar.”</strong><br>
+<span style="font-size:0.9em;">— Inspirado em Alan Turing</span></p>
+</blockquote>
+<div class="callout callout-style-default callout-important callout-titled" title="🆕 Nova Seção: Inteligência Artificial">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>🆕 Nova Série: Inteligência Artificial
+<span class="screen-reader-only">Importante</span>🆕 Nova Seção: Inteligência Artificial
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Acabamos de lançar a série <strong>🧠 Inteligência Artificial</strong> no Blog do Marcellini!</p>
-<p>📌 Explore os <strong>Large Language Models (LLMs)</strong> e a <strong>IA generativa</strong>, entendendo desde as redes neurais e o mecanismo de atenção até aplicações práticas e tendências para o futuro.</p>
-<p>👉 <a href="./posts/programacao/ia/index.html" class="button button-outline">Acesse a série completa ›</a></p>
+<p>A <strong>Inteligência Artificial</strong> está redefinindo a ciência, a arte e o próprio conceito de conhecimento humano.<br>
+Nesta nova seção do <strong>Blog do Marcellini</strong>, exploramos suas <strong>bases teóricas</strong>, <strong>modelos matemáticos</strong>, <strong>impactos sociais</strong> e <strong>aplicações práticas</strong>.</p>
+<p>🧩 <strong>Tópicos em destaque:</strong></p>
+<ul>
+<li><strong>Large Language Models (LLMs)</strong> e a revolução da IA generativa<br>
+</li>
+<li><strong>Redes neurais artificiais</strong> e aprendizado profundo<br>
+</li>
+<li><strong>Visão computacional</strong> e reconhecimento de padrões<br>
+</li>
+<li><strong>Ética e filosofia da IA</strong><br>
+</li>
+<li><strong>História e evolução da inteligência das máquinas</strong></li>
+</ul>
+<p>👉 <a href="./posts/inteligencia-artificial/index.html" class="button button-outline">Acesse a seção completa ›</a></p>
 </div>
 </div>
 <div style="margin-top: .25rem">
@@ -473,17 +498,18 @@ Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparece
 <h2 class="anchored" data-anchor-id="últimos-posts">🆕 Últimos Posts</h2>
 <!-- inicio-ultimos-posts -->
 <ul>
-<li><a href="posts/programacao/ia/llms/o-que-e-um-llm.html">🤖 O que é um Large Language Model (LLM)?</a></li>
-<li><a href="posts/programacao/ia/llms/futuro-ia-llms.html">🔮 O Futuro dos LLMs e da IA Generativa</a></li>
-<li><a href="posts/programacao/ia/index.html">🧠 Inteligência Artificial — Índice da Seção</a></li>
-<li><a href="posts/programacao/ia/llms/desafios-limitacoes.html">⚠️ Desafios e Limitações dos LLMs</a></li>
-<li><a href="posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html">⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF</a></li>
-<li><a href="posts/programacao/ia/llms/atencao-transformers-qkv-mha.html">✨ Atenção em Transformers: Q, K, V e Multi-Head Attention</a></li>
-<li><a href="posts/programacao/ia/llms/aplicacoes-praticas.html">🚀 Aplicações Práticas dos LLMs</a></li>
-<li><a href="posts/biografias/omar-khayyam/omar-khayyam-parte4.html">📚 Omar Khayyam: Rubaiyat (Parte 4)</a></li>
-<li><a href="posts/biografias/omar-khayyam/omar-khayyam-parte3.html">📚 Omar Khayyam (Parte 3): Rubaiyat</a></li>
-<li><a href="posts/pessoal/einstein.html">✨ Viver como se tudo fosse um milagre</a> <!-- fim-ultimos-posts --></li>
+<li><a href="posts/fisica/feynman-gellmann-babilonia-grecia.html">🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia</a></li>
+<li><a href="posts/fisica/einstein-fisico-ou-filosofo-natural.html">🧠 Einstein — Físico ou Filósofo Natural?</a></li>
+<li><a href="posts/fisica/dirac-vs-feynman.html">🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física</a></li>
+<li><a href="posts/fisica/calculo-simbolico-vs-numerico.html">🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?</a></li>
+<li><a href="posts/inteligencia-artificial/historia-ia/parte-3-os-anos-dourados.html">Os Anos Dourados</a></li>
+<li><a href="posts/inteligencia-artificial/historia-ia/parte-1-origens-e-sonhos.html">Origens e Sonhos</a></li>
+<li><a href="posts/inteligencia-artificial/historia-ia/parte-5-o-renascimento-da-ia.html">O Renascimento da IA</a></li>
+<li><a href="posts/inteligencia-artificial/historia-ia/parte-4-o-inverno-da-ia.html">O Inverno da IA</a></li>
+<li><a href="posts/inteligencia-artificial/historia-ia/parte-7-o-futuro-da-ia.html">O Futuro da IA</a></li>
+<li><a href="posts/inteligencia-artificial/historia-ia/parte-2-nascimento-da-ia.html">Nascimento da IA</a></li>
 </ul>
+<!-- fim-ultimos-posts -->
 <blockquote class="blockquote">
 <p>Esta seção é atualizada automaticamente a cada nova publicação.</p>
 </blockquote>
