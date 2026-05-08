@@ -464,140 +464,35 @@
     ]
   },
   {
-    "title": "Deep Learning",
-    "href": "posts/inteligencia-artificial/deep-learning.html",
-    "tags": [
-      "IA",
-      "aprendizado de máquina",
-      "deep learning",
-      "LLMs",
-      "quântico"
-    ]
-  },
-  {
-    "title": "Aprendizado de Máquina",
-    "href": "posts/inteligencia-artificial/aprendizado-maquina.html",
-    "tags": [
-      "IA",
-      "aprendizado de máquina",
-      "deep learning",
-      "LLMs",
-      "quântico"
-    ]
-  },
-  {
-    "title": "Computação Quântica",
-    "href": "posts/inteligencia-artificial/computacao-quantica.html",
-    "tags": [
-      "IA",
-      "aprendizado de máquina",
-      "deep learning",
-      "LLMs",
-      "quântico"
-    ]
-  },
-  {
-    "title": "⚖️ Ética e Sociedade na Era da Inteligência Artificial",
-    "href": "posts/inteligencia-artificial/etica-e-sociedade.html",
-    "tags": [
-      "IA",
-      "ética",
-      "privacidade",
-      "vieses",
-      "responsabilidade",
-      "filosofia",
-      "sociedade"
-    ]
-  },
-  {
-    "title": "🤖 Inteligência Artificial",
-    "href": "posts/inteligencia-artificial/index.html",
-    "tags": [
-      "IA",
-      "inteligência artificial",
-      "história da computação",
-      "aprendizado de máquina",
-      "deep learning",
-      "modelos de linguagem",
-      "LLMs",
-      "redes neurais",
-      "ética",
-      "computação quântica",
-      "história"
-    ]
-  },
-  {
-    "title": "💬 Série LLMs — Hub",
-    "href": "posts/inteligencia-artificial/llms/index.html",
-    "tags": [
-      "LLM",
-      "transformers",
-      "atenção",
-      "treinamento",
-      "aplicações",
-      "desafios",
-      "futuro"
-    ]
-  },
-  {
-    "title": "🔮 O Futuro dos LLMs e da IA Generativa",
-    "href": "posts/inteligencia-artificial/llms/futuro-ia-llms.html",
+    "title": "🧠 Inteligência Artificial — Índice da Seção",
+    "href": "posts/programacao/ia/index.html",
     "tags": [
       "inteligência artificial",
       "IA",
       "LLM",
-      "IA generativa",
-      "futuro",
-      "tendências",
-      "multimodalidade",
-      "democratização",
-      "especialização",
-      "eficiência",
-      "sustentabilidade",
-      "riscos",
-      "ética",
-      "regulação",
-      "impacto social",
-      "inovação",
-      "tecnologia"
-    ]
-  },
-  {
-    "title": "⚠️ Desafios e Limitações dos LLMs",
-    "href": "posts/inteligencia-artificial/llms/desafios-limitacoes.html",
-    "tags": [
-      "inteligência artificial",
-      "IA",
-      "LLM",
-      "ética",
-      "desafios",
-      "limitações",
-      "vieses",
-      "alucinações",
-      "ética",
-      "impacto ambiental",
-      "deep learning"
-    ]
-  },
-  {
-    "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
-    "href": "posts/inteligencia-artificial/llms/treinamento-pretrain-finetune-rlhf.html",
-    "tags": [
-      "inteligência artificial",
-      "IA",
-      "LLM",
-      "machine learning",
-      "treinamento",
-      "pré-treinamento",
-      "fine-tuning",
       "RLHF",
+      "Transformer",
+      "RNN",
+      "NLP",
       "deep learning",
-      "NLP"
+      "sumário",
+      "programação",
+      "ética",
+      "atenção",
+      "aplicações",
+      "GPT",
+      "Claude",
+      "Gemini",
+      "LLaMA",
+      "Mistral",
+      "BERT",
+      "LSTM",
+      "GRU"
     ]
   },
   {
     "title": "🚀 Aplicações Práticas dos LLMs",
-    "href": "posts/inteligencia-artificial/llms/aplicacoes-praticas.html",
+    "href": "posts/programacao/ia/llms/aplicacoes-praticas.html",
     "tags": [
       "inteligência artificial",
       "IA",
@@ -614,7 +509,7 @@
   },
   {
     "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
-    "href": "posts/inteligencia-artificial/llms/atencao-transformers-qkv-mha.html",
+    "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html",
     "tags": [
       "inteligência artificial",
       "IA",
@@ -637,8 +532,48 @@
     ]
   },
   {
+    "title": "⚠️ Desafios e Limitações dos LLMs",
+    "href": "posts/programacao/ia/llms/desafios-limitacoes.html",
+    "tags": [
+      "inteligência artificial",
+      "IA",
+      "LLM",
+      "ética",
+      "desafios",
+      "limitações",
+      "vieses",
+      "alucinações",
+      "ética",
+      "impacto ambiental",
+      "deep learning"
+    ]
+  },
+  {
+    "title": "🔮 O Futuro dos LLMs e da IA Generativa",
+    "href": "posts/programacao/ia/llms/futuro-ia-llms.html",
+    "tags": [
+      "inteligência artificial",
+      "IA",
+      "LLM",
+      "IA generativa",
+      "futuro",
+      "tendências",
+      "multimodalidade",
+      "democratização",
+      "especialização",
+      "eficiência",
+      "sustentabilidade",
+      "riscos",
+      "ética",
+      "regulação",
+      "impacto social",
+      "inovação",
+      "tecnologia"
+    ]
+  },
+  {
     "title": "🤖 O que é um Large Language Model (LLM)?",
-    "href": "posts/inteligencia-artificial/llms/o-que-e-um-llm.html",
+    "href": "posts/programacao/ia/llms/o-que-e-um-llm.html",
     "tags": [
       "inteligência artificial",
       "IA",
@@ -662,102 +597,19 @@
     ]
   },
   {
-    "title": "O Inverno da IA",
-    "href": "posts/inteligencia-artificial/historia-ia/parte-4-o-inverno-da-ia.html",
+    "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
+    "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html",
     "tags": [
-      "Lighthill",
-      "ALVEY",
-      "quinta geração",
-      "perceptrons",
-      "simbolismo",
-      "financiamento"
-    ]
-  },
-  {
-    "title": "A Era dos Modelos Generativos",
-    "href": "posts/inteligencia-artificial/historia-ia/parte-6-a-era-dos-modelos-generativos.html",
-    "tags": [
-      "Transformers",
-      "LLMs",
-      "RLHF",
-      "alinhamento",
-      "difusão",
-      "foundation models"
-    ]
-  },
-  {
-    "title": "O Renascimento da IA",
-    "href": "posts/inteligencia-artificial/historia-ia/parte-5-o-renascimento-da-ia.html",
-    "tags": [
-      "SVM",
-      "ensemble",
-      "backpropagation",
-      "Hinton",
-      "LeCun",
-      "Bengio",
-      "GPUs",
-      "ImageNet"
-    ]
-  },
-  {
-    "title": "O Futuro da IA",
-    "href": "posts/inteligencia-artificial/historia-ia/parte-7-o-futuro-da-ia.html",
-    "tags": [
-      "IA quântica",
-      "alinhamento",
-      "governança",
-      "interpretabilidade",
-      "energia",
-      "sustentabilidade"
-    ]
-  },
-  {
-    "title": "Os Anos Dourados",
-    "href": "posts/inteligencia-artificial/historia-ia/parte-3-os-anos-dourados.html",
-    "tags": [
-      "GOFAI",
-      "LISP",
-      "planejamento",
-      "SHRDLU",
-      "visão computacional inicial"
-    ]
-  },
-  {
-    "title": "Nascimento da IA",
-    "href": "posts/inteligencia-artificial/historia-ia/parte-2-nascimento-da-ia.html",
-    "tags": [
-      "Turing",
-      "teste de Turing",
-      "Dartmouth",
-      "McCarthy",
-      "Minsky",
-      "Newell",
-      "Simon",
-      "Logic Theorist"
-    ]
-  },
-  {
-    "title": "História da IA",
-    "href": "posts/inteligencia-artificial/historia-ia/index.html",
-    "tags": [
+      "inteligência artificial",
       "IA",
-      "aprendizado de máquina",
+      "LLM",
+      "machine learning",
+      "treinamento",
+      "pré-treinamento",
+      "fine-tuning",
+      "RLHF",
       "deep learning",
-      "LLMs",
-      "cibernética",
-      "história"
-    ]
-  },
-  {
-    "title": "Origens e Sonhos",
-    "href": "posts/inteligencia-artificial/historia-ia/parte-1-origens-e-sonhos.html",
-    "tags": [
-      "cibernética",
-      "autômatos",
-      "lógica",
-      "estatística",
-      "Norbert Wiener",
-      "Shannon"
+      "NLP"
     ]
   },
   {
