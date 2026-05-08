@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Número de posts mais recentes a listar
-NUM_POSTS=10
+NUM_POSTS=15
 echo "🔍 Procurando os $NUM_POSTS posts mais recentes com metadados válidos..."
 
 # Arquivo temporário para armazenar os candidatos válidos
