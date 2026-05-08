@@ -1,0 +1,142 @@
+---
+title: "Os Anos Dourados"
+subtitle: "O otimismo simbólico dos anos 1960"
+description: "Sistemas simbólicos, linguagens de IA e promessas ambiciosas."
+author: "Blog do Marcellini"
+date: 2025-10-23
+lang: pt-BR
+categories: [história da computação, inteligência artificial]
+tags: [GOFAI, LISP, planejamento, SHRDLU, visão computacional inicial]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+---
+
+> A **GOFAI** (*Good Old-Fashioned Artificial Intelligence*) apostava que **símbolos, regras e busca** poderiam explicar grande parte da inteligência.
+
+## O otimismo da IA simbólica
+
+Depois do encontro de Dartmouth e dos primeiros programas de raciocínio automático, a Inteligência Artificial entrou em uma fase de grande entusiasmo.
+
+Nas décadas de 1950 e 1960, muitos pesquisadores acreditavam que a inteligência humana poderia ser decomposta em operações simbólicas: manipular regras, representar conhecimento, provar teoremas, jogar, planejar ações e resolver problemas por busca.
+
+Essa visão ficou conhecida, mais tarde, como **GOFAI** — *Good Old-Fashioned Artificial Intelligence*, ou “boa e velha IA à moda antiga”.
+
+A ideia central era simples e poderosa: se o pensamento pode ser descrito por símbolos e regras, então computadores podem manipular esses símbolos e executar essas regras.
+
+::: {.callout-note}
+### Resumo em uma frase
+
+Os anos dourados da IA foram marcados pela confiança de que **representação simbólica + regras lógicas + busca heurística** seriam suficientes para produzir comportamento inteligente.
+:::
+
+## LISP: uma linguagem para pensar símbolos
+
+Um dos marcos técnicos desse período foi a criação da linguagem **LISP**, associada a **John McCarthy**.
+
+LISP tornou-se uma das principais linguagens da IA simbólica porque era especialmente adequada para manipular listas, expressões simbólicas e estruturas recursivas. Em vez de tratar a computação apenas como cálculo numérico, LISP facilitava a construção de programas que lidavam com símbolos, regras e árvores de decisão.
+
+Isso era fundamental para a IA da época. Programas de prova de teoremas, planejamento, jogos e linguagem natural precisavam manipular estruturas abstratas, não apenas números.
+
+Por isso, LISP se tornou uma espécie de linguagem clássica da IA.
+
+## Planejamento, jogos e prova automática
+
+Durante esse período, surgiram programas capazes de realizar tarefas que pareciam exigir raciocínio.
+
+Alguns sistemas jogavam xadrez ou damas. Outros buscavam provar teoremas matemáticos. Outros tentavam planejar uma sequência de ações para sair de um estado inicial e chegar a um objetivo.
+
+Muitos desses programas se apoiavam em uma ideia comum: representar um problema como um **espaço de possibilidades** e usar estratégias de busca para encontrar uma solução.
+
+O desafio era escolher bons caminhos sem testar todas as combinações possíveis. Por isso, as **heurísticas** se tornaram centrais: eram regras práticas que ajudavam o programa a decidir quais caminhos pareciam mais promissores.
+
+## Micromundos: inteligência em ambientes simplificados
+
+Uma das estratégias mais importantes da IA simbólica foi trabalhar com **micromundos**.
+
+Um micromundo é um ambiente artificialmente limitado, com poucas regras, poucos objetos e um vocabulário restrito. Ao reduzir a complexidade do mundo real, os pesquisadores conseguiam construir sistemas que pareciam compreender, planejar e responder de maneira inteligente.
+
+Essa abordagem tinha uma vantagem clara: permitia avanços concretos. Mas também escondia uma dificuldade profunda: sistemas que funcionavam bem em micromundos muitas vezes falhavam quando expostos ao mundo aberto, ambíguo e imprevisível.
+
+Essa tensão entre **ambientes controlados** e **mundo real** acompanharia a IA por décadas.
+
+## SHRDLU: linguagem natural em um mundo de blocos
+
+Um dos exemplos mais famosos de micromundo foi o **SHRDLU**, desenvolvido por **Terry Winograd** no final dos anos 1960 e início dos anos 1970.
+
+O sistema operava em um “mundo de blocos”: um ambiente simples com objetos geométricos que podiam ser movidos, empilhados e descritos por comandos em linguagem natural.
+
+Dentro desse universo limitado, SHRDLU conseguia interpretar comandos, responder perguntas e executar ações. Para a época, parecia um enorme avanço na compreensão de linguagem natural.
+
+Mas o sucesso de SHRDLU dependia justamente da simplicidade do seu mundo. Ele compreendia bem porque havia pouco a compreender. Quando a linguagem deixava o micromundo e entrava no mundo real, surgiam ambiguidade, contexto, conhecimento implícito e múltiplas interpretações.
+
+## A explosão combinatória
+
+Um dos grandes problemas encontrados pela IA simbólica foi a **explosão combinatória**.
+
+Em muitos problemas, o número de possibilidades cresce rapidamente à medida que o problema aumenta. Um programa pode conseguir resolver um pequeno quebra-cabeça ou planejar poucas ações, mas falhar quando o número de alternativas se torna imenso.
+
+Esse problema aparecia em jogos, planejamento, linguagem, prova de teoremas e representação de conhecimento.
+
+A explosão combinatória mostrou que inteligência não é apenas aplicar regras: é também saber quais informações são relevantes, quais possibilidades ignorar e como lidar com incerteza e contexto.
+
+## A crítica aos perceptrons
+
+Embora os anos dourados sejam lembrados principalmente pela IA simbólica, também havia pesquisas em redes neurais simples, como os **perceptrons**.
+
+Em 1969, **Marvin Minsky** e **Seymour Papert** publicaram um estudo crítico sobre as limitações dos perceptrons. O trabalho teve grande impacto e contribuiu para reduzir o entusiasmo com essa linha de pesquisa por um período.
+
+É importante notar que a crítica se aplicava a modelos bastante simples, não às redes neurais profundas que surgiriam décadas depois. Mesmo assim, o efeito histórico foi significativo: a IA simbólica se fortaleceu, enquanto as abordagens conexionistas perderam espaço temporariamente.
+
+## Linha do tempo essencial
+
+- **1958** — John McCarthy desenvolve o **LISP**.
+- **Década de 1960** — Crescem os programas de prova automática, jogos, planejamento e linguagem natural.
+- **1966–1970** — Sistemas baseados em micromundos ganham destaque.
+- **1968–1970** — Terry Winograd desenvolve o **SHRDLU**.
+- **1969** — Minsky e Papert publicam críticas importantes aos perceptrons.
+
+## Conceitos-chave
+
+- **GOFAI:** tradição clássica da IA baseada em símbolos, regras, lógica e busca.
+- **LISP:** linguagem historicamente associada à manipulação simbólica em IA.
+- **Micromundos:** ambientes simplificados usados para estudar linguagem, planejamento e raciocínio.
+- **Explosão combinatória:** crescimento rápido do número de possibilidades em problemas complexos.
+- **Sistemas de produção:** programas baseados em regras do tipo “se condição, então ação”.
+- **Heurísticas:** atalhos ou estratégias práticas para guiar a busca por soluções.
+
+## Personagens em foco
+
+- **John McCarthy** — criador do termo *Artificial Intelligence* e da linguagem LISP.
+- **Marvin Minsky** — pioneiro da IA simbólica e da ciência cognitiva computacional.
+- **Seymour Papert** — pesquisador influente em IA, educação e crítica aos perceptrons.
+- **Terry Winograd** — criador do SHRDLU, um dos sistemas clássicos de linguagem natural em micromundos.
+
+## Leituras sugeridas
+
+- **NILSSON, Nils J.** *The Quest for Artificial Intelligence: A History of Ideas and Achievements*. Cambridge University Press, 2010.
+- **WINOGRAD, Terry.** *Understanding Natural Language*. Academic Press, 1972.
+- **MINSKY, Marvin; PAPERT, Seymour.** *Perceptrons: An Introduction to Computational Geometry*. MIT Press, 1969.
+- **CREVIER, Daniel.** *AI: The Tumultuous History of the Search for Artificial Intelligence*. Basic Books, 1993.
+
+## Síntese
+
+Os anos dourados da IA foram marcados por confiança e ambição. Pesquisadores acreditavam que a inteligência poderia ser formalizada por símbolos, regras, representações e estratégias de busca.
+
+Essa abordagem produziu resultados importantes: linguagens como LISP, programas de planejamento, sistemas de prova automática e experiências notáveis com linguagem natural em micromundos.
+
+Mas também surgiram limites profundos. O mundo real era mais ambíguo, aberto e complexo do que os micromundos sugeriam. A explosão combinatória, a dificuldade de representar conhecimento comum e as promessas excessivas prepararam o terreno para a próxima fase: **o inverno da IA**.
+
+---
+
+## Navegação
+
+- ← **Anterior:** [Nascimento da IA](parte-2-nascimento-da-ia.qmd)
+- → **Próximo:** [O Inverno da IA](parte-4-o-inverno-da-ia.qmd)

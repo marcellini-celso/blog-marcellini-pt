@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Blog do Marcellini">
+<meta name="description" content="Limites práticos, relatórios críticos e queda de financiamento na história da Inteligência Artificial.">
+
+<title>O Inverno da IA – Blog do Marcellini</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-9cdbd49fb92a4d7f9d8c4f710986121f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
+<script>
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
+</script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+<link rel="stylesheet" href="../../../../assets/css/custom.css">
+<link rel="stylesheet" href="../../../../assets/css/cards.css">
+<link rel="stylesheet" href="../../../../assets/css/chips.css">
+<meta property="og:title" content="O Inverno da IA – Blog do Marcellini">
+<meta property="og:description" content="Limites práticos, relatórios críticos e queda de financiamento na história da Inteligência Artificial.">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="O Inverno da IA – Blog do Marcellini">
+<meta name="twitter:description" content="Limites práticos, relatórios críticos e queda de financiamento na história da Inteligência Artificial.">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Blog do Marcellini</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explorar" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧭 Explorar</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explorar">    
+        <li>
+    <a class="dropdown-item" href="../../../../tags.html">
+ <span class="dropdown-text">🏷️ Tags</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../categories.html">
+ <span class="dropdown-text">📂 Categorias</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciências-exatas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧠 Ciências Exatas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciências-exatas">    
+        <li>
+    <a class="dropdown-item" href="../../../../posts/matematica/index.html">
+ <span class="dropdown-text">🧮 Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/estatistica/index.html">
+ <span class="dropdown-text">📊 Estatística</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/fisica/index.html">
+ <span class="dropdown-text">🔭 Física</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/programacao/index.html">
+ <span class="dropdown-text">💻 Programação</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/programacao/ia/index.html">
+ <span class="dropdown-text">🤖 Inteligência Artificial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog-pessoal" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📝 Blog Pessoal</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog-pessoal">    
+        <li>
+    <a class="dropdown-item" href="../../../../posts/pessoal/index.html">
+ <span class="dropdown-text">📝 Blog Pessoal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/pessoal/sobre-o-blog.html">
+ <span class="dropdown-text">👤 Sobre Mim e Sobre o Blog</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li>
+    <a class="dropdown-item" href="../../../../posts/cursos/matematica/index.html">
+ <span class="dropdown-text">🧮 Cursos de Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/cursos/estatistica/index.html">
+ <span class="dropdown-text">📊 Cursos de Estatística</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../guia.html"> 
+<span class="menu-text">🗺️ Mapa do Site</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Contato</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#o-que-foi-o-inverno-da-ia" id="toc-o-que-foi-o-inverno-da-ia" class="nav-link active" data-scroll-target="#o-que-foi-o-inverno-da-ia">O que foi o inverno da IA?</a></li>
+  <li><a href="#promessas-maiores-que-as-entregas" id="toc-promessas-maiores-que-as-entregas" class="nav-link" data-scroll-target="#promessas-maiores-que-as-entregas">Promessas maiores que as entregas</a></li>
+  <li><a href="#o-relatório-lighthill" id="toc-o-relatório-lighthill" class="nav-link" data-scroll-target="#o-relatório-lighthill">O relatório Lighthill</a></li>
+  <li><a href="#micromundos-versus-mundo-aberto" id="toc-micromundos-versus-mundo-aberto" class="nav-link" data-scroll-target="#micromundos-versus-mundo-aberto">Micromundos versus mundo aberto</a></li>
+  <li><a href="#a-explosão-combinatória" id="toc-a-explosão-combinatória" class="nav-link" data-scroll-target="#a-explosão-combinatória">A explosão combinatória</a></li>
+  <li><a href="#dados-e-computação-como-gargalos" id="toc-dados-e-computação-como-gargalos" class="nav-link" data-scroll-target="#dados-e-computação-como-gargalos">Dados e computação como gargalos</a></li>
+  <li><a href="#redes-neurais-em-baixa" id="toc-redes-neurais-em-baixa" class="nav-link" data-scroll-target="#redes-neurais-em-baixa">Redes neurais em baixa</a></li>
+  <li><a href="#o-segundo-inverno-sistemas-especialistas-e-mercado" id="toc-o-segundo-inverno-sistemas-especialistas-e-mercado" class="nav-link" data-scroll-target="#o-segundo-inverno-sistemas-especialistas-e-mercado">O segundo inverno: sistemas especialistas e mercado</a></li>
+  <li><a href="#a-quinta-geração-japonesa" id="toc-a-quinta-geração-japonesa" class="nav-link" data-scroll-target="#a-quinta-geração-japonesa">A quinta geração japonesa</a></li>
+  <li><a href="#linha-do-tempo-essencial" id="toc-linha-do-tempo-essencial" class="nav-link" data-scroll-target="#linha-do-tempo-essencial">Linha do tempo essencial</a></li>
+  <li><a href="#conceitos-chave" id="toc-conceitos-chave" class="nav-link" data-scroll-target="#conceitos-chave">Conceitos-chave</a></li>
+  <li><a href="#personagens-e-episódios-em-foco" id="toc-personagens-e-episódios-em-foco" class="nav-link" data-scroll-target="#personagens-e-episódios-em-foco">Personagens e episódios em foco</a></li>
+  <li><a href="#leituras-sugeridas" id="toc-leituras-sugeridas" class="nav-link" data-scroll-target="#leituras-sugeridas">Leituras sugeridas</a></li>
+  <li><a href="#síntese" id="toc-síntese" class="nav-link" data-scroll-target="#síntese">Síntese</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação">Navegação</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">O Inverno da IA</h1>
+<p class="subtitle lead">Promessas não cumpridas, limites técnicos e cortes de financiamento</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">história da computação</div>
+    <div class="quarto-category">inteligência artificial</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Limites práticos, relatórios críticos e queda de financiamento na história da Inteligência Artificial.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Blog do Marcellini </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">23 de outubro de 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>O primeiro grande entusiasmo da IA esbarrou em um problema duro: sistemas que funcionavam em micromundos não se transferiam facilmente para o mundo real.</p>
+</blockquote>
+<section id="o-que-foi-o-inverno-da-ia" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-foi-o-inverno-da-ia">O que foi o inverno da IA?</h2>
+<p>A expressão <strong>inverno da IA</strong> designa períodos de redução de entusiasmo, financiamento e confiança na Inteligência Artificial.</p>
+<p>Depois dos anos dourados da IA simbólica, muitos pesquisadores, governos e empresas esperavam avanços rápidos em tradução automática, compreensão de linguagem natural, robótica, visão computacional, planejamento e raciocínio automático.</p>
+<p>Mas a realidade se mostrou mais difícil. Sistemas que pareciam impressionantes em ambientes controlados não generalizavam bem para situações reais. Programas que funcionavam em micromundos falhavam diante da ambiguidade, da incerteza, do ruído e da complexidade do mundo aberto.</p>
+<p>A promessa era grande. A entrega, muitas vezes, era limitada.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Resumo em uma frase
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O inverno da IA ocorreu quando as expectativas criadas pela IA simbólica e pelos primeiros sistemas inteligentes se chocaram com limitações de dados, computação, representação, generalização e financiamento.</p>
+</div>
+</div>
+</section>
+<section id="promessas-maiores-que-as-entregas" class="level2">
+<h2 class="anchored" data-anchor-id="promessas-maiores-que-as-entregas">Promessas maiores que as entregas</h2>
+<p>Um dos fatores centrais do inverno da IA foi o <strong>desalinhamento entre promessa e resultado</strong>.</p>
+<p>Durante as primeiras décadas da área, havia grande otimismo. Alguns pesquisadores acreditavam que problemas centrais da inteligência poderiam ser resolvidos em poucos anos. A ideia de máquinas capazes de traduzir textos, compreender linguagem, planejar ações e raciocinar como humanos parecia próxima.</p>
+<p>Mas muitos desses problemas eram mais difíceis do que pareciam.</p>
+<p>A tradução automática, por exemplo, exigia muito mais do que substituir palavras de uma língua por palavras de outra. Era preciso compreender contexto, ambiguidade, expressões idiomáticas, conhecimento de mundo e intenção comunicativa.</p>
+<p>A visão computacional também era mais complexa do que reconhecer formas simples. O mundo visual envolve iluminação, perspectiva, objetos parcialmente ocultos, ruído, movimento e variação infinita.</p>
+<p>A IA descobriu, aos poucos, que tarefas fáceis para humanos podiam ser extremamente difíceis para máquinas.</p>
+</section>
+<section id="o-relatório-lighthill" class="level2">
+<h2 class="anchored" data-anchor-id="o-relatório-lighthill">O relatório Lighthill</h2>
+<p>Um marco importante foi o <strong>Relatório Lighthill</strong>, publicado no Reino Unido em 1973.</p>
+<p>O relatório avaliou criticamente o progresso da Inteligência Artificial e questionou o retorno científico e prático de parte das pesquisas financiadas até então. Ele teve impacto significativo no financiamento da área no Reino Unido e ajudou a consolidar uma percepção de que a IA havia prometido mais do que podia entregar.</p>
+<p>O ponto central não era dizer que toda pesquisa em IA era inútil, mas destacar que muitos resultados estavam restritos a exemplos pequenos, ambientes artificiais e problemas muito controlados.</p>
+<p>Essa crítica atingia diretamente o coração da IA simbólica: a dificuldade de sair do laboratório e enfrentar o mundo real.</p>
+</section>
+<section id="micromundos-versus-mundo-aberto" class="level2">
+<h2 class="anchored" data-anchor-id="micromundos-versus-mundo-aberto">Micromundos versus mundo aberto</h2>
+<p>Nos anos dourados, os <strong>micromundos</strong> haviam sido uma estratégia eficiente para produzir avanços. Um sistema podia lidar com blocos, comandos simples, regras claras e vocabulário limitado.</p>
+<p>O problema é que o mundo real não é um micromundo.</p>
+<p>No mundo real, os objetos têm múltiplas funções, as palavras têm vários sentidos, as situações mudam, as informações são incompletas e as regras nem sempre são explícitas.</p>
+<p>Essa diferença revelou uma fragilidade importante: muitos sistemas de IA eram competentes apenas enquanto o ambiente permanecia cuidadosamente simplificado.</p>
+<p>Quando saíam desse ambiente, tornavam-se frágeis.</p>
+</section>
+<section id="a-explosão-combinatória" class="level2">
+<h2 class="anchored" data-anchor-id="a-explosão-combinatória">A explosão combinatória</h2>
+<p>Outro limite importante era a <strong>explosão combinatória</strong>.</p>
+<p>Em problemas de planejamento, jogos, prova de teoremas e raciocínio lógico, o número de possibilidades pode crescer rapidamente. Mesmo computadores relativamente rápidos se tornam incapazes de explorar todos os caminhos possíveis quando o espaço de busca aumenta demais.</p>
+<p>A IA simbólica dependia muito de busca, regras e representações explícitas. Isso funcionava em problemas pequenos, mas se tornava inviável em muitos problemas reais.</p>
+<p>As heurísticas ajudavam, mas não resolviam tudo.</p>
+</section>
+<section id="dados-e-computação-como-gargalos" class="level2">
+<h2 class="anchored" data-anchor-id="dados-e-computação-como-gargalos">Dados e computação como gargalos</h2>
+<p>Hoje estamos acostumados a pensar em IA como algo ligado a grandes volumes de dados, GPUs, nuvem e modelos com bilhões de parâmetros. Mas, nas décadas de 1970 e 1980, a situação era muito diferente.</p>
+<p>Havia pouca capacidade computacional, pouca memória, poucos dados digitalizados e ferramentas muito limitadas para treinar sistemas complexos.</p>
+<p>Muitas ideias que hoje parecem naturais simplesmente não eram viáveis na época. Mesmo que alguns conceitos estivessem presentes, faltavam dados, hardware e escala.</p>
+<p>Por isso, parte do inverno da IA não veio apenas de ideias erradas, mas também de limitações materiais.</p>
+</section>
+<section id="redes-neurais-em-baixa" class="level2">
+<h2 class="anchored" data-anchor-id="redes-neurais-em-baixa">Redes neurais em baixa</h2>
+<p>As redes neurais também passaram por um período de descrédito.</p>
+<p>A crítica aos <strong>perceptrons</strong>, associada ao trabalho de Marvin Minsky e Seymour Papert, mostrou limitações importantes de modelos neurais simples. Embora essas críticas não se aplicassem diretamente às redes profundas modernas, elas influenciaram a percepção da época.</p>
+<p>Por um período, abordagens conexionistas perderam espaço para a IA simbólica. Mais tarde, com novos algoritmos, mais dados e mais capacidade computacional, as redes neurais voltariam com força.</p>
+<p>Mas, durante parte do inverno, elas pareciam uma promessa interrompida.</p>
+</section>
+<section id="o-segundo-inverno-sistemas-especialistas-e-mercado" class="level2">
+<h2 class="anchored" data-anchor-id="o-segundo-inverno-sistemas-especialistas-e-mercado">O segundo inverno: sistemas especialistas e mercado</h2>
+<p>Nos anos 1980, a IA voltou a ganhar atenção com os <strong>sistemas especialistas</strong>.</p>
+<p>Esses sistemas codificavam conhecimento de especialistas humanos em regras do tipo “se… então…”. Em alguns domínios, eles funcionavam bem e despertaram interesse comercial.</p>
+<p>Mas novamente surgiram limitações:</p>
+<ul>
+<li>eram difíceis de manter;</li>
+<li>dependiam de regras escritas manualmente;</li>
+<li>não aprendiam bem com novos dados;</li>
+<li>eram frágeis fora do domínio para o qual haviam sido construídos;</li>
+<li>exigiam grande esforço de engenharia do conhecimento.</li>
+</ul>
+<p>Quando o entusiasmo comercial diminuiu, muitas empresas e investidores perderam confiança. Isso contribuiu para o chamado segundo inverno da IA, especialmente entre o final dos anos 1980 e o início dos anos 1990.</p>
+</section>
+<section id="a-quinta-geração-japonesa" class="level2">
+<h2 class="anchored" data-anchor-id="a-quinta-geração-japonesa">A quinta geração japonesa</h2>
+<p>Outro episódio importante foi o projeto japonês de computadores de <strong>quinta geração</strong>, lançado nos anos 1980.</p>
+<p>A iniciativa buscava desenvolver uma nova geração de sistemas computacionais voltados para lógica, inferência e Inteligência Artificial. O projeto teve grande ambição e repercussão internacional, estimulando respostas estratégicas em outros países.</p>
+<p>Embora tenha produzido avanços e pesquisas relevantes, não entregou a revolução esperada. Esse contraste entre ambição e resultado reforçou a percepção de que a IA ainda estava distante de muitas de suas promessas.</p>
+</section>
+<section id="linha-do-tempo-essencial" class="level2">
+<h2 class="anchored" data-anchor-id="linha-do-tempo-essencial">Linha do tempo essencial</h2>
+<ul>
+<li><strong>1969</strong> — Minsky e Papert publicam críticas importantes aos perceptrons.</li>
+<li><strong>1973</strong> — O Relatório Lighthill questiona resultados e financiamento da IA no Reino Unido.</li>
+<li><strong>Década de 1970</strong> — Crescem as críticas à generalização de sistemas simbólicos.</li>
+<li><strong>1981–1985</strong> — Programas estratégicos, como a iniciativa japonesa de quinta geração, reacendem expectativas.</li>
+<li><strong>Final dos anos 1980</strong> — O mercado de sistemas especialistas começa a perder força.</li>
+<li><strong>1987–1993</strong> — Consolida-se a percepção de um novo inverno da IA em setores comerciais e acadêmicos.</li>
+</ul>
+</section>
+<section id="conceitos-chave" class="level2">
+<h2 class="anchored" data-anchor-id="conceitos-chave">Conceitos-chave</h2>
+<ul>
+<li><strong>Inverno da IA:</strong> período de queda de financiamento, entusiasmo e confiança na área.</li>
+<li><strong>Generalização:</strong> capacidade de um sistema funcionar bem fora dos exemplos ou ambientes em que foi desenvolvido.</li>
+<li><strong>Fragilidade simbólica:</strong> dificuldade de sistemas baseados em regras para lidar com ambiguidade, exceções e mundo aberto.</li>
+<li><strong>Explosão combinatória:</strong> crescimento rápido do número de possibilidades em problemas complexos.</li>
+<li><strong>Gargalo computacional:</strong> limitação causada por pouca memória, pouco processamento e poucos dados disponíveis.</li>
+<li><strong>Sistemas especialistas:</strong> programas baseados em regras que tentavam codificar o conhecimento de especialistas humanos.</li>
+</ul>
+</section>
+<section id="personagens-e-episódios-em-foco" class="level2">
+<h2 class="anchored" data-anchor-id="personagens-e-episódios-em-foco">Personagens e episódios em foco</h2>
+<ul>
+<li><strong>James Lighthill</strong> — autor do relatório crítico que impactou o financiamento da IA no Reino Unido.</li>
+<li><strong>Marvin Minsky</strong> e <strong>Seymour Papert</strong> — críticos dos perceptrons simples e figuras centrais da IA simbólica.</li>
+<li><strong>Projeto Quinta Geração</strong> — iniciativa japonesa que expressou o otimismo estratégico em torno da IA nos anos 1980.</li>
+<li><strong>Sistemas especialistas</strong> — símbolo do entusiasmo comercial e das limitações práticas da IA baseada em regras.</li>
+</ul>
+</section>
+<section id="leituras-sugeridas" class="level2">
+<h2 class="anchored" data-anchor-id="leituras-sugeridas">Leituras sugeridas</h2>
+<ul>
+<li><strong>CREVIER, Daniel.</strong> <em>AI: The Tumultuous History of the Search for Artificial Intelligence</em>. Basic Books, 1993.</li>
+<li><strong>NILSSON, Nils J.</strong> <em>The Quest for Artificial Intelligence: A History of Ideas and Achievements</em>. Cambridge University Press, 2010.</li>
+<li><strong>MINSKY, Marvin; PAPERT, Seymour.</strong> <em>Perceptrons: An Introduction to Computational Geometry</em>. MIT Press, 1969.</li>
+<li><strong>HENDLER, James.</strong> “Avoiding Another AI Winter”. <em>IEEE Intelligent Systems</em>, 2008.</li>
+</ul>
+</section>
+<section id="síntese" class="level2">
+<h2 class="anchored" data-anchor-id="síntese">Síntese</h2>
+<p>O inverno da IA não significou o fim da Inteligência Artificial. Significou, antes, uma correção de expectativas.</p>
+<p>A área havia descoberto que inteligência não era apenas manipular símbolos em ambientes controlados. Era preciso lidar com incerteza, contexto, dados, escala, aprendizado, percepção e mundo aberto.</p>
+<p>Essas dificuldades prepararam o terreno para uma mudança gradual: o retorno de métodos estatísticos, o avanço do aprendizado de máquina, a retomada das redes neurais e, mais tarde, o renascimento da IA.</p>
+<hr>
+</section>
+<section id="navegação" class="level2">
+<h2 class="anchored" data-anchor-id="navegação">Navegação</h2>
+<ul>
+<li>← <strong>Anterior:</strong> <a href="../../../../posts/programacao/ia/historia-ia/parte-3-os-anos-dourados.html">Os Anos Dourados</a></li>
+<li>→ <strong>Próximo:</strong> <a href="../../../../posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html">O Renascimento da IA</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const rmDiacritics = (s) => s
+    .replace(/[ÁÀÂÃÄ]/g,'A').replace(/[áàâãä]/g,'a')
+    .replace(/[ÉÈÊË]/g,'E').replace(/[éèêë]/g,'e')
+    .replace(/[ÍÌÎÏ]/g,'I').replace(/[íìîï]/g,'i')
+    .replace(/[ÓÒÔÕÖ]/g,'O').replace(/[óòôõö]/g,'o')
+    .replace(/[ÚÙÛÜ]/g,'U').replace(/[úùûü]/g,'u')
+    .replace(/[Ç]/g,'C').replace(/[ç]/g,'c')
+    .replace(/[Ñ]/g,'N').replace(/[ñ]/g,'n');
+  const toSlug = (s) => rmDiacritics(String(s||"")).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
+  const classMap = [
+    ["matematica","cat--matematica"],
+    ["estatistica","cat--estatistica"],
+    ["fisica","cat--fisica"],
+    ["programacao","cat--programacao"],
+    ["curso","cat--curso"],
+    ["artigo","cat--artigo"],
+    ["serie","cat--serie"],
+    ["sumario","cat--sumario"],
+  ];
+
+  const enhanceWrap = (wrap, sortDedup=false) => {
+    if(!wrap) return;
+
+    if (sortDedup) {
+      const items = Array.from(wrap.querySelectorAll(':scope > .quarto-category'));
+      const seen = new Map();
+      for (const el of items) {
+        const key = el.textContent.trim().toLowerCase();
+        if (seen.has(key)) el.remove(); else seen.set(key, el);
+      }
+      const sorted = Array.from(wrap.querySelectorAll(':scope > .quarto-category'))
+        .sort((a,b)=>a.textContent.trim().localeCompare(b.textContent.trim(),'pt-BR'));
+      sorted.forEach(el => wrap.appendChild(el));
+    }
+
+    wrap.querySelectorAll(':scope > .quarto-category').forEach((el) => {
+      if (el.dataset.enhancedChip === "1") return;
+      const label = el.textContent.trim();
+      const slug  = toSlug(label);
+      const plain = rmDiacritics(label.toLowerCase());
+
+      for (const [needle, cls] of classMap) {
+        if (slug===needle || slug.includes(needle) || plain.includes(needle)) { el.classList.add(cls); break; }
+      }
+
+      let chip = el;
+      if (el.tagName !== "A") {
+        const a = document.createElement('a');
+        a.className = el.className;
+        a.textContent = label;
+        a.href = `${offset}categories.html#${slug}`;
+        chip = a;
+        el.replaceWith(a);
+      } else if (!el.getAttribute('href')) {
+        el.setAttribute('href', `${offset}categories.html#${slug}`);
+      }
+
+      chip.setAttribute('aria-label', `Ver posts em ${label}`);
+      chip.setAttribute('title', `Ver posts em ${label}`);
+      chip.dataset.enhancedChip = "1";
+    });
+  };
+
+  enhanceWrap(document.querySelector('#title-block-header .quarto-categories'), true);
+  document.querySelectorAll('main .quarto-categories').forEach(wrap => enhanceWrap(wrap, false));
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blogdomarcellini\.com\.br");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 - Blog do Marcellini</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
+</body></html>

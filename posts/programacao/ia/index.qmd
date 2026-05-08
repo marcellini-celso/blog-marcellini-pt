@@ -1,8 +1,8 @@
 ---
 title: "🧠 Inteligência Artificial — Índice da Seção"
-description: "Página inicial da seção de IA do Blog do Marcellini: linha do tempo da IA, overview da série sobre LLMs e próximos conteúdos."
+description: "Página inicial da seção de IA do Blog do Marcellini: história da inteligência artificial, linha do tempo, série sobre LLMs e próximos conteúdos."
 author: "Blog do Marcellini"
-date: 2025-10-06
+date: 2025-10-23
 lang: pt-BR
 format:
   html:
@@ -13,8 +13,8 @@ format:
     highlight-style: github
     code-link: true
 page-layout: full
-categories: [inteligência artificial, IA, LLM, RLHF, Transformer, RNN, NLP, deep learning, sumário, programação, ética, atenção, aplicações, GPT, Claude, Gemini, LLaMA, Mistral, BERT, LSTM, GRU]
-tags: [inteligência artificial, IA, LLM, RLHF, Transformer, RNN, NLP, deep learning, sumário, programação, ética, atenção, aplicações, GPT, Claude, Gemini, LLaMA, Mistral, BERT, LSTM, GRU]
+categories: [inteligência artificial, IA, LLM, história da computação, aprendizado de máquina, deep learning, programação, ética, atenção, aplicações]
+tags: [inteligência artificial, IA, LLM, história da computação, aprendizado de máquina, deep learning, Transformer, NLP, ética, atenção, aplicações]
 ---
 
 <!-- Breadcrumbs -->
@@ -23,11 +23,22 @@ tags: [inteligência artificial, IA, LLM, RLHF, Transformer, RNN, NLP, deep lear
 
 ---
 
+## 🧠 Inteligência Artificial
+
+A **Inteligência Artificial** é uma das áreas mais influentes da computação contemporânea. Ela reúne ideias vindas da matemática, da lógica, da estatística, da ciência da computação, da neurociência, da filosofia e da engenharia.
+
+Nesta seção do **Blog do Marcellini**, a IA é apresentada em duas frentes complementares:
+
+1. uma frente **histórica**, que acompanha a evolução das ideias, promessas, crises e renascimentos da área;
+2. uma frente **técnica e conceitual**, dedicada aos **Large Language Models (LLMs)**, aos Transformers, ao mecanismo de atenção e às aplicações modernas da IA generativa.
+
+---
+
 ## 🧭 Linha do tempo da IA
 
 ![](images/ia-timeline-vertical.png){fig-align="center" width="100%"}
 
-:::: {.callout-important collapse="true" title="Código em Python (clique para expandir) -- gera a linha do tempo acima"}
+:::: {.callout-important collapse="true" title="Código em Python (clique para expandir) — gera a linha do tempo acima"}
 ```{python}
 import matplotlib.pyplot as plt
 
@@ -42,110 +53,108 @@ marcos = [
     (2020, "GPT-3\n(175B parâmetros)"),
     (2022, "ChatGPT\n(popularização dos LLMs)"),
     (2023, "GPT-4\n(multimodal inicial)"),
-    (2023, "LLaMA 1 (Meta)\n(open-source)"),
+    (2023, "LLaMA 1 (Meta)\n(ecossistema aberto)"),
     (2023, "Gemini 1 (Google DeepMind)\n(multimodal)"),
     (2023, "Mistral 7B\n(eficiência)"),
     (2024, "Claude 3\n(alinhamento e contexto)"),
     (2024, "LLaMA 3 (Meta)\n(ecossistema aberto)"),
     (2024, "Mixtral 8x7B (Mistral)\n(Mixture of Experts)"),
     (2024, "Gemini 1.5\n(janelas longas)"),
-    (2025, "GPT-5\n(modelo multimodal avançado)"),  # 👈 novo marco
+    (2025, "Modelos multimodais e agentes de IA\n(nova etapa de integração)"),
 ]
 
-# ---------- Amplia o espaçamento entre eventos ----------
-# cria um eixo Y "esticado" multiplicando a posição de cada evento
-gap = 3.2  # controle de espaçamento (↑ aumenta a distância entre rótulos)
+gap = 3.2
 anos = [i * gap for i in range(len(marcos))]
 labels = [f"{ano} — {texto}" for ano, texto in marcos]
 
-# ---------- Figura ----------
 fig, ax = plt.subplots(figsize=(6.4, 11), dpi=150)
 
-# linha do tempo central
 ax.vlines(1, min(anos) - gap, max(anos) + gap, linewidth=2)
-ax.plot([1]*len(anos), anos, 'o', markersize=7, color="black")
+ax.plot([1] * len(anos), anos, "o", markersize=7, color="black")
 
-# ---------- Anotações ----------
 for i, (y, text) in enumerate(zip(anos, labels)):
     is_left = (i % 2 == 0)
     x_text = 0.84 if is_left else 1.16
-    ha = 'right' if is_left else 'left'
+    ha = "right" if is_left else "left"
+
     ax.annotate(
         text,
         xy=(1, y),
         xytext=(x_text, y),
-        textcoords='data',
-        va='center',
+        textcoords="data",
+        va="center",
         ha=ha,
         fontsize=9,
-        arrowprops=dict(arrowstyle='-', lw=0.7, alpha=0.8),
-        bbox=dict(boxstyle="round,pad=0.25", alpha=0.85)
+        arrowprops=dict(arrowstyle="-", lw=0.7, alpha=0.8),
+        bbox=dict(boxstyle="round,pad=0.25", alpha=0.85),
     )
 
-# ---------- Estilo geral ----------
 ax.set_xlim(0.7, 1.3)
 ax.set_xticks([])
 ax.set_yticks([])
-ax.set_title("Linha do Tempo — Evolução da Inteligência Artificial (até GPT-5)", fontsize=11.5, weight="bold", pad=12)
+ax.set_title(
+    "Linha do Tempo — Evolução da Inteligência Artificial",
+    fontsize=11.5,
+    weight="bold",
+    pad=12,
+)
 ax.set_ylabel("")
 
 plt.tight_layout()
 plt.savefig("images/ia-timeline-vertical.png", bbox_inches="tight")
 plt.close()
 ```
-:::
-
----
-::: {.callout-note title="🤖 Inteligência Artificial — Série de LLMs"}
-Tutoriais, exemplos práticos e aplicações de **IA e LLMs modernos**, como **GPT (OpenAI)**, **Claude (Anthropic)**, **Gemini (Google DeepMind)**, **LLaMA (Meta)** e **Mistral (França)** — integrados ao ecossistema **Quarto**.
-
-Explore como esses modelos funcionam, suas bases em **redes neurais**,  
-**Transformers**, **NLP**, **RNNs**, **BERT**, **LSTM**, **GRU** e a ascensão da **IA generativa**.
-:::
-
-
-# 🚀 Série Especial: Large Language Models (LLMs)
-
-> Uma jornada para entender como funcionam os modelos que estão transformando o mundo digital.
+::::
 
 ---
 
-## ✨ Overview
+## 📚 Série 1 — História da Inteligência Artificial
 
-Os **Modelos de Linguagem de Grande Porte (LLMs)** são o coração da **IA generativa** moderna.  
-Eles conseguem **entender e gerar texto**, escrever código, resumir documentos, criar roteiros, responder perguntas e muito mais.  
+A série **História da Inteligência Artificial** acompanha a trajetória da IA desde seus antecedentes filosóficos e lógicos até os modelos generativos contemporâneos.
 
-Nesta série você vai aprender:
+Ela foi pensada como uma porta de entrada para entender que a IA não surgiu de repente: antes dos chatbots e dos modelos de linguagem, houve autômatos, lógica simbólica, cibernética, sistemas especialistas, redes neurais, invernos de financiamento, renascimentos estatísticos e novas arquiteturas computacionais.
 
-- 🔹 O que são os LLMs e como nasceram.  
-- 🔹 A evolução das redes neurais: de RNNs a Transformers.  
-- 🔹 Como funciona o **mecanismo de atenção**.  
-- 🔹 O processo de treinamento: pré-treinamento, fine-tuning e RLHF.  
-- 🔹 Quais os desafios, limitações e riscos éticos.  
-- 🔹 Aplicações práticas em educação, saúde, programação, negócios e arte.  
-- 🔹 O futuro da IA: multimodalidade, democratização e especialização.  
+### 📖 Posts da série
 
----
+1. [Origens e Sonhos](historia-ia/parte-1-origens-e-sonhos.qmd)
+2. [Nascimento da IA](historia-ia/parte-2-nascimento-da-ia.qmd)
+3. [Os Anos Dourados](historia-ia/parte-3-os-anos-dourados.qmd)
+4. [O Inverno da IA](historia-ia/parte-4-o-inverno-da-ia.qmd)
+5. [O Renascimento da IA](historia-ia/parte-5-o-renascimento-da-ia.qmd)
+6. [A Era dos Modelos Generativos](historia-ia/parte-6-a-era-dos-modelos-generativos.qmd)
+7. [O Futuro da IA](historia-ia/parte-7-o-futuro-da-ia.qmd)
 
-## 📚 Série Completa: Large Language Models (LLMs)
-
-- [**O que é um Large Language Model (LLM)?**](llms/o-que-e-um-llm.qmd)  
-- [**Atenção em Transformers: Q, K, V e Multi-Head Attention**](llms/atencao-transformers-qkv-mha.qmd)  
-- [**Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF**](llms/treinamento-pretrain-finetune-rlhf.qmd)  
-- [**Desafios e Limitações dos LLMs**](llms/desafios-limitacoes.qmd)  
-- [**Aplicações Práticas dos LLMs**](llms/aplicacoes-praticas.qmd)  
-- [**O Futuro dos LLMs e da IA Generativa**](llms/futuro-ia-llms.qmd)  
+👉 [Acesse o índice da série História da IA](historia-ia/index.qmd)
 
 ---
 
-✍️ *Sugestões são bem-vindas!*  
-Se quiser ver algum tema específico por aqui, abra um issue no repositório ou mande sua ideia 😉
+## 💬 Série 2 — Large Language Models (LLMs)
+
+Os **Large Language Models (LLMs)** estão no centro da IA generativa moderna. Eles conseguem gerar texto, escrever código, resumir documentos, responder perguntas, auxiliar no estudo e transformar fluxos de trabalho em diversas áreas.
+
+Nesta série, estudamos:
+
+- o que são LLMs;
+- como a arquitetura Transformer mudou o processamento de linguagem natural;
+- como funciona o mecanismo de atenção;
+- como ocorre o treinamento com pré-treinamento, fine-tuning e RLHF;
+- quais são as limitações, riscos e aplicações práticas desses modelos.
+
+### 📖 Posts da série
+
+1. [O que é um Large Language Model (LLM)?](llms/o-que-e-um-llm.qmd)
+2. [Atenção em Transformers: Q, K, V e Multi-Head Attention](llms/atencao-transformers-qkv-mha.qmd)
+3. [Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF](llms/treinamento-pretrain-finetune-rlhf.qmd)
+4. [Desafios e Limitações dos LLMs](llms/desafios-limitacoes.qmd)
+5. [Aplicações Práticas dos LLMs](llms/aplicacoes-praticas.qmd)
+6. [O Futuro dos LLMs e da IA Generativa](llms/futuro-ia-llms.qmd)
 
 ---
 
-# 🔗 Navegação
+## 🔗 Navegação
 
-🎯 **Próximo Post:** 👉 [O que é um Large Language Model (LLM)?](llms/o-que-e-um-llm.qmd)
+🎯 **Comece pela história:** [Origens e Sonhos](historia-ia/parte-1-origens-e-sonhos.qmd)  
+💬 **Ou vá direto aos LLMs:** [O que é um Large Language Model (LLM)?](llms/o-que-e-um-llm.qmd)
 
 ---
 
@@ -155,15 +164,14 @@ Se quiser ver algum tema específico por aqui, abra um issue no repositório ou 
 
 ---
 
-*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+{{< include /_includes/sobre-projeto.qmd >}}
 
 :::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+*Criado por Blog do Marcellini com ❤ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-

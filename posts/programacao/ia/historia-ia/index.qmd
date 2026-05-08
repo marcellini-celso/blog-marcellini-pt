@@ -1,0 +1,60 @@
+---
+title: "História da IA"
+description: "Da cibernética aos modelos generativos — a evolução da Inteligência Artificial."
+author: "Blog do Marcellini"
+date: 2025-10-23
+lang: pt-BR
+categories: [história da computação, inteligência artificial]
+tags: [IA, aprendizado de máquina, deep learning, LLMs, cibernética, história]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+page-layout: full
+---
+
+> **A pergunta sobre máquinas inteligentes nos obriga, antes de tudo, a perguntar o que significa pensar.**  
+> — inspirado em Alan Turing
+
+---
+
+## 🧠 Série: História da Inteligência Artificial
+
+A **Inteligência Artificial** não nasceu de repente com os chatbots, os modelos de linguagem ou as imagens geradas por computador. Ela é resultado de uma longa história de ideias, tentativas, promessas, frustrações e renascimentos.
+
+Nesta série, acompanhamos a evolução da IA desde seus antecedentes filosóficos, lógicos e cibernéticos até os sistemas contemporâneos baseados em aprendizado profundo, modelos generativos e grandes modelos de linguagem.
+
+A série faz parte do projeto **História da Computação** do **Blog do Marcellini**.
+
+## 📖 Sumário da série
+
+1. [Origens e Sonhos](parte-1-origens-e-sonhos.qmd)  
+2. [Nascimento da IA](parte-2-nascimento-da-ia.qmd)  
+3. [Os Anos Dourados](parte-3-os-anos-dourados.qmd)  
+4. [O Inverno da IA](parte-4-o-inverno-da-ia.qmd)  
+5. [O Renascimento da IA](parte-5-o-renascimento-da-ia.qmd)  
+6. [A Era dos Modelos Generativos](parte-6-a-era-dos-modelos-generativos.qmd)  
+7. [O Futuro da IA](parte-7-o-futuro-da-ia.qmd)
+
+---
+
+{{< include /_includes/politica-editorial.qmd >}}
+
+---
+
+<!-- Breadcrumbs -->
+· [← Inteligência Artificial](../index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::

@@ -1,0 +1,175 @@
+---
+title: "O Inverno da IA"
+subtitle: "Promessas não cumpridas, limites técnicos e cortes de financiamento"
+description: "Limites práticos, relatórios críticos e queda de financiamento na história da Inteligência Artificial."
+author: "Blog do Marcellini"
+date: 2025-10-23
+lang: pt-BR
+categories: [história da computação, inteligência artificial]
+tags: [Lighthill, ALVEY, quinta geração, perceptrons, simbolismo, financiamento]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+---
+
+> O primeiro grande entusiasmo da IA esbarrou em um problema duro: sistemas que funcionavam em micromundos não se transferiam facilmente para o mundo real.
+
+## O que foi o inverno da IA?
+
+A expressão **inverno da IA** designa períodos de redução de entusiasmo, financiamento e confiança na Inteligência Artificial.
+
+Depois dos anos dourados da IA simbólica, muitos pesquisadores, governos e empresas esperavam avanços rápidos em tradução automática, compreensão de linguagem natural, robótica, visão computacional, planejamento e raciocínio automático.
+
+Mas a realidade se mostrou mais difícil. Sistemas que pareciam impressionantes em ambientes controlados não generalizavam bem para situações reais. Programas que funcionavam em micromundos falhavam diante da ambiguidade, da incerteza, do ruído e da complexidade do mundo aberto.
+
+A promessa era grande. A entrega, muitas vezes, era limitada.
+
+::: {.callout-note}
+### Resumo em uma frase
+
+O inverno da IA ocorreu quando as expectativas criadas pela IA simbólica e pelos primeiros sistemas inteligentes se chocaram com limitações de dados, computação, representação, generalização e financiamento.
+:::
+
+## Promessas maiores que as entregas
+
+Um dos fatores centrais do inverno da IA foi o **desalinhamento entre promessa e resultado**.
+
+Durante as primeiras décadas da área, havia grande otimismo. Alguns pesquisadores acreditavam que problemas centrais da inteligência poderiam ser resolvidos em poucos anos. A ideia de máquinas capazes de traduzir textos, compreender linguagem, planejar ações e raciocinar como humanos parecia próxima.
+
+Mas muitos desses problemas eram mais difíceis do que pareciam.
+
+A tradução automática, por exemplo, exigia muito mais do que substituir palavras de uma língua por palavras de outra. Era preciso compreender contexto, ambiguidade, expressões idiomáticas, conhecimento de mundo e intenção comunicativa.
+
+A visão computacional também era mais complexa do que reconhecer formas simples. O mundo visual envolve iluminação, perspectiva, objetos parcialmente ocultos, ruído, movimento e variação infinita.
+
+A IA descobriu, aos poucos, que tarefas fáceis para humanos podiam ser extremamente difíceis para máquinas.
+
+## O relatório Lighthill
+
+Um marco importante foi o **Relatório Lighthill**, publicado no Reino Unido em 1973.
+
+O relatório avaliou criticamente o progresso da Inteligência Artificial e questionou o retorno científico e prático de parte das pesquisas financiadas até então. Ele teve impacto significativo no financiamento da área no Reino Unido e ajudou a consolidar uma percepção de que a IA havia prometido mais do que podia entregar.
+
+O ponto central não era dizer que toda pesquisa em IA era inútil, mas destacar que muitos resultados estavam restritos a exemplos pequenos, ambientes artificiais e problemas muito controlados.
+
+Essa crítica atingia diretamente o coração da IA simbólica: a dificuldade de sair do laboratório e enfrentar o mundo real.
+
+## Micromundos versus mundo aberto
+
+Nos anos dourados, os **micromundos** haviam sido uma estratégia eficiente para produzir avanços. Um sistema podia lidar com blocos, comandos simples, regras claras e vocabulário limitado.
+
+O problema é que o mundo real não é um micromundo.
+
+No mundo real, os objetos têm múltiplas funções, as palavras têm vários sentidos, as situações mudam, as informações são incompletas e as regras nem sempre são explícitas.
+
+Essa diferença revelou uma fragilidade importante: muitos sistemas de IA eram competentes apenas enquanto o ambiente permanecia cuidadosamente simplificado.
+
+Quando saíam desse ambiente, tornavam-se frágeis.
+
+## A explosão combinatória
+
+Outro limite importante era a **explosão combinatória**.
+
+Em problemas de planejamento, jogos, prova de teoremas e raciocínio lógico, o número de possibilidades pode crescer rapidamente. Mesmo computadores relativamente rápidos se tornam incapazes de explorar todos os caminhos possíveis quando o espaço de busca aumenta demais.
+
+A IA simbólica dependia muito de busca, regras e representações explícitas. Isso funcionava em problemas pequenos, mas se tornava inviável em muitos problemas reais.
+
+As heurísticas ajudavam, mas não resolviam tudo.
+
+## Dados e computação como gargalos
+
+Hoje estamos acostumados a pensar em IA como algo ligado a grandes volumes de dados, GPUs, nuvem e modelos com bilhões de parâmetros. Mas, nas décadas de 1970 e 1980, a situação era muito diferente.
+
+Havia pouca capacidade computacional, pouca memória, poucos dados digitalizados e ferramentas muito limitadas para treinar sistemas complexos.
+
+Muitas ideias que hoje parecem naturais simplesmente não eram viáveis na época. Mesmo que alguns conceitos estivessem presentes, faltavam dados, hardware e escala.
+
+Por isso, parte do inverno da IA não veio apenas de ideias erradas, mas também de limitações materiais.
+
+## Redes neurais em baixa
+
+As redes neurais também passaram por um período de descrédito.
+
+A crítica aos **perceptrons**, associada ao trabalho de Marvin Minsky e Seymour Papert, mostrou limitações importantes de modelos neurais simples. Embora essas críticas não se aplicassem diretamente às redes profundas modernas, elas influenciaram a percepção da época.
+
+Por um período, abordagens conexionistas perderam espaço para a IA simbólica. Mais tarde, com novos algoritmos, mais dados e mais capacidade computacional, as redes neurais voltariam com força.
+
+Mas, durante parte do inverno, elas pareciam uma promessa interrompida.
+
+## O segundo inverno: sistemas especialistas e mercado
+
+Nos anos 1980, a IA voltou a ganhar atenção com os **sistemas especialistas**.
+
+Esses sistemas codificavam conhecimento de especialistas humanos em regras do tipo “se... então...”. Em alguns domínios, eles funcionavam bem e despertaram interesse comercial.
+
+Mas novamente surgiram limitações:
+
+- eram difíceis de manter;
+- dependiam de regras escritas manualmente;
+- não aprendiam bem com novos dados;
+- eram frágeis fora do domínio para o qual haviam sido construídos;
+- exigiam grande esforço de engenharia do conhecimento.
+
+Quando o entusiasmo comercial diminuiu, muitas empresas e investidores perderam confiança. Isso contribuiu para o chamado segundo inverno da IA, especialmente entre o final dos anos 1980 e o início dos anos 1990.
+
+## A quinta geração japonesa
+
+Outro episódio importante foi o projeto japonês de computadores de **quinta geração**, lançado nos anos 1980.
+
+A iniciativa buscava desenvolver uma nova geração de sistemas computacionais voltados para lógica, inferência e Inteligência Artificial. O projeto teve grande ambição e repercussão internacional, estimulando respostas estratégicas em outros países.
+
+Embora tenha produzido avanços e pesquisas relevantes, não entregou a revolução esperada. Esse contraste entre ambição e resultado reforçou a percepção de que a IA ainda estava distante de muitas de suas promessas.
+
+## Linha do tempo essencial
+
+- **1969** — Minsky e Papert publicam críticas importantes aos perceptrons.
+- **1973** — O Relatório Lighthill questiona resultados e financiamento da IA no Reino Unido.
+- **Década de 1970** — Crescem as críticas à generalização de sistemas simbólicos.
+- **1981–1985** — Programas estratégicos, como a iniciativa japonesa de quinta geração, reacendem expectativas.
+- **Final dos anos 1980** — O mercado de sistemas especialistas começa a perder força.
+- **1987–1993** — Consolida-se a percepção de um novo inverno da IA em setores comerciais e acadêmicos.
+
+## Conceitos-chave
+
+- **Inverno da IA:** período de queda de financiamento, entusiasmo e confiança na área.
+- **Generalização:** capacidade de um sistema funcionar bem fora dos exemplos ou ambientes em que foi desenvolvido.
+- **Fragilidade simbólica:** dificuldade de sistemas baseados em regras para lidar com ambiguidade, exceções e mundo aberto.
+- **Explosão combinatória:** crescimento rápido do número de possibilidades em problemas complexos.
+- **Gargalo computacional:** limitação causada por pouca memória, pouco processamento e poucos dados disponíveis.
+- **Sistemas especialistas:** programas baseados em regras que tentavam codificar o conhecimento de especialistas humanos.
+
+## Personagens e episódios em foco
+
+- **James Lighthill** — autor do relatório crítico que impactou o financiamento da IA no Reino Unido.
+- **Marvin Minsky** e **Seymour Papert** — críticos dos perceptrons simples e figuras centrais da IA simbólica.
+- **Projeto Quinta Geração** — iniciativa japonesa que expressou o otimismo estratégico em torno da IA nos anos 1980.
+- **Sistemas especialistas** — símbolo do entusiasmo comercial e das limitações práticas da IA baseada em regras.
+
+## Leituras sugeridas
+
+- **CREVIER, Daniel.** *AI: The Tumultuous History of the Search for Artificial Intelligence*. Basic Books, 1993.
+- **NILSSON, Nils J.** *The Quest for Artificial Intelligence: A History of Ideas and Achievements*. Cambridge University Press, 2010.
+- **MINSKY, Marvin; PAPERT, Seymour.** *Perceptrons: An Introduction to Computational Geometry*. MIT Press, 1969.
+- **HENDLER, James.** “Avoiding Another AI Winter”. *IEEE Intelligent Systems*, 2008.
+
+## Síntese
+
+O inverno da IA não significou o fim da Inteligência Artificial. Significou, antes, uma correção de expectativas.
+
+A área havia descoberto que inteligência não era apenas manipular símbolos em ambientes controlados. Era preciso lidar com incerteza, contexto, dados, escala, aprendizado, percepção e mundo aberto.
+
+Essas dificuldades prepararam o terreno para uma mudança gradual: o retorno de métodos estatísticos, o avanço do aprendizado de máquina, a retomada das redes neurais e, mais tarde, o renascimento da IA.
+
+---
+
+## Navegação
+
+- ← **Anterior:** [Os Anos Dourados](parte-3-os-anos-dourados.qmd)
+- → **Próximo:** [O Renascimento da IA](parte-5-o-renascimento-da-ia.qmd)

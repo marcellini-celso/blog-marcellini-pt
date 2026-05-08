@@ -1,0 +1,219 @@
+---
+title: "A Era dos Modelos Generativos"
+subtitle: "Transformers, difusão e o advento dos LLMs"
+description: "Arquiteturas de atenção, pré-treino em larga escala, modelos fundacionais e alinhamento humano."
+author: "Blog do Marcellini"
+date: 2025-10-23
+lang: pt-BR
+categories: [história da computação, inteligência artificial]
+tags: [Transformers, LLMs, RLHF, alinhamento, difusão, foundation models]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+---
+
+> A combinação entre **dados em larga escala**, **arquiteturas de atenção**, **hardware acelerado** e **pré-treinamento massivo** inaugurou a era dos modelos generativos.
+
+## Do deep learning aos modelos generativos
+
+Depois da virada do deep learning, a IA passou a obter resultados impressionantes em visão computacional, reconhecimento de fala, tradução automática e processamento de linguagem natural.
+
+Mas uma nova transformação aconteceria quando os modelos deixaram de ser apenas classificadores ou sistemas especializados em uma única tarefa e passaram a ser treinados em grandes volumes de dados para produzir novos conteúdos: textos, imagens, código, áudio, vídeo e combinações multimodais.
+
+Essa é a era dos **modelos generativos**.
+
+Em vez de apenas reconhecer padrões, esses sistemas passaram a gerar saídas complexas: completar frases, responder perguntas, escrever programas, criar imagens, resumir documentos, traduzir textos e simular diálogos.
+
+::: {.callout-note}
+### Resumo em uma frase
+
+A era dos modelos generativos nasce quando a IA combina **escala**, **atenção**, **pré-treinamento massivo** e **modelos capazes de gerar conteúdo novo**.
+:::
+
+## A arquitetura Transformer
+
+Um marco decisivo foi a arquitetura **Transformer**, apresentada em 2017 no artigo *Attention Is All You Need*.
+
+Antes dos Transformers, muitos modelos de linguagem dependiam de arquiteturas recorrentes, como RNNs e LSTMs. Esses modelos processavam sequências passo a passo, o que dificultava paralelização e tornava mais difícil capturar dependências longas.
+
+O Transformer mudou esse cenário ao colocar o mecanismo de **atenção** no centro da arquitetura.
+
+A atenção permite que o modelo relacione diferentes partes de uma sequência, atribuindo maior ou menor importância a palavras, tokens ou trechos conforme o contexto.
+
+Essa mudança tornou possível treinar modelos maiores, mais paralelizáveis e mais eficientes em grandes volumes de texto.
+
+## Atenção: contexto como relação
+
+A grande ideia por trás da atenção é que o significado de um elemento depende de suas relações com outros elementos.
+
+Em uma frase, uma palavra não tem valor isolado. Ela ganha sentido pelo contexto. O mecanismo de atenção permite que o modelo calcule relações entre tokens e use essas relações para construir representações mais ricas.
+
+Em modelos de linguagem, isso é especialmente importante. A mesma palavra pode ter sentidos diferentes dependendo do contexto, e uma frase pode depender de informações que apareceram muito antes no texto.
+
+A atenção tornou os modelos mais capazes de lidar com dependências longas, ambiguidade e estrutura textual.
+
+## Pré-treinamento em larga escala
+
+Outro ingrediente fundamental foi o **pré-treinamento**.
+
+Em vez de treinar um modelo do zero para cada tarefa específica, a estratégia passou a ser treinar grandes modelos em enormes coleções de texto, código, imagens ou outros dados. Durante esse processo, o modelo aprende regularidades gerais: padrões linguísticos, relações semânticas, estruturas de documentos, estilos de escrita e até formas de raciocínio estatístico.
+
+Depois, esse modelo pode ser adaptado para tarefas específicas por meio de ajuste fino, instruções ou técnicas de alinhamento.
+
+Essa lógica mudou profundamente a IA:
+
+- primeiro, treina-se um modelo geral;
+- depois, adapta-se esse modelo para usos específicos.
+
+É a base do que hoje chamamos de **modelos fundacionais**.
+
+## Modelos fundacionais
+
+A expressão **foundation models** se refere a modelos treinados em larga escala, capazes de servir como base para muitas aplicações diferentes.
+
+Um mesmo modelo pode ser usado para:
+
+- responder perguntas;
+- resumir textos;
+- traduzir;
+- escrever código;
+- classificar documentos;
+- auxiliar na análise de dados;
+- gerar imagens;
+- atuar como componente de sistemas maiores.
+
+Essa flexibilidade tornou os modelos fundacionais muito importantes, mas também levantou novas questões: custo computacional, concentração tecnológica, vieses, segurança, propriedade dos dados, impacto ambiental e governança.
+
+## BERT, GPT e duas tradições de linguagem
+
+No processamento de linguagem natural, dois caminhos ficaram especialmente conhecidos.
+
+Modelos como **BERT** exploraram a ideia de representação contextual bidirecional. Eles foram muito importantes em tarefas de compreensão, classificação, busca e análise de texto.
+
+Já a família **GPT** popularizou modelos autoregressivos treinados para prever o próximo token. Essa estratégia, combinada com escala, mostrou-se extremamente poderosa para geração de texto.
+
+Essas duas tradições ajudaram a transformar o processamento de linguagem natural. A linguagem deixou de ser tratada apenas como sequência de palavras e passou a ser modelada por representações contextuais profundas.
+
+## Instruções, alinhamento e RLHF
+
+Treinar um modelo grande em texto não é suficiente para torná-lo útil como assistente.
+
+Um modelo pode saber completar frases, mas isso não significa que ele saiba seguir instruções, responder de modo seguro, admitir incerteza ou evitar respostas problemáticas.
+
+Por isso, ganharam importância técnicas de **alinhamento**, incluindo treinamento com instruções e **RLHF** (*Reinforcement Learning from Human Feedback*).
+
+A ideia geral é ajustar o comportamento do modelo para que suas respostas fiquem mais próximas das preferências humanas: mais úteis, claras, seguras e adequadas ao contexto.
+
+Esse processo não resolve todos os problemas, mas tornou os LLMs muito mais utilizáveis em aplicações práticas.
+
+## Difusão e geração de imagens
+
+A geração de conteúdo não ficou restrita ao texto.
+
+Modelos de **difusão** ganharam grande destaque na geração de imagens. De forma simplificada, esses modelos aprendem a transformar ruído em uma imagem coerente, condicionada por texto ou outras entradas.
+
+Essa abordagem permitiu avanços importantes em geração de imagens, edição visual, design, ilustração, vídeo e aplicações multimodais.
+
+Com isso, a IA generativa passou a atuar em várias linguagens: texto, imagem, áudio, vídeo e código.
+
+## Multimodalidade
+
+A etapa seguinte foi a **multimodalidade**.
+
+Modelos multimodais combinam diferentes tipos de entrada e saída: texto, imagem, áudio, vídeo, tabelas, documentos e código.
+
+Isso aproxima a IA de usos mais naturais. Uma pessoa pode enviar uma imagem e fazer perguntas sobre ela, pedir análise de um gráfico, resumir um documento, gerar código a partir de uma descrição ou combinar texto e imagem em uma mesma tarefa.
+
+A multimodalidade amplia a noção de interface: a interação com a máquina deixa de depender apenas de comandos formais e passa a se aproximar de uma conversa com múltiplos tipos de conteúdo.
+
+## Contexto longo e agentes
+
+Com modelos mais capazes, surgiram também sistemas com **janelas de contexto maiores** e propostas de **agentes de IA**.
+
+Janelas de contexto maiores permitem que o modelo considere documentos extensos, conversas longas, bases de conhecimento e cadeias de instruções mais complexas.
+
+Agentes de IA, por sua vez, são sistemas que usam modelos como componentes de uma arquitetura maior. Eles podem planejar etapas, chamar ferramentas, consultar arquivos, executar código, navegar em ambientes e interagir com outros sistemas.
+
+Essa área ainda está em desenvolvimento e exige cautela. Quanto mais autonomia se dá a um sistema, maior a necessidade de controle, avaliação, segurança e supervisão humana.
+
+## Escalonamento e leis de escala
+
+Um dos fenômenos mais importantes dessa era foi o **escalonamento**.
+
+Pesquisadores observaram que, em muitos casos, aumentar dados, parâmetros e computação melhorava o desempenho dos modelos de forma previsível. Isso levou ao estudo das chamadas **scaling laws**, ou leis de escala.
+
+Essa percepção orientou a construção de modelos cada vez maiores.
+
+Mas a escala também tem custos:
+
+- alto consumo computacional;
+- demanda energética;
+- concentração de infraestrutura;
+- dificuldade de auditoria;
+- dependência de grandes bases de dados;
+- riscos de reprodução de vieses.
+
+A era generativa, portanto, é também uma era de perguntas sociais, econômicas e políticas.
+
+## Linha do tempo essencial
+
+- **2017** — A arquitetura Transformer é apresentada.
+- **2018–2020** — Modelos como BERT e GPT consolidam o pré-treinamento em larga escala.
+- **2020–2022** — Grandes modelos de linguagem ganham escala e se tornam mais úteis em tarefas gerais.
+- **2022–2024** — IA generativa se populariza em texto, imagem, código e aplicações multimodais.
+- **2024 em diante** — Crescem os debates sobre agentes, contexto longo, governança, segurança, custo computacional e impacto social.
+
+## Conceitos-chave
+
+- **Transformer:** arquitetura baseada em atenção, central para os LLMs modernos.
+- **Atenção:** mecanismo que permite ao modelo relacionar partes diferentes de uma sequência.
+- **Pré-treinamento:** treinamento inicial em grandes volumes de dados para aprender padrões gerais.
+- **Modelo fundacional:** modelo de larga escala que serve como base para múltiplas aplicações.
+- **LLM:** grande modelo de linguagem treinado para processar e gerar texto.
+- **RLHF:** ajuste do comportamento do modelo com base em feedback humano.
+- **Difusão:** família de métodos generativos muito usada em geração de imagens.
+- **Multimodalidade:** integração de diferentes tipos de dados, como texto, imagem, áudio e vídeo.
+- **Escalonamento:** aumento de dados, parâmetros e computação para melhorar desempenho.
+- **Agentes:** sistemas que usam modelos para planejar, chamar ferramentas e executar tarefas em etapas.
+
+## Personagens e episódios em foco
+
+- **Transformer** — arquitetura que reorganizou o processamento de linguagem natural moderno.
+- **BERT** — marco em representações contextuais para compreensão de texto.
+- **GPT** — marco em geração autoregressiva de linguagem em larga escala.
+- **Modelos de difusão** — fundamentais para a popularização da geração de imagens.
+- **RLHF** — técnica importante para tornar modelos mais alinhados a instruções humanas.
+- **Modelos fundacionais** — nova forma de organizar a IA em torno de modelos gerais reutilizáveis.
+
+## Leituras sugeridas
+
+- **VASWANI, Ashish et al.** “Attention Is All You Need”. 2017.
+- **DEVLIN, Jacob et al.** “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”. 2018.
+- **BROWN, Tom B. et al.** “Language Models are Few-Shot Learners”. 2020.
+- **BOMMASANI, Rishi et al.** “On the Opportunities and Risks of Foundation Models”. 2021.
+- **OUYANG, Long et al.** “Training language models to follow instructions with human feedback”. 2022.
+- **GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron.** *Deep Learning*. MIT Press, 2016.
+
+## Síntese
+
+A era dos modelos generativos representa uma nova fase da Inteligência Artificial.
+
+Depois da IA simbólica, dos invernos, do aprendizado de máquina estatístico e da virada do deep learning, a área passou a se organizar em torno de modelos treinados em larga escala, capazes de gerar conteúdo e servir como base para múltiplas aplicações.
+
+Transformers, pré-treinamento, atenção, difusão, RLHF, multimodalidade e modelos fundacionais mudaram a forma como interagimos com sistemas computacionais.
+
+Mas essa potência também trouxe novas responsabilidades: avaliar limites, reduzir riscos, compreender impactos sociais e decidir como queremos usar essas tecnologias.
+
+---
+
+## Navegação
+
+- ← **Anterior:** [O Renascimento da IA](parte-5-o-renascimento-da-ia.qmd)
+- → **Próximo:** [O Futuro da IA](parte-7-o-futuro-da-ia.qmd)

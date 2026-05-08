@@ -1,0 +1,200 @@
+---
+title: "O Renascimento da IA"
+subtitle: "Aprendizado de máquina, dados e o retorno das redes neurais"
+description: "De SVMs e ensembles ao backprop moderno, GPUs, ImageNet e deep learning."
+author: "Blog do Marcellini"
+date: 2025-10-23
+lang: pt-BR
+categories: [história da computação, inteligência artificial]
+tags: [SVM, ensemble, backpropagation, Hinton, LeCun, Bengio, GPUs, ImageNet]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+---
+
+> Depois do inverno, a IA renasceu menos como sistema de regras explícitas e mais como uma ciência de **dados, modelos estatísticos e aprendizado a partir de exemplos**.
+
+## Da IA simbólica ao aprendizado de máquina
+
+O renascimento da Inteligência Artificial não aconteceu de uma vez. Ele foi resultado de uma mudança gradual de foco.
+
+Durante os anos dourados, grande parte da IA apostava em símbolos, regras e representações explícitas do conhecimento. Depois dos invernos da IA, ficou claro que essa estratégia tinha limites importantes: era difícil codificar manualmente tudo que um sistema precisava saber.
+
+A partir dos anos 1990, ganhou força uma abordagem diferente: em vez de programar diretamente todas as regras, por que não criar sistemas capazes de **aprender padrões a partir de dados**?
+
+Essa mudança aproximou a IA da estatística, da otimização, da teoria da decisão e da ciência de dados. A pergunta deixou de ser apenas “como representar o conhecimento?” e passou a ser também “como aprender uma função a partir de exemplos?”.
+
+::: {.callout-note}
+### Resumo em uma frase
+
+O renascimento da IA foi impulsionado por três forças: **aprendizado de máquina**, **maior disponibilidade de dados** e **aumento da capacidade computacional**.
+:::
+
+## O aprendizado supervisionado ganha força
+
+Uma das formas mais importantes de aprendizado de máquina é o **aprendizado supervisionado**.
+
+Nesse tipo de abordagem, o sistema recebe exemplos de entrada e saída. Por exemplo:
+
+- imagens e seus rótulos;
+- textos e suas classificações;
+- dados de clientes e a previsão de risco;
+- sinais e suas categorias;
+- perguntas e respostas esperadas.
+
+O objetivo é aprender uma regra geral capaz de funcionar bem em novos casos.
+
+Essa ideia já existia antes, mas se tornou muito mais poderosa quando passou a ser combinada com métodos estatísticos robustos, bases de dados maiores e computadores mais rápidos.
+
+## SVMs, kernels e margens
+
+Nos anos 1990 e 2000, as **Support Vector Machines** (**SVMs**) ganharam grande destaque.
+
+As SVMs são modelos de classificação que procuram separar dados usando uma margem máxima entre classes. Com o uso de **kernels**, elas conseguem trabalhar implicitamente em espaços de maior dimensão, permitindo separar padrões que não são linearmente separáveis no espaço original.
+
+Na prática, as SVMs se tornaram uma ferramenta poderosa em problemas de classificação, reconhecimento de padrões e aprendizado estatístico.
+
+Elas simbolizam bem uma fase da IA em que métodos matematicamente elegantes, com boa teoria de generalização, dominaram muitos benchmarks.
+
+## Ensembles: combinar modelos para melhorar resultados
+
+Outro conjunto importante de métodos foi o dos **ensembles**.
+
+A ideia é simples: em vez de confiar em um único modelo, combinamos vários modelos para obter previsões mais robustas.
+
+Entre os métodos importantes estão:
+
+- **bagging**;
+- **boosting**;
+- **random forests**;
+- combinações de classificadores.
+
+Esses métodos mostraram que, em muitos problemas, a combinação de modelos simples podia gerar sistemas muito fortes. Eles também reforçaram uma ideia central do aprendizado de máquina moderno: o desempenho de um sistema depende não apenas do modelo isolado, mas de como ele é treinado, combinado, regularizado e avaliado.
+
+## Viés, variância e generalização
+
+Com o avanço do aprendizado de máquina, conceitos estatísticos se tornaram fundamentais.
+
+Um deles é o dilema entre **viés** e **variância**.
+
+Um modelo com muito viés é simples demais e pode não capturar a estrutura dos dados. Um modelo com muita variância pode se ajustar demais aos dados de treinamento e falhar em novos exemplos.
+
+Esse problema está no coração da **generalização**: a capacidade de um modelo funcionar bem em dados que ele ainda não viu.
+
+A IA deixou de ser apenas uma busca por regras inteligentes e passou a ser também uma engenharia delicada de modelos que aprendem sem decorar.
+
+## Regularização e avaliação
+
+Para melhorar a generalização, técnicas de **regularização** tornaram-se essenciais.
+
+Regularizar significa impor algum tipo de controle ao modelo: limitar sua complexidade, penalizar parâmetros muito grandes, reduzir sobreajuste ou forçar soluções mais estáveis.
+
+Também ganharam importância práticas como:
+
+- separar dados de treino e teste;
+- usar validação cruzada;
+- medir erro fora da amostra;
+- comparar modelos em benchmarks;
+- avaliar desempenho de forma reprodutível.
+
+Essa cultura de avaliação quantitativa seria decisiva para o crescimento do aprendizado de máquina.
+
+## O retorno das redes neurais
+
+As redes neurais não desapareceram completamente durante o inverno da IA, mas ficaram em segundo plano por bastante tempo.
+
+A partir dos anos 1980 e 1990, o algoritmo de **backpropagation** ajudou a treinar redes com camadas intermediárias. Pesquisadores como **Geoffrey Hinton**, **Yann LeCun** e **Yoshua Bengio** tiveram papel fundamental na retomada das abordagens conexionistas.
+
+LeCun, por exemplo, desenvolveu redes convolucionais aplicadas ao reconhecimento de dígitos manuscritos, mostrando que redes neurais poderiam funcionar muito bem em tarefas perceptivas específicas.
+
+Ainda assim, durante muito tempo, redes neurais competiram com métodos como SVMs, árvores, ensembles e modelos probabilísticos. Elas ainda não eram dominantes.
+
+## Deep learning: a virada dos anos 2000
+
+A expressão **deep learning** começou a ganhar força nos anos 2000.
+
+Por volta de 2006, trabalhos associados a Hinton e colaboradores reacenderam o interesse em redes profundas. Técnicas de pré-treinamento, melhores métodos de otimização, funções de ativação mais adequadas e maior disponibilidade de dados ajudaram a tornar o treinamento de redes maiores mais viável.
+
+Mas a virada decisiva ainda dependia de outro fator: computação em larga escala.
+
+## GPUs, dados e escala
+
+O crescimento da IA moderna está diretamente ligado à combinação de três elementos:
+
+- **dados em grande escala**;
+- **hardware acelerado**, especialmente GPUs;
+- **modelos capazes de se beneficiar da escala**.
+
+As GPUs, originalmente desenvolvidas para gráficos, mostraram-se extremamente úteis para operações matriciais e treinamento de redes neurais. Isso permitiu acelerar enormemente o treinamento de modelos.
+
+Ao mesmo tempo, a internet, os sensores, os dispositivos móveis e os grandes repositórios digitais ampliaram a disponibilidade de dados.
+
+A IA passou a depender cada vez mais de infraestrutura computacional.
+
+## ImageNet e a virada visual
+
+Um marco importante foi a base **ImageNet**, organizada para treinar e avaliar sistemas de reconhecimento de imagens em larga escala.
+
+Em 2012, a rede **AlexNet** obteve um resultado marcante na competição ImageNet, reduzindo significativamente o erro em classificação de imagens. Esse evento costuma ser visto como um ponto de virada para o deep learning.
+
+A partir daí, redes profundas passaram a dominar tarefas de visão computacional e rapidamente se espalharam para outras áreas.
+
+O sucesso não veio apenas de uma ideia isolada, mas da combinação de arquitetura, dados, GPUs, treinamento eficiente e avaliação por benchmarks.
+
+## Linha do tempo essencial
+
+- **Década de 1990** — SVMs, kernels e métodos estatísticos ganham destaque.
+- **1995–2005** — Ensembles, boosting e random forests consolidam resultados fortes em aprendizado supervisionado.
+- **1980–1990s** — Backpropagation e redes convolucionais mantêm viva a pesquisa conexionista.
+- **2006** — O termo *deep learning* ganha força com novos trabalhos sobre redes profundas.
+- **2009–2012** — GPUs, grandes bases de dados e benchmarks aceleram a virada do deep learning.
+- **2012** — AlexNet marca uma mudança decisiva na competição ImageNet.
+
+## Conceitos-chave
+
+- **Aprendizado supervisionado:** treinamento com exemplos de entrada e saída.
+- **SVM:** modelo baseado em margens e kernels para classificação e regressão.
+- **Ensembles:** combinação de vários modelos para melhorar desempenho e robustez.
+- **Backpropagation:** algoritmo fundamental para treinar redes neurais com múltiplas camadas.
+- **Regularização:** conjunto de técnicas para reduzir sobreajuste e melhorar generalização.
+- **Generalização:** capacidade de funcionar bem em dados novos.
+- **GPUs:** hardware acelerado que tornou viável treinar redes profundas em larga escala.
+- **Benchmark:** conjunto padronizado de dados e tarefas usado para comparar modelos.
+
+## Personagens e episódios em foco
+
+- **Geoffrey Hinton** — figura central no renascimento das redes neurais e do deep learning.
+- **Yann LeCun** — pioneiro em redes convolucionais e aplicações em visão computacional.
+- **Yoshua Bengio** — pesquisador fundamental em aprendizado profundo e representação.
+- **ImageNet** — base de dados e competição que ajudaram a consolidar a virada do deep learning.
+- **AlexNet** — rede neural profunda que marcou a virada da visão computacional em 2012.
+
+## Leituras sugeridas
+
+- **BISHOP, Christopher M.** *Pattern Recognition and Machine Learning*. Springer, 2006.
+- **GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron.** *Deep Learning*. MIT Press, 2016.
+- **NILSSON, Nils J.** *The Quest for Artificial Intelligence: A History of Ideas and Achievements*. Cambridge University Press, 2010.
+- **LECUN, Yann; BENGIO, Yoshua; HINTON, Geoffrey.** “Deep Learning”. *Nature*, 2015.
+- **KRIZHEVSKY, Alex; SUTSKEVER, Ilya; HINTON, Geoffrey.** “ImageNet Classification with Deep Convolutional Neural Networks”. 2012.
+
+## Síntese
+
+O renascimento da IA ocorreu quando a área passou a combinar métodos estatísticos, dados, capacidade computacional e modelos capazes de aprender representações.
+
+A IA deixou de depender apenas de regras explícitas e passou a aprender padrões a partir de exemplos. SVMs, ensembles, redes neurais, regularização, benchmarks e GPUs prepararam o terreno para a próxima transformação.
+
+Essa transformação viria com os modelos profundos em grande escala e, mais tarde, com a arquitetura Transformer, os modelos generativos e os grandes modelos de linguagem.
+
+---
+
+## Navegação
+
+- ← **Anterior:** [O Inverno da IA](parte-4-o-inverno-da-ia.qmd)
+- → **Próximo:** [A Era dos Modelos Generativos](parte-6-a-era-dos-modelos-generativos.qmd)

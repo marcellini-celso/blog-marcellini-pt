@@ -1,0 +1,128 @@
+---
+title: "Origens e Sonhos"
+subtitle: "Dos autômatos à cibernética: quando a ideia de máquinas pensantes ganhou forma"
+description: "Pré-história da IA: mitos, autômatos, lógica, estatística e a virada cibernética."
+author: "Blog do Marcellini"
+date: 2025-10-23
+lang: pt-BR
+categories: [história da computação, inteligência artificial]
+tags: [cibernética, autômatos, lógica, estatística, Norbert Wiener, Shannon]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+---
+
+> **Ideias de máquinas que pensam** antecedem os computadores digitais: aparecem em mitos, autômatos, sistemas lógicos, teorias da informação e modelos de controle.
+
+## Contexto histórico: antes de 1956
+
+A Inteligência Artificial como campo de pesquisa só receberia esse nome em meados do século XX. Mas a pergunta que a sustenta é muito mais antiga: **seria possível construir algo capaz de imitar, automatizar ou reproduzir aspectos da inteligência humana?**
+
+Muito antes dos computadores modernos, diversas culturas imaginaram seres artificiais, mecanismos animados e máquinas capazes de agir como se tivessem vontade própria. Esses sonhos aparecem em mitos, engenhos mecânicos, autômatos e, mais tarde, em projetos matemáticos para formalizar o raciocínio.
+
+A pré-história da IA pode ser entendida como a convergência de algumas correntes principais:
+
+- **Mitos e autômatos:** de Talos, o gigante de bronze da mitologia grega, aos autômatos mecânicos de Jacques de Vaucanson e ao famoso “Turco Mecânico”.
+- **Lógica e formalismo:** com Boole, Frege, Peano, Hilbert e Gödel, a ideia de que parte do raciocínio poderia ser representada por símbolos e regras.
+- **Estatística e decisão:** com Bayes, Fisher e Neyman–Pearson, a construção de ferramentas para lidar com incerteza, inferência e evidência.
+- **Cibernética e teoria da informação:** com Wiener, Shannon, McCulloch e Pitts, a aproximação entre comunicação, controle, feedback e modelos formais do sistema nervoso.
+
+::: {.callout-note}
+### Resumo em uma frase
+
+A **Inteligência Artificial** nasce do encontro entre três grandes tradições: **cálculo simbólico**, **probabilidade/estatística** e **sistemas de controle e comunicação**.
+:::
+
+## Dos autômatos ao sonho da máquina racional
+
+A ideia de construir máquinas que imitam a vida é antiga. Autômatos mecânicos existiram em várias épocas, muitas vezes como objetos de fascínio, demonstrações técnicas ou espetáculos.
+
+O caso do **Turco Mecânico**, apresentado no século XVIII como uma máquina capaz de jogar xadrez, é especialmente simbólico. Ele não era uma máquina inteligente de fato, mas uma ilusão engenhosa operada por um ser humano escondido. Mesmo assim, antecipava uma questão que atravessaria a história da IA: **o que conta como inteligência quando observamos apenas o comportamento externo?**
+
+Essa pergunta reapareceria, de forma muito mais rigorosa, no século XX, com Alan Turing.
+
+## Lógica: transformar raciocínio em símbolos
+
+Outra raiz importante da IA está na tentativa de formalizar o pensamento.
+
+No século XIX, **George Boole** mostrou que proposições lógicas poderiam ser manipuladas por uma espécie de álgebra. Depois, Frege, Peano, Hilbert e outros buscaram formas cada vez mais precisas de representar inferências, demonstrações e estruturas matemáticas.
+
+Essa tradição alimentou uma ideia poderosa: se o raciocínio puder ser descrito por regras formais, talvez uma máquina possa executar essas regras.
+
+Mais tarde, essa visão se tornaria uma das bases da chamada **IA simbólica**, ou **GOFAI** (*Good Old-Fashioned Artificial Intelligence*), que dominaria boa parte das primeiras décadas da área.
+
+## Estatística: raciocinar sob incerteza
+
+Mas nem toda inteligência opera com regras exatas. Muitas decisões humanas envolvem incerteza, aproximação e evidência incompleta.
+
+Por isso, a estatística e a teoria da probabilidade também são raízes fundamentais da IA. O raciocínio bayesiano, os testes de hipótese, a inferência estatística e os modelos probabilísticos forneceram ferramentas para lidar com situações nas quais não há uma regra lógica simples, mas há dados, padrões e graus de confiança.
+
+Essa vertente seria decisiva para o aprendizado de máquina moderno, especialmente a partir do final do século XX.
+
+## Cibernética e teoria da informação
+
+Na década de 1940, duas ideias mudaram profundamente a forma de pensar máquinas, organismos e comunicação.
+
+A primeira foi a **teoria matemática da comunicação**, de Claude Shannon. Shannon mostrou que a informação poderia ser medida, codificada, transmitida e analisada matematicamente. Conceitos como bit, ruído, canal e codificação se tornaram centrais para a computação e para a engenharia da informação.
+
+A segunda foi a **cibernética**, associada a Norbert Wiener. A cibernética estudava sistemas de controle e comunicação em máquinas e seres vivos, com destaque para a ideia de **feedback**: um sistema pode ajustar seu comportamento com base nos efeitos de suas próprias ações.
+
+Essa noção aproximou máquinas, organismos e sistemas inteligentes em uma mesma linguagem conceitual.
+
+## McCulloch e Pitts: o neurônio lógico
+
+Em 1943, Warren McCulloch e Walter Pitts propuseram um modelo lógico simplificado de neurônios. A ideia era representar neurônios como unidades formais que recebem entradas, aplicam uma regra e produzem uma saída.
+
+Esse modelo estava muito distante das redes neurais modernas, mas abriu um caminho decisivo: pensar o cérebro, ou ao menos certos aspectos dele, como um sistema formal de processamento de informação.
+
+A partir daí, a pergunta sobre máquinas inteligentes ganhou uma nova forma: talvez a inteligência pudesse ser estudada como **computação**.
+
+## Linha do tempo essencial
+
+- **1943** — McCulloch e Pitts propõem um modelo lógico de neurônios.
+- **1948** — Shannon publica a teoria matemática da comunicação.
+- **1948–1950** — Wiener consolida a cibernética e a noção de feedback.
+- **1950** — Turing publica *Computing Machinery and Intelligence*.
+
+## Conceitos-chave
+
+- **Simbólico vs. estatístico:** duas formas diferentes de representar inteligência: por regras e símbolos ou por padrões e probabilidades.
+- **Feedback e homeostase:** mecanismos pelos quais sistemas ajustam seu comportamento a partir dos próprios resultados.
+- **Informação, ruído e codificação:** conceitos fundamentais para entender comunicação, computação e aprendizado.
+- **Máquinas e comportamento inteligente:** a ideia de avaliar inteligência pelo comportamento observável, e não por uma essência interna misteriosa.
+
+## Personagens em foco
+
+- **Norbert Wiener** — cibernética, feedback e sistemas de controle.
+- **Claude Shannon** — teoria da informação e comunicação.
+- **Warren McCulloch** e **Walter Pitts** — modelo lógico de neurônios.
+- **Alan Turing** — computação, inteligência e a pergunta sobre máquinas pensantes.
+
+## Leituras sugeridas
+
+- **WIENER, Norbert.** *Cybernetics: Or Control and Communication in the Animal and the Machine*. 1948.
+- **SHANNON, Claude E.** “A Mathematical Theory of Communication”. 1948.
+- **TURING, Alan M.** “Computing Machinery and Intelligence”. 1950.
+- **MINDELL, David A.** *Between Human and Machine: Feedback, Control, and Computing before Cybernetics*. Johns Hopkins University Press, 2002.
+
+## Síntese
+
+Antes de existir uma disciplina chamada **Inteligência Artificial**, já havia muitas peças do quebra-cabeça: a ideia de máquinas que imitam a vida, a formalização da lógica, o estudo estatístico da incerteza, a teoria da informação e a cibernética.
+
+A IA nasceu quando essas tradições começaram a convergir em torno de uma pergunta comum: **seria possível construir máquinas capazes de realizar tarefas associadas à inteligência?**
+
+Essa pergunta ganharia forma institucional em 1956, no encontro de Dartmouth — tema da próxima parte da série.
+
+---
+
+## Navegação
+
+- ← **Anterior:** [Página da Série](index.qmd)
+- → **Próximo:** [Nascimento da IA](parte-2-nascimento-da-ia.qmd)

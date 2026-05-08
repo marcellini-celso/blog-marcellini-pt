@@ -1,0 +1,125 @@
+---
+title: "Nascimento da IA"
+subtitle: "De Turing a Dartmouth (1940–1956)"
+description: "A formalização da pergunta 'máquinas podem pensar?' e a fundação do campo em 1956."
+author: "Blog do Marcellini"
+date: 2025-10-23
+lang: pt-BR
+categories: [história da computação, inteligência artificial]
+tags: [Turing, teste de Turing, Dartmouth, McCarthy, Minsky, Newell, Simon, Logic Theorist]
+format:
+  html:
+    toc: true
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+---
+
+> Em meados do século XX, a pergunta deixou de ser apenas filosófica: **será que uma máquina poderia exibir comportamento inteligente?**
+
+## Contexto: de Turing a Dartmouth
+
+Entre as décadas de 1940 e 1950, várias ideias que estavam dispersas começaram a se aproximar. A lógica formal, a computação, a teoria da informação, a cibernética e os primeiros programas de computador criaram o ambiente intelectual no qual a **Inteligência Artificial** poderia nascer como campo de pesquisa.
+
+A pergunta central foi formulada de maneira célebre por **Alan Turing** em 1950: em vez de perguntar diretamente “máquinas podem pensar?”, Turing propôs substituir a pergunta por um experimento operacional — o **jogo da imitação**.
+
+Essa mudança foi decisiva. Em vez de tentar definir a essência do pensamento, Turing deslocou o problema para o comportamento observável: se uma máquina consegue conversar de modo indistinguível de um ser humano em certas condições, que razões teríamos para negar que ela manifesta algum tipo de inteligência?
+
+## O jogo da imitação
+
+O chamado **teste de Turing** não era uma prova definitiva de consciência, compreensão ou mente. Era, antes, uma provocação metodológica.
+
+Turing queria mostrar que a discussão sobre máquinas inteligentes poderia ser tratada de forma mais precisa se deixássemos de lado perguntas vagas como “a máquina realmente pensa?” e passássemos a investigar o que uma máquina consegue **fazer**.
+
+Essa ideia abriu caminho para uma abordagem muito importante na IA: avaliar inteligência por meio de tarefas, desempenho, interação e solução de problemas.
+
+::: {.callout-note}
+### Ideia central
+
+O teste de Turing desloca a pergunta:
+
+> Em vez de perguntar “a máquina pensa?”, perguntamos:  
+> **ela consegue agir, responder ou resolver problemas de modo que associamos à inteligência?**
+:::
+
+## Dartmouth, 1956: o nascimento oficial da IA
+
+Em 1956, ocorreu o famoso encontro de Dartmouth, organizado por nomes como **John McCarthy**, **Marvin Minsky**, **Claude Shannon** e **Nathaniel Rochester**.
+
+Esse encontro é geralmente considerado o nascimento institucional da **Inteligência Artificial** como área de pesquisa. Foi nesse contexto que a expressão **Artificial Intelligence** ganhou centralidade como nome para um novo programa científico.
+
+A proposta era ambiciosa: estudar como aspectos da aprendizagem, do raciocínio, da linguagem e da resolução de problemas poderiam ser descritos de modo suficientemente preciso para serem simulados por máquinas.
+
+Era uma aposta ousada. A IA nascia com uma confiança muito forte no poder da formalização: se a inteligência pudesse ser decomposta em símbolos, regras, buscas e procedimentos, então computadores poderiam reproduzir partes importantes dela.
+
+## Logic Theorist: uma máquina que prova teoremas
+
+No mesmo período, **Allen Newell** e **Herbert A. Simon**, com colaboração de **J. C. Shaw**, desenvolveram o **Logic Theorist**, um dos primeiros programas de IA.
+
+O programa foi projetado para provar teoremas da lógica matemática, especialmente resultados associados ao *Principia Mathematica*, de Alfred North Whitehead e Bertrand Russell.
+
+O impacto simbólico foi enorme: pela primeira vez, um programa de computador parecia executar uma atividade tradicionalmente associada ao raciocínio humano abstrato — a demonstração matemática.
+
+O **Logic Theorist** não era inteligente no sentido amplo que hoje imaginamos, mas mostrava algo fundamental: computadores poderiam manipular símbolos, aplicar regras e explorar caminhos possíveis para resolver problemas.
+
+## Busca, representação e heurísticas
+
+A IA nascente se apoiou em três ideias técnicas fundamentais.
+
+A primeira foi a **busca em espaço de estados**. Muitos problemas podem ser vistos como uma sequência de escolhas: a máquina parte de uma situação inicial, considera ações possíveis e tenta chegar a um objetivo.
+
+A segunda foi a **representação de conhecimento**. Para que uma máquina resolva um problema, ela precisa representar informações sobre o mundo, sobre as regras do domínio e sobre os objetivos desejados.
+
+A terceira foi o uso de **heurísticas**. Como muitos problemas têm um número enorme de possibilidades, não basta testar tudo. É preciso usar estratégias aproximadas, atalhos e critérios de escolha para guiar a busca.
+
+Essas ideias marcariam profundamente a IA simbólica das décadas seguintes.
+
+## Linha do tempo essencial
+
+- **1950** — Alan Turing publica *Computing Machinery and Intelligence* e propõe o jogo da imitação.
+- **1955–1956** — McCarthy, Minsky, Shannon e Rochester formulam a proposta do projeto de Dartmouth.
+- **1956** — O encontro de Dartmouth ajuda a consolidar a IA como campo de pesquisa.
+- **1956** — Newell, Simon e Shaw desenvolvem o **Logic Theorist**, um dos primeiros programas de raciocínio automático.
+
+## Conceitos-chave
+
+- **Teste de Turing:** critério comportamental para discutir inteligência em máquinas.
+- **Busca em espaço de estados:** formulação de problemas como sequências de escolhas.
+- **Representação de conhecimento:** codificação formal de informações relevantes para resolver problemas.
+- **Heurísticas:** estratégias que orientam a busca por soluções sem testar todas as possibilidades.
+- **IA simbólica:** abordagem baseada em símbolos, regras, lógica e manipulação formal.
+
+## Personagens em foco
+
+- **Alan Turing** — formulou o jogo da imitação e ajudou a estabelecer as bases conceituais da computação.
+- **John McCarthy** — associado à criação do termo *Artificial Intelligence* e ao projeto de Dartmouth.
+- **Marvin Minsky** — um dos pioneiros da IA e da ciência cognitiva computacional.
+- **Claude Shannon** — fundador da teoria da informação e participante do contexto intelectual da IA nascente.
+- **Allen Newell** e **Herbert A. Simon** — criadores do **Logic Theorist** e figuras centrais da IA simbólica.
+- **J. C. Shaw** — colaborador técnico no desenvolvimento do Logic Theorist.
+
+## Leituras sugeridas
+
+- **TURING, Alan M.** “Computing Machinery and Intelligence”. *Mind*, 1950.
+- **MCCARTHY, John; MINSKY, Marvin; ROCHESTER, Nathaniel; SHANNON, Claude.** “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence”. 1955.
+- **CREVIER, Daniel.** *AI: The Tumultuous History of the Search for Artificial Intelligence*. Basic Books, 1993.
+- **NILSSON, Nils J.** *The Quest for Artificial Intelligence: A History of Ideas and Achievements*. Cambridge University Press, 2010.
+
+## Síntese
+
+O nascimento da IA não foi um evento isolado. Ele resultou da convergência entre computação, lógica, teoria da informação, cibernética e ambição científica.
+
+Com Turing, a pergunta sobre máquinas inteligentes ganhou uma forma operacional. Com Dartmouth, ganhou um nome e um programa de pesquisa. Com o **Logic Theorist**, ganhou uma demonstração inicial de que computadores podiam manipular símbolos e resolver problemas associados ao raciocínio.
+
+A partir daí, a IA entraria em sua primeira fase de grande entusiasmo: os anos dourados da IA simbólica.
+
+---
+
+## Navegação
+
+- ← **Anterior:** [Origens e Sonhos](parte-1-origens-e-sonhos.qmd)
+- → **Próximo:** [Os Anos Dourados](parte-3-os-anos-dourados.qmd)
