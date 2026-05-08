@@ -190,14 +190,14 @@ A famosa identidade de Euler: $e^{i\pi} + 1 = 0$
 
 ```markdown
 $$
-\int_0^\infty e^{-x^2} \, dx = rac{\sqrt{\pi}}{2}
+\int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
 $$
 ```
 
 **Visualização:**
 
 $$
-\int_0^\infty e^{-x^2} \, dx = rac{\sqrt{\pi}}{2}
+\int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
 $$
 
 ---
@@ -206,7 +206,7 @@ $$
 
 ### Python
 
-```{python}
+```{python Gráfico do Seno 1}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -218,7 +218,7 @@ plt.show()
 
 ### R
 
-```{r}
+```{r Gráfico do Seno 2}
 x <- seq(0, 2*pi, length.out = 100)
 plot(x, sin(x), type = "l", col = "blue", lwd = 2)
 ```
