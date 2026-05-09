@@ -1,19 +1,62 @@
 [
   {
-    "title": "🧭 📊 Guia de Leitura — Estatística",
-    "href": "posts/estatistica/guia-estatistica.html",
+    "title": "📚 Biografias Matemáticas",
+    "href": "posts/biografias/index.html",
     "tags": [
-      "estatística",
-      "guia de leitura"
+      "biografias matemáticas",
+      "história",
+      "ciência",
+      "matemática",
+      "poesia"
     ]
   },
   {
-    "title": "📊 Estatística",
-    "href": "posts/estatistica/index.html",
+    "title": "📚 Omar Khayyam (Parte 2): Rubaiyat",
+    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte2.html",
     "tags": [
-      "estatística",
-      "sumário de estatística",
-      "sumário"
+      "omar khayyam",
+      "rubaiyat",
+      "poesia",
+      "persa",
+      "tradução"
+    ]
+  },
+  {
+    "title": "📚 Omar Khayyam (Parte 3): Rubaiyat",
+    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte3.html",
+    "tags": [
+      "omar khayyam",
+      "rubaiyat",
+      "poesia",
+      "persa",
+      "tempo",
+      "morte",
+      "destino"
+    ]
+  },
+  {
+    "title": "📚 Omar Khayyam (Parte 1): Matemático e Poeta",
+    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte1.html",
+    "tags": [
+      "omar khayyam",
+      "matemática",
+      "poesia",
+      "álgebra",
+      "persa",
+      "rubaiyat"
+    ]
+  },
+  {
+    "title": "📚 Omar Khayyam: Rubaiyat (Parte 4)",
+    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte4.html",
+    "tags": [
+      "omar khayyam",
+      "rubaiyat",
+      "poesia",
+      "persa",
+      "religião",
+      "ceticismo",
+      "filosofia"
     ]
   },
   {
@@ -48,6 +91,16 @@
     ]
   },
   {
+    "title": "🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 1): Introdução à Distribuição Normal",
+    "href": "posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html",
+    "tags": [
+      "estatística",
+      "distribuição normal",
+      "cursos",
+      "exercícios"
+    ]
+  },
+  {
     "title": "🎓📊 Distribuição Normal — Parte 2: Escore-z e Tabela-z",
     "href": "posts/cursos/estatistica/distribuicao_normal/parte-2/distribuicao-normal-parte2.html",
     "tags": [
@@ -55,16 +108,6 @@
       "z-score",
       "tabela-z",
       "probabilidades",
-      "exercícios"
-    ]
-  },
-  {
-    "title": "🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 1): Introdução à Distribuição Normal",
-    "href": "posts/cursos/estatistica/distribuicao_normal/parte-1/distribuicao-normal.html",
-    "tags": [
-      "estatística",
-      "distribuição normal",
-      "cursos",
       "exercícios"
     ]
   },
@@ -93,25 +136,14 @@
     ]
   },
   {
-    "title": "📘 Módulo 1.3 AP: Valor Absoluto e Inequações Modulares",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-valor-absoluto-AP.html",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html",
     "tags": [
-      "cálculo",
       "matemática",
-      "curso",
-      "inequações",
-      "módulo",
-      "valor absoluto"
-    ]
-  },
-  {
-    "title": "🧠 Módulo 1.1: O que é Cálculo? História e aplicações",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html",
-    "tags": [
       "cálculo",
-      "matemática",
-      "história do cálculo",
-      "aplicações",
+      "conjuntos",
+      "conjuntos numéricos",
+      "exercícios",
       "cursos"
     ]
   },
@@ -130,15 +162,26 @@
     ]
   },
   {
-    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html",
+    "title": "🧠 Módulo 1.1: O que é Cálculo? História e aplicações",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html",
     "tags": [
-      "matemática",
       "cálculo",
-      "conjuntos",
-      "conjuntos numéricos",
-      "exercícios",
+      "matemática",
+      "história do cálculo",
+      "aplicações",
       "cursos"
+    ]
+  },
+  {
+    "title": "📘 Módulo 1.3 AP: Valor Absoluto e Inequações Modulares",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-valor-absoluto-AP.html",
+    "tags": [
+      "cálculo",
+      "matemática",
+      "curso",
+      "inequações",
+      "módulo",
+      "valor absoluto"
     ]
   },
   {
@@ -153,161 +196,6 @@
     ]
   },
   {
-    "title": "🧭 🛰️ Guia de Leitura — Série Relatividade Especial",
-    "href": "posts/fisica/guia-relatividade-especial.html",
-    "tags": [
-      "física",
-      "relatividade",
-      "relatividade especial",
-      "guia de leitura",
-      "einstein",
-      "série"
-    ]
-  },
-  {
-    "title": "🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica",
-    "href": "posts/fisica/guia-100-anos-mecanica-quantica.html",
-    "tags": [
-      "física",
-      "mecânica quântica",
-      "guia de leitura",
-      "série"
-    ]
-  },
-  {
-    "title": "🧭 📚 🌠 Guia de Leitura da Série Relatividade Geral",
-    "href": "posts/fisica/guia-relatividade-geral.html",
-    "tags": [
-      "física",
-      "relatividade",
-      "relatividade geral",
-      "guia de leitura",
-      "einstein",
-      "série"
-    ]
-  },
-  {
-    "title": "⚛️ Física",
-    "href": "posts/fisica/index.html",
-    "tags": [
-      "física",
-      "sumário de física",
-      "sumário"
-    ]
-  },
-  {
-    "title": "🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física",
-    "href": "posts/fisica/dirac-vs-feynman.html",
-    "tags": [
-      "dirac",
-      "feynman",
-      "epistemologia",
-      "mecânica quântica"
-    ]
-  },
-  {
-    "title": "🧭 ⚛️ Guia de Leitura — Física",
-    "href": "posts/fisica/guia-fisica.html",
-    "tags": [
-      "física",
-      "guia de leitura"
-    ]
-  },
-  {
-    "title": "🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?",
-    "href": "posts/fisica/calculo-simbolico-vs-numerico.html",
-    "tags": [
-      "cálculo simbólico",
-      "simulação numérica",
-      "epistemologia",
-      "computação científica"
-    ]
-  },
-  {
-    "title": "🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia",
-    "href": "posts/fisica/feynman-gellmann-babilonia-grecia.html",
-    "tags": [
-      "Feynman",
-      "Gell-Mann",
-      "Babilônia",
-      "Grécia",
-      "ciência",
-      "filosofia",
-      "método científico"
-    ]
-  },
-  {
-    "title": "🧠 Einstein — Físico ou Filósofo Natural?",
-    "href": "posts/fisica/einstein-fisico-ou-filosofo-natural.html",
-    "tags": [
-      "einstein",
-      "relatividade",
-      "epistemologia",
-      "filosofia da ciência"
-    ]
-  },
-  {
-    "title": "📘 🛰️ Relatividade Especial: Einstein, o Tempo e a Velocidade da Luz",
-    "href": "posts/fisica/relatividade-especial.html",
-    "tags": [
-      "física",
-      "relatividade",
-      "relatividade especial",
-      "einstein",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 🛰️ A Teoria da Relatividade Especial — Uma Visão Mais Acadêmica",
-    "href": "posts/fisica/relatividade-especial-academico.html",
-    "tags": [
-      "física",
-      "relatividade",
-      "relatividade especial",
-      "einstein"
-    ]
-  },
-  {
-    "title": "📚 🌠 Relatividade Geral — Parte 1: O Problema da Gravidade",
-    "href": "posts/fisica/relatividade-geral-parte1.html",
-    "tags": [
-      "física",
-      "relatividade",
-      "relatividade geral",
-      "gravidade",
-      "einstein",
-      "princípio da equivalência",
-      "série"
-    ]
-  },
-  {
-    "title": "📚 🧬 Parte 1 — Antes da Revolução Quântica (Aprofundamento)",
-    "href": "posts/fisica/parte-1-mecanica-quantica.html",
-    "tags": [
-      "física",
-      "mecânica quântica",
-      "guia de leitura",
-      "série"
-    ]
-  },
-  {
-    "title": "📘 🧬 100 Anos da Mecânica Quântica (1925–2025)",
-    "href": "posts/fisica/100-anos-mecanica-quantica.html",
-    "tags": [
-      "física",
-      "mecânica quântica",
-      "artigo"
-    ]
-  },
-  {
-    "title": "🧭 👨‍💻 Guia de Leitura — Programação",
-    "href": "posts/programacao/guia-programacao.html",
-    "tags": [
-      "programação",
-      "guia de leitura"
-    ]
-  },
-  {
     "title": "👨‍💻 Programação",
     "href": "posts/programacao/index.html",
     "tags": [
@@ -319,6 +207,14 @@
       "LaTeX",
       "Quarto",
       "YAML"
+    ]
+  },
+  {
+    "title": "🧭 👨‍💻 Guia de Leitura — Programação",
+    "href": "posts/programacao/guia-programacao.html",
+    "tags": [
+      "programação",
+      "guia de leitura"
     ]
   },
   {
@@ -343,6 +239,76 @@
     ]
   },
   {
+    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 1",
+    "href": "posts/programacao/quarto/modelos-markdown.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 2",
+    "href": "posts/programacao/quarto/outros-modelos-markdown.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 Modelos de index.qmd para Projetos Quarto",
+    "href": "posts/programacao/quarto/modelos-index-quarto.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "YAML",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📄 Quarto",
+    "href": "posts/programacao/quarto/index.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "sumário de Quarto",
+      "sumário",
+      "YAML"
+    ]
+  },
+  {
+    "title": "📚 📄 Hub de Modelos & Templates (Quarto)",
+    "href": "posts/programacao/quarto/modelos-hub.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "modelos",
+      "templates"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 YAML no Quarto: O Coração Invisível dos Seus Documentos",
+    "href": "posts/programacao/quarto/yaml-no-quarto.html",
+    "tags": [
+      "programação",
+      "YAML",
+      "Quarto",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📘 👨‍💻 📄 Modelos de Quarto Markdown — Guia Completo",
+    "href": "posts/programacao/quarto/modelos-quarto-markdown.html",
+    "tags": [
+      "programação",
+      "Quarto",
+      "artigo",
+      "Markdown",
+      "modelos"
+    ]
+  },
+  {
     "title": "📄 📐 LaTeX",
     "href": "posts/programacao/latex/index.html",
     "tags": [
@@ -361,6 +327,15 @@
       "LaTeX",
       "Quarto",
       "artigo"
+    ]
+  },
+  {
+    "title": "📌 Cheatsheet Git para o Blog do Marcellini",
+    "href": "posts/programacao/tutoriais/git.html",
+    "tags": [
+      "git",
+      "programação",
+      "tutoriais"
     ]
   },
   {
@@ -385,85 +360,6 @@
     ]
   },
   {
-    "title": "📚 📄 Hub de Modelos & Templates (Quarto)",
-    "href": "posts/programacao/quarto/modelos-hub.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "modelos",
-      "templates"
-    ]
-  },
-  {
-    "title": "📄 Quarto",
-    "href": "posts/programacao/quarto/index.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "sumário de Quarto",
-      "sumário",
-      "YAML"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 Modelos de index.qmd para Projetos Quarto",
-    "href": "posts/programacao/quarto/modelos-index-quarto.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "YAML",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 YAML no Quarto: O Coração Invisível dos Seus Documentos",
-    "href": "posts/programacao/quarto/yaml-no-quarto.html",
-    "tags": [
-      "programação",
-      "YAML",
-      "Quarto",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 1",
-    "href": "posts/programacao/quarto/modelos-markdown.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 Modelos de Quarto Markdown — Guia Completo",
-    "href": "posts/programacao/quarto/modelos-quarto-markdown.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "artigo",
-      "Markdown",
-      "modelos"
-    ]
-  },
-  {
-    "title": "📘 👨‍💻 📄 Modelo de Markdown com Quarto -- Parte 2",
-    "href": "posts/programacao/quarto/outros-modelos-markdown.html",
-    "tags": [
-      "programação",
-      "Quarto",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📌 Cheatsheet Git para o Blog do Marcellini",
-    "href": "posts/programacao/tutoriais/git.html",
-    "tags": [
-      "git",
-      "programação",
-      "tutoriais"
-    ]
-  },
-  {
     "title": "🧠 Inteligência Artificial — Índice da Seção",
     "href": "posts/programacao/ia/index.html",
     "tags": [
@@ -478,23 +374,6 @@
       "ética",
       "atenção",
       "aplicações"
-    ]
-  },
-  {
-    "title": "🚀 Aplicações Práticas dos LLMs",
-    "href": "posts/programacao/ia/llms/aplicacoes-praticas.html",
-    "tags": [
-      "inteligência artificial",
-      "IA",
-      "LLM",
-      "aplicações",
-      "sociedade",
-      "tecnologia",
-      "educação",
-      "saúde",
-      "programação",
-      "arte",
-      "produtividade"
     ]
   },
   {
@@ -519,6 +398,64 @@
       "TensorFlow",
       "Softmax",
       "Attention"
+    ]
+  },
+  {
+    "title": "🚀 Aplicações Práticas dos LLMs",
+    "href": "posts/programacao/ia/llms/aplicacoes-praticas.html",
+    "tags": [
+      "inteligência artificial",
+      "IA",
+      "LLM",
+      "aplicações",
+      "sociedade",
+      "tecnologia",
+      "educação",
+      "saúde",
+      "programação",
+      "arte",
+      "produtividade"
+    ]
+  },
+  {
+    "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
+    "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html",
+    "tags": [
+      "inteligência artificial",
+      "IA",
+      "LLM",
+      "machine learning",
+      "treinamento",
+      "pré-treinamento",
+      "fine-tuning",
+      "RLHF",
+      "deep learning",
+      "NLP"
+    ]
+  },
+  {
+    "title": "🤖 O que é um Large Language Model (LLM)?",
+    "href": "posts/programacao/ia/llms/o-que-e-um-llm.html",
+    "tags": [
+      "inteligência artificial",
+      "IA",
+      "LLM",
+      "machine learning",
+      "deep learning",
+      "modelos de linguagem",
+      "redes neurais",
+      "Transformer",
+      "NLP",
+      "IA generativa",
+      "GPT",
+      "Claude",
+      "Gemini",
+      "LLaMA",
+      "Mistral",
+      "BERT",
+      "RNN",
+      "LSTM",
+      "GRU"
     ]
   },
   {
@@ -562,44 +499,15 @@
     ]
   },
   {
-    "title": "🤖 O que é um Large Language Model (LLM)?",
-    "href": "posts/programacao/ia/llms/o-que-e-um-llm.html",
+    "title": "Origens e Sonhos",
+    "href": "posts/programacao/ia/historia-ia/parte-1-origens-e-sonhos.html",
     "tags": [
-      "inteligência artificial",
-      "IA",
-      "LLM",
-      "machine learning",
-      "deep learning",
-      "modelos de linguagem",
-      "redes neurais",
-      "Transformer",
-      "NLP",
-      "IA generativa",
-      "GPT",
-      "Claude",
-      "Gemini",
-      "LLaMA",
-      "Mistral",
-      "BERT",
-      "RNN",
-      "LSTM",
-      "GRU"
-    ]
-  },
-  {
-    "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
-    "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html",
-    "tags": [
-      "inteligência artificial",
-      "IA",
-      "LLM",
-      "machine learning",
-      "treinamento",
-      "pré-treinamento",
-      "fine-tuning",
-      "RLHF",
-      "deep learning",
-      "NLP"
+      "cibernética",
+      "autômatos",
+      "lógica",
+      "estatística",
+      "Norbert Wiener",
+      "Shannon"
     ]
   },
   {
@@ -615,6 +523,18 @@
     ]
   },
   {
+    "title": "História da IA",
+    "href": "posts/programacao/ia/historia-ia/index.html",
+    "tags": [
+      "IA",
+      "aprendizado de máquina",
+      "deep learning",
+      "LLMs",
+      "cibernética",
+      "história"
+    ]
+  },
+  {
     "title": "A Era dos Modelos Generativos",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html",
     "tags": [
@@ -624,43 +544,6 @@
       "alinhamento",
       "difusão",
       "foundation models"
-    ]
-  },
-  {
-    "title": "O Renascimento da IA",
-    "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html",
-    "tags": [
-      "SVM",
-      "ensemble",
-      "backpropagation",
-      "Hinton",
-      "LeCun",
-      "Bengio",
-      "GPUs",
-      "ImageNet"
-    ]
-  },
-  {
-    "title": "O Futuro da IA",
-    "href": "posts/programacao/ia/historia-ia/parte-7-o-futuro-da-ia.html",
-    "tags": [
-      "IA quântica",
-      "alinhamento",
-      "governança",
-      "interpretabilidade",
-      "energia",
-      "sustentabilidade"
-    ]
-  },
-  {
-    "title": "Os Anos Dourados",
-    "href": "posts/programacao/ia/historia-ia/parte-3-os-anos-dourados.html",
-    "tags": [
-      "GOFAI",
-      "LISP",
-      "planejamento",
-      "SHRDLU",
-      "visão computacional inicial"
     ]
   },
   {
@@ -678,134 +561,187 @@
     ]
   },
   {
-    "title": "História da IA",
-    "href": "posts/programacao/ia/historia-ia/index.html",
+    "title": "O Futuro da IA",
+    "href": "posts/programacao/ia/historia-ia/parte-7-o-futuro-da-ia.html",
     "tags": [
-      "IA",
-      "aprendizado de máquina",
-      "deep learning",
-      "LLMs",
-      "cibernética",
-      "história"
+      "IA quântica",
+      "alinhamento",
+      "governança",
+      "interpretabilidade",
+      "energia",
+      "sustentabilidade"
     ]
   },
   {
-    "title": "Origens e Sonhos",
-    "href": "posts/programacao/ia/historia-ia/parte-1-origens-e-sonhos.html",
+    "title": "O Renascimento da IA",
+    "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html",
     "tags": [
-      "cibernética",
-      "autômatos",
-      "lógica",
-      "estatística",
-      "Norbert Wiener",
-      "Shannon"
+      "SVM",
+      "ensemble",
+      "backpropagation",
+      "Hinton",
+      "LeCun",
+      "Bengio",
+      "GPUs",
+      "ImageNet"
     ]
   },
   {
-    "title": "🧭 🧮 Guia de Leitura — Matemática",
-    "href": "posts/matematica/guia-matematica.html",
+    "title": "Os Anos Dourados",
+    "href": "posts/programacao/ia/historia-ia/parte-3-os-anos-dourados.html",
     "tags": [
-      "matemática",
+      "GOFAI",
+      "LISP",
+      "planejamento",
+      "SHRDLU",
+      "visão computacional inicial"
+    ]
+  },
+  {
+    "title": "🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física",
+    "href": "posts/fisica/dirac-vs-feynman.html",
+    "tags": [
+      "dirac",
+      "feynman",
+      "epistemologia",
+      "mecânica quântica"
+    ]
+  },
+  {
+    "title": "🧭 📚 🌠 Guia de Leitura da Série Relatividade Geral",
+    "href": "posts/fisica/guia-relatividade-geral.html",
+    "tags": [
+      "física",
+      "relatividade",
+      "relatividade geral",
+      "guia de leitura",
+      "einstein",
+      "série"
+    ]
+  },
+  {
+    "title": "📚 🌠 Relatividade Geral — Parte 1: O Problema da Gravidade",
+    "href": "posts/fisica/relatividade-geral-parte1.html",
+    "tags": [
+      "física",
+      "relatividade",
+      "relatividade geral",
+      "gravidade",
+      "einstein",
+      "princípio da equivalência",
+      "série"
+    ]
+  },
+  {
+    "title": "🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia",
+    "href": "posts/fisica/feynman-gellmann-babilonia-grecia.html",
+    "tags": [
+      "Feynman",
+      "Gell-Mann",
+      "Babilônia",
+      "Grécia",
+      "ciência",
+      "filosofia",
+      "método científico"
+    ]
+  },
+  {
+    "title": "📘 🧬 100 Anos da Mecânica Quântica (1925–2025)",
+    "href": "posts/fisica/100-anos-mecanica-quantica.html",
+    "tags": [
+      "física",
+      "mecânica quântica",
+      "artigo"
+    ]
+  },
+  {
+    "title": "🧭 🛰️ Guia de Leitura — Série Relatividade Especial",
+    "href": "posts/fisica/guia-relatividade-especial.html",
+    "tags": [
+      "física",
+      "relatividade",
+      "relatividade especial",
+      "guia de leitura",
+      "einstein",
+      "série"
+    ]
+  },
+  {
+    "title": "📘 🛰️ A Teoria da Relatividade Especial — Uma Visão Mais Acadêmica",
+    "href": "posts/fisica/relatividade-especial-academico.html",
+    "tags": [
+      "física",
+      "relatividade",
+      "relatividade especial",
+      "einstein"
+    ]
+  },
+  {
+    "title": "🧭 ⚛️ Guia de Leitura — Física",
+    "href": "posts/fisica/guia-fisica.html",
+    "tags": [
+      "física",
       "guia de leitura"
     ]
   },
   {
-    "title": "🧮 Matemática",
-    "href": "posts/matematica/index.html",
+    "title": "⚛️ Física",
+    "href": "posts/fisica/index.html",
     "tags": [
-      "matemática",
-      "sumário de matemática",
+      "física",
+      "sumário de física",
       "sumário"
     ]
   },
   {
-    "title": "📘 ✨ 🧮 ⚛️ Fórmulas que Marcaram a História",
-    "href": "posts/matematica/equacoes-historicas.html",
+    "title": "📚 🧬 Parte 1 — Antes da Revolução Quântica (Aprofundamento)",
+    "href": "posts/fisica/parte-1-mecanica-quantica.html",
     "tags": [
-      "matemática",
       "física",
-      "história da ciência",
-      "artigo",
-      "fórmulas"
+      "mecânica quântica",
+      "guia de leitura",
+      "série"
     ]
   },
   {
-    "title": "📘 🧮 Por que 0! = 1?",
-    "href": "posts/matematica/fatorial-zero.html",
+    "title": "🧠 Einstein — Físico ou Filósofo Natural?",
+    "href": "posts/fisica/einstein-fisico-ou-filosofo-natural.html",
     "tags": [
-      "matemática",
-      "análise combinatória",
-      "fatorial",
+      "einstein",
+      "relatividade",
+      "epistemologia",
+      "filosofia da ciência"
+    ]
+  },
+  {
+    "title": "🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?",
+    "href": "posts/fisica/calculo-simbolico-vs-numerico.html",
+    "tags": [
+      "cálculo simbólico",
+      "simulação numérica",
+      "epistemologia",
+      "computação científica"
+    ]
+  },
+  {
+    "title": "📘 🛰️ Relatividade Especial: Einstein, o Tempo e a Velocidade da Luz",
+    "href": "posts/fisica/relatividade-especial.html",
+    "tags": [
+      "física",
+      "relatividade",
+      "relatividade especial",
+      "einstein",
       "artigo"
     ]
   },
   {
-    "title": "📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte",
-    "href": "posts/matematica/beleza-matematica.html",
+    "title": "🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica",
+    "href": "posts/fisica/guia-100-anos-mecanica-quantica.html",
     "tags": [
-      "matemática",
-      "filosofia da matemática",
-      "artigo"
-    ]
-  },
-  {
-    "title": "📚 Biografias Matemáticas",
-    "href": "posts/biografias/index.html",
-    "tags": [
-      "biografias matemáticas",
-      "história",
-      "ciência",
-      "matemática",
-      "poesia"
-    ]
-  },
-  {
-    "title": "📚 Omar Khayyam (Parte 1): Matemático e Poeta",
-    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte1.html",
-    "tags": [
-      "omar khayyam",
-      "matemática",
-      "poesia",
-      "álgebra",
-      "persa",
-      "rubaiyat"
-    ]
-  },
-  {
-    "title": "📚 Omar Khayyam: Rubaiyat (Parte 4)",
-    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte4.html",
-    "tags": [
-      "omar khayyam",
-      "rubaiyat",
-      "poesia",
-      "persa",
-      "religião",
-      "ceticismo",
-      "filosofia"
-    ]
-  },
-  {
-    "title": "📚 Omar Khayyam (Parte 3): Rubaiyat",
-    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte3.html",
-    "tags": [
-      "omar khayyam",
-      "rubaiyat",
-      "poesia",
-      "persa",
-      "tempo",
-      "morte",
-      "destino"
-    ]
-  },
-  {
-    "title": "📚 Omar Khayyam (Parte 2): Rubaiyat",
-    "href": "posts/biografias/omar-khayyam/omar-khayyam-parte2.html",
-    "tags": [
-      "omar khayyam",
-      "rubaiyat",
-      "poesia",
-      "persa",
-      "tradução"
+      "física",
+      "mecânica quântica",
+      "guia de leitura",
+      "série"
     ]
   },
   {
@@ -821,14 +757,6 @@
     ]
   },
   {
-    "title": "🧭 🧑‍🏫 Guia de Leitura — Blog Pessoal",
-    "href": "posts/pessoal/guia-pessoal.html",
-    "tags": [
-      "blog pessoal",
-      "guia de leitura"
-    ]
-  },
-  {
     "title": "📘 🧑‍💻 Sobre o Blog e Sobre Mim",
     "href": "posts/pessoal/sobre-o-blog.html",
     "tags": [
@@ -836,6 +764,14 @@
       "sobre",
       "sobre o blog",
       "sobre mim"
+    ]
+  },
+  {
+    "title": "🧭 🧑‍🏫 Guia de Leitura — Blog Pessoal",
+    "href": "posts/pessoal/guia-pessoal.html",
+    "tags": [
+      "blog pessoal",
+      "guia de leitura"
     ]
   },
   {
@@ -851,6 +787,70 @@
       "reflexão",
       "Como Vejo o Mundo",
       "Albert Einstein"
+    ]
+  },
+  {
+    "title": "🧭 📊 Guia de Leitura — Estatística",
+    "href": "posts/estatistica/guia-estatistica.html",
+    "tags": [
+      "estatística",
+      "guia de leitura"
+    ]
+  },
+  {
+    "title": "📊 Estatística",
+    "href": "posts/estatistica/index.html",
+    "tags": [
+      "estatística",
+      "sumário de estatística",
+      "sumário"
+    ]
+  },
+  {
+    "title": "📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte",
+    "href": "posts/matematica/beleza-matematica.html",
+    "tags": [
+      "matemática",
+      "filosofia da matemática",
+      "artigo"
+    ]
+  },
+  {
+    "title": "🧮 Matemática",
+    "href": "posts/matematica/index.html",
+    "tags": [
+      "matemática",
+      "sumário de matemática",
+      "sumário"
+    ]
+  },
+  {
+    "title": "📘 🧮 Por que 0! = 1?",
+    "href": "posts/matematica/fatorial-zero.html",
+    "tags": [
+      "matemática",
+      "análise combinatória",
+      "fatorial",
+      "artigo"
+    ]
+  },
+  {
+    "title": "📘 ✨ 🧮 ⚛️ Fórmulas que Marcaram a História",
+    "href": "posts/matematica/equacoes-historicas.html",
+    "tags": [
+      "matemática",
+      "física",
+      "história da ciência",
+      "artigo",
+      "fórmulas"
+    ]
+  },
+  {
+    "title": "🧭 🧮 Guia de Leitura — Matemática",
+    "href": "posts/matematica/guia-matematica.html",
+    "tags": [
+      "matemática",
+      "guia de leitura"
     ]
   }
 ]

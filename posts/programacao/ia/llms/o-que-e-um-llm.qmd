@@ -2,7 +2,7 @@
 title: "🤖 O que é um Large Language Model (LLM)?"
 description: "Entenda o que é um Large Language Model (LLM), como funciona, suas bases em redes neurais, NLP, RNNs, Transformers, BERT e a relação com a IA generativa."
 author: "Blog do Marcellini"
-date: 2025-10-06
+date: 2025-10-09
 lang: pt-BR
 format:
   html:
@@ -39,7 +39,7 @@ Parece simples, mas é isso que permite que ele:
 ::: {.callout-note title="💡 Exemplo rápido"}
 Quando você começa a digitar no celular **“Bom dia, como você…”**,  
 o teclado já sugere **“está?”**.  
-Esse é um mini-LLM atuando, mas em escala muito menor que os modelos atuais.
+Esse é um exemplo simples de **modelo preditivo de linguagem**, em escala muito menor que os LLMs modernos.
 :::
 
 ## 🧠 O que é uma Rede Neural?
@@ -191,15 +191,33 @@ Eliminar o uso de embeddings.
 O **BERT (Bidirectional Encoder Representations from Transformers)**, criado pelo Google em 2018, foi o primeiro modelo a usar o Transformer de forma **bidirecional** — ele lê frases da esquerda e da direita ao mesmo tempo.  
 Isso o tornou excelente em tarefas de **entendimento de linguagem**, como perguntas e respostas ou análise de sentimentos.  
 
+## 🧩 Quiz — BERT e compreensão de linguagem
+
+:::::{.question}
+**Q5.** O BERT se destacou no processamento de linguagem natural porque:
+
+::::{.choices}
+:::{.choice}
+Foi criado para gerar imagens a partir de texto.
+:::
+
+:::{.choice .correct-choice}
+Usa representações bidirecionais para compreender melhor o contexto das palavras.
+:::
+
+:::{.choice}
+Elimina completamente a necessidade de treinamento.
+:::
+::::
+:::::
 
 ## 🌍 Exemplos de LLMs atuais
 
 ::: {.callout-note title="🤖 GPT, Claude, Gemini, LLaMA e Mistral — os LLMs mais conhecidos"}
 - **GPT (OpenAI)**  
-  - Linha de modelos mais popular, com versões como **GPT-3.5**, **GPT-4** e **GPT-5**.  
-  - São usados no **ChatGPT**.  
-  - Foco: **desempenho geral** e ampla integração em ferramentas (plugins, API, apps).  
-  - Modelo **fechado**: não é de código aberto, mas muito usado comercialmente.
+  - Linha de modelos popularizada pelo **ChatGPT**.
+  - Foco: desempenho geral, geração de texto, programação, análise e integração com ferramentas.
+  - Modelo **fechado**, amplamente usado comercialmente.
 
 - **Claude (Anthropic)**  
   - Criado pela empresa **Anthropic**, fundada por ex-pesquisadores da OpenAI.  
@@ -236,12 +254,31 @@ Com a chegada do **Gemini**, o nome “Bard” foi descontinuado — mas serviu 
 
 | Modelo | Empresa | Acesso | Foco principal | Observação |
 |--------|---------|--------|----------------|------------|
-| **GPT (3.5/4/5)** | OpenAI | API paga / ChatGPT | Versatilidade geral | Muito usado no mercado |
+| **GPT** | OpenAI | API paga / ChatGPT | Versatilidade geral | Muito usado no mercado |
 | **Claude** | Anthropic | API paga | Segurança e alinhamento | Competidor direto do GPT |
 | **Gemini (1.5)** | Google DeepMind | Fechado / Google Apps | Multimodalidade e integração | Sucessor do Bard |
 | **LLaMA (2, 3)** | Meta (Facebook) | Aberto (pesquisa e comunidade) | Base para modelos customizados | Dele surgiram dezenas de variantes |
 | **Mistral (7B / Mixtral 8x7B)** | Mistral (França) | Aberto (pesos disponíveis) | Eficiência e custo menor | Forte impacto na comunidade open-source |
 
+## 🧩 Quiz — Famílias de LLMs
+
+:::::{.question}
+**Q6.** Uma diferença importante entre modelos como **GPT/Claude/Gemini** e modelos como **LLaMA/Mistral** é que:
+
+::::{.choices}
+:::{.choice}
+Todos são sempre modelos abertos e gratuitos.
+:::
+
+:::{.choice .correct-choice}
+Alguns são oferecidos como modelos fechados por API, enquanto outros têm versões abertas ou pesos disponíveis.
+:::
+
+:::{.choice}
+Modelos abertos não usam redes neurais.
+:::
+::::
+:::::
 
 ## 🖼️ Linha do Tempo: GPT, Claude, LLaMA e Mistral
 
@@ -262,7 +299,7 @@ models = [
     ("GPT-3.5", 2022, "OpenAI"),
     ("ChatGPT", 2022, "OpenAI"),
     ("GPT-4", 2023, "OpenAI"),
-    ("GPT-5", 2025, "OpenAI"),
+    ("Modelos multimodais", 2025, "OpenAI"),
     ("Claude 1", 2023, "Anthropic"),
     ("Claude 2", 2023, "Anthropic"),
     ("Claude 3", 2024, "Anthropic"),
@@ -412,6 +449,44 @@ print(f"Figuras salvas em:\n- {PNG}\n- {SVG}")
 ```
 :::
 
+## 🧩 Quiz — Ciclo de vida de um LLM
+
+:::::{.question}
+**Q7.** No ciclo de vida de um LLM, o **pré-treinamento** é a etapa em que o modelo:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Aprende padrões gerais da linguagem a partir de grandes volumes de dados.
+:::
+
+:::{.choice}
+Recebe apenas avaliações humanas para melhorar seu comportamento.
+:::
+
+:::{.choice}
+É instalado no computador do usuário final.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q8.** O **RLHF** é usado principalmente para:
+
+::::{.choices}
+:::{.choice}
+Aumentar o tamanho físico dos servidores.
+:::
+
+:::{.choice}
+Converter textos em imagens.
+:::
+
+:::{.choice .correct-choice}
+Ajustar o comportamento do modelo usando feedback humano.
+:::
+::::
+:::::
+
 ## ✅ Conclusão
 
 Os **LLMs** são o resultado de uma longa evolução:
@@ -428,7 +503,7 @@ No próximo post, veremos como o Transformer usa **Q, K e V** no mecanismo de at
 
 ---
 
-# 🔗 Navegação
+## 🔗 Navegação
 
 🎯 **Próximo Post:** 👉 [Atenção em Transformers: Q, K, V e Multi-Head Attention](atencao-transformers-qkv-mha.qmd)
 
@@ -440,15 +515,15 @@ No próximo post, veremos como o Transformer usa **Q, K e V** no mecanismo de at
 
 ---
 
-*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+{{< include /_includes/sobre-projeto.qmd >}}
 
 :::{.callout-note}
 *Criado por Blog do Marcellini com ❤️ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links Úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
 
