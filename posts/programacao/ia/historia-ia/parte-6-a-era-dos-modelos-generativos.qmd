@@ -1,9 +1,9 @@
 ---
-title: "A Era dos Modelos Generativos"
+title: "🤖 A Era dos Modelos Generativos"
 subtitle: "Transformers, difusão e o advento dos LLMs"
 description: "Arquiteturas de atenção, pré-treino em larga escala, modelos fundacionais e alinhamento humano."
 author: "Blog do Marcellini"
-date: 2026-05-08
+date: 2026-05-09
 lang: pt-BR
 categories: [história da computação, inteligência artificial]
 tags: [Transformers, LLMs, RLHF, alinhamento, difusão, foundation models]
@@ -21,7 +21,7 @@ format:
 
 > A combinação entre **dados em larga escala**, **arquiteturas de atenção**, **hardware acelerado** e **pré-treinamento massivo** inaugurou a era dos modelos generativos.
 
-## Do deep learning aos modelos generativos
+## 🤖 Do deep learning aos modelos generativos
 
 Depois da virada do deep learning, a IA passou a obter resultados impressionantes em visão computacional, reconhecimento de fala, tradução automática e processamento de linguagem natural.
 
@@ -32,12 +32,50 @@ Essa é a era dos **modelos generativos**.
 Em vez de apenas reconhecer padrões, esses sistemas passaram a gerar saídas complexas: completar frases, responder perguntas, escrever programas, criar imagens, resumir documentos, traduzir textos e simular diálogos.
 
 ::: {.callout-note}
-### Resumo em uma frase
+### 💡 Resumo em uma frase
 
 A era dos modelos generativos nasce quando a IA combina **escala**, **atenção**, **pré-treinamento massivo** e **modelos capazes de gerar conteúdo novo**.
 :::
 
-## A arquitetura Transformer
+## 🧩 Quiz — Modelos generativos
+
+:::::{.question}
+**Q1.** A era dos modelos generativos é marcada principalmente por sistemas capazes de:
+
+::::{.choices}
+:::{.choice}
+Apenas classificar imagens em categorias fixas.
+:::
+
+:::{.choice .correct-choice}
+Gerar conteúdos como textos, imagens, código, áudio, vídeo e respostas em linguagem natural.
+:::
+
+:::{.choice}
+Funcionar sem dados, sem treinamento e sem infraestrutura computacional.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Segundo o texto, a era generativa combina principalmente:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Escala, atenção, pré-treinamento massivo e geração de conteúdo.
+:::
+
+:::{.choice}
+Apenas regras manuais escritas por especialistas.
+:::
+
+:::{.choice}
+Somente computadores mecânicos e autômatos antigos.
+:::
+::::
+:::::
+
+## 🧱 A arquitetura Transformer
 
 Um marco decisivo foi a arquitetura **Transformer**, apresentada em 2017 no artigo *Attention Is All You Need*.
 
@@ -49,7 +87,7 @@ A atenção permite que o modelo relacione diferentes partes de uma sequência, 
 
 Essa mudança tornou possível treinar modelos maiores, mais paralelizáveis e mais eficientes em grandes volumes de texto.
 
-## Atenção: contexto como relação
+## ✨ Atenção: contexto como relação
 
 A grande ideia por trás da atenção é que o significado de um elemento depende de suas relações com outros elementos.
 
@@ -59,7 +97,45 @@ Em modelos de linguagem, isso é especialmente importante. A mesma palavra pode 
 
 A atenção tornou os modelos mais capazes de lidar com dependências longas, ambiguidade e estrutura textual.
 
-## Pré-treinamento em larga escala
+## 🧩 Quiz — Transformer e atenção
+
+:::::{.question}
+**Q3.** A arquitetura Transformer foi importante porque:
+
+::::{.choices}
+:::{.choice}
+Eliminou a necessidade de qualquer tipo de treinamento.
+:::
+
+:::{.choice .correct-choice}
+Colocou o mecanismo de atenção no centro da arquitetura e favoreceu treinamento em larga escala.
+:::
+
+:::{.choice}
+Foi criada exclusivamente para controlar robôs industriais.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q4.** No contexto dos modelos de linguagem, a atenção ajuda o modelo a:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Relacionar diferentes partes de uma sequência e construir representações contextuais.
+:::
+
+:::{.choice}
+Ignorar completamente o contexto das palavras.
+:::
+
+:::{.choice}
+Trabalhar apenas com números sem significado linguístico.
+:::
+::::
+:::::
+
+## 📚 Pré-treinamento em larga escala
 
 Outro ingrediente fundamental foi o **pré-treinamento**.
 
@@ -74,7 +150,7 @@ Essa lógica mudou profundamente a IA:
 
 É a base do que hoje chamamos de **modelos fundacionais**.
 
-## Modelos fundacionais
+## 🏗️ Modelos fundacionais
 
 A expressão **foundation models** se refere a modelos treinados em larga escala, capazes de servir como base para muitas aplicações diferentes.
 
@@ -91,7 +167,45 @@ Um mesmo modelo pode ser usado para:
 
 Essa flexibilidade tornou os modelos fundacionais muito importantes, mas também levantou novas questões: custo computacional, concentração tecnológica, vieses, segurança, propriedade dos dados, impacto ambiental e governança.
 
-## BERT, GPT e duas tradições de linguagem
+## 🧩 Quiz — Modelos fundacionais
+
+:::::{.question}
+**Q5.** Um **modelo fundacional** é, em geral:
+
+::::{.choices}
+:::{.choice}
+Um modelo treinado em pequena escala para uma única tarefa fixa.
+:::
+
+:::{.choice .correct-choice}
+Um modelo de larga escala que pode servir como base para muitas aplicações diferentes.
+:::
+
+:::{.choice}
+Um programa que só funciona sem internet e sem dados.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q6.** Uma preocupação associada aos modelos fundacionais é:
+
+::::{.choices}
+:::{.choice}
+Eles não levantam nenhuma questão social, técnica ou econômica.
+:::
+
+:::{.choice}
+Eles tornam desnecessária qualquer forma de avaliação.
+:::
+
+:::{.choice .correct-choice}
+Podem envolver custos altos, vieses, concentração tecnológica, segurança e governança.
+:::
+::::
+:::::
+
+## 💬 BERT, GPT e duas tradições de linguagem
 
 No processamento de linguagem natural, dois caminhos ficaram especialmente conhecidos.
 
@@ -101,7 +215,7 @@ Já a família **GPT** popularizou modelos autoregressivos treinados para prever
 
 Essas duas tradições ajudaram a transformar o processamento de linguagem natural. A linguagem deixou de ser tratada apenas como sequência de palavras e passou a ser modelada por representações contextuais profundas.
 
-## Instruções, alinhamento e RLHF
+## 🎯 Instruções, alinhamento e RLHF
 
 Treinar um modelo grande em texto não é suficiente para torná-lo útil como assistente.
 
@@ -113,7 +227,27 @@ A ideia geral é ajustar o comportamento do modelo para que suas respostas fique
 
 Esse processo não resolve todos os problemas, mas tornou os LLMs muito mais utilizáveis em aplicações práticas.
 
-## Difusão e geração de imagens
+## 🧩 Quiz — Alinhamento e RLHF
+
+:::::{.question}
+**Q7.** O RLHF é usado principalmente para:
+
+::::{.choices}
+:::{.choice}
+Substituir completamente o pré-treinamento.
+:::
+
+:::{.choice .correct-choice}
+Ajustar o comportamento do modelo usando feedback humano.
+:::
+
+:::{.choice}
+Transformar automaticamente texto em hardware.
+:::
+::::
+:::::
+
+## 🖼️ Difusão e geração de imagens
 
 A geração de conteúdo não ficou restrita ao texto.
 
@@ -123,7 +257,7 @@ Essa abordagem permitiu avanços importantes em geração de imagens, edição v
 
 Com isso, a IA generativa passou a atuar em várias linguagens: texto, imagem, áudio, vídeo e código.
 
-## Multimodalidade
+## 🌐 Multimodalidade
 
 A etapa seguinte foi a **multimodalidade**.
 
@@ -133,7 +267,45 @@ Isso aproxima a IA de usos mais naturais. Uma pessoa pode enviar uma imagem e fa
 
 A multimodalidade amplia a noção de interface: a interação com a máquina deixa de depender apenas de comandos formais e passa a se aproximar de uma conversa com múltiplos tipos de conteúdo.
 
-## Contexto longo e agentes
+## 🧩 Quiz — Multimodalidade e agentes
+
+:::::{.question}
+**Q8.** Um modelo **multimodal** é aquele que:
+
+::::{.choices}
+:::{.choice}
+Trabalha apenas com texto simples.
+:::
+
+:::{.choice .correct-choice}
+Pode integrar diferentes tipos de dados, como texto, imagem, áudio, vídeo e documentos.
+:::
+
+:::{.choice}
+Não precisa de entradas nem saídas.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q9.** Um agente de IA tende a ser mais complexo que um chatbot simples porque pode:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Planejar etapas, chamar ferramentas, consultar arquivos ou interagir com outros sistemas.
+:::
+
+:::{.choice}
+Funcionar apenas imprimindo texto sem contexto.
+:::
+
+:::{.choice}
+Eliminar toda necessidade de supervisão humana.
+:::
+::::
+:::::
+
+## 🧭 Contexto longo e agentes
 
 Com modelos mais capazes, surgiram também sistemas com **janelas de contexto maiores** e propostas de **agentes de IA**.
 
@@ -143,7 +315,7 @@ Agentes de IA, por sua vez, são sistemas que usam modelos como componentes de u
 
 Essa área ainda está em desenvolvimento e exige cautela. Quanto mais autonomia se dá a um sistema, maior a necessidade de controle, avaliação, segurança e supervisão humana.
 
-## Escalonamento e leis de escala
+## 📈 Escalonamento e leis de escala
 
 Um dos fenômenos mais importantes dessa era foi o **escalonamento**.
 
@@ -162,7 +334,7 @@ Mas a escala também tem custos:
 
 A era generativa, portanto, é também uma era de perguntas sociais, econômicas e políticas.
 
-## Linha do tempo essencial
+## 🗓️ Linha do tempo essencial
 
 - **2017** — A arquitetura Transformer é apresentada.
 - **2018–2020** — Modelos como BERT e GPT consolidam o pré-treinamento em larga escala.
@@ -170,7 +342,7 @@ A era generativa, portanto, é também uma era de perguntas sociais, econômicas
 - **2022–2024** — IA generativa se populariza em texto, imagem, código e aplicações multimodais.
 - **2024 em diante** — Crescem os debates sobre agentes, contexto longo, governança, segurança, custo computacional e impacto social.
 
-## Conceitos-chave
+## 🔑 Conceitos-chave
 
 - **Transformer:** arquitetura baseada em atenção, central para os LLMs modernos.
 - **Atenção:** mecanismo que permite ao modelo relacionar partes diferentes de uma sequência.
@@ -183,7 +355,7 @@ A era generativa, portanto, é também uma era de perguntas sociais, econômicas
 - **Escalonamento:** aumento de dados, parâmetros e computação para melhorar desempenho.
 - **Agentes:** sistemas que usam modelos para planejar, chamar ferramentas e executar tarefas em etapas.
 
-## Personagens e episódios em foco
+## 👥 Personagens e episódios em foco
 
 - **Transformer** — arquitetura que reorganizou o processamento de linguagem natural moderno.
 - **BERT** — marco em representações contextuais para compreensão de texto.
@@ -192,7 +364,7 @@ A era generativa, portanto, é também uma era de perguntas sociais, econômicas
 - **RLHF** — técnica importante para tornar modelos mais alinhados a instruções humanas.
 - **Modelos fundacionais** — nova forma de organizar a IA em torno de modelos gerais reutilizáveis.
 
-## Leituras sugeridas
+## 📚 Leituras sugeridas
 
 - **VASWANI, Ashish et al.** “Attention Is All You Need”. 2017.
 - **DEVLIN, Jacob et al.** “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”. 2018.
@@ -201,7 +373,7 @@ A era generativa, portanto, é também uma era de perguntas sociais, econômicas
 - **OUYANG, Long et al.** “Training language models to follow instructions with human feedback”. 2022.
 - **GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron.** *Deep Learning*. MIT Press, 2016.
 
-## Síntese
+## ✅ Síntese
 
 A era dos modelos generativos representa uma nova fase da Inteligência Artificial.
 
@@ -213,7 +385,28 @@ Mas essa potência também trouxe novas responsabilidades: avaliar limites, redu
 
 ---
 
-## Navegação
+## 🔗 Navegação
 
-- ← **Anterior:** [O Renascimento da IA](parte-5-o-renascimento-da-ia.qmd)
-- → **Próximo:** [O Futuro da IA](parte-7-o-futuro-da-ia.qmd)
+🎯 **Anterior:** 👉 [O Renascimento da IA](parte-5-o-renascimento-da-ia.qmd)
+
+🎯 **Próximo:** 👉 [O Futuro da IA](parte-7-o-futuro-da-ia.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← História da IA](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)

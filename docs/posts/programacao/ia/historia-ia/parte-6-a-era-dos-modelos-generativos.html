@@ -9,7 +9,7 @@
 <meta name="author" content="Blog do Marcellini">
 <meta name="description" content="Arquiteturas de atenção, pré-treino em larga escala, modelos fundacionais e alinhamento humano.">
 
-<title>A Era dos Modelos Generativos – Blog do Marcellini</title>
+<title>🤖 A Era dos Modelos Generativos – Blog do Marcellini</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -94,14 +94,14 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../../../assets/css/custom.css">
 <link rel="stylesheet" href="../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../assets/css/chips.css">
-<meta property="og:title" content="A Era dos Modelos Generativos – Blog do Marcellini">
+<meta property="og:title" content="🤖 A Era dos Modelos Generativos – Blog do Marcellini">
 <meta property="og:description" content="Arquiteturas de atenção, pré-treino em larga escala, modelos fundacionais e alinhamento humano.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
-<meta name="twitter:title" content="A Era dos Modelos Generativos – Blog do Marcellini">
+<meta name="twitter:title" content="🤖 A Era dos Modelos Generativos – Blog do Marcellini">
 <meta name="twitter:description" content="Arquiteturas de atenção, pré-treino em larga escala, modelos fundacionais e alinhamento humano.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
@@ -234,23 +234,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#do-deep-learning-aos-modelos-generativos" id="toc-do-deep-learning-aos-modelos-generativos" class="nav-link active" data-scroll-target="#do-deep-learning-aos-modelos-generativos">Do deep learning aos modelos generativos</a></li>
-  <li><a href="#a-arquitetura-transformer" id="toc-a-arquitetura-transformer" class="nav-link" data-scroll-target="#a-arquitetura-transformer">A arquitetura Transformer</a></li>
-  <li><a href="#atenção-contexto-como-relação" id="toc-atenção-contexto-como-relação" class="nav-link" data-scroll-target="#atenção-contexto-como-relação">Atenção: contexto como relação</a></li>
-  <li><a href="#pré-treinamento-em-larga-escala" id="toc-pré-treinamento-em-larga-escala" class="nav-link" data-scroll-target="#pré-treinamento-em-larga-escala">Pré-treinamento em larga escala</a></li>
-  <li><a href="#modelos-fundacionais" id="toc-modelos-fundacionais" class="nav-link" data-scroll-target="#modelos-fundacionais">Modelos fundacionais</a></li>
-  <li><a href="#bert-gpt-e-duas-tradições-de-linguagem" id="toc-bert-gpt-e-duas-tradições-de-linguagem" class="nav-link" data-scroll-target="#bert-gpt-e-duas-tradições-de-linguagem">BERT, GPT e duas tradições de linguagem</a></li>
-  <li><a href="#instruções-alinhamento-e-rlhf" id="toc-instruções-alinhamento-e-rlhf" class="nav-link" data-scroll-target="#instruções-alinhamento-e-rlhf">Instruções, alinhamento e RLHF</a></li>
-  <li><a href="#difusão-e-geração-de-imagens" id="toc-difusão-e-geração-de-imagens" class="nav-link" data-scroll-target="#difusão-e-geração-de-imagens">Difusão e geração de imagens</a></li>
-  <li><a href="#multimodalidade" id="toc-multimodalidade" class="nav-link" data-scroll-target="#multimodalidade">Multimodalidade</a></li>
-  <li><a href="#contexto-longo-e-agentes" id="toc-contexto-longo-e-agentes" class="nav-link" data-scroll-target="#contexto-longo-e-agentes">Contexto longo e agentes</a></li>
-  <li><a href="#escalonamento-e-leis-de-escala" id="toc-escalonamento-e-leis-de-escala" class="nav-link" data-scroll-target="#escalonamento-e-leis-de-escala">Escalonamento e leis de escala</a></li>
-  <li><a href="#linha-do-tempo-essencial" id="toc-linha-do-tempo-essencial" class="nav-link" data-scroll-target="#linha-do-tempo-essencial">Linha do tempo essencial</a></li>
-  <li><a href="#conceitos-chave" id="toc-conceitos-chave" class="nav-link" data-scroll-target="#conceitos-chave">Conceitos-chave</a></li>
-  <li><a href="#personagens-e-episódios-em-foco" id="toc-personagens-e-episódios-em-foco" class="nav-link" data-scroll-target="#personagens-e-episódios-em-foco">Personagens e episódios em foco</a></li>
-  <li><a href="#leituras-sugeridas" id="toc-leituras-sugeridas" class="nav-link" data-scroll-target="#leituras-sugeridas">Leituras sugeridas</a></li>
-  <li><a href="#síntese" id="toc-síntese" class="nav-link" data-scroll-target="#síntese">Síntese</a></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação">Navegação</a></li>
+  <li><a href="#do-deep-learning-aos-modelos-generativos" id="toc-do-deep-learning-aos-modelos-generativos" class="nav-link active" data-scroll-target="#do-deep-learning-aos-modelos-generativos">🤖 Do deep learning aos modelos generativos</a></li>
+  <li><a href="#quiz-modelos-generativos" id="toc-quiz-modelos-generativos" class="nav-link" data-scroll-target="#quiz-modelos-generativos">🧩 Quiz — Modelos generativos</a></li>
+  <li><a href="#a-arquitetura-transformer" id="toc-a-arquitetura-transformer" class="nav-link" data-scroll-target="#a-arquitetura-transformer">🧱 A arquitetura Transformer</a></li>
+  <li><a href="#atenção-contexto-como-relação" id="toc-atenção-contexto-como-relação" class="nav-link" data-scroll-target="#atenção-contexto-como-relação">✨ Atenção: contexto como relação</a></li>
+  <li><a href="#quiz-transformer-e-atenção" id="toc-quiz-transformer-e-atenção" class="nav-link" data-scroll-target="#quiz-transformer-e-atenção">🧩 Quiz — Transformer e atenção</a></li>
+  <li><a href="#pré-treinamento-em-larga-escala" id="toc-pré-treinamento-em-larga-escala" class="nav-link" data-scroll-target="#pré-treinamento-em-larga-escala">📚 Pré-treinamento em larga escala</a></li>
+  <li><a href="#modelos-fundacionais" id="toc-modelos-fundacionais" class="nav-link" data-scroll-target="#modelos-fundacionais">🏗️ Modelos fundacionais</a></li>
+  <li><a href="#quiz-modelos-fundacionais" id="toc-quiz-modelos-fundacionais" class="nav-link" data-scroll-target="#quiz-modelos-fundacionais">🧩 Quiz — Modelos fundacionais</a></li>
+  <li><a href="#bert-gpt-e-duas-tradições-de-linguagem" id="toc-bert-gpt-e-duas-tradições-de-linguagem" class="nav-link" data-scroll-target="#bert-gpt-e-duas-tradições-de-linguagem">💬 BERT, GPT e duas tradições de linguagem</a></li>
+  <li><a href="#instruções-alinhamento-e-rlhf" id="toc-instruções-alinhamento-e-rlhf" class="nav-link" data-scroll-target="#instruções-alinhamento-e-rlhf">🎯 Instruções, alinhamento e RLHF</a></li>
+  <li><a href="#quiz-alinhamento-e-rlhf" id="toc-quiz-alinhamento-e-rlhf" class="nav-link" data-scroll-target="#quiz-alinhamento-e-rlhf">🧩 Quiz — Alinhamento e RLHF</a></li>
+  <li><a href="#difusão-e-geração-de-imagens" id="toc-difusão-e-geração-de-imagens" class="nav-link" data-scroll-target="#difusão-e-geração-de-imagens">🖼️ Difusão e geração de imagens</a></li>
+  <li><a href="#multimodalidade" id="toc-multimodalidade" class="nav-link" data-scroll-target="#multimodalidade">🌐 Multimodalidade</a></li>
+  <li><a href="#quiz-multimodalidade-e-agentes" id="toc-quiz-multimodalidade-e-agentes" class="nav-link" data-scroll-target="#quiz-multimodalidade-e-agentes">🧩 Quiz — Multimodalidade e agentes</a></li>
+  <li><a href="#contexto-longo-e-agentes" id="toc-contexto-longo-e-agentes" class="nav-link" data-scroll-target="#contexto-longo-e-agentes">🧭 Contexto longo e agentes</a></li>
+  <li><a href="#escalonamento-e-leis-de-escala" id="toc-escalonamento-e-leis-de-escala" class="nav-link" data-scroll-target="#escalonamento-e-leis-de-escala">📈 Escalonamento e leis de escala</a></li>
+  <li><a href="#linha-do-tempo-essencial" id="toc-linha-do-tempo-essencial" class="nav-link" data-scroll-target="#linha-do-tempo-essencial">🗓️ Linha do tempo essencial</a></li>
+  <li><a href="#conceitos-chave" id="toc-conceitos-chave" class="nav-link" data-scroll-target="#conceitos-chave">🔑 Conceitos-chave</a></li>
+  <li><a href="#personagens-e-episódios-em-foco" id="toc-personagens-e-episódios-em-foco" class="nav-link" data-scroll-target="#personagens-e-episódios-em-foco">👥 Personagens e episódios em foco</a></li>
+  <li><a href="#leituras-sugeridas" id="toc-leituras-sugeridas" class="nav-link" data-scroll-target="#leituras-sugeridas">📚 Leituras sugeridas</a></li>
+  <li><a href="#síntese" id="toc-síntese" class="nav-link" data-scroll-target="#síntese">✅ Síntese</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação">🔗 Navegação</a></li>
+  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links úteis</a></li>
   </ul>
 </nav>
     </div>
@@ -259,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A Era dos Modelos Generativos</h1>
+<h1 class="title">🤖 A Era dos Modelos Generativos</h1>
 <p class="subtitle lead">Transformers, difusão e o advento dos LLMs</p>
   <div class="quarto-categories">
     <div class="quarto-category">história da computação</div>
@@ -286,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">8 de maio de 2026</p>
+      <p class="date">9 de maio de 2026</p>
     </div>
   </div>
   
@@ -302,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
 <p>A combinação entre <strong>dados em larga escala</strong>, <strong>arquiteturas de atenção</strong>, <strong>hardware acelerado</strong> e <strong>pré-treinamento massivo</strong> inaugurou a era dos modelos generativos.</p>
 </blockquote>
 <section id="do-deep-learning-aos-modelos-generativos" class="level2">
-<h2 class="anchored" data-anchor-id="do-deep-learning-aos-modelos-generativos">Do deep learning aos modelos generativos</h2>
+<h2 class="anchored" data-anchor-id="do-deep-learning-aos-modelos-generativos">🤖 Do deep learning aos modelos generativos</h2>
 <p>Depois da virada do deep learning, a IA passou a obter resultados impressionantes em visão computacional, reconhecimento de fala, tradução automática e processamento de linguagem natural.</p>
 <p>Mas uma nova transformação aconteceria quando os modelos deixaram de ser apenas classificadores ou sistemas especializados em uma única tarefa e passaram a ser treinados em grandes volumes de dados para produzir novos conteúdos: textos, imagens, código, áudio, vídeo e combinações multimodais.</p>
 <p>Essa é a era dos <strong>modelos generativos</strong>.</p>
@@ -313,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Resumo em uma frase
+<span class="screen-reader-only">Nota</span>💡 Resumo em uma frase
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -321,8 +327,47 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+<section id="quiz-modelos-generativos" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-modelos-generativos">🧩 Quiz — Modelos generativos</h2>
+<div class="question">
+<p><strong>Q1.</strong> A era dos modelos generativos é marcada principalmente por sistemas capazes de:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Apenas classificar imagens em categorias fixas.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Gerar conteúdos como textos, imagens, código, áudio, vídeo e respostas em linguagem natural.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Funcionar sem dados, sem treinamento e sem infraestrutura computacional.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q2.</strong> Segundo o texto, a era generativa combina principalmente:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Escala, atenção, pré-treinamento massivo e geração de conteúdo.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Apenas regras manuais escritas por especialistas.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Somente computadores mecânicos e autômatos antigos.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
 <section id="a-arquitetura-transformer" class="level2">
-<h2 class="anchored" data-anchor-id="a-arquitetura-transformer">A arquitetura Transformer</h2>
+<h2 class="anchored" data-anchor-id="a-arquitetura-transformer">🧱 A arquitetura Transformer</h2>
 <p>Um marco decisivo foi a arquitetura <strong>Transformer</strong>, apresentada em 2017 no artigo <em>Attention Is All You Need</em>.</p>
 <p>Antes dos Transformers, muitos modelos de linguagem dependiam de arquiteturas recorrentes, como RNNs e LSTMs. Esses modelos processavam sequências passo a passo, o que dificultava paralelização e tornava mais difícil capturar dependências longas.</p>
 <p>O Transformer mudou esse cenário ao colocar o mecanismo de <strong>atenção</strong> no centro da arquitetura.</p>
@@ -330,14 +375,53 @@ ul.task-list li input[type="checkbox"] {
 <p>Essa mudança tornou possível treinar modelos maiores, mais paralelizáveis e mais eficientes em grandes volumes de texto.</p>
 </section>
 <section id="atenção-contexto-como-relação" class="level2">
-<h2 class="anchored" data-anchor-id="atenção-contexto-como-relação">Atenção: contexto como relação</h2>
+<h2 class="anchored" data-anchor-id="atenção-contexto-como-relação">✨ Atenção: contexto como relação</h2>
 <p>A grande ideia por trás da atenção é que o significado de um elemento depende de suas relações com outros elementos.</p>
 <p>Em uma frase, uma palavra não tem valor isolado. Ela ganha sentido pelo contexto. O mecanismo de atenção permite que o modelo calcule relações entre tokens e use essas relações para construir representações mais ricas.</p>
 <p>Em modelos de linguagem, isso é especialmente importante. A mesma palavra pode ter sentidos diferentes dependendo do contexto, e uma frase pode depender de informações que apareceram muito antes no texto.</p>
 <p>A atenção tornou os modelos mais capazes de lidar com dependências longas, ambiguidade e estrutura textual.</p>
 </section>
+<section id="quiz-transformer-e-atenção" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-transformer-e-atenção">🧩 Quiz — Transformer e atenção</h2>
+<div class="question">
+<p><strong>Q3.</strong> A arquitetura Transformer foi importante porque:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Eliminou a necessidade de qualquer tipo de treinamento.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Colocou o mecanismo de atenção no centro da arquitetura e favoreceu treinamento em larga escala.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Foi criada exclusivamente para controlar robôs industriais.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q4.</strong> No contexto dos modelos de linguagem, a atenção ajuda o modelo a:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Relacionar diferentes partes de uma sequência e construir representações contextuais.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Ignorar completamente o contexto das palavras.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Trabalhar apenas com números sem significado linguístico.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
 <section id="pré-treinamento-em-larga-escala" class="level2">
-<h2 class="anchored" data-anchor-id="pré-treinamento-em-larga-escala">Pré-treinamento em larga escala</h2>
+<h2 class="anchored" data-anchor-id="pré-treinamento-em-larga-escala">📚 Pré-treinamento em larga escala</h2>
 <p>Outro ingrediente fundamental foi o <strong>pré-treinamento</strong>.</p>
 <p>Em vez de treinar um modelo do zero para cada tarefa específica, a estratégia passou a ser treinar grandes modelos em enormes coleções de texto, código, imagens ou outros dados. Durante esse processo, o modelo aprende regularidades gerais: padrões linguísticos, relações semânticas, estruturas de documentos, estilos de escrita e até formas de raciocínio estatístico.</p>
 <p>Depois, esse modelo pode ser adaptado para tarefas específicas por meio de ajuste fino, instruções ou técnicas de alinhamento.</p>
@@ -349,7 +433,7 @@ ul.task-list li input[type="checkbox"] {
 <p>É a base do que hoje chamamos de <strong>modelos fundacionais</strong>.</p>
 </section>
 <section id="modelos-fundacionais" class="level2">
-<h2 class="anchored" data-anchor-id="modelos-fundacionais">Modelos fundacionais</h2>
+<h2 class="anchored" data-anchor-id="modelos-fundacionais">🏗️ Modelos fundacionais</h2>
 <p>A expressão <strong>foundation models</strong> se refere a modelos treinados em larga escala, capazes de servir como base para muitas aplicações diferentes.</p>
 <p>Um mesmo modelo pode ser usado para:</p>
 <ul>
@@ -364,44 +448,143 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Essa flexibilidade tornou os modelos fundacionais muito importantes, mas também levantou novas questões: custo computacional, concentração tecnológica, vieses, segurança, propriedade dos dados, impacto ambiental e governança.</p>
 </section>
+<section id="quiz-modelos-fundacionais" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-modelos-fundacionais">🧩 Quiz — Modelos fundacionais</h2>
+<div class="question">
+<p><strong>Q5.</strong> Um <strong>modelo fundacional</strong> é, em geral:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Um modelo treinado em pequena escala para uma única tarefa fixa.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Um modelo de larga escala que pode servir como base para muitas aplicações diferentes.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Um programa que só funciona sem internet e sem dados.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q6.</strong> Uma preocupação associada aos modelos fundacionais é:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Eles não levantam nenhuma questão social, técnica ou econômica.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Eles tornam desnecessária qualquer forma de avaliação.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Podem envolver custos altos, vieses, concentração tecnológica, segurança e governança.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
 <section id="bert-gpt-e-duas-tradições-de-linguagem" class="level2">
-<h2 class="anchored" data-anchor-id="bert-gpt-e-duas-tradições-de-linguagem">BERT, GPT e duas tradições de linguagem</h2>
+<h2 class="anchored" data-anchor-id="bert-gpt-e-duas-tradições-de-linguagem">💬 BERT, GPT e duas tradições de linguagem</h2>
 <p>No processamento de linguagem natural, dois caminhos ficaram especialmente conhecidos.</p>
 <p>Modelos como <strong>BERT</strong> exploraram a ideia de representação contextual bidirecional. Eles foram muito importantes em tarefas de compreensão, classificação, busca e análise de texto.</p>
 <p>Já a família <strong>GPT</strong> popularizou modelos autoregressivos treinados para prever o próximo token. Essa estratégia, combinada com escala, mostrou-se extremamente poderosa para geração de texto.</p>
 <p>Essas duas tradições ajudaram a transformar o processamento de linguagem natural. A linguagem deixou de ser tratada apenas como sequência de palavras e passou a ser modelada por representações contextuais profundas.</p>
 </section>
 <section id="instruções-alinhamento-e-rlhf" class="level2">
-<h2 class="anchored" data-anchor-id="instruções-alinhamento-e-rlhf">Instruções, alinhamento e RLHF</h2>
+<h2 class="anchored" data-anchor-id="instruções-alinhamento-e-rlhf">🎯 Instruções, alinhamento e RLHF</h2>
 <p>Treinar um modelo grande em texto não é suficiente para torná-lo útil como assistente.</p>
 <p>Um modelo pode saber completar frases, mas isso não significa que ele saiba seguir instruções, responder de modo seguro, admitir incerteza ou evitar respostas problemáticas.</p>
 <p>Por isso, ganharam importância técnicas de <strong>alinhamento</strong>, incluindo treinamento com instruções e <strong>RLHF</strong> (<em>Reinforcement Learning from Human Feedback</em>).</p>
 <p>A ideia geral é ajustar o comportamento do modelo para que suas respostas fiquem mais próximas das preferências humanas: mais úteis, claras, seguras e adequadas ao contexto.</p>
 <p>Esse processo não resolve todos os problemas, mas tornou os LLMs muito mais utilizáveis em aplicações práticas.</p>
 </section>
+<section id="quiz-alinhamento-e-rlhf" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-alinhamento-e-rlhf">🧩 Quiz — Alinhamento e RLHF</h2>
+<div class="question">
+<p><strong>Q7.</strong> O RLHF é usado principalmente para:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Substituir completamente o pré-treinamento.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Ajustar o comportamento do modelo usando feedback humano.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Transformar automaticamente texto em hardware.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
 <section id="difusão-e-geração-de-imagens" class="level2">
-<h2 class="anchored" data-anchor-id="difusão-e-geração-de-imagens">Difusão e geração de imagens</h2>
+<h2 class="anchored" data-anchor-id="difusão-e-geração-de-imagens">🖼️ Difusão e geração de imagens</h2>
 <p>A geração de conteúdo não ficou restrita ao texto.</p>
 <p>Modelos de <strong>difusão</strong> ganharam grande destaque na geração de imagens. De forma simplificada, esses modelos aprendem a transformar ruído em uma imagem coerente, condicionada por texto ou outras entradas.</p>
 <p>Essa abordagem permitiu avanços importantes em geração de imagens, edição visual, design, ilustração, vídeo e aplicações multimodais.</p>
 <p>Com isso, a IA generativa passou a atuar em várias linguagens: texto, imagem, áudio, vídeo e código.</p>
 </section>
 <section id="multimodalidade" class="level2">
-<h2 class="anchored" data-anchor-id="multimodalidade">Multimodalidade</h2>
+<h2 class="anchored" data-anchor-id="multimodalidade">🌐 Multimodalidade</h2>
 <p>A etapa seguinte foi a <strong>multimodalidade</strong>.</p>
 <p>Modelos multimodais combinam diferentes tipos de entrada e saída: texto, imagem, áudio, vídeo, tabelas, documentos e código.</p>
 <p>Isso aproxima a IA de usos mais naturais. Uma pessoa pode enviar uma imagem e fazer perguntas sobre ela, pedir análise de um gráfico, resumir um documento, gerar código a partir de uma descrição ou combinar texto e imagem em uma mesma tarefa.</p>
 <p>A multimodalidade amplia a noção de interface: a interação com a máquina deixa de depender apenas de comandos formais e passa a se aproximar de uma conversa com múltiplos tipos de conteúdo.</p>
 </section>
+<section id="quiz-multimodalidade-e-agentes" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-multimodalidade-e-agentes">🧩 Quiz — Multimodalidade e agentes</h2>
+<div class="question">
+<p><strong>Q8.</strong> Um modelo <strong>multimodal</strong> é aquele que:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Trabalha apenas com texto simples.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Pode integrar diferentes tipos de dados, como texto, imagem, áudio, vídeo e documentos.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Não precisa de entradas nem saídas.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q9.</strong> Um agente de IA tende a ser mais complexo que um chatbot simples porque pode:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Planejar etapas, chamar ferramentas, consultar arquivos ou interagir com outros sistemas.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Funcionar apenas imprimindo texto sem contexto.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Eliminar toda necessidade de supervisão humana.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
 <section id="contexto-longo-e-agentes" class="level2">
-<h2 class="anchored" data-anchor-id="contexto-longo-e-agentes">Contexto longo e agentes</h2>
+<h2 class="anchored" data-anchor-id="contexto-longo-e-agentes">🧭 Contexto longo e agentes</h2>
 <p>Com modelos mais capazes, surgiram também sistemas com <strong>janelas de contexto maiores</strong> e propostas de <strong>agentes de IA</strong>.</p>
 <p>Janelas de contexto maiores permitem que o modelo considere documentos extensos, conversas longas, bases de conhecimento e cadeias de instruções mais complexas.</p>
 <p>Agentes de IA, por sua vez, são sistemas que usam modelos como componentes de uma arquitetura maior. Eles podem planejar etapas, chamar ferramentas, consultar arquivos, executar código, navegar em ambientes e interagir com outros sistemas.</p>
 <p>Essa área ainda está em desenvolvimento e exige cautela. Quanto mais autonomia se dá a um sistema, maior a necessidade de controle, avaliação, segurança e supervisão humana.</p>
 </section>
 <section id="escalonamento-e-leis-de-escala" class="level2">
-<h2 class="anchored" data-anchor-id="escalonamento-e-leis-de-escala">Escalonamento e leis de escala</h2>
+<h2 class="anchored" data-anchor-id="escalonamento-e-leis-de-escala">📈 Escalonamento e leis de escala</h2>
 <p>Um dos fenômenos mais importantes dessa era foi o <strong>escalonamento</strong>.</p>
 <p>Pesquisadores observaram que, em muitos casos, aumentar dados, parâmetros e computação melhorava o desempenho dos modelos de forma previsível. Isso levou ao estudo das chamadas <strong>scaling laws</strong>, ou leis de escala.</p>
 <p>Essa percepção orientou a construção de modelos cada vez maiores.</p>
@@ -417,7 +600,7 @@ ul.task-list li input[type="checkbox"] {
 <p>A era generativa, portanto, é também uma era de perguntas sociais, econômicas e políticas.</p>
 </section>
 <section id="linha-do-tempo-essencial" class="level2">
-<h2 class="anchored" data-anchor-id="linha-do-tempo-essencial">Linha do tempo essencial</h2>
+<h2 class="anchored" data-anchor-id="linha-do-tempo-essencial">🗓️ Linha do tempo essencial</h2>
 <ul>
 <li><strong>2017</strong> — A arquitetura Transformer é apresentada.</li>
 <li><strong>2018–2020</strong> — Modelos como BERT e GPT consolidam o pré-treinamento em larga escala.</li>
@@ -427,7 +610,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="conceitos-chave" class="level2">
-<h2 class="anchored" data-anchor-id="conceitos-chave">Conceitos-chave</h2>
+<h2 class="anchored" data-anchor-id="conceitos-chave">🔑 Conceitos-chave</h2>
 <ul>
 <li><strong>Transformer:</strong> arquitetura baseada em atenção, central para os LLMs modernos.</li>
 <li><strong>Atenção:</strong> mecanismo que permite ao modelo relacionar partes diferentes de uma sequência.</li>
@@ -442,7 +625,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="personagens-e-episódios-em-foco" class="level2">
-<h2 class="anchored" data-anchor-id="personagens-e-episódios-em-foco">Personagens e episódios em foco</h2>
+<h2 class="anchored" data-anchor-id="personagens-e-episódios-em-foco">👥 Personagens e episódios em foco</h2>
 <ul>
 <li><strong>Transformer</strong> — arquitetura que reorganizou o processamento de linguagem natural moderno.</li>
 <li><strong>BERT</strong> — marco em representações contextuais para compreensão de texto.</li>
@@ -453,7 +636,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="leituras-sugeridas" class="level2">
-<h2 class="anchored" data-anchor-id="leituras-sugeridas">Leituras sugeridas</h2>
+<h2 class="anchored" data-anchor-id="leituras-sugeridas">📚 Leituras sugeridas</h2>
 <ul>
 <li><strong>VASWANI, Ashish et al.</strong> “Attention Is All You Need”. 2017.</li>
 <li><strong>DEVLIN, Jacob et al.</strong> “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”. 2018.</li>
@@ -464,7 +647,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="síntese" class="level2">
-<h2 class="anchored" data-anchor-id="síntese">Síntese</h2>
+<h2 class="anchored" data-anchor-id="síntese">✅ Síntese</h2>
 <p>A era dos modelos generativos representa uma nova fase da Inteligência Artificial.</p>
 <p>Depois da IA simbólica, dos invernos, do aprendizado de máquina estatístico e da virada do deep learning, a área passou a se organizar em torno de modelos treinados em larga escala, capazes de gerar conteúdo e servir como base para múltiplas aplicações.</p>
 <p>Transformers, pré-treinamento, atenção, difusão, RLHF, multimodalidade e modelos fundacionais mudaram a forma como interagimos com sistemas computacionais.</p>
@@ -472,10 +655,48 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 <section id="navegação" class="level2">
-<h2 class="anchored" data-anchor-id="navegação">Navegação</h2>
+<h2 class="anchored" data-anchor-id="navegação">🔗 Navegação</h2>
+<p>🎯 <strong>Anterior:</strong> 👉 <a href="../../../../posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html">O Renascimento da IA</a></p>
+<p>🎯 <strong>Próximo:</strong> 👉 <a href="../../../../posts/programacao/ia/historia-ia/parte-7-o-futuro-da-ia.html">O Futuro da IA</a></p>
+<hr>
+<!-- Breadcrumbs -->
+<p>· <a href="../../../../posts/programacao/ia/historia-ia/index.html">← História da IA</a> · 🔝 <a href="#top">Topo</a></p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="Sobre o projeto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Sobre o projeto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este site nasce da vontade de expor ideias com <strong>boa matemática</strong>, <strong>boa tipografia</strong> e <strong>boas explicações</strong>.<br>
+Quer saber a linha editorial, tecnologias e bastidores?</p>
+<p><a href="../../../../posts/pessoal/sobre-o-blog.html" class="button button-outline">📘 Ler “Sobre o Blog e Sobre Mim” ›</a></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Criado por Blog do Marcellini com ❤ e código.</em></p>
+</div>
+</div>
+</section>
+<section id="links-úteis" class="level2">
+<h2 class="anchored" data-anchor-id="links-úteis">🔗 Links úteis</h2>
 <ul>
-<li>← <strong>Anterior:</strong> <a href="../../../../posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html">O Renascimento da IA</a></li>
-<li>→ <strong>Próximo:</strong> <a href="../../../../posts/programacao/ia/historia-ia/parte-7-o-futuro-da-ia.html">O Futuro da IA</a></li>
+<li><a href="../../../../posts/pessoal/sobre-o-blog.html">🧑‍🏫 Sobre o Blog</a></li>
+<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
+<li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
 </ul>
 
 
