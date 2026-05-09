@@ -6736,121 +6736,121 @@
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html",
-    "title": "O Renascimento da IA",
+    "title": "🔁 O Renascimento da IA",
     "section": "",
     "text": "Depois do inverno, a IA renasceu menos como sistema de regras explícitas e mais como uma ciência de dados, modelos estatísticos e aprendizado a partir de exemplos."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#da-ia-simbólica-ao-aprendizado-de-máquina",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#da-ia-simbólica-ao-aprendizado-de-máquina",
-    "title": "O Renascimento da IA",
-    "section": "Da IA simbólica ao aprendizado de máquina",
-    "text": "Da IA simbólica ao aprendizado de máquina\nO renascimento da Inteligência Artificial não aconteceu de uma vez. Ele foi resultado de uma mudança gradual de foco.\nDurante os anos dourados, grande parte da IA apostava em símbolos, regras e representações explícitas do conhecimento. Depois dos invernos da IA, ficou claro que essa estratégia tinha limites importantes: era difícil codificar manualmente tudo que um sistema precisava saber.\nA partir dos anos 1990, ganhou força uma abordagem diferente: em vez de programar diretamente todas as regras, por que não criar sistemas capazes de aprender padrões a partir de dados?\nEssa mudança aproximou a IA da estatística, da otimização, da teoria da decisão e da ciência de dados. A pergunta deixou de ser apenas “como representar o conhecimento?” e passou a ser também “como aprender uma função a partir de exemplos?”.\n\n\n\n\n\n\nNotaResumo em uma frase\n\n\n\nO renascimento da IA foi impulsionado por três forças: aprendizado de máquina, maior disponibilidade de dados e aumento da capacidade computacional."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🔁 Da IA simbólica ao aprendizado de máquina",
+    "text": "🔁 Da IA simbólica ao aprendizado de máquina\nO renascimento da Inteligência Artificial não aconteceu de uma vez. Ele foi resultado de uma mudança gradual de foco.\nDurante os anos dourados, grande parte da IA apostava em símbolos, regras e representações explícitas do conhecimento. Depois dos invernos da IA, ficou claro que essa estratégia tinha limites importantes: era difícil codificar manualmente tudo que um sistema precisava saber.\nA partir dos anos 1990, ganhou força uma abordagem diferente: em vez de programar diretamente todas as regras, por que não criar sistemas capazes de aprender padrões a partir de dados?\nEssa mudança aproximou a IA da estatística, da otimização, da teoria da decisão e da ciência de dados. A pergunta deixou de ser apenas “como representar o conhecimento?” e passou a ser também “como aprender uma função a partir de exemplos?”.\n\n\n\n\n\n\nNota💡 Resumo em uma frase\n\n\n\nO renascimento da IA foi impulsionado por três forças: aprendizado de máquina, maior disponibilidade de dados e aumento da capacidade computacional."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#o-aprendizado-supervisionado-ganha-força",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#o-aprendizado-supervisionado-ganha-força",
-    "title": "O Renascimento da IA",
-    "section": "O aprendizado supervisionado ganha força",
-    "text": "O aprendizado supervisionado ganha força\nUma das formas mais importantes de aprendizado de máquina é o aprendizado supervisionado.\nNesse tipo de abordagem, o sistema recebe exemplos de entrada e saída. Por exemplo:\n\nimagens e seus rótulos;\ntextos e suas classificações;\ndados de clientes e a previsão de risco;\nsinais e suas categorias;\nperguntas e respostas esperadas.\n\nO objetivo é aprender uma regra geral capaz de funcionar bem em novos casos.\nEssa ideia já existia antes, mas se tornou muito mais poderosa quando passou a ser combinada com métodos estatísticos robustos, bases de dados maiores e computadores mais rápidos."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🎯 O aprendizado supervisionado ganha força",
+    "text": "🎯 O aprendizado supervisionado ganha força\nUma das formas mais importantes de aprendizado de máquina é o aprendizado supervisionado.\nNesse tipo de abordagem, o sistema recebe exemplos de entrada e saída. Por exemplo:\n\nimagens e seus rótulos;\ntextos e suas classificações;\ndados de clientes e a previsão de risco;\nsinais e suas categorias;\nperguntas e respostas esperadas.\n\nO objetivo é aprender uma regra geral capaz de funcionar bem em novos casos.\nEssa ideia já existia antes, mas se tornou muito mais poderosa quando passou a ser combinada com métodos estatísticos robustos, bases de dados maiores e computadores mais rápidos."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#svms-kernels-e-margens",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#svms-kernels-e-margens",
-    "title": "O Renascimento da IA",
-    "section": "SVMs, kernels e margens",
-    "text": "SVMs, kernels e margens\nNos anos 1990 e 2000, as Support Vector Machines (SVMs) ganharam grande destaque.\nAs SVMs são modelos de classificação que procuram separar dados usando uma margem máxima entre classes. Com o uso de kernels, elas conseguem trabalhar implicitamente em espaços de maior dimensão, permitindo separar padrões que não são linearmente separáveis no espaço original.\nNa prática, as SVMs se tornaram uma ferramenta poderosa em problemas de classificação, reconhecimento de padrões e aprendizado estatístico.\nElas simbolizam bem uma fase da IA em que métodos matematicamente elegantes, com boa teoria de generalização, dominaram muitos benchmarks."
+    "title": "🔁 O Renascimento da IA",
+    "section": "📐 SVMs, kernels e margens",
+    "text": "📐 SVMs, kernels e margens\nNos anos 1990 e 2000, as Support Vector Machines (SVMs) ganharam grande destaque.\nAs SVMs são modelos de classificação que procuram separar dados usando uma margem máxima entre classes. Com o uso de kernels, elas conseguem trabalhar implicitamente em espaços de maior dimensão, permitindo separar padrões que não são linearmente separáveis no espaço original.\nNa prática, as SVMs se tornaram uma ferramenta poderosa em problemas de classificação, reconhecimento de padrões e aprendizado estatístico.\nElas simbolizam bem uma fase da IA em que métodos matematicamente elegantes, com boa teoria de generalização, dominaram muitos benchmarks."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#ensembles-combinar-modelos-para-melhorar-resultados",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#ensembles-combinar-modelos-para-melhorar-resultados",
-    "title": "O Renascimento da IA",
-    "section": "Ensembles: combinar modelos para melhorar resultados",
-    "text": "Ensembles: combinar modelos para melhorar resultados\nOutro conjunto importante de métodos foi o dos ensembles.\nA ideia é simples: em vez de confiar em um único modelo, combinamos vários modelos para obter previsões mais robustas.\nEntre os métodos importantes estão:\n\nbagging;\nboosting;\nrandom forests;\ncombinações de classificadores.\n\nEsses métodos mostraram que, em muitos problemas, a combinação de modelos simples podia gerar sistemas muito fortes. Eles também reforçaram uma ideia central do aprendizado de máquina moderno: o desempenho de um sistema depende não apenas do modelo isolado, mas de como ele é treinado, combinado, regularizado e avaliado."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🧩 Ensembles: combinar modelos para melhorar resultados",
+    "text": "🧩 Ensembles: combinar modelos para melhorar resultados\nOutro conjunto importante de métodos foi o dos ensembles.\nA ideia é simples: em vez de confiar em um único modelo, combinamos vários modelos para obter previsões mais robustas.\nEntre os métodos importantes estão:\n\nbagging;\nboosting;\nrandom forests;\ncombinações de classificadores.\n\nEsses métodos mostraram que, em muitos problemas, a combinação de modelos simples podia gerar sistemas muito fortes. Eles também reforçaram uma ideia central do aprendizado de máquina moderno: o desempenho de um sistema depende não apenas do modelo isolado, mas de como ele é treinado, combinado, regularizado e avaliado."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#viés-variância-e-generalização",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#viés-variância-e-generalização",
-    "title": "O Renascimento da IA",
-    "section": "Viés, variância e generalização",
-    "text": "Viés, variância e generalização\nCom o avanço do aprendizado de máquina, conceitos estatísticos se tornaram fundamentais.\nUm deles é o dilema entre viés e variância.\nUm modelo com muito viés é simples demais e pode não capturar a estrutura dos dados. Um modelo com muita variância pode se ajustar demais aos dados de treinamento e falhar em novos exemplos.\nEsse problema está no coração da generalização: a capacidade de um modelo funcionar bem em dados que ele ainda não viu.\nA IA deixou de ser apenas uma busca por regras inteligentes e passou a ser também uma engenharia delicada de modelos que aprendem sem decorar."
+    "title": "🔁 O Renascimento da IA",
+    "section": "⚖️ Viés, variância e generalização",
+    "text": "⚖️ Viés, variância e generalização\nCom o avanço do aprendizado de máquina, conceitos estatísticos se tornaram fundamentais.\nUm deles é o dilema entre viés e variância.\nUm modelo com muito viés é simples demais e pode não capturar a estrutura dos dados. Um modelo com muita variância pode se ajustar demais aos dados de treinamento e falhar em novos exemplos.\nEsse problema está no coração da generalização: a capacidade de um modelo funcionar bem em dados que ele ainda não viu.\nA IA deixou de ser apenas uma busca por regras inteligentes e passou a ser também uma engenharia delicada de modelos que aprendem sem decorar."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#regularização-e-avaliação",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#regularização-e-avaliação",
-    "title": "O Renascimento da IA",
-    "section": "Regularização e avaliação",
-    "text": "Regularização e avaliação\nPara melhorar a generalização, técnicas de regularização tornaram-se essenciais.\nRegularizar significa impor algum tipo de controle ao modelo: limitar sua complexidade, penalizar parâmetros muito grandes, reduzir sobreajuste ou forçar soluções mais estáveis.\nTambém ganharam importância práticas como:\n\nseparar dados de treino e teste;\nusar validação cruzada;\nmedir erro fora da amostra;\ncomparar modelos em benchmarks;\navaliar desempenho de forma reprodutível.\n\nEssa cultura de avaliação quantitativa seria decisiva para o crescimento do aprendizado de máquina."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🛡️ Regularização e avaliação",
+    "text": "🛡️ Regularização e avaliação\nPara melhorar a generalização, técnicas de regularização tornaram-se essenciais.\nRegularizar significa impor algum tipo de controle ao modelo: limitar sua complexidade, penalizar parâmetros muito grandes, reduzir sobreajuste ou forçar soluções mais estáveis.\nTambém ganharam importância práticas como:\n\nseparar dados de treino e teste;\nusar validação cruzada;\nmedir erro fora da amostra;\ncomparar modelos em benchmarks;\navaliar desempenho de forma reprodutível.\n\nEssa cultura de avaliação quantitativa seria decisiva para o crescimento do aprendizado de máquina."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#o-retorno-das-redes-neurais",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#o-retorno-das-redes-neurais",
-    "title": "O Renascimento da IA",
-    "section": "O retorno das redes neurais",
-    "text": "O retorno das redes neurais\nAs redes neurais não desapareceram completamente durante o inverno da IA, mas ficaram em segundo plano por bastante tempo.\nA partir dos anos 1980 e 1990, o algoritmo de backpropagation ajudou a treinar redes com camadas intermediárias. Pesquisadores como Geoffrey Hinton, Yann LeCun e Yoshua Bengio tiveram papel fundamental na retomada das abordagens conexionistas.\nLeCun, por exemplo, desenvolveu redes convolucionais aplicadas ao reconhecimento de dígitos manuscritos, mostrando que redes neurais poderiam funcionar muito bem em tarefas perceptivas específicas.\nAinda assim, durante muito tempo, redes neurais competiram com métodos como SVMs, árvores, ensembles e modelos probabilísticos. Elas ainda não eram dominantes."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🧠 O retorno das redes neurais",
+    "text": "🧠 O retorno das redes neurais\nAs redes neurais não desapareceram completamente durante o inverno da IA, mas ficaram em segundo plano por bastante tempo.\nA partir dos anos 1980 e 1990, o algoritmo de backpropagation ajudou a treinar redes com camadas intermediárias. Pesquisadores como Geoffrey Hinton, Yann LeCun e Yoshua Bengio tiveram papel fundamental na retomada das abordagens conexionistas.\nLeCun, por exemplo, desenvolveu redes convolucionais aplicadas ao reconhecimento de dígitos manuscritos, mostrando que redes neurais poderiam funcionar muito bem em tarefas perceptivas específicas.\nAinda assim, durante muito tempo, redes neurais competiram com métodos como SVMs, árvores, ensembles e modelos probabilísticos. Elas ainda não eram dominantes."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#deep-learning-a-virada-dos-anos-2000",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#deep-learning-a-virada-dos-anos-2000",
-    "title": "O Renascimento da IA",
-    "section": "Deep learning: a virada dos anos 2000",
-    "text": "Deep learning: a virada dos anos 2000\nA expressão deep learning começou a ganhar força nos anos 2000.\nPor volta de 2006, trabalhos associados a Hinton e colaboradores reacenderam o interesse em redes profundas. Técnicas de pré-treinamento, melhores métodos de otimização, funções de ativação mais adequadas e maior disponibilidade de dados ajudaram a tornar o treinamento de redes maiores mais viável.\nMas a virada decisiva ainda dependia de outro fator: computação em larga escala."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🚀 Deep learning: a virada dos anos 2000",
+    "text": "🚀 Deep learning: a virada dos anos 2000\nA expressão deep learning começou a ganhar força nos anos 2000.\nPor volta de 2006, trabalhos associados a Hinton e colaboradores reacenderam o interesse em redes profundas. Técnicas de pré-treinamento, melhores métodos de otimização, funções de ativação mais adequadas e maior disponibilidade de dados ajudaram a tornar o treinamento de redes maiores mais viável.\nMas a virada decisiva ainda dependia de outro fator: computação em larga escala."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#gpus-dados-e-escala",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#gpus-dados-e-escala",
-    "title": "O Renascimento da IA",
-    "section": "GPUs, dados e escala",
-    "text": "GPUs, dados e escala\nO crescimento da IA moderna está diretamente ligado à combinação de três elementos:\n\ndados em grande escala;\nhardware acelerado, especialmente GPUs;\nmodelos capazes de se beneficiar da escala.\n\nAs GPUs, originalmente desenvolvidas para gráficos, mostraram-se extremamente úteis para operações matriciais e treinamento de redes neurais. Isso permitiu acelerar enormemente o treinamento de modelos.\nAo mesmo tempo, a internet, os sensores, os dispositivos móveis e os grandes repositórios digitais ampliaram a disponibilidade de dados.\nA IA passou a depender cada vez mais de infraestrutura computacional."
+    "title": "🔁 O Renascimento da IA",
+    "section": "⚙️ GPUs, dados e escala",
+    "text": "⚙️ GPUs, dados e escala\nO crescimento da IA moderna está diretamente ligado à combinação de três elementos:\n\ndados em grande escala;\nhardware acelerado, especialmente GPUs;\nmodelos capazes de se beneficiar da escala.\n\nAs GPUs, originalmente desenvolvidas para gráficos, mostraram-se extremamente úteis para operações matriciais e treinamento de redes neurais. Isso permitiu acelerar enormemente o treinamento de modelos.\nAo mesmo tempo, a internet, os sensores, os dispositivos móveis e os grandes repositórios digitais ampliaram a disponibilidade de dados.\nA IA passou a depender cada vez mais de infraestrutura computacional."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#imagenet-e-a-virada-visual",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#imagenet-e-a-virada-visual",
-    "title": "O Renascimento da IA",
-    "section": "ImageNet e a virada visual",
-    "text": "ImageNet e a virada visual\nUm marco importante foi a base ImageNet, organizada para treinar e avaliar sistemas de reconhecimento de imagens em larga escala.\nEm 2012, a rede AlexNet obteve um resultado marcante na competição ImageNet, reduzindo significativamente o erro em classificação de imagens. Esse evento costuma ser visto como um ponto de virada para o deep learning.\nA partir daí, redes profundas passaram a dominar tarefas de visão computacional e rapidamente se espalharam para outras áreas.\nO sucesso não veio apenas de uma ideia isolada, mas da combinação de arquitetura, dados, GPUs, treinamento eficiente e avaliação por benchmarks."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🖼️ ImageNet e a virada visual",
+    "text": "🖼️ ImageNet e a virada visual\nUm marco importante foi a base ImageNet, organizada para treinar e avaliar sistemas de reconhecimento de imagens em larga escala.\nEm 2012, a rede AlexNet obteve um resultado marcante na competição ImageNet, reduzindo significativamente o erro em classificação de imagens. Esse evento costuma ser visto como um ponto de virada para o deep learning.\nA partir daí, redes profundas passaram a dominar tarefas de visão computacional e rapidamente se espalharam para outras áreas.\nO sucesso não veio apenas de uma ideia isolada, mas da combinação de arquitetura, dados, GPUs, treinamento eficiente e avaliação por benchmarks."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#linha-do-tempo-essencial",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#linha-do-tempo-essencial",
-    "title": "O Renascimento da IA",
-    "section": "Linha do tempo essencial",
-    "text": "Linha do tempo essencial\n\nDécada de 1990 — SVMs, kernels e métodos estatísticos ganham destaque.\n1995–2005 — Ensembles, boosting e random forests consolidam resultados fortes em aprendizado supervisionado.\n1980–1990s — Backpropagation e redes convolucionais mantêm viva a pesquisa conexionista.\n2006 — O termo deep learning ganha força com novos trabalhos sobre redes profundas.\n2009–2012 — GPUs, grandes bases de dados e benchmarks aceleram a virada do deep learning.\n2012 — AlexNet marca uma mudança decisiva na competição ImageNet."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🗓️ Linha do tempo essencial",
+    "text": "🗓️ Linha do tempo essencial\n\nDécada de 1990 — SVMs, kernels e métodos estatísticos ganham destaque.\n1995–2005 — Ensembles, boosting e random forests consolidam resultados fortes em aprendizado supervisionado.\n1980–1990s — Backpropagation e redes convolucionais mantêm viva a pesquisa conexionista.\n2006 — O termo deep learning ganha força com novos trabalhos sobre redes profundas.\n2009–2012 — GPUs, grandes bases de dados e benchmarks aceleram a virada do deep learning.\n2012 — AlexNet marca uma mudança decisiva na competição ImageNet."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#conceitos-chave",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#conceitos-chave",
-    "title": "O Renascimento da IA",
-    "section": "Conceitos-chave",
-    "text": "Conceitos-chave\n\nAprendizado supervisionado: treinamento com exemplos de entrada e saída.\nSVM: modelo baseado em margens e kernels para classificação e regressão.\nEnsembles: combinação de vários modelos para melhorar desempenho e robustez.\nBackpropagation: algoritmo fundamental para treinar redes neurais com múltiplas camadas.\nRegularização: conjunto de técnicas para reduzir sobreajuste e melhorar generalização.\nGeneralização: capacidade de funcionar bem em dados novos.\nGPUs: hardware acelerado que tornou viável treinar redes profundas em larga escala.\nBenchmark: conjunto padronizado de dados e tarefas usado para comparar modelos."
+    "title": "🔁 O Renascimento da IA",
+    "section": "🔑 Conceitos-chave",
+    "text": "🔑 Conceitos-chave\n\nAprendizado supervisionado: treinamento com exemplos de entrada e saída.\nSVM: modelo baseado em margens e kernels para classificação e regressão.\nEnsembles: combinação de vários modelos para melhorar desempenho e robustez.\nBackpropagation: algoritmo fundamental para treinar redes neurais com múltiplas camadas.\nRegularização: conjunto de técnicas para reduzir sobreajuste e melhorar generalização.\nGeneralização: capacidade de funcionar bem em dados novos.\nGPUs: hardware acelerado que tornou viável treinar redes profundas em larga escala.\nBenchmark: conjunto padronizado de dados e tarefas usado para comparar modelos."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#personagens-e-episódios-em-foco",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#personagens-e-episódios-em-foco",
-    "title": "O Renascimento da IA",
-    "section": "Personagens e episódios em foco",
-    "text": "Personagens e episódios em foco\n\nGeoffrey Hinton — figura central no renascimento das redes neurais e do deep learning.\nYann LeCun — pioneiro em redes convolucionais e aplicações em visão computacional.\nYoshua Bengio — pesquisador fundamental em aprendizado profundo e representação.\nImageNet — base de dados e competição que ajudaram a consolidar a virada do deep learning.\nAlexNet — rede neural profunda que marcou a virada da visão computacional em 2012."
+    "title": "🔁 O Renascimento da IA",
+    "section": "👥 Personagens e episódios em foco",
+    "text": "👥 Personagens e episódios em foco\n\nGeoffrey Hinton — figura central no renascimento das redes neurais e do deep learning.\nYann LeCun — pioneiro em redes convolucionais e aplicações em visão computacional.\nYoshua Bengio — pesquisador fundamental em aprendizado profundo e representação.\nImageNet — base de dados e competição que ajudaram a consolidar a virada do deep learning.\nAlexNet — rede neural profunda que marcou a virada da visão computacional em 2012."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#leituras-sugeridas",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#leituras-sugeridas",
-    "title": "O Renascimento da IA",
-    "section": "Leituras sugeridas",
-    "text": "Leituras sugeridas\n\nBISHOP, Christopher M. Pattern Recognition and Machine Learning. Springer, 2006.\nGOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. Deep Learning. MIT Press, 2016.\nNILSSON, Nils J. The Quest for Artificial Intelligence: A History of Ideas and Achievements. Cambridge University Press, 2010.\nLECUN, Yann; BENGIO, Yoshua; HINTON, Geoffrey. “Deep Learning”. Nature, 2015.\nKRIZHEVSKY, Alex; SUTSKEVER, Ilya; HINTON, Geoffrey. “ImageNet Classification with Deep Convolutional Neural Networks”. 2012."
+    "title": "🔁 O Renascimento da IA",
+    "section": "📚 Leituras sugeridas",
+    "text": "📚 Leituras sugeridas\n\nBISHOP, Christopher M. Pattern Recognition and Machine Learning. Springer, 2006.\nGOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. Deep Learning. MIT Press, 2016.\nNILSSON, Nils J. The Quest for Artificial Intelligence: A History of Ideas and Achievements. Cambridge University Press, 2010.\nLECUN, Yann; BENGIO, Yoshua; HINTON, Geoffrey. “Deep Learning”. Nature, 2015.\nKRIZHEVSKY, Alex; SUTSKEVER, Ilya; HINTON, Geoffrey. “ImageNet Classification with Deep Convolutional Neural Networks”. 2012."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#síntese",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#síntese",
-    "title": "O Renascimento da IA",
-    "section": "Síntese",
-    "text": "Síntese\nO renascimento da IA ocorreu quando a área passou a combinar métodos estatísticos, dados, capacidade computacional e modelos capazes de aprender representações.\nA IA deixou de depender apenas de regras explícitas e passou a aprender padrões a partir de exemplos. SVMs, ensembles, redes neurais, regularização, benchmarks e GPUs prepararam o terreno para a próxima transformação.\nEssa transformação viria com os modelos profundos em grande escala e, mais tarde, com a arquitetura Transformer, os modelos generativos e os grandes modelos de linguagem."
+    "title": "🔁 O Renascimento da IA",
+    "section": "✅ Síntese",
+    "text": "✅ Síntese\nO renascimento da IA ocorreu quando a área passou a combinar métodos estatísticos, dados, capacidade computacional e modelos capazes de aprender representações.\nA IA deixou de depender apenas de regras explícitas e passou a aprender padrões a partir de exemplos. SVMs, ensembles, redes neurais, regularização, benchmarks e GPUs prepararam o terreno para a próxima transformação.\nEssa transformação viria com os modelos profundos em grande escala e, mais tarde, com a arquitetura Transformer, os modelos generativos e os grandes modelos de linguagem."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#navegação",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#navegação",
-    "title": "O Renascimento da IA",
-    "section": "Navegação",
-    "text": "Navegação\n\n← Anterior: O Inverno da IA\n→ Próximo: A Era dos Modelos Generativos"
+    "title": "🔁 O Renascimento da IA",
+    "section": "🔗 Navegação",
+    "text": "🔗 Navegação\n🎯 Anterior: 👉 O Inverno da IA\n🎯 Próximo: 👉 A Era dos Modelos Generativos\n\n\n· ← História da IA · 🔝 Topo\n\n\n\n\n\n\n\nDicaSobre o projeto\n\n\n\nEste site nasce da vontade de expor ideias com boa matemática, boa tipografia e boas explicações.\nQuer saber a linha editorial, tecnologias e bastidores?\n📘 Ler “Sobre o Blog e Sobre Mim” ›\n\n\n\n\n\n\n\n\nNota\n\n\n\nCriado por Blog do Marcellini com ❤ e código."
   },
   {
     "objectID": "posts/fisica/dirac-vs-feynman.html",
@@ -7738,6 +7738,41 @@
     "objectID": "posts/programacao/ia/historia-ia/parte-4-o-inverno-da-ia.html#links-úteis",
     "href": "posts/programacao/ia/historia-ia/parte-4-o-inverno-da-ia.html#links-úteis",
     "title": "❄️ O Inverno da IA",
+    "section": "🔗 Links úteis",
+    "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-renascimento-da-ia",
+    "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-renascimento-da-ia",
+    "title": "🔁 O Renascimento da IA",
+    "section": "🧩 Quiz — Renascimento da IA",
+    "text": "🧩 Quiz — Renascimento da IA\n\nQ1. O renascimento da IA foi impulsionado principalmente por:\n\n\n\n\n ✗O abandono completo da estatística e dos dados.\n\n\n ✓Aprendizado de máquina, maior disponibilidade de dados e aumento da capacidade computacional.\n\n\n ✗A substituição imediata de todos os computadores por sistemas quânticos.\n\n\n\n\n\n\nQ2. Uma mudança importante desse período foi a passagem de sistemas baseados apenas em regras explícitas para sistemas capazes de:\n\n\n\n\n ✓Aprender padrões a partir de dados.\n\n\n ✗Evitar qualquer forma de avaliação.\n\n\n ✗Funcionar sem exemplos, sem computação e sem treinamento."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-svms-e-kernels",
+    "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-svms-e-kernels",
+    "title": "🔁 O Renascimento da IA",
+    "section": "🧩 Quiz — SVMs e kernels",
+    "text": "🧩 Quiz — SVMs e kernels\n\nQ3. As SVMs ganharam destaque porque:\n\n\n\n\n ✗Eram modelos voltados exclusivamente à geração de imagens.\n\n\n ✓Usavam margens e kernels para resolver problemas de classificação e reconhecimento de padrões.\n\n\n ✗Eliminavam completamente a necessidade de dados de treinamento."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-generalização",
+    "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-generalização",
+    "title": "🔁 O Renascimento da IA",
+    "section": "🧩 Quiz — Generalização",
+    "text": "🧩 Quiz — Generalização\n\nQ4. Em aprendizado de máquina, generalização significa:\n\n\n\n\n ✗Decorar exatamente todos os exemplos de treinamento.\n\n\n ✓Funcionar bem em dados novos que o modelo ainda não viu.\n\n\n ✗Eliminar a necessidade de validação e testes.\n\n\n\n\n\n\nQ5. Um modelo com variância muito alta tende a:\n\n\n\n\n ✗Ser simples demais e ignorar todos os padrões dos dados.\n\n\n ✓Ajustar-se demais aos dados de treinamento e falhar em novos exemplos.\n\n\n ✗Nunca precisar de regularização."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-deep-learning-e-imagenet",
+    "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#quiz-deep-learning-e-imagenet",
+    "title": "🔁 O Renascimento da IA",
+    "section": "🧩 Quiz — Deep learning e ImageNet",
+    "text": "🧩 Quiz — Deep learning e ImageNet\n\nQ6. A virada associada à ImageNet e à AlexNet mostrou que:\n\n\n\n\n ✓Redes profundas podiam obter resultados muito fortes em visão computacional quando combinadas com dados, GPUs e boas arquiteturas.\n\n\n ✗A IA simbólica havia resolvido definitivamente todos os problemas de percepção.\n\n\n ✗Benchmarks não tinham nenhuma importância para medir avanços."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#links-úteis",
+    "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#links-úteis",
+    "title": "🔁 O Renascimento da IA",
     "section": "🔗 Links úteis",
     "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
   }
