@@ -1,9 +1,9 @@
 ---
-title: "Origens e Sonhos"
+title: "🏛️ Origens e Sonhos"
 subtitle: "Dos autômatos à cibernética: quando a ideia de máquinas pensantes ganhou forma"
 description: "Pré-história da IA: mitos, autômatos, lógica, estatística e a virada cibernética."
 author: "Blog do Marcellini"
-date: 2026-05-08
+date: 2026-05-09
 lang: pt-BR
 categories: [história da computação, inteligência artificial]
 tags: [cibernética, autômatos, lógica, estatística, Norbert Wiener, Shannon]
@@ -21,7 +21,7 @@ format:
 
 > **Ideias de máquinas que pensam** antecedem os computadores digitais: aparecem em mitos, autômatos, sistemas lógicos, teorias da informação e modelos de controle.
 
-## Contexto histórico: antes de 1956
+## 🕰️ Contexto histórico: antes de 1956
 
 A Inteligência Artificial como campo de pesquisa só receberia esse nome em meados do século XX. Mas a pergunta que a sustenta é muito mais antiga: **seria possível construir algo capaz de imitar, automatizar ou reproduzir aspectos da inteligência humana?**
 
@@ -40,7 +40,27 @@ A pré-história da IA pode ser entendida como a convergência de algumas corren
 A **Inteligência Artificial** nasce do encontro entre três grandes tradições: **cálculo simbólico**, **probabilidade/estatística** e **sistemas de controle e comunicação**.
 :::
 
-## Dos autômatos ao sonho da máquina racional
+## 🧩 Quiz — Raízes da Inteligência Artificial
+
+:::::{.question}
+**Q1.** Segundo o texto, a pré-história da IA nasce da convergência entre:
+
+::::{.choices}
+:::{.choice}
+Apenas computadores pessoais, internet e smartphones.
+:::
+
+:::{.choice .correct-choice}
+Cálculo simbólico, probabilidade/estatística e sistemas de controle e comunicação.
+:::
+
+:::{.choice}
+Somente redes sociais e modelos de linguagem modernos.
+:::
+::::
+:::::
+
+## ⚙️ Dos autômatos ao sonho da máquina racional
 
 A ideia de construir máquinas que imitam a vida é antiga. Autômatos mecânicos existiram em várias épocas, muitas vezes como objetos de fascínio, demonstrações técnicas ou espetáculos.
 
@@ -48,7 +68,7 @@ O caso do **Turco Mecânico**, apresentado no século XVIII como uma máquina ca
 
 Essa pergunta reapareceria, de forma muito mais rigorosa, no século XX, com Alan Turing.
 
-## Lógica: transformar raciocínio em símbolos
+## 🧮 Lógica: transformar raciocínio em símbolos
 
 Outra raiz importante da IA está na tentativa de formalizar o pensamento.
 
@@ -58,7 +78,7 @@ Essa tradição alimentou uma ideia poderosa: se o raciocínio puder ser descrit
 
 Mais tarde, essa visão se tornaria uma das bases da chamada **IA simbólica**, ou **GOFAI** (*Good Old-Fashioned Artificial Intelligence*), que dominaria boa parte das primeiras décadas da área.
 
-## Estatística: raciocinar sob incerteza
+## 📊 Estatística: raciocinar sob incerteza
 
 Mas nem toda inteligência opera com regras exatas. Muitas decisões humanas envolvem incerteza, aproximação e evidência incompleta.
 
@@ -66,7 +86,7 @@ Por isso, a estatística e a teoria da probabilidade também são raízes fundam
 
 Essa vertente seria decisiva para o aprendizado de máquina moderno, especialmente a partir do final do século XX.
 
-## Cibernética e teoria da informação
+## 📡 Cibernética e teoria da informação
 
 Na década de 1940, duas ideias mudaram profundamente a forma de pensar máquinas, organismos e comunicação.
 
@@ -76,7 +96,45 @@ A segunda foi a **cibernética**, associada a Norbert Wiener. A cibernética est
 
 Essa noção aproximou máquinas, organismos e sistemas inteligentes em uma mesma linguagem conceitual.
 
-## McCulloch e Pitts: o neurônio lógico
+## 🧩 Quiz — Cibernética e informação
+
+:::::{.question}
+**Q2.** A teoria da informação de Shannon foi importante porque:
+
+::::{.choices}
+:::{.choice}
+Eliminou a necessidade de computadores digitais.
+:::
+
+:::{.choice .correct-choice}
+Permitiu tratar informação, ruído, canal e codificação de forma matemática.
+:::
+
+:::{.choice}
+Criou diretamente os grandes modelos de linguagem atuais.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** Na cibernética, a ideia de **feedback** está relacionada a:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Um sistema ajustar seu comportamento com base nos efeitos de suas próprias ações.
+:::
+
+:::{.choice}
+Um computador armazenar todos os textos possíveis.
+:::
+
+:::{.choice}
+Uma máquina funcionar sem qualquer entrada externa.
+:::
+::::
+:::::
+
+## 🧠 McCulloch e Pitts: o neurônio lógico
 
 Em 1943, Warren McCulloch e Walter Pitts propuseram um modelo lógico simplificado de neurônios. A ideia era representar neurônios como unidades formais que recebem entradas, aplicam uma regra e produzem uma saída.
 
@@ -84,35 +142,55 @@ Esse modelo estava muito distante das redes neurais modernas, mas abriu um camin
 
 A partir daí, a pergunta sobre máquinas inteligentes ganhou uma nova forma: talvez a inteligência pudesse ser estudada como **computação**.
 
-## Linha do tempo essencial
+## 🧩 Quiz — Neurônio lógico
+
+:::::{.question}
+**Q4.** O modelo de McCulloch e Pitts foi importante porque:
+
+::::{.choices}
+:::{.choice}
+Mostrou que neurônios biológicos poderiam ser ignorados pela ciência.
+:::
+
+:::{.choice}
+Provou que computadores já eram conscientes em 1943.
+:::
+
+:::{.choice .correct-choice}
+Sugeriu que certos aspectos do cérebro poderiam ser modelados como processamento formal de informação.
+:::
+::::
+:::::
+
+## 🗓️ Linha do tempo essencial
 
 - **1943** — McCulloch e Pitts propõem um modelo lógico de neurônios.
 - **1948** — Shannon publica a teoria matemática da comunicação.
 - **1948–1950** — Wiener consolida a cibernética e a noção de feedback.
 - **1950** — Turing publica *Computing Machinery and Intelligence*.
 
-## Conceitos-chave
+## 🔑 Conceitos-chave
 
 - **Simbólico vs. estatístico:** duas formas diferentes de representar inteligência: por regras e símbolos ou por padrões e probabilidades.
 - **Feedback e homeostase:** mecanismos pelos quais sistemas ajustam seu comportamento a partir dos próprios resultados.
 - **Informação, ruído e codificação:** conceitos fundamentais para entender comunicação, computação e aprendizado.
 - **Máquinas e comportamento inteligente:** a ideia de avaliar inteligência pelo comportamento observável, e não por uma essência interna misteriosa.
 
-## Personagens em foco
+## 👥 Personagens em foco
 
 - **Norbert Wiener** — cibernética, feedback e sistemas de controle.
 - **Claude Shannon** — teoria da informação e comunicação.
 - **Warren McCulloch** e **Walter Pitts** — modelo lógico de neurônios.
 - **Alan Turing** — computação, inteligência e a pergunta sobre máquinas pensantes.
 
-## Leituras sugeridas
+## 📚 Leituras sugeridas
 
 - **WIENER, Norbert.** *Cybernetics: Or Control and Communication in the Animal and the Machine*. 1948.
 - **SHANNON, Claude E.** “A Mathematical Theory of Communication”. 1948.
 - **TURING, Alan M.** “Computing Machinery and Intelligence”. 1950.
 - **MINDELL, David A.** *Between Human and Machine: Feedback, Control, and Computing before Cybernetics*. Johns Hopkins University Press, 2002.
 
-## Síntese
+## ✅ Síntese
 
 Antes de existir uma disciplina chamada **Inteligência Artificial**, já havia muitas peças do quebra-cabeça: a ideia de máquinas que imitam a vida, a formalização da lógica, o estudo estatístico da incerteza, a teoria da informação e a cibernética.
 
@@ -122,7 +200,28 @@ Essa pergunta ganharia forma institucional em 1956, no encontro de Dartmouth —
 
 ---
 
-## Navegação
+## 🔗 Navegação
 
-- ← **Anterior:** [Página da Série](index.qmd)
-- → **Próximo:** [Nascimento da IA](parte-2-nascimento-da-ia.qmd)
+🎯 **Anterior:** 👉 [Página da Série](index.qmd)
+
+🎯 **Próximo:** 👉 [Nascimento da IA](parte-2-nascimento-da-ia.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← História da IA](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
