@@ -871,15 +871,15 @@
     "objectID": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#em-resumo",
     "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#em-resumo",
     "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
-    "section": "👉 Em Resumo",
-    "text": "👉 Em Resumo\n\n\n\n\n\n\nDica🤖 Por que dizemos que um LLM não ‘nasce pronto’?\n\n\n\nUm Large Language Model (LLM) não surge já sabendo responder perguntas, traduzir textos ou escrever código.\nEle precisa passar por um processo de treinamento em camadas:\n\nPré-treinamento:\n\nO modelo lê bilhões de palavras.\n\nAprende as estatísticas da linguagem: gramática, vocabulário, estilo, associações.\n\nResultado: um modelo que completa frases, mas ainda não é um bom “assistente”.\n\nFine-Tuning (ajuste supervisionado):\n\nRecebe dados rotulados por humanos (ex.: pares de pergunta → resposta).\n\nAprende a seguir instruções e dar respostas úteis.\n\nResultado: começa a agir como uma ferramenta prática.\n\nRLHF (Reinforcement Learning with Human Feedback):\n\nPessoas avaliam respostas e dão preferências.\n\nUm modelo de recompensa orienta o LLM principal.\n\nResultado: o modelo aprende a responder do jeito que preferimos.\n\n\n👉 Assim como uma criança passa por aprendizado básico, depois educação formal e finalmente ajustes sociais, um LLM também precisa dessas fases para se tornar um assistente confiável."
+    "section": "👉 Em resumo",
+    "text": "👉 Em resumo\n\n\n\n\n\n\nDica🤖 Por que dizemos que um LLM não ‘nasce pronto’?\n\n\n\nUm Large Language Model (LLM) não surge já sabendo responder perguntas, traduzir textos ou escrever código.\nEle passa por um processo de treinamento em camadas:\n\nPré-treinamento:\n\nlê grandes volumes de texto;\naprende padrões gerais da linguagem;\ntorna-se capaz de completar sequências de texto.\n\nFine-tuning supervisionado:\n\nrecebe exemplos mais específicos;\naprende a seguir instruções;\npassa a responder de modo mais útil em tarefas práticas.\n\nRLHF:\n\nincorpora preferências humanas;\nusa rankings de respostas;\najusta o comportamento do modelo para respostas mais úteis, seguras e alinhadas.\n\n\nAssim como uma pessoa passa por aprendizado básico, educação orientada e ajustes sociais, um LLM também precisa de etapas sucessivas para se tornar um assistente útil."
   },
   {
     "objectID": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#conclusão",
     "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#conclusão",
     "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
     "section": "✅ Conclusão",
-    "text": "✅ Conclusão\nO treinamento de um LLM acontece em camadas:\n\nPré-treinamento → ensina a linguagem em geral.\n\nFine-tuning → adapta para seguir instruções.\n\nRLHF → refina com preferências humanas.\n\n👉 Graças a esse processo, temos hoje modelos que não apenas geram texto coerente, mas também interagem de forma útil e alinhada com as necessidades humanas.\n\n✍️ Este post faz parte da série sobre LLMs no Blog do Marcellini.\nNo próximo post, vamos explorar os desafios e limitações dos LLMs: vieses, alucinações e custos de treinamento. ⚠️"
+    "text": "✅ Conclusão\nO treinamento de um LLM acontece em camadas:\n\nPré-treinamento → ensina padrões gerais da linguagem.\nFine-tuning → adapta o modelo para seguir instruções.\nRLHF → refina o comportamento com preferências humanas.\n\nEsse processo transforma um modelo estatístico de linguagem em um sistema mais útil para conversação, programação, resumo, tradução, explicação e várias outras tarefas.\nNo próximo post, vamos explorar os desafios e limitações dos LLMs: vieses, alucinações, custos computacionais e riscos de uso. ⚠"
   },
   {
     "objectID": "posts/programacao/ia/llms/futuro-ia-llms.html",
@@ -7514,6 +7514,27 @@
     "objectID": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#links-úteis",
     "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#links-úteis",
     "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
+    "section": "🔗 Links úteis",
+    "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#quiz-etapas-do-treinamento",
+    "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#quiz-etapas-do-treinamento",
+    "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
+    "section": "🧩 Quiz — Etapas do treinamento",
+    "text": "🧩 Quiz — Etapas do treinamento\n\nQ4. Qual sequência descreve melhor o treinamento típico de um LLM moderno?\n\n\n\n\n ✗RLHF → pré-treinamento → fine-tuning.\n\n\n ✓Pré-treinamento → fine-tuning → RLHF.\n\n\n ✗Fine-tuning → tokenização → remoção do modelo de recompensa."
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#navegação",
+    "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#navegação",
+    "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
+    "section": "🔗 Navegação",
+    "text": "🔗 Navegação\n🎯 Post anterior: 👉 Atenção em Transformers: Q, K, V e Multi-Head Attention 🎯 Próximo post: 👉 Desafios e Limitações dos LLMs\n\n\n· ← Série de LLMs 🤖 · 🔝 Topo\n\n\n\n\n\n\n\nDicaSobre o projeto\n\n\n\nEste site nasce da vontade de expor ideias com boa matemática, boa tipografia e boas explicações.\nQuer saber a linha editorial, tecnologias e bastidores?\n📘 Ler “Sobre o Blog e Sobre Mim” ›\n\n\n\n\n\n\n\n\nNota\n\n\n\nCriado por Blog do Marcellini com ❤ e código."
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#links-úteis",
+    "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#links-úteis",
+    "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
     "section": "🔗 Links úteis",
     "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
   }
