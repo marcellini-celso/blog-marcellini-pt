@@ -1,9 +1,9 @@
 ---
-title: "Nascimento da IA"
+title: "🧪 Nascimento da IA"
 subtitle: "De Turing a Dartmouth (1940–1956)"
 description: "A formalização da pergunta 'máquinas podem pensar?' e a fundação do campo em 1956."
 author: "Blog do Marcellini"
-date: 2026-05-08
+date: 2026-05-09
 lang: pt-BR
 categories: [história da computação, inteligência artificial]
 tags: [Turing, teste de Turing, Dartmouth, McCarthy, Minsky, Newell, Simon, Logic Theorist]
@@ -21,7 +21,7 @@ format:
 
 > Em meados do século XX, a pergunta deixou de ser apenas filosófica: **será que uma máquina poderia exibir comportamento inteligente?**
 
-## Contexto: de Turing a Dartmouth
+## 🧭 Contexto: de Turing a Dartmouth
 
 Entre as décadas de 1940 e 1950, várias ideias que estavam dispersas começaram a se aproximar. A lógica formal, a computação, a teoria da informação, a cibernética e os primeiros programas de computador criaram o ambiente intelectual no qual a **Inteligência Artificial** poderia nascer como campo de pesquisa.
 
@@ -29,7 +29,7 @@ A pergunta central foi formulada de maneira célebre por **Alan Turing** em 1950
 
 Essa mudança foi decisiva. Em vez de tentar definir a essência do pensamento, Turing deslocou o problema para o comportamento observável: se uma máquina consegue conversar de modo indistinguível de um ser humano em certas condições, que razões teríamos para negar que ela manifesta algum tipo de inteligência?
 
-## O jogo da imitação
+## 🎭 O jogo da imitação
 
 O chamado **teste de Turing** não era uma prova definitiva de consciência, compreensão ou mente. Era, antes, uma provocação metodológica.
 
@@ -38,7 +38,7 @@ Turing queria mostrar que a discussão sobre máquinas inteligentes poderia ser 
 Essa ideia abriu caminho para uma abordagem muito importante na IA: avaliar inteligência por meio de tarefas, desempenho, interação e solução de problemas.
 
 ::: {.callout-note}
-### Ideia central
+### 💡 Ideia central
 
 O teste de Turing desloca a pergunta:
 
@@ -46,7 +46,45 @@ O teste de Turing desloca a pergunta:
 > **ela consegue agir, responder ou resolver problemas de modo que associamos à inteligência?**
 :::
 
-## Dartmouth, 1956: o nascimento oficial da IA
+## 🧩 Quiz — Turing e o jogo da imitação
+
+:::::{.question}
+**Q1.** O teste de Turing desloca a discussão sobre inteligência para:
+
+::::{.choices}
+:::{.choice}
+A composição química dos computadores.
+:::
+
+:::{.choice .correct-choice}
+O comportamento observável da máquina em uma situação de interação.
+:::
+
+:::{.choice}
+A velocidade do processador usado no experimento.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** No contexto do texto, o jogo da imitação é importante porque:
+
+::::{.choices}
+:::{.choice}
+Define consciência de maneira definitiva.
+:::
+
+:::{.choice}
+Mostra que máquinas não podem manipular símbolos.
+:::
+
+:::{.choice .correct-choice}
+Propõe uma forma operacional de discutir se uma máquina exibe comportamento inteligente.
+:::
+::::
+:::::
+
+## 🧪 Dartmouth, 1956: o nascimento oficial da IA
 
 Em 1956, ocorreu o famoso encontro de Dartmouth, organizado por nomes como **John McCarthy**, **Marvin Minsky**, **Claude Shannon** e **Nathaniel Rochester**.
 
@@ -56,7 +94,27 @@ A proposta era ambiciosa: estudar como aspectos da aprendizagem, do raciocínio,
 
 Era uma aposta ousada. A IA nascia com uma confiança muito forte no poder da formalização: se a inteligência pudesse ser decomposta em símbolos, regras, buscas e procedimentos, então computadores poderiam reproduzir partes importantes dela.
 
-## Logic Theorist: uma máquina que prova teoremas
+## 🧩 Quiz — Dartmouth e o nascimento da IA
+
+:::::{.question}
+**Q3.** O encontro de Dartmouth é lembrado principalmente porque:
+
+::::{.choices}
+:::{.choice}
+Criou os primeiros smartphones com inteligência artificial.
+:::
+
+:::{.choice .correct-choice}
+Ajudou a consolidar a Inteligência Artificial como campo de pesquisa.
+:::
+
+:::{.choice}
+Encerrou definitivamente a pesquisa em computação simbólica.
+:::
+::::
+:::::
+
+## 🧮 Logic Theorist: uma máquina que prova teoremas
 
 No mesmo período, **Allen Newell** e **Herbert A. Simon**, com colaboração de **J. C. Shaw**, desenvolveram o **Logic Theorist**, um dos primeiros programas de IA.
 
@@ -66,7 +124,7 @@ O impacto simbólico foi enorme: pela primeira vez, um programa de computador pa
 
 O **Logic Theorist** não era inteligente no sentido amplo que hoje imaginamos, mas mostrava algo fundamental: computadores poderiam manipular símbolos, aplicar regras e explorar caminhos possíveis para resolver problemas.
 
-## Busca, representação e heurísticas
+## 🔎 Busca, representação e heurísticas
 
 A IA nascente se apoiou em três ideias técnicas fundamentais.
 
@@ -78,14 +136,52 @@ A terceira foi o uso de **heurísticas**. Como muitos problemas têm um número 
 
 Essas ideias marcariam profundamente a IA simbólica das décadas seguintes.
 
-## Linha do tempo essencial
+## 🧩 Quiz — Busca, representação e heurísticas
+
+:::::{.question}
+**Q4.** Em IA simbólica, uma **heurística** é:
+
+::::{.choices}
+:::{.choice}
+Uma garantia matemática de que a máquina sempre encontrará a melhor resposta.
+:::
+
+:::{.choice .correct-choice}
+Uma estratégia aproximada que ajuda a escolher caminhos promissores em um espaço de busca.
+:::
+
+:::{.choice}
+Um tipo de memória física usado apenas em computadores antigos.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q5.** A representação de conhecimento é importante porque:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Permite codificar informações, regras e objetivos relevantes para resolver problemas.
+:::
+
+:::{.choice}
+Elimina qualquer necessidade de busca.
+:::
+
+:::{.choice}
+Substitui completamente dados, linguagem e contexto.
+:::
+::::
+:::::
+
+## 🗓️ Linha do tempo essencial
 
 - **1950** — Alan Turing publica *Computing Machinery and Intelligence* e propõe o jogo da imitação.
 - **1955–1956** — McCarthy, Minsky, Shannon e Rochester formulam a proposta do projeto de Dartmouth.
 - **1956** — O encontro de Dartmouth ajuda a consolidar a IA como campo de pesquisa.
 - **1956** — Newell, Simon e Shaw desenvolvem o **Logic Theorist**, um dos primeiros programas de raciocínio automático.
 
-## Conceitos-chave
+## 🔑 Conceitos-chave
 
 - **Teste de Turing:** critério comportamental para discutir inteligência em máquinas.
 - **Busca em espaço de estados:** formulação de problemas como sequências de escolhas.
@@ -93,7 +189,7 @@ Essas ideias marcariam profundamente a IA simbólica das décadas seguintes.
 - **Heurísticas:** estratégias que orientam a busca por soluções sem testar todas as possibilidades.
 - **IA simbólica:** abordagem baseada em símbolos, regras, lógica e manipulação formal.
 
-## Personagens em foco
+## 👥 Personagens em foco
 
 - **Alan Turing** — formulou o jogo da imitação e ajudou a estabelecer as bases conceituais da computação.
 - **John McCarthy** — associado à criação do termo *Artificial Intelligence* e ao projeto de Dartmouth.
@@ -102,14 +198,14 @@ Essas ideias marcariam profundamente a IA simbólica das décadas seguintes.
 - **Allen Newell** e **Herbert A. Simon** — criadores do **Logic Theorist** e figuras centrais da IA simbólica.
 - **J. C. Shaw** — colaborador técnico no desenvolvimento do Logic Theorist.
 
-## Leituras sugeridas
+## 📚 Leituras sugeridas
 
 - **TURING, Alan M.** “Computing Machinery and Intelligence”. *Mind*, 1950.
 - **MCCARTHY, John; MINSKY, Marvin; ROCHESTER, Nathaniel; SHANNON, Claude.** “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence”. 1955.
 - **CREVIER, Daniel.** *AI: The Tumultuous History of the Search for Artificial Intelligence*. Basic Books, 1993.
 - **NILSSON, Nils J.** *The Quest for Artificial Intelligence: A History of Ideas and Achievements*. Cambridge University Press, 2010.
 
-## Síntese
+## ✅ Síntese
 
 O nascimento da IA não foi um evento isolado. Ele resultou da convergência entre computação, lógica, teoria da informação, cibernética e ambição científica.
 
@@ -119,7 +215,28 @@ A partir daí, a IA entraria em sua primeira fase de grande entusiasmo: os anos 
 
 ---
 
-## Navegação
+## 🔗 Navegação
 
-- ← **Anterior:** [Origens e Sonhos](parte-1-origens-e-sonhos.qmd)
-- → **Próximo:** [Os Anos Dourados](parte-3-os-anos-dourados.qmd)
+🎯 **Anterior:** 👉 [Origens e Sonhos](parte-1-origens-e-sonhos.qmd)
+
+🎯 **Próximo:** 👉 [Os Anos Dourados](parte-3-os-anos-dourados.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← História da IA](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
