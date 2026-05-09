@@ -709,128 +709,128 @@
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html",
-    "title": "A Era dos Modelos Generativos",
+    "title": "🤖 A Era dos Modelos Generativos",
     "section": "",
     "text": "A combinação entre dados em larga escala, arquiteturas de atenção, hardware acelerado e pré-treinamento massivo inaugurou a era dos modelos generativos."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#do-deep-learning-aos-modelos-generativos",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#do-deep-learning-aos-modelos-generativos",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Do deep learning aos modelos generativos",
-    "text": "Do deep learning aos modelos generativos\nDepois da virada do deep learning, a IA passou a obter resultados impressionantes em visão computacional, reconhecimento de fala, tradução automática e processamento de linguagem natural.\nMas uma nova transformação aconteceria quando os modelos deixaram de ser apenas classificadores ou sistemas especializados em uma única tarefa e passaram a ser treinados em grandes volumes de dados para produzir novos conteúdos: textos, imagens, código, áudio, vídeo e combinações multimodais.\nEssa é a era dos modelos generativos.\nEm vez de apenas reconhecer padrões, esses sistemas passaram a gerar saídas complexas: completar frases, responder perguntas, escrever programas, criar imagens, resumir documentos, traduzir textos e simular diálogos.\n\n\n\n\n\n\nNotaResumo em uma frase\n\n\n\nA era dos modelos generativos nasce quando a IA combina escala, atenção, pré-treinamento massivo e modelos capazes de gerar conteúdo novo."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🤖 Do deep learning aos modelos generativos",
+    "text": "🤖 Do deep learning aos modelos generativos\nDepois da virada do deep learning, a IA passou a obter resultados impressionantes em visão computacional, reconhecimento de fala, tradução automática e processamento de linguagem natural.\nMas uma nova transformação aconteceria quando os modelos deixaram de ser apenas classificadores ou sistemas especializados em uma única tarefa e passaram a ser treinados em grandes volumes de dados para produzir novos conteúdos: textos, imagens, código, áudio, vídeo e combinações multimodais.\nEssa é a era dos modelos generativos.\nEm vez de apenas reconhecer padrões, esses sistemas passaram a gerar saídas complexas: completar frases, responder perguntas, escrever programas, criar imagens, resumir documentos, traduzir textos e simular diálogos.\n\n\n\n\n\n\nNota💡 Resumo em uma frase\n\n\n\nA era dos modelos generativos nasce quando a IA combina escala, atenção, pré-treinamento massivo e modelos capazes de gerar conteúdo novo."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#a-arquitetura-transformer",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#a-arquitetura-transformer",
-    "title": "A Era dos Modelos Generativos",
-    "section": "A arquitetura Transformer",
-    "text": "A arquitetura Transformer\nUm marco decisivo foi a arquitetura Transformer, apresentada em 2017 no artigo Attention Is All You Need.\nAntes dos Transformers, muitos modelos de linguagem dependiam de arquiteturas recorrentes, como RNNs e LSTMs. Esses modelos processavam sequências passo a passo, o que dificultava paralelização e tornava mais difícil capturar dependências longas.\nO Transformer mudou esse cenário ao colocar o mecanismo de atenção no centro da arquitetura.\nA atenção permite que o modelo relacione diferentes partes de uma sequência, atribuindo maior ou menor importância a palavras, tokens ou trechos conforme o contexto.\nEssa mudança tornou possível treinar modelos maiores, mais paralelizáveis e mais eficientes em grandes volumes de texto."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🧱 A arquitetura Transformer",
+    "text": "🧱 A arquitetura Transformer\nUm marco decisivo foi a arquitetura Transformer, apresentada em 2017 no artigo Attention Is All You Need.\nAntes dos Transformers, muitos modelos de linguagem dependiam de arquiteturas recorrentes, como RNNs e LSTMs. Esses modelos processavam sequências passo a passo, o que dificultava paralelização e tornava mais difícil capturar dependências longas.\nO Transformer mudou esse cenário ao colocar o mecanismo de atenção no centro da arquitetura.\nA atenção permite que o modelo relacione diferentes partes de uma sequência, atribuindo maior ou menor importância a palavras, tokens ou trechos conforme o contexto.\nEssa mudança tornou possível treinar modelos maiores, mais paralelizáveis e mais eficientes em grandes volumes de texto."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#atenção-contexto-como-relação",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#atenção-contexto-como-relação",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Atenção: contexto como relação",
-    "text": "Atenção: contexto como relação\nA grande ideia por trás da atenção é que o significado de um elemento depende de suas relações com outros elementos.\nEm uma frase, uma palavra não tem valor isolado. Ela ganha sentido pelo contexto. O mecanismo de atenção permite que o modelo calcule relações entre tokens e use essas relações para construir representações mais ricas.\nEm modelos de linguagem, isso é especialmente importante. A mesma palavra pode ter sentidos diferentes dependendo do contexto, e uma frase pode depender de informações que apareceram muito antes no texto.\nA atenção tornou os modelos mais capazes de lidar com dependências longas, ambiguidade e estrutura textual."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "✨ Atenção: contexto como relação",
+    "text": "✨ Atenção: contexto como relação\nA grande ideia por trás da atenção é que o significado de um elemento depende de suas relações com outros elementos.\nEm uma frase, uma palavra não tem valor isolado. Ela ganha sentido pelo contexto. O mecanismo de atenção permite que o modelo calcule relações entre tokens e use essas relações para construir representações mais ricas.\nEm modelos de linguagem, isso é especialmente importante. A mesma palavra pode ter sentidos diferentes dependendo do contexto, e uma frase pode depender de informações que apareceram muito antes no texto.\nA atenção tornou os modelos mais capazes de lidar com dependências longas, ambiguidade e estrutura textual."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#pré-treinamento-em-larga-escala",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#pré-treinamento-em-larga-escala",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Pré-treinamento em larga escala",
-    "text": "Pré-treinamento em larga escala\nOutro ingrediente fundamental foi o pré-treinamento.\nEm vez de treinar um modelo do zero para cada tarefa específica, a estratégia passou a ser treinar grandes modelos em enormes coleções de texto, código, imagens ou outros dados. Durante esse processo, o modelo aprende regularidades gerais: padrões linguísticos, relações semânticas, estruturas de documentos, estilos de escrita e até formas de raciocínio estatístico.\nDepois, esse modelo pode ser adaptado para tarefas específicas por meio de ajuste fino, instruções ou técnicas de alinhamento.\nEssa lógica mudou profundamente a IA:\n\nprimeiro, treina-se um modelo geral;\ndepois, adapta-se esse modelo para usos específicos.\n\nÉ a base do que hoje chamamos de modelos fundacionais."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "📚 Pré-treinamento em larga escala",
+    "text": "📚 Pré-treinamento em larga escala\nOutro ingrediente fundamental foi o pré-treinamento.\nEm vez de treinar um modelo do zero para cada tarefa específica, a estratégia passou a ser treinar grandes modelos em enormes coleções de texto, código, imagens ou outros dados. Durante esse processo, o modelo aprende regularidades gerais: padrões linguísticos, relações semânticas, estruturas de documentos, estilos de escrita e até formas de raciocínio estatístico.\nDepois, esse modelo pode ser adaptado para tarefas específicas por meio de ajuste fino, instruções ou técnicas de alinhamento.\nEssa lógica mudou profundamente a IA:\n\nprimeiro, treina-se um modelo geral;\ndepois, adapta-se esse modelo para usos específicos.\n\nÉ a base do que hoje chamamos de modelos fundacionais."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#modelos-fundacionais",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#modelos-fundacionais",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Modelos fundacionais",
-    "text": "Modelos fundacionais\nA expressão foundation models se refere a modelos treinados em larga escala, capazes de servir como base para muitas aplicações diferentes.\nUm mesmo modelo pode ser usado para:\n\nresponder perguntas;\nresumir textos;\ntraduzir;\nescrever código;\nclassificar documentos;\nauxiliar na análise de dados;\ngerar imagens;\natuar como componente de sistemas maiores.\n\nEssa flexibilidade tornou os modelos fundacionais muito importantes, mas também levantou novas questões: custo computacional, concentração tecnológica, vieses, segurança, propriedade dos dados, impacto ambiental e governança."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🏗️ Modelos fundacionais",
+    "text": "🏗️ Modelos fundacionais\nA expressão foundation models se refere a modelos treinados em larga escala, capazes de servir como base para muitas aplicações diferentes.\nUm mesmo modelo pode ser usado para:\n\nresponder perguntas;\nresumir textos;\ntraduzir;\nescrever código;\nclassificar documentos;\nauxiliar na análise de dados;\ngerar imagens;\natuar como componente de sistemas maiores.\n\nEssa flexibilidade tornou os modelos fundacionais muito importantes, mas também levantou novas questões: custo computacional, concentração tecnológica, vieses, segurança, propriedade dos dados, impacto ambiental e governança."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#bert-gpt-e-duas-tradições-de-linguagem",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#bert-gpt-e-duas-tradições-de-linguagem",
-    "title": "A Era dos Modelos Generativos",
-    "section": "BERT, GPT e duas tradições de linguagem",
-    "text": "BERT, GPT e duas tradições de linguagem\nNo processamento de linguagem natural, dois caminhos ficaram especialmente conhecidos.\nModelos como BERT exploraram a ideia de representação contextual bidirecional. Eles foram muito importantes em tarefas de compreensão, classificação, busca e análise de texto.\nJá a família GPT popularizou modelos autoregressivos treinados para prever o próximo token. Essa estratégia, combinada com escala, mostrou-se extremamente poderosa para geração de texto.\nEssas duas tradições ajudaram a transformar o processamento de linguagem natural. A linguagem deixou de ser tratada apenas como sequência de palavras e passou a ser modelada por representações contextuais profundas."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "💬 BERT, GPT e duas tradições de linguagem",
+    "text": "💬 BERT, GPT e duas tradições de linguagem\nNo processamento de linguagem natural, dois caminhos ficaram especialmente conhecidos.\nModelos como BERT exploraram a ideia de representação contextual bidirecional. Eles foram muito importantes em tarefas de compreensão, classificação, busca e análise de texto.\nJá a família GPT popularizou modelos autoregressivos treinados para prever o próximo token. Essa estratégia, combinada com escala, mostrou-se extremamente poderosa para geração de texto.\nEssas duas tradições ajudaram a transformar o processamento de linguagem natural. A linguagem deixou de ser tratada apenas como sequência de palavras e passou a ser modelada por representações contextuais profundas."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#instruções-alinhamento-e-rlhf",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#instruções-alinhamento-e-rlhf",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Instruções, alinhamento e RLHF",
-    "text": "Instruções, alinhamento e RLHF\nTreinar um modelo grande em texto não é suficiente para torná-lo útil como assistente.\nUm modelo pode saber completar frases, mas isso não significa que ele saiba seguir instruções, responder de modo seguro, admitir incerteza ou evitar respostas problemáticas.\nPor isso, ganharam importância técnicas de alinhamento, incluindo treinamento com instruções e RLHF (Reinforcement Learning from Human Feedback).\nA ideia geral é ajustar o comportamento do modelo para que suas respostas fiquem mais próximas das preferências humanas: mais úteis, claras, seguras e adequadas ao contexto.\nEsse processo não resolve todos os problemas, mas tornou os LLMs muito mais utilizáveis em aplicações práticas."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🎯 Instruções, alinhamento e RLHF",
+    "text": "🎯 Instruções, alinhamento e RLHF\nTreinar um modelo grande em texto não é suficiente para torná-lo útil como assistente.\nUm modelo pode saber completar frases, mas isso não significa que ele saiba seguir instruções, responder de modo seguro, admitir incerteza ou evitar respostas problemáticas.\nPor isso, ganharam importância técnicas de alinhamento, incluindo treinamento com instruções e RLHF (Reinforcement Learning from Human Feedback).\nA ideia geral é ajustar o comportamento do modelo para que suas respostas fiquem mais próximas das preferências humanas: mais úteis, claras, seguras e adequadas ao contexto.\nEsse processo não resolve todos os problemas, mas tornou os LLMs muito mais utilizáveis em aplicações práticas."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#difusão-e-geração-de-imagens",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#difusão-e-geração-de-imagens",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Difusão e geração de imagens",
-    "text": "Difusão e geração de imagens\nA geração de conteúdo não ficou restrita ao texto.\nModelos de difusão ganharam grande destaque na geração de imagens. De forma simplificada, esses modelos aprendem a transformar ruído em uma imagem coerente, condicionada por texto ou outras entradas.\nEssa abordagem permitiu avanços importantes em geração de imagens, edição visual, design, ilustração, vídeo e aplicações multimodais.\nCom isso, a IA generativa passou a atuar em várias linguagens: texto, imagem, áudio, vídeo e código."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🖼️ Difusão e geração de imagens",
+    "text": "🖼️ Difusão e geração de imagens\nA geração de conteúdo não ficou restrita ao texto.\nModelos de difusão ganharam grande destaque na geração de imagens. De forma simplificada, esses modelos aprendem a transformar ruído em uma imagem coerente, condicionada por texto ou outras entradas.\nEssa abordagem permitiu avanços importantes em geração de imagens, edição visual, design, ilustração, vídeo e aplicações multimodais.\nCom isso, a IA generativa passou a atuar em várias linguagens: texto, imagem, áudio, vídeo e código."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#multimodalidade",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#multimodalidade",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Multimodalidade",
-    "text": "Multimodalidade\nA etapa seguinte foi a multimodalidade.\nModelos multimodais combinam diferentes tipos de entrada e saída: texto, imagem, áudio, vídeo, tabelas, documentos e código.\nIsso aproxima a IA de usos mais naturais. Uma pessoa pode enviar uma imagem e fazer perguntas sobre ela, pedir análise de um gráfico, resumir um documento, gerar código a partir de uma descrição ou combinar texto e imagem em uma mesma tarefa.\nA multimodalidade amplia a noção de interface: a interação com a máquina deixa de depender apenas de comandos formais e passa a se aproximar de uma conversa com múltiplos tipos de conteúdo."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🌐 Multimodalidade",
+    "text": "🌐 Multimodalidade\nA etapa seguinte foi a multimodalidade.\nModelos multimodais combinam diferentes tipos de entrada e saída: texto, imagem, áudio, vídeo, tabelas, documentos e código.\nIsso aproxima a IA de usos mais naturais. Uma pessoa pode enviar uma imagem e fazer perguntas sobre ela, pedir análise de um gráfico, resumir um documento, gerar código a partir de uma descrição ou combinar texto e imagem em uma mesma tarefa.\nA multimodalidade amplia a noção de interface: a interação com a máquina deixa de depender apenas de comandos formais e passa a se aproximar de uma conversa com múltiplos tipos de conteúdo."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#contexto-longo-e-agentes",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#contexto-longo-e-agentes",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Contexto longo e agentes",
-    "text": "Contexto longo e agentes\nCom modelos mais capazes, surgiram também sistemas com janelas de contexto maiores e propostas de agentes de IA.\nJanelas de contexto maiores permitem que o modelo considere documentos extensos, conversas longas, bases de conhecimento e cadeias de instruções mais complexas.\nAgentes de IA, por sua vez, são sistemas que usam modelos como componentes de uma arquitetura maior. Eles podem planejar etapas, chamar ferramentas, consultar arquivos, executar código, navegar em ambientes e interagir com outros sistemas.\nEssa área ainda está em desenvolvimento e exige cautela. Quanto mais autonomia se dá a um sistema, maior a necessidade de controle, avaliação, segurança e supervisão humana."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🧭 Contexto longo e agentes",
+    "text": "🧭 Contexto longo e agentes\nCom modelos mais capazes, surgiram também sistemas com janelas de contexto maiores e propostas de agentes de IA.\nJanelas de contexto maiores permitem que o modelo considere documentos extensos, conversas longas, bases de conhecimento e cadeias de instruções mais complexas.\nAgentes de IA, por sua vez, são sistemas que usam modelos como componentes de uma arquitetura maior. Eles podem planejar etapas, chamar ferramentas, consultar arquivos, executar código, navegar em ambientes e interagir com outros sistemas.\nEssa área ainda está em desenvolvimento e exige cautela. Quanto mais autonomia se dá a um sistema, maior a necessidade de controle, avaliação, segurança e supervisão humana."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#escalonamento-e-leis-de-escala",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#escalonamento-e-leis-de-escala",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Escalonamento e leis de escala",
-    "text": "Escalonamento e leis de escala\nUm dos fenômenos mais importantes dessa era foi o escalonamento.\nPesquisadores observaram que, em muitos casos, aumentar dados, parâmetros e computação melhorava o desempenho dos modelos de forma previsível. Isso levou ao estudo das chamadas scaling laws, ou leis de escala.\nEssa percepção orientou a construção de modelos cada vez maiores.\nMas a escala também tem custos:\n\nalto consumo computacional;\ndemanda energética;\nconcentração de infraestrutura;\ndificuldade de auditoria;\ndependência de grandes bases de dados;\nriscos de reprodução de vieses.\n\nA era generativa, portanto, é também uma era de perguntas sociais, econômicas e políticas."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "📈 Escalonamento e leis de escala",
+    "text": "📈 Escalonamento e leis de escala\nUm dos fenômenos mais importantes dessa era foi o escalonamento.\nPesquisadores observaram que, em muitos casos, aumentar dados, parâmetros e computação melhorava o desempenho dos modelos de forma previsível. Isso levou ao estudo das chamadas scaling laws, ou leis de escala.\nEssa percepção orientou a construção de modelos cada vez maiores.\nMas a escala também tem custos:\n\nalto consumo computacional;\ndemanda energética;\nconcentração de infraestrutura;\ndificuldade de auditoria;\ndependência de grandes bases de dados;\nriscos de reprodução de vieses.\n\nA era generativa, portanto, é também uma era de perguntas sociais, econômicas e políticas."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#linha-do-tempo-essencial",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#linha-do-tempo-essencial",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Linha do tempo essencial",
-    "text": "Linha do tempo essencial\n\n2017 — A arquitetura Transformer é apresentada.\n2018–2020 — Modelos como BERT e GPT consolidam o pré-treinamento em larga escala.\n2020–2022 — Grandes modelos de linguagem ganham escala e se tornam mais úteis em tarefas gerais.\n2022–2024 — IA generativa se populariza em texto, imagem, código e aplicações multimodais.\n2024 em diante — Crescem os debates sobre agentes, contexto longo, governança, segurança, custo computacional e impacto social."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🗓️ Linha do tempo essencial",
+    "text": "🗓️ Linha do tempo essencial\n\n2017 — A arquitetura Transformer é apresentada.\n2018–2020 — Modelos como BERT e GPT consolidam o pré-treinamento em larga escala.\n2020–2022 — Grandes modelos de linguagem ganham escala e se tornam mais úteis em tarefas gerais.\n2022–2024 — IA generativa se populariza em texto, imagem, código e aplicações multimodais.\n2024 em diante — Crescem os debates sobre agentes, contexto longo, governança, segurança, custo computacional e impacto social."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#conceitos-chave",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#conceitos-chave",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Conceitos-chave",
-    "text": "Conceitos-chave\n\nTransformer: arquitetura baseada em atenção, central para os LLMs modernos.\nAtenção: mecanismo que permite ao modelo relacionar partes diferentes de uma sequência.\nPré-treinamento: treinamento inicial em grandes volumes de dados para aprender padrões gerais.\nModelo fundacional: modelo de larga escala que serve como base para múltiplas aplicações.\nLLM: grande modelo de linguagem treinado para processar e gerar texto.\nRLHF: ajuste do comportamento do modelo com base em feedback humano.\nDifusão: família de métodos generativos muito usada em geração de imagens.\nMultimodalidade: integração de diferentes tipos de dados, como texto, imagem, áudio e vídeo.\nEscalonamento: aumento de dados, parâmetros e computação para melhorar desempenho.\nAgentes: sistemas que usam modelos para planejar, chamar ferramentas e executar tarefas em etapas."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🔑 Conceitos-chave",
+    "text": "🔑 Conceitos-chave\n\nTransformer: arquitetura baseada em atenção, central para os LLMs modernos.\nAtenção: mecanismo que permite ao modelo relacionar partes diferentes de uma sequência.\nPré-treinamento: treinamento inicial em grandes volumes de dados para aprender padrões gerais.\nModelo fundacional: modelo de larga escala que serve como base para múltiplas aplicações.\nLLM: grande modelo de linguagem treinado para processar e gerar texto.\nRLHF: ajuste do comportamento do modelo com base em feedback humano.\nDifusão: família de métodos generativos muito usada em geração de imagens.\nMultimodalidade: integração de diferentes tipos de dados, como texto, imagem, áudio e vídeo.\nEscalonamento: aumento de dados, parâmetros e computação para melhorar desempenho.\nAgentes: sistemas que usam modelos para planejar, chamar ferramentas e executar tarefas em etapas."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#personagens-e-episódios-em-foco",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#personagens-e-episódios-em-foco",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Personagens e episódios em foco",
-    "text": "Personagens e episódios em foco\n\nTransformer — arquitetura que reorganizou o processamento de linguagem natural moderno.\nBERT — marco em representações contextuais para compreensão de texto.\nGPT — marco em geração autoregressiva de linguagem em larga escala.\nModelos de difusão — fundamentais para a popularização da geração de imagens.\nRLHF — técnica importante para tornar modelos mais alinhados a instruções humanas.\nModelos fundacionais — nova forma de organizar a IA em torno de modelos gerais reutilizáveis."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "👥 Personagens e episódios em foco",
+    "text": "👥 Personagens e episódios em foco\n\nTransformer — arquitetura que reorganizou o processamento de linguagem natural moderno.\nBERT — marco em representações contextuais para compreensão de texto.\nGPT — marco em geração autoregressiva de linguagem em larga escala.\nModelos de difusão — fundamentais para a popularização da geração de imagens.\nRLHF — técnica importante para tornar modelos mais alinhados a instruções humanas.\nModelos fundacionais — nova forma de organizar a IA em torno de modelos gerais reutilizáveis."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#leituras-sugeridas",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#leituras-sugeridas",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Leituras sugeridas",
-    "text": "Leituras sugeridas\n\nVASWANI, Ashish et al. “Attention Is All You Need”. 2017.\nDEVLIN, Jacob et al. “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”. 2018.\nBROWN, Tom B. et al. “Language Models are Few-Shot Learners”. 2020.\nBOMMASANI, Rishi et al. “On the Opportunities and Risks of Foundation Models”. 2021.\nOUYANG, Long et al. “Training language models to follow instructions with human feedback”. 2022.\nGOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. Deep Learning. MIT Press, 2016."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "📚 Leituras sugeridas",
+    "text": "📚 Leituras sugeridas\n\nVASWANI, Ashish et al. “Attention Is All You Need”. 2017.\nDEVLIN, Jacob et al. “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”. 2018.\nBROWN, Tom B. et al. “Language Models are Few-Shot Learners”. 2020.\nBOMMASANI, Rishi et al. “On the Opportunities and Risks of Foundation Models”. 2021.\nOUYANG, Long et al. “Training language models to follow instructions with human feedback”. 2022.\nGOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. Deep Learning. MIT Press, 2016."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#síntese",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#síntese",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Síntese",
-    "text": "Síntese\nA era dos modelos generativos representa uma nova fase da Inteligência Artificial.\nDepois da IA simbólica, dos invernos, do aprendizado de máquina estatístico e da virada do deep learning, a área passou a se organizar em torno de modelos treinados em larga escala, capazes de gerar conteúdo e servir como base para múltiplas aplicações.\nTransformers, pré-treinamento, atenção, difusão, RLHF, multimodalidade e modelos fundacionais mudaram a forma como interagimos com sistemas computacionais.\nMas essa potência também trouxe novas responsabilidades: avaliar limites, reduzir riscos, compreender impactos sociais e decidir como queremos usar essas tecnologias."
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "✅ Síntese",
+    "text": "✅ Síntese\nA era dos modelos generativos representa uma nova fase da Inteligência Artificial.\nDepois da IA simbólica, dos invernos, do aprendizado de máquina estatístico e da virada do deep learning, a área passou a se organizar em torno de modelos treinados em larga escala, capazes de gerar conteúdo e servir como base para múltiplas aplicações.\nTransformers, pré-treinamento, atenção, difusão, RLHF, multimodalidade e modelos fundacionais mudaram a forma como interagimos com sistemas computacionais.\nMas essa potência também trouxe novas responsabilidades: avaliar limites, reduzir riscos, compreender impactos sociais e decidir como queremos usar essas tecnologias."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#navegação",
     "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#navegação",
-    "title": "A Era dos Modelos Generativos",
-    "section": "Navegação",
-    "text": "Navegação\n\n← Anterior: O Renascimento da IA\n→ Próximo: O Futuro da IA"
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🔗 Navegação",
+    "text": "🔗 Navegação\n🎯 Anterior: 👉 O Renascimento da IA\n🎯 Próximo: 👉 O Futuro da IA\n\n\n· ← História da IA · 🔝 Topo\n\n\n\n\n\n\n\nDicaSobre o projeto\n\n\n\nEste site nasce da vontade de expor ideias com boa matemática, boa tipografia e boas explicações.\nQuer saber a linha editorial, tecnologias e bastidores?\n📘 Ler “Sobre o Blog e Sobre Mim” ›\n\n\n\n\n\n\n\n\nNota\n\n\n\nCriado por Blog do Marcellini com ❤ e código."
   },
   {
     "objectID": "posts/programacao/ia/historia-ia/parte-4-o-inverno-da-ia.html",
@@ -7773,6 +7773,48 @@
     "objectID": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#links-úteis",
     "href": "posts/programacao/ia/historia-ia/parte-5-o-renascimento-da-ia.html#links-úteis",
     "title": "🔁 O Renascimento da IA",
+    "section": "🔗 Links úteis",
+    "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-modelos-generativos",
+    "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-modelos-generativos",
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🧩 Quiz — Modelos generativos",
+    "text": "🧩 Quiz — Modelos generativos\n\nQ1. A era dos modelos generativos é marcada principalmente por sistemas capazes de:\n\n\n\n\n ✗Apenas classificar imagens em categorias fixas.\n\n\n ✓Gerar conteúdos como textos, imagens, código, áudio, vídeo e respostas em linguagem natural.\n\n\n ✗Funcionar sem dados, sem treinamento e sem infraestrutura computacional.\n\n\n\n\n\n\nQ2. Segundo o texto, a era generativa combina principalmente:\n\n\n\n\n ✓Escala, atenção, pré-treinamento massivo e geração de conteúdo.\n\n\n ✗Apenas regras manuais escritas por especialistas.\n\n\n ✗Somente computadores mecânicos e autômatos antigos."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-transformer-e-atenção",
+    "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-transformer-e-atenção",
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🧩 Quiz — Transformer e atenção",
+    "text": "🧩 Quiz — Transformer e atenção\n\nQ3. A arquitetura Transformer foi importante porque:\n\n\n\n\n ✗Eliminou a necessidade de qualquer tipo de treinamento.\n\n\n ✓Colocou o mecanismo de atenção no centro da arquitetura e favoreceu treinamento em larga escala.\n\n\n ✗Foi criada exclusivamente para controlar robôs industriais.\n\n\n\n\n\n\nQ4. No contexto dos modelos de linguagem, a atenção ajuda o modelo a:\n\n\n\n\n ✓Relacionar diferentes partes de uma sequência e construir representações contextuais.\n\n\n ✗Ignorar completamente o contexto das palavras.\n\n\n ✗Trabalhar apenas com números sem significado linguístico."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-modelos-fundacionais",
+    "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-modelos-fundacionais",
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🧩 Quiz — Modelos fundacionais",
+    "text": "🧩 Quiz — Modelos fundacionais\n\nQ5. Um modelo fundacional é, em geral:\n\n\n\n\n ✗Um modelo treinado em pequena escala para uma única tarefa fixa.\n\n\n ✓Um modelo de larga escala que pode servir como base para muitas aplicações diferentes.\n\n\n ✗Um programa que só funciona sem internet e sem dados.\n\n\n\n\n\n\nQ6. Uma preocupação associada aos modelos fundacionais é:\n\n\n\n\n ✗Eles não levantam nenhuma questão social, técnica ou econômica.\n\n\n ✗Eles tornam desnecessária qualquer forma de avaliação.\n\n\n ✓Podem envolver custos altos, vieses, concentração tecnológica, segurança e governança."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-alinhamento-e-rlhf",
+    "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-alinhamento-e-rlhf",
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🧩 Quiz — Alinhamento e RLHF",
+    "text": "🧩 Quiz — Alinhamento e RLHF\n\nQ7. O RLHF é usado principalmente para:\n\n\n\n\n ✗Substituir completamente o pré-treinamento.\n\n\n ✓Ajustar o comportamento do modelo usando feedback humano.\n\n\n ✗Transformar automaticamente texto em hardware."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-multimodalidade-e-agentes",
+    "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#quiz-multimodalidade-e-agentes",
+    "title": "🤖 A Era dos Modelos Generativos",
+    "section": "🧩 Quiz — Multimodalidade e agentes",
+    "text": "🧩 Quiz — Multimodalidade e agentes\n\nQ8. Um modelo multimodal é aquele que:\n\n\n\n\n ✗Trabalha apenas com texto simples.\n\n\n ✓Pode integrar diferentes tipos de dados, como texto, imagem, áudio, vídeo e documentos.\n\n\n ✗Não precisa de entradas nem saídas.\n\n\n\n\n\n\nQ9. Um agente de IA tende a ser mais complexo que um chatbot simples porque pode:\n\n\n\n\n ✓Planejar etapas, chamar ferramentas, consultar arquivos ou interagir com outros sistemas.\n\n\n ✗Funcionar apenas imprimindo texto sem contexto.\n\n\n ✗Eliminar toda necessidade de supervisão humana."
+  },
+  {
+    "objectID": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#links-úteis",
+    "href": "posts/programacao/ia/historia-ia/parte-6-a-era-dos-modelos-generativos.html#links-úteis",
+    "title": "🤖 A Era dos Modelos Generativos",
     "section": "🔗 Links úteis",
     "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
   }
