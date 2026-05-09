@@ -2,7 +2,7 @@
 title: "⚠️ Desafios e Limitações dos LLMs"
 description: "Os Large Language Models são poderosos, mas não perfeitos. Descubra suas principais limitações: vieses, alucinações, custos de treinamento, impacto ambiental e questões éticas."
 author: "Blog do Marcellini"
-date: 2025-10-06
+date: 2026-05-09
 lang: pt-BR
 format:
   html:
@@ -105,9 +105,10 @@ Treinar um LLM moderno exige:
 - **Semanas ou meses** de processamento.  
 - **Milhões de dólares** em infraestrutura.  
 
-::: {.callout-note title="📊 Exemplo de custo (aproximado)"}
-- **GPT-3 (2020):** estimado em **US$ 4,6 milhões** em energia e hardware.  
-- **GPT-4 (2023):** valores não oficiais, mas provavelmente dezenas de milhões.  
+::: {.callout-note title="📊 Custo computacional"}
+Modelos de fronteira podem exigir investimentos muito altos em hardware, energia, armazenamento, equipes técnicas e infraestrutura de nuvem.
+
+Os valores exatos geralmente não são públicos, mas a ordem de grandeza ajuda a entender por que poucos grupos conseguem treinar modelos desse porte do zero.
 :::
 
 👉 Isso limita o acesso à tecnologia a poucas empresas gigantes, criando concentração de poder.
@@ -122,7 +123,9 @@ O consumo de energia dos LLMs é enorme.
 - A manutenção (uso diário) também consome energia significativa em data centers.  
 
 ::: {.callout-tip title="🌍 Comparação ilustrativa"}
-Treinar um modelo do porte do GPT-3 pode emitir tanto carbono quanto a **vida útil de 5 carros** circulando.  
+O impacto ambiental depende da matriz energética, do tamanho do modelo, do hardware usado e da frequência de uso.
+
+Por isso, mais do que memorizar um número fixo, é importante entender que eficiência energética e uso responsável são partes centrais do debate.
 :::
 
 Isso levanta preocupações sobre **sustentabilidade** e a necessidade de **modelos mais eficientes**.
@@ -140,6 +143,44 @@ A mesma tecnologia que gera **aulas acessíveis** pode ser usada para criar **pr
 :::
 
 👉 A ética da IA é um campo em rápida evolução, e os LLMs estão no centro do debate.
+
+## 🧩 Quiz — Vieses e uso responsável
+
+:::::{.question}
+**Q1.** Quando dizemos que um LLM pode reproduzir **vieses**, queremos dizer que ele pode:
+
+::::{.choices}
+:::{.choice}
+Resolver qualquer problema matemático sem erro.
+:::
+
+:::{.choice .correct-choice}
+Repetir padrões, estereótipos ou desigualdades presentes nos dados de treinamento.
+:::
+
+:::{.choice}
+Eliminar automaticamente todos os preconceitos humanos.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Um uso responsável de LLMs exige:
+
+::::{.choices}
+:::{.choice}
+Aceitar toda resposta gerada como verdadeira.
+:::
+
+:::{.choice}
+Evitar qualquer revisão humana.
+:::
+
+:::{.choice .correct-choice}
+Verificar informações importantes, considerar riscos e manter supervisão humana.
+:::
+::::
+:::::
 
 ---
 
@@ -191,7 +232,7 @@ print(f"Figura salva em: {outfile}")
 ## 🧩 Quiz — Teste seus conhecimentos
 
 :::::{.question}
-**Q1.** O que significa “alucinação” em um LLM?
+**Q3.** O que significa “alucinação” em um LLM?
 
 ::::{.choices}
 :::{.choice}
@@ -209,7 +250,7 @@ Quando o modelo consome muita energia para treinar.
 :::::
 
 :::::{.question}
-**Q2.** Qual dos pontos abaixo está ligado ao **impacto ambiental** dos LLMs?
+**Q4.** Qual dos pontos abaixo está ligado ao **impacto ambiental** dos LLMs?
 
 ::::{.choices}
 :::{.choice}
@@ -232,32 +273,35 @@ O consumo de energia e emissão de CO₂ em data centers.
 |---------|-----------|---------|
 | **Vieses** | Reproduzem preconceitos sociais | Associar profissões a um gênero |
 | **Alucinações** | Inventam fatos falsos | Citar artigo inexistente |
-| **Custos** | Milhões em GPUs e energia | GPT-3 → ~US$ 4,6 milhões |
-| **Impacto ambiental** | Altas emissões de CO₂ | Equivalente à vida útil de 5 carros |
+| **Custos** | Alto gasto com GPUs, energia e infraestrutura | Treinamentos de fronteira podem custar milhões de dólares |
+| **Impacto ambiental** | Consumo elevado de energia e recursos | Data centers exigem energia, resfriamento e infraestrutura |
 | **Ética** | Questões de uso e copyright | Deepfakes, desinformação |
 
 
 ## ✅ Conclusão
 
-Os LLMs são uma **tecnologia transformadora**, mas que traz riscos e responsabilidades.  
+Os LLMs são uma **tecnologia transformadora**, mas trazem riscos e responsabilidades.
 
-- Podem **reproduzir vieses sociais**.  
-- Estão sujeitos a **alucinações**.  
-- Exigem **recursos financeiros e energéticos gigantescos**.  
-- Levantam **questões éticas profundas**.  
+Eles podem:
 
-👉 O futuro da IA depende não só de avanços técnicos, mas também de **como escolhemos usá-la**.
+- reproduzir **vieses sociais**;
+- gerar **alucinações**;
+- exigir grande quantidade de energia e infraestrutura;
+- concentrar poder tecnológico em poucas organizações;
+- levantar questões éticas sobre autoria, privacidade, desinformação e responsabilidade.
 
----
+Isso não significa que devemos rejeitar a tecnologia. Significa que devemos usá-la com **critério**, **verificação** e **supervisão humana**.
 
-✍️ *Este post faz parte da série sobre LLMs no Blog do Marcellini.*  
+O futuro da IA depende não apenas de modelos mais capazes, mas também de instituições, usuários, pesquisadores e educadores capazes de compreender seus limites.
+
 No próximo post, vamos explorar as **aplicações práticas dos LLMs**: educação, saúde, programação, arte e muito mais. 🚀
 
 ---
 
-# 🔗 Navegação
+## 🔗 Navegação
 
-🎯 **Próximo Post:** 👉 [Aplicações Práticas dos LLMs](aplicacoes-praticas.qmd)
+🎯 **Post anterior:** 👉 [Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF](treinamento-pretrain-finetune-rlhf.qmd)
+🎯 **Próximo post:** 👉 [Aplicações Práticas dos LLMs](aplicacoes-praticas.qmd)
 
 ---
 
@@ -267,15 +311,14 @@ No próximo post, vamos explorar as **aplicações práticas dos LLMs**: educaç
 
 ---
 
-*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+{{< include /_includes/sobre-projeto.qmd >}}
 
 :::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+*Criado por Blog do Marcellini com ❤ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-
