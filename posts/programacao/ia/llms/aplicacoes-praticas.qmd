@@ -2,7 +2,7 @@
 title: "🚀 Aplicações Práticas dos LLMs"
 description: "Descubra como os Large Language Models estão sendo aplicados hoje: da educação à saúde, da programação à arte, e os impactos na sociedade."
 author: "Blog do Marcellini"
-date: 2025-10-06
+date: 2026-05-09
 lang: pt-BR
 format:
   html:
@@ -47,6 +47,26 @@ Os LLMs estão transformando a forma como ensinamos e aprendemos:
 ::: {.callout-tip title="💡 Impacto na sala de aula"}
 Os LLMs atuam como **assistentes pedagógicos**, ampliando a personalização e o engajamento — **sem substituir o professor**.
 :::
+
+## 🧩 Quiz — LLMs na educação
+
+:::::{.question}
+**Q1.** Em contextos educacionais, um uso adequado de LLMs é:
+
+::::{.choices}
+:::{.choice}
+Substituir completamente o professor.
+:::
+
+:::{.choice .correct-choice}
+Apoiar explicações, gerar exercícios e personalizar materiais com supervisão humana.
+:::
+
+:::{.choice}
+Eliminar a necessidade de estudo ativo por parte do aluno.
+:::
+::::
+:::::
 
 ## 🏥 Saúde
 
@@ -199,10 +219,10 @@ print(f"Figura salva em: {outfile}")
 | **Arte** | Criar poesia em segundos | Estímulo à criatividade |
 
 
-## 🧩 Quiz — Teste rápido
+## 🧩 Quiz — Aplicações e limites
 
 :::::{.question}
-**Q1.** Por que os LLMs não devem substituir médicos na saúde?
+**Q2.** Por que os LLMs não devem substituir médicos na saúde?
 
 ::::{.choices}
 :::{.choice}
@@ -220,7 +240,7 @@ Porque não conseguem acessar prontuários eletrônicos.
 :::::
 
 :::::{.question}
-**Q2.** Em qual área os LLMs já reduziram tempo de trabalho administrativo?
+**Q3.** Em qual área os LLMs já reduziram tempo de trabalho administrativo?
 
 ::::{.choices}
 :::{.choice}
@@ -232,7 +252,7 @@ Arte
 :::
 
 :::{.choice .correct-choice}
-Negócios
+Negócios e produtividade
 :::
 ::::
 :::::
@@ -251,26 +271,27 @@ Pense nos LLMs como uma **caixa de ferramentas universal**:
 
 ## ✅ Conclusão
 
-Os **LLMs** já estão moldando o mundo real:
+Os **LLMs** já estão moldando o mundo real em várias frentes:
 
-- **Educação:** personalização do aprendizado.  
-- **Saúde:** apoio inteligente ao diagnóstico.  
-- **Programação:** automação e produtividade.  
-- **Negócios:** eficiência e inovação.  
-- **Arte:** novos horizontes criativos.  
+- **educação:** personalização do aprendizado e apoio ao professor;
+- **saúde:** organização de informações clínicas e apoio administrativo;
+- **programação:** geração de código, explicação de erros e documentação;
+- **ciência e engenharia:** resumo de artigos, simulações e apoio à pesquisa;
+- **negócios:** automação de relatórios, atendimento e análise de documentos;
+- **arte:** apoio criativo em textos, roteiros, imagens e ideias.
 
-👉 O impacto tende a crescer com o avanço da multimodalidade e do acesso aberto.
+O ponto central é que LLMs devem ser vistos como **ferramentas de apoio**, não como substitutos automáticos do julgamento humano.
+
+Eles ampliam possibilidades, mas exigem revisão, responsabilidade e clareza sobre seus limites.
+
+No próximo post, vamos explorar **o futuro dos LLMs e da IA generativa**: multimodalidade, agentes, especialização e democratização do acesso. 🔮
 
 ---
 
-✍️ *Este post faz parte da série sobre LLMs do Blog do Marcellini.*  
-No próximo post, exploraremos **“O Futuro dos LLMs e da IA Generativa”**. 🔮
+## 🔗 Navegação
 
----
-
-# 🔗 Navegação
-
-🎯 **Próximo Post:** 👉 [O Futuro dos LLMs e da IA Generativa](futuro-ia-llms.qmd)
+🎯 **Post anterior:** 👉 [Desafios e Limitações dos LLMs](desafios-limitacoes.qmd)
+🎯 **Próximo post:** 👉 [O Futuro dos LLMs e da IA Generativa](futuro-ia-llms.qmd)
 
 ---
 
@@ -280,15 +301,14 @@ No próximo post, exploraremos **“O Futuro dos LLMs e da IA Generativa”**. �
 
 ---
 
-*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+{{< include /_includes/sobre-projeto.qmd >}}
 
 :::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+*Criado por Blog do Marcellini com ❤ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)  
-- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>  
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-
