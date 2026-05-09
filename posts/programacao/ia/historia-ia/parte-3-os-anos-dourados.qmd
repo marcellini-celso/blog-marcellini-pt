@@ -1,9 +1,9 @@
 ---
-title: "Os Anos Dourados"
+title: "🌟 Os Anos Dourados"
 subtitle: "O otimismo simbólico dos anos 1960"
 description: "Sistemas simbólicos, linguagens de IA e promessas ambiciosas."
 author: "Blog do Marcellini"
-date: 2026-05-08
+date: 2026-05-09
 lang: pt-BR
 categories: [história da computação, inteligência artificial]
 tags: [GOFAI, LISP, planejamento, SHRDLU, visão computacional inicial]
@@ -21,7 +21,7 @@ format:
 
 > A **GOFAI** (*Good Old-Fashioned Artificial Intelligence*) apostava que **símbolos, regras e busca** poderiam explicar grande parte da inteligência.
 
-## O otimismo da IA simbólica
+## 🌟 O otimismo da IA simbólica
 
 Depois do encontro de Dartmouth e dos primeiros programas de raciocínio automático, a Inteligência Artificial entrou em uma fase de grande entusiasmo.
 
@@ -32,12 +32,50 @@ Essa visão ficou conhecida, mais tarde, como **GOFAI** — *Good Old-Fashioned 
 A ideia central era simples e poderosa: se o pensamento pode ser descrito por símbolos e regras, então computadores podem manipular esses símbolos e executar essas regras.
 
 ::: {.callout-note}
-### Resumo em uma frase
+### 💡 Resumo em uma frase
 
 Os anos dourados da IA foram marcados pela confiança de que **representação simbólica + regras lógicas + busca heurística** seriam suficientes para produzir comportamento inteligente.
 :::
 
-## LISP: uma linguagem para pensar símbolos
+## 🧩 Quiz — GOFAI e IA simbólica
+
+:::::{.question}
+**Q1.** A abordagem conhecida como **GOFAI** apostava principalmente em:
+
+::::{.choices}
+:::{.choice}
+Redes neurais profundas treinadas com bilhões de imagens.
+:::
+
+:::{.choice .correct-choice}
+Símbolos, regras, lógica e busca heurística para representar a inteligência.
+:::
+
+:::{.choice}
+Modelos multimodais capazes de gerar texto, imagem e áudio.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Nos anos dourados da IA, muitos pesquisadores acreditavam que a inteligência poderia ser:
+
+::::{.choices}
+:::{.choice}
+Completamente explicada apenas por força bruta computacional.
+:::
+
+:::{.choice}
+Ignorada como tema científico.
+:::
+
+:::{.choice .correct-choice}
+Decomposta em operações simbólicas, regras e estratégias de busca.
+:::
+::::
+:::::
+
+## 🧾 LISP: uma linguagem para pensar símbolos
 
 Um dos marcos técnicos desse período foi a criação da linguagem **LISP**, associada a **John McCarthy**.
 
@@ -47,7 +85,27 @@ Isso era fundamental para a IA da época. Programas de prova de teoremas, planej
 
 Por isso, LISP se tornou uma espécie de linguagem clássica da IA.
 
-## Planejamento, jogos e prova automática
+## 🧩 Quiz — LISP e manipulação simbólica
+
+:::::{.question}
+**Q3.** A linguagem **LISP** tornou-se importante para a IA simbólica porque:
+
+::::{.choices}
+:::{.choice}
+Foi criada para editar imagens e vídeos em tempo real.
+:::
+
+:::{.choice .correct-choice}
+Facilitava a manipulação de listas, expressões simbólicas e estruturas recursivas.
+:::
+
+:::{.choice}
+Eliminava completamente a necessidade de algoritmos.
+:::
+::::
+:::::
+
+## ♟️ Planejamento, jogos e prova automática
 
 Durante esse período, surgiram programas capazes de realizar tarefas que pareciam exigir raciocínio.
 
@@ -57,7 +115,7 @@ Muitos desses programas se apoiavam em uma ideia comum: representar um problema 
 
 O desafio era escolher bons caminhos sem testar todas as combinações possíveis. Por isso, as **heurísticas** se tornaram centrais: eram regras práticas que ajudavam o programa a decidir quais caminhos pareciam mais promissores.
 
-## Micromundos: inteligência em ambientes simplificados
+## 🧱 Micromundos: inteligência em ambientes simplificados
 
 Uma das estratégias mais importantes da IA simbólica foi trabalhar com **micromundos**.
 
@@ -67,7 +125,7 @@ Essa abordagem tinha uma vantagem clara: permitia avanços concretos. Mas també
 
 Essa tensão entre **ambientes controlados** e **mundo real** acompanharia a IA por décadas.
 
-## SHRDLU: linguagem natural em um mundo de blocos
+## 🗣️ SHRDLU: linguagem natural em um mundo de blocos
 
 Um dos exemplos mais famosos de micromundo foi o **SHRDLU**, desenvolvido por **Terry Winograd** no final dos anos 1960 e início dos anos 1970.
 
@@ -77,7 +135,45 @@ Dentro desse universo limitado, SHRDLU conseguia interpretar comandos, responder
 
 Mas o sucesso de SHRDLU dependia justamente da simplicidade do seu mundo. Ele compreendia bem porque havia pouco a compreender. Quando a linguagem deixava o micromundo e entrava no mundo real, surgiam ambiguidade, contexto, conhecimento implícito e múltiplas interpretações.
 
-## A explosão combinatória
+## 🧩 Quiz — Micromundos e SHRDLU
+
+:::::{.question}
+**Q4.** Um **micromundo** em IA é:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Um ambiente simplificado, com regras, objetos e vocabulário limitados.
+:::
+
+:::{.choice}
+Um computador pequeno usado apenas em laboratórios antigos.
+:::
+
+:::{.choice}
+Uma rede neural treinada com milhões de imagens.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q5.** O sucesso do SHRDLU dependia principalmente:
+
+::::{.choices}
+:::{.choice}
+Da ausência completa de linguagem natural.
+:::
+
+:::{.choice .correct-choice}
+Da simplicidade e limitação do mundo de blocos em que ele operava.
+:::
+
+:::{.choice}
+Da existência de modelos de linguagem modernos.
+:::
+::::
+:::::
+
+## 🔀 A explosão combinatória
 
 Um dos grandes problemas encontrados pela IA simbólica foi a **explosão combinatória**.
 
@@ -87,7 +183,45 @@ Esse problema aparecia em jogos, planejamento, linguagem, prova de teoremas e re
 
 A explosão combinatória mostrou que inteligência não é apenas aplicar regras: é também saber quais informações são relevantes, quais possibilidades ignorar e como lidar com incerteza e contexto.
 
-## A crítica aos perceptrons
+## 🧩 Quiz — Limites da IA simbólica
+
+:::::{.question}
+**Q6.** A **explosão combinatória** é um problema porque:
+
+::::{.choices}
+:::{.choice}
+Reduz todos os problemas a uma única resposta simples.
+:::
+
+:::{.choice}
+Impede que computadores manipulem símbolos.
+:::
+
+:::{.choice .correct-choice}
+O número de possibilidades cresce rapidamente, tornando inviável testar todos os caminhos.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q7.** Uma lição dos anos dourados da IA é que:
+
+::::{.choices}
+:::{.choice}
+Resolver problemas em micromundos garante sucesso imediato no mundo real.
+:::
+
+:::{.choice .correct-choice}
+Sistemas simbólicos podem funcionar bem em ambientes controlados, mas enfrentar dificuldades no mundo aberto.
+:::
+
+:::{.choice}
+A linguagem natural não envolve ambiguidade nem contexto.
+:::
+::::
+:::::
+
+## 🧠 A crítica aos perceptrons
 
 Embora os anos dourados sejam lembrados principalmente pela IA simbólica, também havia pesquisas em redes neurais simples, como os **perceptrons**.
 
@@ -95,7 +229,7 @@ Em 1969, **Marvin Minsky** e **Seymour Papert** publicaram um estudo crítico so
 
 É importante notar que a crítica se aplicava a modelos bastante simples, não às redes neurais profundas que surgiriam décadas depois. Mesmo assim, o efeito histórico foi significativo: a IA simbólica se fortaleceu, enquanto as abordagens conexionistas perderam espaço temporariamente.
 
-## Linha do tempo essencial
+## 🗓️ Linha do tempo essencial
 
 - **1958** — John McCarthy desenvolve o **LISP**.
 - **Década de 1960** — Crescem os programas de prova automática, jogos, planejamento e linguagem natural.
@@ -103,7 +237,7 @@ Em 1969, **Marvin Minsky** e **Seymour Papert** publicaram um estudo crítico so
 - **1968–1970** — Terry Winograd desenvolve o **SHRDLU**.
 - **1969** — Minsky e Papert publicam críticas importantes aos perceptrons.
 
-## Conceitos-chave
+## 🔑 Conceitos-chave
 
 - **GOFAI:** tradição clássica da IA baseada em símbolos, regras, lógica e busca.
 - **LISP:** linguagem historicamente associada à manipulação simbólica em IA.
@@ -112,21 +246,21 @@ Em 1969, **Marvin Minsky** e **Seymour Papert** publicaram um estudo crítico so
 - **Sistemas de produção:** programas baseados em regras do tipo “se condição, então ação”.
 - **Heurísticas:** atalhos ou estratégias práticas para guiar a busca por soluções.
 
-## Personagens em foco
+## 👥 Personagens em foco
 
 - **John McCarthy** — criador do termo *Artificial Intelligence* e da linguagem LISP.
 - **Marvin Minsky** — pioneiro da IA simbólica e da ciência cognitiva computacional.
 - **Seymour Papert** — pesquisador influente em IA, educação e crítica aos perceptrons.
 - **Terry Winograd** — criador do SHRDLU, um dos sistemas clássicos de linguagem natural em micromundos.
 
-## Leituras sugeridas
+## 📚 Leituras sugeridas
 
 - **NILSSON, Nils J.** *The Quest for Artificial Intelligence: A History of Ideas and Achievements*. Cambridge University Press, 2010.
 - **WINOGRAD, Terry.** *Understanding Natural Language*. Academic Press, 1972.
 - **MINSKY, Marvin; PAPERT, Seymour.** *Perceptrons: An Introduction to Computational Geometry*. MIT Press, 1969.
 - **CREVIER, Daniel.** *AI: The Tumultuous History of the Search for Artificial Intelligence*. Basic Books, 1993.
 
-## Síntese
+## ✅ Síntese
 
 Os anos dourados da IA foram marcados por confiança e ambição. Pesquisadores acreditavam que a inteligência poderia ser formalizada por símbolos, regras, representações e estratégias de busca.
 
@@ -136,7 +270,28 @@ Mas também surgiram limites profundos. O mundo real era mais ambíguo, aberto e
 
 ---
 
-## Navegação
+## 🔗 Navegação
 
-- ← **Anterior:** [Nascimento da IA](parte-2-nascimento-da-ia.qmd)
-- → **Próximo:** [O Inverno da IA](parte-4-o-inverno-da-ia.qmd)
+🎯 **Anterior:** 👉 [Nascimento da IA](parte-2-nascimento-da-ia.qmd)
+
+🎯 **Próximo:** 👉 [O Inverno da IA](parte-4-o-inverno-da-ia.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← História da IA](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
