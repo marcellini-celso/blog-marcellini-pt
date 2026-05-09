@@ -984,7 +984,7 @@
     "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#quiz-fórmula-da-atenção",
     "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
     "section": "🧩 Quiz — Fórmula da Atenção",
-    "text": "🧩 Quiz — Fórmula da Atenção\n\nQ2. Na fórmula da atenção, o papel do Softmax é:\n\n\n\n\n ✗Aumentar indefinidamente os valores numéricos.\n\n\n ✓Transformar as similaridades em probabilidades (pesos de atenção).\n\n\n ✗Multiplicar diretamente as Queries pelos Values."
+    "text": "🧩 Quiz — Fórmula da Atenção\n\nQ3. Na fórmula da atenção, o papel do Softmax é:\n\n\n\n\n ✗Aumentar indefinidamente os valores numéricos.\n\n\n ✓Transformar as similaridades em probabilidades (pesos de atenção).\n\n\n ✗Multiplicar diretamente as Queries pelos Values."
   },
   {
     "objectID": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#exemplo-visual-da-atenção",
@@ -1012,14 +1012,14 @@
     "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#quiz-multi-head-attention",
     "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
     "section": "🧩 Quiz — Multi-Head Attention",
-    "text": "🧩 Quiz — Multi-Head Attention\n\nQ3. Por que o Transformer usa várias cabeças de atenção (Multi-Head)?\n\n\n\n\n ✗Para acelerar o cálculo do Softmax.\n\n\n ✓Porque cada cabeça aprende relações diferentes entre as palavras.\n\n\n ✗Para substituir as Queries e Keys."
+    "text": "🧩 Quiz — Multi-Head Attention\n\nQ4. Por que o Transformer usa várias cabeças de atenção (Multi-Head)?\n\n\n\n\n ✗Para acelerar o cálculo do Softmax.\n\n\n ✓Porque cada cabeça aprende relações diferentes entre as palavras.\n\n\n ✗Para substituir as Queries e Keys."
   },
   {
     "objectID": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#conclusão",
     "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#conclusão",
     "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
     "section": "✅ Conclusão",
-    "text": "✅ Conclusão\nO mecanismo de atenção é o núcleo do Transformer:\n\nQ, K, V permitem que o modelo decida quais palavras são relevantes.\n\nA fórmula com Softmax transforma similaridades em pesos de probabilidade.\n\nO Multi-Head Attention enriquece o entendimento, analisando diferentes aspectos ao mesmo tempo.\n\n👉 Sem a atenção, os LLMs modernos não seriam possíveis.\nÉ ela que garante que modelos como GPT-4 ou Claude consigam manter contexto, coerência e significado em longos textos.\n\n✍️ Este post faz parte da série sobre LLMs no Blog do Marcellini.\nNo próximo post, vamos explorar o treinamento dos LLMs: pré-treinamento, fine-tuning e RLHF (aprendizado por reforço com feedback humano). 🚀"
+    "text": "✅ Conclusão\nO mecanismo de atenção é o núcleo do Transformer:\n\nQ, K, V permitem que o modelo decida quais palavras são relevantes;\no Softmax transforma similaridades em pesos de atenção;\na multiplicação por V gera uma combinação ponderada das informações;\na Multi-Head Attention permite observar várias relações ao mesmo tempo.\n\nEm essência, a atenção permite que o modelo não leia uma frase apenas em sequência, mas construa relações entre seus elementos. É por isso que Transformers conseguem lidar tão bem com contexto, dependências longas e padrões linguísticos complexos.\nNo próximo post, veremos como os LLMs são treinados: pré-treinamento, fine-tuning e RLHF."
   },
   {
     "objectID": "posts/programacao/ia/index.html",
@@ -7495,5 +7495,26 @@
     "title": "🤖 O que é um Large Language Model (LLM)?",
     "section": "🔗 Links Úteis",
     "text": "🔗 Links Úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#quiz-cpu-gpu-e-cuda",
+    "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#quiz-cpu-gpu-e-cuda",
+    "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
+    "section": "🧩 Quiz — CPU, GPU e CUDA",
+    "text": "🧩 Quiz — CPU, GPU e CUDA\n\nQ2. Por que GPUs com CUDA são importantes para Transformers e LLMs?\n\n\n\n\n ✗Porque eliminam a necessidade de dados de treinamento.\n\n\n ✓Porque aceleram cálculos paralelos, como multiplicações de matrizes usadas na atenção.\n\n\n ✗Porque substituem completamente o mecanismo de atenção."
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#navegação",
+    "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#navegação",
+    "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
+    "section": "🔗 Navegação",
+    "text": "🔗 Navegação\n🎯 Post Anterior: 👉 O que é um Large Language Model (LLM)? 🎯 Próximo Post: 👉 Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF\n\n\n· ← Série de LLMs 🤖 · 🔝 Topo\n\n\n\n\n\n\n\nDicaSobre o projeto\n\n\n\nEste site nasce da vontade de expor ideias com boa matemática, boa tipografia e boas explicações.\nQuer saber a linha editorial, tecnologias e bastidores?\n📘 Ler “Sobre o Blog e Sobre Mim” ›\n\n\n\n\n\n\n\n\nNota\n\n\n\nCriado por Blog do Marcellini com ❤ e código."
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#links-úteis",
+    "href": "posts/programacao/ia/llms/atencao-transformers-qkv-mha.html#links-úteis",
+    "title": "✨ Atenção em Transformers: Q, K, V e Multi-Head Attention",
+    "section": "🔗 Links úteis",
+    "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
   }
 ]
