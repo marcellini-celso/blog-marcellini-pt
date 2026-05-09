@@ -73,9 +73,9 @@ Representar a "pergunta" que a rede faz para decidir relevância.
 
 O cálculo da atenção é feito assim:
 
-\[
+$$
 \boxed{\text{Attention}(Q, K, V) = \text{Softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V}
-\]
+$$
 
 Explicação:  
 
@@ -132,11 +132,31 @@ Na prática, a equação da atenção não é escrita “à mão” toda vez.
 - Se você usar a cozinha cheia de ajudantes (GPU + CUDA), tudo sai muito mais rápido.
 :::
 
+## 🧩 Quiz — CPU, GPU e CUDA
+
+:::::{.question}
+**Q2.** Por que GPUs com CUDA são importantes para Transformers e LLMs?
+
+::::{.choices}
+:::{.choice}
+Porque eliminam a necessidade de dados de treinamento.
+:::
+
+:::{.choice .correct-choice}
+Porque aceleram cálculos paralelos, como multiplicações de matrizes usadas na atenção.
+:::
+
+:::{.choice}
+Porque substituem completamente o mecanismo de atenção.
+:::
+::::
+:::::
+
 
 ## 🧩 Quiz — Fórmula da Atenção
 
 :::::{.question}
-**Q2.** Na fórmula da atenção, o papel do **Softmax** é:
+**Q3.** Na fórmula da atenção, o papel do **Softmax** é:
 
 ::::{.choices}
 :::{.choice}
@@ -256,7 +276,7 @@ print(f"Figura salva em: {outfile}")
 ## 🧩 Quiz — Multi-Head Attention
 
 :::::{.question}
-**Q3.** Por que o Transformer usa várias cabeças de atenção (Multi-Head)?
+**Q4.** Por que o Transformer usa várias cabeças de atenção (Multi-Head)?
 
 ::::{.choices}
 :::{.choice}
@@ -275,24 +295,22 @@ Para substituir as Queries e Keys.
 
 ## ✅ Conclusão
 
-O **mecanismo de atenção** é o núcleo do Transformer:  
+O **mecanismo de atenção** é o núcleo do Transformer:
 
-- **Q, K, V** permitem que o modelo decida quais palavras são relevantes.  
-- A fórmula com **Softmax** transforma similaridades em pesos de probabilidade.  
-- O **Multi-Head Attention** enriquece o entendimento, analisando diferentes aspectos ao mesmo tempo.  
+- **Q, K, V** permitem que o modelo decida quais palavras são relevantes;
+- o **Softmax** transforma similaridades em pesos de atenção;
+- a multiplicação por **V** gera uma combinação ponderada das informações;
+- a **Multi-Head Attention** permite observar várias relações ao mesmo tempo.
 
-👉 Sem a atenção, os **LLMs modernos não seriam possíveis**.  
-É ela que garante que modelos como GPT-4 ou Claude consigam **manter contexto, coerência e significado em longos textos**.
+Em essência, a atenção permite que o modelo não leia uma frase apenas em sequência, mas construa relações entre seus elementos. É por isso que Transformers conseguem lidar tão bem com contexto, dependências longas e padrões linguísticos complexos.
 
----
-
-✍️ *Este post faz parte da série sobre LLMs no Blog do Marcellini.*  
-No próximo post, vamos explorar **o treinamento dos LLMs: pré-treinamento, fine-tuning e RLHF (aprendizado por reforço com feedback humano)**. 🚀
+No próximo post, veremos como os LLMs são treinados: **pré-treinamento, fine-tuning e RLHF**.
 
 ---
 
-# 🔗 Navegação
+## 🔗 Navegação
 
+🎯 **Post Anterior:** 👉 [O que é um Large Language Model (LLM)?](o-que-e-um-llm.qmd)
 🎯 **Próximo Post:** 👉 [Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF](treinamento-pretrain-finetune-rlhf.qmd)
 
 ---
@@ -303,15 +321,14 @@ No próximo post, vamos explorar **o treinamento dos LLMs: pré-treinamento, fin
 
 ---
 
-*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+{{< include /_includes/sobre-projeto.qmd >}}
 
 :::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+*Criado por Blog do Marcellini com ❤ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-

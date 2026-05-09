@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.35">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,10 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-3f230b53dc93e4a04bf4a3505d77a42a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-9cdbd49fb92a4d7f9d8c4f710986121f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-666207ef3173b7fd98750e0fbedb866b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -302,6 +302,7 @@ window.Quarto = {
   <li><a href="#query-key-e-value-q-k-v" id="toc-query-key-e-value-q-k-v" class="nav-link" data-scroll-target="#query-key-e-value-q-k-v">🔑 Query, Key e Value (Q, K, V)</a></li>
   <li><a href="#quiz-q-k-v" id="toc-quiz-q-k-v" class="nav-link" data-scroll-target="#quiz-q-k-v">🧩 Quiz — Q, K, V</a></li>
   <li><a href="#fórmula-matemática" id="toc-fórmula-matemática" class="nav-link" data-scroll-target="#fórmula-matemática">🧮 Fórmula Matemática</a></li>
+  <li><a href="#quiz-cpu-gpu-e-cuda" id="toc-quiz-cpu-gpu-e-cuda" class="nav-link" data-scroll-target="#quiz-cpu-gpu-e-cuda">🧩 Quiz — CPU, GPU e CUDA</a></li>
   <li><a href="#quiz-fórmula-da-atenção" id="toc-quiz-fórmula-da-atenção" class="nav-link" data-scroll-target="#quiz-fórmula-da-atenção">🧩 Quiz — Fórmula da Atenção</a></li>
   <li><a href="#exemplo-visual-da-atenção" id="toc-exemplo-visual-da-atenção" class="nav-link" data-scroll-target="#exemplo-visual-da-atenção">🖼️ Exemplo Visual da Atenção</a></li>
   <li><a href="#multi-head-attention" id="toc-multi-head-attention" class="nav-link" data-scroll-target="#multi-head-attention">🔀 Multi-Head Attention</a></li>
@@ -309,7 +310,7 @@ window.Quarto = {
   <li><a href="#quiz-multi-head-attention" id="toc-quiz-multi-head-attention" class="nav-link" data-scroll-target="#quiz-multi-head-attention">🧩 Quiz — Multi-Head Attention</a></li>
   <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">✅ Conclusão</a></li>
   <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação">🔗 Navegação</a></li>
-  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links Úteis</a></li>
+  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links úteis</a></li>
   </ul>
 </nav>
     </div>
@@ -572,10 +573,31 @@ Frase: <strong>“O gato subiu no telhado.”</strong></p>
 </div>
 </div>
 </section>
+<section id="quiz-cpu-gpu-e-cuda" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-cpu-gpu-e-cuda">🧩 Quiz — CPU, GPU e CUDA</h2>
+<div class="question">
+<p><strong>Q2.</strong> Por que GPUs com CUDA são importantes para Transformers e LLMs?</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Porque eliminam a necessidade de dados de treinamento.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Porque aceleram cálculos paralelos, como multiplicações de matrizes usadas na atenção.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Porque substituem completamente o mecanismo de atenção.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
 <section id="quiz-fórmula-da-atenção" class="level2">
 <h2 class="anchored" data-anchor-id="quiz-fórmula-da-atenção">🧩 Quiz — Fórmula da Atenção</h2>
 <div class="question">
-<p><strong>Q2.</strong> Na fórmula da atenção, o papel do <strong>Softmax</strong> é:</p>
+<p><strong>Q3.</strong> Na fórmula da atenção, o papel do <strong>Softmax</strong> é:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -612,7 +634,7 @@ Frase: <strong>“O gato subiu no telhado.”</strong></p>
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="99067b19" class="cell" data-execution_count="1">
+<div id="17b13b59" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gera e salva "images/atencao-heatmap.png"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -699,7 +721,7 @@ Frase: <strong>“O gato subiu no telhado.”</strong></p>
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="89872fe6" class="cell" data-execution_count="2">
+<div id="772f5773" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gera e salva "images/multihead-attention.png"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -737,7 +759,7 @@ Frase: <strong>“O gato subiu no telhado.”</strong></p>
 <section id="quiz-multi-head-attention" class="level2">
 <h2 class="anchored" data-anchor-id="quiz-multi-head-attention">🧩 Quiz — Multi-Head Attention</h2>
 <div class="question">
-<p><strong>Q3.</strong> Por que o Transformer usa várias cabeças de atenção (Multi-Head)?</p>
+<p><strong>Q4.</strong> Por que o Transformer usa várias cabeças de atenção (Multi-Head)?</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -759,27 +781,37 @@ Frase: <strong>“O gato subiu no telhado.”</strong></p>
 <h2 class="anchored" data-anchor-id="conclusão">✅ Conclusão</h2>
 <p>O <strong>mecanismo de atenção</strong> é o núcleo do Transformer:</p>
 <ul>
-<li><strong>Q, K, V</strong> permitem que o modelo decida quais palavras são relevantes.<br>
-</li>
-<li>A fórmula com <strong>Softmax</strong> transforma similaridades em pesos de probabilidade.<br>
-</li>
-<li>O <strong>Multi-Head Attention</strong> enriquece o entendimento, analisando diferentes aspectos ao mesmo tempo.</li>
+<li><strong>Q, K, V</strong> permitem que o modelo decida quais palavras são relevantes;</li>
+<li>o <strong>Softmax</strong> transforma similaridades em pesos de atenção;</li>
+<li>a multiplicação por <strong>V</strong> gera uma combinação ponderada das informações;</li>
+<li>a <strong>Multi-Head Attention</strong> permite observar várias relações ao mesmo tempo.</li>
 </ul>
-<p>👉 Sem a atenção, os <strong>LLMs modernos não seriam possíveis</strong>.<br>
-É ela que garante que modelos como GPT-4 ou Claude consigam <strong>manter contexto, coerência e significado em longos textos</strong>.</p>
-<hr>
-<p>✍️ <em>Este post faz parte da série sobre LLMs no Blog do Marcellini.</em><br>
-No próximo post, vamos explorar <strong>o treinamento dos LLMs: pré-treinamento, fine-tuning e RLHF (aprendizado por reforço com feedback humano)</strong>. 🚀</p>
+<p>Em essência, a atenção permite que o modelo não leia uma frase apenas em sequência, mas construa relações entre seus elementos. É por isso que Transformers conseguem lidar tão bem com contexto, dependências longas e padrões linguísticos complexos.</p>
+<p>No próximo post, veremos como os LLMs são treinados: <strong>pré-treinamento, fine-tuning e RLHF</strong>.</p>
 <hr>
 </section>
-<section id="navegação" class="level1">
-<h1>🔗 Navegação</h1>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html">Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF</a></p>
+<section id="navegação" class="level2">
+<h2 class="anchored" data-anchor-id="navegação">🔗 Navegação</h2>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../posts/programacao/ia/llms/o-que-e-um-llm.html">O que é um Large Language Model (LLM)?</a> 🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html">Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF</a></p>
 <hr>
 <!-- Breadcrumbs -->
 <p>· <a href="../../../../posts/programacao/ia/index.html">← Série de LLMs 🤖</a> · 🔝 <a href="#top">Topo</a></p>
 <hr>
-<p><em>Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Sobre o projeto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Sobre o projeto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este site nasce da vontade de expor ideias com <strong>boa matemática</strong>, <strong>boa tipografia</strong> e <strong>boas explicações</strong>.<br>
+Quer saber a linha editorial, tecnologias e bastidores?</p>
+<p><a href="../../../../posts/pessoal/sobre-o-blog.html" class="button button-outline">📘 Ler “Sobre o Blog e Sobre Mim” ›</a></p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -790,14 +822,14 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p><em>Criado por Blog do Marcellini com ❤ e código.</em></p>
 </div>
 </div>
 </section>
-<section id="links-úteis" class="level1">
-<h1>🔗 Links Úteis</h1>
+<section id="links-úteis" class="level2">
+<h2 class="anchored" data-anchor-id="links-úteis">🔗 Links úteis</h2>
 <ul>
-<li>🧑‍🏫 <a href="../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
+<li><a href="../../../../posts/pessoal/sobre-o-blog.html">🧑‍🏫 Sobre o Blog</a></li>
 <li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
 <li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
 </ul>
