@@ -6535,14 +6535,14 @@
     "href": "posts/programacao/ia/llms/desafios-limitacoes.html#custos-de-treinamento",
     "title": "⚠️ Desafios e Limitações dos LLMs",
     "section": "💰 Custos de Treinamento",
-    "text": "💰 Custos de Treinamento\nTreinar um LLM moderno exige:\n\nCentenas de GPUs ou TPUs trabalhando em paralelo.\n\nSemanas ou meses de processamento.\n\nMilhões de dólares em infraestrutura.\n\n\n\n\n\n\n\nNota📊 Exemplo de custo (aproximado)\n\n\n\n\nGPT-3 (2020): estimado em US$ 4,6 milhões em energia e hardware.\n\nGPT-4 (2023): valores não oficiais, mas provavelmente dezenas de milhões.\n\n\n\n\n👉 Isso limita o acesso à tecnologia a poucas empresas gigantes, criando concentração de poder."
+    "text": "💰 Custos de Treinamento\nTreinar um LLM moderno exige:\n\nCentenas de GPUs ou TPUs trabalhando em paralelo.\n\nSemanas ou meses de processamento.\n\nMilhões de dólares em infraestrutura.\n\n\n\n\n\n\n\nNota📊 Custo computacional\n\n\n\nModelos de fronteira podem exigir investimentos muito altos em hardware, energia, armazenamento, equipes técnicas e infraestrutura de nuvem.\nOs valores exatos geralmente não são públicos, mas a ordem de grandeza ajuda a entender por que poucos grupos conseguem treinar modelos desse porte do zero.\n\n\n👉 Isso limita o acesso à tecnologia a poucas empresas gigantes, criando concentração de poder."
   },
   {
     "objectID": "posts/programacao/ia/llms/desafios-limitacoes.html#impacto-ambiental",
     "href": "posts/programacao/ia/llms/desafios-limitacoes.html#impacto-ambiental",
     "title": "⚠️ Desafios e Limitações dos LLMs",
     "section": "🌱 Impacto Ambiental",
-    "text": "🌱 Impacto Ambiental\nO consumo de energia dos LLMs é enorme.\n\nCada treinamento pode emitir toneladas de CO₂.\n\nA manutenção (uso diário) também consome energia significativa em data centers.\n\n\n\n\n\n\n\nDica🌍 Comparação ilustrativa\n\n\n\nTreinar um modelo do porte do GPT-3 pode emitir tanto carbono quanto a vida útil de 5 carros circulando.\n\n\nIsso levanta preocupações sobre sustentabilidade e a necessidade de modelos mais eficientes."
+    "text": "🌱 Impacto Ambiental\nO consumo de energia dos LLMs é enorme.\n\nCada treinamento pode emitir toneladas de CO₂.\n\nA manutenção (uso diário) também consome energia significativa em data centers.\n\n\n\n\n\n\n\nDica🌍 Comparação ilustrativa\n\n\n\nO impacto ambiental depende da matriz energética, do tamanho do modelo, do hardware usado e da frequência de uso.\nPor isso, mais do que memorizar um número fixo, é importante entender que eficiência energética e uso responsável são partes centrais do debate.\n\n\nIsso levanta preocupações sobre sustentabilidade e a necessidade de modelos mais eficientes."
   },
   {
     "objectID": "posts/programacao/ia/llms/desafios-limitacoes.html#questões-éticas",
@@ -6563,21 +6563,21 @@
     "href": "posts/programacao/ia/llms/desafios-limitacoes.html#quiz-teste-seus-conhecimentos",
     "title": "⚠️ Desafios e Limitações dos LLMs",
     "section": "🧩 Quiz — Teste seus conhecimentos",
-    "text": "🧩 Quiz — Teste seus conhecimentos\n\nQ1. O que significa “alucinação” em um LLM?\n\n\n\n\n ✗Quando o modelo reproduz vieses sociais.\n\n\n ✓Quando o modelo inventa informações falsas, mas de forma coerente.\n\n\n ✗Quando o modelo consome muita energia para treinar.\n\n\n\n\n\n\nQ2. Qual dos pontos abaixo está ligado ao impacto ambiental dos LLMs?\n\n\n\n\n ✗Tendência de associar estereótipos.\n\n\n ✗Geração de respostas falsas.\n\n\n ✓O consumo de energia e emissão de CO₂ em data centers."
+    "text": "🧩 Quiz — Teste seus conhecimentos\n\nQ3. O que significa “alucinação” em um LLM?\n\n\n\n\n ✗Quando o modelo reproduz vieses sociais.\n\n\n ✓Quando o modelo inventa informações falsas, mas de forma coerente.\n\n\n ✗Quando o modelo consome muita energia para treinar.\n\n\n\n\n\n\nQ4. Qual dos pontos abaixo está ligado ao impacto ambiental dos LLMs?\n\n\n\n\n ✗Tendência de associar estereótipos.\n\n\n ✗Geração de respostas falsas.\n\n\n ✓O consumo de energia e emissão de CO₂ em data centers."
   },
   {
     "objectID": "posts/programacao/ia/llms/desafios-limitacoes.html#resumo-comparativo",
     "href": "posts/programacao/ia/llms/desafios-limitacoes.html#resumo-comparativo",
     "title": "⚠️ Desafios e Limitações dos LLMs",
     "section": "📊 Resumo Comparativo",
-    "text": "📊 Resumo Comparativo\n\n\n\n\n\n\n\n\nDesafio\nDescrição\nExemplo\n\n\n\n\nVieses\nReproduzem preconceitos sociais\nAssociar profissões a um gênero\n\n\nAlucinações\nInventam fatos falsos\nCitar artigo inexistente\n\n\nCustos\nMilhões em GPUs e energia\nGPT-3 → ~US$ 4,6 milhões\n\n\nImpacto ambiental\nAltas emissões de CO₂\nEquivalente à vida útil de 5 carros\n\n\nÉtica\nQuestões de uso e copyright\nDeepfakes, desinformação"
+    "text": "📊 Resumo Comparativo\n\n\n\n\n\n\n\n\nDesafio\nDescrição\nExemplo\n\n\n\n\nVieses\nReproduzem preconceitos sociais\nAssociar profissões a um gênero\n\n\nAlucinações\nInventam fatos falsos\nCitar artigo inexistente\n\n\nCustos\nAlto gasto com GPUs, energia e infraestrutura\nTreinamentos de fronteira podem custar milhões de dólares\n\n\nImpacto ambiental\nConsumo elevado de energia e recursos\nData centers exigem energia, resfriamento e infraestrutura\n\n\nÉtica\nQuestões de uso e copyright\nDeepfakes, desinformação"
   },
   {
     "objectID": "posts/programacao/ia/llms/desafios-limitacoes.html#conclusão",
     "href": "posts/programacao/ia/llms/desafios-limitacoes.html#conclusão",
     "title": "⚠️ Desafios e Limitações dos LLMs",
     "section": "✅ Conclusão",
-    "text": "✅ Conclusão\nOs LLMs são uma tecnologia transformadora, mas que traz riscos e responsabilidades.\n\nPodem reproduzir vieses sociais.\n\nEstão sujeitos a alucinações.\n\nExigem recursos financeiros e energéticos gigantescos.\n\nLevantam questões éticas profundas.\n\n👉 O futuro da IA depende não só de avanços técnicos, mas também de como escolhemos usá-la.\n\n✍️ Este post faz parte da série sobre LLMs no Blog do Marcellini.\nNo próximo post, vamos explorar as aplicações práticas dos LLMs: educação, saúde, programação, arte e muito mais. 🚀"
+    "text": "✅ Conclusão\nOs LLMs são uma tecnologia transformadora, mas trazem riscos e responsabilidades.\nEles podem:\n\nreproduzir vieses sociais;\ngerar alucinações;\nexigir grande quantidade de energia e infraestrutura;\nconcentrar poder tecnológico em poucas organizações;\nlevantar questões éticas sobre autoria, privacidade, desinformação e responsabilidade.\n\nIsso não significa que devemos rejeitar a tecnologia. Significa que devemos usá-la com critério, verificação e supervisão humana.\nO futuro da IA depende não apenas de modelos mais capazes, mas também de instituições, usuários, pesquisadores e educadores capazes de compreender seus limites.\nNo próximo post, vamos explorar as aplicações práticas dos LLMs: educação, saúde, programação, arte e muito mais. 🚀"
   },
   {
     "objectID": "posts/programacao/ia/llms/o-que-e-um-llm.html",
@@ -7535,6 +7535,27 @@
     "objectID": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#links-úteis",
     "href": "posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html#links-úteis",
     "title": "⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF",
+    "section": "🔗 Links úteis",
+    "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/desafios-limitacoes.html#quiz-vieses-e-uso-responsável",
+    "href": "posts/programacao/ia/llms/desafios-limitacoes.html#quiz-vieses-e-uso-responsável",
+    "title": "⚠️ Desafios e Limitações dos LLMs",
+    "section": "🧩 Quiz — Vieses e uso responsável",
+    "text": "🧩 Quiz — Vieses e uso responsável\n\nQ1. Quando dizemos que um LLM pode reproduzir vieses, queremos dizer que ele pode:\n\n\n\n\n ✗Resolver qualquer problema matemático sem erro.\n\n\n ✓Repetir padrões, estereótipos ou desigualdades presentes nos dados de treinamento.\n\n\n ✗Eliminar automaticamente todos os preconceitos humanos.\n\n\n\n\n\n\nQ2. Um uso responsável de LLMs exige:\n\n\n\n\n ✗Aceitar toda resposta gerada como verdadeira.\n\n\n ✗Evitar qualquer revisão humana.\n\n\n ✓Verificar informações importantes, considerar riscos e manter supervisão humana."
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/desafios-limitacoes.html#navegação",
+    "href": "posts/programacao/ia/llms/desafios-limitacoes.html#navegação",
+    "title": "⚠️ Desafios e Limitações dos LLMs",
+    "section": "🔗 Navegação",
+    "text": "🔗 Navegação\n🎯 Post anterior: 👉 Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF 🎯 Próximo post: 👉 Aplicações Práticas dos LLMs\n\n\n· ← Série de LLMs 🤖 · 🔝 Topo\n\n\n\n\n\n\n\nDicaSobre o projeto\n\n\n\nEste site nasce da vontade de expor ideias com boa matemática, boa tipografia e boas explicações.\nQuer saber a linha editorial, tecnologias e bastidores?\n📘 Ler “Sobre o Blog e Sobre Mim” ›\n\n\n\n\n\n\n\n\nNota\n\n\n\nCriado por Blog do Marcellini com ❤ e código."
+  },
+  {
+    "objectID": "posts/programacao/ia/llms/desafios-limitacoes.html#links-úteis",
+    "href": "posts/programacao/ia/llms/desafios-limitacoes.html#links-úteis",
+    "title": "⚠️ Desafios e Limitações dos LLMs",
     "section": "🔗 Links úteis",
     "text": "🔗 Links úteis\n\n🧑‍🏫 Sobre o Blog\n💻 GitHub do Projeto\n📬 Contato por E-mail"
   }
