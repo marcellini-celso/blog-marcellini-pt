@@ -218,55 +218,71 @@ Corrigir erros gramaticais no texto.
 
 👉 Essa progressão transforma um modelo “cru” em um **assistente conversacional confiável**.
 
----
+## 🧩 Quiz — Etapas do treinamento
 
-## 👉 Em Resumo
+:::::{.question}
+**Q4.** Qual sequência descreve melhor o treinamento típico de um LLM moderno?
 
-::: {.callout-tip title="🤖 Por que dizemos que um LLM não 'nasce pronto'?"}
-Um **Large Language Model (LLM)** não surge já sabendo responder perguntas, traduzir textos ou escrever código.  
-Ele precisa **passar por um processo de treinamento em camadas**:
-
-1. **Pré-treinamento:**  
-   - O modelo lê bilhões de palavras.  
-   - Aprende as **estatísticas da linguagem**: gramática, vocabulário, estilo, associações.  
-   - Resultado: um modelo que **completa frases**, mas ainda não é um bom “assistente”.
-
-2. **Fine-Tuning (ajuste supervisionado):**  
-   - Recebe dados **rotulados por humanos** (ex.: pares de pergunta → resposta).  
-   - Aprende a **seguir instruções** e dar respostas úteis.  
-   - Resultado: começa a agir como uma **ferramenta prática**.
-
-3. **RLHF (Reinforcement Learning with Human Feedback):**  
-   - Pessoas avaliam respostas e dão **preferências**.  
-   - Um modelo de recompensa orienta o LLM principal.  
-   - Resultado: o modelo aprende a **responder do jeito que preferimos**.
-
-👉 Assim como uma criança passa por **aprendizado básico**, depois **educação formal** e finalmente **ajustes sociais**, um LLM também precisa dessas fases para se tornar um **assistente confiável**.
+::::{.choices}
+:::{.choice}
+RLHF → pré-treinamento → fine-tuning.
 :::
 
+:::{.choice .correct-choice}
+Pré-treinamento → fine-tuning → RLHF.
+:::
+
+:::{.choice}
+Fine-tuning → tokenização → remoção do modelo de recompensa.
+:::
+::::
+:::::
 
 ---
+
+## 👉 Em resumo
+
+::: {.callout-tip title="🤖 Por que dizemos que um LLM não 'nasce pronto'?"}
+Um **Large Language Model (LLM)** não surge já sabendo responder perguntas, traduzir textos ou escrever código.
+
+Ele passa por um processo de treinamento em camadas:
+
+1. **Pré-treinamento:**
+   - lê grandes volumes de texto;
+   - aprende padrões gerais da linguagem;
+   - torna-se capaz de completar sequências de texto.
+
+2. **Fine-tuning supervisionado:**
+   - recebe exemplos mais específicos;
+   - aprende a seguir instruções;
+   - passa a responder de modo mais útil em tarefas práticas.
+
+3. **RLHF:**
+   - incorpora preferências humanas;
+   - usa rankings de respostas;
+   - ajusta o comportamento do modelo para respostas mais úteis, seguras e alinhadas.
+
+Assim como uma pessoa passa por aprendizado básico, educação orientada e ajustes sociais, um LLM também precisa de etapas sucessivas para se tornar um assistente útil.
+:::
 
 ## ✅ Conclusão
 
 O treinamento de um LLM acontece em camadas:
 
-1. **Pré-treinamento** → ensina a linguagem em geral.  
-2. **Fine-tuning** → adapta para seguir instruções.  
-3. **RLHF** → refina com preferências humanas.  
+1. **Pré-treinamento** → ensina padrões gerais da linguagem.
+2. **Fine-tuning** → adapta o modelo para seguir instruções.
+3. **RLHF** → refina o comportamento com preferências humanas.
 
-👉 Graças a esse processo, temos hoje modelos que não apenas **geram texto coerente**, mas também **interagem de forma útil e alinhada** com as necessidades humanas.  
+Esse processo transforma um modelo estatístico de linguagem em um sistema mais útil para conversação, programação, resumo, tradução, explicação e várias outras tarefas.
 
----
-
-✍️ *Este post faz parte da série sobre LLMs no Blog do Marcellini.*  
-No próximo post, vamos explorar os **desafios e limitações dos LLMs**: vieses, alucinações e custos de treinamento. ⚠️
+No próximo post, vamos explorar os **desafios e limitações dos LLMs**: vieses, alucinações, custos computacionais e riscos de uso. ⚠
 
 ---
 
-# 🔗 Navegação
+## 🔗 Navegação
 
-🎯 **Próximo Post:** 👉 [Desafios e Limitações dos LLMs](desafios-limitacoes.qmd)
+🎯 **Post anterior:** 👉 [Atenção em Transformers: Q, K, V e Multi-Head Attention](atencao-transformers-qkv-mha.qmd)
+🎯 **Próximo post:** 👉 [Desafios e Limitações dos LLMs](desafios-limitacoes.qmd)
 
 ---
 
@@ -276,15 +292,14 @@ No próximo post, vamos explorar os **desafios e limitações dos LLMs**: vieses
 
 ---
 
-*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.*
+{{< include /_includes/sobre-projeto.qmd >}}
 
 :::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+*Criado por Blog do Marcellini com ❤ e código.*
 :::
 
-# 🔗 Links Úteis
+## 🔗 Links úteis
 
-- 🧑‍🏫 [Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
 - 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
 - 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-

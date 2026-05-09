@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.35">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,10 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-3f230b53dc93e4a04bf4a3505d77a42a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-9cdbd49fb92a4d7f9d8c4f710986121f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-666207ef3173b7fd98750e0fbedb866b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -284,10 +284,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#visualizando-o-processo-de-treinamento" id="toc-visualizando-o-processo-de-treinamento" class="nav-link" data-scroll-target="#visualizando-o-processo-de-treinamento">🖼️ Visualizando o Processo de Treinamento</a></li>
   <li><a href="#quiz-rlhf" id="toc-quiz-rlhf" class="nav-link" data-scroll-target="#quiz-rlhf">🧩 Quiz — RLHF</a></li>
   <li><a href="#resumo-comparativo" id="toc-resumo-comparativo" class="nav-link" data-scroll-target="#resumo-comparativo">📊 Resumo Comparativo</a></li>
-  <li><a href="#em-resumo" id="toc-em-resumo" class="nav-link" data-scroll-target="#em-resumo">👉 Em Resumo</a></li>
+  <li><a href="#quiz-etapas-do-treinamento" id="toc-quiz-etapas-do-treinamento" class="nav-link" data-scroll-target="#quiz-etapas-do-treinamento">🧩 Quiz — Etapas do treinamento</a></li>
+  <li><a href="#em-resumo" id="toc-em-resumo" class="nav-link" data-scroll-target="#em-resumo">👉 Em resumo</a></li>
   <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">✅ Conclusão</a></li>
   <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação">🔗 Navegação</a></li>
-  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links Úteis</a></li>
+  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links úteis</a></li>
   </ul>
 </nav>
     </div>
@@ -526,7 +527,7 @@ Para corrigir isso, entra o <strong>RLHF (Reinforcement Learning with Human Feed
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="9b78490f" class="cell" data-execution_count="1">
+<div id="4bfc6e08" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gera e salva "images/llm-training-stages.png"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -630,10 +631,31 @@ Para corrigir isso, entra o <strong>RLHF (Reinforcement Learning with Human Feed
 </tbody>
 </table>
 <p>👉 Essa progressão transforma um modelo “cru” em um <strong>assistente conversacional confiável</strong>.</p>
+</section>
+<section id="quiz-etapas-do-treinamento" class="level2">
+<h2 class="anchored" data-anchor-id="quiz-etapas-do-treinamento">🧩 Quiz — Etapas do treinamento</h2>
+<div class="question">
+<p><strong>Q4.</strong> Qual sequência descreve melhor o treinamento típico de um LLM moderno?</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>RLHF → pré-treinamento → fine-tuning.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Pré-treinamento → fine-tuning → RLHF.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Fine-tuning → tokenização → remoção do modelo de recompensa.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
 <hr>
 </section>
 <section id="em-resumo" class="level2">
-<h2 class="anchored" data-anchor-id="em-resumo">👉 Em Resumo</h2>
+<h2 class="anchored" data-anchor-id="em-resumo">👉 Em resumo</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="🤖 Por que dizemos que um LLM não 'nasce pronto'?">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -644,63 +666,66 @@ Para corrigir isso, entra o <strong>RLHF (Reinforcement Learning with Human Feed
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Um <strong>Large Language Model (LLM)</strong> não surge já sabendo responder perguntas, traduzir textos ou escrever código.<br>
-Ele precisa <strong>passar por um processo de treinamento em camadas</strong>:</p>
+<p>Um <strong>Large Language Model (LLM)</strong> não surge já sabendo responder perguntas, traduzir textos ou escrever código.</p>
+<p>Ele passa por um processo de treinamento em camadas:</p>
 <ol type="1">
 <li><strong>Pré-treinamento:</strong>
 <ul>
-<li>O modelo lê bilhões de palavras.<br>
-</li>
-<li>Aprende as <strong>estatísticas da linguagem</strong>: gramática, vocabulário, estilo, associações.<br>
-</li>
-<li>Resultado: um modelo que <strong>completa frases</strong>, mas ainda não é um bom “assistente”.</li>
+<li>lê grandes volumes de texto;</li>
+<li>aprende padrões gerais da linguagem;</li>
+<li>torna-se capaz de completar sequências de texto.</li>
 </ul></li>
-<li><strong>Fine-Tuning (ajuste supervisionado):</strong>
+<li><strong>Fine-tuning supervisionado:</strong>
 <ul>
-<li>Recebe dados <strong>rotulados por humanos</strong> (ex.: pares de pergunta → resposta).<br>
-</li>
-<li>Aprende a <strong>seguir instruções</strong> e dar respostas úteis.<br>
-</li>
-<li>Resultado: começa a agir como uma <strong>ferramenta prática</strong>.</li>
+<li>recebe exemplos mais específicos;</li>
+<li>aprende a seguir instruções;</li>
+<li>passa a responder de modo mais útil em tarefas práticas.</li>
 </ul></li>
-<li><strong>RLHF (Reinforcement Learning with Human Feedback):</strong>
+<li><strong>RLHF:</strong>
 <ul>
-<li>Pessoas avaliam respostas e dão <strong>preferências</strong>.<br>
-</li>
-<li>Um modelo de recompensa orienta o LLM principal.<br>
-</li>
-<li>Resultado: o modelo aprende a <strong>responder do jeito que preferimos</strong>.</li>
+<li>incorpora preferências humanas;</li>
+<li>usa rankings de respostas;</li>
+<li>ajusta o comportamento do modelo para respostas mais úteis, seguras e alinhadas.</li>
 </ul></li>
 </ol>
-<p>👉 Assim como uma criança passa por <strong>aprendizado básico</strong>, depois <strong>educação formal</strong> e finalmente <strong>ajustes sociais</strong>, um LLM também precisa dessas fases para se tornar um <strong>assistente confiável</strong>.</p>
+<p>Assim como uma pessoa passa por aprendizado básico, educação orientada e ajustes sociais, um LLM também precisa de etapas sucessivas para se tornar um assistente útil.</p>
 </div>
 </div>
-<hr>
 </section>
 <section id="conclusão" class="level2">
 <h2 class="anchored" data-anchor-id="conclusão">✅ Conclusão</h2>
 <p>O treinamento de um LLM acontece em camadas:</p>
 <ol type="1">
-<li><strong>Pré-treinamento</strong> → ensina a linguagem em geral.<br>
-</li>
-<li><strong>Fine-tuning</strong> → adapta para seguir instruções.<br>
-</li>
-<li><strong>RLHF</strong> → refina com preferências humanas.</li>
+<li><strong>Pré-treinamento</strong> → ensina padrões gerais da linguagem.</li>
+<li><strong>Fine-tuning</strong> → adapta o modelo para seguir instruções.</li>
+<li><strong>RLHF</strong> → refina o comportamento com preferências humanas.</li>
 </ol>
-<p>👉 Graças a esse processo, temos hoje modelos que não apenas <strong>geram texto coerente</strong>, mas também <strong>interagem de forma útil e alinhada</strong> com as necessidades humanas.</p>
-<hr>
-<p>✍️ <em>Este post faz parte da série sobre LLMs no Blog do Marcellini.</em><br>
-No próximo post, vamos explorar os <strong>desafios e limitações dos LLMs</strong>: vieses, alucinações e custos de treinamento. ⚠️</p>
+<p>Esse processo transforma um modelo estatístico de linguagem em um sistema mais útil para conversação, programação, resumo, tradução, explicação e várias outras tarefas.</p>
+<p>No próximo post, vamos explorar os <strong>desafios e limitações dos LLMs</strong>: vieses, alucinações, custos computacionais e riscos de uso. ⚠</p>
 <hr>
 </section>
-<section id="navegação" class="level1">
-<h1>🔗 Navegação</h1>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../posts/programacao/ia/llms/desafios-limitacoes.html">Desafios e Limitações dos LLMs</a></p>
+<section id="navegação" class="level2">
+<h2 class="anchored" data-anchor-id="navegação">🔗 Navegação</h2>
+<p>🎯 <strong>Post anterior:</strong> 👉 <a href="../../../../posts/programacao/ia/llms/atencao-transformers-qkv-mha.html">Atenção em Transformers: Q, K, V e Multi-Head Attention</a> 🎯 <strong>Próximo post:</strong> 👉 <a href="../../../../posts/programacao/ia/llms/desafios-limitacoes.html">Desafios e Limitações dos LLMs</a></p>
 <hr>
 <!-- Breadcrumbs -->
 <p>· <a href="../../../../posts/programacao/ia/index.html">← Série de LLMs 🤖</a> · 🔝 <a href="#top">Topo</a></p>
 <hr>
-<p><em>Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Sobre o projeto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Sobre o projeto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este site nasce da vontade de expor ideias com <strong>boa matemática</strong>, <strong>boa tipografia</strong> e <strong>boas explicações</strong>.<br>
+Quer saber a linha editorial, tecnologias e bastidores?</p>
+<p><a href="../../../../posts/pessoal/sobre-o-blog.html" class="button button-outline">📘 Ler “Sobre o Blog e Sobre Mim” ›</a></p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -711,14 +736,14 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
+<p><em>Criado por Blog do Marcellini com ❤ e código.</em></p>
 </div>
 </div>
 </section>
-<section id="links-úteis" class="level1">
-<h1>🔗 Links Úteis</h1>
+<section id="links-úteis" class="level2">
+<h2 class="anchored" data-anchor-id="links-úteis">🔗 Links úteis</h2>
 <ul>
-<li>🧑‍🏫 <a href="../../../../posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
+<li><a href="../../../../posts/pessoal/sobre-o-blog.html">🧑‍🏫 Sobre o Blog</a></li>
 <li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
 <li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
 </ul>
