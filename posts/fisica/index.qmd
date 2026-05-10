@@ -52,38 +52,45 @@ Uma série de ensaios sobre **como a Física pensa**: entre cálculo, intuição
 
 ## 📚 Séries Especiais
 
-::: {.columns}
-::: {.column width="25%"}
+<style>
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.series-grid .callout {
+  height: 100%;
+}
+</style>
+
+::: {.series-grid}
+
 ::: {.callout-note title="🧬 100 Anos da Mecânica Quântica"}
 Panorama histórico e conceitual.
 
 [Ver a série ›](guia-100-anos-mecanica-quantica.qmd){.button .button-outline}
 :::
-:::
 
-::: {.column width="25%"}
 ::: {.callout-note title="🛰️ Relatividade Especial"}
 Fundamentos, efeitos e paradoxos.
 
 [Ver a série ›](guia-relatividade-especial.qmd){.button .button-outline}
 :::
-:::
 
-::: {.column width="25%"}
 ::: {.callout-note title="🌠 Relatividade Geral"}
 Geometria do espaço-tempo e gravitação.
 
 [Ver a série ›](guia-relatividade-geral.qmd){.button .button-outline}
 :::
-:::
 
-::: {.column width="25%"}
 ::: {.callout-note title="🔭 História & Epistemologia"}
 Ensaios sobre estilos de pensamento na Física.
 
 [Ver a série ›](historia-epistemologia/index.qmd){.button .button-outline}
 :::
-:::
+
 :::
 
 {{< include /_includes/politica-editorial.qmd >}}
