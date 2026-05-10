@@ -2,7 +2,7 @@
 title: "🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física"
 description: "Um ensaio sobre dois estilos intelectuais na física teórica do século XX: o formalismo austero de Paul Dirac e a intuição pragmática de Richard Feynman."
 author: "Blog do Marcellini"
-date: 2026-05-07
+date: 2026-05-10
 lang: pt-BR
 categories: [física, epistemologia, história da física]
 tags: [dirac, feynman, epistemologia, mecânica quântica]
@@ -144,4 +144,110 @@ Como contraponto, vale ler também:
 
 Enquanto Farmelo ilumina o universo mental de Dirac, Mlodinow apresenta Feynman em um ambiente mais conversacional, intuitivo e humano. A leitura dos dois livros em conjunto reforça a tese central deste post: a Física do século XX não avançou por um único estilo de pensamento, mas pela convivência entre formalismo matemático, intuição física, cálculo efetivo e imaginação criadora.
 
-· 🔝 [Topo](#top) · ← [Seção de Física](index.qmd)
+---
+
+## 🧩 Quiz — Dirac vs Feynman
+
+:::::{.question}
+**Q1.** No ensaio, Dirac é apresentado como um físico que valorizava sobretudo:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Beleza matemática, simetria e necessidade formal.
+:::
+
+:::{.choice}
+Improviso experimental sem formalismo.
+:::
+
+:::{.choice}
+A recusa da abstração matemática.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** Feynman representa, em contraste com Dirac:
+
+::::{.choices}
+:::{.choice .correct-choice}
+A Física como cálculo, intuição, visualização e contato com fenômenos concretos.
+:::
+
+:::{.choice}
+A Física como pura dedução axiomática sem experimentos.
+:::
+
+:::{.choice}
+A ideia de que diagramas não têm utilidade científica.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** A relação entre formalismo e intuição é descrita como:
+
+::::{.choices}
+:::{.choice}
+Um conflito em que a Física precisa escolher apenas um lado.
+:::
+
+:::{.choice .correct-choice}
+Uma tensão criativa que impulsiona a Física.
+:::
+
+:::{.choice}
+Um problema meramente biográfico sem importância epistemológica.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q4.** Na analogia histórica do texto, Feynman e Dirac se aproximam, respectivamente, de:
+
+::::{.choices}
+:::{.choice}
+Grécia e Babilônia.
+:::
+
+:::{.choice .correct-choice}
+Babilônia e Grécia.
+:::
+
+:::{.choice}
+Renascimento e Idade Média.
+:::
+
+::::
+:::::
+
+---
+
+## 🔗 Navegação
+
+🎯 **Anterior:** 👉 [Feynman e Gell-Mann](feynman-gellmann-babilonia-grecia.qmd)
+
+🎯 **Próximo:** 👉 [Einstein: físico ou filósofo natural?](einstein-fisico-ou-filosofo-natural.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← Física, História & Epistemologia](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)

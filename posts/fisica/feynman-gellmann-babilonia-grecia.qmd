@@ -2,7 +2,7 @@
 title: "🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia"
 description: "Dois modos de pensar a natureza: o experimental e o racional. Feynman como herdeiro do espírito babilônico; Gell-Mann, do espírito grego."
 author: "Blog do Marcellini"
-date: 2026-05-07
+date: 2026-05-10
 lang: pt-BR
 categories: [física, história da ciência, pensamento científico]
 tags: [Feynman, Gell-Mann, Babilônia, Grécia, ciência, filosofia, método científico]
@@ -20,7 +20,7 @@ format:
       - css/feynman.css
 ---
 
-# 🧩 Dois gênios, duas visões
+## 🧩 Dois gênios, duas visões
 
 Nos corredores do **Caltech**, na década de 1960, dois físicos brilhavam com luz própria:
 **Richard Feynman** e **Murray Gell-Mann**.
@@ -33,7 +33,7 @@ Ambos receberam o **Prêmio Nobel** — mas, mais que prêmios, deixaram modos d
 
 ---
 
-# 🌒 O espírito babilônico — Feynman e o saber pela experiência
+## 🌒 O espírito babilônico — Feynman e o saber pela experiência
 
 Os **babilônios** observavam o céu, as marés, os ciclos da Lua e do Sol.
 Não buscavam leis universais, mas padrões práticos que lhes permitissem **prever e agir**.
@@ -62,7 +62,7 @@ os **diagramas de Feynman** são como **rabiscos que funcionam**, arte prática 
 
 ---
 
-# 🌞 O espírito grego — Gell-Mann e o saber pela razão
+## 🌞 O espírito grego — Gell-Mann e o saber pela razão
 
 Os **gregos** buscavam a **ordem oculta** por trás da multiplicidade dos fenômenos.
 Não bastava prever o eclipse — era preciso *entender por que ele ocorre*.
@@ -88,7 +88,7 @@ uma **arquitetura conceitual** que revelou a harmonia escondida nas partículas 
 
 ---
 
-# ⚖️ Dois caminhos para o conhecimento
+## ⚖️ Dois caminhos para o conhecimento
 
 | Dimensão | **Feynman (Babilônico)** | **Gell-Mann (Grego)** |
 |-----------|--------------------------|-----------------------|
@@ -105,7 +105,7 @@ Sem o ideal grego de ordem, a curiosidade babilônica seria puro acaso.
 
 ---
 
-# 🌍 Conclusão — Quando o ofício encontra a harmonia
+## 🌍 Conclusão — Quando o ofício encontra a harmonia
 
 Feynman e Gell-Mann são, cada um a seu modo, herdeiros de tradições milenares.
 O primeiro, da **curiosidade prática**; o segundo, da **razão geométrica**.
@@ -122,7 +122,7 @@ quando o olhar curioso de Feynman se encontra com a mente ordenadora de Gell-Man
 
 ---
 
-# 📚 Leitura recomendada
+## 📚 Leitura recomendada
 
 Para aprofundar o contraste entre os estilos intelectuais de Richard Feynman e Murray Gell-Mann, uma leitura complementar muito adequada é:
 
@@ -136,4 +136,110 @@ A leitura dialoga diretamente com a ideia central deste ensaio. Feynman aparece 
 
 Embora o foco narrativo recaia principalmente sobre Feynman e sobre a formação intelectual do próprio Mlodinow, a presença de Gell-Mann torna a obra especialmente pertinente para este post, pois mostra que a física também é feita de estilos, temperamentos, rivalidades, admiração e diferentes maneiras de buscar a beleza na natureza.
 
-· 🔝 [Topo](#top) · ← [Seção de Física](index.qmd)
+---
+
+## 🧩 Quiz — Feynman e Gell-Mann — Entre Babilônia e Grécia
+
+:::::{.question}
+**Q1.** Segundo o ensaio, Feynman representa principalmente:
+
+::::{.choices}
+:::{.choice}
+A busca por axiomas formais antes da experiência.
+:::
+
+:::{.choice .correct-choice}
+O espírito babilônico: experiência, cálculo, intuição e prática.
+:::
+
+:::{.choice}
+A rejeição completa da matemática na Física.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** No texto, Gell-Mann é associado ao espírito grego porque:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Valoriza ordem, simetria, classificação e estrutura racional.
+:::
+
+:::{.choice}
+Defende que a Física deve abandonar teorias abstratas.
+:::
+
+:::{.choice}
+Trabalha apenas com experimentos manuais e observações diretas.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** A oposição Babilônia/Grécia é apresentada como:
+
+::::{.choices}
+:::{.choice}
+Uma disputa em que apenas o método grego vence.
+:::
+
+:::{.choice .correct-choice}
+Um falso problema, pois a ciência moderna vive da tensão entre experiência e razão.
+:::
+
+:::{.choice}
+Uma diferença irrelevante para a Física contemporânea.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q4.** A conclusão sugere que o conhecimento científico cresce quando:
+
+::::{.choices}
+:::{.choice .correct-choice}
+O artesão empírico e o arquiteto racional trabalham juntos.
+:::
+
+:::{.choice}
+A imaginação substitui completamente os fatos.
+:::
+
+:::{.choice}
+A experiência é abandonada em favor da estética.
+:::
+
+::::
+:::::
+
+---
+
+## 🔗 Navegação
+
+🎯 **Anterior:** 👉 [Página da Série](index.qmd)
+
+🎯 **Próximo:** 👉 [Dirac vs Feynman](dirac-vs-feynman.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← Física, História & Epistemologia](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)

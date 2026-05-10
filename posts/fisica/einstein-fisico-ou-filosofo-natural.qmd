@@ -2,7 +2,7 @@
 title: "🧠 Einstein — Físico ou Filósofo Natural?"
 description: "Um ensaio epistemológico sobre Albert Einstein como arquiteto conceitual da Física Moderna, explorando o papel dos princípios, da intuição e da filosofia natural em suas teorias."
 author: "Blog do Marcellini"
-date: 2026-05-07
+date: 2026-05-10
 lang: pt-BR
 categories: [física, epistemologia, história da física]
 tags: [einstein, relatividade, epistemologia, filosofia da ciência]
@@ -145,4 +145,110 @@ Esse enfoque combina bem com o tema deste ensaio porque mostra que, em Einstein,
 
 Lido em diálogo com obras sobre Dirac, Feynman e Gell-Mann, o livro ajuda a perceber que a Física Moderna não foi construída por um único estilo intelectual. Ela surgiu da tensão criativa entre beleza matemática, classificação estrutural, intuição pragmática e busca por princípios universais.
 
-· 🔝 [Topo](#top) · ← [Seção de Física](index.qmd)
+---
+
+## 🧩 Quiz — Einstein — Físico ou Filósofo Natural?
+
+:::::{.question}
+**Q1.** Segundo o ensaio, Einstein se distingue por buscar:
+
+::::{.choices}
+:::{.choice}
+Apenas técnicas de cálculo mais rápidas.
+:::
+
+:::{.choice .correct-choice}
+Princípios conceituais profundos sobre espaço, tempo, gravidade e realidade.
+:::
+
+:::{.choice}
+Modelos numéricos sem interpretação física.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** Os experimentos mentais de Einstein são importantes porque:
+
+::::{.choices}
+:::{.choice}
+Substituem definitivamente a matemática.
+:::
+
+:::{.choice .correct-choice}
+Revelam contradições conceituais antes da formulação matemática completa.
+:::
+
+:::{.choice}
+São meras histórias sem valor científico.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** A relação de Einstein com a matemática é caracterizada no texto como:
+
+::::{.choices}
+:::{.choice .correct-choice}
+A matemática como meio poderoso, mas não como fim absoluto.
+:::
+
+:::{.choice}
+A matemática como critério único de verdade.
+:::
+
+:::{.choice}
+A matemática como algo sem função na Física.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q4.** O desconforto de Einstein com a Mecânica Quântica era sobretudo:
+
+::::{.choices}
+:::{.choice}
+Experimental.
+:::
+
+:::{.choice .correct-choice}
+Epistemológico e conceitual.
+:::
+
+:::{.choice}
+Linguístico.
+:::
+
+::::
+:::::
+
+---
+
+## 🔗 Navegação
+
+🎯 **Anterior:** 👉 [Dirac vs Feynman](dirac-vs-feynman.qmd)
+
+🎯 **Próximo:** 👉 [Cálculo Simbólico vs Numérico](calculo-simbolico-vs-numerico.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← Física, História & Epistemologia](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)

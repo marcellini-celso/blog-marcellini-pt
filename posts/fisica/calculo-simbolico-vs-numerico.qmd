@@ -2,7 +2,7 @@
 title: "🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?"
 description: "Um ensaio epistemológico sobre a tensão entre soluções analíticas, simulações numéricas e o conceito de entendimento científico na Física contemporânea."
 author: "Blog do Marcellini"
-date: 2026-05-07
+date: 2026-05-10
 lang: pt-BR
 categories: [física, epistemologia, física computacional]
 tags: [cálculo simbólico, simulação numérica, epistemologia, computação científica]
@@ -192,4 +192,110 @@ A obra dialoga diretamente com este ensaio porque mostra que compreender a Físi
 
 Lido ao lado de textos sobre Dirac, Feynman e Einstein, _O Quark e o Jaguar_ ajuda a completar o arco epistemológico destes ensaios: a Física precisa da beleza matemática, da intuição operacional, dos princípios conceituais e também da capacidade de enxergar ordem, informação e estrutura no interior da complexidade.
 
-· 🔝 [Topo](#top) · ← [Seção de Física](index.qmd)
+---
+
+## 🧩 Quiz — Cálculo Simbólico vs Numérico
+
+:::::{.question}
+**Q1.** Segundo o ensaio, o ideal clássico de entendimento em Física estava ligado a:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Encontrar soluções analíticas e relações causais claras.
+:::
+
+:::{.choice}
+Evitar equações e trabalhar apenas com dados.
+:::
+
+:::{.choice}
+Trocar toda teoria por simulações automáticas.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** A simulação computacional é apresentada como:
+
+::::{.choices}
+:::{.choice}
+Uma ferramenta sem valor epistemológico.
+:::
+
+:::{.choice .correct-choice}
+Uma forma central de investigação em muitos sistemas complexos.
+:::
+
+:::{.choice}
+Um obstáculo à Física moderna.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** No texto, entender sem fórmula pode significar:
+
+::::{.choices}
+:::{.choice}
+Abandonar a ciência.
+:::
+
+:::{.choice .correct-choice}
+Reconhecer padrões, regimes, escalas e estruturas invariantes.
+:::
+
+:::{.choice}
+Aceitar qualquer resultado numérico sem crítica.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q4.** O principal risco das simulações, segundo o ensaio, é:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Produzirem números sem interpretação física clara.
+:::
+
+:::{.choice}
+Serem sempre impossíveis de executar.
+:::
+
+:::{.choice}
+Eliminarem a necessidade de computadores.
+:::
+
+::::
+:::::
+
+---
+
+## 🔗 Navegação
+
+🎯 **Anterior:** 👉 [Einstein: físico ou filósofo natural?](einstein-fisico-ou-filosofo-natural.qmd)
+
+🎯 **Próximo:** 👉 [Página da Série](index.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← Física, História & Epistemologia](index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
