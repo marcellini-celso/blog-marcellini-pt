@@ -1,0 +1,137 @@
+---
+title: "Física, História & Epistemologia"
+subtitle: "Ensaios sobre os modos de pensar da Física"
+lang: pt-BR
+format:
+  html:
+    toc: true
+    toc-title: "Nesta página"
+    number-sections: false
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    df-print: paged
+    highlight-style: github
+    code-link: true
+---
+
+# 🔭 Física, História & Epistemologia
+
+::: {.callout-important title="Uma série sobre como a Física pensa"}
+Esta série reúne ensaios sobre **os estilos de pensamento da Física**: a tensão entre intuição e formalismo, o papel da matemática na construção das teorias, a força dos experimentos mentais, a importância da interpretação conceitual e os desafios trazidos pela computação científica contemporânea.
+
+Mais do que apresentar resultados prontos, a proposta é acompanhar a Física como uma forma de pensar: histórica, matemática, experimental, filosófica e computacional.
+:::
+
+## 🧭 Roteiro de leitura
+
+A ordem sugerida abaixo forma um pequeno arco editorial: dos estilos antigos de conhecimento até o problema moderno de entender a Física em meio a simulações, métodos numéricos e cálculo simbólico.
+
+::: {.columns}
+::: {.column width="50%"}
+
+::: {.callout-note title="1. Babilônia e Grécia"}
+### 🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia
+
+Dois estilos de conhecimento: o saber pela experiência, pelos exemplos e pela intuição operacional; e o saber pela estrutura, pela simetria e pela arquitetura conceitual.
+
+👉 [Ler o ensaio](../feynman-gellmann-babilonia-grecia.qmd){.button .button-outline}
+:::
+
+::: {.callout-note title="2. Elegância e intuição"}
+### 🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física
+
+A elegância matemática de Dirac em diálogo com a imaginação física, os diagramas e o pensamento operacional de Feynman.
+
+👉 [Ler o ensaio](../dirac-vs-feynman.qmd){.button .button-outline}
+:::
+
+:::
+::: {.column width="50%"}
+
+::: {.callout-note title="3. Princípios e fundamentos"}
+### 🧠 Einstein — Físico ou Filósofo Natural?
+
+Einstein como pensador de princípios, experimentos mentais e fundamentos da realidade física: um físico profundamente matemático, mas também filosófico.
+
+👉 [Ler o ensaio](../einstein-fisico-ou-filosofo-natural.qmd){.button .button-outline}
+:::
+
+::: {.callout-note title="4. Entender, calcular, simular"}
+### 🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?
+
+O papel das soluções exatas, dos métodos numéricos, das simulações e da interpretação conceitual na ciência contemporânea.
+
+👉 [Ler o ensaio](../calculo-simbolico-vs-numerico.qmd){.button .button-outline}
+:::
+
+:::
+:::
+
+## 🧩 Perguntas que atravessam a série
+
+- O que significa **entender** uma teoria física?
+- A Física progride mais pela **intuição experimental** ou pela **estrutura matemática**?
+- A beleza matemática é um guia confiável para a verdade física?
+- Qual é o papel dos **experimentos mentais** na construção de teorias?
+- Uma simulação computacional pode substituir uma explicação conceitual?
+- Quando um cálculo numérico resolve um problema, ele também nos ajuda a compreendê-lo?
+
+## 🧠 Para quem é esta série?
+
+Esta série foi escrita para leitores que gostam de Física, Matemática, História da Ciência, Filosofia Natural e Computação Científica. Ela pode ser lida por estudantes, professores e curiosos que desejam olhar para a Física não apenas como um conjunto de fórmulas, mas como uma tradição intelectual viva.
+
+::: {.callout-tip title="Sugestão de uso didático"}
+Cada ensaio pode ser usado como leitura complementar em cursos introdutórios de Física, História da Ciência, Epistemologia, Métodos Matemáticos ou Computação Científica. Os quizzes ao final de cada texto ajudam a transformar a leitura em atividade de revisão e discussão.
+:::
+
+## 🧱 Estrutura editorial dos ensaios
+
+Cada texto da série segue uma organização comum:
+
+1. uma abertura conceitual;
+2. desenvolvimento histórico e epistemológico;
+3. discussão sobre estilos de pensamento;
+4. leitura recomendada;
+5. quiz final;
+6. navegação entre os ensaios;
+7. créditos e links úteis do Blog do Marcellini.
+
+## 🚧 Próximos ensaios possíveis
+
+Esta série pode crescer naturalmente com novos textos. Algumas possibilidades:
+
+- **Galileu, Newton e a matematização da natureza**;
+- **Maxwell e a unificação do eletromagnetismo**;
+- **Boltzmann, probabilidade e realidade microscópica**;
+- **O debate Bohr–Einstein e o sentido da Mecânica Quântica**;
+- **O papel dos diagramas na Física Moderna**;
+- **Simulação computacional: terceira via entre teoria e experimento?**
+
+---
+
+## 🔗 Navegação
+
+🎯 **Início da série:** 👉 [Feynman e Gell-Mann — Entre Babilônia e Grécia](../feynman-gellmann-babilonia-grecia.qmd)
+
+🎯 **Blog:** 👉 [Página inicial](../../../index.qmd)
+
+---
+
+<!-- Breadcrumbs -->
+
+· [← Blog do Marcellini](../../../index.qmd) · [Física](../index.qmd) · 🔝 [Topo](#top)
+
+---
+
+{{< include /_includes/sobre-projeto.qmd >}}
+
+:::{.callout-note}
+*Criado por Blog do Marcellini com ❤ e código.*
+:::
+
+## 🔗 Links úteis
+
+- [🧑‍🏫 Sobre o Blog](/posts/pessoal/sobre-o-blog.qmd)
+- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
+- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)

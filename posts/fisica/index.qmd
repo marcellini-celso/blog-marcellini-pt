@@ -1,11 +1,11 @@
 ---
 title: "⚛️ Física"
-description: "Reflexões e conteúdos sobre Mecânica Quântica e Relatividade Especial, com abordagens didáticas e acadêmicas, organizadas em partes e guias temáticos."
+description: "Reflexões e conteúdos sobre Física Moderna, Relatividade, Mecânica Quântica, História da Física e Epistemologia, com abordagens didáticas, acadêmicas e ensaísticas."
 author: "Blog do Marcellini"
-date: 2026-05-07
+date: 2026-05-10
 lang: pt-BR
 categories: [física, sumário de física, sumário]
-tags: [física, sumário de física, sumário]
+tags: [física, sumário de física, sumário, história da física, epistemologia]
 format:
   html:
     toc: true
@@ -19,10 +19,41 @@ format:
 page-layout: full
 ---
 
+A seção de Física do **Blog do Marcellini** reúne textos didáticos, acadêmicos e ensaísticos sobre a construção das teorias físicas, suas ideias centrais e seus modos de pensamento.
+
+Aqui convivem três frentes complementares:
+
+- **conteúdos conceituais e matemáticos**, como Relatividade e Mecânica Quântica;
+- **guias de leitura**, para orientar percursos de estudo;
+- **ensaios de história e epistemologia**, voltados ao modo como a Física pensa, interpreta e constrói conhecimento.
+
+## 🌟 Destaque Editorial
+
+::: {.callout-important title="🔭 Série em destaque: Física, História & Epistemologia"}
+Uma série de ensaios sobre **como a Física pensa**: entre cálculo, intuição, formalismo matemático, simulação computacional e reflexão filosófica.
+
+📌 **Roteiro da série:**
+
+1. [🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia](feynman-gellmann-babilonia-grecia.qmd)  
+   Dois estilos de conhecimento: o saber pela experiência e o saber pela estrutura.
+
+2. [🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física](dirac-vs-feynman.qmd)  
+   A elegância matemática de Dirac em diálogo com a intuição física e operacional de Feynman.
+
+3. [🧠 Einstein — Físico ou Filósofo Natural?](einstein-fisico-ou-filosofo-natural.qmd)  
+   Einstein como pensador de princípios, experimentos mentais e fundamentos da realidade física.
+
+4. [🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?](calculo-simbolico-vs-numerico.qmd)  
+   O papel das soluções exatas, das simulações e da interpretação conceitual na ciência contemporânea.
+
+👉 [Ver a página da série ›](historia-epistemologia/index.qmd){.button .button-outline}
+👉 [Começar pela primeira parte ›](feynman-gellmann-babilonia-grecia.qmd){.button .button-outline}
+:::
+
 ## 📚 Séries Especiais
 
 ::: {.columns}
-::: {.column width="33%"}
+::: {.column width="25%"}
 ::: {.callout-note title="🧬 100 Anos da Mecânica Quântica"}
 Panorama histórico e conceitual.
 
@@ -30,7 +61,7 @@ Panorama histórico e conceitual.
 :::
 :::
 
-::: {.column width="33%"}
+::: {.column width="25%"}
 ::: {.callout-note title="🛰️ Relatividade Especial"}
 Fundamentos, efeitos e paradoxos.
 
@@ -38,53 +69,79 @@ Fundamentos, efeitos e paradoxos.
 :::
 :::
 
-::: {.column width="33%"}
+::: {.column width="25%"}
 ::: {.callout-note title="🌠 Relatividade Geral"}
 Geometria do espaço-tempo e gravitação.
 
 [Ver a série ›](guia-relatividade-geral.qmd){.button .button-outline}
 :::
 :::
+
+::: {.column width="25%"}
+::: {.callout-note title="🔭 História & Epistemologia"}
+Ensaios sobre estilos de pensamento na Física.
+
+[Ver a série ›](historia-epistemologia/index.qmd){.button .button-outline}
+:::
+:::
 :::
 
 {{< include /_includes/politica-editorial.qmd >}}
 
-## 📘 ⚛️ Artigos e Reflexões
+## 📘 Artigos e Reflexões
 
 ### [📘 🛰️ Relatividade Especial — Uma Visão Geral](relatividade-especial.qmd)
 Introdução didática aos conceitos de espaço-tempo, transformações de Lorentz e o paradoxo dos gêmeos.
 
 ### [📘 🛰️ Relatividade Especial — Uma Visão Acadêmica](relatividade-especial-academico.qmd)
-Versão mais formal e aprofundada da teoria da relatividade restrita, com base em fontes clássicas (ex.: Resnick).
+Versão mais formal e aprofundada da teoria da relatividade restrita, com base em fontes clássicas, como Resnick.
 
 ### [📘 🧬 100 Anos da Mecânica Quântica](100-anos-mecanica-quantica.qmd)
 Introdução histórica e conceitual sobre os cem anos da teoria quântica.
 
 ## 🧠 Física, História & Epistemologia
 
-Esta subseção reúne textos voltados à **reflexão sobre a construção do conhecimento físico**, indo além do formalismo matemático. Aqui, a Física é apresentada como uma atividade intelectual histórica, conceitual e humana, marcada por diferentes estilos de pensamento, tradições científicas e escolhas epistemológicas.
+Esta subseção reúne textos voltados à **reflexão sobre a construção do conhecimento físico**, indo além do formalismo matemático. Aqui, a Física aparece como uma atividade intelectual histórica, conceitual e humana, marcada por estilos de pensamento, tradições científicas e escolhas epistemológicas.
 
-Os textos desta seção funcionam como **leituras transversais**, ideais para ampliar a compreensão conceitual após o contato com conteúdos técnicos ou históricos.
+Os textos funcionam como **leituras transversais**: podem ser lidos depois dos conteúdos técnicos, mas também servem como porta de entrada para quem deseja compreender a Física como forma de pensamento.
 
-### 📘 Ensaios Epistemológicos — Estilos de Pensar a Física
+::: {.callout-tip title="📖 Página própria da série"}
+Para uma leitura mais organizada, acesse a página índice:
 
+👉 [Física, História & Epistemologia](historia-epistemologia/index.qmd){.button .button-outline}
+:::
+
+### 📘 Ensaios da Série
+
+::: {.columns}
+::: {.column width="50%"}
 ### [📘 🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia](feynman-gellmann-babilonia-grecia.qmd)
 Ensaio histórico e epistemológico sobre dois estilos de pensamento na física teórica moderna, contrastando abordagens intuitivas e formais a partir das tradições babilônica e grega na ciência.
+:::
 
+::: {.column width="50%"}
 ### [📘 🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física](dirac-vs-feynman.qmd)
 Análise do contraste entre o formalismo matemático de Paul Dirac e a intuição pragmática de Richard Feynman, explorando modos complementares de criação teórica na Física do século XX.
+:::
+:::
 
+::: {.columns}
+::: {.column width="50%"}
 ### [📘 🧠 Einstein — Físico ou Filósofo Natural?](einstein-fisico-ou-filosofo-natural.qmd)
 Ensaio sobre Einstein como arquiteto conceitual da Física Moderna, destacando o papel dos princípios, dos experimentos mentais e da filosofia natural na formulação de teorias físicas.
+:::
 
+::: {.column width="50%"}
 ### [📘 🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?](calculo-simbolico-vs-numerico.qmd)
 Reflexão sobre a prática contemporânea da Física, discutindo o papel das simulações computacionais, das soluções aproximadas e o significado de “entendimento” científico no século XXI.
+:::
+:::
 
 :::{.callout-note}
 🧠 *A Física avança não apenas por novas equações, mas pela convivência entre diferentes modos de pensar.*
 :::
 
-## 🧭 ⚛️ Guia de Leitura
+## 🧭 Guia de Leitura
 
 1. **[🧭 ⚛️ Guia de Leitura da Seção de Física](guia-fisica.qmd)** — Trilha sugerida de leitura com ordem progressiva, interligando os principais conteúdos da seção.
 
@@ -96,7 +153,7 @@ Reflexão sobre a prática contemporânea da Física, discutindo o papel das sim
 
 ---
 
-*Blog do Marcellini — Explorando a Física com Rigor e Beleza.*
+*Blog do Marcellini — Explorando a Física com rigor, beleza e imaginação conceitual.*
 
 {{< include /_includes/sobre-projeto.qmd >}}
 
