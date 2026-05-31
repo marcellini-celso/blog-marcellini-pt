@@ -25,12 +25,32 @@ Mais do que apresentar resultados prontos, a proposta é acompanhar a Física co
 
 ## 🧭 Roteiro de leitura
 
-A ordem sugerida abaixo forma um pequeno arco editorial: dos estilos antigos de conhecimento até o problema moderno de entender a Física em meio a simulações, métodos numéricos e cálculo simbólico.
+A ordem sugerida abaixo forma um pequeno arco editorial: do nascimento da Física moderna, com Galileu e Newton, até o problema contemporâneo de entender a Física em meio a simulações, métodos numéricos e cálculo simbólico.
 
-::: {.columns}
-::: {.column width="50%"}
+<style>
+.essay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
 
-::: {.callout-note title="1. Babilônia e Grécia"}
+.essay-grid .callout {
+  height: 100%;
+}
+</style>
+
+::: {.essay-grid}
+
+::: {.callout-note title="1. A linguagem matemática da natureza"}
+### 🧠 Galileu, Newton e a Matematização da Natureza
+
+A Física moderna nasce quando experiência, idealização, conceito e matemática passam a trabalhar juntos para descrever o movimento e a ordem natural.
+
+👉 [Ler o ensaio](../galileu-newton-matematizacao-natureza.qmd){.button .button-outline}
+:::
+
+::: {.callout-note title="2. Babilônia e Grécia"}
 ### 🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia
 
 Dois estilos de conhecimento: o saber pela experiência, pelos exemplos e pela intuição operacional; e o saber pela estrutura, pela simetria e pela arquitetura conceitual.
@@ -38,7 +58,7 @@ Dois estilos de conhecimento: o saber pela experiência, pelos exemplos e pela i
 👉 [Ler o ensaio](../feynman-gellmann-babilonia-grecia.qmd){.button .button-outline}
 :::
 
-::: {.callout-note title="2. Elegância e intuição"}
+::: {.callout-note title="3. Elegância e intuição"}
 ### 🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física
 
 A elegância matemática de Dirac em diálogo com a imaginação física, os diagramas e o pensamento operacional de Feynman.
@@ -46,10 +66,7 @@ A elegância matemática de Dirac em diálogo com a imaginação física, os dia
 👉 [Ler o ensaio](../dirac-vs-feynman.qmd){.button .button-outline}
 :::
 
-:::
-::: {.column width="50%"}
-
-::: {.callout-note title="3. Princípios e fundamentos"}
+::: {.callout-note title="4. Princípios e fundamentos"}
 ### 🧠 Einstein — Físico ou Filósofo Natural?
 
 Einstein como pensador de princípios, experimentos mentais e fundamentos da realidade física: um físico profundamente matemático, mas também filosófico.
@@ -57,7 +74,7 @@ Einstein como pensador de princípios, experimentos mentais e fundamentos da rea
 👉 [Ler o ensaio](../einstein-fisico-ou-filosofo-natural.qmd){.button .button-outline}
 :::
 
-::: {.callout-note title="4. Entender, calcular, simular"}
+::: {.callout-note title="5. Entender, calcular, simular"}
 ### 🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?
 
 O papel das soluções exatas, dos métodos numéricos, das simulações e da interpretação conceitual na ciência contemporânea.
@@ -66,10 +83,10 @@ O papel das soluções exatas, dos métodos numéricos, das simulações e da in
 :::
 
 :::
-:::
 
 ## 🧩 Perguntas que atravessam a série
 
+- Por que a natureza pôde ser descrita por meio de **linguagem matemática**?
 - O que significa **entender** uma teoria física?
 - A Física progride mais pela **intuição experimental** ou pela **estrutura matemática**?
 - A beleza matemática é um guia confiável para a verdade física?
@@ -101,18 +118,19 @@ Cada texto da série segue uma organização comum:
 
 Esta série pode crescer naturalmente com novos textos. Algumas possibilidades:
 
-- **Galileu, Newton e a matematização da natureza**;
 - **Maxwell e a unificação do eletromagnetismo**;
 - **Boltzmann, probabilidade e realidade microscópica**;
 - **O debate Bohr–Einstein e o sentido da Mecânica Quântica**;
 - **O papel dos diagramas na Física Moderna**;
-- **Simulação computacional: terceira via entre teoria e experimento?**
+- **Simulação computacional: terceira via entre teoria e experimento?**;
+- **Ilya Prigogine, tempo e irreversibilidade**;
+- **Fritjof Capra, sistemas e visão ecológica da natureza**
 
 ---
 
 ## 🔗 Navegação
 
-🎯 **Início da série:** 👉 [Feynman e Gell-Mann — Entre Babilônia e Grécia](../feynman-gellmann-babilonia-grecia.qmd)
+🎯 **Início da série:** 👉 [Galileu, Newton e a Matematização da Natureza](../galileu-newton-matematizacao-natureza.qmd)
 
 🎯 **Blog:** 👉 [Página inicial](../../../index.qmd)
 
