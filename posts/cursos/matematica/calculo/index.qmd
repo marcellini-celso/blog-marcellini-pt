@@ -2,7 +2,7 @@
 title: "🎓 Curso de Cálculo Diferencial e Integral"
 description: "Introdução ao Cálculo com teoria elegante (LaTeX), visual Quarto e exemplos em R/Python — com trilhas de Aprofundamento (AP)."
 author: "Blog do Marcellini"
-date: "2025-08-23"
+date: "2026-06-04"
 lang: pt-BR
 categories: [cálculo, matemática, derivadas, integrais, funções, limites, cursos, equações diferenciais, séries de Taylor]
 tags: [cálculo, matemática, derivadas, integrais, funções, limites, cursos, equações diferenciais, séries de Taylor]
@@ -22,7 +22,7 @@ page-layout: full
 <!-- Breadcrumbs -->
 · [← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](../../../matematica/index.qmd)
 
----
+***
 
 <div style="display:flex;gap:1em;justify-content:center;align-items:flex-start;flex-wrap:wrap;">
   <figure style="width:340px;text-align:center;margin:.25rem;">
@@ -102,7 +102,7 @@ Este curso foi planejado para dominar **Limites, Derivadas e Integrais** com **r
 >
 > **Padrão do projeto:** gráficos gerados por scripts `.py`/`.R` dedicados (fora do `.qmd`) para facilitar reuso e rastreabilidade.
 
----
+***
 
 # 📚 Referências
 - Anton, Howard; Bivens, Irl; Davis, Stephen. *Cálculo - Volume I*, 10ª ed. Bookman, 2014.
@@ -112,17 +112,79 @@ Este curso foi planejado para dominar **Limites, Derivadas e Integrais** com **r
 - Lima, Elon Lages. *Curso de Análise - Volume 1*, 11ª ed. IMPA, 2004.
 - Simmons, George F. *Calculus With Analytic Geometry*, 2ª ed. McGraw-Hill, 1985. 
 
----
+***
+
+***
+## 🧩 Quiz — Como usar este curso
+
+:::::{.question}
+**Q1.** Qual é a melhor forma de estudar este curso?
+
+::::{.choices}
+:::{.choice .correct-choice}
+Seguir a ordem sugerida, lendo a ideia central antes da formalização e resolvendo os exercícios.
+:::
+
+:::{.choice}
+Ler apenas os tópicos avançados, sem fazer os exemplos básicos.
+:::
+
+:::{.choice}
+Ignorar os exercícios e consultar somente o sumário.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** O que significa a marca **AP** usada em algumas aulas?
+
+::::{.choices}
+:::{.choice .correct-choice}
+Indica uma aula de aprofundamento, pensada para desenvolver mais rigor e detalhes conceituais.
+:::
+
+:::{.choice}
+Indica uma aula opcional sem relação com o curso.
+:::
+
+:::{.choice}
+Indica apenas uma lista de respostas numéricas.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** Qual é a relação entre as aulas básicas e as aulas de aprofundamento?
+
+::::{.choices}
+:::{.choice .correct-choice}
+As aulas básicas constroem o caminho principal; as de aprofundamento ampliam a compreensão sem quebrar a sequência.
+:::
+
+:::{.choice}
+As aulas de aprofundamento substituem todas as aulas básicas.
+:::
+
+:::{.choice}
+As aulas básicas devem ser lidas somente depois das avançadas.
+:::
+
+::::
+:::::
+
+***
 
 # 🔗 Navegação
 
 🎯 **Próximo Post:** 👉 [1.1 O que é Cálculo? História e aplicações](modulo-1/1.1-introducao.qmd)
 
----
+***
 
 · [← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](../../../matematica/index.qmd) · 🔝 [Topo](index.qmd)
 
----
+***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 

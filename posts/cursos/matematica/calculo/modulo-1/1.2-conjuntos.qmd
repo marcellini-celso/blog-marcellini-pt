@@ -2,7 +2,7 @@
 title: "🔢 Módulo 1.2: Conjuntos Numéricos"
 description: "Neste módulo, exploramos os conjuntos numéricos fundamentais que serão utilizados ao longo do curso, destacando suas principais propriedades e exemplos característicos."
 author: "Blog do Marcellini"
-date: "2025-07-30"
+date: "2026-06-04"
 lang: pt-BR
 categories: [matemática, cálculo, conjuntos, conjuntos numéricos, exercícios, cursos]
 tags: [matemática, cálculo, conjuntos, conjuntos numéricos, exercícios, cursos]
@@ -21,11 +21,11 @@ page-layout: full
 
 · [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
----
+***
 
 🎯 **Post Anterior:** 👉 [1.1 O que é Cálculo? História e aplicações](1.1-introducao.qmd)
 
----
+***
 
 # 🔢 Módulo 1.2: Conjuntos Numéricos
 
@@ -63,7 +63,7 @@ Os conjuntos numéricos são grupos de números que compartilham característica
   </p>
 </div>
 
----
+***
 
 ## 🧠 Organização dos Conjuntos Numéricos
 
@@ -82,7 +82,7 @@ Os conjuntos se organizam em **cadeia de inclusões**:
 
 Isso significa, por exemplo, que **todo número natural é inteiro, racional e real** — mas o contrário **nem sempre** vale.
 
----
+***
 
 ## 🔍 🧠 Saiba Mais: O que é um número irracional?
 
@@ -128,7 +128,7 @@ Atribui-se a **Hipaso** a demonstração da irracionalidade de \(\sqrt{2}\).
 3. a) **F** (apenas os infinitos **não periódicos** são irracionais) · b) **F** (\(\sqrt{25}=5\) é racional) · c) **V** (reais/irracionais são **não enumeráveis**, racionais são **enumeráveis** — Cantor).
 :::
 
----
+***
 
 ## 📜 Nota Histórica: Georg Cantor (1845–1918)
 
@@ -137,7 +137,7 @@ Criador da **teoria dos conjuntos** e do tratamento moderno do **infinito**.
 Provou que \(\mathbb{R}\) (logo, os irracionais) é **não enumerável**, enquanto \(\mathbb{Q}\) é **enumerável** — há “mais” irracionais do que racionais.
 :::
 
----
+***
 
 ## ✨ Representação Decimal dos Reais
 
@@ -149,7 +149,7 @@ Provou que \(\mathbb{R}\) (logo, os irracionais) é **não enumerável**, enquan
 - \(\frac{1}{3}=0{,}\overline{3}\) (infinito periódico)  
 - \(\sqrt{2}\approx 1{,}4142135\ldots\) (infinito não periódico)
 
----
+***
 
 ## ✨ Dízimas periódicas e fração geratriz
 
@@ -170,7 +170,7 @@ A fração **na forma irredutível** tem decimal **finito** **se e somente se** 
 Caso contrário, a expansão é uma **dízima periódica**.
 :::
 
----
+***
 
 ## 📘 🧠 Exercícios Resolvidos — Fração Geratriz
 
@@ -212,7 +212,7 @@ Seja \(x=0{,}\overline{72}\). \(100x=72{,}\overline{72}\) ⇒ \(99x=72\) ⇒ \(x
 4) \(\tfrac{41}{90}\)
 :::
 
----
+***
 
 ## 📚 Propriedades dos Conjuntos Numéricos
 
@@ -224,7 +224,7 @@ Seja \(x=0{,}\overline{72}\). \(100x=72{,}\overline{72}\) ⇒ \(99x=72\) ⇒ \(x
 - **Densidade**: um conjunto é **denso** se entre quaisquer dois elementos distintos **existe outro** do mesmo conjunto.  
   Ex.: \(\mathbb{Q}\) é denso; também \(\mathbb{R}\setminus\mathbb{Q}\) é denso em \(\mathbb{R}\).
 
----
+***
 
 🔹 **Naturais \((\mathbb{N}=\{0,1,2,\ldots\})\)**  
 Contagem; fechados para \(+\) e \(\cdot\); não fechados para \(-\) e \(/\).
@@ -277,7 +277,7 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 - \(7-2=7+(-2)=5\); \(\ 5\div2=5\cdot\tfrac{1}{2}=\tfrac{5}{2}=2{,}5\).
 :::
 
----
+***
 
 ## 🧠 Exercícios de Revisão
 
@@ -309,7 +309,70 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 10) **Unidade multiplicativa**: \(a=1\).
 :::
 
----
+***
+
+***
+## 🧩 Quiz — Conjuntos Numéricos
+
+:::::{.question}
+**Q1.** A cadeia correta de inclusões entre os principais conjuntos numéricos é:
+
+::::{.choices}
+
+:::{.choice}
+\(\mathbb{R}\subset\mathbb{Q}\subset\mathbb{Z}\subset\mathbb{N}\).
+:::
+
+:::{.choice .correct-choice}
+\(\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\).
+:::
+
+:::{.choice}
+\(\mathbb{Q}\subset\mathbb{N}\subset\mathbb{R}\subset\mathbb{Z}\).
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** Um número irracional pode ser reconhecido, em sua representação decimal, por ser:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Infinito e não periódico.
+:::
+
+:::{.choice}
+Finito e sempre negativo.
+:::
+
+:::{.choice}
+Infinito e necessariamente periódico.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** Toda dízima periódica representa:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Um número racional.
+:::
+
+:::{.choice}
+Um número irracional.
+:::
+
+:::{.choice}
+Um número que não pertence aos reais.
+:::
+
+::::
+:::::
+
+***
 
 # 🔗 Navegação
 
@@ -317,7 +380,7 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 
 · [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.2-conjuntos.qmd)
 
----
+***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 

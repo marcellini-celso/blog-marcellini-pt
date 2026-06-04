@@ -2,7 +2,7 @@
 title: "📘 Módulo 1.3: Intervalos e Inequações"
 description: "Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas."
 author: "Blog do Marcellini"
-date: "2025-09-07"
+date: "2026-06-04"
 lang: pt-BR
 categories: [cálculo, matemática, intervalos, inequações, funções, cursos]
 tags: [cálculo, intervalos, inequações, matemática, cursos]
@@ -22,7 +22,7 @@ page-layout: full
 
 🎯 **Post Anterior:** 👉 [1.2 Conjuntos Numéricos (Aprofundamento)](1.2-conjuntos-ap.qmd)
 
----
+***
 
 # Ordem em $\mathbb{R}$
 
@@ -45,7 +45,7 @@ Sejam $a,b \in \mathbb{R}$:
 
 ![](../images/diagrama1.svg){fig-align="center" width="100%" fig-cap="Diagrama genérico"}
 
----
+***
 
 # Desigualdades Não-Estritas
 
@@ -59,7 +59,7 @@ Sejam $a,b \in \mathbb{R}$:
 - $a<b$ e $a>b$: **desigualdades estritas**.  
 - $a\leqslant b$ e $a\geqslant b$: **desigualdades não-estritas**.
 
----
+***
 
 # Teoremas Fundamentais da Ordem
 
@@ -82,7 +82,7 @@ Se $a<b$ e $b<c$, então $a<c$.
 Se $a<b$ e $c<d$, então $a+c<b+d$.
 :::
 
----
+***
 
 # Cadeias de Desigualdades
 
@@ -93,7 +93,7 @@ Outras formas:
 - $a \leqslant x \leqslant b$ → intervalo fechado;  
 - $a \leqslant x < b$, $a < x \leqslant b$ → intervalos semiabertos.
 
----
+***
 
 # Intervalos
 
@@ -130,7 +130,7 @@ Outras formas:
 - $(-\infty,+\infty)=\mathbb{R}$
 ![](../images/diagrama-B8.svg){fig-align="center" width="100%" fig-cap="Reta real"}
 
----
+***
 
 # Inequações Lineares
 
@@ -153,7 +153,7 @@ Forma geral (com $a \neq 0$):
 \]
 
 
----
+***
 
 📌 **Observação importante:**  
 - Se $a=0$, a inequação se reduz a uma **afirmação constante** ($b<c$, $b\leqslant c$, etc.), sem variável.  
@@ -178,7 +178,7 @@ Forma geral (com $a \neq 0$):
 4. \(4x+2\geqslant 10 \;\;\Rightarrow\;\; x\geqslant 2\)  
    Solução: \([2,+\infty)\).
 
----
+***
 
 ## Casos com \(a<0\)
 
@@ -194,7 +194,7 @@ Forma geral (com $a \neq 0$):
 8. \(-x-2\geqslant 5 \;\;\Rightarrow\;\; x\leqslant -7\)  
    Solução: \((-\infty,-7]\).
 
----
+***
 
 📌 **Resumo importante:**  
 - Se \(a>0\), a desigualdade **mantém** o sentido.  
@@ -217,7 +217,7 @@ x &< \frac{8}{2} = 4 && \text{(dividir por 2>0, preserva o sinal)}
 ✅ **Solução (intervalo):** \((-\infty,4)\).  
 📌 **Checagem:** \(x=3 \Rightarrow 3<5\) (verdadeiro); \(x=4 \Rightarrow 5\not<5\) (falso).
 
----
+***
 
 - **Exemplo 5:** \(-2x+3<7\)  (coeficiente \(a<0\))
 
@@ -232,7 +232,7 @@ x &> \frac{4}{-2} = -2 && \text{(dividir por -2<0, \textbf{inverte} o sinal)}
 ✅ **Solução (intervalo):** \((-2,+\infty)\).  
 📌 **Checagem:** \(x=0 \Rightarrow 3<7\) (verdadeiro); \(x=-2 \Rightarrow 7\not<7\) (falso).
 
----
+***
 
 **Resumo didático:**  
 - Somar/subtrair: mantém o sentido.  
@@ -242,7 +242,7 @@ x &> \frac{4}{-2} = -2 && \text{(dividir por -2<0, \textbf{inverte} o sinal)}
 :::
 
 
----
+***
 
 # Inequações Quadráticas
 
@@ -264,7 +264,7 @@ $$
 \boxed{ax^2 +bx + c \geqslant 0}
 $$
 
----
+***
 
 Resolver analisando a parábola $y=ax^2+bx+c$.
 
@@ -281,7 +281,7 @@ Resolver analisando a parábola $y=ax^2+bx+c$.
 **Gráfico da parábola:**
 ![](../images/diagrama-C2.svg){fig-align="center" width="100%" fig-cap="Estudo do sinal"}
 
----
+***
 
 📌 **Exemplo 1:** $x^2-5x+6>0$
 
@@ -328,7 +328,7 @@ Resolver analisando a parábola $y=ax^2+bx+c$.
 
 :::
 
----
+***
 
 📌 **Exemplo 2:** $-x^2+4x-3 \geqslant 0$
 
@@ -375,7 +375,7 @@ Resolver analisando a parábola $y=ax^2+bx+c$.
 
 :::
 
----
+***
 
 # Inequações Produto
 
@@ -399,7 +399,7 @@ Forma geral:
 
 A solução é determinada pelo **sinal dos fatores** em cada intervalo definido pelas raízes.
 
----
+***
 
 📌 **Exemplo 1:** Produto positivo
 Resolva:
@@ -420,7 +420,7 @@ x(x-1) > 0
 ✅ **Solução:** \((-\infty,0)\cup(1,+\infty)\).
 :::
 
----
+***
 
 📌 **Exemplo 2:** Produto negativo
 Resolva:
@@ -441,7 +441,7 @@ Resolva:
 ✅ **Solução:** \((-2,1)\).
 :::
 
----
+***
 
 # Inequações Quociente
 
@@ -465,7 +465,7 @@ Forma geral:
 
 A solução é determinada pela **tabela de sinais** de numerador e denominador.
 
----
+***
 
 ## 📌 O que são Assíntotas?
 
@@ -495,7 +495,7 @@ Seja uma função racional \(f(x)=\dfrac{p(x)}{q(x)}\).
 - Já as assíntotas horizontais ajudam a descrever o **comportamento no infinito** de uma função racional.
 :::
 
----
+***
 
 📌 **Exemplo 1:** Quociente positivo
 Resolva:
@@ -519,7 +519,7 @@ Resolva:
 ✅ **Solução:** \((-\infty,-1)\cup(3,+\infty)\).
 :::
 
----
+***
 
 📌 **Exemplo 2:** Quociente com mais fatores
 Resolva:
@@ -548,7 +548,7 @@ Resolva:
 ✅ **Solução:** \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 :::
 
----
+***
 
 ::: {.callout-note title="📝 Exercícios Propostos"}
 
@@ -576,11 +576,11 @@ Resolva:
 
 :::
 
----
+***
 
 ## 🧠 Exercícios de Revisão
 
----
+***
 
 ::: {.callout-note title="Exercício 1 — Desigualdade composta e intervalo"}
 Resolva e escreva a solução em notação de intervalo:
@@ -601,7 +601,7 @@ Resolva e escreva a solução em notação de intervalo:
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="Exercício 2 — Coeficiente negativo (troca de sinal)"}
 Resolva:
@@ -621,7 +621,7 @@ Resolva:
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="Exercício 3 — Inequação quadrática fatorável (< 0)"}
 Resolva:
@@ -640,7 +640,7 @@ x\in(-2,3).
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="Exercício 4 — Inequação quadrática (raízes não inteiras) (≥ 0)"}
 Resolva:
@@ -662,7 +662,7 @@ x\in(-\infty,-2]\cup\left[\tfrac12,\infty\right).
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="Exercício 5 — Operações com intervalos"}
 Sejam \(A=(-\infty,4)\) e \(B=[1,7)\).  
@@ -680,7 +680,7 @@ Sejam \(A=(-\infty,4)\) e \(B=[1,7)\).
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="Exercício 6 — Resolva as inequações abaixo."}
 
@@ -691,7 +691,7 @@ Raízes em \(x=0\) e \(x=1\). Como o coeficiente líder é \(+1\), o produto é 
 ✅ **Solução:** \((-\infty,0)\cup(1,\infty)\).
 :::
 
----
+***
 
 (b) Produto: \((x-1)(x+2)<0\)
 
@@ -700,7 +700,7 @@ Raízes em \(x=-2\) e \(x=1\). Coeficiente líder \(+1\) ⇒ negativo **entre** 
 ✅ **Solução:** \((-2,1)\).
 :::
 
----
+***
 
 (c) Quadrática: \(x^2+4x-21>0\)
 
@@ -711,7 +711,7 @@ Parábola abre para cima ⇒ \(>0\) **fora**.
 ✅ **Solução:** \((-\infty,-7)\cup(3,\infty)\).
 :::
 
----
+***
 
 (d) Quadrática: \(2x^2+x<3\)
 
@@ -723,7 +723,7 @@ Raízes: \(x=\tfrac{-1\pm5}{4}\Rightarrow x=-\tfrac32,\,1\).
 ✅ **Solução:** \(\left(-\tfrac32,\,1\right)\).
 :::
 
----
+***
 
 (e) Quadrática: \(4x^2+10x-6<0\)
 
@@ -734,7 +734,7 @@ Raízes: \(x=\tfrac{-10\pm14}{8}\Rightarrow x=-3,\,\tfrac12\).
 ✅ **Solução:** \((-3,\,\tfrac12)\).
 :::
 
----
+***
 
 (f) Quadrática: \(x^2+2x+4>0\)
 
@@ -746,7 +746,7 @@ Raízes: \(x=\tfrac{-10\pm14}{8}\Rightarrow x=-3,\,\tfrac12\).
 :::
 
 
----
+***
 
 ::: {.callout-note title="Exercício 7 — Radicais reais (radicando ≥ 0)"}
 
@@ -757,7 +757,7 @@ Precisamos \(4-x^2\ge0 \Rightarrow -2\le x\le 2\).
 ✅ **Solução:** \([-2,2]\).
 :::
 
----
+***
 
 (b) \(\dfrac{1}{\sqrt{4-3x}}\)
 
@@ -766,7 +766,7 @@ O radicando deve ser **positivo** (e o denominador \(\ne0\)): \(4-3x>0 \Rightarr
 ✅ **Solução:** \((-\infty,\tfrac43)\).
 :::
 
----
+***
 
 (c) \(\dfrac{1}{\sqrt{x^2-x-12}}\)
 
@@ -778,7 +778,7 @@ Exigimos \(x^2-x-12>0\Rightarrow(x-4)(x+3)>0\) ⇒ fora das raízes.
 :::
 
 
----
+***
 
 ::: {.callout-note title="Exercício 8 — Positividade de funções racionais"}
 
@@ -789,7 +789,7 @@ Denominador \(x^2+4>0\) para todo \(x\). Sinal da fração = sinal de \(x\).
 ✅ **Solução:** \((0,\infty)\).
 :::
 
----
+***
 
 (b) \(\dfrac{x}{x^2-4}>0\)
 
@@ -798,7 +798,7 @@ Críticos: \(x=0,\pm2\) (em \(\pm2\) é indefinida). Tabela de sinais ⇒ positi
 ✅ **Solução:** \((-2,0)\cup(2,\infty)\).
 :::
 
----
+***
 
 (c) \(\dfrac{x+1}{x-3}>0\)
 
@@ -807,7 +807,7 @@ Zero: \(-1\). Assíntota: \(3\). Sinais por intervalos ⇒ \((-\infty,-1)\) e \(
 ✅ **Solução:** \((-\infty,-1)\cup(3,\infty)\).
 :::
 
----
+***
 
 (d) \(\dfrac{x^2-1}{x^2-3x}>0\)
 
@@ -820,7 +820,7 @@ Sinais ⇒ \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 :::
 
 
----
+***
 
 ::: {.callout-note title="Exercício 9 — Descrever e diagramar o conjunto (em $\mathbb{R}$)"}
 
@@ -831,7 +831,7 @@ Sinais ⇒ \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 ✅ **Solução:** \((-2,2)\).
 :::
 
----
+***
 
 (b) \(x^2+3x-4>0\)
 
@@ -840,7 +840,7 @@ Sinais ⇒ \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 ✅ **Solução:** \((-\infty,-4)\cup(1,\infty)\).
 :::
 
----
+***
 
 (c) \(x^2+6x+8\le0\)
 
@@ -849,7 +849,7 @@ Sinais ⇒ \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 ✅ **Solução:** \([-4,-2]\).
 :::
 
----
+***
 
 (d) \(x^2<5x+14\)
 
@@ -858,7 +858,7 @@ Sinais ⇒ \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 ✅ **Solução:** \((-2,7)\).
 :::
 
----
+***
 
 (e) \(2x^2>x+6\)
 
@@ -868,7 +868,7 @@ Sinais ⇒ \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 ✅ **Solução:** \((-\infty,-\tfrac32)\cup(2,\infty)\).
 :::
 
----
+***
 
 (f) \(6x^2+13x<5\)
 
@@ -878,7 +878,7 @@ Sinais ⇒ \((-\infty,-1)\cup(0,1)\cup(3,\infty)\).
 ✅ **Solução:** \((-\tfrac52,\,\tfrac13)\).
 :::
 
----
+***
 
 (g) \(x^3+3x^2>10x\)
 
@@ -891,7 +891,7 @@ Sinais por intervalos com críticos \(-5,0,2\) ⇒
 :::
 
 
----
+***
 
 ::: {.callout-note title="Exercício 10 — Resolva"}
 
@@ -902,7 +902,7 @@ Somando \(-2\): \(-6<-x<5\). Multiplicando por \(-1\) (inverte): \(6>x>-5\).
 ✅ **Solução:** \((-5,6)\).
 :::
 
----
+***
 
 (b) \(\dfrac{2x-1}{x}<3\)
 
@@ -914,7 +914,7 @@ Críticos: \(-1,0\). Sinais ⇒ positivo em \((-\infty,-1)\) e \((0,\infty)\).
 ✅ **Solução:** \((-\infty,-1)\cup(0,\infty)\).
 :::
 
----
+***
 
 (c) \(\dfrac{x}{x+2}<1\)
 
@@ -930,7 +930,7 @@ Críticos: \(-1,0\). Sinais ⇒ positivo em \((-\infty,-1)\) e \((0,\infty)\).
 
 # 🔎 Quadro-Resumo — Módulo 1.3 (Ordem, Intervalos e Inequações)
 
----
+***
 
 ::: {.callout-important title="📖 Definições de Ordem em $\mathbb{R}$"}
 - \(a<b \iff b-a>0\); \quad \(a>b \iff a-b>0\).
@@ -938,7 +938,7 @@ Críticos: \(-1,0\). Sinais ⇒ positivo em \((-\infty,-1)\) e \((0,\infty)\).
 - **Desigualdades estritas:** \(<,>\). **Não-estritas:** \(\le,\ge\).
 :::
 
----
+***
 
 ::: {.callout-note title="📏 Propriedades de Ordem — Uso rápido"}
 - **Soma:** \(a<b \Rightarrow a+c<b+c\).
@@ -947,7 +947,7 @@ Críticos: \(-1,0\). Sinais ⇒ positivo em \((-\infty,-1)\) e \((0,\infty)\).
 - **Transitividade:** se \(a<b\) e \(b<c\), então \(a<c\).
 :::
 
----
+***
 
 ::: {.callout-note title="📦 Intervalos e Notação"}
 - Aberto: \((a,b)=\{x\mid a<x<b\}\).
@@ -956,7 +956,7 @@ Críticos: \(-1,0\). Sinais ⇒ positivo em \((-\infty,-1)\) e \((0,\infty)\).
 - Infinitos: \((a,\infty),\ (-\infty,b),\ [a,\infty),\ (-\infty,b]\).
 :::
 
----
+***
 
 ::: {.callout-important title="🧮 Inequações Lineares (com \(a\ne0\))"}
 Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
@@ -968,7 +968,7 @@ Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
 :::
 :::
 
----
+***
 
 ::: {.callout-important title="🟦 Inequações Quadráticas"}
 - Estudar o sinal de \(f(x)=ax^2+bx+c\) via **raízes** e **concavidade**.
@@ -984,7 +984,7 @@ Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="✖️ Inequações Produto"}
 - Tipo: \((x-a)(x-b)\ \{<,>,\le,\ge\}\ 0\).  
@@ -996,7 +996,7 @@ Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="➗ Inequações Quociente"}
 - Tipo: \(\dfrac{f(x)}{g(x)}\ \{<,>,\le,\ge\}\ 0\), com \(g(x)\ne0\).  
@@ -1009,7 +1009,7 @@ Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
 :::
 :::
 
----
+***
 
 ::: {.callout-tip title="🧰 Checklist rápido para resolver"}
 - [ ] Identifique **tipo**: linear / quadrática / produto / quociente.  
@@ -1020,7 +1020,7 @@ Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
 - [ ] Escreva em **notação de intervalo** e **teste** um valor.
 :::
 
----
+***
 
 ::: {.callout-note title="⚠️ Erros comuns a evitar"}
 - Esquecer de **inverter** a desigualdade ao dividir por número **negativo**.  
@@ -1030,7 +1030,70 @@ Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
 :::
 
 
----
+***
+
+***
+## 🧩 Quiz — Intervalos e Inequações
+
+:::::{.question}
+**Q1.** Ao multiplicar ou dividir uma inequação por um número negativo, devemos:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Inverter o sentido da desigualdade.
+:::
+
+:::{.choice}
+Manter sempre o mesmo sentido da desigualdade.
+:::
+
+:::{.choice}
+Trocar a inequação por uma igualdade.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** Em uma inequação quociente, os valores que anulam o denominador devem ser:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Excluídos da solução, pois a expressão não está definida nesses pontos.
+:::
+
+:::{.choice}
+Incluídos sempre que a desigualdade for não estrita.
+:::
+
+:::{.choice}
+Tratados como raízes comuns do numerador.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** A tabela de sinais serve principalmente para:
+
+::::{.choices}
+
+:::{.choice}
+Substituir a resolução algébrica por tentativa aleatória.
+:::
+
+:::{.choice .correct-choice}
+Analisar o sinal de uma expressão em intervalos determinados por pontos críticos.
+:::
+
+:::{.choice}
+Eliminar a necessidade de considerar raízes e restrições.
+:::
+
+::::
+:::::
+
+***
 
 # 🔗 Navegação
 
@@ -1038,7 +1101,7 @@ Forma geral: \(\boxed{\,ax+b\ \{<,\le,>,\ge\}\ c\,}\)
 
 · [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.3-intervalos-inequacoes.qmd)
 
----
+***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 

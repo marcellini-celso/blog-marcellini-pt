@@ -2,7 +2,7 @@
 title: "📘 Módulo 1.3 AP: Valor Absoluto e Inequações Modulares"
 description: "Definições de módulo, propriedades, desigualdade triangular e resolução de inequações com valor absoluto."
 author: "Blog do Marcellini"
-date: "2025-09-09"
+date: "2026-06-04"
 lang: pt-BR
 categories: [cálculo, matemática, curso, inequações, módulo, valor absoluto]
 tags: [cálculo, matemática, curso, inequações, módulo, valor absoluto]
@@ -22,7 +22,7 @@ page-layout: full
 
 🎯 **Post Anterior:** 👉 [1.3 Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
 
----
+***
 
 ::: {.callout-note title="🎯 Objetivos de Aprendizagem"}
 - Definir o valor absoluto (módulo) e interpretar geometricamente.  
@@ -32,7 +32,7 @@ page-layout: full
 - Fixar o aprendizado com exemplos e exercícios.
 :::
 
----
+***
 
 # Definição de Módulo
 
@@ -48,7 +48,7 @@ O **valor absoluto** (ou módulo) de um número real \(x\) é definido por:
 \]
 :::
 
----
+***
 
 # Interpretação Geométrica
 - O módulo representa a **distância de \(x\) até a origem** na reta real.  
@@ -56,7 +56,7 @@ O **valor absoluto** (ou módulo) de um número real \(x\) é definido por:
 
 ![](../images/imagem1-modulo1_3.svg){fig-align="center" width="100%" fig-cap="Módulo"}
 
----
+***
 
 # Propriedades do Módulo
 
@@ -97,7 +97,7 @@ O **valor absoluto** (ou módulo) de um número real \(x\) é definido por:
   Assim, \(|x|=\max\{x,-x\}\). Como \(|x|\ge0\) e \(|x|^2=x^2\), segue \(|x|=\sqrt{x^2}\).  
 :::
 
----
+***
 
 ## 📌 Equivalências úteis para inequações modulares
 Se \(a\ge0\), valem:
@@ -125,7 +125,7 @@ Por definição:
 :::
 :::
 
----
+***
 
 ::: {.callout-note title="🧮 Exemplo 2"}
 Resolva:
@@ -140,7 +140,7 @@ Resolva:
 :::
 :::
 
----
+***
 
 # Inequações Modulares
 
@@ -152,7 +152,7 @@ Uma **inequação modular** é uma inequação que envolve valor absoluto, como
 com \(a\ge0\). A resolução usa a definição por partes do módulo.
 :::
 
----
+***
 
 ## 🔎 Quebra por casos básicos (com \(a\ge0\))
 
@@ -183,7 +183,7 @@ com \(a\ge0\). A resolução usa a definição por partes do módulo.
 - \(|f(x)|\ge0\): **sempre verdadeira** (para todo \(x\)).
 :::
 
----
+***
 
 ## 🎯 Formas centradas
 Para \(|x-c| \ \{<,\le,>,\ge\}\ r\) com \(r\ge0\):
@@ -193,14 +193,14 @@ Para \(|x-c| \ \{<,\le,>,\ge\}\ r\) com \(r\ge0\):
 - \(|x-c|>r \iff x<c-r \ \text{ou}\ x>c+r\) *(fora do intervalo)*  
 - \(|x-c|\ge r \iff x\le c-r \ \text{ou}\ x\ge c+r\)
 
----
+***
 
 ## ⚙️ Micro-exemplos
 
 - \(|x-2|<5 \iff -5<x-2<5 \iff -3<x<7\).  
 - \(|2x+1|\ge3 \iff 2x+1\le-3\ \text{ou}\ 2x+1\ge3 \iff x\le-2\ \text{ou}\ x\ge1\).  
 
----
+***
 
 # Exercícios Propostos
 
@@ -218,7 +218,70 @@ Para \(|x-c| \ \{<,\le,>,\ge\}\ r\) com \(r\ge0\):
 4. \(|2+(-5)|=|-3|=3\) e \(|2|+|{-5}|=2+5=7\). De fato, \(3\le7\).  
 :::
 
----
+***
+
+***
+## 🧩 Quiz — Valor Absoluto e Inequações Modulares
+
+:::::{.question}
+**Q1.** Geometricamente, \(|x-a|\) representa:
+
+::::{.choices}
+:::{.choice .correct-choice}
+A distância entre \(x\) e \(a\) na reta real.
+:::
+
+:::{.choice}
+A soma algébrica entre \(x\) e \(a\).
+:::
+
+:::{.choice}
+O produto entre \(x\) e \(a\).
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** Para \(r\ge0\), a inequação \(|x-a|<r\) é equivalente a:
+
+::::{.choices}
+
+:::{.choice}
+\(x<a-r\) ou \(x>a+r\).
+:::
+
+:::{.choice}
+\(x=a+r\) apenas.
+:::
+
+:::{.choice .correct-choice}
+\(a-r<x<a+r\).
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** A desigualdade triangular afirma que:
+
+::::{.choices}
+:::{.choice .correct-choice}
+\(|x+y|\le |x|+|y|\).
+:::
+
+:::{.choice}
+\(|x+y|=|x|-|y|\) para todos os reais.
+:::
+
+:::{.choice}
+\(|xy|=|x|+|y|\) para todos os reais.
+:::
+
+::::
+:::::
+
+***
 
 # 🔗 Navegação
 
@@ -226,7 +289,7 @@ Para \(|x-c| \ \{<,\le,>,\ge\}\ r\) com \(r\ge0\):
 
 · [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.3-valor-absoluto-AP.qmd)
 
----
+***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 

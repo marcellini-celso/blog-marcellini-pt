@@ -2,7 +2,7 @@
 title: "🧠 🔢 Módulo 1.2 AP: Conjuntos Numéricos — Aprofundamento"
 description: "Exploramos conceitos estruturais (irracionalidade de √2, enumerabilidade, diagonal de Cantor, finitude decimal) e as propriedades que tornam ℝ um corpo ordenado completo."
 author: "Blog do Marcellini"
-date: "2025-07-27"
+date: "2026-06-04"
 lang: pt-BR
 categories: [matemática, cálculo, conjuntos, conjuntos numéricos, enumerabilidade, Cantor, corpo, exercícios, cursos]
 tags: [matemática, cálculo, conjuntos numéricos, enumerabilidade, Cantor, corpo, exercícios, cursos]
@@ -23,7 +23,7 @@ page-layout: full
 
 🎯 **Post Anterior:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
 
----
+***
 
 # 🔢 Módulo 1.2 AP: Conjuntos Numéricos — Aprofundamento
 
@@ -208,14 +208,77 @@ plt.show()
 10. Período 6. \(10^6x=142857{,}142857\ldots\); \(10^6x-x=142857\Rightarrow 999999x=142857\Rightarrow x=\tfrac{142857}{999999}=\tfrac{1}{7}\).
 :::
 
----
+***
+***
+## 🧩 Quiz — Conjuntos Numéricos: Aprofundamento
+
+:::::{.question}
+**Q1.** A demonstração clássica de que \(\sqrt{2}\notin\mathbb{Q}\) usa principalmente:
+
+::::{.choices}
+:::{.choice}
+Aproximação decimal truncada.
+:::
+
+:::{.choice .correct-choice}
+Redução ao absurdo e a paridade de inteiros.
+:::
+
+:::{.choice}
+Medição física de uma diagonal.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** O argumento diagonal de Cantor mostra que:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Os números reais não podem ser colocados em uma lista enumerável completa.
+:::
+
+:::{.choice}
+Os números naturais não existem.
+:::
+
+:::{.choice}
+Todo número real é racional.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** A completude de \(\mathbb{R}\) garante que:
+
+::::{.choices}
+
+:::{.choice}
+Todo subconjunto de \(\mathbb{Q}\) possui máximo racional.
+:::
+
+:::{.choice}
+Toda sequência de inteiros é limitada.
+:::
+
+:::{.choice .correct-choice}
+Todo subconjunto não vazio de \(\mathbb{R}\) limitado superiormente possui supremo em \(\mathbb{R}\).
+:::
+
+::::
+:::::
+
+***
+
 # 🔗 Navegação
 
 🎯 **Próximo Post:** 👉 [1.3 — Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
 
 · [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.2-conjuntos-ap.qmd)
 
----
+***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 

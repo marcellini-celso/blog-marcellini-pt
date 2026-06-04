@@ -276,7 +276,10 @@ window.Quarto = {
   <li><a href="#formas-centradas" id="toc-formas-centradas" class="nav-link" data-scroll-target="#formas-centradas"><span class="header-section-number">5.2</span> 🎯 Formas centradas</a></li>
   <li><a href="#micro-exemplos" id="toc-micro-exemplos" class="nav-link" data-scroll-target="#micro-exemplos"><span class="header-section-number">5.3</span> ⚙️ Micro-exemplos</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">6</span> Exercícios Propostos</a></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">6</span> Exercícios Propostos</a>
+  <ul class="collapse">
+  <li><a href="#quiz-valor-absoluto-e-inequações-modulares" id="toc-quiz-valor-absoluto-e-inequações-modulares" class="nav-link" data-scroll-target="#quiz-valor-absoluto-e-inequações-modulares"><span class="header-section-number">6.1</span> 🧩 Quiz — Valor Absoluto e Inequações Modulares</a></li>
+  </ul></li>
   <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">7</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
@@ -316,7 +319,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">9 de setembro de 2025</p>
+      <p class="date">4 de junho de 2026</p>
     </div>
   </div>
   
@@ -680,6 +683,65 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 </div>
 <hr>
+<hr>
+<section id="quiz-valor-absoluto-e-inequações-modulares" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="quiz-valor-absoluto-e-inequações-modulares"><span class="header-section-number">6.1</span> 🧩 Quiz — Valor Absoluto e Inequações Modulares</h2>
+<div class="question">
+<p><strong>Q1.</strong> Geometricamente, <span class="math inline">\(|x-a|\)</span> representa:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>A distância entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> na reta real.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>A soma algébrica entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>O produto entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q2.</strong> Para <span class="math inline">\(r\ge0\)</span>, a inequação <span class="math inline">\(|x-a|&lt;r\)</span> é equivalente a:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x&lt;a-r\)</span> ou <span class="math inline">\(x&gt;a+r\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x=a+r\)</span> apenas.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(a-r&lt;x&lt;a+r\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q3.</strong> A desigualdade triangular afirma que:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(|x+y|\le |x|+|y|\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(|x+y|=|x|-|y|\)</span> para todos os reais.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(|xy|=|x|+|y|\)</span> para todos os reais.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<hr>
+</section>
 </section>
 <section id="navegação" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> 🔗 Navegação</h1>

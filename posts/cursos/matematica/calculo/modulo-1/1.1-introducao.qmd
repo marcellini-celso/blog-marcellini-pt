@@ -2,7 +2,7 @@
 title: "🧠 Módulo 1.1: O que é Cálculo? História e aplicações"
 description: "Entenda o que é cálculo diferencial e integral, de onde surgiu e por que ele é tão importante."
 author: "Blog do Marcellini"
-date: "2025-07-23"
+date: "2026-06-04"
 lang: pt-BR
 categories: [cálculo, matemática, história do cálculo, aplicações, cursos]
 tags: [cálculo, matemática, história do cálculo, aplicações, cursos]
@@ -40,7 +40,7 @@ resources:
 > 👉 Você verá apenas o resultado final, sem precisar conhecer LaTeX.
 :::
 
----
+***
 
 ## ✨ O que é o Cálculo?
 
@@ -55,7 +55,7 @@ Esse é o espírito do cálculo: **estudar a mudança e o acúmulo** no mundo re
 - **Acúmulo** → totais e áreas (integrais).  
 - **Limite** → base formal que dá precisão ao “instantâneo” e ao “contínuo”.
 
----
+***
 
 ## Os dois problemas fundamentais do cálculo
 
@@ -69,7 +69,7 @@ Esse é o espírito do cálculo: **estudar a mudança e o acúmulo** no mundo re
 - **Tangente** em \(A=(a,f(a))\): a inclinação da tangente é o valor para o qual as **secantes** convergem quando o segundo ponto se aproxima de \(A\).  
 - **Área** em \([a,b]\): a área sob \(y=f(x)\) é o valor para o qual as **somas de pequenos retângulos** convergem quando refinamos a partição.
 
----
+***
 
 ## 🔎 Motivação visual — o problema da tangente
 
@@ -101,7 +101,7 @@ Logo, a inclinação da **reta tangente** ao gráfico de \(y=e^x\) em \(x=0\) é
 
 Esse é o **problema da tangente**, um dos dois problemas fundamentais do cálculo.
 
----
+***
 
 ## 🔎 Motivação visual — o problema da área (método de exaustão)
 
@@ -136,7 +136,7 @@ Portanto, a última coluna da tabela mostra como a diferença \(\pi - A_n\) tend
 
 Esse raciocínio antecipa a **integral** como ferramenta para medir áreas e acúmulos — o **problema da área**, o outro problema fundamental do cálculo.
 
----
+***
 
 ## 📜 Breve história do Cálculo
 
@@ -149,7 +149,7 @@ Esse raciocínio antecipa a **integral** como ferramenta para medir áreas e ac�
 Mais adiante veremos que **mudança** (derivadas) e **acúmulo** (integrais) estão conectados por um resultado central — o **Teorema Fundamental do Cálculo** — que dá unidade à disciplina.
 :::
 
----
+***
 
 ## ✅ Encerrando a introdução
 
@@ -159,7 +159,69 @@ Mais adiante veremos que **mudança** (derivadas) e **acúmulo** (integrais) est
 - Nesta abertura, evitamos símbolos formais de limite/derivada/integral — focamos na **intuição visual e histórica**.  
 - A formalização virá passo a passo, sempre conectada a **figuras** e **exemplos numéricos**.
 
----
+***
+
+***
+## 🧩 Quiz — O que é Cálculo?
+
+:::::{.question}
+**Q1.** Nesta introdução, o cálculo aparece principalmente como o estudo de:
+
+::::{.choices}
+:::{.choice}
+Somente geometria plana sem funções.
+:::
+
+:::{.choice}
+Apenas operações aritméticas com números naturais.
+:::
+
+:::{.choice .correct-choice}
+Mudança, acúmulo e limites.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q2.** O problema da tangente está ligado à ideia de:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Determinar a inclinação instantânea de uma curva em um ponto.
+:::
+
+:::{.choice}
+Contar quantos pontos existem em uma reta.
+:::
+
+:::{.choice}
+Calcular apenas áreas de polígonos regulares.
+:::
+
+::::
+:::::
+
+:::::{.question}
+**Q3.** O método de exaustão de Arquimedes antecipa qual ideia do cálculo?
+
+::::{.choices}
+:::{.choice .correct-choice}
+Aproximar uma grandeza por objetos mais simples e estudar o valor limite dessa aproximação.
+:::
+
+:::{.choice}
+Evitar aproximações e trabalhar apenas com números inteiros.
+:::
+
+:::{.choice}
+Substituir toda geometria por tabelas sem interpretação visual.
+:::
+
+::::
+:::::
+
+***
 
 # 🔗 Navegação
 
@@ -167,7 +229,7 @@ Mais adiante veremos que **mudança** (derivadas) e **acúmulo** (integrais) est
 
 · [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) ·  🔝 [Topo](1.1-introducao.qmd)
 
----
+***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 
