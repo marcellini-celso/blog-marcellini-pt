@@ -8,6 +8,7 @@ categories: [física, epistemologia, história da física]
 tags: [dirac, feynman, epistemologia, mecânica quântica]
 format:
   html:
+    body-classes: serie-epistemologia
     toc: true
     theme: darkly
     number-sections: false

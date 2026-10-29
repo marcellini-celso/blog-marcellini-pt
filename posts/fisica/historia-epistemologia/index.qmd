@@ -4,15 +4,18 @@ subtitle: "Ensaios sobre os modos de pensar da Física"
 lang: pt-BR
 format:
   html:
+    body-classes: serie-epistemologia
     toc: true
     toc-title: "Nesta página"
     number-sections: false
-    theme: cosmo
+    theme: darkly
     fig-align: center
     code-overflow: scroll
     df-print: paged
     highlight-style: github
     code-link: true
+    css:
+      - ../css/feynman.css
 ---
 
 # 🔭 Física, História & Epistemologia

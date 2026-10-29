@@ -1,5 +1,5 @@
 /* =====================================================
-   Tema local — Feynman & Gell-Mann (modo escuro aprimorado)
+   Tema local — Física, História & Epistemologia
    ===================================================== */
 
 :root {
@@ -9,7 +9,7 @@
   --muted: #b8c1d4;
 
   --feynman-gold: #f5b642;    /* calor babilônico */
-  --gellmann-blue: #4fa3f7;   /* razão grega */
+  --gellmann-blue: #8fc8ff;   /* razão grega */
   --accent-purple: #a66ef5;   /* equilíbrio final */
 }
 
@@ -113,7 +113,7 @@ a:hover {
 }
 
 .page-footer a {
-  color: #4fa3f7 !important; /* azul grego */
+  color: var(--gellmann-blue) !important; /* azul claro da série */
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -127,4 +127,31 @@ a:hover {
   text-align: center;
   font-size: 0.9em;
   opacity: 0.9;
+}
+
+/* Categorias discretas na série, inclusive quando o sistema usa tema claro.
+   A especificidade local prevalece sobre as paletas globais dos chips. */
+body.serie-epistemologia #title-block-header .quarto-categories > a.quarto-category,
+body.serie-epistemologia #title-block-header .quarto-categories > div.quarto-category {
+  background: #242b35 !important;
+  border-color: #465261 !important;
+  color: #dbe4f0 !important;
+  opacity: 1;
+}
+
+body.serie-epistemologia #title-block-header .quarto-categories > a.quarto-category:hover,
+body.serie-epistemologia #title-block-header .quarto-categories > div.quarto-category:hover {
+  background: #303b49 !important;
+  border-color: var(--gellmann-blue) !important;
+  color: var(--feynman-gold) !important;
+}
+
+/* Índice lateral integrado à paleta da série. */
+body.serie-epistemologia #TOC a.nav-link {
+  color: var(--text-light);
+}
+
+body.serie-epistemologia #TOC a.nav-link.active {
+  color: var(--gellmann-blue) !important;
+  border-left-color: var(--gellmann-blue) !important;
 }

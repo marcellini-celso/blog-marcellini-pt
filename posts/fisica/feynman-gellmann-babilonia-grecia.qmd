@@ -10,6 +10,7 @@ image: images/feynman-gellmann-banner.png
 image-alt: "Richard Feynman e Murray Gell-Mann — o empirismo babilônico e a razão grega"
 format:
   html:
+    body-classes: serie-epistemologia
     toc: true
     theme: darkly
     number-sections: false

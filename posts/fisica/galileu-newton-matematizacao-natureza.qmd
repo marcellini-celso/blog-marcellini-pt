@@ -8,6 +8,7 @@ categories: [física, epistemologia, história da física]
 tags: [galileu, newton, matematização da natureza, física clássica, filosofia da ciência]
 format:
   html:
+    body-classes: serie-epistemologia
     toc: true
     theme: darkly
     number-sections: false
