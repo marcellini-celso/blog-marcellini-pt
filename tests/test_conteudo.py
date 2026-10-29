@@ -53,5 +53,39 @@ class ConteudoTests(unittest.TestCase):
         self.assertTrue(any("Fonte ausente" in e for e in erros))
         self.assertTrue(any("duplicado" in e for e in erros))
 
+    def test_separa_artigos_e_aulas_sem_incluir_indices(self):
+        posts = [
+            {"title": "Ensaio", "href": "posts/fisica/ensaio.html", "date": "2026-06-05"},
+            {"title": "Aula", "href": "posts/cursos/matematica/aula.html", "date": "2026-06-05"},
+            {"title": "Sumário", "href": "posts/cursos/matematica/index.html", "date": "2026-06-05"},
+        ]
+        self.assertEqual([p["title"] for p in ultimos_posts(posts, tipo="artigos")], ["Ensaio"])
+        self.assertEqual([p["title"] for p in ultimos_posts(posts, tipo="aulas")], ["Aula"])
+
+    def test_ordem_natural_das_aulas_com_a_mesma_data(self):
+        posts = [
+            {"title": "Aula 1.9", "href": "posts/cursos/calculo/1.9-aula.html", "date": "2026-06-05"},
+            {"title": "Aula 1.10", "href": "posts/cursos/calculo/1.10-aula.html", "date": "2026-06-05"},
+            {"title": "Aula 1.23", "href": "posts/cursos/calculo/1.23-aula.html", "date": "2026-06-05"},
+        ]
+        self.assertEqual([p["title"] for p in ultimos_posts(posts)], ["Aula 1.23", "Aula 1.10", "Aula 1.9"])
+
+    def test_atualiza_os_dois_paineis_e_preserva_o_resto_da_pagina(self):
+        self.post("ensaio.qmd", "title: Ensaio\ntags: [física]\ndate: 2026-06-05")
+        Path("posts/cursos").mkdir()
+        self.post("cursos/aula.qmd", "title: Aula\ntags: [curso]\ndate: 2026-06-05")
+        Path("index.qmd").write_text("ANTES\n<!-- inicio-ultimos-posts -->\nANTIGO\n<!-- fim-ultimos-posts -->\nDEPOIS", encoding="utf-8")
+        atualizar()
+        content = Path("index.qmd").read_text()
+        artigos, aulas = content.split("### 🎓 Novas aulas")
+        self.assertIn("posts/ensaio.html", artigos)
+        self.assertNotIn("posts/cursos/aula.html", artigos)
+        self.assertIn("posts/cursos/aula.html", aulas)
+        self.assertNotIn("posts/ensaio.html", aulas)
+        self.assertIn("05/06/2026", content)
+        self.assertTrue(content.startswith("ANTES"))
+        self.assertTrue(content.endswith("DEPOIS"))
+        self.assertNotIn("ANTIGO", content)
+
 if __name__ == "__main__":
     unittest.main()

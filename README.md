@@ -38,9 +38,9 @@ python3 verificar_site.py
 quarto preview
 ```
 
-`atualizar_tudo.sh` atualiza os últimos posts, gera o índice, atualiza tags e valida a integridade. Os metadados vêm do front matter YAML dos arquivos `.qmd`; use datas ISO (`AAAA-MM-DD`) e `draft: true` para textos que não devem entrar nos índices. Arquivos novos entram na seleção sem precisar de um commit prévio.
+`atualizar_tudo.sh` atualiza separadamente os seis artigos e as seis aulas mais recentes da página inicial, gera o índice, atualiza tags e valida a integridade. Os metadados vêm do front matter YAML dos arquivos `.qmd`; use datas ISO (`AAAA-MM-DD`) e `draft: true` para textos que não devem entrar nos índices. Arquivos novos entram na seleção sem precisar de um commit prévio.
 
-`posts.json` na raiz é o índice canônico gerado por `gerar_posts_json.py`; Quarto o copia para `docs/posts.json` como recurso. Os geradores de tags leem a versão da raiz. Não edite o JSON manualmente. Empates de data na lista de últimos posts são resolvidos pelo caminho do arquivo, de forma determinística.
+`posts.json` na raiz é o índice canônico gerado por `gerar_posts_json.py`; Quarto o copia para `docs/posts.json` como recurso. Os geradores de tags leem a versão da raiz. Não edite o JSON manualmente. Empates de data são resolvidos pelo caminho em ordem natural decrescente (por exemplo, 1.10 aparece antes de 1.9 na lista de novidades). As listas exibem datas de publicação; uma renderização não altera essas datas.
 
 Os aprofundamentos 1.18-AP e 1.19-AP preservam suas URLs anteriores por meio de `aliases` nos metadados Quarto.
 

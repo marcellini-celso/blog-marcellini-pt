@@ -1,195 +1,151 @@
 ---
+description: "Cursos, artigos e guias de Matemática, Estatística, Física e Programação, com rigor, intuição e beleza."
 lang: pt-BR
+page-layout: full
 format:
   html:
-    toc: true
-    toc-title: "Nesta página"
+    body-classes: blog-home
+    toc: false
     number-sections: false
     theme: cosmo
-    fig-align: center
-    code-overflow: scroll
-    df-print: paged
-    highlight-style: github
-    code-link: true
+    css:
+      - assets/css/homepage.css
 ---
 
-<div style="text-align:right; font-size:0.95em;">
-  🌐 <span aria-current="page">Português</span> ·
-  <a href="https://en.blogdomarcellini.com.br/">English</a>
-</div>
+::: {.home-hero}
+<img src="images/banner.png" class="home-banner" width="1500" height="300" alt="Blog do Marcellini — Matemática, Estatística e Física com rigor e beleza">
 
-![](images/banner.png){width=100% style="margin-bottom: 2rem;"}
+# 👋 Bem-vindo ao Blog do Marcellini
 
-::: {.columns}
-::: {.column width="65%"}
+Matemática, Estatística, Física e Programação com **rigor, intuição e beleza**. Explore cursos com exercícios, ensaios sobre ciência e exemplos em **R e Python**.
+:::
 
-::: {.callout-note title="👋 Bem-vindo ao Blog do Marcellini"}
+<span id="o-que-você-vai-encontrar-aqui"></span>
 
-Neste blog, você encontrará conteúdos de **Matemática**, **Estatística**, **Física**, **Programação** e **Tecnologia** desenvolvidos com **rigor**, **fundamentação teórica** e uma abordagem **didática**. A proposta é combinar clareza conceitual com uma apresentação visual profissional, utilizando ferramentas como **LaTeX**, **Quarto**, **Python** e **R**.
+## 🧭 Explore por área {#areas}
 
-O objetivo é explorar ideias profundas com **simplicidade**, **intuição** e **beleza** — por meio de explicações acessíveis, **visualizações gráficas**, **cursos completos com exercícios resolvidos** e **guias de leitura estruturados**.
+::: {.home-areas}
+[🧮 Matemática](posts/matematica/index.qmd){.home-area}
+[📊 Estatística](posts/estatistica/index.qmd){.home-area}
+[🔭 Física](posts/fisica/index.qmd){.home-area}
+[💻 Programação](posts/programacao/index.qmd){.home-area}
+[🤖 Inteligência Artificial](posts/programacao/ia/index.qmd){.home-area}
+[📝 Blog Pessoal](posts/pessoal/index.qmd){.home-area}
+:::
+
+## ✨ Destaques {#destaques}
+
+Três caminhos para começar: estudar em sequência, explorar ideias ou aprofundar uma base da Estatística.
+
+::: {.home-features}
+
+::: {.home-feature .home-feature-calculo}
+[CURSO · MATEMÁTICA]{.home-kicker}
+
+### 📘 Cálculo Diferencial e Integral
+
+O Módulo 1 reúne **23 aulas**, com exercícios, gabaritos, quizzes e aprofundamentos opcionais.
+
+[🎓 Começar o curso](posts/cursos/matematica/calculo/index.qmd){.home-card-link}
+:::
+
+::: {.home-feature .home-feature-ensaios}
+[SÉRIE · FÍSICA E FILOSOFIA]{.home-kicker}
+
+### 🧠 Física, História & Epistemologia
+
+Cinco ensaios sobre os modos de pensar da Física: de Galileu e Newton à simulação computacional.
+
+[🔭 Explorar a série](posts/fisica/historia-epistemologia/index.qmd){.home-card-link}
+:::
+
+::: {.home-feature .home-feature-estatistica}
+[CURSO · ESTATÍSTICA]{.home-kicker}
+
+### 📊 A Distribuição Normal
+
+Entenda a curva normal, suas probabilidades e aplicações, com gráficos e exercícios em R e Python.
+
+[🌍 Estudar a distribuição normal](posts/cursos/estatistica/distribuicao_normal/index.qmd){.home-card-link}
+:::
 
 :::
 
-
-### 🌟 O que você vai encontrar aqui:
-
-- ✨ Dicas de LaTeX e Quarto para visualizações
-- 🧠 Conceitos matemáticos ilustrados passo a passo
-- 📘 Experimentos com ensino visual e gráfico
-- 🧮 Matemática acessível e rigorosa
-- 🔭 Física explicada com contexto e história
-- 📊 Estatística com foco em aplicações reais
-- 💻 Programação em R, Python, Julia e Shell
-- 📝 Reflexões sobre ciência, método e linguagem
-
-{{< include /_includes/politica-editorial-mini.qmd >}}
-
+::: {.home-more}
+🔎 **Mais para explorar:** [Equações Históricas](posts/matematica/equacoes-historicas.qmd) · [Modelos e templates](posts/programacao/quarto/modelos-hub.qmd) · [Exemplos em Python](posts/programacao/python/modelos-python-quarto.qmd) · [Exemplos em R](posts/programacao/r/modelos-r-quarto.qmd)
 :::
 
-::: {.column width="35%"}
+## 🆕 Atualizações {#últimos-posts}
 
-> **"A beleza é o primeiro teste: não há lugar permanente no mundo para matemática feia"**  
-> — G. H. Hardy
-
-> **“O universo não pode ser lido até que tenhamos aprendido a linguagem e nos familiarizado com os caracteres em que está escrito. Ele está escrito em linguagem matemática, e suas letras são triângulos, círculos e outras figuras geométricas, sem as quais é humanamente impossível compreender uma única palavra.”**  
-> — *Galileu Galilei*
-
-:::
-
-{{< include /_includes/menu-principal.qmd >}}
-
-:::
-
----
-
-## ✨ Destaques
-
-
-::: {.callout-important title="🔭 Série em destaque: Física, História & Epistemologia"}
-Uma série de ensaios sobre **como a Física pensa**: entre cálculo, intuição, formalismo matemático, simulação computacional e reflexão filosófica.
-
-📌 **Roteiro da série:**
-
-1. [🧠 Galileu, Newton e a Matematização da Natureza](posts/fisica/galileu-newton-matematizacao-natureza.qmd)  
-   O nascimento da Física moderna como união entre experiência, idealização e linguagem matemática.
-
-2. [🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia](posts/fisica/feynman-gellmann-babilonia-grecia.qmd)  
-   Dois estilos de conhecimento: o saber pela experiência e o saber pela estrutura.
-
-3. [🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física](posts/fisica/dirac-vs-feynman.qmd)  
-   A elegância matemática de Dirac em diálogo com a intuição física e operacional de Feynman.
-
-4. [🧠 Einstein — Físico ou Filósofo Natural?](posts/fisica/einstein-fisico-ou-filosofo-natural.qmd)  
-   Einstein como pensador de princípios, experimentos mentais e fundamentos da realidade física.
-
-5. [🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?](posts/fisica/calculo-simbolico-vs-numerico.qmd)  
-   O papel das soluções exatas, das simulações e da interpretação conceitual na ciência contemporânea.
-
-👉 [Acessar a página da série ›](posts/fisica/historia-epistemologia/index.qmd){.button .button-outline}
-
-👉 [Começar pela primeira parte ›](posts/fisica/galileu-newton-matematizacao-natureza.qmd){.button .button-outline}
-:::
-
-::: {.callout-note collapse=true title="🧠 Equações Históricas (Matemática + Física)"}
-Uma seleção de fórmulas que marcaram a ciência, como a **Identidade de Euler** \(e^{i\pi}+1=0\) e a **Equação de Onda**.  
-[Explorar Equações Históricas ›](posts/matematica/equacoes-historicas.qmd){.button .button-outline}
-:::
-
-::: {.callout-note collapse=true title="🌍 Distribuição Normal — Curso (Estatística)"}
-Por que a normalidade aparece tanto? Probabilidades, intervalos de confiança e testes — com gráficos e exercícios.  
-[Ver o curso ›](posts/cursos/estatistica/distribuicao_normal/index.qmd){.button .button-outline}
-:::
-
-::: {.callout-note collapse=true title="📘 Curso de Cálculo Diferencial e Integral"}
-Um curso progressivo que combina **rigor matemático**, **qualidade tipográfica em LaTeX** e **exemplos práticos em R e Python**.
-
-📌 Tópicos já abordados:
-
-- Pré-cálculo: conjuntos, intervalos, equações e inequações
-- Funções, gráficos, composição e inversas
-- Modelagem e comportamento assintótico
-- 23 aulas no Módulo 1, com exercícios, gabaritos e quizzes  
-
-[👉 Acompanhar o Curso de Cálculo ›](posts/cursos/matematica/calculo/index.qmd){.button .button-outline}
-:::
-
-::: {.callout-note collapse=true title="📚 Hub de Modelos & Templates (Quarto)"}
-Página-índice com links organizados para **modelos prontos** e **boas práticas em Quarto**: 
- 
-- Modelos de `index.qmd`  
-- YAML comentado  
-- Markdown estilizado  
-- Templates reutilizáveis  
-
-[👉 Acessar o Hub ›](posts/programacao/quarto/modelos-hub.qmd){.button .button-outline}
-:::
-
-> **“A questão não é se as máquinas podem pensar, mas se podemos entender o que significa pensar.”**  
-> <span style="font-size:0.9em;">— Inspirado em Alan Turing</span>
-
-::: {.callout-important title="🆕 Nova Seção: Inteligência Artificial"}
-A **Inteligência Artificial** está redefinindo a ciência, a arte e o próprio conceito de conhecimento humano.  
-Nesta nova seção do **Blog do Marcellini**, exploramos suas **bases teóricas**, **modelos matemáticos**, **impactos sociais** e **aplicações práticas**.
-
-🧩 **Tópicos em destaque:**
-
-- **Large Language Models (LLMs)** e a revolução da IA generativa  
-- **Redes neurais artificiais** e aprendizado profundo  
-- **Visão computacional** e reconhecimento de padrões  
-- **Ética e filosofia da IA**  
-- **História e evolução da inteligência das máquinas**
-
-👉 [Acesse a seção completa ›](posts/programacao/ia/index.qmd){.button .button-outline}
-:::
-
-<div style="margin-top: .25rem"></div>
-
-> 🔧 Exemplos programáveis:  
-> 👉 [Modelos em Python](posts/programacao/python/modelos-python-quarto.qmd) · 👉 [Modelos em R](posts/programacao/r/modelos-r-quarto.qmd)
-
----
-
-🔝 [Voltar ao Topo](index.qmd)
-
----
-
-## 🆕 Últimos Posts
+Encontre os artigos mais recentes e acompanhe as novidades dos cursos.
 
 <!-- inicio-ultimos-posts -->
-- [📘 Módulo 1.9: Trigonometria Essencial](posts/cursos/matematica/calculo/modulo-1/1.9-trigonometria-essencial.html)
-- [📘 Módulo 1.8: Exponenciais e Logaritmos](posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html)
-- [🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito](posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html)
-- [🔬 Módulo 1.22-AP: Funções por Partes](posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html)
-- [🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo](posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html)
-- [🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças](posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html)
-- [📘 Módulo 1.17: Revisão Geral do Módulo 1](posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html)
-- [📘 Módulo 1.16: Crescimento e Comportamento Assintótico](posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html)
-- [📘 Módulo 1.15: Modelos com Funções Elementares](posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html)
-- [📘 Módulo 1.14: Função Inversa](posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html)
-- [📘 Módulo 1.13: Composição de Funções](posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html)
-- [📘 Módulo 1.12: Transformações Gráficas](posts/cursos/matematica/calculo/modulo-1/1.12-transformacoes-graficas.html)
-- [📘 Módulo 1.11: Revisão Gráfica e Algébrica](posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html)
-- [📘 Módulo 1.10: Conceito Formal de Função](posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html)
-- [📘 Módulo 1.7: Funções Polinomiais e Racionais](posts/cursos/matematica/calculo/modulo-1/1.7-funcoes-polinomiais-e-racionais.html)
+::: {.home-updates}
+
+::: {.home-update-panel}
+
+### 📝 Artigos recentes {#artigos-recentes}
+
+- [🧠 Galileu, Newton e a Matematização da Natureza](posts/fisica/galileu-newton-matematizacao-natureza.html)  
+  [Física]{.home-topic} · [31/05/2026]{.home-date}
+
+- [🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia](posts/fisica/feynman-gellmann-babilonia-grecia.html)  
+  [Física]{.home-topic} · [10/05/2026]{.home-date}
+
+- [🧠 Einstein — Físico ou Filósofo Natural?](posts/fisica/einstein-fisico-ou-filosofo-natural.html)  
+  [Física]{.home-topic} · [10/05/2026]{.home-date}
+
+- [🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física](posts/fisica/dirac-vs-feynman.html)  
+  [Física]{.home-topic} · [10/05/2026]{.home-date}
+
+- [🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?](posts/fisica/calculo-simbolico-vs-numerico.html)  
+  [Física]{.home-topic} · [10/05/2026]{.home-date}
+
+- [⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF](posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html)  
+  [Inteligência Artificial]{.home-topic} · [09/05/2026]{.home-date}
+
+:::
+
+::: {.home-update-panel}
+
+### 🎓 Novas aulas {#novas-aulas}
+
+- [🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito](posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html)  
+  [Matemática]{.home-topic} · [05/06/2026]{.home-date}
+
+- [🔬 Módulo 1.22-AP: Funções por Partes](posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html)  
+  [Matemática]{.home-topic} · [05/06/2026]{.home-date}
+
+- [🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo](posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html)  
+  [Matemática]{.home-topic} · [05/06/2026]{.home-date}
+
+- [🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças](posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html)  
+  [Matemática]{.home-topic} · [05/06/2026]{.home-date}
+
+- [📘 Módulo 1.17: Revisão Geral do Módulo 1](posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html)  
+  [Matemática]{.home-topic} · [05/06/2026]{.home-date}
+
+- [📘 Módulo 1.16: Crescimento e Comportamento Assintótico](posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html)  
+  [Matemática]{.home-topic} · [05/06/2026]{.home-date}
+
+:::
+
+:::
 
 <!-- fim-ultimos-posts -->
 
-> Esta seção é atualizada automaticamente a cada nova publicação.
+## 👤 Sobre o autor {#sobre-o-autor}
 
----
+Um blog de **Celso Marcellini**, dedicado a compartilhar explicações, cursos e reflexões sobre Matemática, Estatística, Física e Programação. A proposta é aproximar ideias profundas de quem gosta de aprender, com clareza conceitual e cuidado com a apresentação.
 
-*Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza*
+[📘 Sobre mim e o blog](posts/pessoal/sobre-o-blog.qmd){.home-about-link}
 
-{{< include /_includes/sobre-projeto.qmd >}}
-
-:::{.callout-note}
-*Criado por Blog do Marcellini com ❤️ e código.*
+::: {.home-quote}
+> “A beleza é o primeiro teste: não há lugar permanente no mundo para matemática feia.”
+>
+> — G. H. Hardy
 :::
 
-## 🔗 Links Úteis
+## 🔗 Links úteis {#links-úteis}
 
-- 🧑‍🏫 [Sobre o Blog](posts/pessoal/sobre-o-blog.qmd)
-- 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a>
-- 📬 [Contato por E-mail](mailto:prof.marcellini@gmail.com)
-
+[🏷️ Tags](tags.qmd) · [📂 Categorias](categories.qmd) · [🗺️ Mapa do site](guia.qmd) · [🌐 English](https://en.blogdomarcellini.com.br/)

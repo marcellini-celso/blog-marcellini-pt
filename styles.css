@@ -86,3 +86,28 @@ code {
   object-fit: contain; /* evita distorção */
 }
 
+
+/* Contraste do menu sobre o azul institucional. */
+.navbar {
+  --bs-navbar-color: #f8fafc;
+  --bs-navbar-hover-color: #fff;
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
+  --bs-navbar-toggler-border-color: rgba(255,255,255,.5);
+}
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-toggler,
+.navbar #quarto-search {
+  color: #f8fafc !important;
+}
+.navbar #quarto-search svg { color: #f8fafc; }
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23f8fafc' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar #quarto-search svg.aa-SubmitIcon {
+  color: #f8fafc !important;
+  fill: #f8fafc !important;
+}

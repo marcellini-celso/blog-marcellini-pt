@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Cursos, artigos e guias de Matemática, Estatística, Física e Programação, com rigor, intuição e beleza.">
 
 <title>Blog do Marcellini</title>
 <style>
@@ -90,49 +91,21 @@ ul.task-list li input[type="checkbox"] {
 <link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
 <link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="assets/css/custom.css">
 <link rel="stylesheet" href="assets/css/cards.css">
 <link rel="stylesheet" href="assets/css/chips.css">
+<link rel="stylesheet" href="assets/css/homepage.css">
 <meta property="og:title" content="Blog do Marcellini">
-<meta property="og:description" content="">
+<meta property="og:description" content="Cursos, artigos e guias de Matemática, Estatística, Física e Programação, com rigor, intuição e beleza.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="Blog do Marcellini">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="Cursos, artigos e guias de Matemática, Estatística, Física e Programação, com rigor, intuição e beleza.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -140,7 +113,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed blog-home quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -256,338 +229,119 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Nesta página</h2>
-   
-  <ul>
-  <li><a href="#destaques" id="toc-destaques" class="nav-link active" data-scroll-target="#destaques">✨ Destaques</a></li>
-  <li><a href="#últimos-posts" id="toc-últimos-posts" class="nav-link" data-scroll-target="#últimos-posts">🆕 Últimos Posts</a></li>
-  <li><a href="#links-úteis" id="toc-links-úteis" class="nav-link" data-scroll-target="#links-úteis">🔗 Links Úteis</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<div style="text-align:right; font-size:0.95em;">
-<p>🌐 <span aria-current="page">Português</span> · <a href="https://en.blogdomarcellini.com.br/">English</a></p>
+<div class="home-hero">
+<p><img src="images/banner.png" class="home-banner" width="1500" height="300" alt="Blog do Marcellini — Matemática, Estatística e Física com rigor e beleza"></p>
+<section id="bem-vindo-ao-blog-do-marcellini" class="level1">
+<h1>👋 Bem-vindo ao Blog do Marcellini</h1>
+<p>Matemática, Estatística, Física e Programação com <strong>rigor, intuição e beleza</strong>. Explore cursos com exercícios, ensaios sobre ciência e exemplos em <strong>R e Python</strong>.</p>
+</section>
 </div>
-<p><img src="images/banner.png" class="img-fluid" style="margin-bottom: 2rem;;width:100.0%"></p>
-<div class="columns">
-<div class="column" style="width:65%;">
-<div class="callout callout-style-default callout-note callout-titled" title="👋 Bem-vindo ao Blog do Marcellini">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>👋 Bem-vindo ao Blog do Marcellini
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Neste blog, você encontrará conteúdos de <strong>Matemática</strong>, <strong>Estatística</strong>, <strong>Física</strong>, <strong>Programação</strong> e <strong>Tecnologia</strong> desenvolvidos com <strong>rigor</strong>, <strong>fundamentação teórica</strong> e uma abordagem <strong>didática</strong>. A proposta é combinar clareza conceitual com uma apresentação visual profissional, utilizando ferramentas como <strong>LaTeX</strong>, <strong>Quarto</strong>, <strong>Python</strong> e <strong>R</strong>.</p>
-<p>O objetivo é explorar ideias profundas com <strong>simplicidade</strong>, <strong>intuição</strong> e <strong>beleza</strong> — por meio de explicações acessíveis, <strong>visualizações gráficas</strong>, <strong>cursos completos com exercícios resolvidos</strong> e <strong>guias de leitura estruturados</strong>.</p>
-</div>
-</div>
-<section id="o-que-você-vai-encontrar-aqui" class="level3">
-<h3 class="anchored" data-anchor-id="o-que-você-vai-encontrar-aqui">🌟 O que você vai encontrar aqui:</h3>
-<ul>
-<li>✨ Dicas de LaTeX e Quarto para visualizações</li>
-<li>🧠 Conceitos matemáticos ilustrados passo a passo</li>
-<li>📘 Experimentos com ensino visual e gráfico</li>
-<li>🧮 Matemática acessível e rigorosa</li>
-<li>🔭 Física explicada com contexto e história</li>
-<li>📊 Estatística com foco em aplicações reais</li>
-<li>💻 Programação em R, Python, Julia e Shell</li>
-<li>📝 Reflexões sobre ciência, método e linguagem</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="Política editorial (resumo)">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Política editorial (resumo)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Rigor, beleza e clareza.</strong><br>
-Os <strong>cursos</strong> destacam <strong>Cálculo</strong> e <strong>Estatística</strong> por serem bases obrigatórias.<br>
-<strong>Artigos e séries</strong> cobrem temas amplos de ciência, matemática, estatística, computação e tecnologia.<br>
-Sem hermetismo: tópicos avançados (variedades, grupos de Lie, QFT, RG) aparecem com <strong>base conceitual</strong> e <strong>linguagem clara</strong>.</p>
-<p><a href="./posts/pessoal/sobre-o-blog.html" class="button button-outline">Saiba mais ›</a></p>
-</div>
-</div>
+<p><span id="o-que-você-vai-encontrar-aqui"></span></p>
+<section id="areas" class="level2">
+<h2 class="anchored" data-anchor-id="areas">🧭 Explore por área</h2>
+<div class="home-areas">
+<p><a href="./posts/matematica/index.html" class="home-area">🧮 Matemática</a> <a href="./posts/estatistica/index.html" class="home-area">📊 Estatística</a> <a href="./posts/fisica/index.html" class="home-area">🔭 Física</a> <a href="./posts/programacao/index.html" class="home-area">💻 Programação</a> <a href="./posts/programacao/ia/index.html" class="home-area">🤖 Inteligência Artificial</a> <a href="./posts/pessoal/index.html" class="home-area">📝 Blog Pessoal</a></p>
 </div>
 </section>
-</div><div class="column" style="width:35%;">
-<blockquote class="blockquote">
-<p><strong>“A beleza é o primeiro teste: não há lugar permanente no mundo para matemática feia”</strong><br>
-— G. H. Hardy</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>“O universo não pode ser lido até que tenhamos aprendido a linguagem e nos familiarizado com os caracteres em que está escrito. Ele está escrito em linguagem matemática, e suas letras são triângulos, círculos e outras figuras geométricas, sem as quais é humanamente impossível compreender uma única palavra.”</strong><br>
-— <em>Galileu Galilei</em></p>
-</blockquote>
-</div><div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">🎓 Cursos</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">📘 Projetos Especiais</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">🧭 Explorar</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">🗺️ Mapa do Site</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><em>Trilhas completas passo a passo</em></p>
-<ul>
-<li>🧮 <a href="posts/cursos/matematica/">Matemática</a></li>
-<li>📊 <a href="posts/cursos/estatistica/">Estatística</a></li>
-</ul>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<ul>
-<li>🧬 <a href="./posts/fisica/guia-100-anos-mecanica-quantica.html">Série 100 Anos da Mecânica Quântica</a></li>
-<li>🌟 <a href="./posts/fisica/guia-relatividade-especial.html">Série Relatividade Especial</a></li>
-<li>🌌 <a href="./posts/fisica/guia-relatividade-geral.html">Série Relatividade Geral</a></li>
-</ul>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<ul>
-<li><a href="./tags.html">🏷️ Tags</a></li>
-<li><a href="./categories.html">🗂️ Categorias</a></li>
-</ul>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<ul>
-<li><a href="./guia.html">🗺️ Mapa do Site</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<hr>
 <section id="destaques" class="level2">
 <h2 class="anchored" data-anchor-id="destaques">✨ Destaques</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="🔭 Série em destaque: Física, História &amp; Epistemologia">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Três caminhos para começar: estudar em sequência, explorar ideias ou aprofundar uma base da Estatística.</p>
+<div class="home-features">
+<div class="home-feature home-feature-calculo">
+<p><span class="home-kicker">CURSO · MATEMÁTICA</span></p>
+<section id="cálculo-diferencial-e-integral" class="level3">
+<h3 class="anchored" data-anchor-id="cálculo-diferencial-e-integral">📘 Cálculo Diferencial e Integral</h3>
+<p>O Módulo 1 reúne <strong>23 aulas</strong>, com exercícios, gabaritos, quizzes e aprofundamentos opcionais.</p>
+<p><a href="./posts/cursos/matematica/calculo/index.html" class="home-card-link">🎓 Começar o curso</a></p>
+</section>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>🔭 Série em destaque: Física, História &amp; Epistemologia
+<div class="home-feature home-feature-ensaios">
+<p><span class="home-kicker">SÉRIE · FÍSICA E FILOSOFIA</span></p>
+<section id="física-história-epistemologia" class="level3">
+<h3 class="anchored" data-anchor-id="física-história-epistemologia">🧠 Física, História &amp; Epistemologia</h3>
+<p>Cinco ensaios sobre os modos de pensar da Física: de Galileu e Newton à simulação computacional.</p>
+<p><a href="./posts/fisica/historia-epistemologia/index.html" class="home-card-link">🔭 Explorar a série</a></p>
+</section>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Uma série de ensaios sobre <strong>como a Física pensa</strong>: entre cálculo, intuição, formalismo matemático, simulação computacional e reflexão filosófica.</p>
-<p>📌 <strong>Roteiro da série:</strong></p>
-<ol type="1">
-<li><p><a href="./posts/fisica/galileu-newton-matematizacao-natureza.html">🧠 Galileu, Newton e a Matematização da Natureza</a><br>
-O nascimento da Física moderna como união entre experiência, idealização e linguagem matemática.</p></li>
-<li><p><a href="./posts/fisica/feynman-gellmann-babilonia-grecia.html">🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia</a><br>
-Dois estilos de conhecimento: o saber pela experiência e o saber pela estrutura.</p></li>
-<li><p><a href="./posts/fisica/dirac-vs-feynman.html">🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física</a><br>
-A elegância matemática de Dirac em diálogo com a intuição física e operacional de Feynman.</p></li>
-<li><p><a href="./posts/fisica/einstein-fisico-ou-filosofo-natural.html">🧠 Einstein — Físico ou Filósofo Natural?</a><br>
-Einstein como pensador de princípios, experimentos mentais e fundamentos da realidade física.</p></li>
-<li><p><a href="./posts/fisica/calculo-simbolico-vs-numerico.html">🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?</a><br>
-O papel das soluções exatas, das simulações e da interpretação conceitual na ciência contemporânea.</p></li>
-</ol>
-<p>👉 <a href="./posts/fisica/historia-epistemologia/index.html" class="button button-outline">Acessar a página da série ›</a></p>
-<p>👉 <a href="./posts/fisica/galileu-newton-matematizacao-natureza.html" class="button button-outline">Começar pela primeira parte ›</a></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="🧠 Equações Históricas (Matemática + Física)">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🧠 Equações Históricas (Matemática + Física)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Uma seleção de fórmulas que marcaram a ciência, como a <strong>Identidade de Euler</strong> <span class="math inline">\(e^{i\pi}+1=0\)</span> e a <strong>Equação de Onda</strong>.<br>
-<a href="./posts/matematica/equacoes-historicas.html" class="button button-outline">Explorar Equações Históricas ›</a></p>
+<div class="home-feature home-feature-estatistica">
+<p><span class="home-kicker">CURSO · ESTATÍSTICA</span></p>
+<section id="a-distribuição-normal" class="level3">
+<h3 class="anchored" data-anchor-id="a-distribuição-normal">📊 A Distribuição Normal</h3>
+<p>Entenda a curva normal, suas probabilidades e aplicações, com gráficos e exercícios em R e Python.</p>
+<p><a href="./posts/cursos/estatistica/distribuicao_normal/index.html" class="home-card-link">🌍 Estudar a distribuição normal</a></p>
+</section>
 </div>
 </div>
+<div class="home-more">
+<p>🔎 <strong>Mais para explorar:</strong> <a href="./posts/matematica/equacoes-historicas.html">Equações Históricas</a> · <a href="./posts/programacao/quarto/modelos-hub.html">Modelos e templates</a> · <a href="./posts/programacao/python/modelos-python-quarto.html">Exemplos em Python</a> · <a href="./posts/programacao/r/modelos-r-quarto.html">Exemplos em R</a></p>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="🌍 Distribuição Normal — Curso (Estatística)">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🌍 Distribuição Normal — Curso (Estatística)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Por que a normalidade aparece tanto? Probabilidades, intervalos de confiança e testes — com gráficos e exercícios.<br>
-<a href="./posts/cursos/estatistica/distribuicao_normal/index.html" class="button button-outline">Ver o curso ›</a></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="📘 Curso de Cálculo Diferencial e Integral">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📘 Curso de Cálculo Diferencial e Integral
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Um curso progressivo que combina <strong>rigor matemático</strong>, <strong>qualidade tipográfica em LaTeX</strong> e <strong>exemplos práticos em R e Python</strong>.</p>
-<p>📌 Tópicos já abordados:</p>
-<ul>
-<li>Pré-cálculo: conjuntos, intervalos, equações e inequações</li>
-<li>Funções, gráficos, composição e inversas</li>
-<li>Modelagem e comportamento assintótico</li>
-<li>23 aulas no Módulo 1, com exercícios, gabaritos e quizzes</li>
-</ul>
-<p><a href="./posts/cursos/matematica/calculo/index.html" class="button button-outline">👉 Acompanhar o Curso de Cálculo ›</a></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="📚 Hub de Modelos &amp; Templates (Quarto)">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📚 Hub de Modelos &amp; Templates (Quarto)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Página-índice com links organizados para <strong>modelos prontos</strong> e <strong>boas práticas em Quarto</strong>:</p>
-<ul>
-<li>Modelos de <code>index.qmd</code><br>
-</li>
-<li>YAML comentado<br>
-</li>
-<li>Markdown estilizado<br>
-</li>
-<li>Templates reutilizáveis</li>
-</ul>
-<p><a href="./posts/programacao/quarto/modelos-hub.html" class="button button-outline">👉 Acessar o Hub ›</a></p>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><strong>“A questão não é se as máquinas podem pensar, mas se podemos entender o que significa pensar.”</strong><br>
-<span style="font-size:0.9em;">— Inspirado em Alan Turing</span></p>
-</blockquote>
-<div class="callout callout-style-default callout-important callout-titled" title="🆕 Nova Seção: Inteligência Artificial">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>🆕 Nova Seção: Inteligência Artificial
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A <strong>Inteligência Artificial</strong> está redefinindo a ciência, a arte e o próprio conceito de conhecimento humano.<br>
-Nesta nova seção do <strong>Blog do Marcellini</strong>, exploramos suas <strong>bases teóricas</strong>, <strong>modelos matemáticos</strong>, <strong>impactos sociais</strong> e <strong>aplicações práticas</strong>.</p>
-<p>🧩 <strong>Tópicos em destaque:</strong></p>
-<ul>
-<li><strong>Large Language Models (LLMs)</strong> e a revolução da IA generativa<br>
-</li>
-<li><strong>Redes neurais artificiais</strong> e aprendizado profundo<br>
-</li>
-<li><strong>Visão computacional</strong> e reconhecimento de padrões<br>
-</li>
-<li><strong>Ética e filosofia da IA</strong><br>
-</li>
-<li><strong>História e evolução da inteligência das máquinas</strong></li>
-</ul>
-<p>👉 <a href="./posts/programacao/ia/index.html" class="button button-outline">Acesse a seção completa ›</a></p>
-</div>
-</div>
-<div style="margin-top: .25rem">
-
-</div>
-<blockquote class="blockquote">
-<p>🔧 Exemplos programáveis:<br>
-👉 <a href="./posts/programacao/python/modelos-python-quarto.html">Modelos em Python</a> · 👉 <a href="./posts/programacao/r/modelos-r-quarto.html">Modelos em R</a></p>
-</blockquote>
-<hr>
-<p>🔝 <a href="./index.html">Voltar ao Topo</a></p>
-<hr>
 </section>
 <section id="últimos-posts" class="level2">
-<h2 class="anchored" data-anchor-id="últimos-posts">🆕 Últimos Posts</h2>
+<h2 class="anchored" data-anchor-id="últimos-posts">🆕 Atualizações</h2>
+<p>Encontre os artigos mais recentes e acompanhe as novidades dos cursos.</p>
 <!-- inicio-ultimos-posts -->
+<div class="home-updates">
+<section id="artigos-recentes" class="level3 home-update-panel">
+<h3 class="anchored" data-anchor-id="artigos-recentes">📝 Artigos recentes</h3>
 <ul>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.9-trigonometria-essencial.html">📘 Módulo 1.9: Trigonometria Essencial</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html">📘 Módulo 1.8: Exponenciais e Logaritmos</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html">🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">🔬 Módulo 1.22-AP: Funções por Partes</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html">🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html">🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">📘 Módulo 1.17: Revisão Geral do Módulo 1</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">📘 Módulo 1.16: Crescimento e Comportamento Assintótico</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">📘 Módulo 1.15: Modelos com Funções Elementares</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">📘 Módulo 1.14: Função Inversa</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">📘 Módulo 1.13: Composição de Funções</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.12-transformacoes-graficas.html">📘 Módulo 1.12: Transformações Gráficas</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">📘 Módulo 1.11: Revisão Gráfica e Algébrica</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">📘 Módulo 1.10: Conceito Formal de Função</a></li>
-<li><a href="posts/cursos/matematica/calculo/modulo-1/1.7-funcoes-polinomiais-e-racionais.html">📘 Módulo 1.7: Funções Polinomiais e Racionais</a></li>
+<li><p><a href="posts/fisica/galileu-newton-matematizacao-natureza.html">🧠 Galileu, Newton e a Matematização da Natureza</a><br>
+<span class="home-topic">Física</span> · <span class="home-date">31/05/2026</span></p></li>
+<li><p><a href="posts/fisica/feynman-gellmann-babilonia-grecia.html">🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia</a><br>
+<span class="home-topic">Física</span> · <span class="home-date">10/05/2026</span></p></li>
+<li><p><a href="posts/fisica/einstein-fisico-ou-filosofo-natural.html">🧠 Einstein — Físico ou Filósofo Natural?</a><br>
+<span class="home-topic">Física</span> · <span class="home-date">10/05/2026</span></p></li>
+<li><p><a href="posts/fisica/dirac-vs-feynman.html">🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física</a><br>
+<span class="home-topic">Física</span> · <span class="home-date">10/05/2026</span></p></li>
+<li><p><a href="posts/fisica/calculo-simbolico-vs-numerico.html">🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?</a><br>
+<span class="home-topic">Física</span> · <span class="home-date">10/05/2026</span></p></li>
+<li><p><a href="posts/programacao/ia/llms/treinamento-pretrain-finetune-rlhf.html">⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF</a><br>
+<span class="home-topic">Inteligência Artificial</span> · <span class="home-date">09/05/2026</span></p></li>
 </ul>
+</section>
+<section id="novas-aulas" class="level3 home-update-panel">
+<h3 class="anchored" data-anchor-id="novas-aulas">🎓 Novas aulas</h3>
+<ul>
+<li><p><a href="posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html">🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito</a><br>
+<span class="home-topic">Matemática</span> · <span class="home-date">05/06/2026</span></p></li>
+<li><p><a href="posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">🔬 Módulo 1.22-AP: Funções por Partes</a><br>
+<span class="home-topic">Matemática</span> · <span class="home-date">05/06/2026</span></p></li>
+<li><p><a href="posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html">🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo</a><br>
+<span class="home-topic">Matemática</span> · <span class="home-date">05/06/2026</span></p></li>
+<li><p><a href="posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html">🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças</a><br>
+<span class="home-topic">Matemática</span> · <span class="home-date">05/06/2026</span></p></li>
+<li><p><a href="posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">📘 Módulo 1.17: Revisão Geral do Módulo 1</a><br>
+<span class="home-topic">Matemática</span> · <span class="home-date">05/06/2026</span></p></li>
+<li><p><a href="posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">📘 Módulo 1.16: Crescimento e Comportamento Assintótico</a><br>
+<span class="home-topic">Matemática</span> · <span class="home-date">05/06/2026</span></p></li>
+</ul>
+</section>
+</div>
 <!-- fim-ultimos-posts -->
+</section>
+<section id="sobre-o-autor" class="level2">
+<h2 class="anchored" data-anchor-id="sobre-o-autor">👤 Sobre o autor</h2>
+<p>Um blog de <strong>Celso Marcellini</strong>, dedicado a compartilhar explicações, cursos e reflexões sobre Matemática, Estatística, Física e Programação. A proposta é aproximar ideias profundas de quem gosta de aprender, com clareza conceitual e cuidado com a apresentação.</p>
+<p><a href="./posts/pessoal/sobre-o-blog.html" class="home-about-link">📘 Sobre mim e o blog</a></p>
+<div class="home-quote">
 <blockquote class="blockquote">
-<p>Esta seção é atualizada automaticamente a cada nova publicação.</p>
+<p>“A beleza é o primeiro teste: não há lugar permanente no mundo para matemática feia.”</p>
+<p>— G. H. Hardy</p>
 </blockquote>
-<hr>
-<p><em>Blog do Marcellini — Explorando a Matemática, a Estatística e a Física com Rigor e Beleza</em></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Sobre o projeto">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Dica</span>Sobre o projeto
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Este site nasce da vontade de expor ideias com <strong>boa matemática</strong>, <strong>boa tipografia</strong> e <strong>boas explicações</strong>.<br>
-Quer saber a linha editorial, tecnologias e bastidores?</p>
-<p><a href="./posts/pessoal/sobre-o-blog.html" class="button button-outline">📘 Ler “Sobre o Blog e Sobre Mim” ›</a></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nota
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>Criado por Blog do Marcellini com ❤️ e código.</em></p>
-</div>
 </div>
 </section>
 <section id="links-úteis" class="level2">
-<h2 class="anchored" data-anchor-id="links-úteis">🔗 Links Úteis</h2>
-<ul>
-<li>🧑‍🏫 <a href="./posts/pessoal/sobre-o-blog.html">Sobre o Blog</a></li>
-<li>💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></li>
-<li>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a></li>
-</ul>
+<h2 class="anchored" data-anchor-id="links-úteis">🔗 Links úteis</h2>
+<p><a href="./tags.html">🏷️ Tags</a> · <a href="./categories.html">📂 Categorias</a> · <a href="./guia.html">🗺️ Mapa do site</a> · <a href="https://en.blogdomarcellini.com.br/">🌐 English</a></p>
 
 
 </section>
