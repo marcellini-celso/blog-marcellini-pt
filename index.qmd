@@ -10,14 +10,49 @@ format:
     theme: cosmo
     css:
       - assets/css/homepage.css
+      - assets/css/banner.css
 ---
 
-::: {.home-hero}
-<img src="images/banner.png" class="home-banner" width="1500" height="300" alt="Blog do Marcellini — Matemática, Estatística e Física com rigor e beleza">
+::: {.home-masthead}
 
-# 👋 Bem-vindo ao Blog do Marcellini
+::: {.home-masthead-copy}
+[👋 Seja bem-vindo]{.home-masthead-welcome}
 
-Matemática, Estatística, Física e Programação com **rigor, intuição e beleza**. Explore cursos com exercícios, ensaios sobre ciência e exemplos em **R e Python**.
+# Blog do Marcellini {#bem-vindo-ao-blog-do-marcellini}
+
+[Matemática, ciência e programação com **rigor, intuição e beleza**.]{.home-masthead-tagline}
+
+Cursos com exercícios, ensaios e ideias para explorar.
+:::
+
+<div class="home-masthead-art" aria-hidden="true">
+<svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" focusable="false">
+  <defs>
+    <pattern id="masthead-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 H 0 V 28" fill="none" stroke="#bfd2e3" stroke-width="0.7"/>
+    </pattern>
+    <linearGradient id="masthead-curve" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7daace"/>
+      <stop offset="100%" stop-color="#174f7c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="220" cy="150" r="128" fill="#e6f0f7"/>
+  <rect x="70" y="40" width="280" height="224" rx="16" fill="url(#masthead-grid)" opacity="0.75"/>
+  <path d="M 82 221 H 354 M 112 246 V 42" fill="none" stroke="#8ca8c1" stroke-width="1.5"/>
+  <path d="M 347 216 L 355 221 L 347 226 M 107 49 L 112 41 L 117 49" fill="none" stroke="#8ca8c1" stroke-width="1.5"/>
+  <path d="M 84 202 C 135 209 142 101 197 112 S 252 205 334 68" fill="none" stroke="url(#masthead-curve)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 83 158 C 135 94 175 88 213 147 S 286 210 347 139" fill="none" stroke="#d6a64c" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="197" cy="112" r="6" fill="#174f7c" stroke="#fff" stroke-width="3"/>
+  <circle cx="213" cy="147" r="5" fill="#d6a64c" stroke="#fff" stroke-width="2.5"/>
+  <text x="360" y="227" fill="#6686a3" font-family="Georgia,serif" font-size="17" font-style="italic">x</text>
+  <text x="102" y="33" fill="#6686a3" font-family="Georgia,serif" font-size="17" font-style="italic">y</text>
+  <text x="252" y="45" fill="#6989a6" font-family="Georgia,serif" font-size="22" opacity="0.85">∫ f(x) dx</text>
+  <g transform="translate(286 242)" fill="none" stroke="#6d94b5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 13 0 L 2 10 L 13 20 M 36 0 L 47 10 L 36 20 M 29 -3 L 20 23"/>
+  </g>
+</svg>
+</div>
+
 :::
 
 <span id="o-que-você-vai-encontrar-aqui"></span>
