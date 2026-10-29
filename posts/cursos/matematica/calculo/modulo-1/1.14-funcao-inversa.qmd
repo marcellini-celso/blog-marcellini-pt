@@ -1,0 +1,1020 @@
+---
+title: "📘 Módulo 1.14: Função Inversa"
+description: "Estudo de funções inversas, bijetividade, domínio, imagem, composição com a inversa, gráficos simétricos e exemplos fundamentais."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, funções, função inversa]
+tags: [cálculo, matemática, funções, função inversa, bijetividade, domínio, imagem, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.13 Composição de Funções](1.13-composicao-de-funcoes.qmd)
+
+***
+
+# 📘 Função Inversa
+
+Na aula anterior, estudamos composição de funções. Agora vamos usar essa ideia para entender um conceito fundamental: a **função inversa**.
+
+Intuitivamente, uma função inversa desfaz o que a função original fez.
+
+Por exemplo, a função
+
+$$
+f(x)=x+3
+$$
+
+soma $3$ à entrada.
+
+A função que desfaz essa operação é
+
+$$
+f^{-1}(x)=x-3.
+$$
+
+De fato, se começamos com $x$, aplicamos $f$ e depois aplicamos $f^{-1}$, voltamos para $x$:
+
+$$
+f^{-1}(f(x))=f^{-1}(x+3)=x.
+$$
+
+A inversa é, portanto, uma função de retorno.
+
+***
+
+## A ideia de desfazer uma operação
+
+Considere a função
+
+$$
+f(x)=2x.
+$$
+
+Ela dobra o valor de entrada.
+
+Para desfazer essa operação, dividimos por $2$:
+
+$$
+f^{-1}(x)=\frac{x}{2}.
+$$
+
+Assim,
+
+$$
+f^{-1}(f(x))=f^{-1}(2x)=\frac{2x}{2}=x.
+$$
+
+Também temos:
+
+$$
+f(f^{-1}(x))=f\left(\frac{x}{2}\right)=2\cdot\frac{x}{2}=x.
+$$
+
+Quando as duas composições devolvem a entrada original, uma função é inversa da outra.
+
+***
+
+## Definição de função inversa
+
+Se
+
+$$
+f:A\to B
+$$
+
+é uma função, uma função
+
+$$
+f^{-1}:B\to A
+$$
+
+é chamada de inversa de $f$ quando:
+
+$$
+f^{-1}(f(x))=x
+$$
+
+para todo
+
+$$
+x\in A,
+$$
+
+e
+
+$$
+f(f^{-1}(y))=y
+$$
+
+para todo
+
+$$
+y\in B.
+$$
+
+Em termos de composição:
+
+$$
+f^{-1}\circ f=\operatorname{id}_A
+$$
+
+e
+
+$$
+f\circ f^{-1}=\operatorname{id}_B,
+$$
+
+onde $\operatorname{id}$ representa a função identidade.
+
+::: {.callout-note title="Ideia central"}
+A inversa de uma função é a função que desfaz a ação da função original.
+:::
+
+***
+
+## A função identidade
+
+A função identidade em um conjunto $A$ é dada por
+
+$$
+\operatorname{id}_A(x)=x.
+$$
+
+Ela não altera a entrada.
+
+Por exemplo, em $\mathbb{R}$,
+
+$$
+\operatorname{id}_{\mathbb{R}}(x)=x.
+$$
+
+Dizer que
+
+$$
+f^{-1}\circ f=\operatorname{id}_A
+$$
+
+significa que aplicar $f$ e depois aplicar $f^{-1}$ devolve o ponto inicial.
+
+Dizer que
+
+$$
+f\circ f^{-1}=\operatorname{id}_B
+$$
+
+significa que aplicar $f^{-1}$ e depois aplicar $f$ também devolve o ponto inicial.
+
+***
+
+## Nem toda função tem inversa
+
+Nem toda função possui inversa.
+
+Para uma função ter inversa, ela precisa associar entradas diferentes a saídas diferentes e precisa atingir todos os valores do contradomínio considerado.
+
+Em outras palavras, ela precisa ser **bijetiva**.
+
+Uma função bijetiva é, ao mesmo tempo:
+
+- injetiva;
+- sobrejetiva.
+
+Esses conceitos são importantes para entender quando a inversa existe.
+
+***
+
+## Função injetiva
+
+Uma função é injetiva quando entradas diferentes produzem saídas diferentes.
+
+Formalmente, $f$ é injetiva quando:
+
+$$
+x_1\neq x_2 \quad\Rightarrow\quad f(x_1)\neq f(x_2).
+$$
+
+Equivalentemente:
+
+$$
+f(x_1)=f(x_2)\quad\Rightarrow\quad x_1=x_2.
+$$
+
+Exemplo:
+
+$$
+f(x)=2x+1
+$$
+
+é injetiva em $\mathbb{R}$.
+
+Se
+
+$$
+2x_1+1=2x_2+1,
+$$
+
+então
+
+$$
+2x_1=2x_2,
+$$
+
+logo
+
+$$
+x_1=x_2.
+$$
+
+***
+
+## Função sobrejetiva
+
+Uma função
+
+$$
+f:A\to B
+$$
+
+é sobrejetiva quando todo elemento de $B$ é atingido por algum elemento de $A$.
+
+Isto é, para todo
+
+$$
+y\in B,
+$$
+
+existe
+
+$$
+x\in A
+$$
+
+tal que
+
+$$
+f(x)=y.
+$$
+
+Isso significa que a imagem da função é igual ao contradomínio:
+
+$$
+\operatorname{Im}(f)=B.
+$$
+
+Por exemplo,
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=2x+1
+$$
+
+é sobrejetiva, pois qualquer real $y$ pode ser escrito como
+
+$$
+y=2x+1
+$$
+
+para
+
+$$
+x=\frac{y-1}{2}.
+$$
+
+***
+
+## Função bijetiva
+
+Uma função é bijetiva quando é injetiva e sobrejetiva.
+
+Funções bijetivas têm inversa.
+
+A ideia é que cada elemento do domínio corresponde a exatamente um elemento do contradomínio, e cada elemento do contradomínio é atingido exatamente uma vez.
+
+Assim, é possível inverter as setas sem ambiguidade.
+
+::: {.callout-tip title="Critério prático"}
+Uma função tem inversa quando cada valor de saída corresponde a uma única entrada.
+:::
+
+***
+
+## Exemplo de função com inversa
+
+Considere
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=2x+3.
+$$
+
+Para encontrar a inversa, escrevemos
+
+$$
+y=2x+3.
+$$
+
+Agora resolvemos essa equação para $x$:
+
+$$
+y-3=2x,
+$$
+
+logo
+
+$$
+x=\frac{y-3}{2}.
+$$
+
+Trocando $y$ por $x$, obtemos
+
+$$
+f^{-1}(x)=\frac{x-3}{2}.
+$$
+
+Vamos verificar:
+
+$$
+f^{-1}(f(x))=f^{-1}(2x+3)=\frac{(2x+3)-3}{2}=x.
+$$
+
+E também:
+
+$$
+f(f^{-1}(x))=f\left(\frac{x-3}{2}\right)=2\cdot\frac{x-3}{2}+3=x.
+$$
+
+***
+
+## Exemplo de função sem inversa em todo $\mathbb{R}$
+
+Considere
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=x^2.
+$$
+
+Essa função não é injetiva em $\mathbb{R}$, pois
+
+$$
+f(2)=4
+$$
+
+e
+
+$$
+f(-2)=4.
+$$
+
+Duas entradas diferentes produzem a mesma saída.
+
+Portanto, $f(x)=x^2$ não possui inversa como função de $\mathbb{R}$ em $\mathbb{R}$.
+
+***
+
+## Restringindo o domínio
+
+Embora
+
+$$
+f(x)=x^2
+$$
+
+não tenha inversa em todo $\mathbb{R}$, podemos restringir seu domínio.
+
+Considere
+
+$$
+f:[0,+\infty)\to[0,+\infty)
+$$
+
+dada por
+
+$$
+f(x)=x^2.
+$$
+
+Agora a função é injetiva e sobrejetiva.
+
+A inversa é
+
+$$
+f^{-1}(x)=\sqrt{x}.
+$$
+
+De fato,
+
+$$
+\sqrt{x^2}=x
+$$
+
+para
+
+$$
+x\geq 0.
+$$
+
+Esse exemplo mostra que a existência da inversa depende fortemente do domínio e do contradomínio.
+
+***
+
+## Como encontrar a inversa
+
+Para encontrar a inversa de uma função dada por uma fórmula, podemos seguir estes passos:
+
+1. escreva $y=f(x)$;
+2. resolva a equação para $x$ em função de $y$;
+3. troque o nome da variável $y$ por $x$;
+4. verifique domínio e imagem;
+5. se necessário, restrinja o domínio para garantir que a função seja injetiva.
+
+Por exemplo:
+
+$$
+f(x)=\frac{x-1}{2}.
+$$
+
+Escrevemos:
+
+$$
+y=\frac{x-1}{2}.
+$$
+
+Multiplicando por $2$:
+
+$$
+2y=x-1.
+$$
+
+Logo:
+
+$$
+x=2y+1.
+$$
+
+Portanto:
+
+$$
+f^{-1}(x)=2x+1.
+$$
+
+***
+
+## Gráfico da função inversa
+
+O gráfico da função inversa tem uma relação geométrica especial com o gráfico da função original.
+
+Se
+
+$$
+(a,b)
+$$
+
+pertence ao gráfico de $f$, então
+
+$$
+(b,a)
+$$
+
+pertence ao gráfico de $f^{-1}$.
+
+Isso significa que os gráficos de $f$ e $f^{-1}$ são simétricos em relação à reta
+
+$$
+y=x.
+$$
+
+Por exemplo, as funções
+
+$$
+f(x)=e^x
+$$
+
+e
+
+$$
+f^{-1}(x)=\ln x
+$$
+
+têm gráficos simétricos em relação à reta $y=x$.
+
+***
+
+## Teste da reta horizontal
+
+Para saber se uma função possui inversa, podemos usar o teste da reta horizontal.
+
+::: {.callout-tip title="Teste da reta horizontal"}
+Uma função é injetiva se toda reta horizontal intercepta seu gráfico em no máximo um ponto.
+:::
+
+Se alguma reta horizontal corta o gráfico em dois ou mais pontos, então há dois valores diferentes de $x$ produzindo a mesma saída. Nesse caso, a função não é injetiva e não possui inversa no domínio considerado.
+
+Por exemplo, o gráfico de
+
+$$
+f(x)=x^2
+$$
+
+em $\mathbb{R}$ falha no teste da reta horizontal.
+
+Já o gráfico de
+
+$$
+f(x)=x^3
+$$
+
+passa no teste e possui inversa em $\mathbb{R}$.
+
+***
+
+## Exponencial e logaritmo
+
+Um dos pares mais importantes de funções inversas é:
+
+$$
+f(x)=e^x
+$$
+
+e
+
+$$
+f^{-1}(x)=\ln x.
+$$
+
+Temos:
+
+$$
+\ln(e^x)=x
+$$
+
+para todo
+
+$$
+x\in\mathbb{R},
+$$
+
+e
+
+$$
+e^{\ln x}=x
+$$
+
+para todo
+
+$$
+x>0.
+$$
+
+Note a troca de domínio e imagem:
+
+- $e^x$ tem domínio $\mathbb{R}$ e imagem $(0,+\infty)$;
+- $\ln x$ tem domínio $(0,+\infty)$ e imagem $\mathbb{R}$.
+
+***
+
+## Seno, cosseno e inversas
+
+As funções trigonométricas também podem ter inversas, mas apenas após restrições adequadas de domínio.
+
+Por exemplo, a função
+
+$$
+\sin x
+$$
+
+não é injetiva em todo $\mathbb{R}$, pois é periódica.
+
+Mas se restringirmos o domínio a
+
+$$
+\left[-\frac{\pi}{2},\frac{\pi}{2}\right],
+$$
+
+então o seno se torna injetivo e admite inversa, chamada arco-seno:
+
+$$
+\arcsin x.
+$$
+
+Esse fenômeno mostra novamente que a inversa depende do domínio escolhido.
+
+***
+
+## Por que isso importa para o Cálculo?
+
+Funções inversas aparecem em muitos pontos do Cálculo.
+
+A função logarítmica aparece como inversa da exponencial.
+
+As funções trigonométricas inversas aparecem em integrais, substituições e equações.
+
+A derivada da função inversa será estudada mais adiante.
+
+Além disso, compreender inversas ajuda a entender melhor domínio, imagem, composição e transformação de funções.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Determine a inversa das funções:
+
+a) $f(x)=x+5$  
+b) $g(x)=3x-2$  
+c) $h(x)=\dfrac{x}{4}$  
+d) $p(x)=\dfrac{x-1}{2}$
+
+## Exercício 2
+
+Verifique por composição se as funções são inversas:
+
+$$
+f(x)=2x+1
+$$
+
+e
+
+$$
+g(x)=\frac{x-1}{2}.
+$$
+
+## Exercício 3
+
+Explique por que
+
+$$
+f:\mathbb{R}\to\mathbb{R},\qquad f(x)=x^2
+$$
+
+não possui inversa.
+
+## Exercício 4
+
+Restrinja o domínio da função
+
+$$
+f(x)=x^2
+$$
+
+para que ela tenha inversa e determine essa inversa.
+
+## Exercício 5
+
+Determine domínio e imagem das funções:
+
+a) $f(x)=e^x$  
+b) $g(x)=\ln x$
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+a) Para
+
+$$
+f(x)=x+5,
+$$
+
+escrevemos
+
+$$
+y=x+5.
+$$
+
+Logo,
+
+$$
+x=y-5.
+$$
+
+Portanto,
+
+$$
+f^{-1}(x)=x-5.
+$$
+
+b) Para
+
+$$
+g(x)=3x-2,
+$$
+
+temos
+
+$$
+y=3x-2.
+$$
+
+Então
+
+$$
+y+2=3x,
+$$
+
+logo
+
+$$
+x=\frac{y+2}{3}.
+$$
+
+Portanto,
+
+$$
+g^{-1}(x)=\frac{x+2}{3}.
+$$
+
+c) Para
+
+$$
+h(x)=\frac{x}{4},
+$$
+
+temos
+
+$$
+y=\frac{x}{4}.
+$$
+
+Logo,
+
+$$
+x=4y.
+$$
+
+Portanto,
+
+$$
+h^{-1}(x)=4x.
+$$
+
+d) Para
+
+$$
+p(x)=\frac{x-1}{2},
+$$
+
+temos
+
+$$
+y=\frac{x-1}{2}.
+$$
+
+Então
+
+$$
+2y=x-1.
+$$
+
+Logo,
+
+$$
+x=2y+1.
+$$
+
+Portanto,
+
+$$
+p^{-1}(x)=2x+1.
+$$
+
+## Exercício 2
+
+Temos
+
+$$
+f(x)=2x+1
+$$
+
+e
+
+$$
+g(x)=\frac{x-1}{2}.
+$$
+
+Calculando $g(f(x))$:
+
+$$
+g(f(x))=g(2x+1)=\frac{(2x+1)-1}{2}=\frac{2x}{2}=x.
+$$
+
+Calculando $f(g(x))$:
+
+$$
+f(g(x))=f\left(\frac{x-1}{2}\right)=2\cdot\frac{x-1}{2}+1=x-1+1=x.
+$$
+
+Como as duas composições resultam na identidade, $f$ e $g$ são inversas.
+
+## Exercício 3
+
+A função
+
+$$
+f(x)=x^2
+$$
+
+em todo $\mathbb{R}$ não é injetiva, pois existem entradas diferentes com a mesma saída.
+
+Por exemplo:
+
+$$
+f(2)=4
+$$
+
+e
+
+$$
+f(-2)=4.
+$$
+
+Como uma mesma saída corresponde a duas entradas diferentes, não é possível definir uma inversa que seja função.
+
+## Exercício 4
+
+Podemos restringir o domínio a
+
+$$
+[0,+\infty).
+$$
+
+Assim,
+
+$$
+f:[0,+\infty)\to[0,+\infty)
+$$
+
+dada por
+
+$$
+f(x)=x^2
+$$
+
+é bijetiva.
+
+Sua inversa é
+
+$$
+f^{-1}(x)=\sqrt{x}.
+$$
+
+Também poderíamos restringir o domínio a $(-\infty,0]$. Nesse caso, a inversa seria
+
+$$
+f^{-1}(x)=-\sqrt{x}.
+$$
+
+## Exercício 5
+
+a) Para
+
+$$
+f(x)=e^x,
+$$
+
+o domínio é
+
+$$
+\mathbb{R}
+$$
+
+e a imagem é
+
+$$
+(0,+\infty).
+$$
+
+b) Para
+
+$$
+g(x)=\ln x,
+$$
+
+o domínio é
+
+$$
+(0,+\infty)
+$$
+
+e a imagem é
+
+$$
+\mathbb{R}.
+$$
+
+Essas funções são inversas uma da outra.
+
+:::
+
+***
+
+## 🧩 Quiz — Função Inversa
+
+:::::{.question}
+**Q1.** A função inversa de $f$ é aquela que:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Desfaz a ação de $f$.
+:::
+
+:::{.choice}
+Multiplica $f$ por zero.
+:::
+
+:::{.choice}
+Sempre troca $x$ por $-x$.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Para uma função ter inversa, ela deve ser:
+
+::::{.choices}
+:::{.choice}
+Apenas constante.
+:::
+
+:::{.choice .correct-choice}
+Bijetiva.
+:::
+
+:::{.choice}
+Sempre quadrática.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** Os gráficos de uma função e de sua inversa são simétricos em relação à reta:
+
+::::{.choices}
+:::{.choice}
+$y=0$.
+:::
+
+:::{.choice}
+$x=0$.
+:::
+
+:::{.choice .correct-choice}
+$y=x$.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.13 Composição de Funções](1.13-composicao-de-funcoes.qmd)
+
+🎯 **Próximo Post:** 👉 [1.15 Modelos com Funções Elementares](1.15-modelos-com-funcoes-elementares.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.14-funcao-inversa.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

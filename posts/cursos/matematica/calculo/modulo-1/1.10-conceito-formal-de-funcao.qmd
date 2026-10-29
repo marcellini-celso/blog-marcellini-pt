@@ -1,0 +1,934 @@
+---
+title: "📘 Módulo 1.10: Conceito Formal de Função"
+description: "Definição formal de função, domínio, contradomínio, imagem, igualdade de funções e leitura de funções como relações especiais."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, funções, pré-cálculo]
+tags: [cálculo, matemática, funções, domínio, contradomínio, imagem, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.9 Trigonometria Essencial](1.9-trigonometria-essencial.qmd)
+
+***
+
+# 📘 Conceito Formal de Função
+
+Até aqui, já usamos funções muitas vezes.
+
+Falamos de funções afins, quadráticas, polinomiais, racionais, exponenciais, logarítmicas e trigonométricas. Em vários momentos, escrevemos expressões como
+
+$$
+f(x)=x^2,
+$$
+
+$$
+g(x)=\frac{1}{x-2},
+$$
+
+ou
+
+$$
+h(x)=\sin x.
+$$
+
+Mas agora precisamos dar um passo conceitual importante: entender o que é uma função **formalmente**.
+
+Essa formalização é necessária porque, no Cálculo, não estudaremos apenas fórmulas. Estudaremos objetos matemáticos com domínio, imagem, comportamento local, continuidade, limites, derivadas e integrais.
+
+***
+
+## A ideia intuitiva
+
+Intuitivamente, uma função é uma regra que associa entradas a saídas.
+
+Por exemplo, a regra
+
+$$
+f(x)=x^2
+$$
+
+associa a cada número real $x$ o número real $x^2$.
+
+Assim:
+
+$$
+f(2)=4,
+$$
+
+$$
+f(-3)=9,
+$$
+
+$$
+f(0)=0.
+$$
+
+Podemos imaginar uma função como uma máquina:
+
+$$
+x \longmapsto f(x).
+$$
+
+A entrada é $x$; a saída é $f(x)$.
+
+Mas essa imagem de máquina, embora útil, não é suficiente para a matemática formal. Precisamos dizer com clareza quais entradas são permitidas e em que conjunto vivem as saídas.
+
+***
+
+## Definição formal de função
+
+Uma função de um conjunto $A$ em um conjunto $B$ é uma regra que associa a cada elemento de $A$ exatamente um elemento de $B$.
+
+Escrevemos:
+
+$$
+f:A\to B.
+$$
+
+O conjunto $A$ é chamado de **domínio** da função.
+
+O conjunto $B$ é chamado de **contradomínio** da função.
+
+Se $x\in A$, então o valor associado a $x$ é denotado por
+
+$$
+f(x).
+$$
+
+A condição fundamental é:
+
+::: {.callout-note title="Definição essencial"}
+Para cada $x\in A$, deve existir exatamente um valor $f(x)\in B$.
+:::
+
+Isso significa duas coisas:
+
+1. todo elemento do domínio deve ter imagem;
+2. nenhum elemento do domínio pode ter duas imagens diferentes.
+
+***
+
+## Domínio
+
+O domínio é o conjunto de todas as entradas permitidas da função.
+
+Se escrevemos
+
+$$
+f:A\to B,
+$$
+
+então o domínio é
+
+$$
+A.
+$$
+
+Por exemplo, se
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+é dada por
+
+$$
+f(x)=x^2,
+$$
+
+então o domínio é
+
+$$
+\mathbb{R}.
+$$
+
+Isso quer dizer que qualquer número real pode ser usado como entrada.
+
+Já para
+
+$$
+g(x)=\sqrt{x},
+$$
+
+se estamos trabalhando apenas com números reais, o domínio natural é
+
+$$
+[0,+\infty).
+$$
+
+Isso acontece porque $\sqrt{x}$ só é real quando
+
+$$
+x\geq 0.
+$$
+
+***
+
+## Contradomínio
+
+O contradomínio é o conjunto onde declaramos que os valores da função vivem.
+
+Se escrevemos
+
+$$
+f:A\to B,
+$$
+
+então $B$ é o contradomínio.
+
+Por exemplo,
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+com
+
+$$
+f(x)=x^2
+$$
+
+tem contradomínio $\mathbb{R}$.
+
+Isso significa que os valores da função são considerados dentro do conjunto dos reais.
+
+Mas observe: embora o contradomínio seja $\mathbb{R}$, a função $f(x)=x^2$ nunca assume valores negativos.
+
+Assim, contradomínio e imagem não são necessariamente a mesma coisa.
+
+***
+
+## Imagem
+
+A imagem de uma função é o conjunto de todos os valores que ela realmente assume.
+
+Para
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=x^2,
+$$
+
+a imagem é
+
+$$
+[0,+\infty).
+$$
+
+De fato, $x^2$ nunca é negativo, e todo número real não negativo pode ser escrito como quadrado de algum real.
+
+Portanto:
+
+$$
+\operatorname{Im}(f)=[0,+\infty).
+$$
+
+A imagem sempre é subconjunto do contradomínio:
+
+$$
+\operatorname{Im}(f)\subseteq B.
+$$
+
+***
+
+## Domínio, contradomínio e imagem: comparação
+
+É importante distinguir os três conceitos.
+
+| Conceito | Significado |
+|---|---|
+| Domínio | conjunto das entradas permitidas |
+| Contradomínio | conjunto declarado para as saídas |
+| Imagem | conjunto dos valores realmente atingidos |
+
+Por exemplo, considere
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=x^2.
+$$
+
+Então:
+
+$$
+D_f=\mathbb{R},
+$$
+
+$$
+\text{contradomínio}=\mathbb{R},
+$$
+
+e
+
+$$
+\operatorname{Im}(f)=[0,+\infty).
+$$
+
+***
+
+## Funções como relações especiais
+
+Uma forma mais formal de entender funções é vê-las como relações.
+
+Uma relação de $A$ em $B$ é um subconjunto do produto cartesiano
+
+$$
+A\times B.
+$$
+
+Ou seja, é um conjunto de pares ordenados
+
+$$
+(x,y),
+$$
+
+com $x\in A$ e $y\in B$.
+
+Uma função é uma relação especial em que cada elemento $x\in A$ aparece em exatamente um par ordenado.
+
+Por exemplo, a função
+
+$$
+f(x)=x^2
+$$
+
+pode ser vista como o conjunto de pares
+
+$$
+\{(x,x^2)\mid x\in\mathbb{R}\}.
+$$
+
+Essa visão será importante mais adiante quando pensarmos em gráficos.
+
+***
+
+## Gráfico de uma função
+
+O gráfico de uma função real de variável real é o conjunto de pontos
+
+$$
+(x,f(x))
+$$
+
+no plano cartesiano.
+
+Formalmente, se
+
+$$
+f:A\to\mathbb{R},
+$$
+
+com
+
+$$
+A\subseteq\mathbb{R},
+$$
+
+então o gráfico de $f$ é
+
+$$
+G_f=\{(x,f(x))\in\mathbb{R}^2\mid x\in A\}.
+$$
+
+Por exemplo, o gráfico de
+
+$$
+f(x)=x^2
+$$
+
+é
+
+$$
+G_f=\{(x,x^2)\mid x\in\mathbb{R}\}.
+$$
+
+Esse conjunto de pontos forma uma parábola.
+
+***
+
+## O teste da reta vertical
+
+Nem todo conjunto de pontos no plano representa o gráfico de uma função.
+
+Para ser gráfico de uma função, cada valor de $x$ deve corresponder a exatamente um valor de $y$.
+
+Geometricamente, isso leva ao teste da reta vertical:
+
+::: {.callout-tip title="Teste da reta vertical"}
+Um gráfico representa uma função de $x$ se toda reta vertical intercepta o gráfico em no máximo um ponto.
+:::
+
+Por exemplo, a parábola
+
+$$
+y=x^2
+$$
+
+passa no teste da reta vertical.
+
+Já a circunferência
+
+$$
+x^2+y^2=1
+$$
+
+não passa, pois uma mesma reta vertical pode cortar a circunferência em dois pontos.
+
+***
+
+## Igualdade de funções
+
+Duas funções são iguais quando têm o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.
+
+Por exemplo, considere
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=x^2
+$$
+
+e
+
+$$
+g:[0,+\infty)\to\mathbb{R}
+$$
+
+dada por
+
+$$
+g(x)=x^2.
+$$
+
+Embora as expressões sejam iguais, as funções não são iguais, pois os domínios são diferentes.
+
+Isso é muito importante no Cálculo. Muitas propriedades dependem do domínio considerado.
+
+***
+
+## Uma mesma fórmula pode definir funções diferentes
+
+A expressão
+
+$$
+f(x)=\sqrt{x^2}
+$$
+
+pode ser simplificada como
+
+$$
+f(x)=|x|.
+$$
+
+Mas se restringirmos o domínio a
+
+$$
+[0,+\infty),
+$$
+
+então
+
+$$
+\sqrt{x^2}=x.
+$$
+
+Por outro lado, se restringirmos o domínio a
+
+$$
+(-\infty,0],
+$$
+
+então
+
+$$
+\sqrt{x^2}=-x.
+$$
+
+Isso mostra que a fórmula sozinha não conta toda a história. O domínio faz parte da definição da função.
+
+***
+
+## Funções reais de variável real
+
+No Cálculo de uma variável, estudamos principalmente funções reais de variável real.
+
+Isso significa que trabalhamos com funções
+
+$$
+f:A\to\mathbb{R},
+$$
+
+em que
+
+$$
+A\subseteq\mathbb{R}.
+$$
+
+A entrada é um número real e a saída também é um número real.
+
+Exemplos:
+
+$$
+f(x)=x^2,
+$$
+
+$$
+g(x)=\frac{1}{x-1},
+$$
+
+$$
+h(x)=\ln x,
+$$
+
+$$
+p(x)=\sin x.
+$$
+
+Essas funções podem ter domínios diferentes, mas todas associam números reais a números reais.
+
+***
+
+## Funções definidas por partes
+
+Algumas funções são definidas por regras diferentes em partes diferentes do domínio.
+
+Por exemplo:
+
+$$
+f(x)=
+\begin{cases}
+x^2, & x<0,\\
+x+1, & x\geq 0.
+\end{cases}
+$$
+
+Para calcular $f(-2)$, usamos a primeira regra:
+
+$$
+f(-2)=(-2)^2=4.
+$$
+
+Para calcular $f(3)$, usamos a segunda regra:
+
+$$
+f(3)=3+1=4.
+$$
+
+Funções definidas por partes serão importantes no estudo de limites laterais e continuidade.
+
+***
+
+## Funções e modelagem
+
+Em aplicações, uma função costuma representar uma dependência entre grandezas.
+
+Por exemplo:
+
+- a posição pode ser função do tempo;
+- a temperatura pode ser função da altitude;
+- o custo pode ser função da quantidade produzida;
+- a área pode ser função do raio;
+- a população pode ser função do tempo.
+
+Nesses casos, o domínio não é apenas uma questão algébrica. Ele também depende do contexto.
+
+Por exemplo, se $t$ representa tempo medido após o início de um experimento, normalmente consideramos
+
+$$
+t\geq 0.
+$$
+
+Mesmo que a fórmula faça sentido para valores negativos, o modelo físico pode não fazer.
+
+***
+
+## Por que isso importa para o Cálculo?
+
+Limites, derivadas e integrais dependem de funções.
+
+Antes de perguntar
+
+$$
+\lim_{x\to a}f(x),
+$$
+
+precisamos saber o que é $f$, onde ela está definida e como ela se comporta perto de $a$.
+
+Antes de derivar uma função, precisamos saber em quais pontos ela existe.
+
+Antes de integrar uma função, precisamos entender em que intervalo ela está sendo considerada.
+
+Por isso, o conceito formal de função não é apenas uma formalidade. Ele é a base sobre a qual o Cálculo será construído.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Para cada função, determine o domínio real natural:
+
+a) $f(x)=x^2+1$  
+b) $g(x)=\sqrt{x-4}$  
+c) $h(x)=\dfrac{1}{x+2}$  
+d) $p(x)=\ln(x-1)$
+
+## Exercício 2
+
+Considere
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=x^2.
+$$
+
+Determine:
+
+a) o domínio;  
+b) o contradomínio;  
+c) a imagem.
+
+## Exercício 3
+
+Explique por que a circunferência
+
+$$
+x^2+y^2=1
+$$
+
+não é gráfico de uma função $y=f(x)$ em todo o intervalo $[-1,1]$.
+
+## Exercício 4
+
+Considere a função
+
+$$
+f(x)=
+\begin{cases}
+2x, & x<1,\\
+x^2, & x\geq 1.
+\end{cases}
+$$
+
+Calcule:
+
+a) $f(0)$  
+b) $f(1)$  
+c) $f(3)$
+
+## Exercício 5
+
+As funções abaixo são iguais?
+
+$$
+f:\mathbb{R}\to\mathbb{R},\qquad f(x)=x^2
+$$
+
+e
+
+$$
+g:[0,+\infty)\to\mathbb{R},\qquad g(x)=x^2.
+$$
+
+Justifique.
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+a) Para $f(x)=x^2+1$, não há restrição real. Logo,
+
+$$
+D_f=\mathbb{R}.
+$$
+
+b) Para $g(x)=\sqrt{x-4}$, precisamos de
+
+$$
+x-4\geq 0.
+$$
+
+Assim,
+
+$$
+x\geq 4.
+$$
+
+Logo,
+
+$$
+D_g=[4,+\infty).
+$$
+
+c) Para $h(x)=\dfrac{1}{x+2}$, precisamos de
+
+$$
+x+2\neq 0.
+$$
+
+Assim,
+
+$$
+x\neq -2.
+$$
+
+Logo,
+
+$$
+D_h=(-\infty,-2)\cup(-2,+\infty).
+$$
+
+d) Para $p(x)=\ln(x-1)$, precisamos de
+
+$$
+x-1>0.
+$$
+
+Assim,
+
+$$
+x>1.
+$$
+
+Logo,
+
+$$
+D_p=(1,+\infty).
+$$
+
+## Exercício 2
+
+A função é
+
+$$
+f:\mathbb{R}\to\mathbb{R}
+$$
+
+dada por
+
+$$
+f(x)=x^2.
+$$
+
+a) O domínio é
+
+$$
+\mathbb{R}.
+$$
+
+b) O contradomínio é
+
+$$
+\mathbb{R}.
+$$
+
+c) A imagem é
+
+$$
+[0,+\infty).
+$$
+
+Isso ocorre porque $x^2\geq 0$ para todo $x\in\mathbb{R}$, e todo número real não negativo é quadrado de algum real.
+
+## Exercício 3
+
+A circunferência
+
+$$
+x^2+y^2=1
+$$
+
+não é gráfico de uma função $y=f(x)$ em todo $[-1,1]$, porque alguns valores de $x$ correspondem a dois valores diferentes de $y$.
+
+Por exemplo, se
+
+$$
+x=0,
+$$
+
+então
+
+$$
+y^2=1,
+$$
+
+logo
+
+$$
+y=1
+$$
+
+ou
+
+$$
+y=-1.
+$$
+
+Assim, a mesma entrada $x=0$ teria duas saídas diferentes. Isso viola a definição de função.
+
+## Exercício 4
+
+A função é definida por partes:
+
+$$
+f(x)=
+\begin{cases}
+2x, & x<1,\\
+x^2, & x\geq 1.
+\end{cases}
+$$
+
+a) Como $0<1$, usamos $f(x)=2x$:
+
+$$
+f(0)=2\cdot 0=0.
+$$
+
+b) Como $1\geq 1$, usamos $f(x)=x^2$:
+
+$$
+f(1)=1^2=1.
+$$
+
+c) Como $3\geq 1$, usamos $f(x)=x^2$:
+
+$$
+f(3)=3^2=9.
+$$
+
+## Exercício 5
+
+Não. As expressões são iguais, mas as funções não são iguais porque os domínios são diferentes.
+
+A função $f$ tem domínio
+
+$$
+\mathbb{R},
+$$
+
+enquanto a função $g$ tem domínio
+
+$$
+[0,+\infty).
+$$
+
+Para duas funções serem iguais, elas precisam ter o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.
+
+:::
+
+***
+
+## 🧩 Quiz — Conceito Formal de Função
+
+:::::{.question}
+**Q1.** Uma função $f:A\to B$ associa:
+
+::::{.choices}
+:::{.choice .correct-choice}
+A cada elemento de $A$ exatamente um elemento de $B$.
+:::
+
+:::{.choice}
+A cada elemento de $A$ pelo menos dois elementos de $B$.
+:::
+
+:::{.choice}
+Apenas alguns elementos de $A$ a elementos de $B$.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Na notação $f:A\to B$, o conjunto $A$ é chamado de:
+
+::::{.choices}
+:::{.choice}
+Imagem.
+:::
+
+:::{.choice .correct-choice}
+Domínio.
+:::
+
+:::{.choice}
+Gráfico.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** A imagem de uma função é:
+
+::::{.choices}
+:::{.choice}
+Sempre igual ao domínio.
+:::
+
+:::{.choice}
+Sempre igual ao contradomínio.
+:::
+
+:::{.choice .correct-choice}
+O conjunto dos valores que a função realmente assume.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.9 Trigonometria Essencial](1.9-trigonometria-essencial.qmd)
+
+🎯 **Próximo Post:** 👉 [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.10-conceito-formal-de-funcao.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

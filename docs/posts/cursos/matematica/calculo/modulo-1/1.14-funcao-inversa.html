@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Blog do Marcellini">
+<meta name="description" content="Estudo de funções inversas, bijetividade, domínio, imagem, composição com a inversa, gráficos simétricos e exemplos fundamentais.">
+
+<title>📘 Módulo 1.14: Função Inversa – Blog do Marcellini</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-f033c7dbc0f6ce96e5658e4903595158.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
+<script>
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
+</script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../../styles.css">
+<link rel="stylesheet" href="../../../../../assets/css/custom.css">
+<link rel="stylesheet" href="../../../../../assets/css/cards.css">
+<link rel="stylesheet" href="../../../../../assets/css/chips.css">
+<meta property="og:title" content="📘 Módulo 1.14: Função Inversa – Blog do Marcellini">
+<meta property="og:description" content="Estudo de funções inversas, bijetividade, domínio, imagem, composição com a inversa, gráficos simétricos e exemplos fundamentais.">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="📘 Módulo 1.14: Função Inversa – Blog do Marcellini">
+<meta name="twitter:description" content="Estudo de funções inversas, bijetividade, domínio, imagem, composição com a inversa, gráficos simétricos e exemplos fundamentais.">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">Blog do Marcellini</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explorar" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧭 Explorar</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explorar">    
+        <li>
+    <a class="dropdown-item" href="../../../../../tags.html">
+ <span class="dropdown-text">🏷️ Tags</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../categories.html">
+ <span class="dropdown-text">📂 Categorias</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciências-exatas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧠 Ciências Exatas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciências-exatas">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/matematica/index.html">
+ <span class="dropdown-text">🧮 Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/estatistica/index.html">
+ <span class="dropdown-text">📊 Estatística</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/fisica/index.html">
+ <span class="dropdown-text">🔭 Física</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/index.html">
+ <span class="dropdown-text">💻 Programação</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/ia/index.html">
+ <span class="dropdown-text">🤖 Inteligência Artificial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog-pessoal" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📝 Blog Pessoal</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog-pessoal">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/index.html">
+ <span class="dropdown-text">📝 Blog Pessoal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/sobre-o-blog.html">
+ <span class="dropdown-text">👤 Sobre Mim e Sobre o Blog</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/matematica/index.html">
+ <span class="dropdown-text">🧮 Cursos de Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/estatistica/index.html">
+ <span class="dropdown-text">📊 Cursos de Estatística</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../guia.html"> 
+<span class="menu-text">🗺️ Mapa do Site</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Contato</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Neste Módulo</h2>
+   
+  <ul>
+  <li><a href="#função-inversa" id="toc-função-inversa" class="nav-link active" data-scroll-target="#função-inversa"><span class="header-section-number">1</span> 📘 Função Inversa</a>
+  <ul class="collapse">
+  <li><a href="#a-ideia-de-desfazer-uma-operação" id="toc-a-ideia-de-desfazer-uma-operação" class="nav-link" data-scroll-target="#a-ideia-de-desfazer-uma-operação"><span class="header-section-number">1.1</span> A ideia de desfazer uma operação</a></li>
+  <li><a href="#definição-de-função-inversa" id="toc-definição-de-função-inversa" class="nav-link" data-scroll-target="#definição-de-função-inversa"><span class="header-section-number">1.2</span> Definição de função inversa</a></li>
+  <li><a href="#a-função-identidade" id="toc-a-função-identidade" class="nav-link" data-scroll-target="#a-função-identidade"><span class="header-section-number">1.3</span> A função identidade</a></li>
+  <li><a href="#nem-toda-função-tem-inversa" id="toc-nem-toda-função-tem-inversa" class="nav-link" data-scroll-target="#nem-toda-função-tem-inversa"><span class="header-section-number">1.4</span> Nem toda função tem inversa</a></li>
+  <li><a href="#função-injetiva" id="toc-função-injetiva" class="nav-link" data-scroll-target="#função-injetiva"><span class="header-section-number">1.5</span> Função injetiva</a></li>
+  <li><a href="#função-sobrejetiva" id="toc-função-sobrejetiva" class="nav-link" data-scroll-target="#função-sobrejetiva"><span class="header-section-number">1.6</span> Função sobrejetiva</a></li>
+  <li><a href="#função-bijetiva" id="toc-função-bijetiva" class="nav-link" data-scroll-target="#função-bijetiva"><span class="header-section-number">1.7</span> Função bijetiva</a></li>
+  <li><a href="#exemplo-de-função-com-inversa" id="toc-exemplo-de-função-com-inversa" class="nav-link" data-scroll-target="#exemplo-de-função-com-inversa"><span class="header-section-number">1.8</span> Exemplo de função com inversa</a></li>
+  <li><a href="#exemplo-de-função-sem-inversa-em-todo-mathbbr" id="toc-exemplo-de-função-sem-inversa-em-todo-mathbbr" class="nav-link" data-scroll-target="#exemplo-de-função-sem-inversa-em-todo-mathbbr"><span class="header-section-number">1.9</span> Exemplo de função sem inversa em todo <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#restringindo-o-domínio" id="toc-restringindo-o-domínio" class="nav-link" data-scroll-target="#restringindo-o-domínio"><span class="header-section-number">1.10</span> Restringindo o domínio</a></li>
+  <li><a href="#como-encontrar-a-inversa" id="toc-como-encontrar-a-inversa" class="nav-link" data-scroll-target="#como-encontrar-a-inversa"><span class="header-section-number">1.11</span> Como encontrar a inversa</a></li>
+  <li><a href="#gráfico-da-função-inversa" id="toc-gráfico-da-função-inversa" class="nav-link" data-scroll-target="#gráfico-da-função-inversa"><span class="header-section-number">1.12</span> Gráfico da função inversa</a></li>
+  <li><a href="#teste-da-reta-horizontal" id="toc-teste-da-reta-horizontal" class="nav-link" data-scroll-target="#teste-da-reta-horizontal"><span class="header-section-number">1.13</span> Teste da reta horizontal</a></li>
+  <li><a href="#exponencial-e-logaritmo" id="toc-exponencial-e-logaritmo" class="nav-link" data-scroll-target="#exponencial-e-logaritmo"><span class="header-section-number">1.14</span> Exponencial e logaritmo</a></li>
+  <li><a href="#seno-cosseno-e-inversas" id="toc-seno-cosseno-e-inversas" class="nav-link" data-scroll-target="#seno-cosseno-e-inversas"><span class="header-section-number">1.15</span> Seno, cosseno e inversas</a></li>
+  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.16</span> Por que isso importa para o Cálculo?</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <ul class="collapse">
+  <li><a href="#quiz-função-inversa" id="toc-quiz-função-inversa" class="nav-link" data-scroll-target="#quiz-função-inversa"><span class="header-section-number">3.6</span> 🧩 Quiz — Função Inversa</a></li>
+  </ul></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">📘 Módulo 1.14: Função Inversa</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">cálculo</div>
+    <div class="quarto-category">matemática</div>
+    <div class="quarto-category">curso</div>
+    <div class="quarto-category">funções</div>
+    <div class="quarto-category">função inversa</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Estudo de funções inversas, bijetividade, domínio, imagem, composição com a inversa, gráficos simétricos e exemplos fundamentais.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Blog do Marcellini </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">5 de junho de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">1.13 Composição de Funções</a></p>
+<hr>
+<section id="função-inversa" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 📘 Função Inversa</h1>
+<p>Na aula anterior, estudamos composição de funções. Agora vamos usar essa ideia para entender um conceito fundamental: a <strong>função inversa</strong>.</p>
+<p>Intuitivamente, uma função inversa desfaz o que a função original fez.</p>
+<p>Por exemplo, a função</p>
+<p><span class="math display">\[
+f(x)=x+3
+\]</span></p>
+<p>soma <span class="math inline">\(3\)</span> à entrada.</p>
+<p>A função que desfaz essa operação é</p>
+<p><span class="math display">\[
+f^{-1}(x)=x-3.
+\]</span></p>
+<p>De fato, se começamos com <span class="math inline">\(x\)</span>, aplicamos <span class="math inline">\(f\)</span> e depois aplicamos <span class="math inline">\(f^{-1}\)</span>, voltamos para <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+f^{-1}(f(x))=f^{-1}(x+3)=x.
+\]</span></p>
+<p>A inversa é, portanto, uma função de retorno.</p>
+<hr>
+<section id="a-ideia-de-desfazer-uma-operação" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="a-ideia-de-desfazer-uma-operação"><span class="header-section-number">1.1</span> A ideia de desfazer uma operação</h2>
+<p>Considere a função</p>
+<p><span class="math display">\[
+f(x)=2x.
+\]</span></p>
+<p>Ela dobra o valor de entrada.</p>
+<p>Para desfazer essa operação, dividimos por <span class="math inline">\(2\)</span>:</p>
+<p><span class="math display">\[
+f^{-1}(x)=\frac{x}{2}.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+f^{-1}(f(x))=f^{-1}(2x)=\frac{2x}{2}=x.
+\]</span></p>
+<p>Também temos:</p>
+<p><span class="math display">\[
+f(f^{-1}(x))=f\left(\frac{x}{2}\right)=2\cdot\frac{x}{2}=x.
+\]</span></p>
+<p>Quando as duas composições devolvem a entrada original, uma função é inversa da outra.</p>
+<hr>
+</section>
+<section id="definição-de-função-inversa" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="definição-de-função-inversa"><span class="header-section-number">1.2</span> Definição de função inversa</h2>
+<p>Se</p>
+<p><span class="math display">\[
+f:A\to B
+\]</span></p>
+<p>é uma função, uma função</p>
+<p><span class="math display">\[
+f^{-1}:B\to A
+\]</span></p>
+<p>é chamada de inversa de <span class="math inline">\(f\)</span> quando:</p>
+<p><span class="math display">\[
+f^{-1}(f(x))=x
+\]</span></p>
+<p>para todo</p>
+<p><span class="math display">\[
+x\in A,
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f(f^{-1}(y))=y
+\]</span></p>
+<p>para todo</p>
+<p><span class="math display">\[
+y\in B.
+\]</span></p>
+<p>Em termos de composição:</p>
+<p><span class="math display">\[
+f^{-1}\circ f=\operatorname{id}_A
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f\circ f^{-1}=\operatorname{id}_B,
+\]</span></p>
+<p>onde <span class="math inline">\(\operatorname{id}\)</span> representa a função identidade.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ideia central
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A inversa de uma função é a função que desfaz a ação da função original.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="a-função-identidade" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="a-função-identidade"><span class="header-section-number">1.3</span> A função identidade</h2>
+<p>A função identidade em um conjunto <span class="math inline">\(A\)</span> é dada por</p>
+<p><span class="math display">\[
+\operatorname{id}_A(x)=x.
+\]</span></p>
+<p>Ela não altera a entrada.</p>
+<p>Por exemplo, em <span class="math inline">\(\mathbb{R}\)</span>,</p>
+<p><span class="math display">\[
+\operatorname{id}_{\mathbb{R}}(x)=x.
+\]</span></p>
+<p>Dizer que</p>
+<p><span class="math display">\[
+f^{-1}\circ f=\operatorname{id}_A
+\]</span></p>
+<p>significa que aplicar <span class="math inline">\(f\)</span> e depois aplicar <span class="math inline">\(f^{-1}\)</span> devolve o ponto inicial.</p>
+<p>Dizer que</p>
+<p><span class="math display">\[
+f\circ f^{-1}=\operatorname{id}_B
+\]</span></p>
+<p>significa que aplicar <span class="math inline">\(f^{-1}\)</span> e depois aplicar <span class="math inline">\(f\)</span> também devolve o ponto inicial.</p>
+<hr>
+</section>
+<section id="nem-toda-função-tem-inversa" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="nem-toda-função-tem-inversa"><span class="header-section-number">1.4</span> Nem toda função tem inversa</h2>
+<p>Nem toda função possui inversa.</p>
+<p>Para uma função ter inversa, ela precisa associar entradas diferentes a saídas diferentes e precisa atingir todos os valores do contradomínio considerado.</p>
+<p>Em outras palavras, ela precisa ser <strong>bijetiva</strong>.</p>
+<p>Uma função bijetiva é, ao mesmo tempo:</p>
+<ul>
+<li>injetiva;</li>
+<li>sobrejetiva.</li>
+</ul>
+<p>Esses conceitos são importantes para entender quando a inversa existe.</p>
+<hr>
+</section>
+<section id="função-injetiva" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="função-injetiva"><span class="header-section-number">1.5</span> Função injetiva</h2>
+<p>Uma função é injetiva quando entradas diferentes produzem saídas diferentes.</p>
+<p>Formalmente, <span class="math inline">\(f\)</span> é injetiva quando:</p>
+<p><span class="math display">\[
+x_1\neq x_2 \quad\Rightarrow\quad f(x_1)\neq f(x_2).
+\]</span></p>
+<p>Equivalentemente:</p>
+<p><span class="math display">\[
+f(x_1)=f(x_2)\quad\Rightarrow\quad x_1=x_2.
+\]</span></p>
+<p>Exemplo:</p>
+<p><span class="math display">\[
+f(x)=2x+1
+\]</span></p>
+<p>é injetiva em <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Se</p>
+<p><span class="math display">\[
+2x_1+1=2x_2+1,
+\]</span></p>
+<p>então</p>
+<p><span class="math display">\[
+2x_1=2x_2,
+\]</span></p>
+<p>logo</p>
+<p><span class="math display">\[
+x_1=x_2.
+\]</span></p>
+<hr>
+</section>
+<section id="função-sobrejetiva" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="função-sobrejetiva"><span class="header-section-number">1.6</span> Função sobrejetiva</h2>
+<p>Uma função</p>
+<p><span class="math display">\[
+f:A\to B
+\]</span></p>
+<p>é sobrejetiva quando todo elemento de <span class="math inline">\(B\)</span> é atingido por algum elemento de <span class="math inline">\(A\)</span>.</p>
+<p>Isto é, para todo</p>
+<p><span class="math display">\[
+y\in B,
+\]</span></p>
+<p>existe</p>
+<p><span class="math display">\[
+x\in A
+\]</span></p>
+<p>tal que</p>
+<p><span class="math display">\[
+f(x)=y.
+\]</span></p>
+<p>Isso significa que a imagem da função é igual ao contradomínio:</p>
+<p><span class="math display">\[
+\operatorname{Im}(f)=B.
+\]</span></p>
+<p>Por exemplo,</p>
+<p><span class="math display">\[
+f:\mathbb{R}\to\mathbb{R}
+\]</span></p>
+<p>dada por</p>
+<p><span class="math display">\[
+f(x)=2x+1
+\]</span></p>
+<p>é sobrejetiva, pois qualquer real <span class="math inline">\(y\)</span> pode ser escrito como</p>
+<p><span class="math display">\[
+y=2x+1
+\]</span></p>
+<p>para</p>
+<p><span class="math display">\[
+x=\frac{y-1}{2}.
+\]</span></p>
+<hr>
+</section>
+<section id="função-bijetiva" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="função-bijetiva"><span class="header-section-number">1.7</span> Função bijetiva</h2>
+<p>Uma função é bijetiva quando é injetiva e sobrejetiva.</p>
+<p>Funções bijetivas têm inversa.</p>
+<p>A ideia é que cada elemento do domínio corresponde a exatamente um elemento do contradomínio, e cada elemento do contradomínio é atingido exatamente uma vez.</p>
+<p>Assim, é possível inverter as setas sem ambiguidade.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Critério prático">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Critério prático
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uma função tem inversa quando cada valor de saída corresponde a uma única entrada.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="exemplo-de-função-com-inversa" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="exemplo-de-função-com-inversa"><span class="header-section-number">1.8</span> Exemplo de função com inversa</h2>
+<p>Considere</p>
+<p><span class="math display">\[
+f:\mathbb{R}\to\mathbb{R}
+\]</span></p>
+<p>dada por</p>
+<p><span class="math display">\[
+f(x)=2x+3.
+\]</span></p>
+<p>Para encontrar a inversa, escrevemos</p>
+<p><span class="math display">\[
+y=2x+3.
+\]</span></p>
+<p>Agora resolvemos essa equação para <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+y-3=2x,
+\]</span></p>
+<p>logo</p>
+<p><span class="math display">\[
+x=\frac{y-3}{2}.
+\]</span></p>
+<p>Trocando <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span>, obtemos</p>
+<p><span class="math display">\[
+f^{-1}(x)=\frac{x-3}{2}.
+\]</span></p>
+<p>Vamos verificar:</p>
+<p><span class="math display">\[
+f^{-1}(f(x))=f^{-1}(2x+3)=\frac{(2x+3)-3}{2}=x.
+\]</span></p>
+<p>E também:</p>
+<p><span class="math display">\[
+f(f^{-1}(x))=f\left(\frac{x-3}{2}\right)=2\cdot\frac{x-3}{2}+3=x.
+\]</span></p>
+<hr>
+</section>
+<section id="exemplo-de-função-sem-inversa-em-todo-mathbbr" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="exemplo-de-função-sem-inversa-em-todo-mathbbr"><span class="header-section-number">1.9</span> Exemplo de função sem inversa em todo <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>Considere</p>
+<p><span class="math display">\[
+f:\mathbb{R}\to\mathbb{R}
+\]</span></p>
+<p>dada por</p>
+<p><span class="math display">\[
+f(x)=x^2.
+\]</span></p>
+<p>Essa função não é injetiva em <span class="math inline">\(\mathbb{R}\)</span>, pois</p>
+<p><span class="math display">\[
+f(2)=4
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f(-2)=4.
+\]</span></p>
+<p>Duas entradas diferentes produzem a mesma saída.</p>
+<p>Portanto, <span class="math inline">\(f(x)=x^2\)</span> não possui inversa como função de <span class="math inline">\(\mathbb{R}\)</span> em <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<hr>
+</section>
+<section id="restringindo-o-domínio" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="restringindo-o-domínio"><span class="header-section-number">1.10</span> Restringindo o domínio</h2>
+<p>Embora</p>
+<p><span class="math display">\[
+f(x)=x^2
+\]</span></p>
+<p>não tenha inversa em todo <span class="math inline">\(\mathbb{R}\)</span>, podemos restringir seu domínio.</p>
+<p>Considere</p>
+<p><span class="math display">\[
+f:[0,+\infty)\to[0,+\infty)
+\]</span></p>
+<p>dada por</p>
+<p><span class="math display">\[
+f(x)=x^2.
+\]</span></p>
+<p>Agora a função é injetiva e sobrejetiva.</p>
+<p>A inversa é</p>
+<p><span class="math display">\[
+f^{-1}(x)=\sqrt{x}.
+\]</span></p>
+<p>De fato,</p>
+<p><span class="math display">\[
+\sqrt{x^2}=x
+\]</span></p>
+<p>para</p>
+<p><span class="math display">\[
+x\geq 0.
+\]</span></p>
+<p>Esse exemplo mostra que a existência da inversa depende fortemente do domínio e do contradomínio.</p>
+<hr>
+</section>
+<section id="como-encontrar-a-inversa" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="como-encontrar-a-inversa"><span class="header-section-number">1.11</span> Como encontrar a inversa</h2>
+<p>Para encontrar a inversa de uma função dada por uma fórmula, podemos seguir estes passos:</p>
+<ol type="1">
+<li>escreva <span class="math inline">\(y=f(x)\)</span>;</li>
+<li>resolva a equação para <span class="math inline">\(x\)</span> em função de <span class="math inline">\(y\)</span>;</li>
+<li>troque o nome da variável <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span>;</li>
+<li>verifique domínio e imagem;</li>
+<li>se necessário, restrinja o domínio para garantir que a função seja injetiva.</li>
+</ol>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+f(x)=\frac{x-1}{2}.
+\]</span></p>
+<p>Escrevemos:</p>
+<p><span class="math display">\[
+y=\frac{x-1}{2}.
+\]</span></p>
+<p>Multiplicando por <span class="math inline">\(2\)</span>:</p>
+<p><span class="math display">\[
+2y=x-1.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+x=2y+1.
+\]</span></p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+f^{-1}(x)=2x+1.
+\]</span></p>
+<hr>
+</section>
+<section id="gráfico-da-função-inversa" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="gráfico-da-função-inversa"><span class="header-section-number">1.12</span> Gráfico da função inversa</h2>
+<p>O gráfico da função inversa tem uma relação geométrica especial com o gráfico da função original.</p>
+<p>Se</p>
+<p><span class="math display">\[
+(a,b)
+\]</span></p>
+<p>pertence ao gráfico de <span class="math inline">\(f\)</span>, então</p>
+<p><span class="math display">\[
+(b,a)
+\]</span></p>
+<p>pertence ao gráfico de <span class="math inline">\(f^{-1}\)</span>.</p>
+<p>Isso significa que os gráficos de <span class="math inline">\(f\)</span> e <span class="math inline">\(f^{-1}\)</span> são simétricos em relação à reta</p>
+<p><span class="math display">\[
+y=x.
+\]</span></p>
+<p>Por exemplo, as funções</p>
+<p><span class="math display">\[
+f(x)=e^x
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f^{-1}(x)=\ln x
+\]</span></p>
+<p>têm gráficos simétricos em relação à reta <span class="math inline">\(y=x\)</span>.</p>
+<hr>
+</section>
+<section id="teste-da-reta-horizontal" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="teste-da-reta-horizontal"><span class="header-section-number">1.13</span> Teste da reta horizontal</h2>
+<p>Para saber se uma função possui inversa, podemos usar o teste da reta horizontal.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Teste da reta horizontal">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Teste da reta horizontal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uma função é injetiva se toda reta horizontal intercepta seu gráfico em no máximo um ponto.</p>
+</div>
+</div>
+<p>Se alguma reta horizontal corta o gráfico em dois ou mais pontos, então há dois valores diferentes de <span class="math inline">\(x\)</span> produzindo a mesma saída. Nesse caso, a função não é injetiva e não possui inversa no domínio considerado.</p>
+<p>Por exemplo, o gráfico de</p>
+<p><span class="math display">\[
+f(x)=x^2
+\]</span></p>
+<p>em <span class="math inline">\(\mathbb{R}\)</span> falha no teste da reta horizontal.</p>
+<p>Já o gráfico de</p>
+<p><span class="math display">\[
+f(x)=x^3
+\]</span></p>
+<p>passa no teste e possui inversa em <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<hr>
+</section>
+<section id="exponencial-e-logaritmo" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="exponencial-e-logaritmo"><span class="header-section-number">1.14</span> Exponencial e logaritmo</h2>
+<p>Um dos pares mais importantes de funções inversas é:</p>
+<p><span class="math display">\[
+f(x)=e^x
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f^{-1}(x)=\ln x.
+\]</span></p>
+<p>Temos:</p>
+<p><span class="math display">\[
+\ln(e^x)=x
+\]</span></p>
+<p>para todo</p>
+<p><span class="math display">\[
+x\in\mathbb{R},
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+e^{\ln x}=x
+\]</span></p>
+<p>para todo</p>
+<p><span class="math display">\[
+x&gt;0.
+\]</span></p>
+<p>Note a troca de domínio e imagem:</p>
+<ul>
+<li><span class="math inline">\(e^x\)</span> tem domínio <span class="math inline">\(\mathbb{R}\)</span> e imagem <span class="math inline">\((0,+\infty)\)</span>;</li>
+<li><span class="math inline">\(\ln x\)</span> tem domínio <span class="math inline">\((0,+\infty)\)</span> e imagem <span class="math inline">\(\mathbb{R}\)</span>.</li>
+</ul>
+<hr>
+</section>
+<section id="seno-cosseno-e-inversas" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="seno-cosseno-e-inversas"><span class="header-section-number">1.15</span> Seno, cosseno e inversas</h2>
+<p>As funções trigonométricas também podem ter inversas, mas apenas após restrições adequadas de domínio.</p>
+<p>Por exemplo, a função</p>
+<p><span class="math display">\[
+\sin x
+\]</span></p>
+<p>não é injetiva em todo <span class="math inline">\(\mathbb{R}\)</span>, pois é periódica.</p>
+<p>Mas se restringirmos o domínio a</p>
+<p><span class="math display">\[
+\left[-\frac{\pi}{2},\frac{\pi}{2}\right],
+\]</span></p>
+<p>então o seno se torna injetivo e admite inversa, chamada arco-seno:</p>
+<p><span class="math display">\[
+\arcsin x.
+\]</span></p>
+<p>Esse fenômeno mostra novamente que a inversa depende do domínio escolhido.</p>
+<hr>
+</section>
+<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.16">
+<h2 data-number="1.16" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.16</span> Por que isso importa para o Cálculo?</h2>
+<p>Funções inversas aparecem em muitos pontos do Cálculo.</p>
+<p>A função logarítmica aparece como inversa da exponencial.</p>
+<p>As funções trigonométricas inversas aparecem em integrais, substituições e equações.</p>
+<p>A derivada da função inversa será estudada mais adiante.</p>
+<p>Além disso, compreender inversas ajuda a entender melhor domínio, imagem, composição e transformação de funções.</p>
+<hr>
+</section>
+</section>
+<section id="exercícios-propostos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🧪 Exercícios propostos</h1>
+<div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📝 Exercícios
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="exercício-1" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> Exercício 1</h2>
+<p>Determine a inversa das funções:</p>
+<ol type="a">
+<li><span class="math inline">\(f(x)=x+5\)</span><br>
+</li>
+<li><span class="math inline">\(g(x)=3x-2\)</span><br>
+</li>
+<li><span class="math inline">\(h(x)=\dfrac{x}{4}\)</span><br>
+</li>
+<li><span class="math inline">\(p(x)=\dfrac{x-1}{2}\)</span></li>
+</ol>
+</section>
+<section id="exercício-2" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> Exercício 2</h2>
+<p>Verifique por composição se as funções são inversas:</p>
+<p><span class="math display">\[
+f(x)=2x+1
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+g(x)=\frac{x-1}{2}.
+\]</span></p>
+</section>
+<section id="exercício-3" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> Exercício 3</h2>
+<p>Explique por que</p>
+<p><span class="math display">\[
+f:\mathbb{R}\to\mathbb{R},\qquad f(x)=x^2
+\]</span></p>
+<p>não possui inversa.</p>
+</section>
+<section id="exercício-4" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> Exercício 4</h2>
+<p>Restrinja o domínio da função</p>
+<p><span class="math display">\[
+f(x)=x^2
+\]</span></p>
+<p>para que ela tenha inversa e determine essa inversa.</p>
+</section>
+<section id="exercício-5" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> Exercício 5</h2>
+<p>Determine domínio e imagem das funções:</p>
+<ol type="a">
+<li><span class="math inline">\(f(x)=e^x\)</span><br>
+</li>
+<li><span class="math inline">\(g(x)=\ln x\)</span></li>
+</ol>
+</section>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>✅ Gabarito
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<section id="exercício-1-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> Exercício 1</h2>
+<ol type="a">
+<li>Para</li>
+</ol>
+<p><span class="math display">\[
+f(x)=x+5,
+\]</span></p>
+<p>escrevemos</p>
+<p><span class="math display">\[
+y=x+5.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x=y-5.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+f^{-1}(x)=x-5.
+\]</span></p>
+<ol start="2" type="a">
+<li>Para</li>
+</ol>
+<p><span class="math display">\[
+g(x)=3x-2,
+\]</span></p>
+<p>temos</p>
+<p><span class="math display">\[
+y=3x-2.
+\]</span></p>
+<p>Então</p>
+<p><span class="math display">\[
+y+2=3x,
+\]</span></p>
+<p>logo</p>
+<p><span class="math display">\[
+x=\frac{y+2}{3}.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+g^{-1}(x)=\frac{x+2}{3}.
+\]</span></p>
+<ol start="3" type="a">
+<li>Para</li>
+</ol>
+<p><span class="math display">\[
+h(x)=\frac{x}{4},
+\]</span></p>
+<p>temos</p>
+<p><span class="math display">\[
+y=\frac{x}{4}.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x=4y.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+h^{-1}(x)=4x.
+\]</span></p>
+<ol start="4" type="a">
+<li>Para</li>
+</ol>
+<p><span class="math display">\[
+p(x)=\frac{x-1}{2},
+\]</span></p>
+<p>temos</p>
+<p><span class="math display">\[
+y=\frac{x-1}{2}.
+\]</span></p>
+<p>Então</p>
+<p><span class="math display">\[
+2y=x-1.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x=2y+1.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+p^{-1}(x)=2x+1.
+\]</span></p>
+</section>
+<section id="exercício-2-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> Exercício 2</h2>
+<p>Temos</p>
+<p><span class="math display">\[
+f(x)=2x+1
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+g(x)=\frac{x-1}{2}.
+\]</span></p>
+<p>Calculando <span class="math inline">\(g(f(x))\)</span>:</p>
+<p><span class="math display">\[
+g(f(x))=g(2x+1)=\frac{(2x+1)-1}{2}=\frac{2x}{2}=x.
+\]</span></p>
+<p>Calculando <span class="math inline">\(f(g(x))\)</span>:</p>
+<p><span class="math display">\[
+f(g(x))=f\left(\frac{x-1}{2}\right)=2\cdot\frac{x-1}{2}+1=x-1+1=x.
+\]</span></p>
+<p>Como as duas composições resultam na identidade, <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> são inversas.</p>
+</section>
+<section id="exercício-3-1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> Exercício 3</h2>
+<p>A função</p>
+<p><span class="math display">\[
+f(x)=x^2
+\]</span></p>
+<p>em todo <span class="math inline">\(\mathbb{R}\)</span> não é injetiva, pois existem entradas diferentes com a mesma saída.</p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+f(2)=4
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f(-2)=4.
+\]</span></p>
+<p>Como uma mesma saída corresponde a duas entradas diferentes, não é possível definir uma inversa que seja função.</p>
+</section>
+<section id="exercício-4-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> Exercício 4</h2>
+<p>Podemos restringir o domínio a</p>
+<p><span class="math display">\[
+[0,+\infty).
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+f:[0,+\infty)\to[0,+\infty)
+\]</span></p>
+<p>dada por</p>
+<p><span class="math display">\[
+f(x)=x^2
+\]</span></p>
+<p>é bijetiva.</p>
+<p>Sua inversa é</p>
+<p><span class="math display">\[
+f^{-1}(x)=\sqrt{x}.
+\]</span></p>
+<p>Também poderíamos restringir o domínio a <span class="math inline">\((-\infty,0]\)</span>. Nesse caso, a inversa seria</p>
+<p><span class="math display">\[
+f^{-1}(x)=-\sqrt{x}.
+\]</span></p>
+</section>
+<section id="exercício-5-1" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> Exercício 5</h2>
+<ol type="a">
+<li>Para</li>
+</ol>
+<p><span class="math display">\[
+f(x)=e^x,
+\]</span></p>
+<p>o domínio é</p>
+<p><span class="math display">\[
+\mathbb{R}
+\]</span></p>
+<p>e a imagem é</p>
+<p><span class="math display">\[
+(0,+\infty).
+\]</span></p>
+<ol start="2" type="a">
+<li>Para</li>
+</ol>
+<p><span class="math display">\[
+g(x)=\ln x,
+\]</span></p>
+<p>o domínio é</p>
+<p><span class="math display">\[
+(0,+\infty)
+\]</span></p>
+<p>e a imagem é</p>
+<p><span class="math display">\[
+\mathbb{R}.
+\]</span></p>
+<p>Essas funções são inversas uma da outra.</p>
+</section>
+</section>
+</div>
+</div>
+<hr>
+<section id="quiz-função-inversa" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-função-inversa"><span class="header-section-number">3.6</span> 🧩 Quiz — Função Inversa</h2>
+<div class="question">
+<p><strong>Q1.</strong> A função inversa de <span class="math inline">\(f\)</span> é aquela que:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Desfaz a ação de <span class="math inline">\(f\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Multiplica <span class="math inline">\(f\)</span> por zero.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Sempre troca <span class="math inline">\(x\)</span> por <span class="math inline">\(-x\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q2.</strong> Para uma função ter inversa, ela deve ser:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Apenas constante.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Bijetiva.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Sempre quadrática.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q3.</strong> Os gráficos de uma função e de sua inversa são simétricos em relação à reta:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(y=0\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x=0\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(y=x\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="navegação" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">1.13 Composição de Funções</a></p>
+<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">Topo</a></p>
+<hr>
+<p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const rmDiacritics = (s) => s
+    .replace(/[ÁÀÂÃÄ]/g,'A').replace(/[áàâãä]/g,'a')
+    .replace(/[ÉÈÊË]/g,'E').replace(/[éèêë]/g,'e')
+    .replace(/[ÍÌÎÏ]/g,'I').replace(/[íìîï]/g,'i')
+    .replace(/[ÓÒÔÕÖ]/g,'O').replace(/[óòôõö]/g,'o')
+    .replace(/[ÚÙÛÜ]/g,'U').replace(/[úùûü]/g,'u')
+    .replace(/[Ç]/g,'C').replace(/[ç]/g,'c')
+    .replace(/[Ñ]/g,'N').replace(/[ñ]/g,'n');
+  const toSlug = (s) => rmDiacritics(String(s||"")).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
+  const classMap = [
+    ["matematica","cat--matematica"],
+    ["estatistica","cat--estatistica"],
+    ["fisica","cat--fisica"],
+    ["programacao","cat--programacao"],
+    ["curso","cat--curso"],
+    ["artigo","cat--artigo"],
+    ["serie","cat--serie"],
+    ["sumario","cat--sumario"],
+  ];
+
+  const enhanceWrap = (wrap, sortDedup=false) => {
+    if(!wrap) return;
+
+    if (sortDedup) {
+      const items = Array.from(wrap.querySelectorAll(':scope > .quarto-category'));
+      const seen = new Map();
+      for (const el of items) {
+        const key = el.textContent.trim().toLowerCase();
+        if (seen.has(key)) el.remove(); else seen.set(key, el);
+      }
+      const sorted = Array.from(wrap.querySelectorAll(':scope > .quarto-category'))
+        .sort((a,b)=>a.textContent.trim().localeCompare(b.textContent.trim(),'pt-BR'));
+      sorted.forEach(el => wrap.appendChild(el));
+    }
+
+    wrap.querySelectorAll(':scope > .quarto-category').forEach((el) => {
+      if (el.dataset.enhancedChip === "1") return;
+      const label = el.textContent.trim();
+      const slug  = toSlug(label);
+      const plain = rmDiacritics(label.toLowerCase());
+
+      for (const [needle, cls] of classMap) {
+        if (slug===needle || slug.includes(needle) || plain.includes(needle)) { el.classList.add(cls); break; }
+      }
+
+      let chip = el;
+      if (el.tagName !== "A") {
+        const a = document.createElement('a');
+        a.className = el.className;
+        a.textContent = label;
+        a.href = `${offset}categories.html#${slug}`;
+        chip = a;
+        el.replaceWith(a);
+      } else if (!el.getAttribute('href')) {
+        el.setAttribute('href', `${offset}categories.html#${slug}`);
+      }
+
+      chip.setAttribute('aria-label', `Ver posts em ${label}`);
+      chip.setAttribute('title', `Ver posts em ${label}`);
+      chip.dataset.enhancedChip = "1";
+    });
+  };
+
+  enhanceWrap(document.querySelector('#title-block-header .quarto-categories'), true);
+  document.querySelectorAll('main .quarto-categories').forEach(wrap => enhanceWrap(wrap, false));
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blogdomarcellini\.com\.br");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025-2026 Blog do Marcellini</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
+</body></html>

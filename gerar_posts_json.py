@@ -1,43 +1,49 @@
-import os
-import re
+"""Gera o índice canônico a partir do front matter YAML dos posts."""
 import json
+from datetime import date, datetime
 from pathlib import Path
+import yaml
 
-# Caminho da pasta onde estão os posts
 POSTS_DIR = Path("posts")
-SAIDA_JSON = Path("docs/posts.json")  # Agora aponta para a pasta docs
+SAIDA_JSON = Path("posts.json")
 
-def extract_post_metadata(qmd_file: Path):
+def extract_post_metadata(qmd_file):
     content = qmd_file.read_text(encoding="utf-8")
-    title_match = re.search(r"title:\s*\"(.+?)\"", content)
-    tags_match = re.search(r"tags:\s*\[(.*?)\]", content, re.DOTALL)
-    if title_match and tags_match:
-        title = title_match.group(1)
-        tags_raw = tags_match.group(1)
-        tags = [tag.strip().strip('"').strip("'") for tag in tags_raw.split(",")]
-        href = str(qmd_file.with_suffix(".html")).replace("\\", "/")  # <<<<< alterado aqui
-        return {"title": title, "href": href, "tags": tags}
-    return None
+    lines = content.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return None
+    try:
+        end = next(i for i in range(1, len(lines)) if lines[i].strip() == "---")
+    except StopIteration:
+        raise ValueError(f"Front matter sem fechamento: {qmd_file}")
+    metadata = yaml.safe_load("\n".join(lines[1:end])) or {}
+    if not isinstance(metadata, dict):
+        raise ValueError(f"Front matter inválido: {qmd_file}")
+    if metadata.get("draft") is True:
+        return None
+    title, tags = metadata.get("title"), metadata.get("tags")
+    if not title or not tags:
+        return None
+    if not isinstance(title, str) or not isinstance(tags, list) or any(not isinstance(tag, str) for tag in tags):
+        raise ValueError(f"Título ou tags inválidos: {qmd_file}")
+    post = {"title": title, "href": qmd_file.with_suffix(".html").as_posix(),
+            "tags": list(dict.fromkeys(tag.strip() for tag in tags if tag.strip()))}
+    published = metadata.get("date")
+    if published is not None:
+        if isinstance(published, datetime):
+            published = published.date()
+        elif not isinstance(published, date):
+            published = date.fromisoformat(str(published))
+        post["date"] = published.isoformat()
+    return post
 
 def coletar_posts():
-    posts_metadata = []
-    for root, _, files in os.walk(POSTS_DIR):
-        for file in files:
-            if file.endswith(".qmd"):
-                full_path = Path(root) / file
-                metadata = extract_post_metadata(full_path)
-                if metadata:
-                    posts_metadata.append(metadata)
-    return posts_metadata
+    return [post for path in sorted(POSTS_DIR.rglob("*.qmd"))
+            if (post := extract_post_metadata(path)) is not None]
 
 def salvar_json(posts):
-    # Garante que a pasta docs/ exista
-    SAIDA_JSON.parent.mkdir(parents=True, exist_ok=True)
-    with SAIDA_JSON.open("w", encoding="utf-8") as f:
-        json.dump(posts, f, indent=2, ensure_ascii=False)
+    SAIDA_JSON.write_text(json.dumps(posts, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"✅ {len(posts)} posts salvos em {SAIDA_JSON}")
 
 if __name__ == "__main__":
-    posts = coletar_posts()
-    salvar_json(posts)
-
+    salvar_json(coletar_posts())

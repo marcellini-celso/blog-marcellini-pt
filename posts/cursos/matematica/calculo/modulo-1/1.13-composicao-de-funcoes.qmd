@@ -1,0 +1,1102 @@
+---
+title: "📘 Módulo 1.13: Composição de Funções"
+description: "Estudo da composição de funções, domínio da função composta, ordem de composição e exemplos com funções elementares."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, funções, composição de funções]
+tags: [cálculo, matemática, funções, composição de funções, domínio, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
+
+***
+
+# 📘 Composição de Funções
+
+Até agora, estudamos várias famílias de funções e também vimos como transformar gráficos a partir de funções conhecidas.
+
+Agora vamos estudar uma operação fundamental: a **composição de funções**.
+
+A ideia é simples: usamos a saída de uma função como entrada de outra.
+
+Por exemplo, se
+
+$$
+f(x)=x^2
+$$
+
+e
+
+$$
+g(x)=x+1,
+$$
+
+então podemos primeiro aplicar $g$ e depois aplicar $f$:
+
+$$
+f(g(x))=f(x+1)=(x+1)^2.
+$$
+
+Também podemos fazer na ordem contrária:
+
+$$
+g(f(x))=g(x^2)=x^2+1.
+$$
+
+Observe que, em geral,
+
+$$
+f(g(x))\neq g(f(x)).
+$$
+
+A ordem importa.
+
+***
+
+## A ideia de composição
+
+Suponha que temos duas funções:
+
+$$
+g:A\to B
+$$
+
+e
+
+$$
+f:B\to C.
+$$
+
+Se $g$ leva elementos de $A$ para $B$, e $f$ recebe elementos de $B$ e leva para $C$, então podemos formar a função composta
+
+$$
+f\circ g:A\to C.
+$$
+
+A definição é:
+
+$$
+(f\circ g)(x)=f(g(x)).
+$$
+
+Lemos:
+
+> $f$ composta com $g$ é a função que primeiro aplica $g$ e depois aplica $f$.
+
+A notação
+
+$$
+f\circ g
+$$
+
+não significa multiplicação. Ela indica composição.
+
+::: {.callout-note title="Ideia central"}
+Em $(f\circ g)(x)=f(g(x))$, a função que está mais perto de $x$ é aplicada primeiro.
+:::
+
+***
+
+## Exemplo básico
+
+Considere
+
+$$
+f(x)=x^2
+$$
+
+e
+
+$$
+g(x)=x+3.
+$$
+
+Então
+
+$$
+(f\circ g)(x)=f(g(x)).
+$$
+
+Como
+
+$$
+g(x)=x+3,
+$$
+
+temos
+
+$$
+f(g(x))=f(x+3).
+$$
+
+Agora aplicamos $f(u)=u^2$ ao valor $u=x+3$:
+
+$$
+f(x+3)=(x+3)^2.
+$$
+
+Logo,
+
+$$
+(f\circ g)(x)=(x+3)^2.
+$$
+
+Na ordem contrária:
+
+$$
+(g\circ f)(x)=g(f(x)).
+$$
+
+Como
+
+$$
+f(x)=x^2,
+$$
+
+temos
+
+$$
+g(f(x))=g(x^2).
+$$
+
+Agora aplicamos $g(u)=u+3$ ao valor $u=x^2$:
+
+$$
+g(x^2)=x^2+3.
+$$
+
+Logo,
+
+$$
+(g\circ f)(x)=x^2+3.
+$$
+
+Portanto,
+
+$$
+(f\circ g)(x)=(x+3)^2
+$$
+
+e
+
+$$
+(g\circ f)(x)=x^2+3.
+$$
+
+Essas funções são diferentes.
+
+***
+
+## A ordem da composição importa
+
+A composição de funções geralmente não é comutativa.
+
+Isto é, em geral:
+
+$$
+f\circ g\neq g\circ f.
+$$
+
+Por exemplo, com
+
+$$
+f(x)=x^2
+$$
+
+e
+
+$$
+g(x)=x+3,
+$$
+
+temos:
+
+$$
+(f\circ g)(x)=(x+3)^2
+$$
+
+e
+
+$$
+(g\circ f)(x)=x^2+3.
+$$
+
+Se tomarmos $x=1$:
+
+$$
+(f\circ g)(1)=(1+3)^2=16,
+$$
+
+enquanto
+
+$$
+(g\circ f)(1)=1^2+3=4.
+$$
+
+Logo, as duas composições não são iguais.
+
+***
+
+## Composição com funções elementares
+
+A composição aparece naturalmente em funções mais complexas.
+
+Por exemplo:
+
+$$
+h(x)=\sqrt{x^2+1}.
+$$
+
+Podemos ver essa função como a composição de duas funções:
+
+$$
+g(x)=x^2+1
+$$
+
+e
+
+$$
+f(u)=\sqrt{u}.
+$$
+
+Então
+
+$$
+h(x)=f(g(x)).
+$$
+
+Ou seja,
+
+$$
+h=f\circ g.
+$$
+
+Outro exemplo:
+
+$$
+p(x)=\ln(3x-2).
+$$
+
+Podemos escrever:
+
+$$
+g(x)=3x-2
+$$
+
+e
+
+$$
+f(u)=\ln u.
+$$
+
+Então
+
+$$
+p(x)=f(g(x))=\ln(3x-2).
+$$
+
+Essa forma de enxergar funções será essencial quando estudarmos a **regra da cadeia** em derivadas.
+
+***
+
+## Domínio da função composta
+
+O domínio de uma composta exige cuidado.
+
+Para que
+
+$$
+(f\circ g)(x)=f(g(x))
+$$
+
+esteja definida, duas coisas precisam acontecer:
+
+1. $x$ precisa pertencer ao domínio de $g$;
+2. $g(x)$ precisa pertencer ao domínio de $f$.
+
+Em símbolos, o domínio de $f\circ g$ é o conjunto dos $x$ tais que:
+
+$$
+x\in D_g
+$$
+
+e
+
+$$
+g(x)\in D_f.
+$$
+
+::: {.callout-warning title="Cuidado com o domínio"}
+Não basta olhar apenas para a fórmula final simplificada. O domínio da composição depende das restrições de cada função envolvida.
+:::
+
+***
+
+## Exemplo com raiz
+
+Considere
+
+$$
+f(x)=\sqrt{x}
+$$
+
+e
+
+$$
+g(x)=x-2.
+$$
+
+A composta é
+
+$$
+(f\circ g)(x)=f(g(x))=f(x-2)=\sqrt{x-2}.
+$$
+
+Para essa expressão fazer sentido nos reais, precisamos de
+
+$$
+x-2\geq 0.
+$$
+
+Logo,
+
+$$
+x\geq 2.
+$$
+
+Assim,
+
+$$
+D_{f\circ g}=[2,+\infty).
+$$
+
+Na ordem contrária:
+
+$$
+(g\circ f)(x)=g(f(x))=g(\sqrt{x})=\sqrt{x}-2.
+$$
+
+Agora precisamos apenas que
+
+$$
+x\geq 0.
+$$
+
+Logo,
+
+$$
+D_{g\circ f}=[0,+\infty).
+$$
+
+Além das fórmulas serem diferentes, os domínios também são diferentes.
+
+***
+
+## Exemplo com logaritmo
+
+Considere
+
+$$
+f(x)=\ln x
+$$
+
+e
+
+$$
+g(x)=x^2-4.
+$$
+
+A composta é
+
+$$
+(f\circ g)(x)=f(g(x))=\ln(x^2-4).
+$$
+
+Como o logaritmo só aceita argumentos positivos, precisamos de
+
+$$
+x^2-4>0.
+$$
+
+Fatorando:
+
+$$
+x^2-4=(x-2)(x+2).
+$$
+
+A inequação
+
+$$
+(x-2)(x+2)>0
+$$
+
+é satisfeita fora das raízes:
+
+$$
+x<-2
+$$
+
+ou
+
+$$
+x>2.
+$$
+
+Logo,
+
+$$
+D_{f\circ g}=(-\infty,-2)\cup(2,+\infty).
+$$
+
+***
+
+## Exemplo com função racional
+
+Considere
+
+$$
+f(x)=\frac{1}{x}
+$$
+
+e
+
+$$
+g(x)=x^2-1.
+$$
+
+A composta é
+
+$$
+(f\circ g)(x)=\frac{1}{x^2-1}.
+$$
+
+Para estar definida, precisamos de
+
+$$
+x^2-1\neq 0.
+$$
+
+Como
+
+$$
+x^2-1=(x-1)(x+1),
+$$
+
+temos
+
+$$
+x\neq -1
+$$
+
+e
+
+$$
+x\neq 1.
+$$
+
+Logo,
+
+$$
+D_{f\circ g}=(-\infty,-1)\cup(-1,1)\cup(1,+\infty).
+$$
+
+***
+
+## Decompor uma função composta
+
+Também é importante saber fazer o processo inverso: reconhecer uma função composta e decompô-la.
+
+Considere
+
+$$
+h(x)=(3x+1)^5.
+$$
+
+Podemos definir:
+
+$$
+g(x)=3x+1
+$$
+
+e
+
+$$
+f(u)=u^5.
+$$
+
+Então
+
+$$
+h(x)=f(g(x)).
+$$
+
+Outro exemplo:
+
+$$
+h(x)=\sin(x^2).
+$$
+
+Podemos tomar:
+
+$$
+g(x)=x^2
+$$
+
+e
+
+$$
+f(u)=\sin u.
+$$
+
+Assim,
+
+$$
+h=f\circ g.
+$$
+
+Essa leitura será indispensável para derivar funções compostas.
+
+***
+
+## Composição e transformações gráficas
+
+Muitas transformações gráficas podem ser vistas como composições.
+
+Por exemplo,
+
+$$
+h(x)=f(x-3)
+$$
+
+é a composição de $f$ com
+
+$$
+g(x)=x-3.
+$$
+
+Já
+
+$$
+p(x)=f(2x)
+$$
+
+é a composição de $f$ com
+
+$$
+g(x)=2x.
+$$
+
+Isso mostra que as transformações horizontais são, na verdade, composições com funções simples na variável de entrada.
+
+Do mesmo modo, expressões como
+
+$$
+2f(x)+1
+$$
+
+podem ser entendidas como aplicar $f$ e depois transformar o resultado.
+
+***
+
+## Composição em modelos
+
+Em aplicações, composição aparece quando uma grandeza depende de outra, que por sua vez depende de uma terceira.
+
+Por exemplo:
+
+- a temperatura pode depender da altitude;
+- a altitude pode depender do tempo;
+- então a temperatura pode ser vista como função do tempo.
+
+Se
+
+$$
+A(t)
+$$
+
+é a altitude no instante $t$ e
+
+$$
+T(A)
+$$
+
+é a temperatura em função da altitude, então
+
+$$
+T(A(t))
+$$
+
+é a temperatura em função do tempo.
+
+Esse é um exemplo de composição.
+
+***
+
+## Por que isso importa para o Cálculo?
+
+A composição de funções é uma das ideias mais importantes para derivadas.
+
+Quando estudarmos a regra da cadeia, veremos que a derivada de
+
+$$
+f(g(x))
+$$
+
+depende da derivada da função externa $f$ e da derivada da função interna $g$.
+
+A regra da cadeia é uma das ferramentas centrais do Cálculo Diferencial.
+
+Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Considere
+
+$$
+f(x)=x^2
+$$
+
+e
+
+$$
+g(x)=x+1.
+$$
+
+Calcule:
+
+a) $(f\circ g)(x)$  
+b) $(g\circ f)(x)$  
+c) $(f\circ g)(2)$  
+d) $(g\circ f)(2)$
+
+## Exercício 2
+
+Considere
+
+$$
+f(x)=\sqrt{x}
+$$
+
+e
+
+$$
+g(x)=x-5.
+$$
+
+Determine:
+
+a) $(f\circ g)(x)$  
+b) o domínio de $f\circ g$  
+c) $(g\circ f)(x)$  
+d) o domínio de $g\circ f$
+
+## Exercício 3
+
+Determine o domínio real das funções compostas:
+
+a) $h(x)=\ln(x-3)$  
+b) $p(x)=\sqrt{2x+4}$  
+c) $q(x)=\dfrac{1}{x^2-9}$
+
+## Exercício 4
+
+Decomponha cada função como uma composição $f(g(x))$:
+
+a) $h(x)=(2x-1)^4$  
+b) $p(x)=\sqrt{x^2+3}$  
+c) $q(x)=\ln(5x+2)$  
+d) $r(x)=\sin(3x)$
+
+## Exercício 5
+
+Explique por que, em geral,
+
+$$
+f\circ g\neq g\circ f.
+$$
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+Temos
+
+$$
+f(x)=x^2
+$$
+
+e
+
+$$
+g(x)=x+1.
+$$
+
+a)
+
+$$
+(f\circ g)(x)=f(g(x))=f(x+1)=(x+1)^2.
+$$
+
+b)
+
+$$
+(g\circ f)(x)=g(f(x))=g(x^2)=x^2+1.
+$$
+
+c)
+
+$$
+(f\circ g)(2)=(2+1)^2=9.
+$$
+
+d)
+
+$$
+(g\circ f)(2)=2^2+1=5.
+$$
+
+## Exercício 2
+
+Temos
+
+$$
+f(x)=\sqrt{x}
+$$
+
+e
+
+$$
+g(x)=x-5.
+$$
+
+a)
+
+$$
+(f\circ g)(x)=f(g(x))=f(x-5)=\sqrt{x-5}.
+$$
+
+b) Para estar definida nos reais, precisamos de
+
+$$
+x-5\geq 0.
+$$
+
+Logo,
+
+$$
+x\geq 5.
+$$
+
+Assim,
+
+$$
+D_{f\circ g}=[5,+\infty).
+$$
+
+c)
+
+$$
+(g\circ f)(x)=g(f(x))=g(\sqrt{x})=\sqrt{x}-5.
+$$
+
+d) Para $g\circ f$, precisamos apenas que $\sqrt{x}$ exista. Logo,
+
+$$
+x\geq 0
+$$
+
+e
+
+$$
+D_{g\circ f}=[0,+\infty).
+$$
+
+## Exercício 3
+
+a) Para
+
+$$
+h(x)=\ln(x-3),
+$$
+
+precisamos de
+
+$$
+x-3>0.
+$$
+
+Logo,
+
+$$
+x>3
+$$
+
+e
+
+$$
+D_h=(3,+\infty).
+$$
+
+b) Para
+
+$$
+p(x)=\sqrt{2x+4},
+$$
+
+precisamos de
+
+$$
+2x+4\geq 0.
+$$
+
+Logo,
+
+$$
+2x\geq -4,
+$$
+
+isto é,
+
+$$
+x\geq -2.
+$$
+
+Assim,
+
+$$
+D_p=[-2,+\infty).
+$$
+
+c) Para
+
+$$
+q(x)=\frac{1}{x^2-9},
+$$
+
+precisamos de
+
+$$
+x^2-9\neq 0.
+$$
+
+Como
+
+$$
+x^2-9=(x-3)(x+3),
+$$
+
+temos
+
+$$
+x\neq -3
+$$
+
+e
+
+$$
+x\neq 3.
+$$
+
+Logo,
+
+$$
+D_q=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
+$$
+
+## Exercício 4
+
+a) Para
+
+$$
+h(x)=(2x-1)^4,
+$$
+
+podemos tomar
+
+$$
+g(x)=2x-1
+$$
+
+e
+
+$$
+f(u)=u^4.
+$$
+
+b) Para
+
+$$
+p(x)=\sqrt{x^2+3},
+$$
+
+podemos tomar
+
+$$
+g(x)=x^2+3
+$$
+
+e
+
+$$
+f(u)=\sqrt{u}.
+$$
+
+c) Para
+
+$$
+q(x)=\ln(5x+2),
+$$
+
+podemos tomar
+
+$$
+g(x)=5x+2
+$$
+
+e
+
+$$
+f(u)=\ln u.
+$$
+
+d) Para
+
+$$
+r(x)=\sin(3x),
+$$
+
+podemos tomar
+
+$$
+g(x)=3x
+$$
+
+e
+
+$$
+f(u)=\sin u.
+$$
+
+## Exercício 5
+
+Em uma composição, a ordem de aplicação das funções importa. Em $f\circ g$, aplicamos primeiro $g$ e depois $f$. Em $g\circ f$, aplicamos primeiro $f$ e depois $g$. Como essas operações geralmente produzem expressões diferentes, em geral temos
+
+$$
+f\circ g\neq g\circ f.
+$$
+
+Por exemplo, se $f(x)=x^2$ e $g(x)=x+1$, então
+
+$$
+(f\circ g)(x)=(x+1)^2,
+$$
+
+enquanto
+
+$$
+(g\circ f)(x)=x^2+1.
+$$
+
+:::
+
+***
+
+## 🧩 Quiz — Composição de Funções
+
+:::::{.question}
+**Q1.** Na composição $(f\circ g)(x)=f(g(x))$, qual função é aplicada primeiro?
+
+::::{.choices}
+:::{.choice}
+$f$.
+:::
+
+:::{.choice .correct-choice}
+$g$.
+:::
+
+:::{.choice}
+$f+g$.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Em geral, a composição de funções satisfaz:
+
+::::{.choices}
+:::{.choice}
+$f\circ g=g\circ f$ sempre.
+:::
+
+:::{.choice .correct-choice}
+$f\circ g$ pode ser diferente de $g\circ f$.
+:::
+
+:::{.choice}
+$f\circ g$ nunca existe.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** Para que $(f\circ g)(x)$ esteja definida, é necessário que:
+
+::::{.choices}
+:::{.choice .correct-choice}
+$x$ pertença ao domínio de $g$ e $g(x)$ pertença ao domínio de $f$.
+:::
+
+:::{.choice}
+$x$ pertença apenas ao contradomínio de $f$.
+:::
+
+:::{.choice}
+$f(x)$ seja sempre igual a $g(x)$.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
+
+🎯 **Próximo Post:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.13-composicao-de-funcoes.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Blog do Marcellini">
+<meta name="description" content="Introdução às principais famílias de funções reais usadas no Cálculo: afins, quadráticas, potências, raízes, exponenciais, logarítmicas e trigonométricas.">
+
+<title>📘 Módulo 1.6: Funções Elementares – Blog do Marcellini</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-f033c7dbc0f6ce96e5658e4903595158.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
+<script>
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
+</script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../../styles.css">
+<link rel="stylesheet" href="../../../../../assets/css/custom.css">
+<link rel="stylesheet" href="../../../../../assets/css/cards.css">
+<link rel="stylesheet" href="../../../../../assets/css/chips.css">
+<meta property="og:title" content="📘 Módulo 1.6: Funções Elementares – Blog do Marcellini">
+<meta property="og:description" content="Introdução às principais famílias de funções reais usadas no Cálculo: afins, quadráticas, potências, raízes, exponenciais, logarítmicas e trigonométricas.">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="📘 Módulo 1.6: Funções Elementares – Blog do Marcellini">
+<meta name="twitter:description" content="Introdução às principais famílias de funções reais usadas no Cálculo: afins, quadráticas, potências, raízes, exponenciais, logarítmicas e trigonométricas.">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">Blog do Marcellini</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explorar" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧭 Explorar</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explorar">    
+        <li>
+    <a class="dropdown-item" href="../../../../../tags.html">
+ <span class="dropdown-text">🏷️ Tags</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../categories.html">
+ <span class="dropdown-text">📂 Categorias</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciências-exatas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧠 Ciências Exatas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciências-exatas">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/matematica/index.html">
+ <span class="dropdown-text">🧮 Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/estatistica/index.html">
+ <span class="dropdown-text">📊 Estatística</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/fisica/index.html">
+ <span class="dropdown-text">🔭 Física</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/index.html">
+ <span class="dropdown-text">💻 Programação</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/ia/index.html">
+ <span class="dropdown-text">🤖 Inteligência Artificial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog-pessoal" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📝 Blog Pessoal</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog-pessoal">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/index.html">
+ <span class="dropdown-text">📝 Blog Pessoal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/sobre-o-blog.html">
+ <span class="dropdown-text">👤 Sobre Mim e Sobre o Blog</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/matematica/index.html">
+ <span class="dropdown-text">🧮 Cursos de Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/estatistica/index.html">
+ <span class="dropdown-text">📊 Cursos de Estatística</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../guia.html"> 
+<span class="menu-text">🗺️ Mapa do Site</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Contato</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Neste Módulo</h2>
+   
+  <ul>
+  <li><a href="#funções-elementares" id="toc-funções-elementares" class="nav-link active" data-scroll-target="#funções-elementares"><span class="header-section-number">1</span> 📘 Funções Elementares</a>
+  <ul class="collapse">
+  <li><a href="#a-ideia-de-função" id="toc-a-ideia-de-função" class="nav-link" data-scroll-target="#a-ideia-de-função"><span class="header-section-number">1.1</span> 🧭 A ideia de função</a></li>
+  <li><a href="#funções-afins" id="toc-funções-afins" class="nav-link" data-scroll-target="#funções-afins"><span class="header-section-number">1.2</span> 📈 Funções afins</a></li>
+  <li><a href="#funções-quadráticas" id="toc-funções-quadráticas" class="nav-link" data-scroll-target="#funções-quadráticas"><span class="header-section-number">1.3</span> 🪃 Funções quadráticas</a></li>
+  <li><a href="#funções-potência" id="toc-funções-potência" class="nav-link" data-scroll-target="#funções-potência"><span class="header-section-number">1.4</span> 🔢 Funções potência</a></li>
+  <li><a href="#funções-raiz" id="toc-funções-raiz" class="nav-link" data-scroll-target="#funções-raiz"><span class="header-section-number">1.5</span> √ Funções raiz</a></li>
+  <li><a href="#funções-exponenciais" id="toc-funções-exponenciais" class="nav-link" data-scroll-target="#funções-exponenciais"><span class="header-section-number">1.6</span> 🚀 Funções exponenciais</a></li>
+  <li><a href="#funções-logarítmicas" id="toc-funções-logarítmicas" class="nav-link" data-scroll-target="#funções-logarítmicas"><span class="header-section-number">1.7</span> 🪞 Funções logarítmicas</a></li>
+  <li><a href="#funções-trigonométricas" id="toc-funções-trigonométricas" class="nav-link" data-scroll-target="#funções-trigonométricas"><span class="header-section-number">1.8</span> 🌊 Funções trigonométricas</a></li>
+  <li><a href="#domínio-e-comportamento" id="toc-domínio-e-comportamento" class="nav-link" data-scroll-target="#domínio-e-comportamento"><span class="header-section-number">1.9</span> 🧭 Domínio e comportamento</a></li>
+  <li><a href="#uma-primeira-tabela-de-referência" id="toc-uma-primeira-tabela-de-referência" class="nav-link" data-scroll-target="#uma-primeira-tabela-de-referência"><span class="header-section-number">1.10</span> 🧾 Uma primeira tabela de referência</a></li>
+  <li><a href="#quadro-resumo" id="toc-quadro-resumo" class="nav-link" data-scroll-target="#quadro-resumo"><span class="header-section-number">1.11</span> 🧾 Quadro-resumo</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#quiz-funções-elementares" id="toc-quiz-funções-elementares" class="nav-link" data-scroll-target="#quiz-funções-elementares"><span class="header-section-number">4</span> 🧩 Quiz — Funções Elementares</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">📘 Módulo 1.6: Funções Elementares</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">cálculo</div>
+    <div class="quarto-category">matemática</div>
+    <div class="quarto-category">curso</div>
+    <div class="quarto-category">funções</div>
+    <div class="quarto-category">pré-cálculo</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Introdução às principais famílias de funções reais usadas no Cálculo: afins, quadráticas, potências, raízes, exponenciais, logarítmicas e trigonométricas.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Blog do Marcellini </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">4 de junho de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.5-equacoes-e-inequacoes.html">1.5 Equações e Inequações</a></p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quais são as famílias de funções mais importantes para começar o estudo do Cálculo?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos do Post
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Reconhecer as principais famílias de funções elementares usadas no Cálculo;</li>
+<li>Relacionar fórmulas algébricas, domínios e gráficos;</li>
+<li>Comparar comportamentos típicos: crescimento, decaimento, simetria, periodicidade e restrições de domínio.</li>
+</ul>
+</div>
+</div>
+<section id="funções-elementares" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 📘 Funções Elementares</h1>
+<p>O Cálculo estuda variações. Mas, para estudar variações, precisamos primeiro saber <strong>o que varia em função de quê</strong>.</p>
+<p>É aí que entra o conceito de função.</p>
+<p>Uma função é uma regra que associa a cada elemento de um conjunto de partida exatamente um elemento de um conjunto de chegada. No curso de Cálculo de uma variável, trabalharemos principalmente com funções reais de variável real:</p>
+<p><span class="math display">\[
+f:D \subset \mathbb{R} \longrightarrow \mathbb{R}.
+\]</span></p>
+<p>Isso significa que a variável de entrada <span class="math inline">\(x\)</span> é real, os valores de saída <span class="math inline">\(f(x)\)</span> também são reais e o domínio <span class="math inline">\(D\)</span> é um subconjunto da reta real.</p>
+<hr>
+<section id="a-ideia-de-função" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="a-ideia-de-função"><span class="header-section-number">1.1</span> 🧭 A ideia de função</h2>
+<p>Uma função pode ser entendida como uma máquina matemática:</p>
+<p><span class="math display">\[
+x \longmapsto f(x).
+\]</span></p>
+<p>Você fornece um valor de entrada <span class="math inline">\(x\)</span> e a função devolve um valor de saída <span class="math inline">\(f(x)\)</span>.</p>
+<p>Por exemplo, se</p>
+<p><span class="math display">\[
+f(x)=2x+1,
+\]</span></p>
+<p>então:</p>
+<p><span class="math display">\[
+f(0)=1,\qquad f(3)=7,\qquad f(-1)=-1.
+\]</span></p>
+<p>Cada valor de <span class="math inline">\(x\)</span> no domínio produz exatamente um valor de <span class="math inline">\(f(x)\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ideia central
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uma função não pode atribuir dois valores diferentes a uma mesma entrada.</p>
+</div>
+</div>
+<p>O diagrama de flechas abaixo ilustra essa ideia: cada elemento do domínio aponta para exatamente um elemento no contradomínio.</p>
+<div id="cell-fig-diagrama-flechas-funcao" class="cell" data-message="false" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-diagrama-flechas-funcao" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="330" width="466">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagrama-flechas-funcao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-diagrama-flechas-funcao-output-1.png" id="fig-diagrama-flechas-funcao" class="quarto-figure quarto-figure-center anchored figure-img" width="466" height="330">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-diagrama-flechas-funcao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="dce04ea5" class="cell" data-message="false" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Ellipse</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="fl">5.5</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>dominio <span class="op">=</span> [(<span class="fl">2.2</span>, <span class="dv">4</span>), (<span class="fl">2.2</span>, <span class="fl">2.8</span>), (<span class="fl">2.2</span>, <span class="fl">1.6</span>)]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>contradominio <span class="op">=</span> [(<span class="fl">7.8</span>, <span class="dv">4</span>), (<span class="fl">7.8</span>, <span class="fl">2.8</span>), (<span class="fl">7.8</span>, <span class="fl">1.6</span>)]</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>elipse_dom <span class="op">=</span> Ellipse((<span class="fl">2.2</span>, <span class="fl">2.8</span>), width<span class="op">=</span><span class="fl">2.6</span>, height<span class="op">=</span><span class="fl">3.7</span>, fill<span class="op">=</span><span class="va">False</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>elipse_contra <span class="op">=</span> Ellipse((<span class="fl">7.8</span>, <span class="fl">2.8</span>), width<span class="op">=</span><span class="fl">2.8</span>, height<span class="op">=</span><span class="fl">3.7</span>, fill<span class="op">=</span><span class="va">False</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.add_patch(elipse_dom)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.add_patch(elipse_contra)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">2.2</span>, <span class="fl">5.0</span>, <span class="st">"Domínio"</span>, ha<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">7.8</span>, <span class="fl">5.0</span>, <span class="st">"Contradomínio"</span>, ha<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (x, y) <span class="kw">in</span> <span class="bu">enumerate</span>(dominio, start<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    ax.scatter(x, y, s<span class="op">=</span><span class="dv">350</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    ax.text(x, y, <span class="ss">f"x</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span>, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, color<span class="op">=</span><span class="st">"white"</span>, fontsize<span class="op">=</span><span class="dv">11</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j, (x, y) <span class="kw">in</span> <span class="bu">enumerate</span>(contradominio, start<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    ax.scatter(x, y, s<span class="op">=</span><span class="dv">350</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    ax.text(x, y, <span class="ss">f"y</span><span class="sc">{</span>j<span class="sc">}</span><span class="ss">"</span>, ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, color<span class="op">=</span><span class="st">"white"</span>, fontsize<span class="op">=</span><span class="dv">11</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>arrow_pairs <span class="op">=</span> [(dominio[<span class="dv">0</span>], contradominio[<span class="dv">1</span>]), (dominio[<span class="dv">1</span>], contradominio[<span class="dv">2</span>]), (dominio[<span class="dv">2</span>], contradominio[<span class="dv">0</span>])]</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (x1, y1), (x2, y2) <span class="kw">in</span> arrow_pairs:</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    ax.annotate(</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="st">""</span>,</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        xy<span class="op">=</span>(x2 <span class="op">-</span> <span class="fl">0.45</span>, y2),</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        xytext<span class="op">=</span>(x1 <span class="op">+</span> <span class="fl">0.45</span>, y1),</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>, linewidth<span class="op">=</span><span class="fl">1.8</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="dv">5</span>, <span class="fl">0.45</span>, <span class="st">"Cada entrada tem exatamente uma saída"</span>, ha<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-6-diagrama-flechas-funcao.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funções-afins" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="funções-afins"><span class="header-section-number">1.2</span> 📈 Funções afins</h2>
+<p>As funções afins têm a forma</p>
+<p><span class="math display">\[
+f(x)=ax+b,
+\]</span></p>
+<p>com <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> reais.</p>
+<p>O número <span class="math inline">\(a\)</span> é o coeficiente angular. Ele mede a inclinação da reta. O número <span class="math inline">\(b\)</span> é o coeficiente linear. Ele indica o ponto onde o gráfico corta o eixo vertical.</p>
+<p>Exemplos:</p>
+<p><span class="math display">\[
+f(x)=2x+1,\qquad g(x)=-3x+4,\qquad h(x)=5.
+\]</span></p>
+<p>Quando <span class="math inline">\(a=0\)</span>, a função é constante.</p>
+<p>As funções afins têm gráficos que são retas. Elas são fundamentais porque representam variações com taxa constante. No gráfico abaixo, comparamos uma função com <span class="math inline">\(a&gt;0\)</span> e outra com <span class="math inline">\(a&lt;0\)</span>.</p>
+<div id="cell-fig-funcoes-afins" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-afins" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="391" width="524">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcoes-afins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-afins-output-1.png" id="fig-funcoes-afins" class="quarto-figure quarto-figure-center anchored figure-img" width="524" height="391">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funcoes-afins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="8f96fed4" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">400</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="op">-</span><span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>plt.plot(x, f, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=2x</span><span class="op">+</span><span class="vs">1</span><span class="dv">$</span><span class="vs"> </span><span class="dv">$</span><span class="kw">(</span><span class="vs">a&gt;0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.plot(x, g, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">g</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=-2x</span><span class="op">+</span><span class="vs">1</span><span class="dv">$</span><span class="vs"> </span><span class="dv">$</span><span class="kw">(</span><span class="vs">a&lt;0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Funções afins com coeficiente angular positivo e negativo"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-6-funcoes-afins-a-positivo-negativo.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funções-quadráticas" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="funções-quadráticas"><span class="header-section-number">1.3</span> 🪃 Funções quadráticas</h2>
+<p>As funções quadráticas têm a forma</p>
+<p><span class="math display">\[
+f(x)=ax^2+bx+c,
+\]</span></p>
+<p>com <span class="math inline">\(a\neq 0\)</span>.</p>
+<p>O gráfico de uma função quadrática é uma parábola.</p>
+<p>Se <span class="math inline">\(a&gt;0\)</span>, a parábola tem concavidade voltada para cima. Se <span class="math inline">\(a&lt;0\)</span>, a concavidade é voltada para baixo.</p>
+<p>Exemplos:</p>
+<p><span class="math display">\[
+f(x)=x^2,\qquad g(x)=-x^2+4x,\qquad h(x)=2x^2-3x+1.
+\]</span></p>
+<p>As funções quadráticas aparecem em problemas de áreas, movimento, otimização e modelagem.</p>
+<div id="cell-fig-funcoes-quadraticas" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-quadraticas" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="392" width="538">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcoes-quadraticas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-quadraticas-output-1.png" id="fig-funcoes-quadraticas" class="quarto-figure quarto-figure-center anchored figure-img" width="538" height="392">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funcoes-quadraticas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="45b479be" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">500</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="op">-</span>x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.plot(x, f, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs"> </span><span class="dv">$</span><span class="kw">(</span><span class="vs">a&gt;0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.plot(x, g, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">g</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=-x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs"> </span><span class="dv">$</span><span class="kw">(</span><span class="vs">a&lt;0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Funções quadráticas: concavidade para cima e para baixo"</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-6-quadraticas-a-positivo-negativo.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funções-potência" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="funções-potência"><span class="header-section-number">1.4</span> 🔢 Funções potência</h2>
+<p>Uma função potência tem a forma</p>
+<p><span class="math display">\[
+f(x)=x^n,
+\]</span></p>
+<p>em que <span class="math inline">\(n\)</span> é um número real ou, nos casos mais básicos, um inteiro.</p>
+<p>Exemplos importantes:</p>
+<p><span class="math display">\[
+f(x)=x,\qquad g(x)=x^2,\qquad h(x)=x^3,\qquad p(x)=x^{-1}=\frac{1}{x}.
+\]</span></p>
+<p>Quando <span class="math inline">\(n\)</span> é positivo, a função potência costuma representar crescimento algébrico. Quando <span class="math inline">\(n\)</span> é negativo, aparecem funções racionais simples, com restrições no domínio.</p>
+<p>Os gráficos abaixo comparam, um par por vez, <span class="math inline">\(n=1\)</span> e <span class="math inline">\(n=-1\)</span>, <span class="math inline">\(n=2\)</span> e <span class="math inline">\(n=-2\)</span>, <span class="math inline">\(n=3\)</span> e <span class="math inline">\(n=-3\)</span>, <span class="math inline">\(n=4\)</span> e <span class="math inline">\(n=-4\)</span>. A separação em figuras verticais evita gráficos muito largos e facilita a leitura em telas menores.</p>
+<div class="cell" data-execution_count="7">
+<div id="fig-funcoes-potencia" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="7">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcoes-potencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-potencia-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="394" width="535">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-funcoes-potencia-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-1.png" id="fig-funcoes-potencia-1" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-funcoes-potencia-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-potencia-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="394" width="535">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-funcoes-potencia-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-2.png" id="fig-funcoes-potencia-2" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-funcoes-potencia-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-potencia-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="394" width="535">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-funcoes-potencia-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-3.png" id="fig-funcoes-potencia-3" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-funcoes-potencia-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-potencia-4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="394" width="535">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-funcoes-potencia-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-4.png" id="fig-funcoes-potencia-4" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-funcoes-potencia-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funcoes-potencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="75be90fe" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">1200</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>x_no_zero <span class="op">=</span> x[np.<span class="bu">abs</span>(x) <span class="op">&gt;</span> <span class="fl">0.08</span>]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]:</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    plt.plot(x, x<span class="op">**</span>n, label<span class="op">=</span><span class="vs">fr"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="sc">{</span>n<span class="sc">}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    plt.plot(x_no_zero, x_no_zero<span class="op">**</span>(<span class="op">-</span>n), label<span class="op">=</span><span class="vs">fr"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="ch">{{</span><span class="vs">-</span><span class="sc">{</span>n<span class="sc">}</span><span class="ch">}}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="vs">fr"Funções potência: </span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="sc">{</span>n<span class="sc">}</span><span class="dv">$</span><span class="vs"> e </span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="ch">{{</span><span class="vs">-</span><span class="sc">{</span>n<span class="sc">}</span><span class="ch">}}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    plt.ylim(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    plt.savefig(<span class="ss">f"images/1-6-funcoes-potencia-n-</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">-e-menos-</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funções-raiz" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="funções-raiz"><span class="header-section-number">1.5</span> √ Funções raiz</h2>
+<p>As funções raiz surgem quando tomamos potências fracionárias.</p>
+<p>O exemplo mais importante é</p>
+<p><span class="math display">\[
+f(x)=\sqrt{x}.
+\]</span></p>
+<p>Essa função está definida, no conjunto dos reais, apenas para</p>
+<p><span class="math display">\[
+x\geq 0.
+\]</span></p>
+<p>Portanto, seu domínio real é</p>
+<p><span class="math display">\[
+[0,+\infty).
+\]</span></p>
+<p>Outros exemplos:</p>
+<p><span class="math display">\[
+g(x)=\sqrt{x-2},\qquad h(x)=\sqrt{9-x^2}.
+\]</span></p>
+<p>A determinação do domínio de funções com raiz envolve inequações, como vimos na aula anterior. O gráfico abaixo mostra esses exemplos e destaca visualmente como o domínio aparece no desenho.</p>
+<div id="cell-fig-funcoes-raiz" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-raiz" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="392" width="515">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcoes-raiz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-raiz-output-1.png" id="fig-funcoes-raiz" class="quarto-figure quarto-figure-center anchored figure-img" width="515" height="392">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funcoes-raiz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="051749c9" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">400</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> np.sqrt(x1)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="dv">2</span>, <span class="dv">11</span>, <span class="dv">400</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> np.sqrt(x2 <span class="op">-</span> <span class="dv">2</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>x3 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">500</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>y3 <span class="op">=</span> np.sqrt(<span class="dv">9</span> <span class="op">-</span> x3<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>plt.plot(x1, y1, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\s</span><span class="vs">qrt{x}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>plt.plot(x2, y2, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">g</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\s</span><span class="vs">qrt{x-2}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plt.plot(x3, y3, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">h</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\s</span><span class="vs">qrt{9-x</span><span class="dv">^</span><span class="vs">2}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Exemplos de funções raiz e seus domínios"</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-6-funcoes-raiz-exemplos.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funções-exponenciais" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="funções-exponenciais"><span class="header-section-number">1.6</span> 🚀 Funções exponenciais</h2>
+<p>Uma função exponencial básica tem a forma</p>
+<p><span class="math display">\[
+f(x)=a^x,
+\]</span></p>
+<p>com</p>
+<p><span class="math display">\[
+a&gt;0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+a\neq 1.
+\]</span></p>
+<p>Exemplos:</p>
+<p><span class="math display">\[
+f(x)=2^x,\qquad g(x)=\left(\frac{1}{2}\right)^x,\qquad h(x)=e^x.
+\]</span></p>
+<p>Quando <span class="math inline">\(a&gt;1\)</span>, a função cresce rapidamente. Quando <span class="math inline">\(0&lt;a&lt;1\)</span>, ela decresce.</p>
+<p>A função</p>
+<p><span class="math display">\[
+e^x
+\]</span></p>
+<p>terá papel central no Cálculo, pois sua derivada é ela mesma:</p>
+<p><span class="math display">\[
+\frac{d}{dx}e^x=e^x.
+\]</span></p>
+<p>Esse resultado será estudado mais adiante.</p>
+<div id="cell-fig-funcoes-exponenciais" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-exponenciais" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="391" width="524">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcoes-exponenciais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-exponenciais-output-1.png" id="fig-funcoes-exponenciais" class="quarto-figure quarto-figure-center anchored figure-img" width="524" height="391">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funcoes-exponenciais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="96b76f1a" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">500</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="dv">2</span><span class="op">**</span>x</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> (<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">**</span>x</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> np.exp(x)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>plt.plot(x, f, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">2</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>plt.plot(x, g, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">left</span><span class="kw">(</span><span class="ch">\f</span><span class="vs">rac</span><span class="op">{1}{2}</span><span class="ch">\r</span><span class="vs">ight</span><span class="kw">)</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>plt.plot(x, h, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">e</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Funções exponenciais: crescimento e decaimento"</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-6-funcoes-exponenciais.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funções-logarítmicas" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="funções-logarítmicas"><span class="header-section-number">1.7</span> 🪞 Funções logarítmicas</h2>
+<p>A função logarítmica é a inversa da função exponencial.</p>
+<p>A função</p>
+<p><span class="math display">\[
+f(x)=\log_a x
+\]</span></p>
+<p>está definida para</p>
+<p><span class="math display">\[
+x&gt;0,
+\]</span></p>
+<p>com</p>
+<p><span class="math display">\[
+a&gt;0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+a\neq 1.
+\]</span></p>
+<p>O logaritmo responde à pergunta:</p>
+<blockquote class="blockquote">
+<p>A que expoente devemos elevar a base <span class="math inline">\(a\)</span> para obter <span class="math inline">\(x\)</span>?</p>
+</blockquote>
+<p>Por exemplo,</p>
+<p><span class="math display">\[
+\log_2 8=3,
+\]</span></p>
+<p>pois</p>
+<p><span class="math display">\[
+2^3=8.
+\]</span></p>
+<p>O logaritmo natural, escrito</p>
+<p><span class="math display">\[
+\ln x,
+\]</span></p>
+<p>é o logaritmo de base <span class="math inline">\(e\)</span>. Ele aparece constantemente em derivadas, integrais, crescimento contínuo e equações diferenciais.</p>
+<p>O gráfico abaixo compara <span class="math inline">\(\log_2 x\)</span>, <span class="math inline">\(\log_{1/2}x\)</span> e <span class="math inline">\(\ln x\)</span>.</p>
+<div id="cell-fig-funcoes-logaritmicas" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-logaritmicas" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="392" width="514">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcoes-logaritmicas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-logaritmicas-output-1.png" id="fig-funcoes-logaritmicas" class="quarto-figure quarto-figure-center anchored figure-img" width="514" height="392">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funcoes-logaritmicas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="260920fb" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.05</span>, <span class="dv">8</span>, <span class="dv">500</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.log(x) <span class="op">/</span> np.log(<span class="dv">2</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> np.log(x) <span class="op">/</span> np.log(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> np.log(x)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>plt.plot(x, f, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">log_2 x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>plt.plot(x, g, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">log_{1/2} x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>plt.plot(x, h, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">ln x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Funções logarítmicas: bases 2, 1/2 e e"</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-6-funcoes-logaritmicas.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funções-trigonométricas" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="funções-trigonométricas"><span class="header-section-number">1.8</span> 🌊 Funções trigonométricas</h2>
+<p>As funções trigonométricas mais importantes no Cálculo inicial são</p>
+<p><span class="math display">\[
+\sin x,\qquad \cos x,\qquad \tan x.
+\]</span></p>
+<p>Elas aparecem no estudo de fenômenos periódicos, ondas, movimento circular, oscilações e geometria.</p>
+<p>As funções seno e cosseno estão definidas para todos os reais:</p>
+<p><span class="math display">\[
+D_{\sin}=D_{\cos}=\mathbb{R}.
+\]</span></p>
+<p>A tangente, por outro lado, não está definida quando</p>
+<p><span class="math display">\[
+\cos x=0.
+\]</span></p>
+<p>Portanto, seu domínio exclui os pontos</p>
+<p><span class="math display">\[
+x=\frac{\pi}{2}+k\pi,
+\]</span></p>
+<p>com <span class="math inline">\(k\in\mathbb{Z}\)</span>.</p>
+<div id="cell-fig-funcoes-trigonometricas" class="cell" data-execution_count="15">
+<div class="cell-output cell-output-display">
+<div id="fig-funcoes-trigonometricas" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" height="392" width="514">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcoes-trigonometricas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-trigonometricas-output-1.png" id="fig-funcoes-trigonometricas" class="quarto-figure quarto-figure-center anchored figure-img" width="514" height="392">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funcoes-trigonometricas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="830efc6e" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">2000</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>sinx <span class="op">=</span> np.sin(x)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>cosx <span class="op">=</span> np.cos(x)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>tanx <span class="op">=</span> np.tan(x)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>tan_plot <span class="op">=</span> tanx.copy()</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>tan_plot[np.<span class="bu">abs</span>(tan_plot) <span class="op">&gt;</span> <span class="dv">6</span>] <span class="op">=</span> np.nan</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>plt.plot(x, sinx, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$\s</span><span class="vs">in x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>plt.plot(x, cosx, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">cos x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>plt.plot(x, tan_plot, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="ch">\t</span><span class="vs">an x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Funções trigonométricas básicas"</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-6-funcoes-trigonometricas.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="domínio-e-comportamento" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="domínio-e-comportamento"><span class="header-section-number">1.9</span> 🧭 Domínio e comportamento</h2>
+<p>Ao estudar uma função elementar, devemos sempre perguntar:</p>
+<ol type="1">
+<li>Qual é o domínio?</li>
+<li>Qual é a imagem?</li>
+<li>O gráfico cresce ou decresce?</li>
+<li>Há zeros?</li>
+<li>Há assíntotas?</li>
+<li>Há simetrias?</li>
+<li>Que tipo de fenômeno essa função pode modelar?</li>
+</ol>
+<p>Essas perguntas preparam o caminho para a ideia de limite. O Cálculo começa justamente quando passamos a perguntar o que acontece com <span class="math inline">\(f(x)\)</span> quando <span class="math inline">\(x\)</span> se aproxima de certo valor.</p>
+<hr>
+</section>
+<section id="uma-primeira-tabela-de-referência" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="uma-primeira-tabela-de-referência"><span class="header-section-number">1.10</span> 🧾 Uma primeira tabela de referência</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Família</th>
+<th>Forma típica</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Afim</td>
+<td><span class="math inline">\(ax+b\)</span></td>
+<td>Gráfico é uma reta</td>
+</tr>
+<tr class="even">
+<td>Quadrática</td>
+<td><span class="math inline">\(ax^2+bx+c\)</span></td>
+<td>Gráfico é uma parábola</td>
+</tr>
+<tr class="odd">
+<td>Potência</td>
+<td><span class="math inline">\(x^n\)</span></td>
+<td>Crescimento algébrico</td>
+</tr>
+<tr class="even">
+<td>Raiz</td>
+<td><span class="math inline">\(\sqrt{x}\)</span></td>
+<td>Domínio restrito nos reais</td>
+</tr>
+<tr class="odd">
+<td>Exponencial</td>
+<td><span class="math inline">\(a^x\)</span></td>
+<td>Crescimento ou decaimento rápido</td>
+</tr>
+<tr class="even">
+<td>Logarítmica</td>
+<td><span class="math inline">\(\log_a x\)</span></td>
+<td>Inversa da exponencial</td>
+</tr>
+<tr class="odd">
+<td>Trigonométrica</td>
+<td><span class="math inline">\(\sin x\)</span>, <span class="math inline">\(\cos x\)</span>, <span class="math inline">\(\tan x\)</span></td>
+<td>Fenômenos periódicos</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="quadro-resumo" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="quadro-resumo"><span class="header-section-number">1.11</span> 🧾 Quadro-resumo</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Família</th>
+<th>Forma típica</th>
+<th>Domínio real mais comum</th>
+<th>Comportamento principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Função afim</td>
+<td><span class="math inline">\(f(x)=ax+b\)</span></td>
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>Reta; cresce se <span class="math inline">\(a&gt;0\)</span>, decresce se <span class="math inline">\(a&lt;0\)</span></td>
+</tr>
+<tr class="even">
+<td>Função quadrática</td>
+<td><span class="math inline">\(f(x)=ax^2+bx+c\)</span></td>
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>Parábola; concavidade depende do sinal de <span class="math inline">\(a\)</span></td>
+</tr>
+<tr class="odd">
+<td>Função potência</td>
+<td><span class="math inline">\(f(x)=x^n\)</span></td>
+<td>Depende de <span class="math inline">\(n\)</span></td>
+<td>Pode representar crescimento algébrico ou comportamento racional</td>
+</tr>
+<tr class="even">
+<td>Função raiz</td>
+<td><span class="math inline">\(f(x)=\sqrt{x}\)</span> ou variações</td>
+<td>Geralmente exige radicando <span class="math inline">\(\geq 0\)</span></td>
+<td>Tem domínio restrito nos reais</td>
+</tr>
+<tr class="odd">
+<td>Função exponencial</td>
+<td><span class="math inline">\(f(x)=a^x\)</span>, <span class="math inline">\(a&gt;0\)</span>, <span class="math inline">\(a\neq 1\)</span></td>
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>Cresce se <span class="math inline">\(a&gt;1\)</span>, decresce se <span class="math inline">\(0&lt;a&lt;1\)</span></td>
+</tr>
+<tr class="even">
+<td>Função logarítmica</td>
+<td><span class="math inline">\(f(x)=\log_a x\)</span></td>
+<td><span class="math inline">\((0,+\infty)\)</span></td>
+<td>Inversa da exponencial; exige argumento positivo</td>
+</tr>
+<tr class="odd">
+<td>Funções trigonométricas</td>
+<td><span class="math inline">\(\sin x\)</span>, <span class="math inline">\(\cos x\)</span>, <span class="math inline">\(\tan x\)</span></td>
+<td>Varia conforme a função</td>
+<td>Modelam fenômenos periódicos</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="🧭 Ideia central do post">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🧭 Ideia central do post
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As funções elementares formam o vocabulário básico do Cálculo.</p>
+<p>Antes de estudar limites, derivadas e integrais, precisamos reconhecer:</p>
+<ul>
+<li>a fórmula da função;</li>
+<li>seu domínio;</li>
+<li>seu comportamento gráfico;</li>
+<li>seus pontos especiais, como zeros, assíntotas, simetrias ou periodicidade.</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="exercícios-propostos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🧪 Exercícios propostos</h1>
+<div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📝 Exercícios
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="exercício-1" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
+<p>Classifique cada função como afim, quadrática, potência, raiz, exponencial, logarítmica ou trigonométrica:</p>
+<ol type="a">
+<li><span class="math inline">\(f(x)=3x-2\)</span><br>
+</li>
+<li><span class="math inline">\(g(x)=x^2-4x+1\)</span><br>
+</li>
+<li><span class="math inline">\(h(x)=\sqrt{x+5}\)</span><br>
+</li>
+<li><span class="math inline">\(p(x)=2^x\)</span><br>
+</li>
+<li><span class="math inline">\(q(x)=\ln x\)</span><br>
+</li>
+<li><span class="math inline">\(r(x)=\sin x\)</span></li>
+</ol>
+</section>
+<section id="exercício-2" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
+<p>Determine o domínio real das funções:</p>
+<ol type="a">
+<li><span class="math inline">\(f(x)=\sqrt{x-3}\)</span><br>
+</li>
+<li><span class="math inline">\(g(x)=\ln(x+1)\)</span><br>
+</li>
+<li><span class="math inline">\(h(x)=\dfrac{1}{x}\)</span><br>
+</li>
+<li><span class="math inline">\(p(x)=\sqrt{4-x^2}\)</span></li>
+</ol>
+</section>
+<section id="exercício-3" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
+<p>Calcule:</p>
+<ol type="a">
+<li><span class="math inline">\(f(2)\)</span> para <span class="math inline">\(f(x)=3x+1\)</span><br>
+</li>
+<li><span class="math inline">\(g(-1)\)</span> para <span class="math inline">\(g(x)=x^2+2x\)</span><br>
+</li>
+<li><span class="math inline">\(h(4)\)</span> para <span class="math inline">\(h(x)=\sqrt{x}\)</span><br>
+</li>
+<li><span class="math inline">\(p(3)\)</span> para <span class="math inline">\(p(x)=2^x\)</span></li>
+</ol>
+</section>
+<section id="exercício-4" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
+<p>Diga se cada afirmação é verdadeira ou falsa:</p>
+<ol type="a">
+<li>A função <span class="math inline">\(f(x)=x^2\)</span> é afim.<br>
+</li>
+<li>A função <span class="math inline">\(f(x)=2^x\)</span> é exponencial.<br>
+</li>
+<li>A função <span class="math inline">\(f(x)=\ln x\)</span> está definida para todo <span class="math inline">\(x\in\mathbb{R}\)</span>.<br>
+</li>
+<li>A função <span class="math inline">\(f(x)=\sin x\)</span> está definida para todo <span class="math inline">\(x\in\mathbb{R}\)</span>.</li>
+</ol>
+</section>
+<section id="exercício-5" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
+<p>Explique, com suas palavras, por que o domínio é uma informação essencial no estudo de funções.</p>
+</section>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>✅ Gabarito
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<section id="exercício-1-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
+<ol type="a">
+<li><span class="math inline">\(f(x)=3x-2\)</span> é afim.<br>
+</li>
+<li><span class="math inline">\(g(x)=x^2-4x+1\)</span> é quadrática.<br>
+</li>
+<li><span class="math inline">\(h(x)=\sqrt{x+5}\)</span> é uma função raiz.<br>
+</li>
+<li><span class="math inline">\(p(x)=2^x\)</span> é exponencial.<br>
+</li>
+<li><span class="math inline">\(q(x)=\ln x\)</span> é logarítmica.<br>
+</li>
+<li><span class="math inline">\(r(x)=\sin x\)</span> é trigonométrica.</li>
+</ol>
+</section>
+<section id="exercício-2-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
+<ol type="a">
+<li><p>Para <span class="math inline">\(f(x)=\sqrt{x-3}\)</span>, precisamos de <span class="math inline">\(x-3\geq 0\)</span>, isto é, <span class="math inline">\(x\geq 3\)</span>. Logo, <span class="math inline">\(D_f=[3,+\infty)\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(g(x)=\ln(x+1)\)</span>, precisamos de <span class="math inline">\(x+1&gt;0\)</span>, isto é, <span class="math inline">\(x&gt;-1\)</span>. Logo, <span class="math inline">\(D_g=(-1,+\infty)\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(h(x)=\dfrac{1}{x}\)</span>, precisamos de <span class="math inline">\(x\neq 0\)</span>. Logo, <span class="math inline">\(D_h=(-\infty,0)\cup(0,+\infty)\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(p(x)=\sqrt{4-x^2}\)</span>, precisamos de <span class="math inline">\(4-x^2\geq 0\)</span>, isto é, <span class="math inline">\(x^2\leq 4\)</span>. Logo, <span class="math inline">\(-2\leq x\leq 2\)</span>, e <span class="math inline">\(D_p=[-2,2]\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercício-3-1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
+<ol type="a">
+<li><p><span class="math inline">\(f(2)=3\cdot 2+1=7\)</span>.</p></li>
+<li><p><span class="math inline">\(g(-1)=(-1)^2+2(-1)=1-2=-1\)</span>.</p></li>
+<li><p><span class="math inline">\(h(4)=\sqrt{4}=2\)</span>.</p></li>
+<li><p><span class="math inline">\(p(3)=2^3=8\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercício-4-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
+<ol type="a">
+<li><p>Falsa. <span class="math inline">\(f(x)=x^2\)</span> é quadrática.</p></li>
+<li><p>Verdadeira. <span class="math inline">\(f(x)=2^x\)</span> é exponencial.</p></li>
+<li><p>Falsa. <span class="math inline">\(\ln x\)</span> só está definida, nos reais, para <span class="math inline">\(x&gt;0\)</span>.</p></li>
+<li><p>Verdadeira. <span class="math inline">\(\sin x\)</span> está definida para todo número real.</p></li>
+</ol>
+</section>
+<section id="exercício-5-1" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
+<p>O domínio é essencial porque determina quais entradas são permitidas para a função. Sem conhecer o domínio, podemos tentar calcular valores que não fazem sentido nos reais, como <span class="math inline">\(\sqrt{-1}\)</span> ou <span class="math inline">\(\ln 0\)</span>, dentro do contexto deste curso.</p>
+</section>
+</section>
+</div>
+</div>
+<hr>
+</section>
+<section id="quiz-funções-elementares" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Funções Elementares</h1>
+<div class="question">
+<p><strong>Q1.</strong> Uma função afim tem forma geral:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(f(x)=ax+b\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(f(x)=a^x\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(f(x)=\sqrt{x}\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q2.</strong> O domínio real de <span class="math inline">\(\ln x\)</span> é:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(\mathbb{R}\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\((0,+\infty)\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\([0,+\infty)\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q3.</strong> A função <span class="math inline">\(e^x\)</span> é especialmente importante no Cálculo porque:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Não possui valores positivos.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Está definida apenas para <span class="math inline">\(x&gt;0\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Sua derivada é ela mesma.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<hr>
+</section>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.5-equacoes-e-inequacoes.html">1.5 Equações e Inequações</a></p>
+<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.7-funcoes-polinomiais-e-racionais.html">1.7 Funções Polinomiais e Racionais</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.6-funcoes-elementares.html">Topo</a></p>
+<hr>
+<p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const rmDiacritics = (s) => s
+    .replace(/[ÁÀÂÃÄ]/g,'A').replace(/[áàâãä]/g,'a')
+    .replace(/[ÉÈÊË]/g,'E').replace(/[éèêë]/g,'e')
+    .replace(/[ÍÌÎÏ]/g,'I').replace(/[íìîï]/g,'i')
+    .replace(/[ÓÒÔÕÖ]/g,'O').replace(/[óòôõö]/g,'o')
+    .replace(/[ÚÙÛÜ]/g,'U').replace(/[úùûü]/g,'u')
+    .replace(/[Ç]/g,'C').replace(/[ç]/g,'c')
+    .replace(/[Ñ]/g,'N').replace(/[ñ]/g,'n');
+  const toSlug = (s) => rmDiacritics(String(s||"")).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
+  const classMap = [
+    ["matematica","cat--matematica"],
+    ["estatistica","cat--estatistica"],
+    ["fisica","cat--fisica"],
+    ["programacao","cat--programacao"],
+    ["curso","cat--curso"],
+    ["artigo","cat--artigo"],
+    ["serie","cat--serie"],
+    ["sumario","cat--sumario"],
+  ];
+
+  const enhanceWrap = (wrap, sortDedup=false) => {
+    if(!wrap) return;
+
+    if (sortDedup) {
+      const items = Array.from(wrap.querySelectorAll(':scope > .quarto-category'));
+      const seen = new Map();
+      for (const el of items) {
+        const key = el.textContent.trim().toLowerCase();
+        if (seen.has(key)) el.remove(); else seen.set(key, el);
+      }
+      const sorted = Array.from(wrap.querySelectorAll(':scope > .quarto-category'))
+        .sort((a,b)=>a.textContent.trim().localeCompare(b.textContent.trim(),'pt-BR'));
+      sorted.forEach(el => wrap.appendChild(el));
+    }
+
+    wrap.querySelectorAll(':scope > .quarto-category').forEach((el) => {
+      if (el.dataset.enhancedChip === "1") return;
+      const label = el.textContent.trim();
+      const slug  = toSlug(label);
+      const plain = rmDiacritics(label.toLowerCase());
+
+      for (const [needle, cls] of classMap) {
+        if (slug===needle || slug.includes(needle) || plain.includes(needle)) { el.classList.add(cls); break; }
+      }
+
+      let chip = el;
+      if (el.tagName !== "A") {
+        const a = document.createElement('a');
+        a.className = el.className;
+        a.textContent = label;
+        a.href = `${offset}categories.html#${slug}`;
+        chip = a;
+        el.replaceWith(a);
+      } else if (!el.getAttribute('href')) {
+        el.setAttribute('href', `${offset}categories.html#${slug}`);
+      }
+
+      chip.setAttribute('aria-label', `Ver posts em ${label}`);
+      chip.setAttribute('title', `Ver posts em ${label}`);
+      chip.dataset.enhancedChip = "1";
+    });
+  };
+
+  enhanceWrap(document.querySelector('#title-block-header .quarto-categories'), true);
+  document.querySelectorAll('main .quarto-categories').forEach(wrap => enhanceWrap(wrap, false));
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blogdomarcellini\.com\.br");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025-2026 Blog do Marcellini</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
+</body></html>

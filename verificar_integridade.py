@@ -1,39 +1,44 @@
+"""Valida o índice canônico antes de renderizar ou publicar."""
 import json
+from datetime import date
 from pathlib import Path
 
-ARQUIVO_JSON = Path("docs/posts.json")
+ARQUIVO_JSON = Path("posts.json")
 
 def carregar_posts():
-    if not ARQUIVO_JSON.exists():
-        print("❌ Arquivo posts.json não encontrado.")
-        return []
-    with open(ARQUIVO_JSON, encoding="utf-8") as f:
-        return json.load(f)
+    return json.loads(ARQUIVO_JSON.read_text(encoding="utf-8"))
 
 def verificar_integridade(posts):
-    erros = []
+    erros, seen = [], set()
+    if not isinstance(posts, list) or not posts:
+        return ["Índice vazio ou inválido"]
     for post in posts:
-        caminho = post.get("href", "desconhecido")
-        if not post.get("title"):
-            erros.append(f"❌ Post sem título: {caminho}")
-        if not post.get("tags"):
-            erros.append(f"⚠️ Post sem tags: {caminho}")
-        if not post.get("date"):
-            erros.append(f"⚠️ Post sem data: {caminho}")
+        caminho = post.get("href", "")
+        if not post.get("title") or not post.get("tags"):
+            erros.append(f"Título ou tags ausentes: {caminho}")
+        if not caminho or not Path(caminho).with_suffix(".qmd").is_file():
+            erros.append(f"Fonte ausente: {caminho}")
+        if caminho in seen:
+            erros.append(f"Endereço duplicado: {caminho}")
+        seen.add(caminho)
+        if post.get("date"):
+            try:
+                date.fromisoformat(post["date"])
+            except (ValueError, TypeError):
+                erros.append(f"Data inválida: {caminho}")
     return erros
 
 def main():
-    posts = carregar_posts()
-    if not posts:
-        return
-    erros = verificar_integridade(posts)
+    try:
+        erros = verificar_integridade(carregar_posts())
+    except (OSError, ValueError, TypeError) as error:
+        print(f"❌ {error}")
+        return 1
     if erros:
-        print("🚨 Problemas encontrados:")
-        for erro in erros:
-            print(erro)
-        print("\n💡 Corrija os problemas antes de publicar.")
-    else:
-        print("✅ Todos os posts passaram na verificação de integridade.")
+        print("\n".join(erros))
+        return 1
+    print("✅ Índice de posts íntegro")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

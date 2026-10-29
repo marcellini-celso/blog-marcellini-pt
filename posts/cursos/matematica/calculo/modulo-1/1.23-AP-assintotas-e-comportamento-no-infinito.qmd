@@ -1,0 +1,682 @@
+---
+title: "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito"
+description: "Aprofundamento sobre assíntotas verticais, horizontais, oblíquas e comportamento de funções no infinito."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, aprofundamento, assíntotas, limites]
+tags: [cálculo, assíntotas, comportamento no infinito, limites, funções racionais, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Aprofundamento"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.22-AP Funções por Partes](1.22-AP-funcoes-por-partes.qmd)
+
+***
+
+# 🔬 Assíntotas e Comportamento no Infinito
+
+Assíntotas descrevem retas das quais o gráfico de uma função se aproxima.
+
+Elas ajudam a entender o comportamento da função perto de pontos problemáticos ou quando $x$ cresce sem limite.
+
+Este aprofundamento prepara o módulo de limites, especialmente limites infinitos e limites no infinito.
+
+***
+
+## 🧱 O que é uma assíntota?
+
+Uma assíntota é uma reta que serve como referência para o comportamento de um gráfico.
+
+As mais comuns neste momento são:
+
+- assíntotas verticais;
+- assíntotas horizontais;
+- assíntotas oblíquas.
+
+Cada tipo responde a uma pergunta diferente.
+
+***
+
+## 📍 Assíntota vertical
+
+Uma assíntota vertical ocorre quando a função cresce ou decresce sem limite perto de certo valor de $x$.
+
+Por exemplo:
+
+$$
+f(x)=\frac{1}{x-2}.
+$$
+
+O denominador zera em
+
+$$
+x=2.
+$$
+
+Quando $x$ se aproxima de $2$, os valores da função crescem em módulo.
+
+Assim, temos uma assíntota vertical:
+
+$$
+x=2.
+$$
+
+No módulo de limites, escreveremos:
+
+$$
+\lim_{x\to 2^+}\frac{1}{x-2}=+\infty
+$$
+
+e
+
+$$
+\lim_{x\to 2^-}\frac{1}{x-2}=-\infty.
+$$
+
+***
+
+## ⚠️ Nem todo ponto excluído é assíntota vertical
+
+Considere:
+
+$$
+g(x)=\frac{x^2-4}{x-2}.
+$$
+
+O denominador zera em $x=2$, mas o numerador também zera.
+
+Fatorando:
+
+$$
+x^2-4=(x-2)(x+2).
+$$
+
+Para $x\neq 2$,
+
+$$
+g(x)=x+2.
+$$
+
+O gráfico é uma reta com um buraco em $x=2$, não uma assíntota vertical.
+
+Logo, pontos excluídos podem produzir:
+
+- assíntotas verticais;
+- buracos;
+- outros tipos de descontinuidade.
+
+É preciso analisar o comportamento.
+
+***
+
+## ➗ Assíntotas verticais em funções racionais
+
+Em funções racionais, candidatos a assíntotas verticais aparecem onde o denominador zera.
+
+Mas devemos verificar se há cancelamento.
+
+Exemplo:
+
+$$
+f(x)=\frac{x+1}{x^2-9}.
+$$
+
+Fatorando o denominador:
+
+$$
+x^2-9=(x-3)(x+3).
+$$
+
+O denominador zera em
+
+$$
+x=3
+$$
+
+e
+
+$$
+x=-3.
+$$
+
+Como o numerador não zera nesses pontos, temos assíntotas verticais:
+
+$$
+x=3
+$$
+
+e
+
+$$
+x=-3.
+$$
+
+***
+
+## 🌅 Assíntota horizontal
+
+Uma assíntota horizontal descreve o comportamento da função quando
+
+$$
+x\to+\infty
+$$
+
+ou
+
+$$
+x\to-\infty.
+$$
+
+Por exemplo:
+
+$$
+f(x)=\frac{x}{x+1}.
+$$
+
+Dividindo numerador e denominador por $x$:
+
+$$
+f(x)=\frac{1}{1+\frac{1}{x}}.
+$$
+
+Quando $x$ cresce sem limite,
+
+$$
+\frac{1}{x}
+$$
+
+se aproxima de zero.
+
+Logo,
+
+$$
+f(x)
+$$
+
+se aproxima de
+
+$$
+1.
+$$
+
+Assim, a assíntota horizontal é
+
+$$
+y=1.
+$$
+
+***
+
+## 🧮 Regra prática para funções racionais
+
+Considere uma função racional:
+
+$$
+f(x)=\frac{p(x)}{q(x)}.
+$$
+
+Para assíntotas horizontais, comparamos os graus de $p$ e $q$.
+
+### Grau do numerador menor que o grau do denominador
+
+Se
+
+$$
+\deg(p)<\deg(q),
+$$
+
+então a assíntota horizontal é
+
+$$
+y=0.
+$$
+
+Exemplo:
+
+$$
+f(x)=\frac{x+1}{x^2+3}.
+$$
+
+### Graus iguais
+
+Se
+
+$$
+\deg(p)=\deg(q),
+$$
+
+a assíntota horizontal é a razão dos coeficientes líderes.
+
+Exemplo:
+
+$$
+f(x)=\frac{3x^2+1}{2x^2-5}.
+$$
+
+A assíntota horizontal é
+
+$$
+y=\frac{3}{2}.
+$$
+
+### Grau do numerador maior
+
+Se
+
+$$
+\deg(p)>\deg(q),
+$$
+
+não há assíntota horizontal.
+
+Pode haver assíntota oblíqua ou polinomial.
+
+***
+
+## 📐 Assíntota oblíqua
+
+Uma assíntota oblíqua aparece quando o gráfico se aproxima de uma reta inclinada.
+
+Exemplo:
+
+$$
+f(x)=\frac{x^2+1}{x}.
+$$
+
+Dividindo:
+
+$$
+f(x)=x+\frac{1}{x}.
+$$
+
+Quando $x$ tende a $+\infty$ ou $-\infty$,
+
+$$
+\frac{1}{x}\to 0.
+$$
+
+Logo, o gráfico se aproxima da reta
+
+$$
+y=x.
+$$
+
+Essa reta é uma assíntota oblíqua.
+
+***
+
+## 🔍 Termo dominante
+
+O comportamento no infinito é frequentemente governado pelo termo dominante.
+
+Em um polinômio:
+
+$$
+p(x)=5x^4-3x^2+x-8,
+$$
+
+o termo dominante é
+
+$$
+5x^4.
+$$
+
+Para valores muito grandes de $x$, os termos de menor grau têm importância relativa menor.
+
+Em funções racionais, comparamos os termos dominantes do numerador e do denominador.
+
+Por exemplo:
+
+$$
+f(x)=\frac{4x^3-1}{2x^3+7x}.
+$$
+
+Os termos dominantes são
+
+$$
+4x^3
+$$
+
+e
+
+$$
+2x^3.
+$$
+
+Logo, a função se aproxima de
+
+$$
+\frac{4x^3}{2x^3}=2.
+$$
+
+A assíntota horizontal é
+
+$$
+y=2.
+$$
+
+***
+
+## ♾️ Comportamento no infinito
+
+Quando perguntamos o que acontece com uma função quando
+
+$$
+x\to+\infty,
+$$
+
+estamos estudando o comportamento no infinito.
+
+Alguns exemplos:
+
+$$
+\frac{1}{x}\to 0,
+$$
+
+$$
+x^2\to+\infty,
+$$
+
+$$
+e^x\to+\infty,
+$$
+
+$$
+\ln x\to+\infty,
+$$
+
+mas cresce lentamente.
+
+Essas afirmações serão formalizadas com limites no infinito.
+
+***
+
+## 🌉 Ponte para limites
+
+Assíntotas são uma tradução geométrica de certos limites.
+
+Assíntota vertical:
+
+$$
+x=a
+$$
+
+está ligada a limites infinitos quando $x\to a$.
+
+Assíntota horizontal:
+
+$$
+y=L
+$$
+
+está ligada a limites no infinito:
+
+$$
+\lim_{x\to+\infty}f(x)=L
+$$
+
+ou
+
+$$
+\lim_{x\to-\infty}f(x)=L.
+$$
+
+Assíntota oblíqua:
+
+$$
+y=mx+b
+$$
+
+indica que a diferença entre o gráfico e essa reta tende a zero no infinito.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Determine as assíntotas verticais:
+
+a) $f(x)=\dfrac{1}{x-5}$  
+b) $g(x)=\dfrac{x+2}{x^2-1}$  
+c) $h(x)=\dfrac{x}{x^2-4}$  
+
+## Exercício 2
+
+Determine a assíntota horizontal:
+
+a) $f(x)=\dfrac{2x+1}{x-3}$  
+b) $g(x)=\dfrac{x+4}{x^2+1}$  
+c) $h(x)=\dfrac{5x^3-1}{2x^3+x}$  
+
+## Exercício 3
+
+Explique por que
+
+$$
+\frac{x^2-9}{x-3}
+$$
+
+não tem assíntota vertical em $x=3$.
+
+## Exercício 4
+
+Determine a assíntota oblíqua de
+
+$$
+f(x)=\frac{x^2+2x+1}{x}.
+$$
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+a) O denominador zera em $x=5$. Logo, a assíntota vertical é
+
+$$
+x=5.
+$$
+
+b)
+
+$$
+x^2-1=(x-1)(x+1).
+$$
+
+O denominador zera em $x=1$ e $x=-1$. Como o numerador não zera nesses pontos, as assíntotas verticais são
+
+$$
+x=1
+$$
+
+e
+
+$$
+x=-1.
+$$
+
+c)
+
+$$
+x^2-4=(x-2)(x+2).
+$$
+
+O denominador zera em $x=2$ e $x=-2$. O numerador não zera nesses pontos. Logo, as assíntotas verticais são
+
+$$
+x=2
+$$
+
+e
+
+$$
+x=-2.
+$$
+
+## Exercício 2
+
+a) Os graus são iguais. A razão dos coeficientes líderes é
+
+$$
+\frac{2}{1}=2.
+$$
+
+Logo, a assíntota horizontal é
+
+$$
+y=2.
+$$
+
+b) O grau do numerador é menor que o grau do denominador. Logo, a assíntota horizontal é
+
+$$
+y=0.
+$$
+
+c) Os graus são iguais. A razão dos coeficientes líderes é
+
+$$
+\frac{5}{2}.
+$$
+
+Logo, a assíntota horizontal é
+
+$$
+y=\frac{5}{2}.
+$$
+
+## Exercício 3
+
+Temos
+
+$$
+x^2-9=(x-3)(x+3).
+$$
+
+Logo, para $x\neq 3$,
+
+$$
+\frac{x^2-9}{x-3}=x+3.
+$$
+
+O ponto $x=3$ é excluído do domínio original, mas a função não cresce sem limite perto de $3$. Ela se aproxima de $6$.
+
+Portanto, há um buraco, não uma assíntota vertical.
+
+## Exercício 4
+
+Dividindo:
+
+$$
+\frac{x^2+2x+1}{x}=x+2+\frac{1}{x}.
+$$
+
+Como
+
+$$
+\frac{1}{x}\to 0
+$$
+
+quando $x\to\pm\infty$, a assíntota oblíqua é
+
+$$
+y=x+2.
+$$
+
+:::
+
+***
+
+## 🧩 Quiz — Assíntotas e Comportamento no Infinito
+
+:::::{.question}
+**Q1.** Uma assíntota vertical está associada a:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Crescimento ou decrescimento sem limite perto de certo valor de $x$.
+:::
+
+:::{.choice}
+Uma função constante.
+:::
+
+:::{.choice}
+Apenas gráficos de retas.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Se uma função racional tem graus iguais no numerador e denominador, a assíntota horizontal é:
+
+::::{.choices}
+:::{.choice}
+Sempre $y=0$.
+:::
+
+:::{.choice .correct-choice}
+A razão dos coeficientes líderes.
+:::
+
+:::{.choice}
+Sempre inexistente.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** A função $\dfrac{x^2-4}{x-2}$ tem em $x=2$:
+
+::::{.choices}
+:::{.choice}
+Assíntota vertical obrigatoriamente.
+:::
+
+:::{.choice .correct-choice}
+Um buraco, pois há cancelamento do fator $x-2$.
+:::
+
+:::{.choice}
+Uma assíntota horizontal.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.22-AP Funções por Partes](1.22-AP-funcoes-por-partes.qmd)
+
+🎯 **Próximo Post:** 👉 [Módulo 2 — Limites](../index.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.23-AP-assintotas-e-comportamento-no-infinito.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

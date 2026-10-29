@@ -1,0 +1,883 @@
+---
+title: "📘 Módulo 1.11: Revisão Gráfica e Algébrica"
+description: "Revisão da leitura gráfica e algébrica de funções: domínio, imagem, zeros, sinais, crescimento, interseções, simetrias e comportamento qualitativo."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, funções, gráficos, álgebra]
+tags: [cálculo, matemática, funções, gráficos, álgebra, domínio, imagem, zeros, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+
+***
+
+# 📘 Revisão Gráfica e Algébrica
+
+O estudo de funções pode ser feito por dois caminhos complementares:
+
+- o caminho **algébrico**, usando fórmulas, equações, inequações e manipulações simbólicas;
+- o caminho **gráfico**, observando pontos, curvas, interseções, crescimento, zeros e comportamento global.
+
+No Cálculo, esses dois olhares precisam caminhar juntos.
+
+Quando estudarmos limites, derivadas e integrais, será comum alternar entre expressões algébricas e gráficos. Uma fórmula pode revelar domínio, zeros e assíntotas. Um gráfico pode revelar crescimento, descontinuidade, máximos, mínimos e tendências.
+
+Este post faz uma revisão integrada dessas duas linguagens.
+
+***
+
+## A fórmula e o gráfico
+
+Considere a função
+
+$$
+f(x)=x^2-4.
+$$
+
+Algebricamente, podemos fatorar:
+
+$$
+f(x)=x^2-4=(x-2)(x+2).
+$$
+
+Isso mostra que os zeros da função são
+
+$$
+x=-2
+$$
+
+e
+
+$$
+x=2.
+$$
+
+Graficamente, esses zeros correspondem aos pontos onde o gráfico cruza o eixo $x$:
+
+$$
+(-2,0)
+$$
+
+e
+
+$$
+(2,0).
+$$
+
+A mesma informação aparece em duas linguagens: a fatoração mostra os zeros na álgebra; o gráfico mostra os interceptos horizontais.
+
+***
+
+## Domínio
+
+O domínio de uma função é o conjunto dos valores de entrada permitidos.
+
+Algebricamente, encontramos restrições procurando operações que exigem cuidado, como:
+
+- denominadores;
+- raízes de índice par;
+- logaritmos;
+- expressões trigonométricas com denominadores, como a tangente.
+
+Por exemplo, para
+
+$$
+f(x)=\frac{1}{x-3},
+$$
+
+precisamos de
+
+$$
+x-3\neq 0.
+$$
+
+Logo,
+
+$$
+x\neq 3.
+$$
+
+Assim,
+
+$$
+D_f=(-\infty,3)\cup(3,+\infty).
+$$
+
+Graficamente, essa restrição aparece como uma interrupção no ponto $x=3$, normalmente associada a uma assíntota vertical.
+
+***
+
+## Imagem
+
+A imagem é o conjunto dos valores que a função realmente assume.
+
+Por exemplo, para
+
+$$
+f(x)=x^2,
+$$
+
+temos
+
+$$
+f(x)\geq 0
+$$
+
+para todo
+
+$$
+x\in\mathbb{R}.
+$$
+
+Além disso, todo número real não negativo pode ser obtido como quadrado de algum número real.
+
+Logo,
+
+$$
+\operatorname{Im}(f)=[0,+\infty).
+$$
+
+Graficamente, isso significa que o gráfico da parábola fica sobre ou acima do eixo $x$.
+
+***
+
+## Zeros da função
+
+Os zeros de uma função são os valores de $x$ tais que
+
+$$
+f(x)=0.
+$$
+
+No gráfico, eles são os pontos onde a curva encontra o eixo horizontal.
+
+Por exemplo, se
+
+$$
+f(x)=x^2-5x+6,
+$$
+
+então
+
+$$
+f(x)=(x-2)(x-3).
+$$
+
+Logo,
+
+$$
+f(x)=0
+$$
+
+quando
+
+$$
+x=2
+$$
+
+ou
+
+$$
+x=3.
+$$
+
+Os zeros são fundamentais porque dividem a reta em intervalos nos quais o sinal da função pode ser analisado.
+
+***
+
+## Interseção com o eixo vertical
+
+A interseção com o eixo vertical ocorre quando
+
+$$
+x=0.
+$$
+
+Se $0$ pertence ao domínio da função, o ponto de interseção com o eixo $y$ é
+
+$$
+(0,f(0)).
+$$
+
+Por exemplo, para
+
+$$
+f(x)=2x+5,
+$$
+
+temos
+
+$$
+f(0)=5.
+$$
+
+Logo, o gráfico corta o eixo vertical no ponto
+
+$$
+(0,5).
+$$
+
+Para uma função como
+
+$$
+g(x)=\frac{1}{x},
+$$
+
+o valor $x=0$ não pertence ao domínio. Portanto, o gráfico não corta o eixo vertical.
+
+***
+
+## Sinal da função
+
+Estudar o sinal de uma função significa determinar onde ela é positiva, negativa ou nula.
+
+Por exemplo, considere
+
+$$
+f(x)=x^2-4=(x-2)(x+2).
+$$
+
+Os zeros são
+
+$$
+x=-2
+$$
+
+e
+
+$$
+x=2.
+$$
+
+Eles dividem a reta em três intervalos:
+
+$$
+(-\infty,-2),\qquad (-2,2),\qquad (2,+\infty).
+$$
+
+Analisando sinais:
+
+- em $(-\infty,-2)$, os dois fatores são negativos, então $f(x)>0$;
+- em $(-2,2)$, os fatores têm sinais opostos, então $f(x)<0$;
+- em $(2,+\infty)$, os dois fatores são positivos, então $f(x)>0$.
+
+Graficamente, isso significa que a curva fica acima do eixo $x$ fora do intervalo $[-2,2]$ e abaixo do eixo $x$ entre $-2$ e $2$.
+
+***
+
+## Crescimento e decrescimento
+
+Uma função é crescente em um intervalo quando, à medida que $x$ aumenta, os valores de $f(x)$ também aumentam.
+
+Uma função é decrescente em um intervalo quando, à medida que $x$ aumenta, os valores de $f(x)$ diminuem.
+
+Por exemplo, a função
+
+$$
+f(x)=x^2
+$$
+
+é decrescente em
+
+$$
+(-\infty,0]
+$$
+
+e crescente em
+
+$$
+[0,+\infty).
+$$
+
+Graficamente, a parábola desce até o vértice e depois sobe.
+
+Mais adiante, a derivada será a ferramenta principal para estudar crescimento e decrescimento com precisão.
+
+***
+
+## Máximos e mínimos
+
+Um ponto de mínimo ocorre quando a função atinge um valor menor do que os valores próximos.
+
+Por exemplo,
+
+$$
+f(x)=x^2
+$$
+
+tem mínimo em
+
+$$
+x=0,
+$$
+
+pois
+
+$$
+f(0)=0
+$$
+
+e
+
+$$
+x^2\geq 0
+$$
+
+para todo real $x$.
+
+Um ponto de máximo ocorre quando a função atinge um valor maior do que os valores próximos.
+
+A análise de máximos e mínimos será uma das grandes aplicações das derivadas.
+
+***
+
+## Simetria
+
+Algumas funções apresentam simetrias importantes.
+
+Uma função é par quando
+
+$$
+f(-x)=f(x).
+$$
+
+O gráfico de uma função par é simétrico em relação ao eixo vertical.
+
+Exemplo:
+
+$$
+f(x)=x^2.
+$$
+
+De fato,
+
+$$
+f(-x)=(-x)^2=x^2=f(x).
+$$
+
+Uma função é ímpar quando
+
+$$
+f(-x)=-f(x).
+$$
+
+O gráfico de uma função ímpar é simétrico em relação à origem.
+
+Exemplo:
+
+$$
+g(x)=x^3.
+$$
+
+De fato,
+
+$$
+g(-x)=(-x)^3=-x^3=-g(x).
+$$
+
+***
+
+## Assíntotas
+
+Assíntotas são retas das quais o gráfico se aproxima.
+
+Uma assíntota vertical pode aparecer quando a função cresce sem limite perto de algum valor proibido do domínio.
+
+Por exemplo,
+
+$$
+f(x)=\frac{1}{x-2}
+$$
+
+tem assíntota vertical em
+
+$$
+x=2.
+$$
+
+Uma assíntota horizontal pode aparecer quando a função se aproxima de um valor constante quando $x$ cresce sem limite.
+
+Por exemplo,
+
+$$
+g(x)=\frac{2x+1}{x-3}
+$$
+
+se aproxima de
+
+$$
+y=2
+$$
+
+quando $x$ tende a $+\infty$ ou a $-\infty$.
+
+No módulo de limites, essas ideias serão formalizadas.
+
+***
+
+## Leitura de gráficos
+
+Ao observar um gráfico, podemos fazer várias perguntas:
+
+- Qual é o domínio visível?
+- Qual parece ser a imagem?
+- Onde a curva cruza o eixo $x$?
+- Onde cruza o eixo $y$?
+- Em quais intervalos a função cresce?
+- Em quais intervalos decresce?
+- Há buracos?
+- Há saltos?
+- Há assíntotas?
+- Há máximos ou mínimos?
+- Há simetria?
+
+Essas perguntas formam uma leitura qualitativa da função.
+
+O Cálculo transformará muitas dessas observações em definições e teoremas.
+
+***
+
+## Leitura algébrica de funções
+
+Dada uma fórmula, podemos investigar:
+
+- domínio;
+- zeros;
+- intercepto vertical;
+- sinal;
+- simplificações;
+- simetrias;
+- comportamento para valores grandes de $x$.
+
+Por exemplo, para
+
+$$
+f(x)=\frac{x^2-1}{x-1},
+$$
+
+vemos que
+
+$$
+x\neq 1.
+$$
+
+Além disso,
+
+$$
+x^2-1=(x-1)(x+1).
+$$
+
+Então, para $x\neq 1$,
+
+$$
+f(x)=x+1.
+$$
+
+O gráfico é a reta $y=x+1$, mas com um buraco em $x=1$.
+
+Esse exemplo mostra como a álgebra revela detalhes que o gráfico precisa respeitar.
+
+***
+
+## Gráficos e Cálculo
+
+O Cálculo pode ser visto como uma forma refinada de leitura gráfica.
+
+- Limites estudam o que acontece perto de um ponto.
+- Continuidade estuda se há quebras, saltos ou buracos.
+- Derivadas estudam inclinação, crescimento e taxa de variação.
+- Integrais estudam área, acumulação e soma contínua.
+
+Por isso, revisar a leitura gráfica e algébrica de funções é essencial antes de entrar em limites.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Para a função
+
+$$
+f(x)=x^2-9,
+$$
+
+determine:
+
+a) o domínio;  
+b) os zeros;  
+c) a interseção com o eixo vertical;  
+d) os intervalos em que $f(x)>0$;  
+e) os intervalos em que $f(x)<0$.
+
+## Exercício 2
+
+Para a função
+
+$$
+g(x)=\frac{1}{x+4},
+$$
+
+determine:
+
+a) o domínio;  
+b) a interseção com o eixo vertical;  
+c) a assíntota vertical.
+
+## Exercício 3
+
+Verifique se as funções abaixo são pares, ímpares ou nenhuma das duas:
+
+a) $f(x)=x^4$  
+b) $g(x)=x^3$  
+c) $h(x)=x^2+x$  
+d) $p(x)=\cos x$  
+e) $q(x)=\sin x$
+
+## Exercício 4
+
+Considere
+
+$$
+r(x)=\frac{x^2-4}{x-2}.
+$$
+
+a) Determine o domínio.  
+b) Simplifique a expressão quando possível.  
+c) Explique o que acontece no gráfico em $x=2$.
+
+## Exercício 5
+
+Explique, com suas palavras, por que a leitura gráfica e a leitura algébrica de uma função devem ser usadas juntas.
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+A função é
+
+$$
+f(x)=x^2-9.
+$$
+
+a) Como é uma função polinomial, o domínio é
+
+$$
+D_f=\mathbb{R}.
+$$
+
+b) Os zeros são obtidos resolvendo
+
+$$
+x^2-9=0.
+$$
+
+Como
+
+$$
+x^2-9=(x-3)(x+3),
+$$
+
+temos
+
+$$
+x=-3
+$$
+
+ou
+
+$$
+x=3.
+$$
+
+c) A interseção com o eixo vertical ocorre em $x=0$:
+
+$$
+f(0)=0^2-9=-9.
+$$
+
+Logo, o ponto é
+
+$$
+(0,-9).
+$$
+
+d) Como
+
+$$
+f(x)=(x-3)(x+3),
+$$
+
+a função é positiva fora das raízes:
+
+$$
+f(x)>0
+$$
+
+em
+
+$$
+(-\infty,-3)\cup(3,+\infty).
+$$
+
+e) A função é negativa entre as raízes:
+
+$$
+f(x)<0
+$$
+
+em
+
+$$
+(-3,3).
+$$
+
+## Exercício 2
+
+A função é
+
+$$
+g(x)=\frac{1}{x+4}.
+$$
+
+a) Precisamos de
+
+$$
+x+4\neq 0.
+$$
+
+Logo,
+
+$$
+x\neq -4.
+$$
+
+Portanto,
+
+$$
+D_g=(-\infty,-4)\cup(-4,+\infty).
+$$
+
+b) A interseção com o eixo vertical ocorre em $x=0$:
+
+$$
+g(0)=\frac{1}{4}.
+$$
+
+Logo, o ponto é
+
+$$
+\left(0,\frac{1}{4}\right).
+$$
+
+c) A assíntota vertical ocorre onde o denominador zera:
+
+$$
+x=-4.
+$$
+
+## Exercício 3
+
+a) Para $f(x)=x^4$,
+
+$$
+f(-x)=(-x)^4=x^4=f(x).
+$$
+
+Logo, $f$ é par.
+
+b) Para $g(x)=x^3$,
+
+$$
+g(-x)=(-x)^3=-x^3=-g(x).
+$$
+
+Logo, $g$ é ímpar.
+
+c) Para $h(x)=x^2+x$,
+
+$$
+h(-x)=x^2-x.
+$$
+
+Isso não é igual a $h(x)$ nem a $-h(x)$. Logo, $h$ não é par nem ímpar.
+
+d) A função $p(x)=\cos x$ é par, pois
+
+$$
+\cos(-x)=\cos x.
+$$
+
+e) A função $q(x)=\sin x$ é ímpar, pois
+
+$$
+\sin(-x)=-\sin x.
+$$
+
+## Exercício 4
+
+A função é
+
+$$
+r(x)=\frac{x^2-4}{x-2}.
+$$
+
+a) O denominador não pode ser zero:
+
+$$
+x-2\neq 0.
+$$
+
+Logo,
+
+$$
+x\neq 2.
+$$
+
+Assim,
+
+$$
+D_r=(-\infty,2)\cup(2,+\infty).
+$$
+
+b) Como
+
+$$
+x^2-4=(x-2)(x+2),
+$$
+
+temos
+
+$$
+r(x)=\frac{(x-2)(x+2)}{x-2}.
+$$
+
+Para $x\neq 2$, podemos cancelar o fator $x-2$:
+
+$$
+r(x)=x+2.
+$$
+
+c) O gráfico coincide com a reta
+
+$$
+y=x+2
+$$
+
+para $x\neq 2$, mas possui um buraco no ponto correspondente a $x=2$.
+
+Como
+
+$$
+x+2=4
+$$
+
+quando $x=2$, o buraco ocorre no ponto
+
+$$
+(2,4).
+$$
+
+## Exercício 5
+
+A leitura algébrica permite encontrar domínio, zeros, sinais, restrições e simplificações com precisão. A leitura gráfica ajuda a visualizar comportamento, crescimento, interseções, buracos e tendências. Usadas juntas, elas dão uma compreensão mais completa da função.
+
+:::
+
+***
+
+## 🧩 Quiz — Revisão Gráfica e Algébrica
+
+:::::{.question}
+**Q1.** Os zeros de uma função são os valores de $x$ tais que:
+
+::::{.choices}
+:::{.choice .correct-choice}
+$f(x)=0$.
+:::
+
+:::{.choice}
+$f(x)=1$.
+:::
+
+:::{.choice}
+$x=0$ necessariamente.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** A interseção com o eixo vertical ocorre, quando existe, em:
+
+::::{.choices}
+:::{.choice}
+$x=1$.
+:::
+
+:::{.choice .correct-choice}
+$x=0$.
+:::
+
+:::{.choice}
+$f(x)=0$.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** Uma função par satisfaz:
+
+::::{.choices}
+:::{.choice .correct-choice}
+$f(-x)=f(x)$.
+:::
+
+:::{.choice}
+$f(-x)=-f(x)$.
+:::
+
+:::{.choice}
+$f(x)=0$ para todo $x$.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+
+🎯 **Próximo Post:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.11-revisao-grafica-e-algebrica.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

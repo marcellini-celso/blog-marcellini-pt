@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-9cdbd49fb92a4d7f9d8c4f710986121f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-f033c7dbc0f6ce96e5658e4903595158.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -90,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -263,29 +266,29 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#módulo-1.2-conjuntos-numéricos" id="toc-módulo-1.2-conjuntos-numéricos" class="nav-link active" data-scroll-target="#módulo-1.2-conjuntos-numéricos"><span class="header-section-number">1</span> 🔢 Módulo 1.2: Conjuntos Numéricos</a>
+  <li><a href="#o-que-são-conjuntos-numéricos" id="toc-o-que-são-conjuntos-numéricos" class="nav-link active" data-scroll-target="#o-que-são-conjuntos-numéricos"><span class="header-section-number">1</span> ✨ O que são Conjuntos Numéricos?</a></li>
+  <li><a href="#organização-dos-conjuntos-numéricos" id="toc-organização-dos-conjuntos-numéricos" class="nav-link" data-scroll-target="#organização-dos-conjuntos-numéricos"><span class="header-section-number">2</span> 🧠 Organização dos Conjuntos Numéricos</a></li>
+  <li><a href="#saiba-mais-o-que-é-um-número-irracional" id="toc-saiba-mais-o-que-é-um-número-irracional" class="nav-link" data-scroll-target="#saiba-mais-o-que-é-um-número-irracional"><span class="header-section-number">3</span> 🔍 🧠 Saiba Mais: O que é um número irracional?</a></li>
+  <li><a href="#a-escola-pitagórica-e-o-escândalo-dos-irracionais" id="toc-a-escola-pitagórica-e-o-escândalo-dos-irracionais" class="nav-link" data-scroll-target="#a-escola-pitagórica-e-o-escândalo-dos-irracionais"><span class="header-section-number">4</span> 📐 A Escola Pitagórica e o “escândalo” dos irracionais</a></li>
+  <li><a href="#exercícios-identificando-irracionais" id="toc-exercícios-identificando-irracionais" class="nav-link" data-scroll-target="#exercícios-identificando-irracionais"><span class="header-section-number">5</span> 📘 🧠 Exercícios — Identificando Irracionais</a></li>
+  <li><a href="#gabarito-identificação" id="toc-gabarito-identificação" class="nav-link" data-scroll-target="#gabarito-identificação"><span class="header-section-number">6</span> 📘 Gabarito (identificação)</a></li>
+  <li><a href="#nota-histórica-georg-cantor-18451918" id="toc-nota-histórica-georg-cantor-18451918" class="nav-link" data-scroll-target="#nota-histórica-georg-cantor-18451918"><span class="header-section-number">7</span> 📜 Nota Histórica: Georg Cantor (1845–1918)</a></li>
+  <li><a href="#representação-decimal-dos-reais" id="toc-representação-decimal-dos-reais" class="nav-link" data-scroll-target="#representação-decimal-dos-reais"><span class="header-section-number">8</span> ✨ Representação Decimal dos Reais</a></li>
+  <li><a href="#dízimas-periódicas-e-fração-geratriz" id="toc-dízimas-periódicas-e-fração-geratriz" class="nav-link" data-scroll-target="#dízimas-periódicas-e-fração-geratriz"><span class="header-section-number">9</span> ✨ Dízimas periódicas e fração geratriz</a></li>
+  <li><a href="#exercícios-resolvidos-fração-geratriz" id="toc-exercícios-resolvidos-fração-geratriz" class="nav-link" data-scroll-target="#exercícios-resolvidos-fração-geratriz"><span class="header-section-number">10</span> 📘 🧠 Exercícios Resolvidos — Fração Geratriz</a></li>
+  <li><a href="#exercícios-fração-geratriz" id="toc-exercícios-fração-geratriz" class="nav-link" data-scroll-target="#exercícios-fração-geratriz"><span class="header-section-number">11</span> 🧩 Exercícios — Fração Geratriz</a></li>
+  <li><a href="#gabarito-fração-geratriz" id="toc-gabarito-fração-geratriz" class="nav-link" data-scroll-target="#gabarito-fração-geratriz"><span class="header-section-number">12</span> ✅ Gabarito — Fração Geratriz</a></li>
+  <li><a href="#propriedades-dos-conjuntos-numéricos" id="toc-propriedades-dos-conjuntos-numéricos" class="nav-link" data-scroll-target="#propriedades-dos-conjuntos-numéricos"><span class="header-section-number">13</span> 📚 Propriedades dos Conjuntos Numéricos</a></li>
+  <li><a href="#resumo-propriedades" id="toc-resumo-propriedades" class="nav-link" data-scroll-target="#resumo-propriedades"><span class="header-section-number">14</span> 📌 Resumo — Propriedades</a></li>
+  <li><a href="#propriedades-algébricas-básicas-em-mathbbr" id="toc-propriedades-algébricas-básicas-em-mathbbr" class="nav-link" data-scroll-target="#propriedades-algébricas-básicas-em-mathbbr"><span class="header-section-number">15</span> 📚 Propriedades Algébricas Básicas em <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#operações-auxiliares" id="toc-operações-auxiliares" class="nav-link" data-scroll-target="#operações-auxiliares"><span class="header-section-number">16</span> ✏️ Operações Auxiliares</a>
   <ul class="collapse">
-  <li><a href="#o-que-são-conjuntos-numéricos" id="toc-o-que-são-conjuntos-numéricos" class="nav-link" data-scroll-target="#o-que-são-conjuntos-numéricos"><span class="header-section-number">1.1</span> ✨ O que são Conjuntos Numéricos?</a></li>
-  <li><a href="#organização-dos-conjuntos-numéricos" id="toc-organização-dos-conjuntos-numéricos" class="nav-link" data-scroll-target="#organização-dos-conjuntos-numéricos"><span class="header-section-number">1.2</span> 🧠 Organização dos Conjuntos Numéricos</a></li>
-  <li><a href="#saiba-mais-o-que-é-um-número-irracional" id="toc-saiba-mais-o-que-é-um-número-irracional" class="nav-link" data-scroll-target="#saiba-mais-o-que-é-um-número-irracional"><span class="header-section-number">1.3</span> 🔍 🧠 Saiba Mais: O que é um número irracional?</a></li>
-  <li><a href="#a-escola-pitagórica-e-o-escândalo-dos-irracionais" id="toc-a-escola-pitagórica-e-o-escândalo-dos-irracionais" class="nav-link" data-scroll-target="#a-escola-pitagórica-e-o-escândalo-dos-irracionais"><span class="header-section-number">1.4</span> 📐 A Escola Pitagórica e o “escândalo” dos irracionais</a></li>
-  <li><a href="#exercícios-identificando-irracionais" id="toc-exercícios-identificando-irracionais" class="nav-link" data-scroll-target="#exercícios-identificando-irracionais"><span class="header-section-number">1.5</span> 📘 🧠 Exercícios — Identificando Irracionais</a></li>
-  <li><a href="#gabarito-identificação" id="toc-gabarito-identificação" class="nav-link" data-scroll-target="#gabarito-identificação"><span class="header-section-number">1.6</span> 📘 Gabarito (identificação)</a></li>
-  <li><a href="#nota-histórica-georg-cantor-18451918" id="toc-nota-histórica-georg-cantor-18451918" class="nav-link" data-scroll-target="#nota-histórica-georg-cantor-18451918"><span class="header-section-number">1.7</span> 📜 Nota Histórica: Georg Cantor (1845–1918)</a></li>
-  <li><a href="#representação-decimal-dos-reais" id="toc-representação-decimal-dos-reais" class="nav-link" data-scroll-target="#representação-decimal-dos-reais"><span class="header-section-number">1.8</span> ✨ Representação Decimal dos Reais</a></li>
-  <li><a href="#dízimas-periódicas-e-fração-geratriz" id="toc-dízimas-periódicas-e-fração-geratriz" class="nav-link" data-scroll-target="#dízimas-periódicas-e-fração-geratriz"><span class="header-section-number">1.9</span> ✨ Dízimas periódicas e fração geratriz</a></li>
-  <li><a href="#exercícios-resolvidos-fração-geratriz" id="toc-exercícios-resolvidos-fração-geratriz" class="nav-link" data-scroll-target="#exercícios-resolvidos-fração-geratriz"><span class="header-section-number">1.10</span> 📘 🧠 Exercícios Resolvidos — Fração Geratriz</a></li>
-  <li><a href="#exercícios-fração-geratriz" id="toc-exercícios-fração-geratriz" class="nav-link" data-scroll-target="#exercícios-fração-geratriz"><span class="header-section-number">1.11</span> 🧩 Exercícios — Fração Geratriz</a></li>
-  <li><a href="#gabarito-fração-geratriz" id="toc-gabarito-fração-geratriz" class="nav-link" data-scroll-target="#gabarito-fração-geratriz"><span class="header-section-number">1.12</span> ✅ Gabarito — Fração Geratriz</a></li>
-  <li><a href="#propriedades-dos-conjuntos-numéricos" id="toc-propriedades-dos-conjuntos-numéricos" class="nav-link" data-scroll-target="#propriedades-dos-conjuntos-numéricos"><span class="header-section-number">1.13</span> 📚 Propriedades dos Conjuntos Numéricos</a></li>
-  <li><a href="#resumo-propriedades" id="toc-resumo-propriedades" class="nav-link" data-scroll-target="#resumo-propriedades"><span class="header-section-number">1.14</span> 📌 Resumo — Propriedades</a></li>
-  <li><a href="#propriedades-algébricas-básicas-em-mathbbr" id="toc-propriedades-algébricas-básicas-em-mathbbr" class="nav-link" data-scroll-target="#propriedades-algébricas-básicas-em-mathbbr"><span class="header-section-number">1.15</span> 📚 Propriedades Algébricas Básicas em <span class="math inline">\(\mathbb{R}\)</span></a></li>
-  <li><a href="#operações-auxiliares" id="toc-operações-auxiliares" class="nav-link" data-scroll-target="#operações-auxiliares"><span class="header-section-number">1.16</span> ✏️ Operações Auxiliares</a></li>
-  <li><a href="#exercícios-de-revisão" id="toc-exercícios-de-revisão" class="nav-link" data-scroll-target="#exercícios-de-revisão"><span class="header-section-number">1.17</span> 🧠 Exercícios de Revisão</a></li>
-  <li><a href="#resoluções" id="toc-resoluções" class="nav-link" data-scroll-target="#resoluções"><span class="header-section-number">1.18</span> 📝 Resoluções</a></li>
-  <li><a href="#quiz-conjuntos-numéricos" id="toc-quiz-conjuntos-numéricos" class="nav-link" data-scroll-target="#quiz-conjuntos-numéricos"><span class="header-section-number">1.19</span> 🧩 Quiz — Conjuntos Numéricos</a></li>
+  <li><a href="#quadro-resumo" id="toc-quadro-resumo" class="nav-link" data-scroll-target="#quadro-resumo"><span class="header-section-number">16.1</span> 🧾 Quadro-resumo</a></li>
   </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">2</span> 🔗 Navegação</a></li>
+  <li><a href="#exercícios-de-revisão" id="toc-exercícios-de-revisão" class="nav-link" data-scroll-target="#exercícios-de-revisão"><span class="header-section-number">17</span> 🧠 Exercícios de Revisão</a></li>
+  <li><a href="#resoluções" id="toc-resoluções" class="nav-link" data-scroll-target="#resoluções"><span class="header-section-number">18</span> 📝 Resoluções</a></li>
+  <li><a href="#quiz-conjuntos-numéricos" id="toc-quiz-conjuntos-numéricos" class="nav-link" data-scroll-target="#quiz-conjuntos-numéricos"><span class="header-section-number">19</span> 🧩 Quiz — Conjuntos Numéricos</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">20</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -336,12 +339,22 @@ window.Quarto = {
 </header>
 
 
-<p>· <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<hr>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
 <p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">1.1 O que é Cálculo? História e aplicações</a></p>
 <hr>
-<section id="módulo-1.2-conjuntos-numéricos" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 🔢 Módulo 1.2: Conjuntos Numéricos</h1>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Como podemos organizar objetos matemáticos em coleções e operar com essas coleções de forma precisa?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -359,8 +372,8 @@ window.Quarto = {
 </ul>
 </div>
 </div>
-<section id="o-que-são-conjuntos-numéricos" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="o-que-são-conjuntos-numéricos"><span class="header-section-number">1.1</span> ✨ O que são Conjuntos Numéricos?</h2>
+<section id="o-que-são-conjuntos-numéricos" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> ✨ O que são Conjuntos Numéricos?</h1>
 <p>Os conjuntos numéricos são grupos de números que compartilham características comuns. Os principais que usaremos são:</p>
 <ul>
 <li><p><strong>Números Naturais <span class="math inline">\((\mathbb{N})\)</span></strong>: <span class="math inline">\(\{0, 1, 2, 3, \ldots\}\)</span><br>
@@ -385,8 +398,8 @@ Crédito: Phrood (Domínio público).
 </div>
 <hr>
 </section>
-<section id="organização-dos-conjuntos-numéricos" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="organização-dos-conjuntos-numéricos"><span class="header-section-number">1.2</span> 🧠 Organização dos Conjuntos Numéricos</h2>
+<section id="organização-dos-conjuntos-numéricos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🧠 Organização dos Conjuntos Numéricos</h1>
 <p>Os conjuntos se organizam em <strong>cadeia de inclusões</strong>: <span class="math display">\[
 \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}.
 \]</span></p>
@@ -402,10 +415,10 @@ Crédito: Mortalmoth (Domínio público).
 <p>Isso significa, por exemplo, que <strong>todo número natural é inteiro, racional e real</strong> — mas o contrário <strong>nem sempre</strong> vale.</p>
 <hr>
 </section>
-<section id="saiba-mais-o-que-é-um-número-irracional" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="saiba-mais-o-que-é-um-número-irracional"><span class="header-section-number">1.3</span> 🔍 🧠 Saiba Mais: O que é um número irracional?</h2>
+<section id="saiba-mais-o-que-é-um-número-irracional" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 🔍 🧠 Saiba Mais: O que é um número irracional?</h1>
 <div class="callout callout-style-default callout-tip callout-titled" title="🧠 Saiba Mais: O que é um número irracional?">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -414,7 +427,7 @@ Crédito: Mortalmoth (Domínio público).
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>🔢 Um irracional é um real <strong>que não pode ser escrito</strong> como <span class="math inline">\(\dfrac{a}{b}\)</span> com <span class="math inline">\(a,b\in\mathbb{Z}\)</span> e <span class="math inline">\(b\neq 0\)</span>.<br>
 Sua expansão decimal é <strong>infinita não periódica</strong> (ex.: <span class="math inline">\(\pi\)</span>, <span class="math inline">\(e\)</span>, <span class="math inline">\(\sqrt{2}\)</span>).</p>
@@ -424,10 +437,10 @@ Historicamente, a irracionalidade de <span class="math inline">\(\sqrt{2}\)</spa
 </div>
 </div>
 </section>
-<section id="a-escola-pitagórica-e-o-escândalo-dos-irracionais" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="a-escola-pitagórica-e-o-escândalo-dos-irracionais"><span class="header-section-number">1.4</span> 📐 A Escola Pitagórica e o “escândalo” dos irracionais</h2>
+<section id="a-escola-pitagórica-e-o-escândalo-dos-irracionais" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 📐 A Escola Pitagórica e o “escândalo” dos irracionais</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="📐 A Escola Pitagórica e os Irracionais">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -436,7 +449,7 @@ Historicamente, a irracionalidade de <span class="math inline">\(\sqrt{2}\)</spa
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p><strong>Quem eram?</strong> Comunidade filósofo-matemática (séc. VI a.C.) que defendia “<strong>tudo é número</strong>” (racional).</p>
 <p><strong>A crise.</strong> A hipotenusa de um triângulo isósceles de catetos 1 tem comprimento <span class="math inline">\(\sqrt{2}\)</span>, que <strong>não</strong> é racional.<br>
@@ -446,10 +459,10 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 </div>
 </div>
 </section>
-<section id="exercícios-identificando-irracionais" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="exercícios-identificando-irracionais"><span class="header-section-number">1.5</span> 📘 🧠 Exercícios — Identificando Irracionais</h2>
+<section id="exercícios-identificando-irracionais" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 📘 🧠 Exercícios — Identificando Irracionais</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="📘 🧠 Exercícios — Identificando Números Irracionais">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -458,7 +471,7 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Classifique como <strong>racional</strong> ou <strong>irracional</strong>:
@@ -482,10 +495,10 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 </div>
 </div>
 </section>
-<section id="gabarito-identificação" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="gabarito-identificação"><span class="header-section-number">1.6</span> 📘 Gabarito (identificação)</h2>
+<section id="gabarito-identificação" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 📘 Gabarito (identificação)</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="📘 Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -494,7 +507,7 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><ol type="a">
@@ -512,10 +525,10 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 </div>
 <hr>
 </section>
-<section id="nota-histórica-georg-cantor-18451918" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="nota-histórica-georg-cantor-18451918"><span class="header-section-number">1.7</span> 📜 Nota Histórica: Georg Cantor (1845–1918)</h2>
+<section id="nota-histórica-georg-cantor-18451918" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 📜 Nota Histórica: Georg Cantor (1845–1918)</h1>
 <div class="callout callout-style-default callout-tip callout-titled" title="📜 Nota Histórica: Georg Cantor">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -524,7 +537,7 @@ Atribui-se a <strong>Hipaso</strong> a demonstração da irracionalidade de <spa
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>Criador da <strong>teoria dos conjuntos</strong> e do tratamento moderno do <strong>infinito</strong>.<br>
 Provou que <span class="math inline">\(\mathbb{R}\)</span> (logo, os irracionais) é <strong>não enumerável</strong>, enquanto <span class="math inline">\(\mathbb{Q}\)</span> é <strong>enumerável</strong> — há “mais” irracionais do que racionais.</p>
@@ -533,8 +546,8 @@ Provou que <span class="math inline">\(\mathbb{R}\)</span> (logo, os irracionais
 </div>
 <hr>
 </section>
-<section id="representação-decimal-dos-reais" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="representação-decimal-dos-reais"><span class="header-section-number">1.8</span> ✨ Representação Decimal dos Reais</h2>
+<section id="representação-decimal-dos-reais" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> ✨ Representação Decimal dos Reais</h1>
 <ul>
 <li><strong>Racionais</strong>: decimal <strong>finito</strong> ou <strong>infinito periódico</strong>.<br>
 </li>
@@ -545,8 +558,8 @@ Provou que <span class="math inline">\(\mathbb{R}\)</span> (logo, os irracionais
 - <span class="math inline">\(\sqrt{2}\approx 1{,}4142135\ldots\)</span> (infinito não periódico)</p>
 <hr>
 </section>
-<section id="dízimas-periódicas-e-fração-geratriz" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="dízimas-periódicas-e-fração-geratriz"><span class="header-section-number">1.9</span> ✨ Dízimas periódicas e fração geratriz</h2>
+<section id="dízimas-periódicas-e-fração-geratriz" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> ✨ Dízimas periódicas e fração geratriz</h1>
 <p><strong>Ex. 1 —</strong> <span class="math inline">\(\tfrac{1}{3}\)</span>:<br>
 <span class="math inline">\(1\div 3 = 0{,}333\ldots = 0{,}\overline{3}\)</span> → <strong>racional</strong>.</p>
 <p><strong>Ex. 2 —</strong> <span class="math inline">\(\tfrac{4}{11}\)</span>:<br>
@@ -556,7 +569,7 @@ Provou que <span class="math inline">\(\mathbb{R}\)</span> (logo, os irracionais
 <p><strong>Ex. 4 —</strong> <span class="math inline">\(\tfrac{12}{90}\)</span>:<br>
 <span class="math inline">\(12\div 90 = 0{,}1\overline{3}\)</span> → <strong>período</strong> “3”.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="🧠 Observação importante">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -565,7 +578,7 @@ Provou que <span class="math inline">\(\mathbb{R}\)</span> (logo, os irracionais
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>A fração <strong>na forma irredutível</strong> tem decimal <strong>finito</strong> <strong>se e somente se</strong> seu denominador possui <strong>somente</strong> fatores 2 e/ou 5.<br>
 Caso contrário, a expansão é uma <strong>dízima periódica</strong>.</p>
@@ -574,10 +587,10 @@ Caso contrário, a expansão é uma <strong>dízima periódica</strong>.</p>
 </div>
 <hr>
 </section>
-<section id="exercícios-resolvidos-fração-geratriz" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="exercícios-resolvidos-fração-geratriz"><span class="header-section-number">1.10</span> 📘 🧠 Exercícios Resolvidos — Fração Geratriz</h2>
+<section id="exercícios-resolvidos-fração-geratriz" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> 📘 🧠 Exercícios Resolvidos — Fração Geratriz</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="📘 Exercícios Resolvidos: Dízimas → Fração">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -586,7 +599,7 @@ Caso contrário, a expansão é uma <strong>dízima periódica</strong>.</p>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p><strong>1.</strong> <span class="math inline">\(0{,}\overline{3}\)</span>.<br>
 Seja <span class="math inline">\(x=0{,}\overline{3}\)</span>. <span class="math inline">\(10x=3{,}\overline{3}\)</span> ⇒ <span class="math inline">\(9x=3\)</span> ⇒ <span class="math inline">\(x=\tfrac{1}{3}\)</span>.</p>
@@ -602,10 +615,10 @@ Seja <span class="math inline">\(x=0{,}\overline{72}\)</span>. <span class="math
 </div>
 </div>
 </section>
-<section id="exercícios-fração-geratriz" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="exercícios-fração-geratriz"><span class="header-section-number">1.11</span> 🧩 Exercícios — Fração Geratriz</h2>
+<section id="exercícios-fração-geratriz" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> 🧩 Exercícios — Fração Geratriz</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="🧩 Exercícios: Dízimas → Fração">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -614,7 +627,7 @@ Seja <span class="math inline">\(x=0{,}\overline{72}\)</span>. <span class="math
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><span class="math inline">\(0{,}\overline{3}\)</span>, <span class="math inline">\(0{,}\overline{7}\)</span>, <span class="math inline">\(0{,}\overline{2}\)</span><br>
@@ -629,10 +642,10 @@ Seja <span class="math inline">\(x=0{,}\overline{72}\)</span>. <span class="math
 </div>
 </div>
 </section>
-<section id="gabarito-fração-geratriz" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="gabarito-fração-geratriz"><span class="header-section-number">1.12</span> ✅ Gabarito — Fração Geratriz</h2>
+<section id="gabarito-fração-geratriz" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> ✅ Gabarito — Fração Geratriz</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito — Fração Geratriz">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -641,7 +654,7 @@ Seja <span class="math inline">\(x=0{,}\overline{72}\)</span>. <span class="math
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p><span class="math inline">\(\tfrac{1}{3}\)</span>, <span class="math inline">\(\tfrac{7}{9}\)</span>, <span class="math inline">\(\tfrac{2}{9}\)</span></p></li>
@@ -654,8 +667,8 @@ Seja <span class="math inline">\(x=0{,}\overline{72}\)</span>. <span class="math
 </div>
 <hr>
 </section>
-<section id="propriedades-dos-conjuntos-numéricos" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="propriedades-dos-conjuntos-numéricos"><span class="header-section-number">1.13</span> 📚 Propriedades dos Conjuntos Numéricos</h2>
+<section id="propriedades-dos-conjuntos-numéricos" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> 📚 Propriedades dos Conjuntos Numéricos</h1>
 <p>🔸 <strong>Definições úteis</strong></p>
 <ul>
 <li><p><strong>Fechamento</strong>: um conjunto é <strong>fechado</strong> para uma operação quando o resultado <strong>permanece no conjunto</strong>.<br>
@@ -676,10 +689,10 @@ Decimais infinitos <strong>não periódicos</strong>; <strong>densos</strong>; n
 <span class="math inline">\(\mathbb{Q}\cup(\mathbb{R}\setminus\mathbb{Q})\)</span>; representam a reta real.<br>
 Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span class="math inline">\(b\neq 0\)</span></strong> então <span class="math inline">\(\tfrac{a}{b}\in\mathbb{R}\)</span>.</p>
 </section>
-<section id="resumo-propriedades" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="resumo-propriedades"><span class="header-section-number">1.14</span> 📌 Resumo — Propriedades</h2>
+<section id="resumo-propriedades" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> 📌 Resumo — Propriedades</h1>
 <div class="callout callout-style-default callout-tip callout-titled" title="📌 Resumo: Propriedades dos Conjuntos">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -688,7 +701,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -735,10 +748,10 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 </div>
 </section>
-<section id="propriedades-algébricas-básicas-em-mathbbr" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="propriedades-algébricas-básicas-em-mathbbr"><span class="header-section-number">1.15</span> 📚 Propriedades Algébricas Básicas em <span class="math inline">\(\mathbb{R}\)</span></h2>
+<section id="propriedades-algébricas-básicas-em-mathbbr" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> 📚 Propriedades Algébricas Básicas em <span class="math inline">\(\mathbb{R}\)</span></h1>
 <div class="callout callout-style-default callout-note callout-titled" title="📚 Propriedades Algébricas Básicas em (\mathbb{R})">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -747,7 +760,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ul>
 <li><span class="math inline">\(0\cdot x=0\)</span>;<span class="math inline">\((-x)\cdot y=-(x\cdot y)\)</span>;<span class="math inline">\((-x)(-y)=x\cdot y\)</span><br>
@@ -766,10 +779,10 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 </div>
 </section>
-<section id="operações-auxiliares" class="level2" data-number="1.16">
-<h2 data-number="1.16" class="anchored" data-anchor-id="operações-auxiliares"><span class="header-section-number">1.16</span> ✏️ Operações Auxiliares</h2>
+<section id="operações-auxiliares" class="level1" data-number="16">
+<h1 data-number="16"><span class="header-section-number">16</span> ✏️ Operações Auxiliares</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="Operações Auxiliares">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -778,7 +791,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p><strong>Subtração</strong>: <span class="math inline">\(a-b=a+(-b)\)</span>.<br>
 <strong>Divisão</strong> (<span class="math inline">\(b\neq 0\)</span>): <span class="math inline">\(\tfrac{a}{b}=a\cdot b^{-1}\)</span>.</p>
@@ -790,11 +803,76 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 </div>
 <hr>
+<section id="quadro-resumo" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="quadro-resumo"><span class="header-section-number">16.1</span> 🧾 Quadro-resumo</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ideia</th>
+<th>Significado</th>
+<th>Papel no Cálculo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conjuntos numéricos</td>
+<td>Famílias de números com propriedades em comum</td>
+<td>Organizam os objetos com que o Cálculo trabalha</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{N}\)</span></td>
+<td>Números naturais</td>
+<td>Contagem e sequências iniciais</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td>Números inteiros</td>
+<td>Inclui negativos e zero</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{Q}\)</span></td>
+<td>Números racionais, escritos como frações</td>
+<td>Representam razões, proporções e dízimas periódicas</td>
+</tr>
+<tr class="odd">
+<td>Irracionais</td>
+<td>Números reais que não podem ser escritos como fração de inteiros</td>
+<td>Incluem <span class="math inline">\(\sqrt{2}\)</span>, <span class="math inline">\(\pi\)</span>, <span class="math inline">\(e\)</span> e muitos limites importantes</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>Conjunto dos números reais</td>
+<td>Ambiente natural das funções reais de uma variável</td>
+</tr>
+<tr class="odd">
+<td>Dízima periódica</td>
+<td>Decimal com repetição infinita de blocos</td>
+<td>Sempre representa um número racional</td>
+</tr>
+<tr class="even">
+<td>Completude dos reais</td>
+<td>Ausência de “buracos” na reta real</td>
+<td>Sustenta a ideia de limite no Cálculo</td>
+</tr>
+<tr class="odd">
+<td>Propriedades algébricas</td>
+<td>Regras de soma, produto, distributividade, neutros e inversos</td>
+<td>Permitem manipular expressões com segurança</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
-<section id="exercícios-de-revisão" class="level2" data-number="1.17">
-<h2 data-number="1.17" class="anchored" data-anchor-id="exercícios-de-revisão"><span class="header-section-number">1.17</span> 🧠 Exercícios de Revisão</h2>
+</section>
+<section id="exercícios-de-revisão" class="level1" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> 🧠 Exercícios de Revisão</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="🧠 Exercícios de Revisão — Módulo 1.2">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -803,7 +881,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Classifique: <span class="math inline">\(\sqrt{2}\)</span>, <span class="math inline">\(0{,}333\ldots\)</span>, <span class="math inline">\(\pi\)</span>, <span class="math inline">\(7/2\)</span>, <span class="math inline">\(\sqrt{25}\)</span>.<br>
@@ -830,10 +908,10 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 </div>
 </section>
-<section id="resoluções" class="level2" data-number="1.18">
-<h2 data-number="1.18" class="anchored" data-anchor-id="resoluções"><span class="header-section-number">1.18</span> 📝 Resoluções</h2>
+<section id="resoluções" class="level1" data-number="18">
+<h1 data-number="18"><span class="header-section-number">18</span> 📝 Resoluções</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="📝 Resoluções">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -842,7 +920,7 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>I, R, I, R, R.<br>
@@ -869,10 +947,9 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 </div>
 <hr>
-<hr>
 </section>
-<section id="quiz-conjuntos-numéricos" class="level2" data-number="1.19">
-<h2 data-number="1.19" class="anchored" data-anchor-id="quiz-conjuntos-numéricos"><span class="header-section-number">1.19</span> 🧩 Quiz — Conjuntos Numéricos</h2>
+<section id="quiz-conjuntos-numéricos" class="level1" data-number="19">
+<h1 data-number="19"><span class="header-section-number">19</span> 🧩 Quiz — Conjuntos Numéricos</h1>
 <div class="question">
 <p><strong>Q1.</strong> A cadeia correta de inclusões entre os principais conjuntos numéricos é:</p>
 <div class="choices">
@@ -929,11 +1006,11 @@ Para <span class="math inline">\(a,b\in\mathbb{R}\)</span>, <strong>se <span cla
 </div>
 <hr>
 </section>
-</section>
-<section id="navegação" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos-ap.html">1.2 Conjuntos Numéricos (Aprofundamento)</a></p>
-<p>· <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">Topo</a></p>
+<section id="navegação" class="level1" data-number="20">
+<h1 data-number="20"><span class="header-section-number">20</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html">1.1 O que é Cálculo? História e aplicações</a></p>
+<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">1.3 Intervalos e Inequações</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

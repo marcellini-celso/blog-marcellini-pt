@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Blog do Marcellini">
+<meta name="description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.">
+
+<title>🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças – Blog do Marcellini</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-f033c7dbc0f6ce96e5658e4903595158.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
+<script>
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
+</script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../../styles.css">
+<link rel="stylesheet" href="../../../../../assets/css/custom.css">
+<link rel="stylesheet" href="../../../../../assets/css/cards.css">
+<link rel="stylesheet" href="../../../../../assets/css/chips.css">
+<meta property="og:title" content="🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças – Blog do Marcellini">
+<meta property="og:description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças – Blog do Marcellini">
+<meta name="twitter:description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">Blog do Marcellini</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explorar" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧭 Explorar</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explorar">    
+        <li>
+    <a class="dropdown-item" href="../../../../../tags.html">
+ <span class="dropdown-text">🏷️ Tags</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../categories.html">
+ <span class="dropdown-text">📂 Categorias</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciências-exatas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧠 Ciências Exatas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciências-exatas">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/matematica/index.html">
+ <span class="dropdown-text">🧮 Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/estatistica/index.html">
+ <span class="dropdown-text">📊 Estatística</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/fisica/index.html">
+ <span class="dropdown-text">🔭 Física</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/index.html">
+ <span class="dropdown-text">💻 Programação</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/ia/index.html">
+ <span class="dropdown-text">🤖 Inteligência Artificial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog-pessoal" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📝 Blog Pessoal</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog-pessoal">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/index.html">
+ <span class="dropdown-text">📝 Blog Pessoal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/sobre-o-blog.html">
+ <span class="dropdown-text">👤 Sobre Mim e Sobre o Blog</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/matematica/index.html">
+ <span class="dropdown-text">🧮 Cursos de Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/estatistica/index.html">
+ <span class="dropdown-text">📊 Cursos de Estatística</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../guia.html"> 
+<span class="menu-text">🗺️ Mapa do Site</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Contato</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Neste Aprofundamento</h2>
+   
+  <ul>
+  <li><a href="#valor-absoluto-distância-e-vizinhanças" id="toc-valor-absoluto-distância-e-vizinhanças" class="nav-link active" data-scroll-target="#valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">1</span> 🔬 Valor Absoluto, Distância e Vizinhanças</a>
+  <ul class="collapse">
+  <li><a href="#valor-absoluto-como-distância-até-zero" id="toc-valor-absoluto-como-distância-até-zero" class="nav-link" data-scroll-target="#valor-absoluto-como-distância-até-zero"><span class="header-section-number">1.1</span> 📦 Valor absoluto como distância até zero</a></li>
+  <li><a href="#distância-entre-dois-pontos" id="toc-distância-entre-dois-pontos" class="nav-link" data-scroll-target="#distância-entre-dois-pontos"><span class="header-section-number">1.2</span> 📏 Distância entre dois pontos</a></li>
+  <li><a href="#vizinhança-aberta" id="toc-vizinhança-aberta" class="nav-link" data-scroll-target="#vizinhança-aberta"><span class="header-section-number">1.3</span> 🎯 Vizinhança aberta</a></li>
+  <li><a href="#exemplo-com-centro-3" id="toc-exemplo-com-centro-3" class="nav-link" data-scroll-target="#exemplo-com-centro-3"><span class="header-section-number">1.4</span> ✅ Exemplo com centro 3</a></li>
+  <li><a href="#vizinhança-furada" id="toc-vizinhança-furada" class="nav-link" data-scroll-target="#vizinhança-furada"><span class="header-section-number">1.5</span> 🧭 Vizinhança furada</a></li>
+  <li><a href="#desigualdades-equivalentes" id="toc-desigualdades-equivalentes" class="nav-link" data-scroll-target="#desigualdades-equivalentes"><span class="header-section-number">1.6</span> 🔁 Desigualdades equivalentes</a></li>
+  <li><a href="#desigualdades-com-valor-absoluto" id="toc-desigualdades-com-valor-absoluto" class="nav-link" data-scroll-target="#desigualdades-com-valor-absoluto"><span class="header-section-number">1.7</span> ⚖️ Desigualdades com valor absoluto</a></li>
+  <li><a href="#desigualdades-do-tipo-maior-que" id="toc-desigualdades-do-tipo-maior-que" class="nav-link" data-scroll-target="#desigualdades-do-tipo-maior-que"><span class="header-section-number">1.8</span> 🚪 Desigualdades do tipo maior que</a></li>
+  <li><a href="#ponte-para-limites" id="toc-ponte-para-limites" class="nav-link" data-scroll-target="#ponte-para-limites"><span class="header-section-number">1.9</span> 🌉 Ponte para limites</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <ul class="collapse">
+  <li><a href="#quiz-valor-absoluto-distância-e-vizinhanças" id="toc-quiz-valor-absoluto-distância-e-vizinhanças" class="nav-link" data-scroll-target="#quiz-valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">3.5</span> 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças</a></li>
+  </ul></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">cálculo</div>
+    <div class="quarto-category">matemática</div>
+    <div class="quarto-category">curso</div>
+    <div class="quarto-category">aprofundamento</div>
+    <div class="quarto-category">valor absoluto</div>
+    <div class="quarto-category">limites</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Blog do Marcellini </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">5 de junho de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">1.19-AP Valor Absoluto e Inequações Modulares</a></p>
+<hr>
+<section id="valor-absoluto-distância-e-vizinhanças" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 🔬 Valor Absoluto, Distância e Vizinhanças</h1>
+<p>Este aprofundamento prepara uma das ideias mais importantes para o estudo de limites: <strong>proximidade</strong>.</p>
+<p>Quando escrevemos</p>
+<p><span class="math display">\[
+|x-a|&lt;\varepsilon,
+\]</span></p>
+<p>estamos dizendo que <span class="math inline">\(x\)</span> está perto de <span class="math inline">\(a\)</span>.</p>
+<p>Mais precisamente: a distância entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> é menor que <span class="math inline">\(\varepsilon\)</span>.</p>
+<p>Essa pequena expressão será essencial para entender a definição formal de limite.</p>
+<hr>
+<section id="valor-absoluto-como-distância-até-zero" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="valor-absoluto-como-distância-até-zero"><span class="header-section-number">1.1</span> 📦 Valor absoluto como distância até zero</h2>
+<p>O valor absoluto de um número real <span class="math inline">\(x\)</span> é definido por</p>
+<p><span class="math display">\[
+|x|=
+\begin{cases}
+x, &amp; x\geq 0,\\
+-x, &amp; x&lt;0.
+\end{cases}
+\]</span></p>
+<p>Geometricamente, <span class="math inline">\(|x|\)</span> mede a distância de <span class="math inline">\(x\)</span> até zero na reta real.</p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+|5|=5,
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+|-5|=5.
+\]</span></p>
+<p>Os números <span class="math inline">\(5\)</span> e <span class="math inline">\(-5\)</span> estão à mesma distância da origem.</p>
+<hr>
+</section>
+<section id="distância-entre-dois-pontos" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="distância-entre-dois-pontos"><span class="header-section-number">1.2</span> 📏 Distância entre dois pontos</h2>
+<p>A distância entre dois números reais <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> é dada por</p>
+<p><span class="math display">\[
+|x-a|.
+\]</span></p>
+<p>Por exemplo, a distância entre <span class="math inline">\(7\)</span> e <span class="math inline">\(3\)</span> é</p>
+<p><span class="math display">\[
+|7-3|=4.
+\]</span></p>
+<p>A distância entre <span class="math inline">\(-1\)</span> e <span class="math inline">\(3\)</span> também é</p>
+<p><span class="math display">\[
+|-1-3|=|-4|=4.
+\]</span></p>
+<p>Logo, a expressão</p>
+<p><span class="math display">\[
+|x-a|
+\]</span></p>
+<p>mede quanto <span class="math inline">\(x\)</span> está afastado de <span class="math inline">\(a\)</span>.</p>
+<hr>
+</section>
+<section id="vizinhança-aberta" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="vizinhança-aberta"><span class="header-section-number">1.3</span> 🎯 Vizinhança aberta</h2>
+<p>Uma vizinhança aberta de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\varepsilon&gt;0\)</span> é o intervalo</p>
+<p><span class="math display">\[
+(a-\varepsilon,\;a+\varepsilon).
+\]</span></p>
+<p>Equivalentemente, é o conjunto dos reais <span class="math inline">\(x\)</span> tais que</p>
+<p><span class="math display">\[
+|x-a|&lt;\varepsilon.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+|x-a|&lt;\varepsilon
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+a-\varepsilon&lt;x&lt;a+\varepsilon
+\]</span></p>
+<p>dizem a mesma coisa.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ideia central
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uma vizinhança aberta reúne todos os pontos que estão a uma distância menor que <span class="math inline">\(\varepsilon\)</span> do centro <span class="math inline">\(a\)</span>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="exemplo-com-centro-3" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="exemplo-com-centro-3"><span class="header-section-number">1.4</span> ✅ Exemplo com centro 3</h2>
+<p>Se</p>
+<p><span class="math display">\[
+a=3
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\varepsilon=0{,}5,
+\]</span></p>
+<p>então a vizinhança aberta é</p>
+<p><span class="math display">\[
+(3-0{,}5,\;3+0{,}5)=(2{,}5,\;3{,}5).
+\]</span></p>
+<p>Também podemos escrever:</p>
+<p><span class="math display">\[
+|x-3|&lt;0{,}5.
+\]</span></p>
+<p>Isso significa que <span class="math inline">\(x\)</span> está a uma distância menor que <span class="math inline">\(0{,}5\)</span> de <span class="math inline">\(3\)</span>.</p>
+<hr>
+</section>
+<section id="vizinhança-furada" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="vizinhança-furada"><span class="header-section-number">1.5</span> 🧭 Vizinhança furada</h2>
+<p>Em limites, muitas vezes queremos estudar o que acontece <strong>perto</strong> de <span class="math inline">\(a\)</span>, mas sem usar o próprio ponto <span class="math inline">\(a\)</span>.</p>
+<p>Para isso, usamos uma vizinhança furada:</p>
+<p><span class="math display">\[
+0&lt;|x-a|&lt;\varepsilon.
+\]</span></p>
+<p>Essa desigualdade diz duas coisas:</p>
+<ol type="1">
+<li><span class="math inline">\(x\)</span> está perto de <span class="math inline">\(a\)</span>;</li>
+<li><span class="math inline">\(x\neq a\)</span>.</li>
+</ol>
+<p>A condição</p>
+<p><span class="math display">\[
+0&lt;|x-a|
+\]</span></p>
+<p>exclui o centro.</p>
+<p>Isso será muito importante em limites, porque o limite de uma função em <span class="math inline">\(a\)</span> depende do comportamento perto de <span class="math inline">\(a\)</span>, não necessariamente do valor da função em <span class="math inline">\(a\)</span>.</p>
+<hr>
+</section>
+<section id="desigualdades-equivalentes" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="desigualdades-equivalentes"><span class="header-section-number">1.6</span> 🔁 Desigualdades equivalentes</h2>
+<p>A desigualdade</p>
+<p><span class="math display">\[
+|x-a|&lt;\varepsilon
+\]</span></p>
+<p>é equivalente a</p>
+<p><span class="math display">\[
+-\varepsilon&lt;x-a&lt;\varepsilon.
+\]</span></p>
+<p>Somando <span class="math inline">\(a\)</span> nos três membros, obtemos</p>
+<p><span class="math display">\[
+a-\varepsilon&lt;x&lt;a+\varepsilon.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+|x-a|&lt;\varepsilon
+\quad\Longleftrightarrow\quad
+x\in(a-\varepsilon,a+\varepsilon).
+\]</span></p>
+<p>Essa equivalência é uma das ferramentas fundamentais para traduzir linguagem algébrica em linguagem geométrica.</p>
+<hr>
+</section>
+<section id="desigualdades-com-valor-absoluto" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="desigualdades-com-valor-absoluto"><span class="header-section-number">1.7</span> ⚖️ Desigualdades com valor absoluto</h2>
+<p>Também temos a forma fechada:</p>
+<p><span class="math display">\[
+|x-a|\leq r
+\]</span></p>
+<p>equivalente a</p>
+<p><span class="math display">\[
+a-r\leq x\leq a+r.
+\]</span></p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+|x-2|\leq 5
+\]</span></p>
+<p>equivale a</p>
+<p><span class="math display">\[
+-5\leq x-2\leq 5.
+\]</span></p>
+<p>Somando <span class="math inline">\(2\)</span>:</p>
+<p><span class="math display">\[
+-3\leq x\leq 7.
+\]</span></p>
+<p>Logo, a solução é</p>
+<p><span class="math display">\[
+[-3,7].
+\]</span></p>
+<hr>
+</section>
+<section id="desigualdades-do-tipo-maior-que" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="desigualdades-do-tipo-maior-que"><span class="header-section-number">1.8</span> 🚪 Desigualdades do tipo maior que</h2>
+<p>A desigualdade</p>
+<p><span class="math display">\[
+|x-a|&gt;r
+\]</span></p>
+<p>significa que <span class="math inline">\(x\)</span> está a uma distância maior que <span class="math inline">\(r\)</span> de <span class="math inline">\(a\)</span>.</p>
+<p>Isso corresponde a dois intervalos:</p>
+<p><span class="math display">\[
+x&lt;a-r
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+x&gt;a+r.
+\]</span></p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+|x-3|&gt;2
+\]</span></p>
+<p>equivale a</p>
+<p><span class="math display">\[
+x&lt;1
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+x&gt;5.
+\]</span></p>
+<p>Logo, a solução é</p>
+<p><span class="math display">\[
+(-\infty,1)\cup(5,+\infty).
+\]</span></p>
+<hr>
+</section>
+<section id="ponte-para-limites" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="ponte-para-limites"><span class="header-section-number">1.9</span> 🌉 Ponte para limites</h2>
+<p>A definição formal de limite usa exatamente a linguagem de distância e vizinhança.</p>
+<p>Dizer que</p>
+<p><span class="math display">\[
+\lim_{x\to a}f(x)=L
+\]</span></p>
+<p>significa, informalmente, que podemos tornar <span class="math inline">\(f(x)\)</span> tão perto de <span class="math inline">\(L\)</span> quanto quisermos, desde que <span class="math inline">\(x\)</span> esteja suficientemente perto de <span class="math inline">\(a\)</span>.</p>
+<p>A linguagem formal usa expressões como:</p>
+<p><span class="math display">\[
+0&lt;|x-a|&lt;\delta
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+|f(x)-L|&lt;\varepsilon.
+\]</span></p>
+<p>Por isso, compreender valor absoluto como distância é essencial antes de estudar limites com rigor.</p>
+<hr>
+</section>
+</section>
+<section id="exercícios-propostos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🧪 Exercícios propostos</h1>
+<div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📝 Exercícios
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="exercício-1" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> Exercício 1</h2>
+<p>Escreva na forma de intervalo:</p>
+<ol type="a">
+<li><span class="math inline">\(|x-4|&lt;2\)</span><br>
+</li>
+<li><span class="math inline">\(|x+1|&lt;3\)</span><br>
+</li>
+<li><span class="math inline">\(|x-5|\leq 1\)</span></li>
+</ol>
+</section>
+<section id="exercício-2" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> Exercício 2</h2>
+<p>Escreva usando valor absoluto:</p>
+<ol type="a">
+<li><span class="math inline">\(x\in(2,8)\)</span><br>
+</li>
+<li><span class="math inline">\(x\in(-3,3)\)</span><br>
+</li>
+<li><span class="math inline">\(x\in[1,5]\)</span></li>
+</ol>
+</section>
+<section id="exercício-3" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> Exercício 3</h2>
+<p>Resolva:</p>
+<ol type="a">
+<li><span class="math inline">\(|x-2|&gt;4\)</span><br>
+</li>
+<li><span class="math inline">\(|x+3|\geq 2\)</span></li>
+</ol>
+</section>
+<section id="exercício-4" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> Exercício 4</h2>
+<p>Explique o significado geométrico de</p>
+<p><span class="math display">\[
+0&lt;|x-a|&lt;\varepsilon.
+\]</span></p>
+</section>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>✅ Gabarito
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<section id="exercício-1-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> Exercício 1</h2>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+|x-4|&lt;2
+\]</span></p>
+<p>equivale a</p>
+<p><span class="math display">\[
+4-2&lt;x&lt;4+2.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x\in(2,6).
+\]</span></p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+|x+1|&lt;3
+\]</span></p>
+<p>é o mesmo que</p>
+<p><span class="math display">\[
+|x-(-1)|&lt;3.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x\in(-4,2).
+\]</span></p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+|x-5|\leq 1
+\]</span></p>
+<p>equivale a</p>
+<p><span class="math display">\[
+5-1\leq x\leq 5+1.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x\in[4,6].
+\]</span></p>
+</section>
+<section id="exercício-2-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> Exercício 2</h2>
+<ol type="a">
+<li>O intervalo <span class="math inline">\((2,8)\)</span> tem centro <span class="math inline">\(5\)</span> e raio <span class="math inline">\(3\)</span>. Logo:</li>
+</ol>
+<p><span class="math display">\[
+|x-5|&lt;3.
+\]</span></p>
+<ol start="2" type="a">
+<li>O intervalo <span class="math inline">\((-3,3)\)</span> tem centro <span class="math inline">\(0\)</span> e raio <span class="math inline">\(3\)</span>. Logo:</li>
+</ol>
+<p><span class="math display">\[
+|x|&lt;3.
+\]</span></p>
+<ol start="3" type="a">
+<li>O intervalo <span class="math inline">\([1,5]\)</span> tem centro <span class="math inline">\(3\)</span> e raio <span class="math inline">\(2\)</span>. Logo:</li>
+</ol>
+<p><span class="math display">\[
+|x-3|\leq 2.
+\]</span></p>
+</section>
+<section id="exercício-3-1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> Exercício 3</h2>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+|x-2|&gt;4
+\]</span></p>
+<p>significa:</p>
+<p><span class="math display">\[
+x&lt;2-4
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+x&gt;2+4.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x\in(-\infty,-2)\cup(6,+\infty).
+\]</span></p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+|x+3|\geq 2
+\]</span></p>
+<p>é o mesmo que</p>
+<p><span class="math display">\[
+|x-(-3)|\geq 2.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+x\leq -5
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+x\geq -1.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+x\in(-\infty,-5]\cup[-1,+\infty).
+\]</span></p>
+</section>
+<section id="exercício-4-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> Exercício 4</h2>
+<p>A expressão</p>
+<p><span class="math display">\[
+0&lt;|x-a|&lt;\varepsilon
+\]</span></p>
+<p>significa que <span class="math inline">\(x\)</span> está dentro da vizinhança aberta de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\varepsilon\)</span>, mas <span class="math inline">\(x\)</span> não pode ser igual a <span class="math inline">\(a\)</span>. É uma vizinhança furada.</p>
+</section>
+</section>
+</div>
+</div>
+<hr>
+<section id="quiz-valor-absoluto-distância-e-vizinhanças" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="quiz-valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">3.5</span> 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças</h2>
+<div class="question">
+<p><strong>Q1.</strong> A expressão <span class="math inline">\(|x-a|\)</span> representa:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>A distância entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> na reta real.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>A soma entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>A multiplicação entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q2.</strong> A desigualdade <span class="math inline">\(|x-3|&lt;0{,}5\)</span> representa:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x\)</span> está longe de <span class="math inline">\(3\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(x\)</span> está a uma distância menor que <span class="math inline">\(0{,}5\)</span> de <span class="math inline">\(3\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x\)</span> é necessariamente igual a <span class="math inline">\(3\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q3.</strong> A expressão <span class="math inline">\(0&lt;|x-a|&lt;\varepsilon\)</span> exclui:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Todos os pontos próximos de <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>O próprio ponto <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Todos os números reais.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="navegação" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">1.19-AP Valor Absoluto e Inequações Modulares</a></p>
+<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html">1.21-AP Domínio de Funções: Guia Completo</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html">Topo</a></p>
+<hr>
+<p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const rmDiacritics = (s) => s
+    .replace(/[ÁÀÂÃÄ]/g,'A').replace(/[áàâãä]/g,'a')
+    .replace(/[ÉÈÊË]/g,'E').replace(/[éèêë]/g,'e')
+    .replace(/[ÍÌÎÏ]/g,'I').replace(/[íìîï]/g,'i')
+    .replace(/[ÓÒÔÕÖ]/g,'O').replace(/[óòôõö]/g,'o')
+    .replace(/[ÚÙÛÜ]/g,'U').replace(/[úùûü]/g,'u')
+    .replace(/[Ç]/g,'C').replace(/[ç]/g,'c')
+    .replace(/[Ñ]/g,'N').replace(/[ñ]/g,'n');
+  const toSlug = (s) => rmDiacritics(String(s||"")).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
+  const classMap = [
+    ["matematica","cat--matematica"],
+    ["estatistica","cat--estatistica"],
+    ["fisica","cat--fisica"],
+    ["programacao","cat--programacao"],
+    ["curso","cat--curso"],
+    ["artigo","cat--artigo"],
+    ["serie","cat--serie"],
+    ["sumario","cat--sumario"],
+  ];
+
+  const enhanceWrap = (wrap, sortDedup=false) => {
+    if(!wrap) return;
+
+    if (sortDedup) {
+      const items = Array.from(wrap.querySelectorAll(':scope > .quarto-category'));
+      const seen = new Map();
+      for (const el of items) {
+        const key = el.textContent.trim().toLowerCase();
+        if (seen.has(key)) el.remove(); else seen.set(key, el);
+      }
+      const sorted = Array.from(wrap.querySelectorAll(':scope > .quarto-category'))
+        .sort((a,b)=>a.textContent.trim().localeCompare(b.textContent.trim(),'pt-BR'));
+      sorted.forEach(el => wrap.appendChild(el));
+    }
+
+    wrap.querySelectorAll(':scope > .quarto-category').forEach((el) => {
+      if (el.dataset.enhancedChip === "1") return;
+      const label = el.textContent.trim();
+      const slug  = toSlug(label);
+      const plain = rmDiacritics(label.toLowerCase());
+
+      for (const [needle, cls] of classMap) {
+        if (slug===needle || slug.includes(needle) || plain.includes(needle)) { el.classList.add(cls); break; }
+      }
+
+      let chip = el;
+      if (el.tagName !== "A") {
+        const a = document.createElement('a');
+        a.className = el.className;
+        a.textContent = label;
+        a.href = `${offset}categories.html#${slug}`;
+        chip = a;
+        el.replaceWith(a);
+      } else if (!el.getAttribute('href')) {
+        el.setAttribute('href', `${offset}categories.html#${slug}`);
+      }
+
+      chip.setAttribute('aria-label', `Ver posts em ${label}`);
+      chip.setAttribute('title', `Ver posts em ${label}`);
+      chip.dataset.enhancedChip = "1";
+    });
+  };
+
+  enhanceWrap(document.querySelector('#title-block-header .quarto-categories'), true);
+  document.querySelectorAll('main .quarto-categories').forEach(wrap => enhanceWrap(wrap, false));
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blogdomarcellini\.com\.br");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025-2026 Blog do Marcellini</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
+</body></html>

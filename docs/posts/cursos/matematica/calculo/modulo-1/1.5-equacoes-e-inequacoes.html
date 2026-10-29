@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Blog do Marcellini">
+<meta name="description" content="Equações, inequações lineares, quadráticas e racionais interpretadas como conjuntos de soluções na reta real.">
+
+<title>📘 Módulo 1.5: Equações e Inequações – Blog do Marcellini</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../images/banner.jpeg" rel="icon" type="image/jpeg">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-f033c7dbc0f6ce96e5658e4903595158.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P2KY6K26MG"></script>
+<script>
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2KY6K26MG', {
+      linker: { domains: ['blogdomarcellini.com.br','en.blogdomarcellini.com.br'] }
+    });
+  }
+</script>
+
+<link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../../styles.css">
+<link rel="stylesheet" href="../../../../../assets/css/custom.css">
+<link rel="stylesheet" href="../../../../../assets/css/cards.css">
+<link rel="stylesheet" href="../../../../../assets/css/chips.css">
+<meta property="og:title" content="📘 Módulo 1.5: Equações e Inequações – Blog do Marcellini">
+<meta property="og:description" content="Equações, inequações lineares, quadráticas e racionais interpretadas como conjuntos de soluções na reta real.">
+<meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta property="og:site_name" content="Blog do Marcellini">
+<meta property="og:image:height" content="1380">
+<meta property="og:image:width" content="1830">
+<meta property="og:image:alt" content="Blog do Marcellini">
+<meta name="twitter:title" content="📘 Módulo 1.5: Equações e Inequações – Blog do Marcellini">
+<meta name="twitter:description" content="Equações, inequações lineares, quadráticas e racionais interpretadas como conjuntos de soluções na reta real.">
+<meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
+<meta name="twitter:image-height" content="1380">
+<meta name="twitter:image-width" content="1830">
+<meta name="twitter:image:alt" content="Blog do Marcellini">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">Blog do Marcellini</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-explorar" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧭 Explorar</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-explorar">    
+        <li>
+    <a class="dropdown-item" href="../../../../../tags.html">
+ <span class="dropdown-text">🏷️ Tags</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../categories.html">
+ <span class="dropdown-text">📂 Categorias</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciências-exatas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🧠 Ciências Exatas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciências-exatas">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/matematica/index.html">
+ <span class="dropdown-text">🧮 Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/estatistica/index.html">
+ <span class="dropdown-text">📊 Estatística</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/fisica/index.html">
+ <span class="dropdown-text">🔭 Física</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/index.html">
+ <span class="dropdown-text">💻 Programação</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/programacao/ia/index.html">
+ <span class="dropdown-text">🤖 Inteligência Artificial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog-pessoal" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📝 Blog Pessoal</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog-pessoal">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/index.html">
+ <span class="dropdown-text">📝 Blog Pessoal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/pessoal/sobre-o-blog.html">
+ <span class="dropdown-text">👤 Sobre Mim e Sobre o Blog</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📘 Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/matematica/index.html">
+ <span class="dropdown-text">🧮 Cursos de Matemática</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../posts/cursos/estatistica/index.html">
+ <span class="dropdown-text">📊 Cursos de Estatística</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../guia.html"> 
+<span class="menu-text">🗺️ Mapa do Site</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://marcellini-celso.github.io/blog-marcellini-en/" rel="noopener" target="_blank"> 
+<span class="menu-text">EN 🇬🇧</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:prof.marcellini@gmail.com"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Contato</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Neste Módulo</h2>
+   
+  <ul>
+  <li><a href="#equações-e-inequações" id="toc-equações-e-inequações" class="nav-link active" data-scroll-target="#equações-e-inequações"><span class="header-section-number">1</span> 📘 Equações e Inequações</a>
+  <ul class="collapse">
+  <li><a href="#a-ideia-de-solução" id="toc-a-ideia-de-solução" class="nav-link" data-scroll-target="#a-ideia-de-solução"><span class="header-section-number">1.1</span> 💡 A ideia de solução</a></li>
+  <li><a href="#equações-lineares" id="toc-equações-lineares" class="nav-link" data-scroll-target="#equações-lineares"><span class="header-section-number">1.2</span> 🧮 Equações lineares</a></li>
+  <li><a href="#inequações-lineares" id="toc-inequações-lineares" class="nav-link" data-scroll-target="#inequações-lineares"><span class="header-section-number">1.3</span> ⚖️ Inequações lineares</a></li>
+  <li><a href="#equações-quadráticas" id="toc-equações-quadráticas" class="nav-link" data-scroll-target="#equações-quadráticas"><span class="header-section-number">1.4</span> 🧮 Equações quadráticas</a></li>
+  <li><a href="#inequações-quadráticas" id="toc-inequações-quadráticas" class="nav-link" data-scroll-target="#inequações-quadráticas"><span class="header-section-number">1.5</span> ⚖️ Inequações quadráticas</a></li>
+  <li><a href="#estudo-gráfico-do-sinal-e-tabela-de-sinais" id="toc-estudo-gráfico-do-sinal-e-tabela-de-sinais" class="nav-link" data-scroll-target="#estudo-gráfico-do-sinal-e-tabela-de-sinais"><span class="header-section-number">1.6</span> 📊 Estudo gráfico do sinal e tabela de sinais</a></li>
+  <li><a href="#estudo-gráfico-dos-fatores-em-uma-inequação-produto" id="toc-estudo-gráfico-dos-fatores-em-uma-inequação-produto" class="nav-link" data-scroll-target="#estudo-gráfico-dos-fatores-em-uma-inequação-produto"><span class="header-section-number">1.7</span> 📐 Estudo gráfico dos fatores em uma inequação produto</a>
+  <ul class="collapse">
+  <li><a href="#fator-1-a-reta-yx-2" id="toc-fator-1-a-reta-yx-2" class="nav-link" data-scroll-target="#fator-1-a-reta-yx-2"><span class="header-section-number">1.7.1</span> 📈 Fator 1: a reta <span class="math inline">\(y=x-2\)</span></a></li>
+  <li><a href="#fator-2-a-reta-yx-3" id="toc-fator-2-a-reta-yx-3" class="nav-link" data-scroll-target="#fator-2-a-reta-yx-3"><span class="header-section-number">1.7.2</span> 📈 Fator 2: a reta <span class="math inline">\(y=x-3\)</span></a></li>
+  <li><a href="#tabela-de-sinais-do-produto" id="toc-tabela-de-sinais-do-produto" class="nav-link" data-scroll-target="#tabela-de-sinais-do-produto"><span class="header-section-number">1.7.3</span> 📊 Tabela de sinais do produto</a></li>
+  <li><a href="#confirmação-pela-parábola-associada" id="toc-confirmação-pela-parábola-associada" class="nav-link" data-scroll-target="#confirmação-pela-parábola-associada"><span class="header-section-number">1.7.4</span> 🧮 Confirmação pela parábola associada</a></li>
+  </ul></li>
+  <li><a href="#estudo-gráfico-dos-fatores-em-uma-inequação-quociente" id="toc-estudo-gráfico-dos-fatores-em-uma-inequação-quociente" class="nav-link" data-scroll-target="#estudo-gráfico-dos-fatores-em-uma-inequação-quociente"><span class="header-section-number">1.8</span> ➗ Estudo gráfico dos fatores em uma inequação quociente</a>
+  <ul class="collapse">
+  <li><a href="#numerador-a-reta-yx-1" id="toc-numerador-a-reta-yx-1" class="nav-link" data-scroll-target="#numerador-a-reta-yx-1"><span class="header-section-number">1.8.1</span> 📈 Numerador: a reta <span class="math inline">\(y=x-1\)</span></a></li>
+  <li><a href="#denominador-a-reta-yx2" id="toc-denominador-a-reta-yx2" class="nav-link" data-scroll-target="#denominador-a-reta-yx2"><span class="header-section-number">1.8.2</span> 📈 Denominador: a reta <span class="math inline">\(y=x+2\)</span></a></li>
+  <li><a href="#tabela-de-sinais-do-quociente" id="toc-tabela-de-sinais-do-quociente" class="nav-link" data-scroll-target="#tabela-de-sinais-do-quociente"><span class="header-section-number">1.8.3</span> 📊 Tabela de sinais do quociente</a></li>
+  </ul></li>
+  <li><a href="#inequações-racionais" id="toc-inequações-racionais" class="nav-link" data-scroll-target="#inequações-racionais"><span class="header-section-number">1.9</span> ⚖️ Inequações racionais</a></li>
+  <li><a href="#equações-inequações-e-domínio" id="toc-equações-inequações-e-domínio" class="nav-link" data-scroll-target="#equações-inequações-e-domínio"><span class="header-section-number">1.10</span> 🧮 Equações, inequações e domínio</a></li>
+  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.11</span> 🌉 Por que isso importa para o Cálculo?</a></li>
+  <li><a href="#quadro-resumo" id="toc-quadro-resumo" class="nav-link" data-scroll-target="#quadro-resumo"><span class="header-section-number">1.12</span> 🧾 Quadro-resumo</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#quiz-equações-e-inequações" id="toc-quiz-equações-e-inequações" class="nav-link" data-scroll-target="#quiz-equações-e-inequações"><span class="header-section-number">4</span> 🧩 Quiz — Equações e Inequações</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">📘 Módulo 1.5: Equações e Inequações</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">cálculo</div>
+    <div class="quarto-category">matemática</div>
+    <div class="quarto-category">curso</div>
+    <div class="quarto-category">pré-cálculo</div>
+    <div class="quarto-category">equações</div>
+    <div class="quarto-category">inequações</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Equações, inequações lineares, quadráticas e racionais interpretadas como conjuntos de soluções na reta real.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Blog do Marcellini </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">4 de junho de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Como resolver condições algébricas e interpretar suas soluções na reta real?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos do Post
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Revisar equações e inequações como ferramentas para descrever condições matemáticas;</li>
+<li>Interpretar soluções em linguagem algébrica, intervalar e gráfica;</li>
+<li>Preparar o uso de equações, inequações e estudo de sinais no Cálculo.</li>
+</ul>
+</div>
+</div>
+<section id="equações-e-inequações" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 📘 Equações e Inequações</h1>
+<p>No estudo dos números reais, dos intervalos e do valor absoluto, aprendemos a descrever subconjuntos da reta real. Agora vamos usar essa linguagem para resolver <strong>equações</strong> e <strong>inequações</strong>.</p>
+<p>Uma equação pergunta:</p>
+<blockquote class="blockquote">
+<p>Para quais valores de <span class="math inline">\(x\)</span> duas expressões são iguais?</p>
+</blockquote>
+<p>Uma inequação pergunta:</p>
+<blockquote class="blockquote">
+<p>Para quais valores de <span class="math inline">\(x\)</span> uma expressão é maior, menor, maior ou igual, ou menor ou igual a outra?</p>
+</blockquote>
+<p>Em ambos os casos, a resposta não é apenas um número isolado. Muitas vezes a resposta é um <strong>conjunto de números reais</strong>, que pode ser descrito por intervalos, uniões de intervalos ou pontos isolados.</p>
+<hr>
+<section id="a-ideia-de-solução" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="a-ideia-de-solução"><span class="header-section-number">1.1</span> 💡 A ideia de solução</h2>
+<p>Considere a equação</p>
+<p><span class="math display">\[
+2x+3=11.
+\]</span></p>
+<p>Resolver essa equação significa encontrar todos os valores reais de <span class="math inline">\(x\)</span> que tornam a igualdade verdadeira. Subtraindo <span class="math inline">\(3\)</span> dos dois lados, obtemos</p>
+<p><span class="math display">\[
+2x=8.
+\]</span></p>
+<p>Dividindo por <span class="math inline">\(2\)</span>,</p>
+<p><span class="math display">\[
+x=4.
+\]</span></p>
+<p>Portanto, o conjunto solução é</p>
+<p><span class="math display">\[
+S=\{4\}.
+\]</span></p>
+<p>Nesse caso, a solução é formada por um único número.</p>
+<p>A reta real abaixo representa esse conjunto-solução com um único ponto:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-solucao-equacao-ponto-4.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Solução da equação <span class="math inline">\(2x+3=11\)</span>.</figcaption>
+</figure>
+</div>
+<p>Já na inequação</p>
+<p><span class="math display">\[
+2x+3&lt;11,
+\]</span></p>
+<p>subtraímos <span class="math inline">\(3\)</span> dos dois lados:</p>
+<p><span class="math display">\[
+2x&lt;8.
+\]</span></p>
+<p>Dividindo por <span class="math inline">\(2\)</span>,</p>
+<p><span class="math display">\[
+x&lt;4.
+\]</span></p>
+<p>Agora a solução não é um número isolado, mas todo o intervalo</p>
+<p><span class="math display">\[
+S=(-\infty,4).
+\]</span></p>
+<hr>
+</section>
+<section id="equações-lineares" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="equações-lineares"><span class="header-section-number">1.2</span> 🧮 Equações lineares</h2>
+<p>Uma equação linear em uma variável pode ser escrita, depois de simplificações, na forma</p>
+<p><span class="math display">\[
+ax+b=0,
+\]</span></p>
+<p>com <span class="math inline">\(a\neq 0\)</span>.</p>
+<p>Nesse caso,</p>
+<p><span class="math display">\[
+ax=-b
+\]</span></p>
+<p>e, portanto,</p>
+<p><span class="math display">\[
+x=-\frac{b}{a}.
+\]</span></p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+3x-12=0.
+\]</span></p>
+<p>Então</p>
+<p><span class="math display">\[
+3x=12
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+x=4.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+S=\{4\}.
+\]</span></p>
+<hr>
+</section>
+<section id="inequações-lineares" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="inequações-lineares"><span class="header-section-number">1.3</span> ⚖️ Inequações lineares</h2>
+<p>Uma inequação linear pode ter formas como</p>
+<p><span class="math display">\[
+ax+b&gt;0,\qquad ax+b&lt;0,\qquad ax+b\geq 0,\qquad ax+b\leq 0.
+\]</span></p>
+<p>A resolução é parecida com a de uma equação, mas há um cuidado essencial:</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Cuidado com o sinal da desigualdade">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Aviso</span>Cuidado com o sinal da desigualdade
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao multiplicar ou dividir uma inequação por um número negativo, o sentido da desigualdade se inverte.</p>
+</div>
+</div>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+-2x+6&gt;0.
+\]</span></p>
+<p>Subtraindo <span class="math inline">\(6\)</span> dos dois lados:</p>
+<p><span class="math display">\[
+-2x&gt;-6.
+\]</span></p>
+<p>Agora dividimos por <span class="math inline">\(-2\)</span>. Como estamos dividindo por um número negativo, invertemos o sinal:</p>
+<p><span class="math display">\[
+x&lt;3.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+S=(-\infty,3).
+\]</span></p>
+<p>Na reta real, a solução aparece como uma semirreta para a esquerda, com bolinha aberta em <span class="math inline">\(3\)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-solucao-inequacao-linear-x-menor-3.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Solução da inequação <span class="math inline">\(-2x+6&gt;0\)</span>.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="equações-quadráticas" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="equações-quadráticas"><span class="header-section-number">1.4</span> 🧮 Equações quadráticas</h2>
+<p>Uma equação quadrática tem a forma</p>
+<p><span class="math display">\[
+ax^2+bx+c=0,
+\]</span></p>
+<p>com <span class="math inline">\(a\neq 0\)</span>.</p>
+<p>O método mais conhecido para resolvê-la é a fórmula de Bhaskara:</p>
+<p><span class="math display">\[
+x=\frac{-b\pm\sqrt{\Delta}}{2a},
+\]</span></p>
+<p>onde</p>
+<p><span class="math display">\[
+\Delta=b^2-4ac.
+\]</span></p>
+<p>A quantidade <span class="math inline">\(\Delta\)</span> é chamada de <strong>discriminante</strong>.</p>
+<ul>
+<li>Se <span class="math inline">\(\Delta&gt;0\)</span>, há duas raízes reais distintas.</li>
+<li>Se <span class="math inline">\(\Delta=0\)</span>, há uma raiz real dupla.</li>
+<li>Se <span class="math inline">\(\Delta&lt;0\)</span>, não há raízes reais.</li>
+</ul>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+x^2-5x+6=0.
+\]</span></p>
+<p>Temos</p>
+<p><span class="math display">\[
+a=1,\qquad b=-5,\qquad c=6.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+\Delta=(-5)^2-4\cdot 1\cdot 6=25-24=1.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+x=\frac{5\pm 1}{2}.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+x=2
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+x=3.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+S=\{2,3\}.
+\]</span></p>
+<p>Na reta real, isso corresponde a dois pontos isolados:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-solucao-equacao-quadratica-2-3.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Solução da equação quadrática <span class="math inline">\(x^2-5x+6=0\)</span>.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="inequações-quadráticas" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="inequações-quadráticas"><span class="header-section-number">1.5</span> ⚖️ Inequações quadráticas</h2>
+<p>Para resolver uma inequação quadrática, é útil pensar no sinal de um produto.</p>
+<p>Considere</p>
+<p><span class="math display">\[
+x^2-5x+6&gt;0.
+\]</span></p>
+<p>Fatorando,</p>
+<p><span class="math display">\[
+x^2-5x+6=(x-2)(x-3).
+\]</span></p>
+<p>Então precisamos resolver</p>
+<p><span class="math display">\[
+(x-2)(x-3)&gt;0.
+\]</span></p>
+<p>Os pontos críticos são</p>
+<p><span class="math display">\[
+x=2
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+x=3.
+\]</span></p>
+<p>Eles dividem a reta em três intervalos:</p>
+<p><span class="math display">\[
+(-\infty,2),\qquad (2,3),\qquad (3,+\infty).
+\]</span></p>
+<p>Testando o sinal em cada intervalo:</p>
+<ul>
+<li>em <span class="math inline">\((-\infty,2)\)</span>, os dois fatores são negativos, então o produto é positivo;</li>
+<li>em <span class="math inline">\((2,3)\)</span>, um fator é positivo e o outro negativo, então o produto é negativo;</li>
+<li>em <span class="math inline">\((3,+\infty)\)</span>, os dois fatores são positivos, então o produto é positivo.</li>
+</ul>
+<p>Como queremos o produto positivo, obtemos</p>
+<p><span class="math display">\[
+S=(-\infty,2)\cup(3,+\infty).
+\]</span></p>
+<p>Na reta real, a solução é a união de dois intervalos abertos:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-solucao-inequacao-quadratica.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Solução da inequação quadrática <span class="math inline">\(x^2-5x+6&gt;0\)</span>.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="estudo-gráfico-do-sinal-e-tabela-de-sinais" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="estudo-gráfico-do-sinal-e-tabela-de-sinais"><span class="header-section-number">1.6</span> 📊 Estudo gráfico do sinal e tabela de sinais</h2>
+<p>A tabela de sinais não precisa ser vista como um truque mecânico. Ela pode ser entendida a partir do estudo gráfico das funções associadas aos fatores do produto ou do quociente.</p>
+<p>A ideia central é simples:</p>
+<ul>
+<li>quando o gráfico de uma função está <strong>acima</strong> do eixo <span class="math inline">\(x\)</span>, a função é <strong>positiva</strong>;</li>
+<li>quando o gráfico está <strong>abaixo</strong> do eixo <span class="math inline">\(x\)</span>, a função é <strong>negativa</strong>;</li>
+<li>quando o gráfico toca ou cruza o eixo <span class="math inline">\(x\)</span>, temos um <strong>zero</strong> da função.</li>
+</ul>
+<p>Assim, a tabela de sinais organiza, em forma resumida, aquilo que já observamos graficamente.</p>
+<hr>
+</section>
+<section id="estudo-gráfico-dos-fatores-em-uma-inequação-produto" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="estudo-gráfico-dos-fatores-em-uma-inequação-produto"><span class="header-section-number">1.7</span> 📐 Estudo gráfico dos fatores em uma inequação produto</h2>
+<p>Retomemos a inequação</p>
+<p><span class="math display">\[
+(x-2)(x-3)&gt;0.
+\]</span></p>
+<p>Antes de montar a tabela de sinais, podemos estudar os gráficos dos fatores separadamente.</p>
+<section id="fator-1-a-reta-yx-2" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="fator-1-a-reta-yx-2"><span class="header-section-number">1.7.1</span> 📈 Fator 1: a reta <span class="math inline">\(y=x-2\)</span></h3>
+<p>A reta <span class="math inline">\(y=x-2\)</span> zera em <span class="math inline">\(x=2\)</span>.</p>
+<ul>
+<li>Para <span class="math inline">\(x&lt;2\)</span>, temos <span class="math inline">\(x-2&lt;0\)</span>, então o gráfico fica abaixo do eixo <span class="math inline">\(x\)</span>.</li>
+<li>Para <span class="math inline">\(x&gt;2\)</span>, temos <span class="math inline">\(x-2&gt;0\)</span>, então o gráfico fica acima do eixo <span class="math inline">\(x\)</span>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-reta-x-menos-2.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Gráfico da reta <span class="math inline">\(y=x-2\)</span>.</figcaption>
+</figure>
+</div>
+</section>
+<section id="fator-2-a-reta-yx-3" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="fator-2-a-reta-yx-3"><span class="header-section-number">1.7.2</span> 📈 Fator 2: a reta <span class="math inline">\(y=x-3\)</span></h3>
+<p>A reta <span class="math inline">\(y=x-3\)</span> zera em <span class="math inline">\(x=3\)</span>.</p>
+<ul>
+<li>Para <span class="math inline">\(x&lt;3\)</span>, temos <span class="math inline">\(x-3&lt;0\)</span>, então o gráfico fica abaixo do eixo <span class="math inline">\(x\)</span>.</li>
+<li>Para <span class="math inline">\(x&gt;3\)</span>, temos <span class="math inline">\(x-3&gt;0\)</span>, então o gráfico fica acima do eixo <span class="math inline">\(x\)</span>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-reta-x-menos-3.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Gráfico da reta <span class="math inline">\(y=x-3\)</span>.</figcaption>
+</figure>
+</div>
+</section>
+<section id="tabela-de-sinais-do-produto" class="level3" data-number="1.7.3">
+<h3 data-number="1.7.3" class="anchored" data-anchor-id="tabela-de-sinais-do-produto"><span class="header-section-number">1.7.3</span> 📊 Tabela de sinais do produto</h3>
+<p>Agora que já sabemos o sinal de cada fator, podemos resumir tudo na tabela a seguir.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Intervalo</th>
+<th style="text-align: right;"><span class="math inline">\(x-2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x-3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((x-2)(x-3)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((-\infty,2)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((2,3)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((3,+\infty)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Como queremos</p>
+<p><span class="math display">\[
+(x-2)(x-3)&gt;0,
+\]</span></p>
+<p>escolhemos os intervalos em que o produto é positivo. Portanto,</p>
+<p><span class="math display">\[
+S=(-\infty,2)\cup(3,+\infty).
+\]</span></p>
+</section>
+<section id="confirmação-pela-parábola-associada" class="level3" data-number="1.7.4">
+<h3 data-number="1.7.4" class="anchored" data-anchor-id="confirmação-pela-parábola-associada"><span class="header-section-number">1.7.4</span> 🧮 Confirmação pela parábola associada</h3>
+<p>Também podemos juntar os fatores e olhar diretamente para a função</p>
+<p><span class="math display">\[
+y=(x-2)(x-3)=x^2-5x+6.
+\]</span></p>
+<p>Seu gráfico é uma parábola com raízes em <span class="math inline">\(x=2\)</span> e <span class="math inline">\(x=3\)</span>.</p>
+<ul>
+<li>Fora do intervalo entre as raízes, a parábola fica acima do eixo <span class="math inline">\(x\)</span>, então a função é positiva;</li>
+<li>Entre as raízes, a parábola fica abaixo do eixo <span class="math inline">\(x\)</span>, então a função é negativa.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-parabola-x2-menos-5x-mais-6.png" class="img-fluid figure-img" style="width:78.0%"></p>
+<figcaption>Gráfico da parábola <span class="math inline">\(y=x^2-5x+6\)</span>.</figcaption>
+</figure>
+</div>
+<p>Esse estudo gráfico confirma exatamente a tabela de sinais.</p>
+<hr>
+</section>
+</section>
+<section id="estudo-gráfico-dos-fatores-em-uma-inequação-quociente" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="estudo-gráfico-dos-fatores-em-uma-inequação-quociente"><span class="header-section-number">1.8</span> ➗ Estudo gráfico dos fatores em uma inequação quociente</h2>
+<p>Agora consideremos a inequação racional</p>
+<p><span class="math display">\[
+\frac{x-1}{x+2}\geq 0.
+\]</span></p>
+<p>Novamente, começamos estudando separadamente o numerador e o denominador.</p>
+<section id="numerador-a-reta-yx-1" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="numerador-a-reta-yx-1"><span class="header-section-number">1.8.1</span> 📈 Numerador: a reta <span class="math inline">\(y=x-1\)</span></h3>
+<p>A reta <span class="math inline">\(y=x-1\)</span> zera em <span class="math inline">\(x=1\)</span>.</p>
+<ul>
+<li>Para <span class="math inline">\(x&lt;1\)</span>, o numerador é negativo;</li>
+<li>Para <span class="math inline">\(x&gt;1\)</span>, o numerador é positivo.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-reta-x-menos-1.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Gráfico da reta <span class="math inline">\(y=x-1\)</span>.</figcaption>
+</figure>
+</div>
+</section>
+<section id="denominador-a-reta-yx2" class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="denominador-a-reta-yx2"><span class="header-section-number">1.8.2</span> 📈 Denominador: a reta <span class="math inline">\(y=x+2\)</span></h3>
+<p>A reta <span class="math inline">\(y=x+2\)</span> zera em <span class="math inline">\(x=-2\)</span>.</p>
+<ul>
+<li>Para <span class="math inline">\(x&lt;-2\)</span>, o denominador é negativo;</li>
+<li>Para <span class="math inline">\(x&gt;-2\)</span>, o denominador é positivo.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-reta-x-mais-2.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Gráfico da reta <span class="math inline">\(y=x+2\)</span>.</figcaption>
+</figure>
+</div>
+</section>
+<section id="tabela-de-sinais-do-quociente" class="level3" data-number="1.8.3">
+<h3 data-number="1.8.3" class="anchored" data-anchor-id="tabela-de-sinais-do-quociente"><span class="header-section-number">1.8.3</span> 📊 Tabela de sinais do quociente</h3>
+<p>Os pontos críticos são <span class="math inline">\(x=-2\)</span> e <span class="math inline">\(x=1\)</span>. Eles dividem a reta nos intervalos:</p>
+<p><span class="math display">\[
+(-\infty,-2),\qquad (-2,1),\qquad (1,+\infty).
+\]</span></p>
+<p>A tabela de sinais fica:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Intervalo</th>
+<th style="text-align: right;"><span class="math inline">\(x-1\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x+2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\dfrac{x-1}{x+2}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((-\infty,-2)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((-2,1)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((1,+\infty)\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(+\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Como queremos</p>
+<p><span class="math display">\[
+\frac{x-1}{x+2}\geq 0,
+\]</span></p>
+<p>escolhemos os intervalos em que o quociente é positivo e também o ponto em que o numerador zera.</p>
+<p>Assim:</p>
+<ul>
+<li><span class="math inline">\(x=-2\)</span> fica excluído, porque zera o denominador;</li>
+<li><span class="math inline">\(x=1\)</span> fica incluído, porque zera o numerador e a desigualdade aceita igualdade.</li>
+</ul>
+<p>Logo,</p>
+<p><span class="math display">\[
+S=(-\infty,-2)\cup[1,+\infty).
+\]</span></p>
+<p>Esse procedimento mostra que a tabela de sinais é um resumo do estudo gráfico do sinal de cada fator.</p>
+<hr>
+</section>
+</section>
+<section id="inequações-racionais" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="inequações-racionais"><span class="header-section-number">1.9</span> ⚖️ Inequações racionais</h2>
+<p>Uma inequação racional envolve quocientes de expressões algébricas. Por exemplo:</p>
+<p><span class="math display">\[
+\frac{x-1}{x+2}\geq 0.
+\]</span></p>
+<p>Aqui há dois pontos importantes:</p>
+<ol type="1">
+<li>o numerador zera em <span class="math inline">\(x=1\)</span>;</li>
+<li>o denominador zera em <span class="math inline">\(x=-2\)</span>, mas esse valor não pertence ao domínio.</li>
+</ol>
+<p>Os pontos <span class="math inline">\(-2\)</span> e <span class="math inline">\(1\)</span> dividem a reta em três intervalos:</p>
+<p><span class="math display">\[
+(-\infty,-2),\qquad (-2,1),\qquad (1,+\infty).
+\]</span></p>
+<p>Analisando sinais:</p>
+<ul>
+<li>em <span class="math inline">\((-\infty,-2)\)</span>, numerador e denominador são negativos, então o quociente é positivo;</li>
+<li>em <span class="math inline">\((-2,1)\)</span>, numerador negativo e denominador positivo, então o quociente é negativo;</li>
+<li>em <span class="math inline">\((1,+\infty)\)</span>, numerador e denominador positivos, então o quociente é positivo.</li>
+</ul>
+<p>Como a inequação é</p>
+<p><span class="math display">\[
+\frac{x-1}{x+2}\geq 0,
+\]</span></p>
+<p>incluímos <span class="math inline">\(x=1\)</span>, pois o numerador pode ser zero, mas excluímos <span class="math inline">\(x=-2\)</span>, pois o denominador não pode ser zero.</p>
+<p>Logo,</p>
+<p><span class="math display">\[
+S=(-\infty,-2)\cup[1,+\infty).
+\]</span></p>
+<p>A representação na reta real ajuda a distinguir o ponto excluído do domínio e o ponto incluído na solução:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1-5-solucao-inequacao-racional.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Solução da inequação racional <span class="math inline">\(\frac{x-1}{x+2}\geq 0\)</span>.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="equações-inequações-e-domínio" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="equações-inequações-e-domínio"><span class="header-section-number">1.10</span> 🧮 Equações, inequações e domínio</h2>
+<p>No Cálculo, equações e inequações aparecem o tempo todo na determinação de domínios.</p>
+<p>Por exemplo, para a função</p>
+<p><span class="math display">\[
+f(x)=\sqrt{x-4},
+\]</span></p>
+<p>precisamos que</p>
+<p><span class="math display">\[
+x-4\geq 0.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x\geq 4,
+\]</span></p>
+<p>e o domínio é</p>
+<p><span class="math display">\[
+[4,+\infty).
+\]</span></p>
+<p>Para a função</p>
+<p><span class="math display">\[
+g(x)=\frac{1}{x^2-9},
+\]</span></p>
+<p>precisamos que</p>
+<p><span class="math display">\[
+x^2-9\neq 0.
+\]</span></p>
+<p>Como</p>
+<p><span class="math display">\[
+x^2-9=(x-3)(x+3),
+\]</span></p>
+<p>temos</p>
+<p><span class="math display">\[
+x\neq 3
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+x\neq -3.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+D_g=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
+\]</span></p>
+<hr>
+</section>
+<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.11</span> 🌉 Por que isso importa para o Cálculo?</h2>
+<p>Antes de estudar limites, derivadas e integrais, precisamos saber <strong>onde</strong> uma função está definida, <strong>em quais intervalos</strong> uma expressão é positiva ou negativa e <strong>quais valores</strong> tornam uma condição verdadeira.</p>
+<p>Por isso, equações e inequações não são apenas técnicas algébricas. Elas são ferramentas para investigar o comportamento das funções.</p>
+<p>No próximo passo, começaremos a organizar as principais famílias de funções que aparecem no Cálculo.</p>
+<hr>
+</section>
+<section id="quadro-resumo" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="quadro-resumo"><span class="header-section-number">1.12</span> 🧾 Quadro-resumo</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ideia</th>
+<th>Significado</th>
+<th>Papel no Cálculo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Equação</td>
+<td>Igualdade com incógnita</td>
+<td>Usada para encontrar valores específicos que satisfazem uma condição</td>
+</tr>
+<tr class="even">
+<td>Conjunto-solução</td>
+<td>Conjunto de todos os valores que resolvem uma equação ou inequação</td>
+<td>Pode ser ponto, intervalo ou união de intervalos</td>
+</tr>
+<tr class="odd">
+<td>Equação linear</td>
+<td>Equação do tipo <span class="math inline">\(ax+b=0\)</span>, com <span class="math inline">\(a\neq 0\)</span></td>
+<td>Produz, em geral, uma única solução real</td>
+</tr>
+<tr class="even">
+<td>Inequação linear</td>
+<td>Desigualdade envolvendo uma expressão de primeiro grau</td>
+<td>Produz intervalos ou semirretas na reta real</td>
+</tr>
+<tr class="odd">
+<td>Multiplicação por número negativo</td>
+<td>Operação que inverte o sentido da desigualdade</td>
+<td>É um cuidado essencial na resolução de inequações</td>
+</tr>
+<tr class="even">
+<td>Equação quadrática</td>
+<td>Equação do tipo <span class="math inline">\(ax^2+bx+c=0\)</span>, com <span class="math inline">\(a\neq 0\)</span></td>
+<td>Suas soluções são os zeros de uma parábola</td>
+</tr>
+<tr class="odd">
+<td>Inequação quadrática</td>
+<td>Desigualdade envolvendo uma expressão de segundo grau</td>
+<td>Pode ser resolvida por fatoração, gráfico ou tabela de sinais</td>
+</tr>
+<tr class="even">
+<td>Tabela de sinais</td>
+<td>Organização dos sinais dos fatores em cada intervalo</td>
+<td>Ajuda a resolver inequações produto e quociente</td>
+</tr>
+<tr class="odd">
+<td>Inequação racional</td>
+<td>Inequação envolvendo quociente de expressões algébricas</td>
+<td>Exige atenção ao domínio e aos pontos excluídos</td>
+</tr>
+<tr class="even">
+<td>Domínio</td>
+<td>Conjunto dos valores permitidos para <span class="math inline">\(x\)</span></td>
+<td>Muitas vezes é determinado por equações e inequações</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="exercícios-propostos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🧪 Exercícios propostos</h1>
+<div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📝 Exercícios
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="exercício-1" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
+<p>Resolva as equações lineares:</p>
+<ol type="a">
+<li><span class="math inline">\(3x-9=0\)</span><br>
+</li>
+<li><span class="math inline">\(2x+5=17\)</span><br>
+</li>
+<li><span class="math inline">\(-4x+8=0\)</span></li>
+</ol>
+</section>
+<section id="exercício-2" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
+<p>Resolva as inequações lineares e escreva a resposta em notação de intervalo:</p>
+<ol type="a">
+<li><span class="math inline">\(2x-6&gt;0\)</span><br>
+</li>
+<li><span class="math inline">\(5-x\leq 2\)</span><br>
+</li>
+<li><span class="math inline">\(-3x+12&gt;0\)</span></li>
+</ol>
+</section>
+<section id="exercício-3" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
+<p>Resolva as equações quadráticas:</p>
+<ol type="a">
+<li><span class="math inline">\(x^2-9=0\)</span><br>
+</li>
+<li><span class="math inline">\(x^2-5x+6=0\)</span><br>
+</li>
+<li><span class="math inline">\(x^2+2x+1=0\)</span></li>
+</ol>
+</section>
+<section id="exercício-4" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
+<p>Resolva as inequações quadráticas:</p>
+<ol type="a">
+<li><span class="math inline">\(x^2-4&gt;0\)</span><br>
+</li>
+<li><span class="math inline">\(x^2-4\leq 0\)</span><br>
+</li>
+<li><span class="math inline">\(x^2-3x+2&gt;0\)</span></li>
+</ol>
+</section>
+<section id="exercício-5" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
+<p>Determine o domínio real das funções:</p>
+<ol type="a">
+<li><span class="math inline">\(f(x)=\sqrt{x+2}\)</span><br>
+</li>
+<li><span class="math inline">\(g(x)=\dfrac{1}{x-5}\)</span><br>
+</li>
+<li><span class="math inline">\(h(x)=\dfrac{1}{x^2-4}\)</span><br>
+</li>
+<li><span class="math inline">\(p(x)=\sqrt{4-x}\)</span></li>
+</ol>
+</section>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>✅ Gabarito
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<section id="exercício-1-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
+<ol type="a">
+<li><p><span class="math inline">\(3x-9=0\)</span> implica <span class="math inline">\(3x=9\)</span>, logo <span class="math inline">\(x=3\)</span>. Portanto, <span class="math inline">\(S=\{3\}\)</span>.</p></li>
+<li><p><span class="math inline">\(2x+5=17\)</span> implica <span class="math inline">\(2x=12\)</span>, logo <span class="math inline">\(x=6\)</span>. Portanto, <span class="math inline">\(S=\{6\}\)</span>.</p></li>
+<li><p><span class="math inline">\(-4x+8=0\)</span> implica <span class="math inline">\(-4x=-8\)</span>, logo <span class="math inline">\(x=2\)</span>. Portanto, <span class="math inline">\(S=\{2\}\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercício-2-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
+<ol type="a">
+<li><p><span class="math inline">\(2x-6&gt;0\)</span> implica <span class="math inline">\(2x&gt;6\)</span>, logo <span class="math inline">\(x&gt;3\)</span>. Portanto, <span class="math inline">\(S=(3,+\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(5-x\leq 2\)</span> implica <span class="math inline">\(-x\leq -3\)</span>. Dividindo por <span class="math inline">\(-1\)</span>, invertemos o sinal: <span class="math inline">\(x\geq 3\)</span>. Portanto, <span class="math inline">\(S=[3,+\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(-3x+12&gt;0\)</span> implica <span class="math inline">\(-3x&gt;-12\)</span>. Dividindo por <span class="math inline">\(-3\)</span>, invertemos o sinal: <span class="math inline">\(x&lt;4\)</span>. Portanto, <span class="math inline">\(S=(-\infty,4)\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercício-3-1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
+<ol type="a">
+<li><p><span class="math inline">\(x^2-9=0\)</span> implica <span class="math inline">\(x^2=9\)</span>, logo <span class="math inline">\(x=-3\)</span> ou <span class="math inline">\(x=3\)</span>. Portanto, <span class="math inline">\(S=\{-3,3\}\)</span>.</p></li>
+<li><p><span class="math inline">\(x^2-5x+6=0\)</span> fatorando dá <span class="math inline">\((x-2)(x-3)=0\)</span>. Logo, <span class="math inline">\(S=\{2,3\}\)</span>.</p></li>
+<li><p><span class="math inline">\(x^2+2x+1=0\)</span> fatorando dá <span class="math inline">\((x+1)^2=0\)</span>. Logo, <span class="math inline">\(S=\{-1\}\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercício-4-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
+<ol type="a">
+<li><p><span class="math inline">\(x^2-4&gt;0\)</span> equivale a <span class="math inline">\((x-2)(x+2)&gt;0\)</span>. O produto é positivo fora das raízes. Logo, <span class="math inline">\(S=(-\infty,-2)\cup(2,+\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(x^2-4\leq 0\)</span> equivale a <span class="math inline">\((x-2)(x+2)\leq 0\)</span>. O produto é não positivo entre as raízes, incluindo-as. Logo, <span class="math inline">\(S=[-2,2]\)</span>.</p></li>
+<li><p><span class="math inline">\(x^2-3x+2&gt;0\)</span> equivale a <span class="math inline">\((x-1)(x-2)&gt;0\)</span>. O produto é positivo fora das raízes. Logo, <span class="math inline">\(S=(-\infty,1)\cup(2,+\infty)\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercício-5-1" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
+<ol type="a">
+<li><p>Para <span class="math inline">\(f(x)=\sqrt{x+2}\)</span>, precisamos de <span class="math inline">\(x+2\geq 0\)</span>, isto é, <span class="math inline">\(x\geq -2\)</span>. Logo, <span class="math inline">\(D_f=[-2,+\infty)\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(g(x)=\dfrac{1}{x-5}\)</span>, precisamos de <span class="math inline">\(x-5\neq 0\)</span>, isto é, <span class="math inline">\(x\neq 5\)</span>. Logo, <span class="math inline">\(D_g=(-\infty,5)\cup(5,+\infty)\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(h(x)=\dfrac{1}{x^2-4}\)</span>, precisamos de <span class="math inline">\(x^2-4\neq 0\)</span>. Como <span class="math inline">\(x^2-4=(x-2)(x+2)\)</span>, temos <span class="math inline">\(x\neq -2\)</span> e <span class="math inline">\(x\neq 2\)</span>. Logo, <span class="math inline">\(D_h=(-\infty,-2)\cup(-2,2)\cup(2,+\infty)\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(p(x)=\sqrt{4-x}\)</span>, precisamos de <span class="math inline">\(4-x\geq 0\)</span>, isto é, <span class="math inline">\(x\leq 4\)</span>. Logo, <span class="math inline">\(D_p=(-\infty,4]\)</span>.</p></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+<hr>
+</section>
+<section id="quiz-equações-e-inequações" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Equações e Inequações</h1>
+<div class="question">
+<p><strong>Q1.</strong> Resolver uma equação significa encontrar:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Todos os valores da variável que tornam a igualdade verdadeira.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Apenas valores positivos da variável.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Somente os pontos onde a expressão não está definida.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q2.</strong> Ao dividir uma inequação por um número negativo, devemos:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Manter o sentido da desigualdade.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Inverter o sentido da desigualdade.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Trocar a inequação por uma equação.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q3.</strong> Na inequação racional <span class="math inline">\(\dfrac{x-1}{x+2}\geq 0\)</span>, o valor <span class="math inline">\(x=-2\)</span> deve ser excluído porque:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Ele torna o numerador igual a zero.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Ele torna o denominador igual a zero.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Ele é sempre negativo.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<hr>
+</section>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
+<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.6-funcoes-elementares.html">1.6 Funções Elementares</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.5-equacoes-e-inequacoes.html">Topo</a></p>
+<hr>
+<p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const rmDiacritics = (s) => s
+    .replace(/[ÁÀÂÃÄ]/g,'A').replace(/[áàâãä]/g,'a')
+    .replace(/[ÉÈÊË]/g,'E').replace(/[éèêë]/g,'e')
+    .replace(/[ÍÌÎÏ]/g,'I').replace(/[íìîï]/g,'i')
+    .replace(/[ÓÒÔÕÖ]/g,'O').replace(/[óòôõö]/g,'o')
+    .replace(/[ÚÙÛÜ]/g,'U').replace(/[úùûü]/g,'u')
+    .replace(/[Ç]/g,'C').replace(/[ç]/g,'c')
+    .replace(/[Ñ]/g,'N').replace(/[ñ]/g,'n');
+  const toSlug = (s) => rmDiacritics(String(s||"")).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+
+  const classMap = [
+    ["matematica","cat--matematica"],
+    ["estatistica","cat--estatistica"],
+    ["fisica","cat--fisica"],
+    ["programacao","cat--programacao"],
+    ["curso","cat--curso"],
+    ["artigo","cat--artigo"],
+    ["serie","cat--serie"],
+    ["sumario","cat--sumario"],
+  ];
+
+  const enhanceWrap = (wrap, sortDedup=false) => {
+    if(!wrap) return;
+
+    if (sortDedup) {
+      const items = Array.from(wrap.querySelectorAll(':scope > .quarto-category'));
+      const seen = new Map();
+      for (const el of items) {
+        const key = el.textContent.trim().toLowerCase();
+        if (seen.has(key)) el.remove(); else seen.set(key, el);
+      }
+      const sorted = Array.from(wrap.querySelectorAll(':scope > .quarto-category'))
+        .sort((a,b)=>a.textContent.trim().localeCompare(b.textContent.trim(),'pt-BR'));
+      sorted.forEach(el => wrap.appendChild(el));
+    }
+
+    wrap.querySelectorAll(':scope > .quarto-category').forEach((el) => {
+      if (el.dataset.enhancedChip === "1") return;
+      const label = el.textContent.trim();
+      const slug  = toSlug(label);
+      const plain = rmDiacritics(label.toLowerCase());
+
+      for (const [needle, cls] of classMap) {
+        if (slug===needle || slug.includes(needle) || plain.includes(needle)) { el.classList.add(cls); break; }
+      }
+
+      let chip = el;
+      if (el.tagName !== "A") {
+        const a = document.createElement('a');
+        a.className = el.className;
+        a.textContent = label;
+        a.href = `${offset}categories.html#${slug}`;
+        chip = a;
+        el.replaceWith(a);
+      } else if (!el.getAttribute('href')) {
+        el.setAttribute('href', `${offset}categories.html#${slug}`);
+      }
+
+      chip.setAttribute('aria-label', `Ver posts em ${label}`);
+      chip.setAttribute('title', `Ver posts em ${label}`);
+      chip.dataset.enhancedChip = "1";
+    });
+  };
+
+  enhanceWrap(document.querySelector('#title-block-header .quarto-categories'), true);
+  document.querySelectorAll('main .quarto-categories').forEach(wrap => enhanceWrap(wrap, false));
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blogdomarcellini\.com\.br");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025-2026 Blog do Marcellini</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>📬 <a href="mailto:prof.marcellini@gmail.com">Contato por E-mail</a><br> 💻 <a href="https://github.com/marcellini-celso/blog-marcellini-pt.git" target="_blank">GitHub do Projeto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
+</body></html>

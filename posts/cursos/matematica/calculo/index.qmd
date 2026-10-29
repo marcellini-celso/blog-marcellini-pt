@@ -1,194 +1,377 @@
 ---
 title: "🎓 Curso de Cálculo Diferencial e Integral"
-description: "Introdução ao Cálculo com teoria elegante (LaTeX), visual Quarto e exemplos em R/Python — com trilhas de Aprofundamento (AP)."
+description: "Curso completo de Cálculo Diferencial e Integral do Blog do Marcellini, com fundamentos, limites, derivadas, integrais, aplicações e aprofundamentos."
 author: "Blog do Marcellini"
-date: "2026-06-04"
+date: "2026-06-05"
 lang: pt-BR
-categories: [cálculo, matemática, derivadas, integrais, funções, limites, cursos, equações diferenciais, séries de Taylor]
-tags: [cálculo, matemática, derivadas, integrais, funções, limites, cursos, equações diferenciais, séries de Taylor]
+categories: [cálculo, matemática, derivadas, integrais, funções, limites, cursos, pré-cálculo]
+tags: [cálculo, matemática, curso, funções, limites, derivadas, integrais, pré-cálculo]
 format:
   html:
     toc: true
+    toc-title: "Neste Curso"
     number-sections: true
     theme: cosmo
     fig-align: center
     code-overflow: scroll
-    df-print: paged
     highlight-style: github
     code-link: true
 page-layout: full
 ---
 
-<!-- Breadcrumbs -->
-· [← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](../../../matematica/index.qmd)
+🏠 [← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
 ***
 
-<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start;flex-wrap:wrap;">
-  <figure style="width:340px;text-align:center;margin:.25rem;">
-    <img src="images/500px-GodfreyKneller-IsaacNewton-1689.jpeg"
-         alt="Retrato de Isaac Newton, um dos fundadores do Cálculo" style="width:100%;border-radius:12px;">
-    <figcaption><strong>Isaac Newton</strong></figcaption>
-  </figure>
-  <figure style="width:340px;text-align:center;margin:.25rem;">
-    <img src="images/Gottfried_Wilhelm_von_Leibniz.jpeg"
-         alt="Retrato de Gottfried Wilhelm Leibniz, um dos fundadores do Cálculo" style="width:100%;border-radius:12px;">
-    <figcaption><strong>Gottfried Wilhelm Leibniz</strong></figcaption>
-  </figure>
-</div>
+# 🎓 Curso de Cálculo Diferencial e Integral
 
-# 🧮 Bem-vindo ao Curso
+Este é o curso de **Cálculo Diferencial e Integral** do **Blog do Marcellini**.
 
-::: callout-note
-Este curso foi planejado para dominar **Limites, Derivadas e Integrais** com **rigor**, **visualizações** e **exercícios resolvidos**, integrando **LaTeX**, **Quarto**, **R** e **Python**.
+A proposta é construir o Cálculo com três camadas complementares:
+
+1. **ideia intuitiva**, para entender o que está acontecendo;
+2. **formalização matemática**, para dar precisão aos conceitos;
+3. **exemplos, exercícios e visualizações**, para consolidar o aprendizado.
+
+O curso começa com fundamentos de pré-cálculo, passa por funções, limites, continuidade, derivadas, integrais e aplicações, e depois avança para temas introdutórios de séries, aproximações e teoremas centrais.
+
+::: {.callout-note title="Como este curso está sendo construído"}
+O curso está em expansão. O **Módulo 1** já está completo no formato atual do blog, com navegação padronizada, exercícios, gabaritos colapsáveis e quizzes. Os próximos módulos serão publicados gradualmente.
 :::
-
-::: callout-tip
-**Trilhas AP (Aprofundamento).** Cada módulo inclui uma trilha **AP** com tópicos mais avançados que podem ser lidos depois, sem quebrar o fluxo principal.
-:::
-
-## 📘 Objetivos
-- Desenvolver raciocínio matemático em limites, derivadas e integrais;
-- Apresentar aplicações (Física, Engenharia, Economia, Computação);
-- Explorar solução de problemas com gráficos e ferramentas computacionais.
-
-## 🧩 Pré-requisitos rápidos  {.unnumbered}
-- Álgebra básica: manipulação algébrica, inequações, fatoração;
-- Noções de funções e gráficos cartesianos;
-- Conforto com notação matemática (∑, ε–δ aparecerá nos AP).
-
-## 📚 Sumário do Curso  {.unnumbered}
-
-::: panel-tabset
-## 🔹 Módulo 1 — Fundamentos de Cálculo
-- [1.1 O que é Cálculo? História e aplicações](modulo-1/1.1-introducao.qmd)  
-- [1.2 Conjuntos Numéricos](modulo-1/1.2-conjuntos.qmd)  
-- [1.2 AP — Conjuntos Numéricos (Aprofundamento)](modulo-1/1.2-conjuntos-ap.qmd)  
-- [1.3 Intervalos e Inequações](modulo-1/1.3-intervalos-inequacoes.qmd)
-- [1.3 Valor Absoluto e Inequações Modulares (Aprofundamento)](modulo-1/1.3-valor-absoluto-AP.qmd)  
-- 1.4 Funções: definição, domínio e imagem *(em produção)*  
-- 1.5 Gráficos de funções e transformações *(em produção)*  
-- 1.6 Funções elementares *(em produção)*  
-- 1.7 Limites: definição e propriedades *(em produção)*  
-- 1.8 Limites laterais e infinitos *(em produção)*  
-- 1.9 Continuidade *(em produção)*  
-
-## 🔹 Módulo 2 — Derivadas
-- Definição de derivada *(em produção)*  
-- Regras de derivação *(em produção)*  
-- Aplicações: máximos, mínimos e otimização *(em produção)*  
-- Derivadas implícitas e logarítmicas *(em produção)*  
-
-## 🔹 Módulo 3 — Integrais
-- Integral definida e indefinida *(em produção)*  
-- Técnicas de integração *(em produção)*  
-- Áreas e volumes *(em produção)*  
-- Aplicações físicas *(em produção)*  
-
-## 🔹 Módulo 4 — Tópicos Avançados e Aplicações
-- Equações diferenciais *(em produção)*  
-- Séries de Taylor *(em produção)*  
-- Modelagem com cálculo *(em produção)*  
-- Ferramentas computacionais *(em produção)*  
-:::
-
-## 🚀 Como estudar
-- Siga a ordem sugerida. Leia a **ideia central** antes da prova formal.  
-- Resolva os **exercícios propostos** e, depois, confira o **gabarito comentado**.  
-- Rode os **scripts R/Python** (pasta `code/`) para explorar os exemplos.  
-- Use os tópicos **AP** para aprofundar conceitos sem perder o ritmo.
-
-> **Código:** os scripts R e Python ficam em `posts/cursos/matematica/calculo/code/` e são incluídos nas aulas.
->
-> **Padrão do projeto:** gráficos gerados por scripts `.py`/`.R` dedicados (fora do `.qmd`) para facilitar reuso e rastreabilidade.
 
 ***
 
-# 📚 Referências
-- Anton, Howard; Bivens, Irl; Davis, Stephen. *Cálculo - Volume I*, 10ª ed. Bookman, 2014.
-- Courant, Richard; John, Fritz. *Introduction to Calculus and Analysis - Volume I*. Wiley, 1965.
-- Guidorizzi, Hamilton Luiz. *Um Curso de Cálculo - Volume 1*, 5ª ed. LTC, 2001. 
-- Leithold, Louis. *O Cálculo com Geometria Analítica - Volume 1*, 3ª ed. Harbra, 1994.  
-- Lima, Elon Lages. *Curso de Análise - Volume 1*, 11ª ed. IMPA, 2004.
-- Simmons, George F. *Calculus With Analytic Geometry*, 2ª ed. McGraw-Hill, 1985. 
+::: {.callout-note title="🧭 Do curso ao estudo guiado"}
+Este curso de Cálculo foi pensado como uma trilha aberta de estudo, com explicações, exemplos, gráficos, exercícios e quizzes.
+
+Em paralelo, está em desenvolvimento o **Projeto Trilhas da Matemática**, uma plataforma que pretende transformar esse tipo de conteúdo em uma experiência mais interativa, com:
+
+- diagnóstico por habilidade;
+- microaulas de apoio;
+- exercícios adaptativos;
+- revisão de lacunas;
+- caminhos de recuperação, consolidação e aprofundamento.
+
+A proposta é que o estudante não apenas leia o conteúdo, mas também descubra **o que já domina**, **onde precisa revisar** e **qual deve ser o próximo passo**.
+:::
+
+
+# 🧭 Como estudar
+
+Recomenda-se seguir a ordem dos módulos, especialmente se você está retomando o Cálculo desde o começo.
+
+Em cada aula:
+
+- leia primeiro a ideia central;
+- acompanhe os exemplos;
+- resolva os exercícios antes de abrir o gabarito;
+- faça o quiz final;
+- volte aos tópicos anteriores quando encontrar dificuldade.
+
+O curso foi planejado para funcionar como uma trilha progressiva: cada módulo prepara o terreno para o próximo.
+
+***
+
+# 📚 Estrutura geral do curso
+
+O curso está organizado em módulos.
+
+O **Módulo 1** é uma base de pré-cálculo e funções.  
+O **Módulo 2** inicia o estudo de limites.  
+Depois vêm continuidade, derivadas, aplicações, integrais e tópicos de aprofundamento.
+
+***
+
+# ✅ Módulo 1 — Pré-Cálculo Essencial e Funções
+
+O primeiro módulo prepara a base para o Cálculo.
+
+Ele revisa números reais, intervalos, equações, inequações, funções elementares, gráficos, composição, inversas, modelagem e comportamento assintótico.
+
+::: {.callout-tip title="Status"}
+✅ Módulo 1 completo, com aprofundamentos 1.18-AP a 1.23-AP.
+:::
+
+## Aulas publicadas
+
+| Aula | Tema | Link |
+|---:|---|---|
+| 1.1 | Introdução ao Cálculo | [Abrir aula](modulo-1/1.1-introducao.qmd) |
+| 1.2 | Conjuntos | [Abrir aula](modulo-1/1.2-conjuntos.qmd) |
+| 1.3 | Intervalos e Inequações | [Abrir aula](modulo-1/1.3-intervalos-inequacoes.qmd) |
+| 1.4 | Números Reais e Intervalos | [Abrir aula](modulo-1/1.4-numeros-reais-e-intervalos.qmd) |
+| 1.5 | Equações e Inequações | [Abrir aula](modulo-1/1.5-equacoes-e-inequacoes.qmd) |
+| 1.6 | Funções Elementares | [Abrir aula](modulo-1/1.6-funcoes-elementares.qmd) |
+| 1.7 | Funções Polinomiais e Racionais | [Abrir aula](modulo-1/1.7-funcoes-polinomiais-e-racionais.qmd) |
+| 1.8 | Exponenciais e Logaritmos | [Abrir aula](modulo-1/1.8-exponenciais-e-logaritmos.qmd) |
+| 1.9 | Trigonometria Essencial | [Abrir aula](modulo-1/1.9-trigonometria-essencial.qmd) |
+| 1.10 | Conceito Formal de Função | [Abrir aula](modulo-1/1.10-conceito-formal-de-funcao.qmd) |
+| 1.11 | Revisão Gráfica e Algébrica | [Abrir aula](modulo-1/1.11-revisao-grafica-e-algebrica.qmd) |
+| 1.12 | Transformações Gráficas | [Abrir aula](modulo-1/1.12-transformacoes-graficas.qmd) |
+| 1.13 | Composição de Funções | [Abrir aula](modulo-1/1.13-composicao-de-funcoes.qmd) |
+| 1.14 | Função Inversa | [Abrir aula](modulo-1/1.14-funcao-inversa.qmd) |
+| 1.15 | Modelos com Funções Elementares | [Abrir aula](modulo-1/1.15-modelos-com-funcoes-elementares.qmd) |
+| 1.16 | Crescimento e Comportamento Assintótico | [Abrir aula](modulo-1/1.16-crescimento-e-comportamento-assintotico.qmd) |
+| 1.17 | Revisão Geral do Módulo 1 | [Abrir aula](modulo-1/1.17-revisao-geral-do-modulo-1.qmd) |
+
+
+## O que você deve dominar ao final do Módulo 1
+
+Ao terminar este módulo, você deve conseguir:
+
+- trabalhar com intervalos da reta real;
+- resolver equações e inequações básicas;
+- reconhecer restrições de domínio;
+- identificar famílias de funções elementares;
+- interpretar gráficos;
+- reconhecer transformações gráficas;
+- compor funções;
+- entender a ideia de função inversa;
+- usar funções elementares em modelos simples;
+- comparar crescimentos básicos;
+- reconhecer assíntotas simples.
+
+Essas habilidades serão usadas diretamente no estudo de limites.
+
+
+## 🔬 Aprofundamentos do Módulo 1
+
+Após a revisão geral, estes posts aprofundam pontos estratégicos antes da entrada em limites.
+
+| Aula | Tema | Link |
+|---:|---|---|
+| 1.18-AP | Conjuntos — Aprofundamento | [Abrir aprofundamento](modulo-1/1.18-AP-conjuntos.qmd) |
+| 1.19-AP | Valor Absoluto — Aprofundamento | [Abrir aprofundamento](modulo-1/1.19-AP-valor-absoluto.qmd) |
+| 1.20-AP | Valor Absoluto, Distância e Vizinhanças | [Abrir aprofundamento](modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.qmd) |
+| 1.21-AP | Domínio de Funções — Guia Completo | [Abrir aprofundamento](modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.qmd) |
+| 1.22-AP | Funções por Partes | [Abrir aprofundamento](modulo-1/1.22-AP-funcoes-por-partes.qmd) |
+| 1.23-AP | Assíntotas e Comportamento no Infinito | [Abrir aprofundamento](modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.qmd) |
+
+Esses aprofundamentos fazem a ponte entre o Módulo 1 e o Módulo 2, especialmente para os temas de conjuntos, valor absoluto, vizinhança, domínio, limites laterais e comportamento no infinito.
 
 ***
 
 ***
-## 🧩 Quiz — Como usar este curso
 
-:::::{.question}
-**Q1.** Qual é a melhor forma de estudar este curso?
+# 🧩 Módulo 2 — Limites
 
-::::{.choices}
-:::{.choice .correct-choice}
-Seguir a ordem sugerida, lendo a ideia central antes da formalização e resolvendo os exercícios.
-:::
+O próximo módulo inicia o Cálculo propriamente dito.
 
-:::{.choice}
-Ler apenas os tópicos avançados, sem fazer os exemplos básicos.
-:::
+Limites respondem perguntas como:
 
-:::{.choice}
-Ignorar os exercícios e consultar somente o sumário.
-:::
+- o que acontece com uma função quando $x$ se aproxima de um ponto?
+- uma função se aproxima de um valor?
+- existe buraco no gráfico?
+- existe assíntota?
+- como formalizar aproximação?
 
-::::
-:::::
+## Aulas planejadas
 
-:::::{.question}
-**Q2.** O que significa a marca **AP** usada em algumas aulas?
+| Aula | Tema | Status |
+|---:|---|---|
+| 2.1 | Ideia Intuitiva de Limite | Planejada |
+| 2.2 | Limites Laterais | Planejada |
+| 2.3 | Limites e Gráficos | Planejada |
+| 2.4 | Propriedades dos Limites | Planejada |
+| 2.5 | Limites de Funções Polinomiais e Racionais | Planejada |
+| 2.6 | Limites Infinitos e Assíntotas Verticais | Planejada |
+| 2.7 | Limites no Infinito e Assíntotas Horizontais | Planejada |
+| 2.8 | Limites Fundamentais | Planejada |
+| 2.9 | Técnicas Algébricas para Limites | Planejada |
+| 2.10 | Revisão Geral de Limites | Planejada |
 
-::::{.choices}
-:::{.choice .correct-choice}
-Indica uma aula de aprofundamento, pensada para desenvolver mais rigor e detalhes conceituais.
-:::
+***
 
-:::{.choice}
-Indica uma aula opcional sem relação com o curso.
-:::
+# 🧱 Módulo 3 — Continuidade
 
-:::{.choice}
-Indica apenas uma lista de respostas numéricas.
-:::
+A continuidade formaliza a ideia de gráficos sem quebras, saltos ou buracos.
 
-::::
-:::::
+## Tópicos previstos
 
-:::::{.question}
-**Q3.** Qual é a relação entre as aulas básicas e as aulas de aprofundamento?
+- definição intuitiva de continuidade;
+- continuidade em um ponto;
+- continuidade em intervalos;
+- descontinuidades removíveis;
+- descontinuidades por salto;
+- descontinuidades infinitas;
+- operações com funções contínuas;
+- Teorema do Valor Intermediário;
+- aplicações iniciais.
 
-::::{.choices}
-:::{.choice .correct-choice}
-As aulas básicas constroem o caminho principal; as de aprofundamento ampliam a compreensão sem quebrar a sequência.
-:::
+***
 
-:::{.choice}
-As aulas de aprofundamento substituem todas as aulas básicas.
-:::
+# 📈 Módulo 4 — Derivadas
 
-:::{.choice}
-As aulas básicas devem ser lidas somente depois das avançadas.
-:::
+A derivada mede taxa de variação instantânea e inclinação da reta tangente.
 
-::::
-:::::
+## Tópicos previstos
+
+- problema da reta tangente;
+- taxa média e taxa instantânea;
+- definição de derivada;
+- derivadas de funções elementares;
+- regras de derivação;
+- regra do produto;
+- regra do quociente;
+- regra da cadeia;
+- derivadas de exponenciais e logaritmos;
+- derivadas trigonométricas;
+- derivação implícita.
+
+***
+
+# 🧭 Módulo 5 — Teoremas do Cálculo Diferencial
+
+Este módulo organiza os resultados teóricos fundamentais sobre derivadas.
+
+## Tópicos previstos
+
+- Teorema de Fermat;
+- Teorema de Rolle;
+- Teorema do Valor Médio;
+- consequências do Teorema do Valor Médio;
+- monotonicidade e derivada;
+- concavidade;
+- análise qualitativa de gráficos.
+
+***
+
+# 🏗️ Módulo 6 — Aplicações da Derivada
+
+A derivada será usada para resolver problemas de otimização, aproximação e análise de comportamento.
+
+## Tópicos previstos
+
+- máximos e mínimos;
+- otimização;
+- problemas geométricos;
+- problemas econômicos simples;
+- taxas relacionadas;
+- aproximação linear;
+- diferenciais;
+- método de Newton;
+- esboço de gráficos com derivadas.
+
+***
+
+# ∫ Módulo 7 — Integral Indefinida
+
+Este módulo introduz primitivas e técnicas iniciais de integração.
+
+## Tópicos previstos
+
+- antiderivadas;
+- integral indefinida;
+- tabela básica de integrais;
+- integração por substituição;
+- integração por partes;
+- integrais trigonométricas simples;
+- aplicações iniciais.
+
+***
+
+# 📐 Módulo 8 — Integral Definida
+
+A integral definida formaliza área, acumulação e soma contínua.
+
+## Tópicos previstos
+
+- soma de Riemann;
+- área sob a curva;
+- definição de integral definida;
+- propriedades da integral definida;
+- Teorema Fundamental do Cálculo;
+- cálculo de integrais definidas;
+- interpretação geométrica e física.
+
+***
+
+# 🧮 Módulo 9 — Aplicações da Integral
+
+A integral será aplicada a problemas de área, volume, acumulação e médias.
+
+## Tópicos previstos
+
+- áreas entre curvas;
+- volumes por discos e arruelas;
+- volumes por cascas cilíndricas;
+- comprimento de arco;
+- valor médio de uma função;
+- trabalho;
+- acumulação;
+- aplicações em modelos.
+
+***
+
+# ♾️ Módulo 10 — Integrais Impróprias e Séries Introdutórias
+
+Este módulo abre caminho para temas mais avançados.
+
+## Tópicos previstos
+
+- integrais impróprias em intervalos infinitos;
+- integrais impróprias com descontinuidade;
+- critérios básicos de convergência;
+- introdução a sequências;
+- introdução a séries;
+- séries geométricas;
+- séries harmônicas;
+- conexões com aproximações.
+
+***
+
+# 🔬 Aprofundamentos futuros
+
+Além dos módulos principais, o curso poderá receber textos de aprofundamento.
+
+## Possíveis temas
+
+- construção rigorosa dos números reais;
+- supremo e completude;
+- limites pela definição $\varepsilon$-$\delta$;
+- demonstrações clássicas de derivadas;
+- Teorema de Bolzano;
+- Teorema de Weierstrass;
+- Teorema Fundamental do Cálculo em detalhe;
+- aplicações computacionais com Python e R;
+- visualizações com gráficos e animações;
+- listas extras em PDF;
+- exercícios resolvidos comentados.
+
+***
+
+# 🧭 Padrão das aulas
+
+As aulas do curso seguem, sempre que possível, esta estrutura:
+
+1. contextualização;
+2. ideia central;
+3. desenvolvimento teórico;
+4. exemplos resolvidos;
+5. exercícios propostos;
+6. gabarito comentado;
+7. quiz final;
+8. navegação para aula anterior e próxima aula.
+
+Esse padrão ajuda o estudante a avançar com segurança e também facilita revisões futuras.
+
+***
+
+# 📚 Referências recomendadas
+
+Algumas referências clássicas para acompanhar o curso:
+
+- James Stewart — *Cálculo*;
+- George B. Thomas — *Cálculo*;
+- Louis Leithold — *O Cálculo com Geometria Analítica*;
+- Michael Spivak — *Calculus*;
+- Richard Courant e Fritz John — *Introduction to Calculus and Analysis*;
+- Serge Lang — *A First Course in Calculus*.
+
+Essas referências têm estilos diferentes. Algumas são mais aplicadas, outras mais teóricas. O curso do blog procura equilibrar intuição, técnica e rigor.
 
 ***
 
 # 🔗 Navegação
 
-🎯 **Próximo Post:** 👉 [1.1 O que é Cálculo? História e aplicações](modulo-1/1.1-introducao.qmd)
-
-***
-
-· [← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](../../../matematica/index.qmd) · 🔝 [Topo](index.qmd)
-
-***
-
-*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
-
-::: callout-note
-Criado por Blog do Marcellini com ❤️ e código.
-:::
-
+🏠 [← Cursos de Matemática](../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Topo](index.qmd)

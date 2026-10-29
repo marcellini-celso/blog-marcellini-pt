@@ -6,3 +6,11 @@
 .Rhistory
 .RData
 .Rproj.user/
+
+/.venv/
+
+__pycache__/
+
+*.pyc
+
+*:Zone.Identifier

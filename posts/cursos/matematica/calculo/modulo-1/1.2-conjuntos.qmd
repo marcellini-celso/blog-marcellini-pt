@@ -19,15 +19,17 @@ format:
 page-layout: full
 ---
 
-· [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
-
-***
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
 🎯 **Post Anterior:** 👉 [1.1 O que é Cálculo? História e aplicações](1.1-introducao.qmd)
 
 ***
 
-# 🔢 Módulo 1.2: Conjuntos Numéricos
+::: {.callout-tip title="❓ Pergunta Disparadora"}
+Como podemos organizar objetos matemáticos em coleções e operar com essas coleções de forma precisa?
+:::
+
+
 
 ::: {.callout-note title="📌 Objetivos do Post"}
 - Explorar os conjuntos numéricos fundamentais para o cálculo;
@@ -35,7 +37,7 @@ page-layout: full
 - Apresentar exemplos e exercícios característicos.
 :::
 
-## ✨ O que são Conjuntos Numéricos?
+# ✨ O que são Conjuntos Numéricos?
 
 Os conjuntos numéricos são grupos de números que compartilham características comuns. Os principais que usaremos são:
 
@@ -65,7 +67,7 @@ Os conjuntos numéricos são grupos de números que compartilham característica
 
 ***
 
-## 🧠 Organização dos Conjuntos Numéricos
+# 🧠 Organização dos Conjuntos Numéricos
 
 Os conjuntos se organizam em **cadeia de inclusões**:
 \[
@@ -84,7 +86,7 @@ Isso significa, por exemplo, que **todo número natural é inteiro, racional e r
 
 ***
 
-## 🔍 🧠 Saiba Mais: O que é um número irracional?
+# 🔍 🧠 Saiba Mais: O que é um número irracional?
 
 ::: {.callout-tip collapse=false title="🧠 Saiba Mais: O que é um número irracional?"}
 🔢 Um irracional é um real **que não pode ser escrito** como \(\dfrac{a}{b}\) com \(a,b\in\mathbb{Z}\) e \(b\neq 0\).  
@@ -94,7 +96,7 @@ Surgem naturalmente em: diagonal do quadrado (\(\sqrt{2}\)), circunferência (\(
 Historicamente, a irracionalidade de \(\sqrt{2}\) abalou a escola pitagórica.
 :::
 
-## 📐 A Escola Pitagórica e o “escândalo” dos irracionais
+# 📐 A Escola Pitagórica e o “escândalo” dos irracionais
 
 ::: {.callout-note collapse=false title="📐 A Escola Pitagórica e os Irracionais"}
 **Quem eram?** Comunidade filósofo-matemática (séc. VI a.C.) que defendia “**tudo é número**” (racional).
@@ -105,7 +107,7 @@ Atribui-se a **Hipaso** a demonstração da irracionalidade de \(\sqrt{2}\).
 **Impacto.** Primeiro abalo dessa visão; início da aceitação formal dos irracionais, essenciais para a **completude** de \(\mathbb{R}\).
 :::
 
-## 📘 🧠 Exercícios — Identificando Irracionais
+# 📘 🧠 Exercícios — Identificando Irracionais
 
 ::: {.callout-note collapse=false title="📘 🧠 Exercícios — Identificando Números Irracionais"}
 1. Classifique como **racional** ou **irracional**:  
@@ -120,7 +122,7 @@ Atribui-se a **Hipaso** a demonstração da irracionalidade de \(\sqrt{2}\).
    c) Existem mais irracionais do que racionais.
 :::
 
-## 📘 Gabarito (identificação)
+# 📘 Gabarito (identificação)
 
 ::: {.callout-important collapse=true title="📘 Gabarito"}
 1. a) Racional (\(=3\)) · b) Irracional · c) Racional · d) Irracional · e) Irracional (infinito não periódico)  
@@ -130,7 +132,7 @@ Atribui-se a **Hipaso** a demonstração da irracionalidade de \(\sqrt{2}\).
 
 ***
 
-## 📜 Nota Histórica: Georg Cantor (1845–1918)
+# 📜 Nota Histórica: Georg Cantor (1845–1918)
 
 ::: {.callout-tip collapse=false title="📜 Nota Histórica: Georg Cantor"}
 Criador da **teoria dos conjuntos** e do tratamento moderno do **infinito**.  
@@ -139,7 +141,7 @@ Provou que \(\mathbb{R}\) (logo, os irracionais) é **não enumerável**, enquan
 
 ***
 
-## ✨ Representação Decimal dos Reais
+# ✨ Representação Decimal dos Reais
 
 - **Racionais**: decimal **finito** ou **infinito periódico**.  
 - **Irracionais**: decimal **infinito não periódico**.
@@ -151,7 +153,7 @@ Provou que \(\mathbb{R}\) (logo, os irracionais) é **não enumerável**, enquan
 
 ***
 
-## ✨ Dízimas periódicas e fração geratriz
+# ✨ Dízimas periódicas e fração geratriz
 
 **Ex. 1 —** \(\tfrac{1}{3}\):  
     \(1\div 3 = 0{,}333\ldots = 0{,}\overline{3}\) → **racional**.
@@ -172,7 +174,7 @@ Caso contrário, a expansão é uma **dízima periódica**.
 
 ***
 
-## 📘 🧠 Exercícios Resolvidos — Fração Geratriz
+# 📘 🧠 Exercícios Resolvidos — Fração Geratriz
 
 ::: {.callout-note collapse=false title="📘 Exercícios Resolvidos: Dízimas → Fração"}
 **1.** \(0{,}\overline{3}\).  
@@ -191,7 +193,7 @@ Seja \(x=0{,}\overline{72}\). \(100x=72{,}\overline{72}\) ⇒ \(99x=72\) ⇒ \(x
 \(x=3{,}12555\ldots\). \(1000x=3125{,}555\ldots\), \(100x=312{,}555\ldots\) ⇒ \(900x=2813\) ⇒ \(x=\tfrac{2813}{900}\).
 :::
 
-## 🧩 Exercícios — Fração Geratriz
+# 🧩 Exercícios — Fração Geratriz
 
 ::: {.callout-note collapse=false title="🧩 Exercícios: Dízimas → Fração"}
 1) \(0{,}\overline{3}\), \(0{,}\overline{7}\), \(0{,}\overline{2}\)  
@@ -200,7 +202,7 @@ Seja \(x=0{,}\overline{72}\). \(100x=72{,}\overline{72}\) ⇒ \(99x=72\) ⇒ \(x
 4) \(0{,}4\overline{5}\) (simplifique)
 :::
 
-## ✅ Gabarito — Fração Geratriz
+# ✅ Gabarito — Fração Geratriz
 
 ::: {.callout-important collapse=true title="✅ Gabarito — Fração Geratriz"}
 1) \(\tfrac{1}{3}\), \(\tfrac{7}{9}\), \(\tfrac{2}{9}\)
@@ -214,7 +216,7 @@ Seja \(x=0{,}\overline{72}\). \(100x=72{,}\overline{72}\) ⇒ \(99x=72\) ⇒ \(x
 
 ***
 
-## 📚 Propriedades dos Conjuntos Numéricos
+# 📚 Propriedades dos Conjuntos Numéricos
 
 🔸 **Definições úteis**
 
@@ -242,7 +244,7 @@ Decimais infinitos **não periódicos**; **densos**; não fechados para \(+\) ou
 \(\mathbb{Q}\cup(\mathbb{R}\setminus\mathbb{Q})\); representam a reta real.  
 Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}\).
 
-## 📌 Resumo — Propriedades
+# 📌 Resumo — Propriedades
 
 ::: {.callout-tip collapse=false title="📌 Resumo: Propriedades dos Conjuntos"}
 | Conjunto        | Símbolo | Propriedades principais |
@@ -254,7 +256,7 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 | Reais           | \(\mathbb{R}\) | União de racionais e irracionais; divisão definida para \(b\neq 0\). |
 :::
 
-## 📚 Propriedades Algébricas Básicas em \(\mathbb{R}\)
+# 📚 Propriedades Algébricas Básicas em \(\mathbb{R}\)
 
 ::: {.callout-note collapse=false title="📚 Propriedades Algébricas Básicas em \(\mathbb{R}\)"}
 - \(0\cdot x=0\);\quad \((-x)\cdot y=-(x\cdot y)\);\quad \((-x)(-y)=x\cdot y\)  
@@ -265,7 +267,7 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 - \(x\neq 0,\ y\neq 0\Rightarrow x\cdot y\neq 0\) (**não há divisores de zero em \(\mathbb{R}\)**)
 :::
 
-## ✏️ Operações Auxiliares
+# ✏️ Operações Auxiliares
 
 ::: {.callout-note collapse=false title="Operações Auxiliares"}
 **Subtração**: \(a-b=a+(-b)\).  
@@ -279,7 +281,23 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 
 ***
 
-## 🧠 Exercícios de Revisão
+## 🧾 Quadro-resumo
+
+| Ideia | Significado | Papel no Cálculo |
+|---|---|---|
+| Conjuntos numéricos | Famílias de números com propriedades em comum | Organizam os objetos com que o Cálculo trabalha |
+| \(\mathbb{N}\) | Números naturais | Contagem e sequências iniciais |
+| \(\mathbb{Z}\) | Números inteiros | Inclui negativos e zero |
+| \(\mathbb{Q}\) | Números racionais, escritos como frações | Representam razões, proporções e dízimas periódicas |
+| Irracionais | Números reais que não podem ser escritos como fração de inteiros | Incluem \(\sqrt{2}\), \(\pi\), \(e\) e muitos limites importantes |
+| \(\mathbb{R}\) | Conjunto dos números reais | Ambiente natural das funções reais de uma variável |
+| Dízima periódica | Decimal com repetição infinita de blocos | Sempre representa um número racional |
+| Completude dos reais | Ausência de “buracos” na reta real | Sustenta a ideia de limite no Cálculo |
+| Propriedades algébricas | Regras de soma, produto, distributividade, neutros e inversos | Permitem manipular expressões com segurança |
+
+***
+
+# 🧠 Exercícios de Revisão
 
 ::: {.callout-note collapse=false title="🧠 Exercícios de Revisão — Módulo 1.2"}
 1) Classifique: \(\sqrt{2}\), \(0{,}333\ldots\), \(\pi\), \(7/2\), \(\sqrt{25}\).  
@@ -294,7 +312,7 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 10) Se \(x\cdot a=x\) e \(x\neq 0\), conclua sobre \(a\).
 :::
 
-## 📝 Resoluções
+# 📝 Resoluções
 
 ::: {.callout-important collapse=true title="📝 Resoluções"}
 1) I, R, I, R, R.  
@@ -311,8 +329,7 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 
 ***
 
-***
-## 🧩 Quiz — Conjuntos Numéricos
+# 🧩 Quiz — Conjuntos Numéricos
 
 :::::{.question}
 **Q1.** A cadeia correta de inclusões entre os principais conjuntos numéricos é:
@@ -376,9 +393,11 @@ Um número que não pertence aos reais.
 
 # 🔗 Navegação
 
-🎯 **Próximo Post:** 👉 [1.2 Conjuntos Numéricos (Aprofundamento)](1.2-conjuntos-ap.qmd)
+🎯 **Post Anterior:** 👉 [1.1 O que é Cálculo? História e aplicações](1.1-introducao.qmd)
 
-· [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.2-conjuntos.qmd)
+🎯 **Próximo Post:** 👉 [1.3 Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.2-conjuntos.qmd)
 
 ***
 

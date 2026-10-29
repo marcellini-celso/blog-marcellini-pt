@@ -1,0 +1,899 @@
+---
+title: "📘 Módulo 1.12: Transformações Gráficas"
+description: "Estudo das transformações gráficas de funções: translações, reflexões, alongamentos, compressões e combinações."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, funções, gráficos]
+tags: [cálculo, matemática, funções, transformações gráficas, gráficos, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+
+***
+
+# 📘 Transformações Gráficas
+
+Uma das maneiras mais eficientes de entender funções é observar como seus gráficos mudam quando alteramos a fórmula.
+
+Se conhecemos o gráfico de uma função simples, como
+
+$$
+f(x)=x^2,
+$$
+
+podemos construir muitos outros gráficos a partir dele:
+
+$$
+f(x)+3,\qquad f(x-2),\qquad -f(x),\qquad 2f(x).
+$$
+
+Essas modificações são chamadas de **transformações gráficas**.
+
+Elas são importantes porque permitem reconhecer rapidamente deslocamentos, reflexões, alongamentos, compressões e mudanças de domínio. No Cálculo, essa habilidade será útil para estudar limites, continuidade, derivadas e integrais.
+
+***
+
+## A ideia básica
+
+Suponha que conhecemos o gráfico de
+
+$$
+y=f(x).
+$$
+
+A partir dele, podemos estudar funções como:
+
+$$
+y=f(x)+k,
+$$
+
+$$
+y=f(x-h),
+$$
+
+$$
+y=-f(x),
+$$
+
+$$
+y=f(-x),
+$$
+
+$$
+y=af(x),
+$$
+
+e
+
+$$
+y=f(bx).
+$$
+
+Cada uma dessas expressões altera o gráfico original de uma forma específica.
+
+A distinção mais importante é esta:
+
+::: {.callout-note title="Ideia central"}
+Transformações fora da função alteram os valores de saída. Transformações dentro da função alteram os valores de entrada.
+:::
+
+Por exemplo, em
+
+$$
+f(x)+3,
+$$
+
+a soma acontece depois de calcular $f(x)$. A mudança é vertical.
+
+Em
+
+$$
+f(x-3),
+$$
+
+a alteração acontece antes de aplicar a função. A mudança é horizontal.
+
+***
+
+## Translação vertical
+
+A transformação
+
+$$
+g(x)=f(x)+k
+$$
+
+desloca o gráfico de $f$ verticalmente.
+
+- Se $k>0$, o gráfico sobe $k$ unidades.
+- Se $k<0$, o gráfico desce $|k|$ unidades.
+
+Por exemplo, se
+
+$$
+f(x)=x^2,
+$$
+
+então
+
+$$
+g(x)=x^2+2
+$$
+
+é o gráfico de $f$ deslocado $2$ unidades para cima.
+
+Já
+
+$$
+h(x)=x^2-5
+$$
+
+é o gráfico de $f$ deslocado $5$ unidades para baixo.
+
+Em termos de pontos, se
+
+$$
+(x,y)
+$$
+
+está no gráfico de $f$, então
+
+$$
+(x,y+k)
+$$
+
+está no gráfico de $g(x)=f(x)+k$.
+
+***
+
+## Translação horizontal
+
+A transformação
+
+$$
+g(x)=f(x-h)
+$$
+
+desloca o gráfico horizontalmente.
+
+- Se $h>0$, o gráfico vai para a direita $h$ unidades.
+- Se $h<0$, o gráfico vai para a esquerda $|h|$ unidades.
+
+Esse é um ponto que costuma causar confusão: o sinal parece agir ao contrário.
+
+Por exemplo, se
+
+$$
+f(x)=x^2,
+$$
+
+então
+
+$$
+g(x)=(x-3)^2
+$$
+
+é o gráfico de $f$ deslocado $3$ unidades para a direita.
+
+Já
+
+$$
+h(x)=(x+2)^2
+$$
+
+é o gráfico de $f$ deslocado $2$ unidades para a esquerda.
+
+Em termos de pontos, se
+
+$$
+(x,y)
+$$
+
+está no gráfico de $f$, então
+
+$$
+(x+h,y)
+$$
+
+está no gráfico de $g(x)=f(x-h)$.
+
+***
+
+## Reflexão em relação ao eixo horizontal
+
+A transformação
+
+$$
+g(x)=-f(x)
+$$
+
+reflete o gráfico em relação ao eixo horizontal.
+
+Isso acontece porque todos os valores de saída mudam de sinal.
+
+Se um ponto do gráfico de $f$ é
+
+$$
+(x,y),
+$$
+
+então o ponto correspondente no gráfico de $g$ é
+
+$$
+(x,-y).
+$$
+
+Por exemplo, se
+
+$$
+f(x)=x^2,
+$$
+
+então
+
+$$
+g(x)=-x^2
+$$
+
+é a parábola refletida em relação ao eixo $x$.
+
+A parábola que antes tinha concavidade para cima passa a ter concavidade para baixo.
+
+***
+
+## Reflexão em relação ao eixo vertical
+
+A transformação
+
+$$
+g(x)=f(-x)
+$$
+
+reflete o gráfico em relação ao eixo vertical.
+
+Isso acontece porque trocamos cada entrada $x$ por $-x$.
+
+Se um ponto do gráfico de $f$ é
+
+$$
+(x,y),
+$$
+
+então o ponto correspondente no gráfico de $g$ é
+
+$$
+(-x,y).
+$$
+
+Por exemplo, a função
+
+$$
+f(x)=\sqrt{x}
+$$
+
+tem domínio
+
+$$
+[0,+\infty).
+$$
+
+Já
+
+$$
+g(x)=\sqrt{-x}
+$$
+
+é a reflexão do gráfico em relação ao eixo vertical e tem domínio
+
+$$
+(-\infty,0].
+$$
+
+***
+
+## Alongamento e compressão vertical
+
+A transformação
+
+$$
+g(x)=af(x)
+$$
+
+altera verticalmente o gráfico.
+
+- Se $|a|>1$, há alongamento vertical.
+- Se $0<|a|<1$, há compressão vertical.
+- Se $a<0$, além disso, há reflexão em relação ao eixo horizontal.
+
+Por exemplo, se
+
+$$
+f(x)=x^2,
+$$
+
+então
+
+$$
+g(x)=3x^2
+$$
+
+é um alongamento vertical por fator $3$.
+
+Já
+
+$$
+h(x)=\frac{1}{2}x^2
+$$
+
+é uma compressão vertical.
+
+E
+
+$$
+p(x)=-2x^2
+$$
+
+combina reflexão em relação ao eixo horizontal com alongamento vertical por fator $2$.
+
+***
+
+## Alongamento e compressão horizontal
+
+A transformação
+
+$$
+g(x)=f(bx)
+$$
+
+altera horizontalmente o gráfico.
+
+- Se $|b|>1$, o gráfico é comprimido horizontalmente.
+- Se $0<|b|<1$, o gráfico é alongado horizontalmente.
+- Se $b<0$, também ocorre reflexão em relação ao eixo vertical.
+
+Esse comportamento parece inverso porque a transformação acontece na entrada.
+
+Por exemplo, se
+
+$$
+f(x)=\sin x,
+$$
+
+então
+
+$$
+g(x)=\sin(2x)
+$$
+
+tem período menor que o de $\sin x$.
+
+Como o período de $\sin x$ é $2\pi$, o período de $\sin(2x)$ é
+
+$$
+\frac{2\pi}{2}=\pi.
+$$
+
+Já
+
+$$
+h(x)=\sin\left(\frac{x}{2}\right)
+$$
+
+tem período
+
+$$
+4\pi.
+$$
+
+***
+
+## Combinações de transformações
+
+Muitas funções combinam várias transformações.
+
+Considere
+
+$$
+g(x)=2(x-3)^2+1.
+$$
+
+Partimos da função base
+
+$$
+f(x)=x^2.
+$$
+
+A expressão
+
+$$
+(x-3)^2
+$$
+
+desloca o gráfico $3$ unidades para a direita.
+
+O fator $2$ produz alongamento vertical.
+
+O termo $+1$ desloca o gráfico $1$ unidade para cima.
+
+Assim, o vértice da parábola, que era
+
+$$
+(0,0),
+$$
+
+passa a ser
+
+$$
+(3,1).
+$$
+
+***
+
+## Transformações em funções trigonométricas
+
+Funções trigonométricas aparecem frequentemente com transformações.
+
+Considere
+
+$$
+g(x)=A\sin(Bx+C)+D.
+$$
+
+Nesse caso:
+
+- $A$ controla a amplitude;
+- $B$ controla o período;
+- $C$ está relacionado ao deslocamento horizontal;
+- $D$ desloca o gráfico verticalmente.
+
+Quando a função é
+
+$$
+g(x)=A\sin(Bx)+D,
+$$
+
+a amplitude é
+
+$$
+|A|,
+$$
+
+e o período é
+
+$$
+\frac{2\pi}{|B|}.
+$$
+
+Por exemplo,
+
+$$
+g(x)=3\sin(2x)-1
+$$
+
+tem amplitude $3$, período $\pi$ e deslocamento vertical de $1$ unidade para baixo.
+
+***
+
+## Transformações e domínio
+
+Transformações podem alterar o domínio.
+
+A função
+
+$$
+f(x)=\sqrt{x}
+$$
+
+tem domínio
+
+$$
+[0,+\infty).
+$$
+
+A função
+
+$$
+g(x)=\sqrt{x-2}
+$$
+
+exige
+
+$$
+x-2\geq 0.
+$$
+
+Logo,
+
+$$
+x\geq 2,
+$$
+
+e
+
+$$
+D_g=[2,+\infty).
+$$
+
+Já
+
+$$
+h(x)=\sqrt{-x}
+$$
+
+exige
+
+$$
+-x\geq 0,
+$$
+
+isto é,
+
+$$
+x\leq 0.
+$$
+
+Logo,
+
+$$
+D_h=(-\infty,0].
+$$
+
+Por isso, ao transformar uma função, não devemos olhar apenas para o desenho do gráfico. Também devemos verificar o domínio.
+
+***
+
+## Ordem das transformações
+
+Quando várias transformações aparecem juntas, convém interpretá-las com cuidado.
+
+Considere
+
+$$
+g(x)=-2f(x-3)+4.
+$$
+
+Uma leitura possível é:
+
+1. $x-3$: deslocamento horizontal para a direita;
+2. multiplicação por $2$: alongamento vertical;
+3. sinal negativo: reflexão em relação ao eixo horizontal;
+4. $+4$: deslocamento vertical para cima.
+
+Essa leitura ajuda a construir o gráfico passo a passo.
+
+***
+
+## Por que isso importa para o Cálculo?
+
+Transformações gráficas ajudam a reconhecer funções rapidamente.
+
+No estudo de limites, elas ajudam a visualizar deslocamentos, aproximações e assíntotas.
+
+No estudo de continuidade, ajudam a perceber quebras, buracos e mudanças de domínio.
+
+No estudo de derivadas, ajudam a prever inclinações e crescimento.
+
+No estudo de integrais, ajudam a interpretar áreas e simetrias.
+
+Em resumo, transformações gráficas são uma ponte entre a álgebra da fórmula e a geometria do gráfico.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Considere a função base
+
+$$
+f(x)=x^2.
+$$
+
+Descreva a transformação em cada caso:
+
+a) $g(x)=x^2+4$  
+b) $h(x)=x^2-3$  
+c) $p(x)=(x-2)^2$  
+d) $q(x)=(x+5)^2$
+
+## Exercício 2
+
+Ainda considerando
+
+$$
+f(x)=x^2,
+$$
+
+descreva a transformação:
+
+a) $g(x)=-x^2$  
+b) $h(x)=3x^2$  
+c) $p(x)=\dfrac{1}{2}x^2$  
+d) $q(x)=-2x^2$
+
+## Exercício 3
+
+Determine o vértice da parábola:
+
+a) $g(x)=(x-4)^2+1$  
+b) $h(x)=(x+2)^2-3$  
+c) $p(x)=2(x-1)^2+5$
+
+## Exercício 4
+
+Determine o domínio real das funções:
+
+a) $f(x)=\sqrt{x-3}$  
+b) $g(x)=\sqrt{x+2}$  
+c) $h(x)=\sqrt{-x}$  
+d) $p(x)=\sqrt{5-x}$
+
+## Exercício 5
+
+Para a função
+
+$$
+g(x)=3\sin(2x)-1,
+$$
+
+determine:
+
+a) a amplitude;  
+b) o período;  
+c) o deslocamento vertical.
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+a) $g(x)=x^2+4$ é o gráfico de $f(x)=x^2$ deslocado $4$ unidades para cima.  
+
+b) $h(x)=x^2-3$ é o gráfico deslocado $3$ unidades para baixo.  
+
+c) $p(x)=(x-2)^2$ é o gráfico deslocado $2$ unidades para a direita.  
+
+d) $q(x)=(x+5)^2$ é o gráfico deslocado $5$ unidades para a esquerda.
+
+## Exercício 2
+
+a) $g(x)=-x^2$ é uma reflexão em relação ao eixo horizontal.  
+
+b) $h(x)=3x^2$ é um alongamento vertical por fator $3$.  
+
+c) $p(x)=\dfrac{1}{2}x^2$ é uma compressão vertical por fator $\dfrac{1}{2}$.  
+
+d) $q(x)=-2x^2$ combina reflexão em relação ao eixo horizontal com alongamento vertical por fator $2$.
+
+## Exercício 3
+
+a) A função
+
+$$
+g(x)=(x-4)^2+1
+$$
+
+vem de $x^2$ deslocada $4$ unidades para a direita e $1$ para cima. Logo, o vértice é
+
+$$
+(4,1).
+$$
+
+b) A função
+
+$$
+h(x)=(x+2)^2-3
+$$
+
+vem de $x^2$ deslocada $2$ unidades para a esquerda e $3$ para baixo. Logo, o vértice é
+
+$$
+(-2,-3).
+$$
+
+c) A função
+
+$$
+p(x)=2(x-1)^2+5
+$$
+
+vem de $x^2$ deslocada $1$ unidade para a direita, alongada verticalmente por fator $2$ e deslocada $5$ unidades para cima. Logo, o vértice é
+
+$$
+(1,5).
+$$
+
+## Exercício 4
+
+a) Para $f(x)=\sqrt{x-3}$, precisamos de
+
+$$
+x-3\geq 0.
+$$
+
+Logo,
+
+$$
+x\geq 3,
+$$
+
+e
+
+$$
+D_f=[3,+\infty).
+$$
+
+b) Para $g(x)=\sqrt{x+2}$, precisamos de
+
+$$
+x+2\geq 0.
+$$
+
+Logo,
+
+$$
+x\geq -2,
+$$
+
+e
+
+$$
+D_g=[-2,+\infty).
+$$
+
+c) Para $h(x)=\sqrt{-x}$, precisamos de
+
+$$
+-x\geq 0.
+$$
+
+Logo,
+
+$$
+x\leq 0,
+$$
+
+e
+
+$$
+D_h=(-\infty,0].
+$$
+
+d) Para $p(x)=\sqrt{5-x}$, precisamos de
+
+$$
+5-x\geq 0.
+$$
+
+Logo,
+
+$$
+x\leq 5,
+$$
+
+e
+
+$$
+D_p=(-\infty,5].
+$$
+
+## Exercício 5
+
+A função é
+
+$$
+g(x)=3\sin(2x)-1.
+$$
+
+a) A amplitude é
+
+$$
+|3|=3.
+$$
+
+b) O período é
+
+$$
+\frac{2\pi}{|2|}=\pi.
+$$
+
+c) O deslocamento vertical é $1$ unidade para baixo, pois aparece o termo $-1$.
+
+:::
+
+***
+
+## 🧩 Quiz — Transformações Gráficas
+
+:::::{.question}
+**Q1.** A função $g(x)=f(x)+3$ representa:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Uma translação vertical de $3$ unidades para cima.
+:::
+
+:::{.choice}
+Uma translação horizontal de $3$ unidades para a direita.
+:::
+
+:::{.choice}
+Uma reflexão em relação ao eixo vertical.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** A função $g(x)=f(x-2)$ representa:
+
+::::{.choices}
+:::{.choice}
+Uma translação de $2$ unidades para a esquerda.
+:::
+
+:::{.choice .correct-choice}
+Uma translação de $2$ unidades para a direita.
+:::
+
+:::{.choice}
+Uma translação de $2$ unidades para baixo.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** A transformação $g(x)=-f(x)$ produz:
+
+::::{.choices}
+:::{.choice}
+Reflexão em relação ao eixo vertical.
+:::
+
+:::{.choice .correct-choice}
+Reflexão em relação ao eixo horizontal.
+:::
+
+:::{.choice}
+Compressão horizontal.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+
+🎯 **Próximo Post:** 👉 [1.13 Composição de Funções](1.13-composicao-de-funcoes.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.12-transformacoes-graficas.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

@@ -1,137 +1,63 @@
 # Blog do Marcellini
 
-Este é o repositório do meu blog pessoal, criado com [Quarto](https://quarto.org/). Aqui compartilho conteúdos sobre estatística, matemática, programação e física, com foco em explicações didáticas e exemplos práticos.
+Blog pessoal de Celso Marcellini sobre Matemática, Estatística, Física e Programação, com explicações didáticas, exemplos em R/Python e tipografia matemática.
 
-This is the repository for my personal blog, created with [Quarto](https://quarto.org/). Here, I share content on statistics, mathematics, programming, and physics, with a focus on clear explanations and practical examples.
+🌐 **[Acesse o Blog do Marcellini](https://blogdomarcellini.com.br/)**
 
----
+## Conteúdo
 
-## 📚 Publicações em destaque
+- [Curso de Cálculo Diferencial e Integral](https://blogdomarcellini.com.br/posts/cursos/matematica/calculo/index.html): Módulo 1 com 17 aulas principais e 6 aprofundamentos; demais módulos em construção.
+- [Curso sobre a Distribuição Normal](https://blogdomarcellini.com.br/posts/cursos/estatistica/distribuicao_normal/index.html).
+- [Física, História e Epistemologia](https://blogdomarcellini.com.br/posts/fisica/historia-epistemologia/index.html).
+- [Inteligência Artificial](https://blogdomarcellini.com.br/posts/programacao/ia/index.html).
+- [Modelos e templates de Quarto](https://blogdomarcellini.com.br/posts/programacao/quarto/modelos-hub.html).
 
-- [📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte](https://blogdomarcellini.com.br/posts/matematica/beleza-matematica.html)
-- [📘 🧮 Por que \( 0! = 1 \)?](https://blogdomarcellini.com.br/posts/matematica/fatorial-zero.html)
-- [📘 🧬 100 Anos da Mecânica Quântica (1925-2025)](https://blogdomarcellini.com.br/posts/fisica/100-anos-mecanica-quantica.html)
-- [🧭 📚 🧬 Guia de Leitura da Série 100 Anos da Mecânica Quântica](https://blogdomarcellini.com.br/posts/fisica/guia-100-anos-mecanica-quantica.html)
-- [🎓 📊 Curso de Estatística: A Distribuição Normal (Parte 1)](https://blogdomarcellini.com.br/posts/estatistica/distribuicao-normal.html)
-- [📘 👨‍💻 📄 Modelo de Markdown com Quarto – Parte 2](https://blogdomarcellini.com.br/posts/programacao/outros-modelos-markdown.html)
+## Ferramentas
 
----
+O site usa Quarto e GitHub Pages, com saída em `docs/`, tema `cosmo` e estilos em `styles.css` e `assets/css/`. A publicação no Pages acompanha a branch `main`.
 
-## ⚙️ Como este blog foi feito
+O ambiente precisa de Quarto, Python 3, PyYAML, matplotlib e wordcloud. Os exemplos executáveis também usam R/Python e os respectivos pacotes; mantenha as dependências dos artigos instaladas no ambiente de renderização.
 
-- Desenvolvido com [Quarto](https://quarto.org/)
-- Publicado via **GitHub Pages**
-- Códigos escritos em **R**, **Python** e **LaTeX**
-- Tema: `cosmo`, com ajustes em `styles.css`
+## Atualizar e conferir
 
----
-
-## 🚀 Fluxo de trabalho para atualizar e publicar um post
-
-### 1. Atualizar conteúdo localmente
-Execute o script de atualização completo:
+O ambiente habitual está em /home/celso/.env. Na raiz do projeto:
 
 ```bash
-./atualizar_tudo.sh
+source ./ambiente-blog.sh
 ```
 
-Esse script executa:
-- `atualizar-ultimos-posts.sh`
-- `gerar_posts_json.py`
-- `atualizar_tags.sh`
+O auxiliar usa o ambiente ativo ou $HOME/.env, com .venv local como alternativa. Para selecionar outro ambiente, defina BLOG_PYTHON_ENV. Em outra máquina, crie um ambiente virtual e instale requirements.txt.
 
-### 2. Visualizar no navegador local
+Depois, atualize e confira:
 
 ```bash
+bash atualizar_tudo.sh
+python3 -m unittest discover -s tests -v
+quarto render
+python3 verificar_site.py
 quarto preview
 ```
 
-Confirme se o post aparece corretamente, com tags e layout funcionando.
+`atualizar_tudo.sh` atualiza os últimos posts, gera o índice, atualiza tags e valida a integridade. Os metadados vêm do front matter YAML dos arquivos `.qmd`; use datas ISO (`AAAA-MM-DD`) e `draft: true` para textos que não devem entrar nos índices. Arquivos novos entram na seleção sem precisar de um commit prévio.
 
-### 3. Publicar no GitHub Pages
+`posts.json` na raiz é o índice canônico gerado por `gerar_posts_json.py`; Quarto o copia para `docs/posts.json` como recurso. Os geradores de tags leem a versão da raiz. Não edite o JSON manualmente. Empates de data na lista de últimos posts são resolvidos pelo caminho do arquivo, de forma determinística.
 
-```bash
-./publicar-blog.sh
-```
+Os aprofundamentos 1.18-AP e 1.19-AP preservam suas URLs anteriores por meio de `aliases` nos metadados Quarto.
 
-Esse script realiza:
-- `quarto render` com saída na pasta `docs/`
-- `git add` dos arquivos relevantes
-- `git commit` com mensagem personalizada
-- `git push` para a branch `main`
+## Publicar
 
-Após isso, o GitHub Pages atualizará automaticamente o site publicado.
-
----
-
-## 🧱 Navegação por Tags
-
-O blog possui um sistema automatizado para geração de páginas de tags, nuvem de palavras e navegação visual.
-
-### Scripts mantidos
-
-- `gerar_posts_json.py`: extrai `title`, `tags`, `href` dos posts `.qmd` e salva em `docs/posts.json`
-- `nuvem_tags.py`: gera a imagem `nuvem_tags.png` com base em `tags_freq.txt`
-- `atualizar_tags.sh`: script completo que:
-  - Gera `tags.qmd` com visual limpo
-  - Cria `tags/*.qmd` com os posts de cada tag
-  - Adiciona botão de retorno para `tags.qmd` em cada página de tag
-  - Gera a imagem da nuvem
-
-### Scripts substituídos (podem ser removidos)
-
-- `gerar_paginas_de_tags.py`
-
-### Como usar (fluxo manual alternativo)
-
-1. Gere `posts.json` com:
+Confira as diferenças e os arquivos novos antes de publicar:
 
 ```bash
-python3 gerar_posts_json.py
+git status --short
+git diff
+bash publicar-blog.sh "Atualiza o blog e o Módulo 1 de Cálculo"
 ```
 
-2. Execute o script principal:
+O script exige `main`, verifica se o remoto avançou, atualiza os índices, renderiza o site, confere o JSON gerado e registra as alterações antes do push. Ele interrompe a publicação quando uma etapa falha. Arquivos já preparados para commit devem ser revisados e tratados antes de executar o script. Novos arquivos fora dos padrões previstos devem ser adicionados explicitamente ao fluxo.
 
-```bash
-chmod +x atualizar_tags.sh
-./atualizar_tags.sh
-```
+Após o push, acompanhe a execução em [GitHub Actions](https://github.com/marcellini-celso/blog-marcellini-pt/actions) e confira o blog publicado.
 
-3. Renderize o blog normalmente:
+## Contato
 
-```bash
-quarto render
-```
-
----
-
-## 🎨 Estilo
-
-- CSS personalizado em: `assets/css/custom.css`
-- Adicionado no `_quarto.yml`:
-
-```yaml
-format:
-  html:
-    css:
-      - styles.css
-      - assets/css/custom.css
-```
-
----
-
-## 🌐 Acesse o blog
-
-➡️ [https://marcellini-celso.github.io/blog-marcellini-pt/](https://marcellini-celso.github.io/blog-marcellini-pt/)
-
-➡️ [https://blogdomarcellini.com.br)
-
----
-
-## 📬 Contato
-
-Para dúvidas, sugestões ou colaborações, entre em contato por e-mail:  
-✉️ **[prof.marcellini@gmail.com](mailto:prof.marcellini@gmail.com)**
-# blog-marcellini-pt
-Teste seg 18 ago 2025 05:41:50 -03
-Teste seg 18 ago 2025 05:59:32 -03
+[prof.marcellini@gmail.com](mailto:prof.marcellini@gmail.com)

@@ -1,11 +1,13 @@
 #!/bin/bash
+set -euo pipefail
+cd -- "$(dirname -- "$0")"
 
 # Caminhos
 TAGS_FREQ="tags_freq.txt"
 ARQUIVO_TAGS="tags.qmd"
 PASTA_TAGS="tags"
 NUVEM_SCRIPT="nuvem_tags.py"
-POSTS_JSON="docs/posts.json"
+POSTS_JSON="posts.json"
 SCRIPT_TEMP="gerar_paginas_de_tags_temp.py"
 
 # Garante que a pasta de tags existe
@@ -37,7 +39,7 @@ from pathlib import Path
 from collections import defaultdict
 import unicodedata
 
-ARQUIVO_JSON = Path("docs/posts.json")
+ARQUIVO_JSON = Path("posts.json")
 PASTA_TAGS = Path("tags")
 
 def slugify(tag):

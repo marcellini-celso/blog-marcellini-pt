@@ -3,7 +3,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-ARQUIVO_JSON = "docs/posts.json"
+ARQUIVO_JSON = "posts.json"
 ARQUIVO_FREQ = "tags_freq.txt"
 ARQUIVO_QMD = "tags.qmd"
 ARQUIVO_HTML = "lista_tags_gerada.html"

@@ -1,0 +1,778 @@
+---
+title: "📘 Módulo 1.15: Modelos com Funções Elementares"
+description: "Introdução à modelagem matemática com funções elementares: modelos lineares, quadráticos, exponenciais, logarítmicos, trigonométricos e racionais."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, funções, modelagem]
+tags: [cálculo, matemática, funções, modelagem, funções elementares, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Módulo"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
+
+***
+
+# 📘 Modelos com Funções Elementares
+
+Uma das grandes razões para estudar funções é que elas nos permitem construir **modelos matemáticos**.
+
+Um modelo matemático é uma representação simplificada de uma situação real por meio de linguagem matemática.
+
+Por exemplo:
+
+- o custo pode ser função da quantidade produzida;
+- a distância pode ser função do tempo;
+- a população pode ser função do tempo;
+- a temperatura pode ser função da altitude;
+- a altura de um objeto lançado pode ser função do tempo;
+- a intensidade de uma onda pode ser função da posição.
+
+Neste post, vamos ver como funções elementares podem ser usadas para representar situações simples.
+
+O objetivo não é transformar a realidade em fórmulas perfeitas. O objetivo é aprender a escolher uma função que capture o comportamento principal de um fenômeno.
+
+***
+
+## O que é modelar?
+
+Modelar é construir uma ponte entre uma situação e uma estrutura matemática.
+
+Em uma situação real, temos grandezas que variam. Em um modelo, escolhemos variáveis para representar essas grandezas.
+
+Por exemplo, se o preço de uma corrida depende da distância percorrida, podemos usar:
+
+- $x$ para representar a distância;
+- $C(x)$ para representar o custo.
+
+Então uma fórmula como
+
+$$
+C(x)=5+3x
+$$
+
+pode representar uma tarifa fixa de $5$ reais mais $3$ reais por quilômetro.
+
+Esse é um modelo linear.
+
+::: {.callout-note title="Ideia central"}
+Um modelo matemático não é a realidade completa. Ele é uma representação simplificada que ajuda a entender, prever ou calcular.
+:::
+
+***
+
+## Variáveis e parâmetros
+
+Em um modelo, é importante distinguir variáveis e parâmetros.
+
+A **variável independente** é a grandeza de entrada.
+
+A **variável dependente** é a grandeza que depende da entrada.
+
+Os **parâmetros** são constantes que ajustam o modelo.
+
+No exemplo
+
+$$
+C(x)=5+3x,
+$$
+
+a variável independente é $x$, a distância.
+
+A variável dependente é $C(x)$, o custo.
+
+Os parâmetros são $5$ e $3$.
+
+O número $5$ representa custo fixo. O número $3$ representa custo por unidade de distância.
+
+***
+
+## Modelos lineares
+
+Um modelo linear ou afim tem a forma
+
+$$
+f(x)=ax+b.
+$$
+
+Ele representa situações em que a taxa de variação é constante.
+
+Exemplo:
+
+Uma empresa cobra uma taxa fixa de R$ 20,00 mais R$ 8,00 por unidade vendida. Se $x$ é o número de unidades, o custo é
+
+$$
+C(x)=20+8x.
+$$
+
+Aqui, cada unidade a mais aumenta o custo em R$ 8,00.
+
+Essa taxa constante é a característica principal de um modelo linear.
+
+***
+
+## Interpretação dos coeficientes
+
+No modelo
+
+$$
+f(x)=ax+b,
+$$
+
+o coeficiente $a$ representa a taxa de variação.
+
+O termo $b$ representa o valor inicial, isto é, o valor da função quando
+
+$$
+x=0.
+$$
+
+Por exemplo, em
+
+$$
+C(x)=20+8x,
+$$
+
+temos:
+
+$$
+C(0)=20.
+$$
+
+Isso significa que, mesmo com zero unidades, há um custo fixo de R$ 20,00.
+
+O coeficiente $8$ indica que cada unidade aumenta o custo em R$ 8,00.
+
+***
+
+## Modelos quadráticos
+
+Um modelo quadrático tem a forma
+
+$$
+f(x)=ax^2+bx+c,
+$$
+
+com
+
+$$
+a\neq 0.
+$$
+
+Ele aparece em situações com aceleração constante, áreas, trajetórias parabólicas e problemas de otimização.
+
+Por exemplo, a altura de um objeto lançado verticalmente pode ser modelada por uma função quadrática:
+
+$$
+h(t)=-5t^2+20t+1.
+$$
+
+Aqui, $t$ representa o tempo e $h(t)$ representa a altura.
+
+O termo $-5t^2$ está associado ao efeito da gravidade.
+
+O gráfico dessa função é uma parábola com concavidade voltada para baixo.
+
+***
+
+## Máximo em um modelo quadrático
+
+Em um modelo quadrático com concavidade para baixo, o vértice representa um valor máximo.
+
+Considere
+
+$$
+h(t)=-5t^2+20t+1.
+$$
+
+O vértice de uma parábola
+
+$$
+at^2+bt+c
+$$
+
+ocorre em
+
+$$
+t_v=-\frac{b}{2a}.
+$$
+
+Nesse caso,
+
+$$
+a=-5
+$$
+
+e
+
+$$
+b=20.
+$$
+
+Logo,
+
+$$
+t_v=-\frac{20}{2(-5)}=2.
+$$
+
+A altura máxima ocorre em
+
+$$
+t=2.
+$$
+
+Calculando:
+
+$$
+h(2)=-5(2)^2+20(2)+1=-20+40+1=21.
+$$
+
+A altura máxima é $21$.
+
+***
+
+## Modelos exponenciais
+
+Um modelo exponencial aparece quando uma quantidade muda por um fator multiplicativo constante.
+
+A forma básica é
+
+$$
+Q(t)=Q_0a^t,
+$$
+
+em que:
+
+- $Q_0$ é o valor inicial;
+- $a$ é o fator de crescimento ou decaimento;
+- $t$ é o tempo.
+
+Se
+
+$$
+a>1,
+$$
+
+temos crescimento exponencial.
+
+Se
+
+$$
+0<a<1,
+$$
+
+temos decaimento exponencial.
+
+Por exemplo, se uma população começa com $1000$ indivíduos e cresce $10\%$ por período, então
+
+$$
+Q(t)=1000(1{,}10)^t.
+$$
+
+***
+
+## Decaimento exponencial
+
+O decaimento exponencial aparece quando uma quantidade diminui por uma razão constante.
+
+Por exemplo, se uma substância perde metade de sua massa a cada unidade de tempo, podemos modelar por
+
+$$
+M(t)=M_0\left(\frac{1}{2}\right)^t.
+$$
+
+Se
+
+$$
+M_0=80,
+$$
+
+então
+
+$$
+M(t)=80\left(\frac{1}{2}\right)^t.
+$$
+
+Assim:
+
+$$
+M(0)=80,
+$$
+
+$$
+M(1)=40,
+$$
+
+$$
+M(2)=20.
+$$
+
+A cada unidade de tempo, a quantidade é multiplicada por $\frac{1}{2}$.
+
+***
+
+## Modelos logarítmicos
+
+Modelos logarítmicos aparecem quando o crescimento é rápido no início e depois desacelera.
+
+Uma forma simples é
+
+$$
+f(x)=a\ln x+b,
+$$
+
+com
+
+$$
+x>0.
+$$
+
+Esse tipo de modelo aparece em escalas de medida, percepção, complexidade algorítmica e situações em que aumentos multiplicativos na entrada produzem aumentos aditivos na saída.
+
+Por exemplo, a expressão
+
+$$
+f(x)=2\ln x+1
+$$
+
+cresce, mas cada vez mais lentamente.
+
+O domínio é
+
+$$
+(0,+\infty).
+$$
+
+***
+
+## Modelos racionais
+
+Modelos racionais têm a forma
+
+$$
+f(x)=\frac{p(x)}{q(x)},
+$$
+
+onde $p$ e $q$ são polinômios.
+
+Eles aparecem em situações com taxas, razões, eficiência, concentração e comportamentos com assíntotas.
+
+Por exemplo:
+
+$$
+f(x)=\frac{x}{x+1}.
+$$
+
+Essa função está definida para
+
+$$
+x\neq -1.
+$$
+
+Quando $x$ cresce muito, temos
+
+$$
+\frac{x}{x+1}\approx 1.
+$$
+
+Assim, o gráfico se aproxima da reta horizontal
+
+$$
+y=1.
+$$
+
+Esse tipo de comportamento será estudado com mais precisão no módulo de limites.
+
+***
+
+## Modelos trigonométricos
+
+Modelos trigonométricos são usados para representar fenômenos periódicos.
+
+Uma forma básica é
+
+$$
+f(t)=A\sin(Bt+C)+D.
+$$
+
+Nessa expressão:
+
+- $A$ controla a amplitude;
+- $B$ controla o período;
+- $C$ desloca o gráfico horizontalmente;
+- $D$ desloca o gráfico verticalmente.
+
+Por exemplo,
+
+$$
+T(t)=10\sin\left(\frac{2\pi}{24}t\right)+20
+$$
+
+pode representar uma temperatura diária oscilando em torno de $20^\circ$ com amplitude $10^\circ$ e período de $24$ horas.
+
+***
+
+## Escolhendo o tipo de função
+
+Uma parte importante da modelagem é escolher a família de funções adequada.
+
+| Comportamento observado | Modelo possível |
+|---|---|
+| Variação por soma constante | Linear |
+| Trajetória parabólica ou otimização simples | Quadrático |
+| Crescimento por fator constante | Exponencial |
+| Crescimento rápido e depois lento | Logarítmico |
+| Razões e assíntotas | Racional |
+| Oscilações e ciclos | Trigonométrico |
+
+Essa escolha depende do contexto, dos dados e da pergunta que queremos responder.
+
+***
+
+## Domínio no contexto
+
+Em modelagem, o domínio não depende apenas da fórmula. Ele também depende do significado das variáveis.
+
+Por exemplo, se
+
+$$
+C(x)=20+8x
+$$
+
+representa o custo para produzir $x$ unidades, então faz sentido considerar
+
+$$
+x\geq 0.
+$$
+
+Além disso, se $x$ representa número de unidades inteiras, talvez o domínio natural seja
+
+$$
+\{0,1,2,3,\ldots\}.
+$$
+
+Mesmo que a fórmula faça sentido para $x=-2$, esse valor não tem interpretação no problema.
+
+::: {.callout-warning title="Cuidado"}
+Em modelos, sempre pergunte se o valor da variável faz sentido no contexto.
+:::
+
+***
+
+## Limitações dos modelos
+
+Todo modelo é uma simplificação.
+
+Um modelo linear pode funcionar bem em certo intervalo, mas falhar fora dele.
+
+Um modelo exponencial pode descrever crescimento inicial, mas não considerar limitações de recursos.
+
+Um modelo trigonométrico pode capturar periodicidade, mas ignorar ruídos e variações irregulares.
+
+Por isso, ao usar modelos, devemos perguntar:
+
+- quais hipóteses estão sendo feitas?
+- em que intervalo o modelo é razoável?
+- quais fatores foram ignorados?
+- os resultados fazem sentido?
+
+Modelar não é apenas calcular. É interpretar.
+
+***
+
+## Por que isso importa para o Cálculo?
+
+O Cálculo nasceu de problemas de variação, movimento, área e acumulação.
+
+Modelos com funções elementares serão o ponto de partida para perguntas como:
+
+- qual é a taxa instantânea de variação?
+- quando uma quantidade atinge valor máximo?
+- qual é a área sob a curva?
+- qual é o valor acumulado em certo intervalo?
+- como comparar crescimentos?
+
+Essas perguntas levarão naturalmente a limites, derivadas e integrais.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Uma corrida de aplicativo cobra uma taxa fixa de R$ 6,00 mais R$ 2,50 por quilômetro.
+
+a) Escreva uma função $C(x)$ para o custo em função da distância $x$.  
+b) Calcule $C(10)$.  
+c) Interprete o coeficiente de $x$.
+
+## Exercício 2
+
+A altura de um objeto é dada por
+
+$$
+h(t)=-5t^2+30t+2.
+$$
+
+a) Qual é o tipo de função?  
+b) Em que instante ocorre a altura máxima?  
+c) Qual é a altura máxima?
+
+## Exercício 3
+
+Uma população inicial de $500$ indivíduos cresce $20\%$ por período.
+
+a) Escreva um modelo exponencial para a população.  
+b) Calcule a população após $3$ períodos.
+
+## Exercício 4
+
+Determine o domínio natural, no contexto indicado:
+
+a) $C(x)=15+4x$, onde $x$ é quantidade produzida.  
+b) $A(r)=\pi r^2$, onde $r$ é o raio de um círculo.  
+c) $P(t)=1000(1{,}05)^t$, onde $t$ é tempo após o início da observação.
+
+## Exercício 5
+
+Associe cada situação a um tipo provável de modelo: linear, quadrático, exponencial, logarítmico, racional ou trigonométrico.
+
+a) Temperatura diária variando de forma periódica.  
+b) Crescimento de uma aplicação com juros compostos.  
+c) Custo com taxa fixa mais valor por unidade.  
+d) Altura de um projétil em função do tempo.  
+e) Quantidade que se aproxima de um limite horizontal.
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+a) A taxa fixa é R$ 6,00 e o valor por quilômetro é R$ 2,50. Logo,
+
+$$
+C(x)=6+2{,}5x.
+$$
+
+b) Para $x=10$,
+
+$$
+C(10)=6+2{,}5\cdot 10=6+25=31.
+$$
+
+O custo é R$ 31,00.
+
+c) O coeficiente $2{,}5$ representa o custo por quilômetro percorrido.
+
+## Exercício 2
+
+A função é
+
+$$
+h(t)=-5t^2+30t+2.
+$$
+
+a) É uma função quadrática.
+
+b) O instante do vértice é
+
+$$
+t_v=-\frac{b}{2a}.
+$$
+
+Aqui,
+
+$$
+a=-5
+$$
+
+e
+
+$$
+b=30.
+$$
+
+Logo,
+
+$$
+t_v=-\frac{30}{2(-5)}=3.
+$$
+
+A altura máxima ocorre em $t=3$.
+
+c)
+
+$$
+h(3)=-5(3)^2+30(3)+2=-45+90+2=47.
+$$
+
+A altura máxima é $47$.
+
+## Exercício 3
+
+a) Crescimento de $20\%$ por período significa fator
+
+$$
+1{,}20.
+$$
+
+Logo,
+
+$$
+P(t)=500(1{,}20)^t.
+$$
+
+b)
+
+$$
+P(3)=500(1{,}20)^3.
+$$
+
+Como
+
+$$
+(1{,}20)^3=1{,}728,
+$$
+
+temos
+
+$$
+P(3)=500\cdot 1{,}728=864.
+$$
+
+A população após $3$ períodos é $864$ indivíduos, segundo o modelo.
+
+## Exercício 4
+
+a) Se $x$ representa quantidade produzida, faz sentido considerar
+
+$$
+x\geq 0.
+$$
+
+Se a quantidade precisa ser inteira, então
+
+$$
+x\in\{0,1,2,3,\ldots\}.
+$$
+
+b) Se $r$ é raio, então
+
+$$
+r\geq 0.
+$$
+
+c) Se $t$ é tempo após o início da observação, então
+
+$$
+t\geq 0.
+$$
+
+## Exercício 5
+
+a) Temperatura diária variando de forma periódica: modelo trigonométrico.  
+
+b) Crescimento com juros compostos: modelo exponencial.  
+
+c) Custo com taxa fixa mais valor por unidade: modelo linear.  
+
+d) Altura de um projétil em função do tempo: modelo quadrático.  
+
+e) Quantidade que se aproxima de um limite horizontal: modelo racional ou outro modelo com assíntota horizontal.
+
+:::
+
+***
+
+## 🧩 Quiz — Modelos com Funções Elementares
+
+:::::{.question}
+**Q1.** Um modelo linear é adequado quando a situação apresenta:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Variação por soma constante.
+:::
+
+:::{.choice}
+Oscilação periódica obrigatória.
+:::
+
+:::{.choice}
+Domínio sempre negativo.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Um modelo exponencial é típico quando há:
+
+::::{.choices}
+:::{.choice}
+Crescimento por soma constante.
+:::
+
+:::{.choice .correct-choice}
+Crescimento ou decaimento por fator multiplicativo constante.
+:::
+
+:::{.choice}
+Apenas valores periódicos entre $-1$ e $1$.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** Em modelagem, o domínio deve considerar:
+
+::::{.choices}
+:::{.choice}
+Apenas a fórmula algébrica, nunca o contexto.
+:::
+
+:::{.choice .correct-choice}
+A fórmula e também o significado das variáveis no contexto.
+:::
+
+:::{.choice}
+Somente números negativos.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
+
+🎯 **Próximo Post:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.15-modelos-com-funcoes-elementares.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

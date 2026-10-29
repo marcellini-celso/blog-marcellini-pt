@@ -26,9 +26,7 @@ resources:
   - ../data/area_exaustao_table.csv
 ---
 
-· [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](../../../../matematica/index.qmd)
-
-# 🧠 Módulo 1.1: O que é Cálculo? História e aplicações
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](../../../../matematica/index.qmd)
 
 ::: {.callout-tip title="📚 Pré-requisitos (leves)"}
 - Noções básicas de **álgebra** (operações com expressões, equações simples).  
@@ -42,14 +40,28 @@ resources:
 
 ***
 
-## ✨ O que é o Cálculo?
+::: {.callout-tip title="❓ Pergunta Disparadora"}
+Como a Matemática descreve movimento, variação e acumulação?
+:::
 
-### 🌱 Intuição inicial
+
+
+::: {.callout-note title="📌 Objetivos do Post"}
+- Entender a ideia inicial do Cálculo como estudo da variação e da acumulação;
+- Relacionar retas secantes, reta tangente e taxa de variação;
+- Apresentar a noção intuitiva de limite como preparação para derivadas e integrais.
+:::
+
+
+
+# ✨ O que é o Cálculo?
+
+## 🌱 Intuição inicial
 
 Imagine um carro na estrada: o velocímetro mostra **como a velocidade muda agora**; já a distância total depende de **somar pequenos trechos**.  
 Esse é o espírito do cálculo: **estudar a mudança e o acúmulo** no mundo real.
 
-### 📐 Formulação matemática (enxuta)
+## 📐 Formulação matemática (enxuta)
 
 - **Mudança** → taxas de variação (derivadas).  
 - **Acúmulo** → totais e áreas (integrais).  
@@ -57,21 +69,21 @@ Esse é o espírito do cálculo: **estudar a mudança e o acúmulo** no mundo re
 
 ***
 
-## Os dois problemas fundamentais do cálculo
+# 🤔 Os dois problemas fundamentais do cálculo
 
-### 🌱 Intuição: tangentes e áreas
+## 🌱 Intuição: tangentes e áreas
 
 1. **Problema da tangente:** qual é a inclinação de uma curva em um ponto?  
 2. **Problema da área:** qual é a área de uma região limitada por curvas?
 
-### 📐 Formulação matemática
+## 📐 Formulação matemática
 
 - **Tangente** em \(A=(a,f(a))\): a inclinação da tangente é o valor para o qual as **secantes** convergem quando o segundo ponto se aproxima de \(A\).  
 - **Área** em \([a,b]\): a área sob \(y=f(x)\) é o valor para o qual as **somas de pequenos retângulos** convergem quando refinamos a partição.
 
 ***
 
-## 🔎 Motivação visual — o problema da tangente
+# 🔎 Motivação visual — o problema da tangente
 
 Usaremos a função \(y=e^x\) no ponto \(A(0,1)\). Na figura, retas **secantes** $(A–B, A–C, A–D)$ vão “girando” até a **reta verde**, que representa a **tangente** em \(A\).
 
@@ -79,7 +91,7 @@ Usaremos a função \(y=e^x\) no ponto \(A(0,1)\). Na figura, retas **secantes**
 
 ![](../images/tangente.png){fig-align="center" width="70%"}
 
-### 🧮 Mini exemplo numérico (sem notação de limite)
+## 🧮 Mini exemplo numérico (sem notação de limite)
 
 Para \(y=e^x\) em \(x=0\), considere a secante entre \(x=0\) e \(x=h\).  
 A inclinação dessa secante é
@@ -103,7 +115,7 @@ Esse é o **problema da tangente**, um dos dois problemas fundamentais do cálcu
 
 ***
 
-## 🔎 Motivação visual — o problema da área (método de exaustão)
+# 🔎 Motivação visual — o problema da área (método de exaustão)
 
 Considere um **círculo de raio 1**. Inscrevemos **polígonos regulares** de \(n\) lados.  
 Quando \(n\) cresce, a área do polígono se aproxima da **área do círculo** — este é o método de **exaustão** de Arquimedes.
@@ -112,7 +124,7 @@ Quando \(n\) cresce, a área do polígono se aproxima da **área do círculo** �
 
 ![](../images/area_exaustao.png){fig-align="center" width="90%"}
 
-### 🧮 Exemplo numérico (área de polígono inscrito)
+## 🧮 Exemplo numérico (área de polígono inscrito)
 
 Para um polígono de \(n\) lados inscrito no círculo unitário, a área é
 \[
@@ -138,7 +150,7 @@ Esse raciocínio antecipa a **integral** como ferramenta para medir áreas e ac�
 
 ***
 
-## 📜 Breve história do Cálculo
+# 📜 Breve história do Cálculo
 
 - **Arquimedes (séc. III a.C.)**: método da **exaustão** (áreas e volumes) — semente do cálculo integral.  
 - **Fermat (séc. XVII)**: técnicas para **tangentes** — semente do cálculo diferencial.  
@@ -151,7 +163,7 @@ Mais adiante veremos que **mudança** (derivadas) e **acúmulo** (integrais) est
 
 ***
 
-## ✅ Encerrando a introdução
+# ✅ Encerrando a introdução
 
 - O cálculo responde a duas perguntas universais:  
   1) **Quão rápido algo muda agora?** (tangentes/derivadas)  
@@ -161,8 +173,22 @@ Mais adiante veremos que **mudança** (derivadas) e **acúmulo** (integrais) est
 
 ***
 
+## 🧾 Quadro-resumo
+
+| Ideia | Significado | Papel no Cálculo |
+|---|---|---|
+| Mudança | Estudo de como uma grandeza varia | Leva à ideia de derivada |
+| Acúmulo | Soma de pequenas contribuições | Leva à ideia de integral |
+| Limite | Processo de aproximação cada vez mais precisa | Dá rigor ao instantâneo e ao contínuo |
+| Problema da tangente | Encontrar a inclinação de uma curva em um ponto | Motivação para o cálculo diferencial |
+| Problema da área | Medir uma região por aproximações sucessivas | Motivação para o cálculo integral |
+| Secantes aproximando a tangente | Retas entre dois pontos que se aproximam de uma reta-limite | Antecipam a noção de derivada |
+| Polígonos aproximando o círculo | Figuras inscritas que se aproximam da área real | Antecipam a noção de integral |
+| Teorema Fundamental do Cálculo | Conexão entre mudança e acúmulo | Dá unidade ao Cálculo |
+
 ***
-## 🧩 Quiz — O que é Cálculo?
+
+# 🧩 Quiz — O que é Cálculo?
 
 :::::{.question}
 **Q1.** Nesta introdução, o cálculo aparece principalmente como o estudo de:
@@ -227,7 +253,7 @@ Substituir toda geometria por tabelas sem interpretação visual.
 
 🎯 **Próximo Post:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
 
-· [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) ·  🔝 [Topo](1.1-introducao.qmd)
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) ·  🔝 [Topo](1.1-introducao.qmd)
 
 ***
 

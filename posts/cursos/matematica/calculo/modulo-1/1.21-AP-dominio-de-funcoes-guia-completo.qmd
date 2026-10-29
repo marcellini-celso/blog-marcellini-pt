@@ -1,0 +1,724 @@
+---
+title: "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo"
+description: "Aprofundamento sobre domínio de funções reais, com raízes, frações, logaritmos, composições e funções definidas por partes."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, aprofundamento, funções, domínio]
+tags: [cálculo, funções, domínio, raízes, logaritmos, frações, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Aprofundamento"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.20-AP Valor Absoluto, Distância e Vizinhanças](1.20-AP-valor-absoluto-distancia-vizinhancas.qmd)
+
+***
+
+# 🔬 Domínio de Funções — Guia Completo
+
+O domínio de uma função é o conjunto das entradas permitidas.
+
+No Cálculo, isso é decisivo. Antes de perguntar sobre limite, continuidade, derivada ou integral, precisamos saber onde a função existe.
+
+Este aprofundamento organiza as principais restrições de domínio que aparecem em funções reais.
+
+***
+
+## 🧭 Regra geral
+
+Para encontrar o domínio real de uma função, fazemos a pergunta:
+
+> Para quais valores reais de $x$ a expressão faz sentido?
+
+As restrições mais comuns vêm de:
+
+- denominadores;
+- raízes de índice par;
+- logaritmos;
+- tangente e outras funções trigonométricas com denominador;
+- composições;
+- funções definidas por partes.
+
+***
+
+## ➗ Frações
+
+Em uma fração, o denominador não pode ser zero.
+
+Por exemplo:
+
+$$
+f(x)=\frac{1}{x-4}.
+$$
+
+Precisamos de
+
+$$
+x-4\neq 0.
+$$
+
+Logo,
+
+$$
+x\neq 4.
+$$
+
+Assim,
+
+$$
+D_f=(-\infty,4)\cup(4,+\infty).
+$$
+
+***
+
+## √ Raízes de índice par
+
+Para raízes de índice par, o radicando precisa ser não negativo.
+
+Por exemplo:
+
+$$
+g(x)=\sqrt{x-3}.
+$$
+
+Precisamos de
+
+$$
+x-3\geq 0.
+$$
+
+Logo,
+
+$$
+x\geq 3.
+$$
+
+Assim,
+
+$$
+D_g=[3,+\infty).
+$$
+
+Outro exemplo:
+
+$$
+h(x)=\sqrt{9-x^2}.
+$$
+
+Precisamos de
+
+$$
+9-x^2\geq 0.
+$$
+
+Isso equivale a
+
+$$
+x^2\leq 9.
+$$
+
+Logo,
+
+$$
+-3\leq x\leq 3.
+$$
+
+Assim,
+
+$$
+D_h=[-3,3].
+$$
+
+***
+
+## 📈 Logaritmos
+
+Para logaritmos reais, o argumento precisa ser positivo.
+
+Por exemplo:
+
+$$
+p(x)=\ln(x-2).
+$$
+
+Precisamos de
+
+$$
+x-2>0.
+$$
+
+Logo,
+
+$$
+x>2.
+$$
+
+Assim,
+
+$$
+D_p=(2,+\infty).
+$$
+
+Se
+
+$$
+q(x)=\log_2(5-x),
+$$
+
+precisamos de
+
+$$
+5-x>0.
+$$
+
+Logo,
+
+$$
+x<5.
+$$
+
+Assim,
+
+$$
+D_q=(-\infty,5).
+$$
+
+***
+
+## 🧩 Composição de restrições
+
+Quando a função combina várias operações, todas as restrições precisam ser satisfeitas ao mesmo tempo.
+
+Considere:
+
+$$
+f(x)=\frac{\sqrt{x-1}}{x-4}.
+$$
+
+Temos duas restrições:
+
+1. raiz quadrada:
+
+$$
+x-1\geq 0,
+$$
+
+logo
+
+$$
+x\geq 1;
+$$
+
+2. denominador:
+
+$$
+x-4\neq 0,
+$$
+
+logo
+
+$$
+x\neq 4.
+$$
+
+Portanto,
+
+$$
+D_f=[1,4)\cup(4,+\infty).
+$$
+
+***
+
+## 🔗 Logaritmo com fração
+
+Considere:
+
+$$
+g(x)=\ln\left(\frac{x-1}{x+2}\right).
+$$
+
+Precisamos de
+
+$$
+\frac{x-1}{x+2}>0.
+$$
+
+Além disso, implicitamente
+
+$$
+x+2\neq 0.
+$$
+
+Os pontos críticos são
+
+$$
+x=1
+$$
+
+e
+
+$$
+x=-2.
+$$
+
+Analisando sinais:
+
+- em $(-\infty,-2)$, a fração é positiva;
+- em $(-2,1)$, a fração é negativa;
+- em $(1,+\infty)$, a fração é positiva.
+
+Logo,
+
+$$
+D_g=(-\infty,-2)\cup(1,+\infty).
+$$
+
+***
+
+## 🧮 Domínio de função composta
+
+Se
+
+$$
+(f\circ g)(x)=f(g(x)),
+$$
+
+então precisamos que:
+
+1. $x$ pertença ao domínio de $g$;
+2. $g(x)$ pertença ao domínio de $f$.
+
+Por exemplo, se
+
+$$
+f(u)=\sqrt{u}
+$$
+
+e
+
+$$
+g(x)=x^2-4,
+$$
+
+então
+
+$$
+(f\circ g)(x)=\sqrt{x^2-4}.
+$$
+
+Precisamos de
+
+$$
+x^2-4\geq 0.
+$$
+
+Logo,
+
+$$
+x\leq -2
+$$
+
+ou
+
+$$
+x\geq 2.
+$$
+
+Assim,
+
+$$
+D_{f\circ g}=(-\infty,-2]\cup[2,+\infty).
+$$
+
+***
+
+## 🧱 Funções por partes
+
+Em funções definidas por partes, cada regra vale em uma região do domínio.
+
+Por exemplo:
+
+$$
+f(x)=
+\begin{cases}
+\sqrt{x+1}, & x<2,\\
+\dfrac{1}{x-3}, & x\geq 2.
+\end{cases}
+$$
+
+Na primeira parte, precisamos de
+
+$$
+x+1\geq 0,
+$$
+
+isto é,
+
+$$
+x\geq -1.
+$$
+
+Mas essa parte só vale quando
+
+$$
+x<2.
+$$
+
+Logo, a primeira parte contribui com
+
+$$
+[-1,2).
+$$
+
+Na segunda parte, precisamos de
+
+$$
+x-3\neq 0,
+$$
+
+isto é,
+
+$$
+x\neq 3.
+$$
+
+Mas essa parte só vale quando
+
+$$
+x\geq 2.
+$$
+
+Logo, a segunda parte contribui com
+
+$$
+[2,3)\cup(3,+\infty).
+$$
+
+Portanto,
+
+$$
+D_f=[-1,3)\cup(3,+\infty).
+$$
+
+***
+
+## ⚠️ Erros comuns
+
+Alguns erros aparecem com frequência:
+
+- esquecer que denominador não pode ser zero;
+- usar $>$ em vez de $\geq$ em raízes quadradas;
+- usar $\geq$ em vez de $>$ em logaritmos;
+- cancelar fatores e esquecer restrições do domínio original;
+- analisar a fórmula simplificada e esquecer a expressão original.
+
+Por exemplo:
+
+$$
+f(x)=\frac{x^2-1}{x-1}.
+$$
+
+Para $x\neq 1$, temos
+
+$$
+f(x)=x+1.
+$$
+
+Mas o domínio original exclui $x=1$.
+
+Logo, o gráfico é a reta $y=x+1$ com um buraco em $x=1$.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Determine o domínio real:
+
+a) $f(x)=\dfrac{1}{x+7}$  
+b) $g(x)=\sqrt{x-5}$  
+c) $h(x)=\ln(x+4)$  
+
+## Exercício 2
+
+Determine o domínio real:
+
+a) $p(x)=\dfrac{\sqrt{x-2}}{x-6}$  
+b) $q(x)=\ln(3-x)$  
+c) $r(x)=\sqrt{x^2-16}$  
+
+## Exercício 3
+
+Determine o domínio de:
+
+$$
+s(x)=\ln\left(\frac{x+1}{x-3}\right).
+$$
+
+## Exercício 4
+
+Explique por que
+
+$$
+\frac{x^2-4}{x-2}
+$$
+
+não tem domínio igual ao de
+
+$$
+x+2.
+$$
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+a)
+
+$$
+x+7\neq 0
+$$
+
+logo
+
+$$
+x\neq -7.
+$$
+
+Assim,
+
+$$
+D_f=(-\infty,-7)\cup(-7,+\infty).
+$$
+
+b)
+
+$$
+x-5\geq 0
+$$
+
+logo
+
+$$
+x\geq 5.
+$$
+
+Assim,
+
+$$
+D_g=[5,+\infty).
+$$
+
+c)
+
+$$
+x+4>0
+$$
+
+logo
+
+$$
+x>-4.
+$$
+
+Assim,
+
+$$
+D_h=(-4,+\infty).
+$$
+
+## Exercício 2
+
+a) Precisamos de $x-2\geq 0$ e $x-6\neq 0$. Logo:
+
+$$
+D_p=[2,6)\cup(6,+\infty).
+$$
+
+b)
+
+$$
+3-x>0
+$$
+
+logo
+
+$$
+x<3.
+$$
+
+Assim,
+
+$$
+D_q=(-\infty,3).
+$$
+
+c)
+
+$$
+x^2-16\geq 0
+$$
+
+logo
+
+$$
+x\leq -4
+$$
+
+ou
+
+$$
+x\geq 4.
+$$
+
+Assim,
+
+$$
+D_r=(-\infty,-4]\cup[4,+\infty).
+$$
+
+## Exercício 3
+
+Precisamos de
+
+$$
+\frac{x+1}{x-3}>0.
+$$
+
+Os pontos críticos são $x=-1$ e $x=3$.
+
+A fração é positiva em
+
+$$
+(-\infty,-1)
+$$
+
+e
+
+$$
+(3,+\infty).
+$$
+
+Logo,
+
+$$
+D_s=(-\infty,-1)\cup(3,+\infty).
+$$
+
+## Exercício 4
+
+A expressão
+
+$$
+\frac{x^2-4}{x-2}
+$$
+
+tem denominador zero em $x=2$, portanto $x=2$ não pertence ao domínio original.
+
+Embora
+
+$$
+\frac{x^2-4}{x-2}=x+2
+$$
+
+para $x\neq 2$, a função original mantém a restrição $x\neq 2$.
+
+Já $x+2$ está definida para todo real.
+
+:::
+
+***
+
+## 🧩 Quiz — Domínio de Funções
+
+:::::{.question}
+**Q1.** Para $\sqrt{x-1}$ estar definida nos reais, precisamos de:
+
+::::{.choices}
+:::{.choice .correct-choice}
+$x-1\geq 0$.
+:::
+
+:::{.choice}
+$x-1>0$ obrigatoriamente.
+:::
+
+:::{.choice}
+$x-1\neq 0$.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Para $\ln(x+2)$ estar definido, precisamos de:
+
+::::{.choices}
+:::{.choice}
+$x+2\geq 0$.
+:::
+
+:::{.choice .correct-choice}
+$x+2>0$.
+:::
+
+:::{.choice}
+$x+2\neq 0$ apenas.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** Em uma fração, o denominador deve ser:
+
+::::{.choices}
+:::{.choice}
+Sempre positivo.
+:::
+
+:::{.choice}
+Sempre negativo.
+:::
+
+:::{.choice .correct-choice}
+Diferente de zero.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.20-AP Valor Absoluto, Distância e Vizinhanças](1.20-AP-valor-absoluto-distancia-vizinhancas.qmd)
+
+🎯 **Próximo Post:** 👉 [1.22-AP Funções por Partes](1.22-AP-funcoes-por-partes.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.21-AP-dominio-de-funcoes-guia-completo.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+

@@ -1,0 +1,592 @@
+---
+title: "🔬 Módulo 1.22-AP: Funções por Partes"
+description: "Aprofundamento sobre funções definidas por partes, domínio, gráficos, limites laterais e preparação para continuidade."
+author: "Blog do Marcellini"
+date: "2026-06-05"
+lang: pt-BR
+categories: [cálculo, matemática, curso, aprofundamento, funções por partes]
+tags: [cálculo, funções por partes, limites laterais, continuidade, domínio, pré-cálculo]
+format:
+  html:
+    toc: true
+    toc-title: "Neste Aprofundamento"
+    number-sections: true
+    theme: cosmo
+    fig-align: center
+    code-overflow: scroll
+    highlight-style: github
+page-layout: full
+---
+
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
+
+🎯 **Post Anterior:** 👉 [1.21-AP Domínio de Funções: Guia Completo](1.21-AP-dominio-de-funcoes-guia-completo.qmd)
+
+***
+
+# 🔬 Funções por Partes
+
+Uma função por partes é definida por regras diferentes em regiões diferentes do domínio.
+
+Esse tipo de função é essencial antes de estudar limites laterais, continuidade e descontinuidades.
+
+Por exemplo:
+
+$$
+f(x)=
+\begin{cases}
+x+1, & x<2,\\
+x^2, & x\geq 2.
+\end{cases}
+$$
+
+Para calcular $f(x)$, primeiro olhamos em qual região $x$ está. Depois usamos a regra correspondente.
+
+***
+
+## 🧩 Como ler uma função por partes
+
+Considere:
+
+$$
+f(x)=
+\begin{cases}
+2x, & x<1,\\
+x^2+1, & x\geq 1.
+\end{cases}
+$$
+
+Se $x=0$, usamos a primeira regra, pois $0<1$:
+
+$$
+f(0)=2\cdot 0=0.
+$$
+
+Se $x=1$, usamos a segunda regra, pois $1\geq 1$:
+
+$$
+f(1)=1^2+1=2.
+$$
+
+Se $x=3$, usamos a segunda regra:
+
+$$
+f(3)=3^2+1=10.
+$$
+
+***
+
+## 🧭 Domínio de funções por partes
+
+O domínio de uma função por partes é a união dos valores permitidos em cada trecho.
+
+Por exemplo:
+
+$$
+f(x)=
+\begin{cases}
+\sqrt{x+2}, & x<1,\\
+\dfrac{1}{x-3}, & x\geq 1.
+\end{cases}
+$$
+
+Na primeira parte, precisamos de
+
+$$
+x+2\geq 0,
+$$
+
+isto é,
+
+$$
+x\geq -2.
+$$
+
+Mas essa regra vale apenas quando
+
+$$
+x<1.
+$$
+
+Logo, a primeira parte contribui com
+
+$$
+[-2,1).
+$$
+
+Na segunda parte, precisamos de
+
+$$
+x-3\neq 0,
+$$
+
+isto é,
+
+$$
+x\neq 3.
+$$
+
+Mas essa regra vale quando
+
+$$
+x\geq 1.
+$$
+
+Logo, a segunda parte contribui com
+
+$$
+[1,3)\cup(3,+\infty).
+$$
+
+Portanto,
+
+$$
+D_f=[-2,3)\cup(3,+\infty).
+$$
+
+***
+
+## 🎯 Pontos de troca
+
+Os pontos onde a regra muda são chamados aqui de pontos de troca.
+
+Em
+
+$$
+f(x)=
+\begin{cases}
+x+1, & x<2,\\
+x^2, & x\geq 2,
+\end{cases}
+$$
+
+o ponto de troca é
+
+$$
+x=2.
+$$
+
+Esse ponto merece atenção especial porque nele podem ocorrer:
+
+- buracos;
+- saltos;
+- mudança de fórmula;
+- descontinuidade;
+- continuidade por encaixe.
+
+***
+
+## 👈 Limite pela esquerda e pela direita
+
+Funções por partes são uma preparação natural para limites laterais.
+
+Para entender o comportamento perto de um ponto de troca $a$, analisamos:
+
+- o que acontece quando $x$ se aproxima de $a$ pela esquerda;
+- o que acontece quando $x$ se aproxima de $a$ pela direita.
+
+Por exemplo:
+
+$$
+f(x)=
+\begin{cases}
+x+1, & x<2,\\
+x^2, & x\geq 2.
+\end{cases}
+$$
+
+Quando $x$ se aproxima de $2$ pela esquerda, usamos $x+1$:
+
+$$
+x+1\to 3.
+$$
+
+Quando $x$ se aproxima de $2$ pela direita, usamos $x^2$:
+
+$$
+x^2\to 4.
+$$
+
+Como os comportamentos laterais são diferentes, há um salto.
+
+***
+
+## 🕳️ Buracos
+
+Um buraco pode ocorrer quando a função se aproxima de um valor, mas o valor definido no ponto é outro ou não existe.
+
+Exemplo:
+
+$$
+f(x)=
+\begin{cases}
+x+1, & x\neq 2,\\
+10, & x=2.
+\end{cases}
+$$
+
+Perto de $2$, a função segue a reta
+
+$$
+x+1.
+$$
+
+Assim, os valores se aproximam de
+
+$$
+3.
+$$
+
+Mas o valor da função em $2$ é
+
+$$
+f(2)=10.
+$$
+
+Esse é um exemplo típico de descontinuidade removível.
+
+***
+
+## 🧱 Continuidade por encaixe
+
+Às vezes, escolhemos um parâmetro para fazer as partes se encontrarem.
+
+Considere:
+
+$$
+f(x)=
+\begin{cases}
+x+2, & x<1,\\
+ax+1, & x\geq 1.
+\end{cases}
+$$
+
+Para as partes se encontrarem em $x=1$, precisamos que:
+
+$$
+1+2=a\cdot 1+1.
+$$
+
+Logo:
+
+$$
+3=a+1,
+$$
+
+portanto
+
+$$
+a=2.
+$$
+
+Esse tipo de problema aparecerá no estudo de continuidade.
+
+***
+
+## 📊 Gráficos de funções por partes
+
+O gráfico de uma função por partes é construído desenhando cada trecho apenas na região onde ele é válido.
+
+Cuidados importantes:
+
+- use ponto aberto quando o extremo não pertence ao trecho;
+- use ponto fechado quando o extremo pertence ao trecho;
+- verifique se há valores isolados;
+- respeite o domínio de cada regra.
+
+Por exemplo, em
+
+$$
+f(x)=
+\begin{cases}
+x+1, & x<2,\\
+x^2, & x\geq 2,
+\end{cases}
+$$
+
+o trecho da reta vale apenas para $x<2$, e o trecho da parábola vale para $x\geq 2$.
+
+***
+
+## 🌉 Por que isso importa para limites?
+
+Limites exigem entender o que acontece quando $x$ se aproxima de um ponto.
+
+Funções por partes mostram que o comportamento pode depender do lado pelo qual nos aproximamos.
+
+Por isso, elas são fundamentais para estudar:
+
+- limites laterais;
+- continuidade;
+- descontinuidades removíveis;
+- descontinuidades por salto;
+- funções definidas em contextos reais.
+
+***
+
+# 🧪 Exercícios propostos
+
+::: {.callout-note title="📝 Exercícios"}
+
+## Exercício 1
+
+Considere:
+
+$$
+f(x)=
+\begin{cases}
+x+2, & x<0,\\
+x^2, & x\geq 0.
+\end{cases}
+$$
+
+Calcule:
+
+a) $f(-3)$  
+b) $f(0)$  
+c) $f(2)$
+
+## Exercício 2
+
+Determine o domínio:
+
+$$
+g(x)=
+\begin{cases}
+\sqrt{x+1}, & x<2,\\
+\dfrac{1}{x-4}, & x\geq 2.
+\end{cases}
+$$
+
+## Exercício 3
+
+Considere:
+
+$$
+h(x)=
+\begin{cases}
+2x+1, & x<1,\\
+x^2+2, & x\geq 1.
+\end{cases}
+$$
+
+Compare o comportamento pela esquerda e pela direita em $x=1$.
+
+## Exercício 4
+
+Encontre $a$ para que as partes se encontrem em $x=2$:
+
+$$
+p(x)=
+\begin{cases}
+x+4, & x<2,\\
+ax, & x\geq 2.
+\end{cases}
+$$
+
+:::
+
+***
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
+
+# ✅ Gabarito comentado
+
+## Exercício 1
+
+a) Como $-3<0$, usamos $x+2$:
+
+$$
+f(-3)=-3+2=-1.
+$$
+
+b) Como $0\geq 0$, usamos $x^2$:
+
+$$
+f(0)=0^2=0.
+$$
+
+c) Como $2\geq 0$, usamos $x^2$:
+
+$$
+f(2)=2^2=4.
+$$
+
+## Exercício 2
+
+Na primeira parte, precisamos de
+
+$$
+x+1\geq 0,
+$$
+
+logo
+
+$$
+x\geq -1.
+$$
+
+Como essa parte vale para $x<2$, ela contribui com
+
+$$
+[-1,2).
+$$
+
+Na segunda parte, precisamos de
+
+$$
+x-4\neq 0,
+$$
+
+logo
+
+$$
+x\neq 4.
+$$
+
+Como essa parte vale para $x\geq 2$, ela contribui com
+
+$$
+[2,4)\cup(4,+\infty).
+$$
+
+Portanto,
+
+$$
+D_g=[-1,4)\cup(4,+\infty).
+$$
+
+## Exercício 3
+
+Pela esquerda de $1$, usamos
+
+$$
+2x+1.
+$$
+
+Quando $x$ se aproxima de $1$ pela esquerda:
+
+$$
+2x+1\to 3.
+$$
+
+Pela direita de $1$, usamos
+
+$$
+x^2+2.
+$$
+
+Quando $x$ se aproxima de $1$ pela direita:
+
+$$
+x^2+2\to 3.
+$$
+
+Os comportamentos laterais coincidem.
+
+Além disso,
+
+$$
+h(1)=1^2+2=3.
+$$
+
+Então as partes se encontram em $x=1$.
+
+## Exercício 4
+
+Para as partes se encontrarem em $x=2$, precisamos que:
+
+$$
+2+4=2a.
+$$
+
+Logo,
+
+$$
+6=2a,
+$$
+
+portanto
+
+$$
+a=3.
+$$
+
+:::
+
+***
+
+## 🧩 Quiz — Funções por Partes
+
+:::::{.question}
+**Q1.** Em uma função por partes, para calcular $f(x)$ devemos primeiro:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Verificar em qual região do domínio o valor de $x$ está.
+:::
+
+:::{.choice}
+Somar todas as regras.
+:::
+
+:::{.choice}
+Ignorar as condições.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q2.** Pontos onde a regra da função muda são importantes porque:
+
+::::{.choices}
+:::{.choice}
+Nunca afetam o gráfico.
+:::
+
+:::{.choice .correct-choice}
+Podem produzir saltos, buracos ou mudanças de comportamento.
+:::
+
+:::{.choice}
+Eliminam o domínio da função.
+:::
+::::
+:::::
+
+:::::{.question}
+**Q3.** Funções por partes são especialmente úteis para preparar o estudo de:
+
+::::{.choices}
+:::{.choice .correct-choice}
+Limites laterais e continuidade.
+:::
+
+:::{.choice}
+Apenas multiplicação de frações.
+:::
+
+:::{.choice}
+Somente números naturais.
+:::
+::::
+:::::
+
+***
+
+# 🔗 Navegação
+
+🎯 **Post Anterior:** 👉 [1.21-AP Domínio de Funções: Guia Completo](1.21-AP-dominio-de-funcoes-guia-completo.qmd)
+
+🎯 **Próximo Post:** 👉 [1.23-AP Assíntotas e Comportamento no Infinito](1.23-AP-assintotas-e-comportamento-no-infinito.qmd)
+
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.22-AP-funcoes-por-partes.qmd)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+:::{.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::
+
