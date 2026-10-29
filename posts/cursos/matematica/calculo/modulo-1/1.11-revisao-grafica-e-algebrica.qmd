@@ -39,7 +39,7 @@ Este post faz uma revisão integrada dessas duas linguagens.
 
 ***
 
-## A fórmula e o gráfico
+## 📊 A fórmula e o gráfico
 
 Considere a função
 
@@ -81,7 +81,7 @@ A mesma informação aparece em duas linguagens: a fatoração mostra os zeros n
 
 ***
 
-## Domínio
+## 🧭 Domínio
 
 O domínio de uma função é o conjunto dos valores de entrada permitidos.
 
@@ -120,7 +120,7 @@ Graficamente, essa restrição aparece como uma interrupção no ponto $x=3$, no
 
 ***
 
-## Imagem
+## 🖼️ Imagem
 
 A imagem é o conjunto dos valores que a função realmente assume.
 
@@ -154,7 +154,7 @@ Graficamente, isso significa que o gráfico da parábola fica sobre ou acima do 
 
 ***
 
-## Zeros da função
+## 🎯 Zeros da função
 
 Os zeros de uma função são os valores de $x$ tais que
 
@@ -198,7 +198,7 @@ Os zeros são fundamentais porque dividem a reta em intervalos nos quais o sinal
 
 ***
 
-## Interseção com o eixo vertical
+## 📍 Interseção com o eixo vertical
 
 A interseção com o eixo vertical ocorre quando
 
@@ -240,7 +240,7 @@ o valor $x=0$ não pertence ao domínio. Portanto, o gráfico não corta o eixo 
 
 ***
 
-## Sinal da função
+## ➕ Sinal da função
 
 Estudar o sinal de uma função significa determinar onde ela é positiva, negativa ou nula.
 
@@ -278,7 +278,7 @@ Graficamente, isso significa que a curva fica acima do eixo $x$ fora do interval
 
 ***
 
-## Crescimento e decrescimento
+## 📉 Crescimento e decrescimento
 
 Uma função é crescente em um intervalo quando, à medida que $x$ aumenta, os valores de $f(x)$ também aumentam.
 
@@ -308,7 +308,7 @@ Mais adiante, a derivada será a ferramenta principal para estudar crescimento e
 
 ***
 
-## Máximos e mínimos
+## 🏔️ Máximos e mínimos
 
 Um ponto de mínimo ocorre quando a função atinge um valor menor do que os valores próximos.
 
@@ -344,7 +344,7 @@ A análise de máximos e mínimos será uma das grandes aplicações das derivad
 
 ***
 
-## Simetria
+## 🪞 Simetria
 
 Algumas funções apresentam simetrias importantes.
 
@@ -390,7 +390,7 @@ $$
 
 ***
 
-## Assíntotas
+## 📏 Assíntotas
 
 Assíntotas são retas das quais o gráfico se aproxima.
 
@@ -428,7 +428,7 @@ No módulo de limites, essas ideias serão formalizadas.
 
 ***
 
-## Leitura de gráficos
+## 📊 Leitura de gráficos
 
 Ao observar um gráfico, podemos fazer várias perguntas:
 
@@ -450,7 +450,7 @@ O Cálculo transformará muitas dessas observações em definições e teoremas.
 
 ***
 
-## Leitura algébrica de funções
+## 🔎 Leitura algébrica de funções
 
 Dada uma fórmula, podemos investigar:
 
@@ -492,7 +492,7 @@ Esse exemplo mostra como a álgebra revela detalhes que o gráfico precisa respe
 
 ***
 
-## Gráficos e Cálculo
+## 📊 Gráficos e Cálculo
 
 O Cálculo pode ser visto como uma forma refinada de leitura gráfica.
 
@@ -509,7 +509,7 @@ Por isso, revisar a leitura gráfica e algébrica de funções é essencial ante
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Para a função
 
@@ -525,7 +525,7 @@ c) a interseção com o eixo vertical;
 d) os intervalos em que $f(x)>0$;  
 e) os intervalos em que $f(x)<0$.
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Para a função
 
@@ -539,7 +539,7 @@ a) o domínio;
 b) a interseção com o eixo vertical;  
 c) a assíntota vertical.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Verifique se as funções abaixo são pares, ímpares ou nenhuma das duas:
 
@@ -549,7 +549,7 @@ c) $h(x)=x^2+x$
 d) $p(x)=\cos x$  
 e) $q(x)=\sin x$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Considere
 
@@ -561,7 +561,7 @@ a) Determine o domínio.
 b) Simplifique a expressão quando possível.  
 c) Explique o que acontece no gráfico em $x=2$.
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Explique, com suas palavras, por que a leitura gráfica e a leitura algébrica de uma função devem ser usadas juntas.
 
@@ -573,7 +573,7 @@ Explique, com suas palavras, por que a leitura gráfica e a leitura algébrica d
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 A função é
 
@@ -653,7 +653,7 @@ $$
 (-3,3).
 $$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 A função é
 
@@ -697,7 +697,7 @@ $$
 x=-4.
 $$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 a) Para $f(x)=x^4$,
 
@@ -735,7 +735,7 @@ $$
 \sin(-x)=-\sin x.
 $$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 A função é
 
@@ -799,7 +799,7 @@ $$
 (2,4).
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 A leitura algébrica permite encontrar domínio, zeros, sinais, restrições e simplificações com precisão. A leitura gráfica ajuda a visualizar comportamento, crescimento, interseções, buracos e tendências. Usadas juntas, elas dão uma compreensão mais completa da função.
 

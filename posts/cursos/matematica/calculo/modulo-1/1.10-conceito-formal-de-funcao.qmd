@@ -50,7 +50,7 @@ Essa formalização é necessária porque, no Cálculo, não estudaremos apenas 
 
 ***
 
-## A ideia intuitiva
+## 💡 A ideia intuitiva
 
 Intuitivamente, uma função é uma regra que associa entradas a saídas.
 
@@ -88,7 +88,7 @@ Mas essa imagem de máquina, embora útil, não é suficiente para a matemática
 
 ***
 
-## Definição formal de função
+## 📐 Definição formal de função
 
 Uma função de um conjunto $A$ em um conjunto $B$ é uma regra que associa a cada elemento de $A$ exatamente um elemento de $B$.
 
@@ -121,7 +121,7 @@ Isso significa duas coisas:
 
 ***
 
-## Domínio
+## 🧭 Domínio
 
 O domínio é o conjunto de todas as entradas permitidas da função.
 
@@ -177,7 +177,7 @@ $$
 
 ***
 
-## Contradomínio
+## 🎯 Contradomínio
 
 O contradomínio é o conjunto onde declaramos que os valores da função vivem.
 
@@ -211,7 +211,7 @@ Assim, contradomínio e imagem não são necessariamente a mesma coisa.
 
 ***
 
-## Imagem
+## 🖼️ Imagem
 
 A imagem de uma função é o conjunto de todos os valores que ela realmente assume.
 
@@ -249,7 +249,7 @@ $$
 
 ***
 
-## Domínio, contradomínio e imagem: comparação
+## 🎯 Domínio, contradomínio e imagem: comparação
 
 É importante distinguir os três conceitos.
 
@@ -289,7 +289,7 @@ $$
 
 ***
 
-## Funções como relações especiais
+## 🧩 Funções como relações especiais
 
 Uma forma mais formal de entender funções é vê-las como relações.
 
@@ -325,7 +325,7 @@ Essa visão será importante mais adiante quando pensarmos em gráficos.
 
 ***
 
-## Gráfico de uma função
+## 📊 Gráfico de uma função
 
 O gráfico de uma função real de variável real é o conjunto de pontos
 
@@ -369,7 +369,7 @@ Esse conjunto de pontos forma uma parábola.
 
 ***
 
-## O teste da reta vertical
+## 🔎 O teste da reta vertical
 
 Nem todo conjunto de pontos no plano representa o gráfico de uma função.
 
@@ -399,7 +399,7 @@ não passa, pois uma mesma reta vertical pode cortar a circunferência em dois p
 
 ***
 
-## Igualdade de funções
+## ⚖️ Igualdade de funções
 
 Duas funções são iguais quando têm o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.
 
@@ -433,7 +433,7 @@ Isso é muito importante no Cálculo. Muitas propriedades dependem do domínio c
 
 ***
 
-## Uma mesma fórmula pode definir funções diferentes
+## 🧮 Uma mesma fórmula pode definir funções diferentes
 
 A expressão
 
@@ -475,7 +475,7 @@ Isso mostra que a fórmula sozinha não conta toda a história. O domínio faz p
 
 ***
 
-## Funções reais de variável real
+## 🧩 Funções reais de variável real
 
 No Cálculo de uma variável, estudamos principalmente funções reais de variável real.
 
@@ -515,7 +515,7 @@ Essas funções podem ter domínios diferentes, mas todas associam números reai
 
 ***
 
-## Funções definidas por partes
+## 🧩 Funções definidas por partes
 
 Algumas funções são definidas por regras diferentes em partes diferentes do domínio.
 
@@ -545,7 +545,7 @@ Funções definidas por partes serão importantes no estudo de limites laterais 
 
 ***
 
-## Funções e modelagem
+## 🛠️ Funções e modelagem
 
 Em aplicações, uma função costuma representar uma dependência entre grandezas.
 
@@ -569,7 +569,7 @@ Mesmo que a fórmula faça sentido para valores negativos, o modelo físico pode
 
 ***
 
-## Por que isso importa para o Cálculo?
+## 🌉 Por que isso importa para o Cálculo?
 
 Limites, derivadas e integrais dependem de funções.
 
@@ -593,7 +593,7 @@ Por isso, o conceito formal de função não é apenas uma formalidade. Ele é a
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Para cada função, determine o domínio real natural:
 
@@ -602,7 +602,7 @@ b) $g(x)=\sqrt{x-4}$
 c) $h(x)=\dfrac{1}{x+2}$  
 d) $p(x)=\ln(x-1)$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Considere
 
@@ -622,7 +622,7 @@ a) o domínio;
 b) o contradomínio;  
 c) a imagem.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Explique por que a circunferência
 
@@ -632,7 +632,7 @@ $$
 
 não é gráfico de uma função $y=f(x)$ em todo o intervalo $[-1,1]$.
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Considere a função
 
@@ -650,7 +650,7 @@ a) $f(0)$
 b) $f(1)$  
 c) $f(3)$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 As funções abaixo são iguais?
 
@@ -674,7 +674,7 @@ Justifique.
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 a) Para $f(x)=x^2+1$, não há restrição real. Logo,
 
@@ -736,7 +736,7 @@ $$
 D_p=(1,+\infty).
 $$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 A função é
 
@@ -770,7 +770,7 @@ $$
 
 Isso ocorre porque $x^2\geq 0$ para todo $x\in\mathbb{R}$, e todo número real não negativo é quadrado de algum real.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 A circunferência
 
@@ -806,7 +806,7 @@ $$
 
 Assim, a mesma entrada $x=0$ teria duas saídas diferentes. Isso viola a definição de função.
 
-## Exercício 4
+## 🧪 Exercício 4
 
 A função é definida por partes:
 
@@ -836,7 +836,7 @@ $$
 f(3)=3^2=9.
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Não. As expressões são iguais, mas as funções não são iguais porque os domínios são diferentes.
 

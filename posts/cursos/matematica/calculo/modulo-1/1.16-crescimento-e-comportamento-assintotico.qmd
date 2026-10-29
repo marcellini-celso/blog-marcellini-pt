@@ -45,7 +45,7 @@ Este tema prepara diretamente o terreno para limites.
 
 ***
 
-## Crescimento de funções
+## 📈 Crescimento de funções
 
 Dizer que uma função cresce significa dizer que seus valores aumentam quando a variável aumenta.
 
@@ -97,7 +97,7 @@ $$
 
 ***
 
-## Decrescimento de funções
+## 📉 Decrescimento de funções
 
 Uma função é decrescente em um intervalo quando seus valores diminuem à medida que $x$ aumenta.
 
@@ -143,7 +143,7 @@ mas é importante notar que ela não é decrescente em todo o seu domínio consi
 
 ***
 
-## Taxa de crescimento
+## ⏱️ Taxa de crescimento
 
 Duas funções podem crescer, mas em ritmos muito diferentes.
 
@@ -178,7 +178,7 @@ Mais adiante, com limites, poderemos formalizar frases como:
 
 ***
 
-## Crescimento linear
+## 📈 Crescimento linear
 
 Funções lineares ou afins têm a forma
 
@@ -206,7 +206,7 @@ Esse crescimento por adição constante é típico de modelos lineares.
 
 ***
 
-## Crescimento polinomial
+## 📈 Crescimento polinomial
 
 Funções polinomiais têm a forma
 
@@ -238,7 +238,7 @@ $$
 
 ***
 
-## Crescimento exponencial
+## 📈 Crescimento exponencial
 
 Funções exponenciais têm a forma
 
@@ -277,7 +277,7 @@ Por exemplo, embora $x^5$ seja grande, a função $2^x$ acaba crescendo mais rap
 
 ***
 
-## Crescimento logarítmico
+## 📈 Crescimento logarítmico
 
 Funções logarítmicas crescem muito lentamente.
 
@@ -304,7 +304,7 @@ Por isso, em muitas comparações assintóticas, logaritmos crescem mais lentame
 
 ***
 
-## Uma hierarquia intuitiva de crescimento
+## 🪜 Uma hierarquia intuitiva de crescimento
 
 Para $x\to+\infty$, uma hierarquia comum de crescimento é:
 
@@ -338,7 +338,7 @@ Essa notação ainda será formalizada em cursos mais avançados, mas a ideia é
 
 ***
 
-## Comportamento assintótico
+## ♾️ Comportamento assintótico
 
 O comportamento assintótico descreve como uma função se comporta quando a variável se aproxima de uma região extrema.
 
@@ -377,7 +377,7 @@ Isso sugere uma assíntota vertical em $x=0$.
 
 ***
 
-## Assíntota vertical
+## 📏 Assíntota vertical
 
 Uma assíntota vertical é uma reta vertical da qual o gráfico se aproxima quando a função cresce ou decresce sem limite perto de algum valor de $x$.
 
@@ -411,7 +411,7 @@ $$
 
 ***
 
-## Assíntota horizontal
+## 📏 Assíntota horizontal
 
 Uma assíntota horizontal é uma reta horizontal da qual o gráfico se aproxima quando
 
@@ -471,7 +471,7 @@ $$
 
 ***
 
-## Assíntota oblíqua
+## 📏 Assíntota oblíqua
 
 Algumas funções racionais não se aproximam de uma reta horizontal, mas de uma reta inclinada.
 
@@ -505,7 +505,7 @@ Essa reta é uma assíntota oblíqua.
 
 ***
 
-## Termo dominante
+## 🔍 Termo dominante
 
 Em muitas expressões, o comportamento para valores grandes de $x$ é controlado pelo termo dominante.
 
@@ -563,7 +563,7 @@ $$
 
 ***
 
-## Comparando funções no infinito
+## ⚖️ Comparando funções no infinito
 
 A comparação de funções no infinito será uma ferramenta importante no estudo de limites.
 
@@ -605,7 +605,7 @@ Esses resultados serão demonstrados com ferramentas de limites mais adiante.
 
 ***
 
-## Por que isso importa para o Cálculo?
+## 🌉 Por que isso importa para o Cálculo?
 
 O comportamento assintótico é uma das portas de entrada para limites.
 
@@ -625,7 +625,7 @@ Por isso, esta aula funciona como ponte entre o estudo de funções e o módulo 
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Classifique o crescimento das funções como linear, polinomial, exponencial ou logarítmico:
 
@@ -634,7 +634,7 @@ b) $g(x)=x^4-3x+1$
 c) $h(x)=2^x$  
 d) $p(x)=\ln x$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Para cada função racional, determine a assíntota vertical:
 
@@ -642,7 +642,7 @@ a) $f(x)=\dfrac{1}{x-4}$
 b) $g(x)=\dfrac{2}{x+3}$  
 c) $h(x)=\dfrac{x+1}{x^2-9}$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Determine a assíntota horizontal:
 
@@ -650,7 +650,7 @@ a) $f(x)=\dfrac{x}{x+1}$
 b) $g(x)=\dfrac{3x^2+1}{x^2-5}$  
 c) $h(x)=\dfrac{2x+7}{5x-1}$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Identifique o termo dominante dos polinômios:
 
@@ -658,7 +658,7 @@ a) $p(x)=x^3-4x+9$
 b) $q(x)=7x^5-2x^2+1$  
 c) $r(x)=-3x^4+x^3+10$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Coloque as funções abaixo em ordem crescente de crescimento para $x\to+\infty$:
 
@@ -674,7 +674,7 @@ $$
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 a) $f(x)=5x+2$ tem crescimento linear.  
 
@@ -684,7 +684,7 @@ c) $h(x)=2^x$ tem crescimento exponencial.
 
 d) $p(x)=\ln x$ tem crescimento logarítmico.
 
-## Exercício 2
+## 🧪 Exercício 2
 
 a) Para
 
@@ -760,7 +760,7 @@ $$
 
 Como o numerador não zera nesses dois pontos, ambas são assíntotas verticais.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 a) Para
 
@@ -816,7 +816,7 @@ $$
 y=\frac{2}{5}.
 $$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 a) Em
 
@@ -854,7 +854,7 @@ $$
 -3x^4.
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Para $x\to+\infty$, a ordem crescente de crescimento é:
 

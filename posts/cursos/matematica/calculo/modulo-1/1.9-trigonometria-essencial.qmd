@@ -44,7 +44,7 @@ O objetivo não é esgotar a trigonometria, mas consolidar aquilo que será usad
 
 ***
 
-## Por que radianos?
+## 📐 Por que radianos?
 
 No ensino básico, é comum medir ângulos em graus. Por exemplo:
 
@@ -76,7 +76,7 @@ Radianos são naturais no Cálculo porque conectam ângulos, arcos e movimento c
 
 ***
 
-## Conversão entre graus e radianos
+## 🔄 Conversão entre graus e radianos
 
 Uma volta completa corresponde a
 
@@ -127,7 +127,7 @@ Algumas conversões importantes são:
 
 ***
 
-## O círculo trigonométrico
+## ⭕ O círculo trigonométrico
 
 O círculo trigonométrico é o círculo de raio $1$ centrado na origem do plano cartesiano.
 
@@ -152,7 +152,7 @@ Essa definição é poderosa porque permite estudar seno e cosseno para qualquer
 
 ***
 
-## Seno e cosseno
+## 🌊 Seno e cosseno
 
 No círculo unitário, definimos:
 
@@ -184,7 +184,7 @@ Por exemplo, ela permite reescrever expressões, simplificar derivadas e resolve
 
 ***
 
-## Valores notáveis
+## 🔢 Valores notáveis
 
 Alguns valores de seno e cosseno aparecem com frequência:
 
@@ -203,7 +203,7 @@ Esses valores ajudam a construir gráficos, resolver limites e reconhecer padrõ
 
 ***
 
-## Tangente
+## 📐 Tangente
 
 A tangente é definida por
 
@@ -239,7 +239,7 @@ $$
 
 ***
 
-## Periodicidade
+## 🔁 Periodicidade
 
 As funções trigonométricas são periódicas.
 
@@ -277,7 +277,7 @@ A periodicidade é uma das razões pelas quais funções trigonométricas são t
 
 ***
 
-## Paridade: funções pares e ímpares
+## 🪞 Paridade: funções pares e ímpares
 
 O cosseno é uma função par:
 
@@ -305,7 +305,7 @@ Essas simetrias ajudam a simplificar cálculos e a entender os gráficos.
 
 ***
 
-## Gráfico do seno
+## 📊 Gráfico do seno
 
 A função
 
@@ -357,7 +357,7 @@ O gráfico do seno oscila entre $-1$ e $1$ indefinidamente.
 
 ***
 
-## Gráfico do cosseno
+## 📊 Gráfico do cosseno
 
 A função
 
@@ -409,7 +409,7 @@ O gráfico do cosseno tem a mesma forma geral do seno, mas começa no valor máx
 
 ***
 
-## Gráfico da tangente
+## 📊 Gráfico da tangente
 
 A função
 
@@ -451,7 +451,7 @@ não está definida.
 
 ***
 
-## Identidades trigonométricas básicas
+## 🧮 Identidades trigonométricas básicas
 
 A identidade fundamental é
 
@@ -491,7 +491,7 @@ $$
 
 ***
 
-## Transformações simples
+## 🔄 Transformações simples
 
 As funções trigonométricas podem ser modificadas por constantes.
 
@@ -536,7 +536,7 @@ Essas transformações são muito usadas na modelagem de ondas.
 
 ***
 
-## Por que isso importa para o Cálculo?
+## 🌉 Por que isso importa para o Cálculo?
 
 A trigonometria é essencial para o Cálculo por várias razões.
 
@@ -572,7 +572,7 @@ Essas fórmulas de derivadas e limites trigonométricos funcionam naturalmente q
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Converta para radianos:
 
@@ -582,7 +582,7 @@ c) $60^\circ$
 d) $90^\circ$  
 e) $180^\circ$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Converta para graus:
 
@@ -592,7 +592,7 @@ c) $\dfrac{\pi}{3}$
 d) $\dfrac{\pi}{2}$  
 e) $2\pi$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Calcule:
 
@@ -602,7 +602,7 @@ c) $\sin\left(\dfrac{\pi}{2}\right)$
 d) $\cos(\pi)$  
 e) $\tan\left(\dfrac{\pi}{4}\right)$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Determine o domínio real das funções:
 
@@ -610,7 +610,7 @@ a) $f(x)=\sin x$
 b) $g(x)=\cos x$  
 c) $h(x)=\tan x$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Use a identidade
 
@@ -628,7 +628,7 @@ para determinar $\cos^2 x$ quando $\sin x=\dfrac{3}{5}$.
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Para converter graus em radianos, multiplicamos por
 
@@ -646,7 +646,7 @@ d) $90^\circ=\dfrac{90\pi}{180}=\dfrac{\pi}{2}$.
 
 e) $180^\circ=\pi$.
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Para converter radianos em graus, multiplicamos por
 
@@ -664,7 +664,7 @@ d) $\dfrac{\pi}{2}=90^\circ$.
 
 e) $2\pi=360^\circ$.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 a) $\sin\left(\dfrac{\pi}{6}\right)=\dfrac{1}{2}$.  
 
@@ -676,7 +676,7 @@ d) $\cos(\pi)=-1$.
 
 e) $\tan\left(\dfrac{\pi}{4}\right)=1$.
 
-## Exercício 4
+## 🧪 Exercício 4
 
 a) A função $f(x)=\sin x$ está definida para todo real. Logo, $D_f=\mathbb{R}$.  
 
@@ -694,7 +694,7 @@ $$
 D_h=\mathbb{R}\setminus\left\{\frac{\pi}{2}+k\pi\mid k\in\mathbb{Z}\right\}.
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Sabemos que
 

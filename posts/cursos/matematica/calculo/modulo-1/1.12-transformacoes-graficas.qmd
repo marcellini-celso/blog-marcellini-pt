@@ -46,7 +46,7 @@ Elas são importantes porque permitem reconhecer rapidamente deslocamentos, refl
 
 ***
 
-## A ideia básica
+## 💡 A ideia básica
 
 Suponha que conhecemos o gráfico de
 
@@ -108,7 +108,7 @@ a alteração acontece antes de aplicar a função. A mudança é horizontal.
 
 ***
 
-## Translação vertical
+## ↔️ Translação vertical
 
 A transformação
 
@@ -159,7 +159,7 @@ está no gráfico de $g(x)=f(x)+k$.
 
 ***
 
-## Translação horizontal
+## ↔️ Translação horizontal
 
 A transformação
 
@@ -212,7 +212,7 @@ está no gráfico de $g(x)=f(x-h)$.
 
 ***
 
-## Reflexão em relação ao eixo horizontal
+## 🪞 Reflexão em relação ao eixo horizontal
 
 A transformação
 
@@ -254,7 +254,7 @@ A parábola que antes tinha concavidade para cima passa a ter concavidade para b
 
 ***
 
-## Reflexão em relação ao eixo vertical
+## 🪞 Reflexão em relação ao eixo vertical
 
 A transformação
 
@@ -304,7 +304,7 @@ $$
 
 ***
 
-## Alongamento e compressão vertical
+## 📏 Alongamento e compressão vertical
 
 A transformação
 
@@ -350,7 +350,7 @@ combina reflexão em relação ao eixo horizontal com alongamento vertical por f
 
 ***
 
-## Alongamento e compressão horizontal
+## 📏 Alongamento e compressão horizontal
 
 A transformação
 
@@ -400,7 +400,7 @@ $$
 
 ***
 
-## Combinações de transformações
+## 🧩 Combinações de transformações
 
 Muitas funções combinam várias transformações.
 
@@ -442,7 +442,7 @@ $$
 
 ***
 
-## Transformações em funções trigonométricas
+## 🌊 Transformações em funções trigonométricas
 
 Funções trigonométricas aparecem frequentemente com transformações.
 
@@ -487,7 +487,7 @@ tem amplitude $3$, período $\pi$ e deslocamento vertical de $1$ unidade para ba
 
 ***
 
-## Transformações e domínio
+## 🧭 Transformações e domínio
 
 Transformações podem alterar o domínio.
 
@@ -555,7 +555,7 @@ Por isso, ao transformar uma função, não devemos olhar apenas para o desenho 
 
 ***
 
-## Ordem das transformações
+## 🔢 Ordem das transformações
 
 Quando várias transformações aparecem juntas, convém interpretá-las com cuidado.
 
@@ -576,7 +576,7 @@ Essa leitura ajuda a construir o gráfico passo a passo.
 
 ***
 
-## Por que isso importa para o Cálculo?
+## 🌉 Por que isso importa para o Cálculo?
 
 Transformações gráficas ajudam a reconhecer funções rapidamente.
 
@@ -596,7 +596,7 @@ Em resumo, transformações gráficas são uma ponte entre a álgebra da fórmul
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Considere a função base
 
@@ -611,7 +611,7 @@ b) $h(x)=x^2-3$
 c) $p(x)=(x-2)^2$  
 d) $q(x)=(x+5)^2$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Ainda considerando
 
@@ -626,7 +626,7 @@ b) $h(x)=3x^2$
 c) $p(x)=\dfrac{1}{2}x^2$  
 d) $q(x)=-2x^2$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Determine o vértice da parábola:
 
@@ -634,7 +634,7 @@ a) $g(x)=(x-4)^2+1$
 b) $h(x)=(x+2)^2-3$  
 c) $p(x)=2(x-1)^2+5$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Determine o domínio real das funções:
 
@@ -643,7 +643,7 @@ b) $g(x)=\sqrt{x+2}$
 c) $h(x)=\sqrt{-x}$  
 d) $p(x)=\sqrt{5-x}$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Para a função
 
@@ -665,7 +665,7 @@ c) o deslocamento vertical.
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 a) $g(x)=x^2+4$ é o gráfico de $f(x)=x^2$ deslocado $4$ unidades para cima.  
 
@@ -675,7 +675,7 @@ c) $p(x)=(x-2)^2$ é o gráfico deslocado $2$ unidades para a direita.
 
 d) $q(x)=(x+5)^2$ é o gráfico deslocado $5$ unidades para a esquerda.
 
-## Exercício 2
+## 🧪 Exercício 2
 
 a) $g(x)=-x^2$ é uma reflexão em relação ao eixo horizontal.  
 
@@ -685,7 +685,7 @@ c) $p(x)=\dfrac{1}{2}x^2$ é uma compressão vertical por fator $\dfrac{1}{2}$.
 
 d) $q(x)=-2x^2$ combina reflexão em relação ao eixo horizontal com alongamento vertical por fator $2$.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 a) A função
 
@@ -723,7 +723,7 @@ $$
 (1,5).
 $$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 a) Para $f(x)=\sqrt{x-3}$, precisamos de
 
@@ -797,7 +797,7 @@ $$
 D_p=(-\infty,5].
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 A função é
 

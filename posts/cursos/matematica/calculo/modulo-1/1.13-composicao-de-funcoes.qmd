@@ -66,7 +66,7 @@ A ordem importa.
 
 ***
 
-## A ideia de composição
+## 💡 A ideia de composição
 
 Suponha que temos duas funções:
 
@@ -110,7 +110,7 @@ Em $(f\circ g)(x)=f(g(x))$, a função que está mais perto de $x$ é aplicada p
 
 ***
 
-## Exemplo básico
+## ✅ Exemplo básico
 
 Considere
 
@@ -200,7 +200,7 @@ Essas funções são diferentes.
 
 ***
 
-## A ordem da composição importa
+## 🔢 A ordem da composição importa
 
 A composição de funções geralmente não é comutativa.
 
@@ -250,7 +250,7 @@ Logo, as duas composições não são iguais.
 
 ***
 
-## Composição com funções elementares
+## 🔗 Composição com funções elementares
 
 A composição aparece naturalmente em funções mais complexas.
 
@@ -312,7 +312,7 @@ Essa forma de enxergar funções será essencial quando estudarmos a **regra da 
 
 ***
 
-## Domínio da função composta
+## 🧭 Domínio da função composta
 
 O domínio de uma composta exige cuidado.
 
@@ -345,7 +345,7 @@ Não basta olhar apenas para a fórmula final simplificada. O domínio da compos
 
 ***
 
-## Exemplo com raiz
+## ✅ Exemplo com raiz
 
 Considere
 
@@ -405,7 +405,7 @@ Além das fórmulas serem diferentes, os domínios também são diferentes.
 
 ***
 
-## Exemplo com logaritmo
+## ✅ Exemplo com logaritmo
 
 Considere
 
@@ -463,7 +463,7 @@ $$
 
 ***
 
-## Exemplo com função racional
+## ✅ Exemplo com função racional
 
 Considere
 
@@ -515,7 +515,7 @@ $$
 
 ***
 
-## Decompor uma função composta
+## 🧩 Decompor uma função composta
 
 Também é importante saber fazer o processo inverso: reconhecer uma função composta e decompô-la.
 
@@ -571,7 +571,7 @@ Essa leitura será indispensável para derivar funções compostas.
 
 ***
 
-## Composição e transformações gráficas
+## 🔗 Composição e transformações gráficas
 
 Muitas transformações gráficas podem ser vistas como composições.
 
@@ -611,7 +611,7 @@ podem ser entendidas como aplicar $f$ e depois transformar o resultado.
 
 ***
 
-## Composição em modelos
+## 🔗 Composição em modelos
 
 Em aplicações, composição aparece quando uma grandeza depende de outra, que por sua vez depende de uma terceira.
 
@@ -645,7 +645,7 @@ Esse é um exemplo de composição.
 
 ***
 
-## Por que isso importa para o Cálculo?
+## 🌉 Por que isso importa para o Cálculo?
 
 A composição de funções é uma das ideias mais importantes para derivadas.
 
@@ -667,7 +667,7 @@ Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutur
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Considere
 
@@ -688,7 +688,7 @@ b) $(g\circ f)(x)$
 c) $(f\circ g)(2)$  
 d) $(g\circ f)(2)$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Considere
 
@@ -709,7 +709,7 @@ b) o domínio de $f\circ g$
 c) $(g\circ f)(x)$  
 d) o domínio de $g\circ f$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Determine o domínio real das funções compostas:
 
@@ -717,7 +717,7 @@ a) $h(x)=\ln(x-3)$
 b) $p(x)=\sqrt{2x+4}$  
 c) $q(x)=\dfrac{1}{x^2-9}$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Decomponha cada função como uma composição $f(g(x))$:
 
@@ -726,7 +726,7 @@ b) $p(x)=\sqrt{x^2+3}$
 c) $q(x)=\ln(5x+2)$  
 d) $r(x)=\sin(3x)$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Explique por que, em geral,
 
@@ -742,7 +742,7 @@ $$
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Temos
 
@@ -780,7 +780,7 @@ $$
 (g\circ f)(2)=2^2+1=5.
 $$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Temos
 
@@ -836,7 +836,7 @@ $$
 D_{g\circ f}=[0,+\infty).
 $$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 a) Para
 
@@ -928,7 +928,7 @@ $$
 D_q=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
 $$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 a) Para
 
@@ -1002,7 +1002,7 @@ $$
 f(u)=\sin u.
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Em uma composição, a ordem de aplicação das funções importa. Em $f\circ g$, aplicamos primeiro $g$ e depois $f$. Em $g\circ f$, aplicamos primeiro $f$ e depois $g$. Como essas operações geralmente produzem expressões diferentes, em geral temos
 

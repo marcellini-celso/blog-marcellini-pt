@@ -54,7 +54,7 @@ A inversa é, portanto, uma função de retorno.
 
 ***
 
-## A ideia de desfazer uma operação
+## 💡 A ideia de desfazer uma operação
 
 Considere a função
 
@@ -86,7 +86,7 @@ Quando as duas composições devolvem a entrada original, uma função é invers
 
 ***
 
-## Definição de função inversa
+## 📐 Definição de função inversa
 
 Se
 
@@ -144,7 +144,7 @@ A inversa de uma função é a função que desfaz a ação da função original
 
 ***
 
-## A função identidade
+## 🆔 A função identidade
 
 A função identidade em um conjunto $A$ é dada por
 
@@ -178,7 +178,7 @@ significa que aplicar $f^{-1}$ e depois aplicar $f$ também devolve o ponto inic
 
 ***
 
-## Nem toda função tem inversa
+## ⚠️ Nem toda função tem inversa
 
 Nem toda função possui inversa.
 
@@ -195,7 +195,7 @@ Esses conceitos são importantes para entender quando a inversa existe.
 
 ***
 
-## Função injetiva
+## 🧩 Função injetiva
 
 Uma função é injetiva quando entradas diferentes produzem saídas diferentes.
 
@@ -239,7 +239,7 @@ $$
 
 ***
 
-## Função sobrejetiva
+## 🧩 Função sobrejetiva
 
 Uma função
 
@@ -299,7 +299,7 @@ $$
 
 ***
 
-## Função bijetiva
+## 🧩 Função bijetiva
 
 Uma função é bijetiva quando é injetiva e sobrejetiva.
 
@@ -315,7 +315,7 @@ Uma função tem inversa quando cada valor de saída corresponde a uma única en
 
 ***
 
-## Exemplo de função com inversa
+## ✅ Exemplo de função com inversa
 
 Considere
 
@@ -367,7 +367,7 @@ $$
 
 ***
 
-## Exemplo de função sem inversa em todo $\mathbb{R}$
+## ✅ Exemplo de função sem inversa em todo $\mathbb{R}$
 
 Considere
 
@@ -399,7 +399,7 @@ Portanto, $f(x)=x^2$ não possui inversa como função de $\mathbb{R}$ em $\math
 
 ***
 
-## Restringindo o domínio
+## 🧭 Restringindo o domínio
 
 Embora
 
@@ -445,7 +445,7 @@ Esse exemplo mostra que a existência da inversa depende fortemente do domínio 
 
 ***
 
-## Como encontrar a inversa
+## 🪞 Como encontrar a inversa
 
 Para encontrar a inversa de uma função dada por uma fórmula, podemos seguir estes passos:
 
@@ -487,7 +487,7 @@ $$
 
 ***
 
-## Gráfico da função inversa
+## 📊 Gráfico da função inversa
 
 O gráfico da função inversa tem uma relação geométrica especial com o gráfico da função original.
 
@@ -527,7 +527,7 @@ têm gráficos simétricos em relação à reta $y=x$.
 
 ***
 
-## Teste da reta horizontal
+## 🔎 Teste da reta horizontal
 
 Para saber se uma função possui inversa, podemos usar o teste da reta horizontal.
 
@@ -555,7 +555,7 @@ passa no teste e possui inversa em $\mathbb{R}$.
 
 ***
 
-## Exponencial e logaritmo
+## 🚀 Exponencial e logaritmo
 
 Um dos pares mais importantes de funções inversas é:
 
@@ -600,7 +600,7 @@ Note a troca de domínio e imagem:
 
 ***
 
-## Seno, cosseno e inversas
+## 🪞 Seno, cosseno e inversas
 
 As funções trigonométricas também podem ter inversas, mas apenas após restrições adequadas de domínio.
 
@@ -628,7 +628,7 @@ Esse fenômeno mostra novamente que a inversa depende do domínio escolhido.
 
 ***
 
-## Por que isso importa para o Cálculo?
+## 🌉 Por que isso importa para o Cálculo?
 
 Funções inversas aparecem em muitos pontos do Cálculo.
 
@@ -646,7 +646,7 @@ Além disso, compreender inversas ajuda a entender melhor domínio, imagem, comp
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Determine a inversa das funções:
 
@@ -655,7 +655,7 @@ b) $g(x)=3x-2$
 c) $h(x)=\dfrac{x}{4}$  
 d) $p(x)=\dfrac{x-1}{2}$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Verifique por composição se as funções são inversas:
 
@@ -669,7 +669,7 @@ $$
 g(x)=\frac{x-1}{2}.
 $$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Explique por que
 
@@ -679,7 +679,7 @@ $$
 
 não possui inversa.
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Restrinja o domínio da função
 
@@ -689,7 +689,7 @@ $$
 
 para que ela tenha inversa e determine essa inversa.
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Determine domínio e imagem das funções:
 
@@ -704,7 +704,7 @@ b) $g(x)=\ln x$
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 a) Para
 
@@ -814,7 +814,7 @@ $$
 p^{-1}(x)=2x+1.
 $$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Temos
 
@@ -842,7 +842,7 @@ $$
 
 Como as duas composições resultam na identidade, $f$ e $g$ são inversas.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 A função
 
@@ -866,7 +866,7 @@ $$
 
 Como uma mesma saída corresponde a duas entradas diferentes, não é possível definir uma inversa que seja função.
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Podemos restringir o domínio a
 
@@ -900,7 +900,7 @@ $$
 f^{-1}(x)=-\sqrt{x}.
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 a) Para
 

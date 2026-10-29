@@ -45,7 +45,7 @@ O objetivo não é transformar a realidade em fórmulas perfeitas. O objetivo é
 
 ***
 
-## O que é modelar?
+## 🛠️ O que é modelar?
 
 Modelar é construir uma ponte entre uma situação e uma estrutura matemática.
 
@@ -72,7 +72,7 @@ Um modelo matemático não é a realidade completa. Ele é uma representação s
 
 ***
 
-## Variáveis e parâmetros
+## 🔣 Variáveis e parâmetros
 
 Em um modelo, é importante distinguir variáveis e parâmetros.
 
@@ -98,7 +98,7 @@ O número $5$ representa custo fixo. O número $3$ representa custo por unidade 
 
 ***
 
-## Modelos lineares
+## 🛠️ Modelos lineares
 
 Um modelo linear ou afim tem a forma
 
@@ -122,7 +122,7 @@ Essa taxa constante é a característica principal de um modelo linear.
 
 ***
 
-## Interpretação dos coeficientes
+## 🔎 Interpretação dos coeficientes
 
 No modelo
 
@@ -156,7 +156,7 @@ O coeficiente $8$ indica que cada unidade aumenta o custo em R$ 8,00.
 
 ***
 
-## Modelos quadráticos
+## 🛠️ Modelos quadráticos
 
 Um modelo quadrático tem a forma
 
@@ -186,7 +186,7 @@ O gráfico dessa função é uma parábola com concavidade voltada para baixo.
 
 ***
 
-## Máximo em um modelo quadrático
+## 🛠️ Máximo em um modelo quadrático
 
 Em um modelo quadrático com concavidade para baixo, o vértice representa um valor máximo.
 
@@ -242,7 +242,7 @@ A altura máxima é $21$.
 
 ***
 
-## Modelos exponenciais
+## 🛠️ Modelos exponenciais
 
 Um modelo exponencial aparece quando uma quantidade muda por um fator multiplicativo constante.
 
@@ -282,7 +282,7 @@ $$
 
 ***
 
-## Decaimento exponencial
+## 📉 Decaimento exponencial
 
 O decaimento exponencial aparece quando uma quantidade diminui por uma razão constante.
 
@@ -322,7 +322,7 @@ A cada unidade de tempo, a quantidade é multiplicada por $\frac{1}{2}$.
 
 ***
 
-## Modelos logarítmicos
+## 🛠️ Modelos logarítmicos
 
 Modelos logarítmicos aparecem quando o crescimento é rápido no início e depois desacelera.
 
@@ -356,7 +356,7 @@ $$
 
 ***
 
-## Modelos racionais
+## 🛠️ Modelos racionais
 
 Modelos racionais têm a forma
 
@@ -396,7 +396,7 @@ Esse tipo de comportamento será estudado com mais precisão no módulo de limit
 
 ***
 
-## Modelos trigonométricos
+## 🛠️ Modelos trigonométricos
 
 Modelos trigonométricos são usados para representar fenômenos periódicos.
 
@@ -423,7 +423,7 @@ pode representar uma temperatura diária oscilando em torno de $20^\circ$ com am
 
 ***
 
-## Escolhendo o tipo de função
+## 🧩 Escolhendo o tipo de função
 
 Uma parte importante da modelagem é escolher a família de funções adequada.
 
@@ -440,7 +440,7 @@ Essa escolha depende do contexto, dos dados e da pergunta que queremos responder
 
 ***
 
-## Domínio no contexto
+## 🧭 Domínio no contexto
 
 Em modelagem, o domínio não depende apenas da fórmula. Ele também depende do significado das variáveis.
 
@@ -470,7 +470,7 @@ Em modelos, sempre pergunte se o valor da variável faz sentido no contexto.
 
 ***
 
-## Limitações dos modelos
+## ⚠️ Limitações dos modelos
 
 Todo modelo é uma simplificação.
 
@@ -491,7 +491,7 @@ Modelar não é apenas calcular. É interpretar.
 
 ***
 
-## Por que isso importa para o Cálculo?
+## 🌉 Por que isso importa para o Cálculo?
 
 O Cálculo nasceu de problemas de variação, movimento, área e acumulação.
 
@@ -511,7 +511,7 @@ Essas perguntas levarão naturalmente a limites, derivadas e integrais.
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Uma corrida de aplicativo cobra uma taxa fixa de R$ 6,00 mais R$ 2,50 por quilômetro.
 
@@ -519,7 +519,7 @@ a) Escreva uma função $C(x)$ para o custo em função da distância $x$.
 b) Calcule $C(10)$.  
 c) Interprete o coeficiente de $x$.
 
-## Exercício 2
+## 🧪 Exercício 2
 
 A altura de um objeto é dada por
 
@@ -531,14 +531,14 @@ a) Qual é o tipo de função?
 b) Em que instante ocorre a altura máxima?  
 c) Qual é a altura máxima?
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Uma população inicial de $500$ indivíduos cresce $20\%$ por período.
 
 a) Escreva um modelo exponencial para a população.  
 b) Calcule a população após $3$ períodos.
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Determine o domínio natural, no contexto indicado:
 
@@ -546,7 +546,7 @@ a) $C(x)=15+4x$, onde $x$ é quantidade produzida.
 b) $A(r)=\pi r^2$, onde $r$ é o raio de um círculo.  
 c) $P(t)=1000(1{,}05)^t$, onde $t$ é tempo após o início da observação.
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Associe cada situação a um tipo provável de modelo: linear, quadrático, exponencial, logarítmico, racional ou trigonométrico.
 
@@ -564,7 +564,7 @@ e) Quantidade que se aproxima de um limite horizontal.
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 a) A taxa fixa é R$ 6,00 e o valor por quilômetro é R$ 2,50. Logo,
 
@@ -582,7 +582,7 @@ O custo é R$ 31,00.
 
 c) O coeficiente $2{,}5$ representa o custo por quilômetro percorrido.
 
-## Exercício 2
+## 🧪 Exercício 2
 
 A função é
 
@@ -626,7 +626,7 @@ $$
 
 A altura máxima é $47$.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 a) Crescimento de $20\%$ por período significa fator
 
@@ -660,7 +660,7 @@ $$
 
 A população após $3$ períodos é $864$ indivíduos, segundo o modelo.
 
-## Exercício 4
+## 🧪 Exercício 4
 
 a) Se $x$ representa quantidade produzida, faz sentido considerar
 
@@ -686,7 +686,7 @@ $$
 t\geq 0.
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 a) Temperatura diária variando de forma periódica: modelo trigonométrico.  
 

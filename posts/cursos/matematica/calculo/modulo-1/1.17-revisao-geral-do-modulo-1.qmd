@@ -53,7 +53,7 @@ Este post organiza essas ideias e mostra como elas se conectam.
 
 ***
 
-## O papel do Módulo 1
+## 🧭 O papel do Módulo 1
 
 O Cálculo não começa com derivadas.
 
@@ -75,7 +75,7 @@ O Cálculo estuda variação, aproximação e acumulação. Para isso, precisamo
 
 ***
 
-## Conjuntos e números reais
+## 🔢 Conjuntos e números reais
 
 O curso começou revisando conjuntos e números reais.
 
@@ -119,7 +119,7 @@ No Cálculo de uma variável real, trabalhamos principalmente com funções defi
 
 ***
 
-## Intervalos
+## 📏 Intervalos
 
 Intervalos são subconjuntos especiais da reta real.
 
@@ -167,7 +167,7 @@ estamos usando a linguagem dos intervalos.
 
 ***
 
-## Equações e inequações
+## 🧮 Equações e inequações
 
 Equações e inequações aparecem em praticamente todas as etapas do Cálculo.
 
@@ -212,7 +212,7 @@ $$
 
 ***
 
-## Valor absoluto
+## 📐 Valor absoluto
 
 O valor absoluto mede distância até zero.
 
@@ -246,7 +246,7 @@ Essa ideia será essencial na definição formal de limite.
 
 ***
 
-## Funções elementares
+## 🧩 Funções elementares
 
 Revisamos várias famílias de funções elementares.
 
@@ -268,7 +268,7 @@ Por isso, reconhecer famílias de funções ajuda a prever comportamento.
 
 ***
 
-## Funções polinomiais e racionais
+## 🧩 Funções polinomiais e racionais
 
 Funções polinomiais têm a forma
 
@@ -304,7 +304,7 @@ Esse ponto excluído pode gerar uma assíntota vertical.
 
 ***
 
-## Exponenciais e logaritmos
+## 🚀 Exponenciais e logaritmos
 
 Funções exponenciais têm a forma
 
@@ -352,7 +352,7 @@ Essas funções serão centrais no estudo de derivadas e integrais.
 
 ***
 
-## Trigonometria essencial
+## 🌊 Trigonometria essencial
 
 A trigonometria entra no Cálculo por meio de funções como:
 
@@ -386,7 +386,7 @@ As funções trigonométricas serão indispensáveis em limites, derivadas, inte
 
 ***
 
-## Definição formal de função
+## 📐 Definição formal de função
 
 Uma função
 
@@ -414,7 +414,7 @@ No Cálculo, o domínio é especialmente importante. Ele determina onde podemos 
 
 ***
 
-## Leitura gráfica e algébrica
+## 🔎 Leitura gráfica e algébrica
 
 Uma função pode ser analisada por sua fórmula e por seu gráfico.
 
@@ -444,7 +444,7 @@ O Cálculo formaliza muitas percepções gráficas por meio de limites, derivada
 
 ***
 
-## Transformações gráficas
+## 🔄 Transformações gráficas
 
 Transformações gráficas permitem construir gráficos novos a partir de gráficos conhecidos.
 
@@ -490,7 +490,7 @@ Essas transformações ajudam a reconhecer rapidamente o comportamento de funç�
 
 ***
 
-## Composição de funções
+## 🔗 Composição de funções
 
 A composição de funções é dada por
 
@@ -534,7 +534,7 @@ A composição será essencial para a regra da cadeia no estudo de derivadas.
 
 ***
 
-## Função inversa
+## 🪞 Função inversa
 
 Uma função inversa desfaz a ação da função original.
 
@@ -575,7 +575,7 @@ $$
 
 ***
 
-## Modelagem com funções
+## 🛠️ Modelagem com funções
 
 Funções elementares servem para construir modelos.
 
@@ -608,7 +608,7 @@ Nem todo valor permitido pela fórmula faz sentido no problema real.
 
 ***
 
-## Crescimento e comportamento assintótico
+## 📈 Crescimento e comportamento assintótico
 
 No final do módulo, estudamos como comparar o crescimento de funções e como observar tendências extremas.
 
@@ -654,7 +654,7 @@ Essas ideias serão formalizadas no módulo de limites.
 
 ***
 
-## Mapa conceitual do Módulo 1
+## 🗺️ Mapa conceitual do Módulo 1
 
 Podemos resumir o módulo assim:
 
@@ -682,7 +682,7 @@ O próximo módulo começará exatamente no último ponto: **limites**.
 
 ***
 
-## Checklist para seguir para limites
+## ✅ Checklist para seguir para limites
 
 Antes de avançar, é importante que você consiga:
 
@@ -702,7 +702,7 @@ Se algum desses pontos ainda parece frágil, vale revisar os posts anteriores an
 
 ***
 
-## O que vem agora?
+## 🚀 O que vem agora?
 
 Com essa base, estamos prontos para começar o estudo de limites.
 
@@ -723,7 +723,7 @@ A partir dos limites, construiremos continuidade, derivadas e integrais.
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## Exercício 1
+## 🧪 Exercício 1
 
 Determine o domínio real das funções:
 
@@ -732,7 +732,7 @@ b) $g(x)=\dfrac{1}{x+5}$
 c) $h(x)=\ln(x-1)$  
 d) $p(x)=\dfrac{x+1}{x^2-4}$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Considere
 
@@ -747,7 +747,7 @@ b) a interseção com o eixo vertical;
 c) os intervalos em que $f(x)>0$;  
 d) os intervalos em que $f(x)<0$.
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Considere
 
@@ -768,7 +768,7 @@ b) $(g\circ f)(x)$
 c) $(f\circ g)(1)$  
 d) $(g\circ f)(1)$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Determine a inversa de
 
@@ -778,7 +778,7 @@ $$
 
 Verifique por composição.
 
-## Exercício 5
+## 🧪 Exercício 5
 
 Associe cada função ao tipo de comportamento dominante:
 
@@ -798,7 +798,7 @@ Use as opções: exponencial, logarítmico, polinomial, racional com assíntota 
 
 # ✅ Gabarito comentado
 
-## Exercício 1
+## 🧪 Exercício 1
 
 a) Para
 
@@ -908,7 +908,7 @@ $$
 D_p=(-\infty,-2)\cup(-2,2)\cup(2,+\infty).
 $$
 
-## Exercício 2
+## 🧪 Exercício 2
 
 Temos
 
@@ -964,7 +964,7 @@ $$
 (-2,2).
 $$
 
-## Exercício 3
+## 🧪 Exercício 3
 
 Temos
 
@@ -1002,7 +1002,7 @@ $$
 (g\circ f)(1)=1^2+3=4.
 $$
 
-## Exercício 4
+## 🧪 Exercício 4
 
 Temos
 
@@ -1046,7 +1046,7 @@ $$
 f(f^{-1}(x))=f\left(\frac{x+6}{3}\right)=3\cdot\frac{x+6}{3}-6=x+6-6=x.
 $$
 
-## Exercício 5
+## 🧪 Exercício 5
 
 a) $f(x)=2^x$: exponencial.  
 
