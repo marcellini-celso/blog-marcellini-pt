@@ -61,11 +61,8 @@
   .blog-home .home-masthead-copy { max-width: 100%; }
   .blog-home .home-masthead h1 { letter-spacing: -.025em; }
   .blog-home .home-masthead-art {
-    position: absolute;
-    width: 250px;
-    right: -60px;
-    bottom: -70px;
-    opacity: .16;
+    width: min(100%, 280px);
+    justify-self: center;
     pointer-events: none;
   }
 }
