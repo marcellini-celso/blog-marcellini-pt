@@ -140,6 +140,8 @@ $$
 
 Ou seja: os reais são formados pelos racionais e pelos irracionais.
 
+![Inclusões entre os conjuntos numéricos: naturais, inteiros, racionais e reais, com exemplos de irracionais.](images/1.4-conjuntos-numericos.svg){#fig-conjuntos-numericos width="88%" fig-align="center"}
+
 ***
 
 # 🔢 A reta real
@@ -157,6 +159,8 @@ $$
 $$
 
 Essa relação de ordem será fundamental em todo o curso. Ela aparece em desigualdades, intervalos, domínios de funções, limites laterais, crescimento de funções e regiões de integração.
+
+![Reta real com alguns números em ordem crescente, incluindo a posição aproximada de raiz de dois.](images/1.4-reta-real.svg){#fig-reta-real width="88%" fig-align="center"}
 
 ::: {.callout-tip title="💡 Ideia geométrica"}
 Pensar em $\mathbb{R}$ como uma reta ajuda a enxergar expressões algébricas como regiões geométricas.
@@ -236,6 +240,8 @@ $$
 
 No intervalo $[a,b)$, o extremo esquerdo pertence ao intervalo, mas o extremo direito não pertence. No intervalo $(a,b]$, ocorre o contrário: o extremo esquerdo não pertence, mas o extremo direito pertence.
 
+![Comparação dos intervalos aberto, fechado e semiabertos entre 1 e 4. Círculos vazados excluem o extremo; círculos preenchidos o incluem.](images/1.4-intervalos-finitos.svg){#fig-intervalos-finitos width="92%" fig-align="center"}
+
 ***
 
 # 📏 Intervalos infinitos
@@ -283,6 +289,8 @@ $$
 [-\infty,3].
 $$
 :::
+
+![Quatro intervalos infinitos representados como semirretas, com extremos inclusos ou exclusos.](images/1.4-intervalos-infinitos.svg){#fig-intervalos-infinitos width="92%" fig-align="center"}
 
 ***
 
@@ -362,6 +370,8 @@ $$
 
 Esse exemplo mostra como desigualdades e intervalos aparecem naturalmente quando estudamos funções reais.
 
+![Comparação dos domínios reais das funções raiz de x, um sobre x menos dois e raiz de quatro menos x ao quadrado.](images/1.4-dominios-funcoes.svg){#fig-dominios-funcoes width="92%" fig-align="center"}
+
 ***
 
 # 📏 Intervalos e valor absoluto
@@ -416,6 +426,8 @@ $$
 
 Esse intervalo contém todos os números reais que estão a uma distância menor que $0{,}5$ de $3$.
 
+![Vizinhança aberta de centro 3 e raio 0,5, representada na reta real com extremos excluídos.](images/1.4-vizinhanca.svg){#fig-vizinhanca width="88%" fig-align="center"}
+
 ***
 
 # 🎯 Por que vizinhanças importam para limites?
@@ -453,6 +465,8 @@ O Cálculo começa quando deixamos de olhar apenas para valores isolados e passa
 
 Por isso, intervalos e vizinhanças são a linguagem natural dos limites.
 :::
+
+![Aproximação na entrada por uma vizinhança perfurada de a com raio delta, e na saída por uma vizinhança de L com raio épsilon.](images/1.4-aproximacoes-limites.svg){#fig-aproximacoes-limites width="92%" fig-align="center"}
 
 ***
 

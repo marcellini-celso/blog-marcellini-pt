@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="656.46pt" height="297.576pt" viewBox="0 0 656.46 297.576" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Conjuntos numéricos</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Conjuntos numéricos</dc:title>
+    <dc:date>2026-10-31T12:35:06.041836</dc:date>
+    <dc:description>Inclusões de naturais em inteiros, racionais e reais; exemplos irracionais fora dos racionais.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:language>pt-BR</dc:language>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 297.576
+L 656.46 297.576
+L 656.46 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 28.7235 280.812816
+L 625.018655 280.812816
+Q 636.977172 280.812816 636.977172 268.859952
+L 636.977172 31.432608
+Q 636.977172 19.479744 625.018655 19.479744
+L 28.7235 19.479744
+Q 16.764983 19.479744 16.764983 31.432608
+L 16.764983 268.859952
+Q 16.764983 280.812816 28.7235 280.812816
+z
+" clip-path="url(#p77f4d91a63)" style="fill: #e9f3fb; stroke: #7fa6c5; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 50.466259 261.253584
+L 497.279948 261.253584
+Q 509.238466 261.253584 509.238466 249.30072
+L 509.238466 58.054896
+Q 509.238466 46.102032 497.279948 46.102032
+L 50.466259 46.102032
+Q 38.507741 46.102032 38.507741 58.054896
+L 38.507741 249.30072
+Q 38.507741 261.253584 50.466259 261.253584
+z
+" clip-path="url(#p77f4d91a63)" style="fill: #e3f5f4; stroke: #69aaa9; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 72.209017 238.43448
+L 383.130466 238.43448
+Q 395.088983 238.43448 395.088983 226.481616
+L 395.088983 84.133872
+Q 395.088983 72.181008 383.130466 72.181008
+L 72.209017 72.181008
+Q 60.2505 72.181008 60.2505 84.133872
+L 60.2505 226.481616
+Q 60.2505 238.43448 72.209017 238.43448
+z
+" clip-path="url(#p77f4d91a63)" style="fill: #f8ead6; stroke: #cb9c55; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 93.951776 212.898816
+L 266.263138 212.898816
+Q 278.221655 212.898816 278.221655 200.945952
+L 278.221655 115.645968
+Q 278.221655 103.693104 266.263138 103.693104
+L 93.951776 103.693104
+Q 81.993259 103.693104 81.993259 115.645968
+L 81.993259 200.945952
+Q 81.993259 212.898816 93.951776 212.898816
+z
+" clip-path="url(#p77f4d91a63)" style="fill: #f1e7f8; stroke: #a58bb9; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <!-- $\mathbb{R}$ -->
+    <g style="fill: #19324f" transform="translate(586.298793 53.267844)">
+     <text>
+      <tspan x="0" y="-0.328125" style="font-style: italic; font-size: 24px; font-family: 'STIXGeneral'; fill: #19324f">ℝ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_2">
+    <!-- $\mathbb{Q}$ -->
+    <g style="fill: #19324f" transform="translate(463.337207 76.897634)">
+     <text>
+      <tspan x="0" y="-0.6875" style="font-style: italic; font-size: 23px; font-family: 'STIXGeneral'; fill: #19324f">ℚ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_3">
+    <!-- $\mathbb{Z}$ -->
+    <g style="fill: #19324f" transform="translate(343.950603 111.669602)">
+     <text>
+      <tspan x="0" y="-0.984375" style="font-style: italic; font-size: 23px; font-family: 'STIXGeneral'; fill: #19324f">ℤ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <!-- $\mathbb{N}$ -->
+    <g style="fill: #19324f" transform="translate(201.880534 142.638386)">
+     <text>
+      <tspan x="0" y="-0.984375" style="font-style: italic; font-size: 23px; font-family: 'STIXGeneral'; fill: #19324f">ℕ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #19324f" x="158.092914" y="175.746166" transform="rotate(-0 158.092914 175.746166)">0, 1, 2, 3, …</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #19324f" x="329.860707" y="186.879781" transform="rotate(-0 329.860707 186.879781)">−3, −2, −1</text>
+   </g>
+   <g id="text_7">
+    <!-- $\frac{1}{2},\;-\frac{7}{3}$ -->
+    <g style="fill: #19324f" transform="translate(415.077328 198.469584)">
+     <text>
+      <tspan x="0" y="-9.309375" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19324f">1</tspan>
+      <tspan x="0" y="6.504687" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19324f">2</tspan>
+      <tspan x="49.042554" y="-9.309375" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19324f">7</tspan>
+      <tspan x="49.042554" y="6.504687" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19324f">3</tspan>
+      <tspan x="10.836865" y="-0.989063" style="font-size: 19px; font-family: 'DejaVu Sans'; fill: #19324f">,</tspan>
+      <tspan x="29.420972" y="-0.989063" style="font-size: 19px; font-family: 'DejaVu Sans'; fill: #19324f">−</tspan>
+     </text>
+     <rect x="0" y="-5.559375" width="8.461865" height="1.1875"/>
+     <rect x="49.042554" y="-5.559375" width="8.461865" height="1.1875"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #19324f" x="572.836034" y="119.241718" transform="rotate(-0 572.836034 119.241718)">Irracionais</text>
+   </g>
+   <g id="text_9">
+    <!-- $\sqrt{2},\;\pi,\;e$ -->
+    <g style="fill: #19324f" transform="translate(527.896034 165.590336)">
+     <text>
+      <tspan x="0" y="-4.115" style="font-size: 11.997583px; font-family: 'STIXSizeOneSym'; fill: #19324f">√</tspan>
+      <tspan x="15.30899" y="-0.09375" style="font-size: 21px; font-family: 'DejaVu Sans'; fill: #19324f">2</tspan>
+      <tspan x="31.29483" y="-0.568125" style="font-size: 21px; font-family: 'DejaVu Sans'; fill: #19324f">,</tspan>
+      <tspan x="60.386917" y="-0.568125" style="font-size: 21px; font-family: 'DejaVu Sans'; fill: #19324f">,</tspan>
+      <tspan x="47.74385" y="-0.568125" style="font-style: oblique; font-size: 21px; font-family: 'DejaVu Sans'; fill: #19324f">π</tspan>
+      <tspan x="76.835937" y="-0.568125" style="font-style: oblique; font-size: 21px; font-family: 'DejaVu Sans'; fill: #19324f">e</tspan>
+     </text>
+     <rect x="12.68399" y="-22.375" width="18.61084" height="1.3125"/>
+    </g>
+   </g>
+   <g id="text_10">
+    <!-- $\mathbb{R}\setminus\mathbb{Q}$ -->
+    <g style="fill: #19324f" transform="translate(552.096034 214.873193)">
+     <text>
+      <tspan x="0" y="-0.609375" style="font-style: italic; font-size: 17px; font-family: 'STIXGeneral'; fill: #19324f">ℝ</tspan>
+      <tspan x="29.127228" y="-0.609375" style="font-style: italic; font-size: 17px; font-family: 'STIXGeneral'; fill: #19324f">ℚ</tspan>
+      <tspan x="14.990997" y="-0.609375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #19324f">∖</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p77f4d91a63">
+   <rect x="12.96" y="12.96" width="630.54" height="271.656"/>
+  </clipPath>
+ </defs>
+</svg>
