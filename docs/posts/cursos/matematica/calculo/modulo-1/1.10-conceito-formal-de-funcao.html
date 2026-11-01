@@ -28,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -376,6 +411,16 @@ f(-3)=9,
 <p><span class="math display">\[
 f(0)=0.
 \]</span></p>
+<div id="fig-1-10-tabela-valores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tabela para f(x) igual a x ao quadrado, com entradas de menos três até três e saídas nove, quatro, um, zero, um, quatro, nove.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-tabela-valores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-tabela-valores.svg" class="img-fluid figure-img" style="width:90.0%" alt="Tabela para f(x) igual a x ao quadrado, com entradas de menos três até três e saídas nove, quatro, um, zero, um, quatro, nove.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-tabela-valores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Tabela de valores de uma função quadrática.
+</figcaption>
+</figure>
+</div>
 <p>Podemos imaginar uma função como uma máquina:</p>
 <p><span class="math display">\[
 x \longmapsto f(x).
@@ -416,6 +461,26 @@ f(x).
 <li>todo elemento do domínio deve ter imagem;</li>
 <li>nenhum elemento do domínio pode ter duas imagens diferentes.</li>
 </ol>
+<div id="fig-1-10-diagrama-funcao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Conjunto A com cinco entradas, conjunto B com quatro possíveis saídas e uma seta para cada elemento de A.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-diagrama-funcao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-diagrama-funcao.svg" class="img-fluid figure-img" style="width:90.0%" alt="Conjunto A com cinco entradas, conjunto B com quatro possíveis saídas e uma seta para cada elemento de A.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-diagrama-funcao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Diagrama de setas de uma função: cada entrada do domínio possui uma única imagem.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1-10-diagramas-nao-funcao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dois diagramas: no primeiro, uma entrada possui duas setas; no segundo, uma entrada não possui seta.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-diagramas-nao-funcao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-diagramas-nao-funcao.svg" class="img-fluid figure-img" style="width:90.0%" alt="Dois diagramas: no primeiro, uma entrada possui duas setas; no segundo, uma entrada não possui seta.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-diagramas-nao-funcao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Duas relações que não são funções: imagem dupla e entrada sem imagem.
+</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="domínio" class="level2" data-number="1.3">
@@ -548,6 +613,17 @@ D_f=\mathbb{R},
 <p><span class="math display">\[
 \operatorname{Im}(f)=[0,+\infty).
 \]</span></p>
+<p>Para visualizar a distinção entre esses conjuntos, o diagrama seguinte usa <strong>um exemplo finito</strong>: <span class="math inline">\(A=\{-2,-1,0,1,2\}\)</span>, <span class="math inline">\(B=\{0,1,4,9\}\)</span> e <span class="math inline">\(f(x)=x^2\)</span>. Nesse caso, <span class="math inline">\(9\)</span> pertence ao contradomínio, mas não à imagem.</p>
+<div id="fig-1-10-dominio-contradominio-imagem" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Domínio A com cinco números, contradomínio B com quatro números e imagem destacada igual a zero, um e quatro, excluindo nove.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-dominio-contradominio-imagem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-dominio-contradominio-imagem.svg" class="img-fluid figure-img" style="width:90.0%" alt="Domínio A com cinco números, contradomínio B com quatro números e imagem destacada igual a zero, um e quatro, excluindo nove.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-dominio-contradominio-imagem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Um exemplo finito distingue domínio, contradomínio e imagem.
+</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="funções-como-relações-especiais" class="level2" data-number="1.7">
@@ -602,6 +678,53 @@ f(x)=x^2
 G_f=\{(x,x^2)\mid x\in\mathbb{R}\}.
 \]</span></p>
 <p>Esse conjunto de pontos forma uma parábola.</p>
+<div id="fig-1-10-grafico-parabola" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Parábola voltada para cima no plano cartesiano, com pontos marcados em x igual a menos dois, menos um, zero, um e dois.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-grafico-parabola-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-grafico-parabola.svg" class="img-fluid figure-img" style="width:90.0%" alt="Parábola voltada para cima no plano cartesiano, com pontos marcados em x igual a menos dois, menos um, zero, um e dois.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-grafico-parabola-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: O gráfico de <span class="math inline">\(f(x)=x^2\)</span> representa os pares ordenados <span class="math inline">\((x,f(x))\)</span>.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O código abaixo gera a figura SVG na pasta <code>images/</code>. Execute-o no diretório <code>modulo-1</code> com <code>numpy</code> e <code>matplotlib</code> instalados.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">"font.family"</span>: <span class="st">"DejaVu Sans"</span>, <span class="st">"svg.fonttype"</span>: <span class="st">"path"</span>})</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">3.1</span>, <span class="fl">3.1</span>, <span class="dv">700</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.2</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x<span class="op">**</span><span class="dv">2</span>, lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#098899"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> xx <span class="kw">in</span> (<span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    ax.scatter(xx, xx<span class="op">**</span><span class="dv">2</span>, s<span class="op">=</span><span class="dv">40</span>, color<span class="op">=</span><span class="st">"#172F49"</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">3.2</span>, <span class="fl">3.2</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.7</span>, <span class="dv">10</span>), xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.22</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper center"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Gráfico de uma função: cada x determina um único y"</span>, pad<span class="op">=</span><span class="dv">16</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span><span class="st">"#172F49"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-grafico-parabola.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="o-teste-da-reta-vertical" class="level2" data-number="1.9">
@@ -632,6 +755,115 @@ y=x^2
 x^2+y^2=1
 \]</span></p>
 <p>não passa, pois uma mesma reta vertical pode cortar a circunferência em dois pontos.</p>
+<div id="fig-1-10-relacao-circunferencia" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Circunferência unitária cortada por reta vertical x igual a um meio em dois pontos.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-relacao-circunferencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-relacao-circunferencia.svg" class="img-fluid figure-img" style="width:90.0%" alt="Circunferência unitária cortada por reta vertical x igual a um meio em dois pontos.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-relacao-circunferencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Na circunferência, a reta <span class="math inline">\(x=1/2\)</span> encontra dois pontos distintos.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O código abaixo gera a figura SVG na pasta <code>images/</code>. Execute-o no diretório <code>modulo-1</code> com <code>numpy</code> e <code>matplotlib</code> instalados.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">800</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.sqrt(<span class="dv">1</span><span class="op">-</span>c<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">8.2</span>, <span class="fl">6.1</span>))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>ax.plot(np.cos(a), np.sin(a), lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#4471B2"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2</span><span class="op">+</span><span class="vs">y</span><span class="dv">^</span><span class="vs">2=1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>ax.axvline(c, color<span class="op">=</span><span class="st">"#C84E4C"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x=1/2</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>ax.scatter([c, c], [b, <span class="op">-</span>b], color<span class="op">=</span><span class="st">"#C84E4C"</span>, s<span class="op">=</span><span class="dv">70</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1/2,</span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{3}</span><span class="vs">/2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (c, b),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">12</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1/2,-</span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{3}</span><span class="vs">/2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (c, <span class="op">-</span>b),</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">13</span>, <span class="op">-</span><span class="dv">19</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.25</span>, <span class="fl">1.65</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>), xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper left"</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Circunferência: duas saídas para o mesmo x"</span>, pad<span class="op">=</span><span class="dv">16</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span><span class="st">"#172F49"</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-relacao-circunferencia.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="fig-1-10-teste-reta-vertical" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dois painéis: a reta vertical corta a parábola em um ponto e a circunferência em dois.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-teste-reta-vertical-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-teste-reta-vertical.svg" class="img-fluid figure-img" style="width:90.0%" alt="Dois painéis: a reta vertical corta a parábola em um ponto e a circunferência em dois.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-teste-reta-vertical-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7: Comparação do teste da reta vertical: parábola e circunferência.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O código abaixo gera a figura SVG na pasta <code>images/</code>. Execute-o no diretório <code>modulo-1</code> com <code>numpy</code> e <code>matplotlib</code> instalados.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">11.6</span>, <span class="fl">4.7</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.65</span>, <span class="fl">1.65</span>, <span class="dv">500</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x, x<span class="op">**</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">"#098899"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#E28C32"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].scatter([<span class="fl">0.5</span>], [<span class="fl">0.25</span>], color<span class="op">=</span><span class="st">"#21846C"</span>, s<span class="op">=</span><span class="dv">65</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.8</span>, <span class="fl">1.8</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">3.0</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"É função: um ponto"</span>, xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">600</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(np.cos(t), np.sin(t), color<span class="op">=</span><span class="st">"#4471B2"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#E28C32"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].scatter([<span class="fl">0.5</span>, <span class="fl">0.5</span>], [q, <span class="op">-</span>q], color<span class="op">=</span><span class="st">"#C84E4C"</span>, s<span class="op">=</span><span class="dv">65</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.3</span>, <span class="fl">1.3</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.3</span>, <span class="fl">1.3</span>),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"Não é função: dois pontos"</span>, xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    ax.axhline(<span class="dv">0</span>, lw<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span><span class="st">"#66788A"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    ax.title.set_color(<span class="st">"#172F49"</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">"Teste da reta vertical (x = 1/2)"</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span><span class="st">"#172F49"</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-teste-reta-vertical.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="igualdade-de-funções" class="level2" data-number="1.10">
@@ -856,7 +1088,7 @@ g:[0,+\infty)\to\mathbb{R},\qquad g(x)=x^2.
 </div>
 <hr>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -865,7 +1097,7 @@ g:[0,+\infty)\to\mathbb{R},\qquad g(x)=x^2.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <section id="exercício-1-1" class="level2" data-number="3.1">

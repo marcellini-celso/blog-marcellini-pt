@@ -76,6 +76,8 @@ $$
 f(0)=0.
 $$
 
+![Tabela de valores de uma função quadrática.](images/1.10-tabela-valores.svg){#fig-1-10-tabela-valores fig-alt="Tabela para f(x) igual a x ao quadrado, com entradas de menos três até três e saídas nove, quatro, um, zero, um, quatro, nove." width="90%"}
+
 Podemos imaginar uma função como uma máquina:
 
 $$
@@ -118,6 +120,10 @@ Isso significa duas coisas:
 
 1. todo elemento do domínio deve ter imagem;
 2. nenhum elemento do domínio pode ter duas imagens diferentes.
+
+![Diagrama de setas de uma função: cada entrada do domínio possui uma única imagem.](images/1.10-diagrama-funcao.svg){#fig-1-10-diagrama-funcao fig-alt="Conjunto A com cinco entradas, conjunto B com quatro possíveis saídas e uma seta para cada elemento de A." width="90%"}
+
+![Duas relações que não são funções: imagem dupla e entrada sem imagem.](images/1.10-diagramas-nao-funcao.svg){#fig-1-10-diagramas-nao-funcao fig-alt="Dois diagramas: no primeiro, uma entrada possui duas setas; no segundo, uma entrada não possui seta." width="90%"}
 
 ***
 
@@ -287,6 +293,10 @@ $$
 \operatorname{Im}(f)=[0,+\infty).
 $$
 
+Para visualizar a distinção entre esses conjuntos, o diagrama seguinte usa **um exemplo finito**: $A=\{-2,-1,0,1,2\}$, $B=\{0,1,4,9\}$ e $f(x)=x^2$. Nesse caso, $9$ pertence ao contradomínio, mas não à imagem.
+
+![Um exemplo finito distingue domínio, contradomínio e imagem.](images/1.10-dominio-contradominio-imagem.svg){#fig-1-10-dominio-contradominio-imagem fig-alt="Domínio A com cinco números, contradomínio B com quatro números e imagem destacada igual a zero, um e quatro, excluindo nove." width="90%"}
+
 ***
 
 ## 🧩 Funções como relações especiais
@@ -367,6 +377,38 @@ $$
 
 Esse conjunto de pontos forma uma parábola.
 
+![O gráfico de $f(x)=x^2$ representa os pares ordenados $(x,f(x))$.](images/1.10-grafico-parabola.svg){#fig-1-10-grafico-parabola fig-alt="Parábola voltada para cima no plano cartesiano, com pontos marcados em x igual a menos dois, menos um, zero, um e dois." width="90%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+O código abaixo gera a figura SVG na pasta `images/`. Execute-o no diretório `modulo-1` com `numpy` e `matplotlib` instalados.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+plt.rcParams.update({"font.family": "DejaVu Sans", "svg.fonttype": "path"})
+x = np.linspace(-3.1, 3.1, 700)
+fig, ax = plt.subplots(figsize=(9, 5.2))
+ax.plot(x, x**2, lw=3, color="#098899", label=r"$f(x)=x^2$")
+for xx in (-2, -1, 0, 1, 2):
+    ax.scatter(xx, xx**2, s=40, color="#172F49", zorder=4)
+ax.axhline(0, color="#66788A", lw=1)
+ax.axvline(0, color="#66788A", lw=1)
+ax.set(xlim=(-3.2, 3.2), ylim=(-0.7, 10), xlabel="x", ylabel="y")
+ax.grid(alpha=0.22)
+ax.legend(frameon=False, loc="upper center", fontsize=12)
+ax.set_title("Gráfico de uma função: cada x determina um único y", pad=16,
+             fontsize=13, color="#172F49")
+fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
+fig.savefig("images/1.10-grafico-parabola.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
+
 ***
 
 ## 🔎 O teste da reta vertical
@@ -396,6 +438,85 @@ x^2+y^2=1
 $$
 
 não passa, pois uma mesma reta vertical pode cortar a circunferência em dois pontos.
+
+![Na circunferência, a reta $x=1/2$ encontra dois pontos distintos.](images/1.10-relacao-circunferencia.svg){#fig-1-10-relacao-circunferencia fig-alt="Circunferência unitária cortada por reta vertical x igual a um meio em dois pontos." width="90%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+O código abaixo gera a figura SVG na pasta `images/`. Execute-o no diretório `modulo-1` com `numpy` e `matplotlib` instalados.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+a = np.linspace(0, 2*np.pi, 800)
+c = 0.5
+b = np.sqrt(1-c**2)
+fig, ax = plt.subplots(figsize=(8.2, 6.1))
+ax.plot(np.cos(a), np.sin(a), lw=3, color="#4471B2",
+        label=r"$x^2+y^2=1$")
+ax.axvline(c, color="#C84E4C", lw=2, ls="--", label=r"$x=1/2$")
+ax.scatter([c, c], [b, -b], color="#C84E4C", s=70, zorder=5)
+ax.annotate(r"$(1/2,\sqrt{3}/2)$", (c, b),
+            xytext=(13, 12), textcoords="offset points", fontsize=10)
+ax.annotate(r"$(1/2,-\sqrt{3}/2)$", (c, -b),
+            xytext=(13, -19), textcoords="offset points", fontsize=10)
+ax.axhline(0, color="#66788A", lw=1)
+ax.axvline(0, color="#66788A", lw=1)
+ax.set_aspect("equal", adjustable="box")
+ax.set(xlim=(-1.25, 1.65), ylim=(-1.25, 1.25), xlabel="x", ylabel="y")
+ax.grid(alpha=0.2)
+ax.legend(frameon=False, loc="upper left", fontsize=11)
+ax.set_title("Circunferência: duas saídas para o mesmo x", pad=16,
+             fontsize=13, color="#172F49")
+fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
+fig.savefig("images/1.10-relacao-circunferencia.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
+
+![Comparação do teste da reta vertical: parábola e circunferência.](images/1.10-teste-reta-vertical.svg){#fig-1-10-teste-reta-vertical fig-alt="Dois painéis: a reta vertical corta a parábola em um ponto e a circunferência em dois." width="90%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+O código abaixo gera a figura SVG na pasta `images/`. Execute-o no diretório `modulo-1` com `numpy` e `matplotlib` instalados.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+fig, axes = plt.subplots(1, 2, figsize=(11.6, 4.7))
+x = np.linspace(-1.65, 1.65, 500)
+axes[0].plot(x, x**2, color="#098899", lw=3)
+axes[0].axvline(0.5, color="#E28C32", lw=2, ls="--")
+axes[0].scatter([0.5], [0.25], color="#21846C", s=65, zorder=5)
+axes[0].set(xlim=(-1.8, 1.8), ylim=(-0.3, 3.0),
+            title="É função: um ponto", xlabel="x", ylabel="y")
+t = np.linspace(0, 2*np.pi, 600)
+axes[1].plot(np.cos(t), np.sin(t), color="#4471B2", lw=3)
+axes[1].axvline(0.5, color="#E28C32", lw=2, ls="--")
+q = np.sqrt(3)/2
+axes[1].scatter([0.5, 0.5], [q, -q], color="#C84E4C", s=65, zorder=5)
+axes[1].set(xlim=(-1.3, 1.3), ylim=(-1.3, 1.3),
+            title="Não é função: dois pontos", xlabel="x", ylabel="y")
+axes[1].set_aspect("equal", adjustable="box")
+for ax in axes:
+    ax.axhline(0, lw=0.8, color="#66788A")
+    ax.grid(alpha=0.2)
+    ax.title.set_color("#172F49")
+fig.suptitle("Teste da reta vertical (x = 1/2)",
+             fontsize=14, color="#172F49", weight="bold")
+fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
+fig.savefig("images/1.10-teste-reta-vertical.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
 
 ***
 
