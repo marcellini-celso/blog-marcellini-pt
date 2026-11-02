@@ -419,6 +419,93 @@ $$
 
 Os zeros são fundamentais porque dividem a reta em intervalos nos quais o sinal da função pode ser analisado.
 
+A figura aproxima a região das raízes para tornar visível que a curva cruza o eixo horizontal em dois pontos distintos. O recorte não altera o domínio da função, que continua sendo $\mathbb{R}$.
+
+![Recorte ampliado da parábola x ao quadrado menos cinco x mais seis, com zeros distintos em dois e três e vértice em dois e meio, menos um quarto.](images/1.11-zeros-quadratica.svg){fig-alt="Recorte ampliado da parábola x ao quadrado menos cinco x mais seis, com zeros distintos em dois e três e vértice em dois e meio, menos um quarto." width="94%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+```python
+from pathlib import Path
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+
+AZUL = "#19324f"
+CIANO = "#1689a6"
+LARANJA = "#d87832"
+VERMELHO = "#ba4a56"
+GRADE = "#e2e9ef"
+ROXO = "#6c5b90"
+plt.rcParams.update({
+    "font.family": "DejaVu Sans",
+    "font.size": 11,
+    "axes.titlesize": 12,
+    "svg.fonttype": "path",
+    "figure.facecolor": "white",
+    "axes.facecolor": "white",
+})
+
+
+def preparar(ax, xlim, ylim, xticks=None, yticks=None):
+    ax.set_xlim(*xlim)
+    ax.set_ylim(*ylim)
+    if xticks is not None:
+        ax.set_xticks(xticks)
+    if yticks is not None:
+        ax.set_yticks(yticks)
+    ax.set_axisbelow(True)
+    ax.grid(True, color=GRADE, linewidth=.75)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    if xlim[0] <= 0 <= xlim[1]:
+        ax.axvline(0, color=AZUL, lw=1.2, zorder=2)
+    if ylim[0] <= 0 <= ylim[1]:
+        ax.axhline(0, color=AZUL, lw=1.2, zorder=2)
+    ax.tick_params(axis="both", length=0, colors=AZUL, labelsize=9)
+    ax.set_xlabel("x", loc="right", color=AZUL)
+    ax.set_ylabel("y", loc="top", rotation=0, color=AZUL)
+
+
+def salvar(fig, nome):
+    destino = Path("images")
+    destino.mkdir(parents=True, exist_ok=True)
+    fig.savefig(destino / nome, format="svg", bbox_inches="tight",
+                pad_inches=.24, facecolor="white")
+    plt.close(fig)
+
+# Recorte próximo às raízes: o mínimo é pouco abaixo do eixo x.
+fig, ax = plt.subplots(figsize=(9.2, 5.2))
+x = np.linspace(1.12, 3.88, 900)
+y = x**2 - 5*x + 6
+preparar(ax, (1.1, 3.9), (-.58, 1.72),
+         xticks=np.arange(1.0, 4.1, .5),
+         yticks=[-.5, 0, .5, 1, 1.5])
+ax.plot(x, y, color=CIANO, lw=3.3, zorder=3)
+ax.scatter([2, 3], [0, 0], color=LARANJA, s=105,
+           edgecolor="white", linewidth=1.3, zorder=6)
+ax.scatter([2.5], [-.25], color=VERMELHO, s=88,
+           edgecolor="white", linewidth=1.2, zorder=6)
+ax.annotate(r"zero: $(2,0)$", xy=(2, 0), xytext=(1.18, .58),
+            fontsize=11, color=LARANJA,
+            arrowprops=dict(arrowstyle="->", lw=1.3, color=LARANJA))
+ax.annotate(r"zero: $(3,0)$", xy=(3, 0), xytext=(3.10, .82),
+            fontsize=11, color=LARANJA,
+            arrowprops=dict(arrowstyle="->", lw=1.3, color=LARANJA))
+ax.annotate(r"vértice: $(2{,}5;-0{,}25)$", xy=(2.5, -.25),
+            xytext=(1.26, -.43), fontsize=10.2, color=VERMELHO,
+            arrowprops=dict(arrowstyle="->", lw=1.2, color=VERMELHO))
+ax.set_title(r"$f(x)=x^2-5x+6=(x-2)(x-3)$: dois zeros reais",
+             color=AZUL, pad=17)
+fig.text(.50, .015, "Janela ampliada perto das raízes; domínio: todos os reais.",
+         ha="center", fontsize=9.5, color=AZUL)
+fig.subplots_adjust(bottom=.16)
+salvar(fig, "1.11-zeros-quadratica.svg")
+```
+
+:::
+
+
 ***
 
 ## 📍 Interseção com o eixo vertical
@@ -807,6 +894,87 @@ Um ponto de máximo ocorre quando a função atinge um valor maior do que os val
 
 A análise de máximos e mínimos será uma das grandes aplicações das derivadas.
 
+Diferentemente de $x^2$, que tem mínimo absoluto, a função cúbica a seguir possui **um máximo local e um mínimo local**, mas não possui máximo nem mínimo absolutos em $\mathbb{R}$.
+
+![Curva cúbica x ao cubo menos três x com máximo local em menos um, dois e mínimo local em um, menos dois, sem extremos absolutos.](images/1.11-maximos-minimos.svg){fig-alt="Curva cúbica x ao cubo menos três x com máximo local em menos um, dois e mínimo local em um, menos dois, sem extremos absolutos." width="94%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+```python
+from pathlib import Path
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+
+AZUL = "#19324f"
+CIANO = "#1689a6"
+LARANJA = "#d87832"
+VERMELHO = "#ba4a56"
+GRADE = "#e2e9ef"
+ROXO = "#6c5b90"
+plt.rcParams.update({
+    "font.family": "DejaVu Sans",
+    "font.size": 11,
+    "axes.titlesize": 12,
+    "svg.fonttype": "path",
+    "figure.facecolor": "white",
+    "axes.facecolor": "white",
+})
+
+
+def preparar(ax, xlim, ylim, xticks=None, yticks=None):
+    ax.set_xlim(*xlim)
+    ax.set_ylim(*ylim)
+    if xticks is not None:
+        ax.set_xticks(xticks)
+    if yticks is not None:
+        ax.set_yticks(yticks)
+    ax.set_axisbelow(True)
+    ax.grid(True, color=GRADE, linewidth=.75)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    if xlim[0] <= 0 <= xlim[1]:
+        ax.axvline(0, color=AZUL, lw=1.2, zorder=2)
+    if ylim[0] <= 0 <= ylim[1]:
+        ax.axhline(0, color=AZUL, lw=1.2, zorder=2)
+    ax.tick_params(axis="both", length=0, colors=AZUL, labelsize=9)
+    ax.set_xlabel("x", loc="right", color=AZUL)
+    ax.set_ylabel("y", loc="top", rotation=0, color=AZUL)
+
+
+def salvar(fig, nome):
+    destino = Path("images")
+    destino.mkdir(parents=True, exist_ok=True)
+    fig.savefig(destino / nome, format="svg", bbox_inches="tight",
+                pad_inches=.24, facecolor="white")
+    plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(9.2, 5.3))
+x = np.linspace(-2.06, 2.06, 850)
+y = x**3 - 3*x
+preparar(ax, (-2.2, 2.2), (-4.5, 4.5),
+         xticks=np.arange(-2, 3), yticks=np.arange(-4, 5, 2))
+ax.plot(x, y, color=CIANO, lw=3.1, zorder=3)
+ax.scatter([-1], [2], color=LARANJA, s=105,
+           edgecolor="white", lw=1.2, zorder=5)
+ax.scatter([1], [-2], color=VERMELHO, s=105,
+           edgecolor="white", lw=1.2, zorder=5)
+ax.annotate("máximo local  (-1, 2)", xy=(-1, 2), xytext=(-2.08, 3.9),
+            fontsize=11, color=LARANJA,
+            arrowprops=dict(arrowstyle="->", lw=1.4, color=LARANJA))
+ax.annotate("mínimo local  (1, -2)", xy=(1, -2), xytext=(.03, -3.75),
+            fontsize=11, color=VERMELHO,
+            arrowprops=dict(arrowstyle="->", lw=1.4, color=VERMELHO))
+ax.set_title(r"$f(x)=x^3-3x$: extremos locais", color=AZUL, pad=16)
+fig.text(.5, .026, "Em todo o domínio real, a função não possui extremos absolutos.",
+         ha="center", fontsize=10, color=AZUL)
+fig.subplots_adjust(bottom=.17)
+salvar(fig, "1.11-maximos-minimos.svg")
+```
+
+:::
+
+
 ***
 
 ## 🪞 Simetria
@@ -970,6 +1138,88 @@ quando $x$ tende a $+\infty$ ou a $-\infty$.
 
 No módulo de limites, essas ideias serão formalizadas.
 
+Neste exemplo, as duas assíntotas aparecem simultaneamente: a reta vertical $x=3$ está associada à restrição do domínio, enquanto $y=2$ descreve o comportamento dos ramos para valores de $|x|$ cada vez maiores.
+
+![Função racional dois x mais um sobre x menos três com assíntota vertical x igual a três e horizontal y igual a dois, ambas tracejadas.](images/1.11-assintotas-racional.svg){fig-alt="Função racional dois x mais um sobre x menos três com assíntota vertical x igual a três e horizontal y igual a dois, ambas tracejadas." width="94%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+```python
+from pathlib import Path
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+
+AZUL = "#19324f"
+CIANO = "#1689a6"
+LARANJA = "#d87832"
+VERMELHO = "#ba4a56"
+GRADE = "#e2e9ef"
+ROXO = "#6c5b90"
+plt.rcParams.update({
+    "font.family": "DejaVu Sans",
+    "font.size": 11,
+    "axes.titlesize": 12,
+    "svg.fonttype": "path",
+    "figure.facecolor": "white",
+    "axes.facecolor": "white",
+})
+
+
+def preparar(ax, xlim, ylim, xticks=None, yticks=None):
+    ax.set_xlim(*xlim)
+    ax.set_ylim(*ylim)
+    if xticks is not None:
+        ax.set_xticks(xticks)
+    if yticks is not None:
+        ax.set_yticks(yticks)
+    ax.set_axisbelow(True)
+    ax.grid(True, color=GRADE, linewidth=.75)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    if xlim[0] <= 0 <= xlim[1]:
+        ax.axvline(0, color=AZUL, lw=1.2, zorder=2)
+    if ylim[0] <= 0 <= ylim[1]:
+        ax.axhline(0, color=AZUL, lw=1.2, zorder=2)
+    ax.tick_params(axis="both", length=0, colors=AZUL, labelsize=9)
+    ax.set_xlabel("x", loc="right", color=AZUL)
+    ax.set_ylabel("y", loc="top", rotation=0, color=AZUL)
+
+
+def salvar(fig, nome):
+    destino = Path("images")
+    destino.mkdir(parents=True, exist_ok=True)
+    fig.savefig(destino / nome, format="svg", bbox_inches="tight",
+                pad_inches=.24, facecolor="white")
+    plt.close(fig)
+
+fig, ax = plt.subplots(figsize=(9.4, 5.45))
+xe = np.linspace(-6, 2.79, 900)
+xd = np.linspace(3.25, 11, 900)
+preparar(ax, (-6, 11), (-6.2, 9.0),
+         xticks=[-6, -4, -2, 0, 2, 3, 4, 6, 8, 10],
+         yticks=[-6, -4, -2, 0, 2, 4, 6, 8])
+ax.plot(xe, (2*xe+1)/(xe-3), color=CIANO, lw=3.1, zorder=4)
+ax.plot(xd, (2*xd+1)/(xd-3), color=CIANO, lw=3.1, zorder=4)
+ax.axvline(3, color=LARANJA, ls="--", lw=2.15, zorder=5)
+ax.axhline(2, color=VERMELHO, ls=(0, (6, 3)), lw=2.15, zorder=5)
+ax.annotate("assíntota vertical  x = 3", xy=(3, 6.5),
+            xytext=(5.3, 7.7), fontsize=11.2, color=LARANJA,
+            arrowprops=dict(arrowstyle="->", lw=1.2, color=LARANJA))
+ax.annotate("assíntota horizontal  y = 2", xy=(-4.5, 2),
+            xytext=(-5.65, 4.15), fontsize=11.2, color=VERMELHO,
+            arrowprops=dict(arrowstyle="->", lw=1.2, color=VERMELHO))
+ax.text(4.25, -4.95, r"$g(x)=2+\dfrac{7}{x-3}$", fontsize=13,
+        color=AZUL, bbox=dict(facecolor="white", edgecolor=GRADE,
+                              boxstyle="round,pad=0.4"))
+ax.set_title(r"$g(x)=\frac{2x+1}{x-3}$: duas assíntotas distintas",
+             color=AZUL, pad=17)
+salvar(fig, "1.11-assintotas-racional.svg")
+```
+
+:::
+
+
 ***
 
 ## 📊 Leitura de gráficos
@@ -991,6 +1241,118 @@ Ao observar um gráfico, podemos fazer várias perguntas:
 Essas perguntas formam uma leitura qualitativa da função.
 
 O Cálculo transformará muitas dessas observações em definições e teoremas.
+
+A função $h(x)=x^3-3x+1$ permite reunir várias perguntas em uma única leitura. Observe os pontos destacados e compare a **janela visível do desenho** com o domínio matemático completo da função.
+
+![Painel de leitura do gráfico da função cúbica x ao cubo menos três x mais um com três zeros aproximados, intercepto vertical, máximo e mínimo locais e resumo de domínio e monotonia.](images/1.11-leitura-grafico-guia.svg){fig-alt="Painel de leitura do gráfico da função cúbica x ao cubo menos três x mais um com três zeros aproximados, intercepto vertical, máximo e mínimo locais e resumo de domínio e monotonia." width="94%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+```python
+from pathlib import Path
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+
+AZUL = "#19324f"
+CIANO = "#1689a6"
+LARANJA = "#d87832"
+VERMELHO = "#ba4a56"
+GRADE = "#e2e9ef"
+ROXO = "#6c5b90"
+plt.rcParams.update({
+    "font.family": "DejaVu Sans",
+    "font.size": 11,
+    "axes.titlesize": 12,
+    "svg.fonttype": "path",
+    "figure.facecolor": "white",
+    "axes.facecolor": "white",
+})
+
+
+def preparar(ax, xlim, ylim, xticks=None, yticks=None):
+    ax.set_xlim(*xlim)
+    ax.set_ylim(*ylim)
+    if xticks is not None:
+        ax.set_xticks(xticks)
+    if yticks is not None:
+        ax.set_yticks(yticks)
+    ax.set_axisbelow(True)
+    ax.grid(True, color=GRADE, linewidth=.75)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    if xlim[0] <= 0 <= xlim[1]:
+        ax.axvline(0, color=AZUL, lw=1.2, zorder=2)
+    if ylim[0] <= 0 <= ylim[1]:
+        ax.axhline(0, color=AZUL, lw=1.2, zorder=2)
+    ax.tick_params(axis="both", length=0, colors=AZUL, labelsize=9)
+    ax.set_xlabel("x", loc="right", color=AZUL)
+    ax.set_ylabel("y", loc="top", rotation=0, color=AZUL)
+
+
+def salvar(fig, nome):
+    destino = Path("images")
+    destino.mkdir(parents=True, exist_ok=True)
+    fig.savefig(destino / nome, format="svg", bbox_inches="tight",
+                pad_inches=.24, facecolor="white")
+    plt.close(fig)
+
+fig = plt.figure(figsize=(12.0, 6.15))
+gs = fig.add_gridspec(1, 2, width_ratios=[1.52, 1], wspace=.18)
+ax = fig.add_subplot(gs[0, 0])
+painel = fig.add_subplot(gs[0, 1])
+x = np.linspace(-2.22, 2.22, 1000)
+h = x**3 - 3*x + 1
+preparar(ax, (-2.3, 2.3), (-4.3, 4.5),
+         xticks=np.arange(-2, 3), yticks=np.arange(-4, 5, 2))
+ax.plot(x, h, color=CIANO, lw=3.1, zorder=3)
+zeros = np.sort(np.roots([1, 0, -3, 1]).real)
+ax.scatter(zeros, [0]*3, s=83, color=LARANJA,
+           edgecolors="white", lw=1, zorder=6)
+ax.scatter([-1], [3], s=95, color=VERMELHO,
+           edgecolors="white", lw=1, zorder=6)
+ax.scatter([1], [-1], s=95, color=ROXO,
+           edgecolors="white", lw=1, zorder=6)
+ax.scatter([0], [1], s=80, color=AZUL,
+           edgecolors="white", lw=1, zorder=6)
+ax.annotate("máx. local (-1, 3)", xy=(-1, 3), xytext=(-2.1, 4.05),
+            fontsize=10.0, color=VERMELHO,
+            arrowprops=dict(arrowstyle="->", color=VERMELHO, lw=1.2))
+ax.annotate("mín. local (1, -1)", xy=(1, -1), xytext=(.80, -3.27),
+            fontsize=10.0, color=ROXO,
+            arrowprops=dict(arrowstyle="->", color=ROXO, lw=1.2))
+ax.annotate("(0, 1)", xy=(0, 1), xytext=(.24, 2.1),
+            fontsize=10.0, color=AZUL,
+            arrowprops=dict(arrowstyle="->", color=AZUL, lw=1.1))
+ax.set_title(r"$h(x)=x^3-3x+1$", color=AZUL, pad=15)
+
+painel.axis("off")
+painel.set_xlim(0, 1)
+painel.set_ylim(0, 1)
+painel.text(.04, .94, "Roteiro de observação", color=AZUL,
+           weight="bold", fontsize=13, va="top")
+def linha(y, titulo, detalhe, cor):
+    box = FancyBboxPatch((.025, y-.10), .94, .12,
+                         boxstyle="round,pad=0.013,rounding_size=.02",
+                         facecolor="#f7fafd", edgecolor=GRADE, lw=.9)
+    painel.add_patch(box)
+    painel.text(.055, y-.005, titulo, color=cor,
+               fontsize=10.6, weight="bold", va="top")
+    painel.text(.055, y-.053, detalhe, color=AZUL,
+               fontsize=9.3, va="top")
+linha(.82, "Domínio", "Todos os números reais", AZUL)
+linha(.65, "Três zeros", "x ≈ −1,88; 0,35; 1,53", LARANJA)
+linha(.48, "Extremos locais", "Máx. (−1, 3); mín. (1, −1)", VERMELHO)
+linha(.31, "Monotonia", "↓ de −1 a 1; ↑ fora desse trecho", CIANO)
+linha(.14, "Janela exibida", "−2,3 ≤ x ≤ 2,3  (não é o domínio)", ROXO)
+fig.suptitle("Como extrair informações de um gráfico",
+             fontsize=15, color=AZUL, y=.995)
+fig.subplots_adjust(top=.85, bottom=.10, left=.08, right=.98)
+salvar(fig, "1.11-leitura-grafico-guia.svg")
+```
+
+:::
+
 
 ***
 
@@ -1119,6 +1481,120 @@ O Cálculo pode ser visto como uma forma refinada de leitura gráfica.
 - Integrais estudam área, acumulação e soma contínua.
 
 Por isso, revisar a leitura gráfica e algébrica de funções é essencial antes de entrar em limites.
+
+A mesma função $f(x)=x^2$ pode ser observada sob quatro perspectivas. Esta ilustração é uma **antecipação intuitiva**: os conceitos serão definidos e desenvolvidos rigorosamente nos módulos seguintes.
+
+![Quatro painéis com a parábola x ao quadrado ilustrando limite ao aproximar de x igual a um, continuidade no ponto, reta tangente de inclinação dois e área sob a curva de zero a um.](images/1.11-graficos-e-calculo.svg){fig-alt="Quatro painéis com a parábola x ao quadrado ilustrando limite ao aproximar de x igual a um, continuidade no ponto, reta tangente de inclinação dois e área sob a curva de zero a um." width="94%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código"}
+
+```python
+from pathlib import Path
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+
+AZUL = "#19324f"
+CIANO = "#1689a6"
+LARANJA = "#d87832"
+VERMELHO = "#ba4a56"
+GRADE = "#e2e9ef"
+ROXO = "#6c5b90"
+plt.rcParams.update({
+    "font.family": "DejaVu Sans",
+    "font.size": 11,
+    "axes.titlesize": 12,
+    "svg.fonttype": "path",
+    "figure.facecolor": "white",
+    "axes.facecolor": "white",
+})
+
+
+def preparar(ax, xlim, ylim, xticks=None, yticks=None):
+    ax.set_xlim(*xlim)
+    ax.set_ylim(*ylim)
+    if xticks is not None:
+        ax.set_xticks(xticks)
+    if yticks is not None:
+        ax.set_yticks(yticks)
+    ax.set_axisbelow(True)
+    ax.grid(True, color=GRADE, linewidth=.75)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    if xlim[0] <= 0 <= xlim[1]:
+        ax.axvline(0, color=AZUL, lw=1.2, zorder=2)
+    if ylim[0] <= 0 <= ylim[1]:
+        ax.axhline(0, color=AZUL, lw=1.2, zorder=2)
+    ax.tick_params(axis="both", length=0, colors=AZUL, labelsize=9)
+    ax.set_xlabel("x", loc="right", color=AZUL)
+    ax.set_ylabel("y", loc="top", rotation=0, color=AZUL)
+
+
+def salvar(fig, nome):
+    destino = Path("images")
+    destino.mkdir(parents=True, exist_ok=True)
+    fig.savefig(destino / nome, format="svg", bbox_inches="tight",
+                pad_inches=.24, facecolor="white")
+    plt.close(fig)
+
+fig, axs = plt.subplots(2, 2, figsize=(11.5, 8.0))
+xx = np.linspace(-.12, 2.0, 650)
+for ax in axs.flat:
+    preparar(ax, (-.18, 2.05), (-.25, 4.4),
+             xticks=[0, .5, 1, 1.5, 2], yticks=[0, 1, 2, 3, 4])
+    ax.plot(xx, xx**2, color=CIANO, lw=2.9, zorder=3)
+
+# Limite: aproximação bilateral de x=1.
+a = axs[0, 0]
+a.axvline(1, color=LARANJA, lw=1.5, ls="--")
+a.axhline(1, color=LARANJA, lw=1.2, ls=":")
+xs = np.array([.56, .76, .9, 1.1, 1.24, 1.44])
+a.scatter(xs, xs**2, s=42, color=LARANJA, zorder=5)
+a.scatter([1], [1], s=85, color=VERMELHO, zorder=6)
+a.text(.12, 3.6, r"$x\to1\;\Rightarrow\;f(x)\to1$", color=AZUL,
+       fontsize=11, bbox=dict(facecolor="white", edgecolor="none", alpha=.93))
+a.set_title("Limites • aproximar-se de um ponto", color=AZUL, pad=12)
+
+# Continuidade: ponto preenchido e sem interrupção na curva.
+a = axs[0, 1]
+a.axvline(1, color=GRADE, lw=1.4, ls="--")
+a.scatter([1], [1], s=92, color=VERMELHO,
+          edgecolors="white", lw=1, zorder=6)
+a.annotate("sem buraco nem salto", xy=(1,1), xytext=(.18, 2.55),
+           color=AZUL, fontsize=11,
+           arrowprops=dict(arrowstyle="->", color=VERMELHO, lw=1.2))
+a.set_title("Continuidade • curva sem quebras", color=AZUL, pad=12)
+
+# Derivada: reta tangente em x=1.
+a = axs[1, 0]
+a.plot(xx, 2*xx-1, color=LARANJA, lw=2.6, ls="--", zorder=4)
+a.scatter([1], [1], s=92, color=VERMELHO,
+          edgecolors="white", lw=1, zorder=6)
+a.text(.15, 3.6, "inclinação da tangente = 2",
+       fontsize=10.8, color=LARANJA,
+       bbox=dict(facecolor="white", edgecolor="none", alpha=.95))
+a.set_title("Derivadas • inclinação instantânea", color=AZUL, pad=12)
+
+# Integral: área sob a curva entre 0 e 1.
+a = axs[1, 1]
+area = np.linspace(0, 1, 350)
+a.fill_between(area, 0, area**2, color=LARANJA, alpha=.27, zorder=4)
+a.axvline(1, ymin=0, ymax=(1.25/4.65), color=LARANJA,
+          lw=1.2, ls="--", zorder=5)
+a.text(.17, 3.6, r"$\int_0^1x^2\,dx=\frac{1}{3}$",
+       color=AZUL, fontsize=12,
+       bbox=dict(facecolor="white", edgecolor="none", alpha=.95))
+a.set_title("Integrais • área e acumulação", color=AZUL, pad=12)
+
+fig.suptitle(r"Uma mesma função, quatro perguntas: $f(x)=x^2$",
+             color=AZUL, fontsize=15.5, y=.992)
+fig.subplots_adjust(left=.08, right=.97, bottom=.09, top=.91,
+                    hspace=.48, wspace=.25)
+salvar(fig, "1.11-graficos-e-calculo.svg")
+```
+
+:::
+
 
 ***
 
