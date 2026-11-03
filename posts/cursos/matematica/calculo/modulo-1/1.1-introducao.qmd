@@ -19,7 +19,6 @@ format:
 page-layout: full
 resources:
   - ../images/tangente.png
-  - ../images/area.png
   - ../images/secantes_tangente.png
   - ../images/area_sob_curva.png
   - ../images/area_exaustao.png
@@ -27,6 +26,8 @@ resources:
 ---
 
 🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](../../../../matematica/index.qmd)
+
+**Próxima aula:** [1.2 — Conjuntos Numéricos](1.2-conjuntos.qmd)
 
 ::: {.callout-tip title="📚 Pré-requisitos (leves)"}
 - Noções básicas de **álgebra** (operações com expressões, equações simples).  
@@ -45,7 +46,7 @@ Como a Matemática descreve movimento, variação e acumulação?
 
 
 
-::: {.callout-note title="📌 Objetivos do Post"}
+::: {.callout-note title="📌 Objetivos de Aprendizagem"}
 - Entender a ideia inicial do Cálculo como estudo da variação e da acumulação;
 - Relacionar retas secantes, reta tangente e taxa de variação;
 - Apresentar a noção intuitiva de limite como preparação para derivadas e integrais.
@@ -53,7 +54,7 @@ Como a Matemática descreve movimento, variação e acumulação?
 
 
 
-# ✨ O que é o Cálculo?
+# 📘 O que é o Cálculo?
 
 ## 🌱 Intuição inicial
 
@@ -250,9 +251,9 @@ Substituir toda geometria por tabelas sem interpretação visual.
 
 # 🔗 Navegação
 
-🎯 **Próximo Post:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
+**Próxima aula:** [1.2 — Conjuntos Numéricos](1.2-conjuntos.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) ·  🔝 [Topo](1.1-introducao.qmd)
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](../../../../matematica/index.qmd) · [Voltar ao topo](#)
 
 ***
 

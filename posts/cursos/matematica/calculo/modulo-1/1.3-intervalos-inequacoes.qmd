@@ -1,11 +1,11 @@
 ---
 title: "📘 Módulo 1.3: Intervalos e Inequações"
-description: "Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas."
+description: "Propriedades da ordem em R, intervalos e inequações lineares e quadráticas, com quadros de sinais e diagramas."
 author: "Blog do Marcellini"
 date: "2026-06-04"
 lang: pt-BR
 categories: [cálculo, matemática, intervalos, inequações, funções, cursos]
-tags: [cálculo, intervalos, inequações, matemática, cursos]
+tags: [cálculo, intervalos, inequações, inequações quadráticas, matemática, cursos]
 format:
   html:
     toc: true
@@ -17,11 +17,12 @@ format:
     highlight-style: github
 page-layout: full
 ---
+
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
+🎯 **Aula anterior:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
 
-🎯 **Próximo Post:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
+🎯 **Próxima aula:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
 
 ***
 
@@ -29,26 +30,33 @@ page-layout: full
 Como transformar uma desigualdade em uma região da reta real?
 :::
 
-::: {.callout-note title="📌 Objetivos do Post"}
+::: {.callout-note title="📌 Objetivos de Aprendizagem"}
+
+Ao concluir esta aula, você deverá ser capaz de:
+
 - Interpretar desigualdades como comparações entre números na reta real;
-- Representar conjuntos de soluções usando intervalos;
-- Resolver inequações lineares simples e escrever as respostas em notação de intervalo.
+- Representar conjuntos solução usando intervalos e uniões de intervalos;
+- Resolver inequações lineares e inequações duplas;
+- Resolver inequações quadráticas por meio das raízes, do discriminante e do sinal do coeficiente principal;
+- Relacionar a concavidade da parábola, o quadro de sinais e os intervalos que formam o conjunto solução;
+- Distinguir quando as extremidades dos intervalos devem ser incluídas ou excluídas.
+
 :::
 
 # 📘 Intervalos e Inequações
 
-Nos posts anteriores, começamos a organizar os números reais e a enxergar a reta real como uma linha contínua de números.
+Na aula anterior, começamos a organizar os números reais e a compreender a reta real como uma linha contínua de números.
 
-Agora vamos dar um passo importante: aprender a descrever **pedaços da reta real**.
+Agora vamos dar um passo importante: aprender a descrever **regiões da reta real**.
 
-Esses pedaços aparecem o tempo todo no Cálculo. Por exemplo:
+Essas regiões aparecem constantemente no Cálculo. Por exemplo:
 
 - valores de \(x\) para os quais uma função está definida;
-- valores de \(x\) que tornam uma expressão positiva;
+- valores de \(x\) que tornam uma expressão positiva ou negativa;
 - valores de \(x\) que satisfazem uma desigualdade;
-- regiões onde um gráfico está acima ou abaixo do eixo \(x\).
+- regiões nas quais um gráfico está acima ou abaixo do eixo \(x\).
 
-A linguagem que usamos para isso é a linguagem dos **intervalos** e das **inequações**.
+A linguagem matemática utilizada para descrever essas regiões é a linguagem dos **intervalos** e das **inequações**.
 
 ***
 
@@ -72,7 +80,7 @@ Se escrevemos
 
 estamos dizendo que \(7\) está à direita de \(3\).
 
-Portanto, desigualdades são uma forma simbólica de falar sobre posição na reta real.
+Portanto, desigualdades são uma forma simbólica de falar sobre a posição dos números na reta real.
 
 ::: {.callout-note title="Ideia central"}
 Na reta real, números menores ficam mais à esquerda e números maiores ficam mais à direita.
@@ -147,7 +155,7 @@ Escrevemos:
 
 ## 📦 Intervalos: pedaços da reta real
 
-Um **intervalo** é um pedaço contínuo da reta real.
+Um **intervalo** é um subconjunto da reta real que contém todos os números situados entre quaisquer dois de seus elementos.
 
 A palavra “contínuo” aqui é importante: se dois pontos pertencem ao intervalo, todos os pontos entre eles também pertencem.
 
@@ -171,14 +179,14 @@ contém todos os números reais entre \(1\) e \(4\), mas não inclui as extremid
 
 ## 🚪 Intervalos abertos, fechados e semiabertos
 
-A diferença entre parênteses e colchetes indica se as extremidades entram ou não no intervalo.
+A diferença entre parênteses e colchetes indica se as extremidades pertencem ou não ao intervalo.
 
 | Notação | Descrição | Desigualdade correspondente |
 |---|---|---|
-| \((a,b)\) | aberto nas duas extremidades | \(a<x<b\) |
-| \([a,b]\) | fechado nas duas extremidades | \(a\leq x\leq b\) |
-| \([a,b)\) | fechado em \(a\), aberto em \(b\) | \(a\leq x<b\) |
-| \((a,b]\) | aberto em \(a\), fechado em \(b\) | \(a<x\leq b\) |
+| \((a,b)\) | Aberto nas duas extremidades | \(a<x<b\) |
+| \([a,b]\) | Fechado nas duas extremidades | \(a\leq x\leq b\) |
+| \([a,b)\) | Fechado em \(a\), aberto em \(b\) | \(a\leq x<b\) |
+| \((a,b]\) | Aberto em \(a\), fechado em \(b\) | \(a<x\leq b\) |
 
 A intuição é:
 
@@ -223,7 +231,7 @@ Nunca usamos colchete em \(-\infty\) ou \(+\infty\), porque infinito não é um 
 
 ## ⚖️ Desigualdades como linguagem de intervalos
 
-Uma desigualdade pode ser lida como uma descrição de uma região da reta.
+Uma desigualdade pode ser lida como uma descrição de uma região da reta real.
 
 Por exemplo:
 
@@ -243,13 +251,15 @@ Outro exemplo:
 -3<x\leq 5
 \]
 
-significa que \(x\) está entre \(-3\) e \(5\), sem incluir \(-3\), mas incluindo \(5\). Em notação de intervalo:
+significa que \(x\) está entre \(-3\) e \(5\), sem incluir \(-3\), mas incluindo \(5\).
+
+Em notação de intervalo:
 
 \[
 (-3,5].
 \]
 
-Essa tradução entre desigualdades e intervalos será usada constantemente.
+Essa tradução entre desigualdades e intervalos será utilizada constantemente no estudo das funções.
 
 ***
 
@@ -259,19 +269,19 @@ Agora que a ideia geométrica já está clara, podemos formalizar algumas propri
 
 Se \(a<b\), então:
 
-1. podemos somar o mesmo número aos dois lados:
+**1. Podemos somar o mesmo número aos dois lados:**
 
 \[
-a+c<b+c;
+a+c<b+c.
 \]
 
-2. podemos multiplicar por um número positivo sem mudar o sentido da desigualdade:
+**2. Podemos multiplicar por um número positivo sem mudar o sentido da desigualdade:**
 
 \[
-c>0 \quad \Rightarrow \quad ac<bc;
+c>0 \quad \Rightarrow \quad ac<bc.
 \]
 
-3. ao multiplicar por um número negativo, o sentido da desigualdade se inverte:
+**3. Ao multiplicar por um número negativo, o sentido da desigualdade se inverte:**
 
 \[
 c<0 \quad \Rightarrow \quad ac>bc.
@@ -280,7 +290,7 @@ c<0 \quad \Rightarrow \quad ac>bc.
 Essa última propriedade é uma das mais importantes no estudo das inequações.
 
 ::: {.callout-warning title="Cuidado importante"}
-Ao multiplicar ou dividir uma desigualdade por um número negativo, o sinal da desigualdade inverte.
+Ao multiplicar ou dividir uma desigualdade por um número negativo, o sinal da desigualdade se inverte.
 :::
 
 Por exemplo, se
@@ -289,7 +299,7 @@ Por exemplo, se
 -2x<6,
 \]
 
-ao dividir por \(-2\), obtemos
+ao dividir os dois lados por \(-2\), obtemos
 
 \[
 x>-3.
@@ -359,7 +369,7 @@ Agora dividimos por \(-3\). Como \(-3\) é negativo, o sentido da desigualdade s
 x\geq 2.
 \]
 
-Logo,
+Logo, o conjunto solução é
 
 \[
 S=[2,+\infty).
@@ -399,20 +409,333 @@ S=[-1,2).
 
 ***
 
-## 🧾 Quadro-resumo
+## 📈 Inequações quadráticas: o sinal da parábola
 
-Antes dos exercícios finais, vale organizar as ideias principais deste post.  
-A lógica geral é sempre a mesma: interpretar desigualdades como regiões da reta real e descrever essas regiões usando intervalos.
+Uma **inequação quadrática** é uma desigualdade que envolve um polinômio do segundo grau. Sua forma geral é
 
-:::{.callout-note title="🧭 Ideia central do post"}
-Resolver uma inequação significa encontrar **um conjunto de valores reais** que satisfazem uma desigualdade.
+\[
+ax^2+bx+c \;\square\; 0,\qquad a\neq 0,
+\]
 
-Esse conjunto costuma ser representado por:
+em que \(\square\) representa um dos sinais \(<\), \(\leq\), \(>\) ou \(\geq\).
 
-- intervalos;
-- uniões de intervalos;
-- pontos incluídos ou excluídos;
-- restrições de domínio, no caso de quocientes.
+Para resolver esse tipo de inequação, estudamos o sinal da função quadrática
+
+\[
+f(x)=ax^2+bx+c.
+\]
+
+O gráfico dessa função é uma **parábola**. A posição da parábola em relação ao eixo \(x\) permite identificar onde \(f(x)\) é positiva, negativa ou igual a zero.
+
+### 1. Encontre as raízes da função
+
+Começamos resolvendo a equação associada:
+
+\[
+ax^2+bx+c=0.
+\]
+
+O discriminante é
+
+\[
+\Delta=b^2-4ac.
+\]
+
+Quando \(\Delta>0\), existem duas raízes reais distintas, dadas por
+
+\[
+x=\frac{-b\pm\sqrt{\Delta}}{2a}.
+\]
+
+Vamos chamá-las de \(x_1\) e \(x_2\), ordenadas de modo que
+
+\[
+x_1<x_2.
+\]
+
+### 2. Determine o sinal em cada intervalo
+
+Quando existem duas raízes reais distintas, elas dividem a reta real em três regiões. O sinal do polinômio depende do sinal de \(a\):
+
+| Região da reta | \((-\infty,x_1)\) | \(x_1\) | \((x_1,x_2)\) | \(x_2\) | \((x_2,+\infty)\) |
+|---|:---:|:---:|:---:|:---:|:---:|
+| \(a>0\) | \(+\) | \(0\) | \(-\) | \(0\) | \(+\) |
+| \(a<0\) | \(-\) | \(0\) | \(+\) | \(0\) | \(-\) |
+
+Em outras palavras:
+
+- Se \(a>0\), a parábola tem concavidade voltada para cima: o polinômio é positivo fora das raízes e negativo entre elas.
+- Se \(a<0\), a parábola tem concavidade voltada para baixo: o polinômio é negativo fora das raízes e positivo entre elas.
+
+### Exemplo 1 — Uma inequação com sinal negativo entre as raízes
+
+Resolva:
+
+\[
+x^2-5x+6\leq 0.
+\]
+
+Primeiro, encontramos as raízes:
+
+\[
+x^2-5x+6=(x-2)(x-3)=0.
+\]
+
+Logo,
+
+\[
+x_1=2,\qquad x_2=3.
+\]
+
+Como \(a=1>0\), a parábola tem concavidade para cima. Portanto, a expressão é negativa entre as raízes e igual a zero nos dois extremos.
+
+Como a inequação é \(\leq 0\), incluímos também as raízes:
+
+\[
+\boxed{S=[2,3]}.
+\]
+
+O diagrama mostra a parábola, seus pontos de interseção com o eixo \(x\) e o intervalo solução na reta real.
+
+<figure class="text-center">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 330" role="img" aria-labelledby="quadratica1-title quadratica1-desc" style="max-width:100%;height:auto;">
+  <title id="quadratica1-title">Parábola da função x ao quadrado menos cinco x mais seis</title>
+  <desc id="quadratica1-desc">Parábola com concavidade para cima e raízes dois e três. A reta real destaca o intervalo fechado de dois a três.</desc>
+  <line x1="80" y1="180" x2="455" y2="180" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="80" y1="35" x2="80" y2="210" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M 80 30 Q 260 342.5 440 30" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="224" cy="180" r="5" fill="#2563eb"/>
+  <circle cx="296" cy="180" r="5" fill="#2563eb"/>
+  <text x="224" y="164" text-anchor="middle" font-size="14" fill="currentColor">2</text>
+  <text x="296" y="164" text-anchor="middle" font-size="14" fill="currentColor">3</text>
+  <text x="462" y="185" font-size="14" fill="currentColor">x</text>
+  <text x="68" y="29" font-size="14" fill="currentColor">y</text>
+  <text x="270" y="24" text-anchor="middle" font-size="14" fill="currentColor">f(x) = (x − 2)(x − 3)</text>
+  <text x="90" y="235" font-size="13" fill="currentColor">Conjunto solução na reta real</text>
+  <line x1="80" y1="260" x2="455" y2="260" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="224" y1="260" x2="296" y2="260" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="224" cy="260" r="6" fill="#2563eb"/>
+  <circle cx="296" cy="260" r="6" fill="#2563eb"/>
+  <text x="224" y="286" text-anchor="middle" font-size="14" fill="currentColor">2</text>
+  <text x="296" y="286" text-anchor="middle" font-size="14" fill="currentColor">3</text>
+  <text x="260" y="315" text-anchor="middle" font-size="14" fill="currentColor">[2, 3]</text>
+</svg>
+<figcaption>Figura 1 — A expressão é não positiva entre as raízes; por isso, os extremos pertencem à solução.</figcaption>
+</figure>
+
+### Exemplo 2 — Uma inequação com sinal positivo entre as raízes
+
+Resolva:
+
+\[
+-x^2+4>0.
+\]
+
+Encontramos as raízes:
+
+\[
+-x^2+4=0
+\quad\Longleftrightarrow\quad
+x^2=4
+\quad\Longleftrightarrow\quad
+x=-2\ \text{ou}\ x=2.
+\]
+
+Como \(a=-1<0\), a parábola tem concavidade para baixo. Assim, a expressão é positiva entre as raízes.
+
+A desigualdade é estrita (\(>0\)); portanto, as raízes não pertencem ao conjunto solução:
+
+\[
+\boxed{S=(-2,2)}.
+\]
+
+<figure class="text-center">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 330" role="img" aria-labelledby="quadratica2-title quadratica2-desc" style="max-width:100%;height:auto;">
+  <title id="quadratica2-title">Parábola da função menos x ao quadrado mais quatro</title>
+  <desc id="quadratica2-desc">Parábola com concavidade para baixo e raízes menos dois e dois. A reta real destaca o intervalo aberto entre as raízes.</desc>
+  <line x1="80" y1="180" x2="455" y2="180" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="260" y1="35" x2="260" y2="210" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M 80 305 Q 260 -145 440 305" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="140" cy="180" r="5" fill="#2563eb"/>
+  <circle cx="380" cy="180" r="5" fill="#2563eb"/>
+  <text x="140" y="163" text-anchor="middle" font-size="14" fill="currentColor">−2</text>
+  <text x="380" y="163" text-anchor="middle" font-size="14" fill="currentColor">2</text>
+  <text x="462" y="185" font-size="14" fill="currentColor">x</text>
+  <text x="248" y="29" font-size="14" fill="currentColor">y</text>
+  <text x="270" y="50" font-size="14" fill="currentColor">f(x) = −x² + 4</text>
+  <text x="90" y="235" font-size="13" fill="currentColor">Conjunto solução na reta real</text>
+  <line x1="80" y1="260" x2="455" y2="260" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="140" y1="260" x2="380" y2="260" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="140" cy="260" r="6" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="380" cy="260" r="6" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="286" text-anchor="middle" font-size="14" fill="currentColor">−2</text>
+  <text x="380" y="286" text-anchor="middle" font-size="14" fill="currentColor">2</text>
+  <text x="260" y="315" text-anchor="middle" font-size="14" fill="currentColor">(−2, 2)</text>
+</svg>
+<figcaption>Figura 2 — A expressão é positiva entre as raízes, mas os extremos são excluídos porque a desigualdade é estrita.</figcaption>
+</figure>
+
+### Exemplo 3 — Uma solução formada pela união de intervalos
+
+Resolva:
+
+\[
+x^2-5x+6>0.
+\]
+
+A expressão pode ser fatorada:
+
+\[
+(x-2)(x-3)>0.
+\]
+
+As raízes são
+
+\[
+x_1=2,\qquad x_2=3.
+\]
+
+Como \(a=1>0\), a parábola tem concavidade para cima. A expressão é positiva fora das raízes.
+
+Como a desigualdade é estrita, os pontos \(2\) e \(3\) não pertencem à solução.
+
+Assim, temos duas regiões da reta real:
+
+\[
+x<2
+\qquad\text{ou}\qquad
+x>3.
+\]
+
+O conjunto solução é a união de dois intervalos:
+
+\[
+\boxed{S=(-\infty,2)\cup(3,+\infty)}.
+\]
+
+Esse exemplo mostra que o conjunto solução de uma inequação não precisa ser um único intervalo: ele também pode ser uma união de intervalos separados.
+
+### 3. E quando o discriminante não é positivo?
+
+Os outros valores do discriminante também permitem determinar o sinal da função.
+
+**Se \(\Delta=0\):** existe uma raiz real dupla \(r\), e podemos escrever
+
+\[
+f(x)=a(x-r)^2.
+\]
+
+A expressão tem o mesmo sinal de \(a\) em todos os pontos, exceto em \(x=r\), onde vale zero.
+
+Por exemplo,
+
+\[
+(x-4)^2\leq 0
+\]
+
+tem como solução apenas
+
+\[
+S=\{4\}.
+\]
+
+**Se \(\Delta<0\):** não existem raízes reais. A parábola não corta o eixo \(x\), e a expressão mantém, em toda a reta real, o sinal de \(a\):
+
+- se \(a>0\), então \(f(x)>0\) para todo \(x\in\mathbb{R}\);
+- se \(a<0\), então \(f(x)<0\) para todo \(x\in\mathbb{R}\).
+
+Por exemplo,
+
+\[
+x^2+1\leq 0
+\]
+
+não possui solução real, pois \(x^2+1\) é sempre positivo.
+
+::: {.callout-tip title="🧭 Estratégia para resolver inequações quadráticas"}
+
+1. Escreva a expressão na forma \(ax^2+bx+c\).
+2. Calcule o discriminante e encontre as raízes reais, quando existirem.
+3. Observe o sinal de \(a\), que determina a concavidade da parábola.
+4. Monte o quadro de sinais nos intervalos determinados pelas raízes.
+5. Selecione as regiões que satisfazem a desigualdade.
+6. Inclua as raízes nas respostas com \(\leq\) ou \(\geq\); exclua-as nas respostas com \(<\) ou \(>\).
+
+:::
+
+***
+
+## 🌉 Por que isso importa para o Cálculo?
+
+No Cálculo, muitas funções não estão definidas para todos os números reais. Para determinar seus domínios, precisamos estabelecer condições sobre a variável e expressá-las por meio de desigualdades e intervalos.
+
+Considere, por exemplo, a função
+
+\[
+f(x)=\frac{1}{x-2}.
+\]
+
+O denominador não pode ser igual a zero. Portanto,
+
+\[
+x-2\neq 0
+\quad\Longleftrightarrow\quad
+x\neq 2.
+\]
+
+Seu domínio é
+
+\[
+D_f=\mathbb{R}\setminus\{2\}
+=(-\infty,2)\cup(2,+\infty).
+\]
+
+Agora considere
+
+\[
+g(x)=\sqrt{x-3}.
+\]
+
+Para que a raiz quadrada seja real, precisamos de
+
+\[
+x-3\geq 0.
+\]
+
+Logo,
+
+\[
+x\geq 3
+\]
+
+e seu domínio é
+
+\[
+D_g=[3,+\infty).
+\]
+
+Esses exemplos mostram que intervalos e inequações são ferramentas fundamentais para:
+
+- determinar o domínio de funções;
+- identificar onde uma função é positiva ou negativa;
+- analisar expressões algébricas;
+- estudar o comportamento dos gráficos;
+- estabelecer os intervalos nos quais determinadas propriedades de uma função são satisfeitas.
+
+Portanto, dominar essa linguagem é um passo essencial para avançar no estudo de funções, limites e derivadas.
+
+***
+
+## 🧾 Quadro-resumo — Intervalos e Inequações
+
+A ideia central é interpretar cada desigualdade como uma condição sobre os números reais e descrever o conjunto que a satisfaz.
+
+Esse conjunto pode ser um intervalo, uma união de intervalos, um conjunto com um único ponto ou até mesmo o conjunto vazio.
+
+::: {.callout-note title="🧭 Ideia central da aula"}
+Resolver uma inequação significa encontrar **todos os valores reais** que tornam a desigualdade verdadeira.
+
+A notação de intervalo informa quais pontos pertencem à solução e quais ficam de fora.
 :::
 
 | Forma algébrica | Leitura | Intervalo |
@@ -424,6 +747,24 @@ Esse conjunto costuma ser representado por:
 | \(a<x<b\) | \(x\) entre \(a\) e \(b\), sem extremos | \((a,b)\) |
 | \(a\leq x\leq b\) | \(x\) entre \(a\) e \(b\), com extremos | \([a,b]\) |
 
+### Resumo do sinal de uma função quadrática
+
+Para \(f(x)=ax^2+bx+c\), com \(a\neq 0\):
+
+| Situação | Comportamento do sinal |
+|---|---|
+| \(\Delta>0\) e \(a>0\) | Positivo fora das raízes e negativo entre elas. |
+| \(\Delta>0\) e \(a<0\) | Negativo fora das raízes e positivo entre elas. |
+| \(\Delta=0\) | A expressão tem o sinal de \(a\), exceto na raiz dupla, onde vale zero. |
+| \(\Delta<0\) | A expressão tem, em toda a reta real, o sinal de \(a\). |
+
+Lembre-se:
+
+- Em uma inequação estrita (\(<\) ou \(>\)), os pontos em que a expressão vale zero não entram na solução.
+- Em uma inequação não estrita (\(\leq\) ou \(\geq\)), esses pontos entram na solução quando satisfazem o sentido da desigualdade.
+- O sinal de \(a\) indica a concavidade: para cima se \(a>0\) e para baixo se \(a<0\).
+- Uma solução pode ser um intervalo, uma união de intervalos, um conjunto unitário ou o conjunto vazio.
+
 ***
 
 # 🧪 Exercícios propostos
@@ -434,93 +775,370 @@ Esse conjunto costuma ser representado por:
 
 Escreva cada desigualdade em notação de intervalo:
 
-a) \(x>4\)  
-b) \(x\leq -2\)  
-c) \(1<x<5\)  
+a) \(x>4\)
+
+b) \(x\leq -2\)
+
+c) \(1<x<5\)
+
 d) \(-3\leq x<2\)
 
 ## 🧪 Exercício 2
 
 Escreva cada intervalo usando desigualdades:
 
-a) \((2,+\infty)\)  
-b) \((-\infty,7]\)  
-c) \([1,4)\)  
+a) \((2,+\infty)\)
+
+b) \((-\infty,7]\)
+
+c) \([1,4)\)
+
 d) \((-5,3]\)
 
 ## 🧪 Exercício 3
 
 Resolva as inequações:
 
-a) \(2x+1>7\)  
-b) \(5-x\leq 2\)  
-c) \(-3x+6<0\)  
+a) \(2x+1>7\)
+
+b) \(5-x\leq 2\)
+
+c) \(-3x+6<0\)
+
 d) \(4x-8\geq 0\)
 
 ## 🧪 Exercício 4
 
 Resolva as inequações duplas:
 
-a) \(1<x+2<6\)  
-b) \(-2\leq 3x+1<7\)  
+a) \(1<x+2<6\)
+
+b) \(-2\leq 3x+1<7\)
+
 c) \(0<2x-4\leq 8\)
+
+## 🧪 Exercício 5
+
+Resolva as inequações quadráticas e escreva cada conjunto solução em notação de intervalo ou de conjunto:
+
+a) \(x^2+x-6<0\)
+
+b) \(-x^2+4\geq 0\)
+
+c) \(x^2+4x+4\leq 0\)
+
+d) \(x^2+1\leq 0\)
 
 :::
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
+::: {.callout-important collapse=true title="✅ Gabarito comentado"}
 
 # ✅ Gabarito comentado
 
 ## 🧪 Exercício 1
 
-a) \(x>4\), logo \(S=(4,+\infty)\).
+a) \(x>4\), logo
 
-b) \(x\leq -2\), logo \(S=(-\infty,-2]\).
+\[
+S=(4,+\infty).
+\]
 
-c) \(1<x<5\), logo \(S=(1,5)\).
+b) \(x\leq -2\), logo
 
-d) \(-3\leq x<2\), logo \(S=[-3,2)\).
+\[
+S=(-\infty,-2].
+\]
+
+c) \(1<x<5\), logo
+
+\[
+S=(1,5).
+\]
+
+d) \(-3\leq x<2\), logo
+
+\[
+S=[-3,2).
+\]
 
 ## 🧪 Exercício 2
 
-a) \((2,+\infty)\), logo \(x>2\).
+a) \((2,+\infty)\), logo
 
-b) \((-\infty,7]\), logo \(x\leq 7\).
+\[
+x>2.
+\]
 
-c) \([1,4)\), logo \(1\leq x<4\).
+b) \((-\infty,7]\), logo
 
-d) \((-5,3]\), logo \(-5<x\leq 3\).
+\[
+x\leq 7.
+\]
+
+c) \([1,4)\), logo
+
+\[
+1\leq x<4.
+\]
+
+d) \((-5,3]\), logo
+
+\[
+-5<x\leq 3.
+\]
 
 ## 🧪 Exercício 3
 
-a) \(2x+1>7\). Então \(2x>6\), logo \(x>3\). Portanto, \(S=(3,+\infty)\).
+**a)**
 
-b) \(5-x\leq 2\). Então \(-x\leq -3\). Dividindo por \(-1\), invertemos o sinal: \(x\geq 3\). Portanto, \(S=[3,+\infty)\).
+\[
+2x+1>7.
+\]
 
-c) \(-3x+6<0\). Então \(-3x<-6\). Dividindo por \(-3\), invertemos o sinal: \(x>2\). Portanto, \(S=(2,+\infty)\).
+Então,
 
-d) \(4x-8\geq 0\). Então \(4x\geq 8\), logo \(x\geq 2\). Portanto, \(S=[2,+\infty)\).
+\[
+2x>6.
+\]
+
+Logo,
+
+\[
+x>3.
+\]
+
+Portanto,
+
+\[
+S=(3,+\infty).
+\]
+
+**b)**
+
+\[
+5-x\leq 2.
+\]
+
+Então,
+
+\[
+-x\leq -3.
+\]
+
+Dividindo por \(-1\), invertemos o sinal:
+
+\[
+x\geq 3.
+\]
+
+Portanto,
+
+\[
+S=[3,+\infty).
+\]
+
+**c)**
+
+\[
+-3x+6<0.
+\]
+
+Então,
+
+\[
+-3x<-6.
+\]
+
+Dividindo por \(-3\), invertemos o sinal:
+
+\[
+x>2.
+\]
+
+Portanto,
+
+\[
+S=(2,+\infty).
+\]
+
+**d)**
+
+\[
+4x-8\geq 0.
+\]
+
+Então,
+
+\[
+4x\geq 8.
+\]
+
+Logo,
+
+\[
+x\geq 2.
+\]
+
+Portanto,
+
+\[
+S=[2,+\infty).
+\]
 
 ## 🧪 Exercício 4
 
-a) \(1<x+2<6\). Subtraindo \(2\): \(-1<x<4\). Portanto, \(S=(-1,4)\).
+**a)**
 
-b) \(-2\leq 3x+1<7\). Subtraindo \(1\): \(-3\leq 3x<6\). Dividindo por \(3\): \(-1\leq x<2\). Portanto, \(S=[-1,2)\).
+\[
+1<x+2<6.
+\]
 
-c) \(0<2x-4\leq 8\). Somando \(4\): \(4<2x\leq 12\). Dividindo por \(2\): \(2<x\leq 6\). Portanto, \(S=(2,6]\).
+Subtraindo \(2\) em todos os lados:
+
+\[
+-1<x<4.
+\]
+
+Portanto,
+
+\[
+S=(-1,4).
+\]
+
+**b)**
+
+\[
+-2\leq 3x+1<7.
+\]
+
+Subtraindo \(1\):
+
+\[
+-3\leq 3x<6.
+\]
+
+Dividindo por \(3\):
+
+\[
+-1\leq x<2.
+\]
+
+Portanto,
+
+\[
+S=[-1,2).
+\]
+
+**c)**
+
+\[
+0<2x-4\leq 8.
+\]
+
+Somando \(4\):
+
+\[
+4<2x\leq 12.
+\]
+
+Dividindo por \(2\):
+
+\[
+2<x\leq 6.
+\]
+
+Portanto,
+
+\[
+S=(2,6].
+\]
+
+## 🧪 Exercício 5
+
+**a)**
+
+\[
+x^2+x-6<0.
+\]
+
+Fatorando:
+
+\[
+(x+3)(x-2)<0.
+\]
+
+As raízes são \(-3\) e \(2\). Como a concavidade é para cima, a expressão é negativa entre as raízes.
+
+Portanto,
+
+\[
+S=(-3,2).
+\]
+
+**b)**
+
+\[
+-x^2+4\geq 0.
+\]
+
+As raízes são \(-2\) e \(2\), e a concavidade é para baixo.
+
+A expressão é positiva entre as raízes e vale zero nos extremos.
+
+Portanto,
+
+\[
+S=[-2,2].
+\]
+
+**c)**
+
+\[
+x^2+4x+4\leq 0.
+\]
+
+Temos
+
+\[
+(x+2)^2\leq 0.
+\]
+
+Um quadrado nunca é negativo e vale zero somente quando \(x=-2\).
+
+Portanto,
+
+\[
+S=\{-2\}.
+\]
+
+**d)**
+
+\[
+x^2+1\leq 0.
+\]
+
+Como \(x^2\geq 0\) para todo número real, \(x^2+1\) é sempre positivo.
+
+Portanto, não há solução real:
+
+\[
+S=\varnothing.
+\]
 
 :::
 
 ***
 
-# 🧩 Quiz — Intervalos e Inequações
+## 🧩 Quiz — Intervalos e Inequações
 
 :::::{.question}
+
 **Q1.** A desigualdade \(x>3\) corresponde ao intervalo:
 
 ::::{.choices}
+
 :::{.choice}
 \((-\infty,3)\)
 :::
@@ -533,17 +1151,16 @@ c) \(0<2x-4\leq 8\). Somando \(4\): \(4<2x\leq 12\). Dividindo por \(2\): \(2<x\
 \([3,+\infty)\)
 :::
 
-:::{.choice}
-\((-\infty,3]\)
-:::
-
 ::::
+
 :::::
 
-::::: {.question}
+:::::{.question}
+
 **Q2.** O intervalo \([-2,5)\) corresponde à desigualdade:
 
 ::::{.choices}
+
 :::{.choice}
 \(-2<x<5\)
 :::
@@ -556,40 +1173,38 @@ c) \(0<2x-4\leq 8\). Somando \(4\): \(4<2x\leq 12\). Dividindo por \(2\): \(2<x\
 \(-2<x\leq 5\)
 :::
 
-:::{.choice}
-\(-2\leq x\leq 5\)
-:::
-
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q3.** Ao dividir uma inequação por um número negativo:
 
 ::::{.choices}
+
 :::{.choice}
-o sinal permanece igual.
+O sinal da desigualdade permanece igual.
 :::
 
 :::{.choice .correct-choice}
-o sinal se inverte.
+O sinal da desigualdade se inverte.
 :::
 
 :::{.choice}
-a inequação deixa de ter solução.
-:::
-
-:::{.choice}
-o resultado sempre é positivo.
+A desigualdade se transforma em uma igualdade.
 :::
 
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q4.** A solução de \(-2x<6\) é:
 
 ::::{.choices}
+
 :::{.choice}
 \(x<-3\)
 :::
@@ -599,14 +1214,77 @@ o resultado sempre é positivo.
 :::
 
 :::{.choice}
-\(x<3\)
-:::
-
-:::{.choice}
 \(x>3\)
 :::
 
 ::::
+
+:::::
+
+:::::{.question}
+
+**Q5.** A solução de \(x^2-5x+6>0\) é:
+
+::::{.choices}
+
+:::{.choice .correct-choice}
+\((-\infty,2)\cup(3,+\infty)\)
+:::
+
+:::{.choice}
+\([2,3]\)
+:::
+
+:::{.choice}
+\((2,3)\)
+:::
+
+::::
+
+:::::
+
+:::::{.question}
+
+**Q6.** A solução de \((x-4)^2\leq 0\) é:
+
+::::{.choices}
+
+:::{.choice}
+\(\mathbb{R}\)
+:::
+
+:::{.choice .correct-choice}
+\(\{4\}\)
+:::
+
+:::{.choice}
+\(\varnothing\)
+:::
+
+::::
+
+:::::
+
+:::::{.question}
+
+**Q7.** A inequação \(x^2+1\leq 0\), considerando apenas números reais, tem como conjunto solução:
+
+::::{.choices}
+
+:::{.choice}
+\([-1,1]\)
+:::
+
+:::{.choice}
+\((-\infty,-1]\cup[1,+\infty)\)
+:::
+
+:::{.choice .correct-choice}
+\(\varnothing\)
+:::
+
+::::
+
 :::::
 
 ***
@@ -617,12 +1295,20 @@ Este aprofundamento é opcional. Você pode explorá-lo agora ou seguir as aulas
 
 - [1.19-AP — Valor Absoluto e Inequações Modulares](1.19-AP-valor-absoluto.qmd) — Propriedades do módulo e resolução de inequações modulares.
 
-::: 
+:::
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
+🎯 **Aula anterior:** 👉 [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd)
 
-🎯 **Próximo Post:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
+🎯 **Próxima aula:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.3-intervalos-inequacoes.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
+
+***
+
+*Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
+
+::: {.callout-note}
+Criado por Blog do Marcellini com ❤️ e código.
+:::

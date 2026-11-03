@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.">
+<meta name="description" content="Propriedades da ordem em R, intervalos e inequações lineares e quadráticas, com quadros de sinais e diagramas.">
 
 <title>📘 Módulo 1.3: Intervalos e Inequações – Blog do Marcellini</title>
 <style>
@@ -127,14 +127,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="📘 Módulo 1.3: Intervalos e Inequações – Blog do Marcellini">
-<meta property="og:description" content="Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.">
+<meta property="og:description" content="Propriedades da ordem em R, intervalos e inequações lineares e quadráticas, com quadros de sinais e diagramas.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="📘 Módulo 1.3: Intervalos e Inequações – Blog do Marcellini">
-<meta name="twitter:description" content="Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.">
+<meta name="twitter:description" content="Propriedades da ordem em R, intervalos e inequações lineares e quadráticas, com quadros de sinais e diagramas.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -279,11 +279,26 @@ window.Quarto = {
   <li><a href="#inequações-procurando-regiões-da-reta" id="toc-inequações-procurando-regiões-da-reta" class="nav-link" data-scroll-target="#inequações-procurando-regiões-da-reta"><span class="header-section-number">1.9</span> 🧮 Inequações: procurando regiões da reta</a></li>
   <li><a href="#inequações-com-multiplicação-por-número-negativo" id="toc-inequações-com-multiplicação-por-número-negativo" class="nav-link" data-scroll-target="#inequações-com-multiplicação-por-número-negativo"><span class="header-section-number">1.10</span> 🔄 Inequações com multiplicação por número negativo</a></li>
   <li><a href="#inequações-duplas" id="toc-inequações-duplas" class="nav-link" data-scroll-target="#inequações-duplas"><span class="header-section-number">1.11</span> 🔎 Inequações duplas</a></li>
-  <li><a href="#quadro-resumo" id="toc-quadro-resumo" class="nav-link" data-scroll-target="#quadro-resumo"><span class="header-section-number">1.12</span> 🧾 Quadro-resumo</a></li>
+  <li><a href="#inequações-quadráticas-o-sinal-da-parábola" id="toc-inequações-quadráticas-o-sinal-da-parábola" class="nav-link" data-scroll-target="#inequações-quadráticas-o-sinal-da-parábola"><span class="header-section-number">1.12</span> 📈 Inequações quadráticas: o sinal da parábola</a>
+  <ul class="collapse">
+  <li><a href="#encontre-as-raízes-da-função" id="toc-encontre-as-raízes-da-função" class="nav-link" data-scroll-target="#encontre-as-raízes-da-função"><span class="header-section-number">1.12.1</span> 1. Encontre as raízes da função</a></li>
+  <li><a href="#determine-o-sinal-em-cada-intervalo" id="toc-determine-o-sinal-em-cada-intervalo" class="nav-link" data-scroll-target="#determine-o-sinal-em-cada-intervalo"><span class="header-section-number">1.12.2</span> 2. Determine o sinal em cada intervalo</a></li>
+  <li><a href="#exemplo-1-uma-inequação-com-sinal-negativo-entre-as-raízes" id="toc-exemplo-1-uma-inequação-com-sinal-negativo-entre-as-raízes" class="nav-link" data-scroll-target="#exemplo-1-uma-inequação-com-sinal-negativo-entre-as-raízes"><span class="header-section-number">1.12.3</span> Exemplo 1 — Uma inequação com sinal negativo entre as raízes</a></li>
+  <li><a href="#exemplo-2-uma-inequação-com-sinal-positivo-entre-as-raízes" id="toc-exemplo-2-uma-inequação-com-sinal-positivo-entre-as-raízes" class="nav-link" data-scroll-target="#exemplo-2-uma-inequação-com-sinal-positivo-entre-as-raízes"><span class="header-section-number">1.12.4</span> Exemplo 2 — Uma inequação com sinal positivo entre as raízes</a></li>
+  <li><a href="#exemplo-3-uma-solução-formada-pela-união-de-intervalos" id="toc-exemplo-3-uma-solução-formada-pela-união-de-intervalos" class="nav-link" data-scroll-target="#exemplo-3-uma-solução-formada-pela-união-de-intervalos"><span class="header-section-number">1.12.5</span> Exemplo 3 — Uma solução formada pela união de intervalos</a></li>
+  <li><a href="#e-quando-o-discriminante-não-é-positivo" id="toc-e-quando-o-discriminante-não-é-positivo" class="nav-link" data-scroll-target="#e-quando-o-discriminante-não-é-positivo"><span class="header-section-number">1.12.6</span> 3. E quando o discriminante não é positivo?</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
-  <li><a href="#quiz-intervalos-e-inequações" id="toc-quiz-intervalos-e-inequações" class="nav-link" data-scroll-target="#quiz-intervalos-e-inequações"><span class="header-section-number">4</span> 🧩 Quiz — Intervalos e Inequações</a></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
+  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.13</span> 🌉 Por que isso importa para o Cálculo?</a></li>
+  <li><a href="#quadro-resumo-intervalos-e-inequações" id="toc-quadro-resumo-intervalos-e-inequações" class="nav-link" data-scroll-target="#quadro-resumo-intervalos-e-inequações"><span class="header-section-number">1.14</span> 🧾 Quadro-resumo — Intervalos e Inequações</a>
+  <ul class="collapse">
+  <li><a href="#resumo-do-sinal-de-uma-função-quadrática" id="toc-resumo-do-sinal-de-uma-função-quadrática" class="nav-link" data-scroll-target="#resumo-do-sinal-de-uma-função-quadrática"><span class="header-section-number">1.14.1</span> Resumo do sinal de uma função quadrática</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <ul class="collapse">
+  <li><a href="#quiz-intervalos-e-inequações" id="toc-quiz-intervalos-e-inequações" class="nav-link" data-scroll-target="#quiz-intervalos-e-inequações"><span class="header-section-number">3.6</span> 🧩 Quiz — Intervalos e Inequações</a></li>
+  </ul></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -305,7 +320,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Definição de ordem em R, intervalos e inequações lineares e quadráticas, com exemplos, teoremas e diagramas.
+    Propriedades da ordem em R, intervalos e inequações lineares e quadráticas, com quadros de sinais e diagramas.
   </div>
 </div>
 
@@ -335,8 +350,8 @@ window.Quarto = {
 
 
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></p>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
 <hr>
 <div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
 <div class="callout-header d-flex align-content-center">
@@ -351,35 +366,39 @@ window.Quarto = {
 <p>Como transformar uma desigualdade em uma região da reta real?</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do Post">
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos de Aprendizagem">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📌 Objetivos do Post
+<span class="screen-reader-only">Nota</span>📌 Objetivos de Aprendizagem
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Ao concluir esta aula, você deverá ser capaz de:</p>
 <ul>
 <li>Interpretar desigualdades como comparações entre números na reta real;</li>
-<li>Representar conjuntos de soluções usando intervalos;</li>
-<li>Resolver inequações lineares simples e escrever as respostas em notação de intervalo.</li>
+<li>Representar conjuntos solução usando intervalos e uniões de intervalos;</li>
+<li>Resolver inequações lineares e inequações duplas;</li>
+<li>Resolver inequações quadráticas por meio das raízes, do discriminante e do sinal do coeficiente principal;</li>
+<li>Relacionar a concavidade da parábola, o quadro de sinais e os intervalos que formam o conjunto solução;</li>
+<li>Distinguir quando as extremidades dos intervalos devem ser incluídas ou excluídas.</li>
 </ul>
 </div>
 </div>
 <section id="intervalos-e-inequações" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 📘 Intervalos e Inequações</h1>
-<p>Nos posts anteriores, começamos a organizar os números reais e a enxergar a reta real como uma linha contínua de números.</p>
-<p>Agora vamos dar um passo importante: aprender a descrever <strong>pedaços da reta real</strong>.</p>
-<p>Esses pedaços aparecem o tempo todo no Cálculo. Por exemplo:</p>
+<p>Na aula anterior, começamos a organizar os números reais e a compreender a reta real como uma linha contínua de números.</p>
+<p>Agora vamos dar um passo importante: aprender a descrever <strong>regiões da reta real</strong>.</p>
+<p>Essas regiões aparecem constantemente no Cálculo. Por exemplo:</p>
 <ul>
 <li>valores de <span class="math inline">\(x\)</span> para os quais uma função está definida;</li>
-<li>valores de <span class="math inline">\(x\)</span> que tornam uma expressão positiva;</li>
+<li>valores de <span class="math inline">\(x\)</span> que tornam uma expressão positiva ou negativa;</li>
 <li>valores de <span class="math inline">\(x\)</span> que satisfazem uma desigualdade;</li>
-<li>regiões onde um gráfico está acima ou abaixo do eixo <span class="math inline">\(x\)</span>.</li>
+<li>regiões nas quais um gráfico está acima ou abaixo do eixo <span class="math inline">\(x\)</span>.</li>
 </ul>
-<p>A linguagem que usamos para isso é a linguagem dos <strong>intervalos</strong> e das <strong>inequações</strong>.</p>
+<p>A linguagem matemática utilizada para descrever essas regiões é a linguagem dos <strong>intervalos</strong> e das <strong>inequações</strong>.</p>
 <hr>
 <section id="a-ideia-intuitiva-comparar-números" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="a-ideia-intuitiva-comparar-números"><span class="header-section-number">1.1</span> 🌱 A ideia intuitiva: comparar números</h2>
@@ -394,7 +413,7 @@ window.Quarto = {
 7&gt;3,
 \]</span></p>
 <p>estamos dizendo que <span class="math inline">\(7\)</span> está à direita de <span class="math inline">\(3\)</span>.</p>
-<p>Portanto, desigualdades são uma forma simbólica de falar sobre posição na reta real.</p>
+<p>Portanto, desigualdades são uma forma simbólica de falar sobre a posição dos números na reta real.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -460,7 +479,7 @@ x&lt;2,
 </section>
 <section id="intervalos-pedaços-da-reta-real" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="intervalos-pedaços-da-reta-real"><span class="header-section-number">1.4</span> 📦 Intervalos: pedaços da reta real</h2>
-<p>Um <strong>intervalo</strong> é um pedaço contínuo da reta real.</p>
+<p>Um <strong>intervalo</strong> é um subconjunto da reta real que contém todos os números situados entre quaisquer dois de seus elementos.</p>
 <p>A palavra “contínuo” aqui é importante: se dois pontos pertencem ao intervalo, todos os pontos entre eles também pertencem.</p>
 <p>Por exemplo, o intervalo</p>
 <p><span class="math display">\[
@@ -476,7 +495,7 @@ x&lt;2,
 </section>
 <section id="intervalos-abertos-fechados-e-semiabertos" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="intervalos-abertos-fechados-e-semiabertos"><span class="header-section-number">1.5</span> 🚪 Intervalos abertos, fechados e semiabertos</h2>
-<p>A diferença entre parênteses e colchetes indica se as extremidades entram ou não no intervalo.</p>
+<p>A diferença entre parênteses e colchetes indica se as extremidades pertencem ou não ao intervalo.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -488,22 +507,22 @@ x&lt;2,
 <tbody>
 <tr class="odd">
 <td><span class="math inline">\((a,b)\)</span></td>
-<td>aberto nas duas extremidades</td>
+<td>Aberto nas duas extremidades</td>
 <td><span class="math inline">\(a&lt;x&lt;b\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\([a,b]\)</span></td>
-<td>fechado nas duas extremidades</td>
+<td>Fechado nas duas extremidades</td>
 <td><span class="math inline">\(a\leq x\leq b\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\([a,b)\)</span></td>
-<td>fechado em <span class="math inline">\(a\)</span>, aberto em <span class="math inline">\(b\)</span></td>
+<td>Fechado em <span class="math inline">\(a\)</span>, aberto em <span class="math inline">\(b\)</span></td>
 <td><span class="math inline">\(a\leq x&lt;b\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\((a,b]\)</span></td>
-<td>aberto em <span class="math inline">\(a\)</span>, fechado em <span class="math inline">\(b\)</span></td>
+<td>Aberto em <span class="math inline">\(a\)</span>, fechado em <span class="math inline">\(b\)</span></td>
 <td><span class="math inline">\(a&lt;x\leq b\)</span></td>
 </tr>
 </tbody>
@@ -551,7 +570,7 @@ x\leq -1
 </section>
 <section id="desigualdades-como-linguagem-de-intervalos" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="desigualdades-como-linguagem-de-intervalos"><span class="header-section-number">1.7</span> ⚖️ Desigualdades como linguagem de intervalos</h2>
-<p>Uma desigualdade pode ser lida como uma descrição de uma região da reta.</p>
+<p>Uma desigualdade pode ser lida como uma descrição de uma região da reta real.</p>
 <p>Por exemplo:</p>
 <p><span class="math display">\[
 x\geq 2
@@ -564,32 +583,27 @@ x\geq 2
 <p><span class="math display">\[
 -3&lt;x\leq 5
 \]</span></p>
-<p>significa que <span class="math inline">\(x\)</span> está entre <span class="math inline">\(-3\)</span> e <span class="math inline">\(5\)</span>, sem incluir <span class="math inline">\(-3\)</span>, mas incluindo <span class="math inline">\(5\)</span>. Em notação de intervalo:</p>
+<p>significa que <span class="math inline">\(x\)</span> está entre <span class="math inline">\(-3\)</span> e <span class="math inline">\(5\)</span>, sem incluir <span class="math inline">\(-3\)</span>, mas incluindo <span class="math inline">\(5\)</span>.</p>
+<p>Em notação de intervalo:</p>
 <p><span class="math display">\[
 (-3,5].
 \]</span></p>
-<p>Essa tradução entre desigualdades e intervalos será usada constantemente.</p>
+<p>Essa tradução entre desigualdades e intervalos será utilizada constantemente no estudo das funções.</p>
 <hr>
 </section>
 <section id="propriedades-da-ordem-em-mathbbr" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="propriedades-da-ordem-em-mathbbr"><span class="header-section-number">1.8</span> 🧱 Propriedades da ordem em <span class="math inline">\(\mathbb{R}\)</span></h2>
 <p>Agora que a ideia geométrica já está clara, podemos formalizar algumas propriedades importantes da ordem nos números reais.</p>
 <p>Se <span class="math inline">\(a&lt;b\)</span>, então:</p>
-<ol type="1">
-<li>podemos somar o mesmo número aos dois lados:</li>
-</ol>
+<p><strong>1. Podemos somar o mesmo número aos dois lados:</strong></p>
 <p><span class="math display">\[
-a+c&lt;b+c;
+a+c&lt;b+c.
 \]</span></p>
-<ol start="2" type="1">
-<li>podemos multiplicar por um número positivo sem mudar o sentido da desigualdade:</li>
-</ol>
+<p><strong>2. Podemos multiplicar por um número positivo sem mudar o sentido da desigualdade:</strong></p>
 <p><span class="math display">\[
-c&gt;0 \quad \Rightarrow \quad ac&lt;bc;
+c&gt;0 \quad \Rightarrow \quad ac&lt;bc.
 \]</span></p>
-<ol start="3" type="1">
-<li>ao multiplicar por um número negativo, o sentido da desigualdade se inverte:</li>
-</ol>
+<p><strong>3. Ao multiplicar por um número negativo, o sentido da desigualdade se inverte:</strong></p>
 <p><span class="math display">\[
 c&lt;0 \quad \Rightarrow \quad ac&gt;bc.
 \]</span></p>
@@ -604,14 +618,14 @@ c&lt;0 \quad \Rightarrow \quad ac&gt;bc.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ao multiplicar ou dividir uma desigualdade por um número negativo, o sinal da desigualdade inverte.</p>
+<p>Ao multiplicar ou dividir uma desigualdade por um número negativo, o sinal da desigualdade se inverte.</p>
 </div>
 </div>
 <p>Por exemplo, se</p>
 <p><span class="math display">\[
 -2x&lt;6,
 \]</span></p>
-<p>ao dividir por <span class="math inline">\(-2\)</span>, obtemos</p>
+<p>ao dividir os dois lados por <span class="math inline">\(-2\)</span>, obtemos</p>
 <p><span class="math display">\[
 x&gt;-3.
 \]</span></p>
@@ -659,7 +673,7 @@ S=(3,+\infty).
 <p><span class="math display">\[
 x\geq 2.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo, o conjunto solução é</p>
 <p><span class="math display">\[
 S=[2,+\infty).
 \]</span></p>
@@ -687,28 +701,285 @@ S=[-1,2).
 \]</span></p>
 <hr>
 </section>
-<section id="quadro-resumo" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="quadro-resumo"><span class="header-section-number">1.12</span> 🧾 Quadro-resumo</h2>
-<p>Antes dos exercícios finais, vale organizar as ideias principais deste post.<br>
-A lógica geral é sempre a mesma: interpretar desigualdades como regiões da reta real e descrever essas regiões usando intervalos.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="🧭 Ideia central do post">
+<section id="inequações-quadráticas-o-sinal-da-parábola" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="inequações-quadráticas-o-sinal-da-parábola"><span class="header-section-number">1.12</span> 📈 Inequações quadráticas: o sinal da parábola</h2>
+<p>Uma <strong>inequação quadrática</strong> é uma desigualdade que envolve um polinômio do segundo grau. Sua forma geral é</p>
+<p><span class="math display">\[
+ax^2+bx+c \;\square\; 0,\qquad a\neq 0,
+\]</span></p>
+<p>em que <span class="math inline">\(\square\)</span> representa um dos sinais <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(\leq\)</span>, <span class="math inline">\(&gt;\)</span> ou <span class="math inline">\(\geq\)</span>.</p>
+<p>Para resolver esse tipo de inequação, estudamos o sinal da função quadrática</p>
+<p><span class="math display">\[
+f(x)=ax^2+bx+c.
+\]</span></p>
+<p>O gráfico dessa função é uma <strong>parábola</strong>. A posição da parábola em relação ao eixo <span class="math inline">\(x\)</span> permite identificar onde <span class="math inline">\(f(x)\)</span> é positiva, negativa ou igual a zero.</p>
+<section id="encontre-as-raízes-da-função" class="level3" data-number="1.12.1">
+<h3 data-number="1.12.1" class="anchored" data-anchor-id="encontre-as-raízes-da-função"><span class="header-section-number">1.12.1</span> 1. Encontre as raízes da função</h3>
+<p>Começamos resolvendo a equação associada:</p>
+<p><span class="math display">\[
+ax^2+bx+c=0.
+\]</span></p>
+<p>O discriminante é</p>
+<p><span class="math display">\[
+\Delta=b^2-4ac.
+\]</span></p>
+<p>Quando <span class="math inline">\(\Delta&gt;0\)</span>, existem duas raízes reais distintas, dadas por</p>
+<p><span class="math display">\[
+x=\frac{-b\pm\sqrt{\Delta}}{2a}.
+\]</span></p>
+<p>Vamos chamá-las de <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span>, ordenadas de modo que</p>
+<p><span class="math display">\[
+x_1&lt;x_2.
+\]</span></p>
+</section>
+<section id="determine-o-sinal-em-cada-intervalo" class="level3" data-number="1.12.2">
+<h3 data-number="1.12.2" class="anchored" data-anchor-id="determine-o-sinal-em-cada-intervalo"><span class="header-section-number">1.12.2</span> 2. Determine o sinal em cada intervalo</h3>
+<p>Quando existem duas raízes reais distintas, elas dividem a reta real em três regiões. O sinal do polinômio depende do sinal de <span class="math inline">\(a\)</span>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Região da reta</th>
+<th style="text-align: center;"><span class="math inline">\((-\infty,x_1)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((x_1,x_2)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((x_2,+\infty)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a&gt;0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a&lt;0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Em outras palavras:</p>
+<ul>
+<li>Se <span class="math inline">\(a&gt;0\)</span>, a parábola tem concavidade voltada para cima: o polinômio é positivo fora das raízes e negativo entre elas.</li>
+<li>Se <span class="math inline">\(a&lt;0\)</span>, a parábola tem concavidade voltada para baixo: o polinômio é negativo fora das raízes e positivo entre elas.</li>
+</ul>
+</section>
+<section id="exemplo-1-uma-inequação-com-sinal-negativo-entre-as-raízes" class="level3" data-number="1.12.3">
+<h3 data-number="1.12.3" class="anchored" data-anchor-id="exemplo-1-uma-inequação-com-sinal-negativo-entre-as-raízes"><span class="header-section-number">1.12.3</span> Exemplo 1 — Uma inequação com sinal negativo entre as raízes</h3>
+<p>Resolva:</p>
+<p><span class="math display">\[
+x^2-5x+6\leq 0.
+\]</span></p>
+<p>Primeiro, encontramos as raízes:</p>
+<p><span class="math display">\[
+x^2-5x+6=(x-2)(x-3)=0.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x_1=2,\qquad x_2=3.
+\]</span></p>
+<p>Como <span class="math inline">\(a=1&gt;0\)</span>, a parábola tem concavidade para cima. Portanto, a expressão é negativa entre as raízes e igual a zero nos dois extremos.</p>
+<p>Como a inequação é <span class="math inline">\(\leq 0\)</span>, incluímos também as raízes:</p>
+<p><span class="math display">\[
+\boxed{S=[2,3]}.
+\]</span></p>
+<p>O diagrama mostra a parábola, seus pontos de interseção com o eixo <span class="math inline">\(x\)</span> e o intervalo solução na reta real.</p>
+<figure class="text-center figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 520 330" role="img" aria-labelledby="quadratica1-title quadratica1-desc" style="max-width:100%;height:auto;">
+<title id="quadratica1-title">
+Parábola da função x ao quadrado menos cinco x mais seis
+</title>
+<desc id="quadratica1-desc">Parábola com concavidade para cima e raízes dois e três. A reta real destaca o intervalo fechado de dois a três.</desc> <line x1="80" y1="180" x2="455" y2="180" stroke="currentColor" stroke-width="1.5"></line> <line x1="80" y1="35" x2="80" y2="210" stroke="currentColor" stroke-width="1.5"></line> <path d="M 80 30 Q 260 342.5 440 30" fill="none" stroke="#2563eb" stroke-width="3"></path> <circle cx="224" cy="180" r="5" fill="#2563eb"></circle> <circle cx="296" cy="180" r="5" fill="#2563eb"></circle> <text x="224" y="164" text-anchor="middle" font-size="14" fill="currentColor">2</text> <text x="296" y="164" text-anchor="middle" font-size="14" fill="currentColor">3</text> <text x="462" y="185" font-size="14" fill="currentColor">x</text> <text x="68" y="29" font-size="14" fill="currentColor">y</text> <text x="270" y="24" text-anchor="middle" font-size="14" fill="currentColor">f(x) = (x − 2)(x − 3)</text> <text x="90" y="235" font-size="13" fill="currentColor">Conjunto solução na reta real</text> <line x1="80" y1="260" x2="455" y2="260" stroke="currentColor" stroke-width="1.5"></line> <line x1="224" y1="260" x2="296" y2="260" stroke="#2563eb" stroke-width="7" stroke-linecap="round"></line> <circle cx="224" cy="260" r="6" fill="#2563eb"></circle> <circle cx="296" cy="260" r="6" fill="#2563eb"></circle> <text x="224" y="286" text-anchor="middle" font-size="14" fill="currentColor">2</text> <text x="296" y="286" text-anchor="middle" font-size="14" fill="currentColor">3</text> <text x="260" y="315" text-anchor="middle" font-size="14" fill="currentColor">[2, 3]</text>
+</svg>
+<figcaption>
+Figura 1 — A expressão é não positiva entre as raízes; por isso, os extremos pertencem à solução.
+</figcaption>
+</figure>
+</section>
+<section id="exemplo-2-uma-inequação-com-sinal-positivo-entre-as-raízes" class="level3" data-number="1.12.4">
+<h3 data-number="1.12.4" class="anchored" data-anchor-id="exemplo-2-uma-inequação-com-sinal-positivo-entre-as-raízes"><span class="header-section-number">1.12.4</span> Exemplo 2 — Uma inequação com sinal positivo entre as raízes</h3>
+<p>Resolva:</p>
+<p><span class="math display">\[
+-x^2+4&gt;0.
+\]</span></p>
+<p>Encontramos as raízes:</p>
+<p><span class="math display">\[
+-x^2+4=0
+\quad\Longleftrightarrow\quad
+x^2=4
+\quad\Longleftrightarrow\quad
+x=-2\ \text{ou}\ x=2.
+\]</span></p>
+<p>Como <span class="math inline">\(a=-1&lt;0\)</span>, a parábola tem concavidade para baixo. Assim, a expressão é positiva entre as raízes.</p>
+<p>A desigualdade é estrita (<span class="math inline">\(&gt;0\)</span>); portanto, as raízes não pertencem ao conjunto solução:</p>
+<p><span class="math display">\[
+\boxed{S=(-2,2)}.
+\]</span></p>
+<figure class="text-center figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 520 330" role="img" aria-labelledby="quadratica2-title quadratica2-desc" style="max-width:100%;height:auto;">
+<title id="quadratica2-title">
+Parábola da função menos x ao quadrado mais quatro
+</title>
+<desc id="quadratica2-desc">Parábola com concavidade para baixo e raízes menos dois e dois. A reta real destaca o intervalo aberto entre as raízes.</desc> <line x1="80" y1="180" x2="455" y2="180" stroke="currentColor" stroke-width="1.5"></line> <line x1="260" y1="35" x2="260" y2="210" stroke="currentColor" stroke-width="1.5"></line> <path d="M 80 305 Q 260 -145 440 305" fill="none" stroke="#2563eb" stroke-width="3"></path> <circle cx="140" cy="180" r="5" fill="#2563eb"></circle> <circle cx="380" cy="180" r="5" fill="#2563eb"></circle> <text x="140" y="163" text-anchor="middle" font-size="14" fill="currentColor">−2</text> <text x="380" y="163" text-anchor="middle" font-size="14" fill="currentColor">2</text> <text x="462" y="185" font-size="14" fill="currentColor">x</text> <text x="248" y="29" font-size="14" fill="currentColor">y</text> <text x="270" y="50" font-size="14" fill="currentColor">f(x) = −x² + 4</text> <text x="90" y="235" font-size="13" fill="currentColor">Conjunto solução na reta real</text> <line x1="80" y1="260" x2="455" y2="260" stroke="currentColor" stroke-width="1.5"></line> <line x1="140" y1="260" x2="380" y2="260" stroke="#2563eb" stroke-width="7" stroke-linecap="round"></line> <circle cx="140" cy="260" r="6" fill="white" stroke="#2563eb" stroke-width="2.5"></circle> <circle cx="380" cy="260" r="6" fill="white" stroke="#2563eb" stroke-width="2.5"></circle> <text x="140" y="286" text-anchor="middle" font-size="14" fill="currentColor">−2</text> <text x="380" y="286" text-anchor="middle" font-size="14" fill="currentColor">2</text> <text x="260" y="315" text-anchor="middle" font-size="14" fill="currentColor">(−2, 2)</text>
+</svg>
+<figcaption>
+Figura 2 — A expressão é positiva entre as raízes, mas os extremos são excluídos porque a desigualdade é estrita.
+</figcaption>
+</figure>
+</section>
+<section id="exemplo-3-uma-solução-formada-pela-união-de-intervalos" class="level3" data-number="1.12.5">
+<h3 data-number="1.12.5" class="anchored" data-anchor-id="exemplo-3-uma-solução-formada-pela-união-de-intervalos"><span class="header-section-number">1.12.5</span> Exemplo 3 — Uma solução formada pela união de intervalos</h3>
+<p>Resolva:</p>
+<p><span class="math display">\[
+x^2-5x+6&gt;0.
+\]</span></p>
+<p>A expressão pode ser fatorada:</p>
+<p><span class="math display">\[
+(x-2)(x-3)&gt;0.
+\]</span></p>
+<p>As raízes são</p>
+<p><span class="math display">\[
+x_1=2,\qquad x_2=3.
+\]</span></p>
+<p>Como <span class="math inline">\(a=1&gt;0\)</span>, a parábola tem concavidade para cima. A expressão é positiva fora das raízes.</p>
+<p>Como a desigualdade é estrita, os pontos <span class="math inline">\(2\)</span> e <span class="math inline">\(3\)</span> não pertencem à solução.</p>
+<p>Assim, temos duas regiões da reta real:</p>
+<p><span class="math display">\[
+x&lt;2
+\qquad\text{ou}\qquad
+x&gt;3.
+\]</span></p>
+<p>O conjunto solução é a união de dois intervalos:</p>
+<p><span class="math display">\[
+\boxed{S=(-\infty,2)\cup(3,+\infty)}.
+\]</span></p>
+<p>Esse exemplo mostra que o conjunto solução de uma inequação não precisa ser um único intervalo: ele também pode ser uma união de intervalos separados.</p>
+</section>
+<section id="e-quando-o-discriminante-não-é-positivo" class="level3" data-number="1.12.6">
+<h3 data-number="1.12.6" class="anchored" data-anchor-id="e-quando-o-discriminante-não-é-positivo"><span class="header-section-number">1.12.6</span> 3. E quando o discriminante não é positivo?</h3>
+<p>Os outros valores do discriminante também permitem determinar o sinal da função.</p>
+<p><strong>Se <span class="math inline">\(\Delta=0\)</span>:</strong> existe uma raiz real dupla <span class="math inline">\(r\)</span>, e podemos escrever</p>
+<p><span class="math display">\[
+f(x)=a(x-r)^2.
+\]</span></p>
+<p>A expressão tem o mesmo sinal de <span class="math inline">\(a\)</span> em todos os pontos, exceto em <span class="math inline">\(x=r\)</span>, onde vale zero.</p>
+<p>Por exemplo,</p>
+<p><span class="math display">\[
+(x-4)^2\leq 0
+\]</span></p>
+<p>tem como solução apenas</p>
+<p><span class="math display">\[
+S=\{4\}.
+\]</span></p>
+<p><strong>Se <span class="math inline">\(\Delta&lt;0\)</span>:</strong> não existem raízes reais. A parábola não corta o eixo <span class="math inline">\(x\)</span>, e a expressão mantém, em toda a reta real, o sinal de <span class="math inline">\(a\)</span>:</p>
+<ul>
+<li>se <span class="math inline">\(a&gt;0\)</span>, então <span class="math inline">\(f(x)&gt;0\)</span> para todo <span class="math inline">\(x\in\mathbb{R}\)</span>;</li>
+<li>se <span class="math inline">\(a&lt;0\)</span>, então <span class="math inline">\(f(x)&lt;0\)</span> para todo <span class="math inline">\(x\in\mathbb{R}\)</span>.</li>
+</ul>
+<p>Por exemplo,</p>
+<p><span class="math display">\[
+x^2+1\leq 0
+\]</span></p>
+<p>não possui solução real, pois <span class="math inline">\(x^2+1\)</span> é sempre positivo.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="🧭 Estratégia para resolver inequações quadráticas">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🧭 Ideia central do post
+<span class="screen-reader-only">Dica</span>🧭 Estratégia para resolver inequações quadráticas
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Resolver uma inequação significa encontrar <strong>um conjunto de valores reais</strong> que satisfazem uma desigualdade.</p>
-<p>Esse conjunto costuma ser representado por:</p>
+<ol type="1">
+<li>Escreva a expressão na forma <span class="math inline">\(ax^2+bx+c\)</span>.</li>
+<li>Calcule o discriminante e encontre as raízes reais, quando existirem.</li>
+<li>Observe o sinal de <span class="math inline">\(a\)</span>, que determina a concavidade da parábola.</li>
+<li>Monte o quadro de sinais nos intervalos determinados pelas raízes.</li>
+<li>Selecione as regiões que satisfazem a desigualdade.</li>
+<li>Inclua as raízes nas respostas com <span class="math inline">\(\leq\)</span> ou <span class="math inline">\(\geq\)</span>; exclua-as nas respostas com <span class="math inline">\(&lt;\)</span> ou <span class="math inline">\(&gt;\)</span>.</li>
+</ol>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.13</span> 🌉 Por que isso importa para o Cálculo?</h2>
+<p>No Cálculo, muitas funções não estão definidas para todos os números reais. Para determinar seus domínios, precisamos estabelecer condições sobre a variável e expressá-las por meio de desigualdades e intervalos.</p>
+<p>Considere, por exemplo, a função</p>
+<p><span class="math display">\[
+f(x)=\frac{1}{x-2}.
+\]</span></p>
+<p>O denominador não pode ser igual a zero. Portanto,</p>
+<p><span class="math display">\[
+x-2\neq 0
+\quad\Longleftrightarrow\quad
+x\neq 2.
+\]</span></p>
+<p>Seu domínio é</p>
+<p><span class="math display">\[
+D_f=\mathbb{R}\setminus\{2\}
+=(-\infty,2)\cup(2,+\infty).
+\]</span></p>
+<p>Agora considere</p>
+<p><span class="math display">\[
+g(x)=\sqrt{x-3}.
+\]</span></p>
+<p>Para que a raiz quadrada seja real, precisamos de</p>
+<p><span class="math display">\[
+x-3\geq 0.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x\geq 3
+\]</span></p>
+<p>e seu domínio é</p>
+<p><span class="math display">\[
+D_g=[3,+\infty).
+\]</span></p>
+<p>Esses exemplos mostram que intervalos e inequações são ferramentas fundamentais para:</p>
 <ul>
-<li>intervalos;</li>
-<li>uniões de intervalos;</li>
-<li>pontos incluídos ou excluídos;</li>
-<li>restrições de domínio, no caso de quocientes.</li>
+<li>determinar o domínio de funções;</li>
+<li>identificar onde uma função é positiva ou negativa;</li>
+<li>analisar expressões algébricas;</li>
+<li>estudar o comportamento dos gráficos;</li>
+<li>estabelecer os intervalos nos quais determinadas propriedades de uma função são satisfeitas.</li>
 </ul>
+<p>Portanto, dominar essa linguagem é um passo essencial para avançar no estudo de funções, limites e derivadas.</p>
+<hr>
+</section>
+<section id="quadro-resumo-intervalos-e-inequações" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="quadro-resumo-intervalos-e-inequações"><span class="header-section-number">1.14</span> 🧾 Quadro-resumo — Intervalos e Inequações</h2>
+<p>A ideia central é interpretar cada desigualdade como uma condição sobre os números reais e descrever o conjunto que a satisfaz.</p>
+<p>Esse conjunto pode ser um intervalo, uma união de intervalos, um conjunto com um único ponto ou até mesmo o conjunto vazio.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="🧭 Ideia central da aula">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🧭 Ideia central da aula
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Resolver uma inequação significa encontrar <strong>todos os valores reais</strong> que tornam a desigualdade verdadeira.</p>
+<p>A notação de intervalo informa quais pontos pertencem à solução e quais ficam de fora.</p>
 </div>
 </div>
 <table class="caption-top table">
@@ -757,7 +1028,48 @@ A lógica geral é sempre a mesma: interpretar desigualdades como regiões da re
 </tr>
 </tbody>
 </table>
+<section id="resumo-do-sinal-de-uma-função-quadrática" class="level3" data-number="1.14.1">
+<h3 data-number="1.14.1" class="anchored" data-anchor-id="resumo-do-sinal-de-uma-função-quadrática"><span class="header-section-number">1.14.1</span> Resumo do sinal de uma função quadrática</h3>
+<p>Para <span class="math inline">\(f(x)=ax^2+bx+c\)</span>, com <span class="math inline">\(a\neq 0\)</span>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situação</th>
+<th>Comportamento do sinal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\Delta&gt;0\)</span> e <span class="math inline">\(a&gt;0\)</span></td>
+<td>Positivo fora das raízes e negativo entre elas.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Delta&gt;0\)</span> e <span class="math inline">\(a&lt;0\)</span></td>
+<td>Negativo fora das raízes e positivo entre elas.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Delta=0\)</span></td>
+<td>A expressão tem o sinal de <span class="math inline">\(a\)</span>, exceto na raiz dupla, onde vale zero.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Delta&lt;0\)</span></td>
+<td>A expressão tem, em toda a reta real, o sinal de <span class="math inline">\(a\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<p>Lembre-se:</p>
+<ul>
+<li>Em uma inequação estrita (<span class="math inline">\(&lt;\)</span> ou <span class="math inline">\(&gt;\)</span>), os pontos em que a expressão vale zero não entram na solução.</li>
+<li>Em uma inequação não estrita (<span class="math inline">\(\leq\)</span> ou <span class="math inline">\(\geq\)</span>), esses pontos entram na solução quando satisfazem o sentido da desigualdade.</li>
+<li>O sinal de <span class="math inline">\(a\)</span> indica a concavidade: para cima se <span class="math inline">\(a&gt;0\)</span> e para baixo se <span class="math inline">\(a&lt;0\)</span>.</li>
+<li>Uma solução pode ser um intervalo, uma união de intervalos, um conjunto unitário ou o conjunto vazio.</li>
+</ul>
 <hr>
+</section>
 </section>
 </section>
 <section id="exercícios-propostos" class="level1" data-number="2">
@@ -776,110 +1088,289 @@ A lógica geral é sempre a mesma: interpretar desigualdades como regiões da re
 <h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
 <p>Escreva cada desigualdade em notação de intervalo:</p>
 <ol type="a">
-<li><span class="math inline">\(x&gt;4\)</span><br>
-</li>
-<li><span class="math inline">\(x\leq -2\)</span><br>
-</li>
-<li><span class="math inline">\(1&lt;x&lt;5\)</span><br>
-</li>
-<li><span class="math inline">\(-3\leq x&lt;2\)</span></li>
+<li><p><span class="math inline">\(x&gt;4\)</span></p></li>
+<li><p><span class="math inline">\(x\leq -2\)</span></p></li>
+<li><p><span class="math inline">\(1&lt;x&lt;5\)</span></p></li>
+<li><p><span class="math inline">\(-3\leq x&lt;2\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-2" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
 <p>Escreva cada intervalo usando desigualdades:</p>
 <ol type="a">
-<li><span class="math inline">\((2,+\infty)\)</span><br>
-</li>
-<li><span class="math inline">\((-\infty,7]\)</span><br>
-</li>
-<li><span class="math inline">\([1,4)\)</span><br>
-</li>
-<li><span class="math inline">\((-5,3]\)</span></li>
+<li><p><span class="math inline">\((2,+\infty)\)</span></p></li>
+<li><p><span class="math inline">\((-\infty,7]\)</span></p></li>
+<li><p><span class="math inline">\([1,4)\)</span></p></li>
+<li><p><span class="math inline">\((-5,3]\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-3" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
 <p>Resolva as inequações:</p>
 <ol type="a">
-<li><span class="math inline">\(2x+1&gt;7\)</span><br>
-</li>
-<li><span class="math inline">\(5-x\leq 2\)</span><br>
-</li>
-<li><span class="math inline">\(-3x+6&lt;0\)</span><br>
-</li>
-<li><span class="math inline">\(4x-8\geq 0\)</span></li>
+<li><p><span class="math inline">\(2x+1&gt;7\)</span></p></li>
+<li><p><span class="math inline">\(5-x\leq 2\)</span></p></li>
+<li><p><span class="math inline">\(-3x+6&lt;0\)</span></p></li>
+<li><p><span class="math inline">\(4x-8\geq 0\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-4" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
 <p>Resolva as inequações duplas:</p>
 <ol type="a">
-<li><span class="math inline">\(1&lt;x+2&lt;6\)</span><br>
-</li>
-<li><span class="math inline">\(-2\leq 3x+1&lt;7\)</span><br>
-</li>
-<li><span class="math inline">\(0&lt;2x-4\leq 8\)</span></li>
+<li><p><span class="math inline">\(1&lt;x+2&lt;6\)</span></p></li>
+<li><p><span class="math inline">\(-2\leq 3x+1&lt;7\)</span></p></li>
+<li><p><span class="math inline">\(0&lt;2x-4\leq 8\)</span></p></li>
+</ol>
+</section>
+<section id="exercício-5" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
+<p>Resolva as inequações quadráticas e escreva cada conjunto solução em notação de intervalo ou de conjunto:</p>
+<ol type="a">
+<li><p><span class="math inline">\(x^2+x-6&lt;0\)</span></p></li>
+<li><p><span class="math inline">\(-x^2+4\geq 0\)</span></p></li>
+<li><p><span class="math inline">\(x^2+4x+4\leq 0\)</span></p></li>
+<li><p><span class="math inline">\(x^2+1\leq 0\)</span></p></li>
 </ol>
 </section>
 </div>
 </div>
 <hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito comentado">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
+<span class="screen-reader-only">Importante</span>✅ Gabarito comentado
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
 <ol type="a">
-<li><p><span class="math inline">\(x&gt;4\)</span>, logo <span class="math inline">\(S=(4,+\infty)\)</span>.</p></li>
-<li><p><span class="math inline">\(x\leq -2\)</span>, logo <span class="math inline">\(S=(-\infty,-2]\)</span>.</p></li>
-<li><p><span class="math inline">\(1&lt;x&lt;5\)</span>, logo <span class="math inline">\(S=(1,5)\)</span>.</p></li>
-<li><p><span class="math inline">\(-3\leq x&lt;2\)</span>, logo <span class="math inline">\(S=[-3,2)\)</span>.</p></li>
+<li><span class="math inline">\(x&gt;4\)</span>, logo</li>
 </ol>
+<p><span class="math display">\[
+S=(4,+\infty).
+\]</span></p>
+<ol start="2" type="a">
+<li><span class="math inline">\(x\leq -2\)</span>, logo</li>
+</ol>
+<p><span class="math display">\[
+S=(-\infty,-2].
+\]</span></p>
+<ol start="3" type="a">
+<li><span class="math inline">\(1&lt;x&lt;5\)</span>, logo</li>
+</ol>
+<p><span class="math display">\[
+S=(1,5).
+\]</span></p>
+<ol start="4" type="a">
+<li><span class="math inline">\(-3\leq x&lt;2\)</span>, logo</li>
+</ol>
+<p><span class="math display">\[
+S=[-3,2).
+\]</span></p>
 </section>
 <section id="exercício-2-1" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
 <ol type="a">
-<li><p><span class="math inline">\((2,+\infty)\)</span>, logo <span class="math inline">\(x&gt;2\)</span>.</p></li>
-<li><p><span class="math inline">\((-\infty,7]\)</span>, logo <span class="math inline">\(x\leq 7\)</span>.</p></li>
-<li><p><span class="math inline">\([1,4)\)</span>, logo <span class="math inline">\(1\leq x&lt;4\)</span>.</p></li>
-<li><p><span class="math inline">\((-5,3]\)</span>, logo <span class="math inline">\(-5&lt;x\leq 3\)</span>.</p></li>
+<li><span class="math inline">\((2,+\infty)\)</span>, logo</li>
 </ol>
+<p><span class="math display">\[
+x&gt;2.
+\]</span></p>
+<ol start="2" type="a">
+<li><span class="math inline">\((-\infty,7]\)</span>, logo</li>
+</ol>
+<p><span class="math display">\[
+x\leq 7.
+\]</span></p>
+<ol start="3" type="a">
+<li><span class="math inline">\([1,4)\)</span>, logo</li>
+</ol>
+<p><span class="math display">\[
+1\leq x&lt;4.
+\]</span></p>
+<ol start="4" type="a">
+<li><span class="math inline">\((-5,3]\)</span>, logo</li>
+</ol>
+<p><span class="math display">\[
+-5&lt;x\leq 3.
+\]</span></p>
 </section>
 <section id="exercício-3-1" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
-<ol type="a">
-<li><p><span class="math inline">\(2x+1&gt;7\)</span>. Então <span class="math inline">\(2x&gt;6\)</span>, logo <span class="math inline">\(x&gt;3\)</span>. Portanto, <span class="math inline">\(S=(3,+\infty)\)</span>.</p></li>
-<li><p><span class="math inline">\(5-x\leq 2\)</span>. Então <span class="math inline">\(-x\leq -3\)</span>. Dividindo por <span class="math inline">\(-1\)</span>, invertemos o sinal: <span class="math inline">\(x\geq 3\)</span>. Portanto, <span class="math inline">\(S=[3,+\infty)\)</span>.</p></li>
-<li><p><span class="math inline">\(-3x+6&lt;0\)</span>. Então <span class="math inline">\(-3x&lt;-6\)</span>. Dividindo por <span class="math inline">\(-3\)</span>, invertemos o sinal: <span class="math inline">\(x&gt;2\)</span>. Portanto, <span class="math inline">\(S=(2,+\infty)\)</span>.</p></li>
-<li><p><span class="math inline">\(4x-8\geq 0\)</span>. Então <span class="math inline">\(4x\geq 8\)</span>, logo <span class="math inline">\(x\geq 2\)</span>. Portanto, <span class="math inline">\(S=[2,+\infty)\)</span>.</p></li>
-</ol>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+2x+1&gt;7.
+\]</span></p>
+<p>Então,</p>
+<p><span class="math display">\[
+2x&gt;6.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x&gt;3.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=(3,+\infty).
+\]</span></p>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+5-x\leq 2.
+\]</span></p>
+<p>Então,</p>
+<p><span class="math display">\[
+-x\leq -3.
+\]</span></p>
+<p>Dividindo por <span class="math inline">\(-1\)</span>, invertemos o sinal:</p>
+<p><span class="math display">\[
+x\geq 3.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=[3,+\infty).
+\]</span></p>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+-3x+6&lt;0.
+\]</span></p>
+<p>Então,</p>
+<p><span class="math display">\[
+-3x&lt;-6.
+\]</span></p>
+<p>Dividindo por <span class="math inline">\(-3\)</span>, invertemos o sinal:</p>
+<p><span class="math display">\[
+x&gt;2.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=(2,+\infty).
+\]</span></p>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+4x-8\geq 0.
+\]</span></p>
+<p>Então,</p>
+<p><span class="math display">\[
+4x\geq 8.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+x\geq 2.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=[2,+\infty).
+\]</span></p>
 </section>
 <section id="exercício-4-1" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<ol type="a">
-<li><p><span class="math inline">\(1&lt;x+2&lt;6\)</span>. Subtraindo <span class="math inline">\(2\)</span>: <span class="math inline">\(-1&lt;x&lt;4\)</span>. Portanto, <span class="math inline">\(S=(-1,4)\)</span>.</p></li>
-<li><p><span class="math inline">\(-2\leq 3x+1&lt;7\)</span>. Subtraindo <span class="math inline">\(1\)</span>: <span class="math inline">\(-3\leq 3x&lt;6\)</span>. Dividindo por <span class="math inline">\(3\)</span>: <span class="math inline">\(-1\leq x&lt;2\)</span>. Portanto, <span class="math inline">\(S=[-1,2)\)</span>.</p></li>
-<li><p><span class="math inline">\(0&lt;2x-4\leq 8\)</span>. Somando <span class="math inline">\(4\)</span>: <span class="math inline">\(4&lt;2x\leq 12\)</span>. Dividindo por <span class="math inline">\(2\)</span>: <span class="math inline">\(2&lt;x\leq 6\)</span>. Portanto, <span class="math inline">\(S=(2,6]\)</span>.</p></li>
-</ol>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+1&lt;x+2&lt;6.
+\]</span></p>
+<p>Subtraindo <span class="math inline">\(2\)</span> em todos os lados:</p>
+<p><span class="math display">\[
+-1&lt;x&lt;4.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=(-1,4).
+\]</span></p>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+-2\leq 3x+1&lt;7.
+\]</span></p>
+<p>Subtraindo <span class="math inline">\(1\)</span>:</p>
+<p><span class="math display">\[
+-3\leq 3x&lt;6.
+\]</span></p>
+<p>Dividindo por <span class="math inline">\(3\)</span>:</p>
+<p><span class="math display">\[
+-1\leq x&lt;2.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=[-1,2).
+\]</span></p>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+0&lt;2x-4\leq 8.
+\]</span></p>
+<p>Somando <span class="math inline">\(4\)</span>:</p>
+<p><span class="math display">\[
+4&lt;2x\leq 12.
+\]</span></p>
+<p>Dividindo por <span class="math inline">\(2\)</span>:</p>
+<p><span class="math display">\[
+2&lt;x\leq 6.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=(2,6].
+\]</span></p>
+</section>
+<section id="exercício-5-1" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+x^2+x-6&lt;0.
+\]</span></p>
+<p>Fatorando:</p>
+<p><span class="math display">\[
+(x+3)(x-2)&lt;0.
+\]</span></p>
+<p>As raízes são <span class="math inline">\(-3\)</span> e <span class="math inline">\(2\)</span>. Como a concavidade é para cima, a expressão é negativa entre as raízes.</p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=(-3,2).
+\]</span></p>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+-x^2+4\geq 0.
+\]</span></p>
+<p>As raízes são <span class="math inline">\(-2\)</span> e <span class="math inline">\(2\)</span>, e a concavidade é para baixo.</p>
+<p>A expressão é positiva entre as raízes e vale zero nos extremos.</p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=[-2,2].
+\]</span></p>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+x^2+4x+4\leq 0.
+\]</span></p>
+<p>Temos</p>
+<p><span class="math display">\[
+(x+2)^2\leq 0.
+\]</span></p>
+<p>Um quadrado nunca é negativo e vale zero somente quando <span class="math inline">\(x=-2\)</span>.</p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+S=\{-2\}.
+\]</span></p>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+x^2+1\leq 0.
+\]</span></p>
+<p>Como <span class="math inline">\(x^2\geq 0\)</span> para todo número real, <span class="math inline">\(x^2+1\)</span> é sempre positivo.</p>
+<p>Portanto, não há solução real:</p>
+<p><span class="math display">\[
+S=\varnothing.
+\]</span></p>
 </section>
 </section>
 </div>
 </div>
 <hr>
-</section>
-<section id="quiz-intervalos-e-inequações" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Intervalos e Inequações</h1>
+<section id="quiz-intervalos-e-inequações" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-intervalos-e-inequações"><span class="header-section-number">3.6</span> 🧩 Quiz — Intervalos e Inequações</h2>
 <div class="question">
 <p><strong>Q1.</strong> A desigualdade <span class="math inline">\(x&gt;3\)</span> corresponde ao intervalo:</p>
 <div class="choices">
@@ -893,9 +1384,6 @@ A lógica geral é sempre a mesma: interpretar desigualdades como regiões da re
 </div>
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\([3,+\infty)\)</span></p><p></p>
-</div>
-<div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\((-\infty,3]\)</span></p><p></p>
 </div>
 </div>
 
@@ -915,9 +1403,6 @@ A lógica geral é sempre a mesma: interpretar desigualdades como regiões da re
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(-2&lt;x\leq 5\)</span></p><p></p>
 </div>
-<div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(-2\leq x\leq 5\)</span></p><p></p>
-</div>
 </div>
 
 </div>
@@ -928,16 +1413,13 @@ A lógica geral é sempre a mesma: interpretar desigualdades como regiões da re
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>o sinal permanece igual.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>O sinal da desigualdade permanece igual.</p><p></p>
 </div>
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>o sinal se inverte.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>O sinal da desigualdade se inverte.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>a inequação deixa de ter solução.</p><p></p>
-</div>
-<div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span>o resultado sempre é positivo.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>A desigualdade se transforma em uma igualdade.</p><p></p>
 </div>
 </div>
 
@@ -955,10 +1437,61 @@ A lógica geral é sempre a mesma: interpretar desigualdades como regiões da re
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(x&gt;-3\)</span></p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x&lt;3\)</span></p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x&gt;3\)</span></p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q5.</strong> A solução de <span class="math inline">\(x^2-5x+6&gt;0\)</span> é:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\((-\infty,2)\cup(3,+\infty)\)</span></p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x&gt;3\)</span></p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\([2,3]\)</span></p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\((2,3)\)</span></p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q6.</strong> A solução de <span class="math inline">\((x-4)^2\leq 0\)</span> é:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(\mathbb{R}\)</span></p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(\{4\}\)</span></p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(\varnothing\)</span></p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q7.</strong> A inequação <span class="math inline">\(x^2+1\leq 0\)</span>, considerando apenas números reais, tem como conjunto solução:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\([-1,1]\)</span></p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\((-\infty,-1]\cup[1,+\infty)\)</span></p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(\varnothing\)</span></p><p></p>
 </div>
 </div>
 
@@ -982,11 +1515,27 @@ A lógica geral é sempre a mesma: interpretar desigualdades como regiões da re
 </div>
 </div>
 </section>
-<section id="navegação" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></p>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">Topo</a></p>
+</section>
+<section id="navegação" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 Conjuntos Numéricos</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
+<hr>
+<p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Criado por Blog do Marcellini com ❤️ e código.</p>
+</div>
+</div>
 
 
 </section>
