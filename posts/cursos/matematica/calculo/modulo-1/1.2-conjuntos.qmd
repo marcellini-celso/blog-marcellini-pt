@@ -9,7 +9,8 @@ tags: [matemática, cálculo, conjuntos, conjuntos numéricos, exercícios, curs
 format:
   html:
     toc: true
-    toc-expand: 2
+    toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -300,6 +301,12 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 | Propriedades algébricas | Regras de soma, produto, distributividade, neutros e inversos | Permitem manipular expressões com segurança |
 
 ***
+
+::: {.callout-tip title="🌉 Ponte para o Cálculo"}
+
+Os números reais formam o ambiente em que estudaremos funções, limites e derivadas. A **completude de \(\mathbb{R}\)** — a ideia de que a reta real não possui lacunas — sustenta resultados fundamentais do Cálculo, como o Teorema do Valor Intermediário.
+
+:::
 
 # 📝 Exercícios Propostos — Revisão
 

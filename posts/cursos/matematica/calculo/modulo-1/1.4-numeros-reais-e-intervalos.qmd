@@ -9,6 +9,7 @@ tags: [cálculo, números reais, intervalos, reta real, pré-cálculo, matemáti
 format:
   html:
     toc: true
+    toc-depth: 4
     toc-title: "Neste Módulo"
     number-sections: true
     theme: cosmo
@@ -611,14 +612,6 @@ $$
 
 Não é necessário dominar agora todos os detalhes dessa definição. O importante é perceber como ela utiliza as ideias de distância, valor absoluto, intervalos e vizinhanças que estamos estudando.
 
-::: {.callout-tip title="🌉 Ponte para o Cálculo"}
-
-O Cálculo começa quando deixamos de olhar apenas para valores isolados e passamos a estudar o que acontece **nas proximidades** de um ponto.
-
-Por isso, intervalos e vizinhanças são a linguagem natural dos limites.
-
-:::
-
 ![Aproximação na entrada por uma vizinhança perfurada de a com raio delta, e na saída por uma vizinhança de L com raio épsilon.](images/1.4-aproximacoes-limites.svg){#fig-aproximacoes-limites width="92%" fig-align="center"}
 
 ***
@@ -655,6 +648,12 @@ Por fim, conectamos intervalos com valor absoluto e introduzimos a ideia de vizi
 | Vizinhança | Intervalo aberto ao redor de um ponto | Prepara a linguagem formal dos limites |
 
 ***
+
+::: {.callout-tip title="🌉 Ponte para o Cálculo"}
+
+Na definição de limite, controlamos a proximidade de \(x\) a \(a\) por meio de \(\delta\), e a proximidade de \(f(x)\) a \(L\) por meio de \(\varepsilon\). **Intervalos, valor absoluto e vizinhanças** fornecem a linguagem matemática para formular essa ideia com precisão.
+
+:::
 
 # 🧪 Exercícios propostos
 

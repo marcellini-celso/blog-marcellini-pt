@@ -10,6 +10,7 @@ format:
   html:
     toc: true
     toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -20,7 +21,9 @@ page-layout: full
 
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
+🎯 **Aula anterior:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
+
+🎯 **Próxima aula:** 👉 [1.6 Funções Elementares](1.6-funcoes-elementares.qmd)
 
 ***
 
@@ -488,46 +491,91 @@ Esse procedimento mostra que a tabela de sinais é um resumo do estudo gráfico 
 
 ## ⚖️ Inequações racionais
 
-Uma inequação racional envolve quocientes de expressões algébricas. Por exemplo:
+### 🧭 Método geral para resolver inequações racionais
 
-$$
-\frac{x-1}{x+2}\geq 0.
-$$
+Uma inequação racional é uma desigualdade que envolve o quociente de duas
+expressões algébricas. Seu estudo exige atenção especial ao domínio da
+expressão e ao sinal do quociente.
 
-Aqui há dois pontos importantes:
+Depois de reunir os termos em um dos lados da desigualdade, procuramos
+determinar em quais regiões da reta real a expressão racional é positiva,
+negativa ou nula.
 
-1. o numerador zera em $x=1$;
-2. o denominador zera em $x=-2$, mas esse valor não pertence ao domínio.
+Podemos organizar a resolução em seis etapas.
 
-Os pontos $-2$ e $1$ dividem a reta em três intervalos:
+#### *Determinar o domínio*
 
-$$
-(-\infty,-2),\qquad (-2,1),\qquad (1,+\infty).
-$$
+Antes de qualquer simplificação, identificamos os valores que anulam
+os denominadores da expressão original.
 
-Analisando sinais:
+Esses valores devem ser excluídos do domínio e nunca poderão pertencer
+ao conjunto-solução.
 
-- em $(-\infty,-2)$, numerador e denominador são negativos, então o quociente é positivo;
-- em $(-2,1)$, numerador negativo e denominador positivo, então o quociente é negativo;
-- em $(1,+\infty)$, numerador e denominador positivos, então o quociente é positivo.
+#### *Escrever a inequação como um único quociente*
 
-Como a inequação é
+Sempre que possível, reunimos os termos em uma única fração comparada
+a zero. Isso permite estudar diretamente o sinal do quociente.
 
-$$
-\frac{x-1}{x+2}\geq 0,
-$$
+É importante não multiplicar ou dividir a desigualdade por uma expressão
+de sinal desconhecido sem analisar previamente esse sinal.
 
-incluímos $x=1$, pois o numerador pode ser zero, mas excluímos $x=-2$, pois o denominador não pode ser zero.
+#### *Fatorar o numerador e o denominador*
 
-Logo,
+Quando possível, fatoramos as expressões algébricas para identificar
+seus zeros e facilitar o estudo dos sinais.
 
-$$
-S=(-\infty,-2)\cup[1,+\infty).
-$$
+#### *Identificar os pontos críticos*
 
-A representação na reta real ajuda a distinguir o ponto excluído do domínio e o ponto incluído na solução:
+Os pontos críticos são:
 
-![Solução da inequação racional $\frac{x-1}{x+2}\geq 0$.](images/1-5-solucao-inequacao-racional.png){fig-align="center" width="85%"}
+- os zeros do numerador, nos quais o quociente pode ser igual a zero;
+- os zeros do denominador, que não pertencem ao domínio.
+
+Esses valores dividem a reta real em intervalos nos quais o sinal
+do quociente permanece constante.
+
+#### *Construir o quadro de sinais*
+
+Em cada intervalo, determinamos o sinal do numerador e do denominador.
+O sinal do quociente resulta da divisão desses sinais:
+
+- sinais iguais produzem quociente positivo;
+- sinais diferentes produzem quociente negativo.
+
+Podemos determinar esses sinais por meio de pontos de teste ou
+analisando os fatores.
+
+Quando um fator linear aparece com expoente ímpar, seu sinal muda
+ao atravessarmos sua raiz. Quando aparece com expoente par, seu sinal
+permanece o mesmo nos intervalos vizinhos à raiz.
+
+#### *Selecionar os intervalos e os pontos da solução*
+
+Por fim, escolhemos os intervalos que satisfazem a desigualdade.
+
+A inclusão dos pontos críticos depende do tipo de desigualdade:
+
+- em desigualdades estritas, como $>$ ou $<$, os zeros do numerador
+  não são incluídos;
+- em desigualdades não estritas, como $\geq$ ou $\leq$, os zeros do
+  numerador podem ser incluídos, desde que pertençam ao domínio;
+- os zeros do denominador são sempre excluídos.
+
+::: {.callout-warning title="Atenção ao domínio"}
+Mesmo que um fator comum seja cancelado durante uma simplificação
+algébrica, os valores que anulavam o denominador da expressão original
+continuam excluídos do domínio.
+:::
+
+O exemplo desenvolvido na seção anterior ilustra esse procedimento:
+a tabela de sinais permite identificar os intervalos que satisfazem
+a desigualdade, enquanto a análise do domínio determina quais pontos
+devem ser excluídos.
+
+Assim, resolver uma inequação racional significa combinar três ideias:
+**domínio, pontos críticos e estudo de sinais**. Esse procedimento será
+importante no Cálculo, especialmente na análise do sinal de funções
+e na determinação de seus domínios.
 
 ***
 
@@ -597,23 +645,13 @@ $$
 
 ***
 
-## 🌉 Por que isso importa para o Cálculo?
-
-Antes de estudar limites, derivadas e integrais, precisamos saber **onde** uma função está definida, **em quais intervalos** uma expressão é positiva ou negativa e **quais valores** tornam uma condição verdadeira.
-
-Por isso, equações e inequações não são apenas técnicas algébricas. Elas são ferramentas para investigar o comportamento das funções.
-
-No próximo passo, começaremos a organizar as principais famílias de funções que aparecem no Cálculo.
-
-***
-
 ## 🧾 Quadro-resumo
 
 | Ideia | Significado | Papel no Cálculo |
 |---|---|---|
 | Equação | Igualdade com incógnita | Usada para encontrar valores específicos que satisfazem uma condição |
 | Conjunto-solução | Conjunto de todos os valores que resolvem uma equação ou inequação | Pode ser ponto, intervalo ou união de intervalos |
-| Equação linear | Equação do tipo \(ax+b=0\), com \(a\neq 0\) | Produz, em geral, uma única solução real |
+| Equação linear | Equação do tipo \(ax+b=0\), com \(a\neq 0\) | Possui exatamente uma solução real |
 | Inequação linear | Desigualdade envolvendo uma expressão de primeiro grau | Produz intervalos ou semirretas na reta real |
 | Multiplicação por número negativo | Operação que inverte o sentido da desigualdade | É um cuidado essencial na resolução de inequações |
 | Equação quadrática | Equação do tipo \(ax^2+bx+c=0\), com \(a\neq 0\) | Suas soluções são os zeros de uma parábola |
@@ -623,6 +661,12 @@ No próximo passo, começaremos a organizar as principais famílias de funções
 | Domínio | Conjunto dos valores permitidos para \(x\) | Muitas vezes é determinado por equações e inequações |
 
 ***
+
+::: {.callout-tip title="🌉 Ponte para o Cálculo"}
+
+No Cálculo, equações e inequações ajudam a determinar os domínios das funções e a identificar onde elas se anulam, são positivas ou negativas. Essas informações são essenciais para analisar gráficos, estudar o comportamento das funções e preparar o caminho para limites e derivadas.
+
+:::
 
 # 🧪 Exercícios propostos
 
@@ -673,9 +717,9 @@ d) $p(x)=\sqrt{4-x}$
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
 # ✅ Gabarito comentado
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
 
 ## 🧪 Exercício 1
 
@@ -783,11 +827,11 @@ Ele é sempre negativo.
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
+🎯 **Aula Anterior:** 👉 [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
   
-🎯 **Próximo Post:** 👉 [1.6 Funções Elementares](1.6-funcoes-elementares.qmd)
+🎯 **Próxima Aula:** 👉 [1.6 Funções Elementares](1.6-funcoes-elementares.qmd)
  
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.5-equacoes-e-inequacoes.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 

@@ -9,6 +9,7 @@ tags: [cálculo, intervalos, inequações, inequações quadráticas, matemátic
 format:
   html:
     toc: true
+    toc-depth: 4
     toc-title: "Neste Módulo"
     number-sections: true
     theme: cosmo
@@ -665,67 +666,6 @@ não possui solução real, pois \(x^2+1\) é sempre positivo.
 
 ***
 
-## 🌉 Por que isso importa para o Cálculo?
-
-No Cálculo, muitas funções não estão definidas para todos os números reais. Para determinar seus domínios, precisamos estabelecer condições sobre a variável e expressá-las por meio de desigualdades e intervalos.
-
-Considere, por exemplo, a função
-
-\[
-f(x)=\frac{1}{x-2}.
-\]
-
-O denominador não pode ser igual a zero. Portanto,
-
-\[
-x-2\neq 0
-\quad\Longleftrightarrow\quad
-x\neq 2.
-\]
-
-Seu domínio é
-
-\[
-D_f=\mathbb{R}\setminus\{2\}
-=(-\infty,2)\cup(2,+\infty).
-\]
-
-Agora considere
-
-\[
-g(x)=\sqrt{x-3}.
-\]
-
-Para que a raiz quadrada seja real, precisamos de
-
-\[
-x-3\geq 0.
-\]
-
-Logo,
-
-\[
-x\geq 3
-\]
-
-e seu domínio é
-
-\[
-D_g=[3,+\infty).
-\]
-
-Esses exemplos mostram que intervalos e inequações são ferramentas fundamentais para:
-
-- determinar o domínio de funções;
-- identificar onde uma função é positiva ou negativa;
-- analisar expressões algébricas;
-- estudar o comportamento dos gráficos;
-- estabelecer os intervalos nos quais determinadas propriedades de uma função são satisfeitas.
-
-Portanto, dominar essa linguagem é um passo essencial para avançar no estudo de funções, limites e derivadas.
-
-***
-
 ## 🧾 Quadro-resumo — Intervalos e Inequações
 
 A ideia central é interpretar cada desigualdade como uma condição sobre os números reais e descrever o conjunto que a satisfaz.
@@ -766,6 +706,12 @@ Lembre-se:
 - Uma solução pode ser um intervalo, uma união de intervalos, um conjunto unitário ou o conjunto vazio.
 
 ***
+
+::: {.callout-tip title="🌉 Ponte para o Cálculo"}
+
+No Cálculo, precisamos determinar onde uma função está definida e em quais regiões ela assume valores positivos ou negativos. **Intervalos e inequações** permitem descrever essas condições. Por exemplo, os domínios de \(f(x)=\frac{1}{x-2}\) e \(g(x)=\sqrt{x-3}\) são, respectivamente, \(\mathbb{R}\setminus\{2\}\) e \([3,+\infty)\). Essa linguagem será fundamental no estudo de funções, limites e derivadas.
+
+:::
 
 # 🧪 Exercícios propostos
 

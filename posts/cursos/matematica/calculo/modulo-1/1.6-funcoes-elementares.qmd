@@ -1,3 +1,4 @@
+
 ---
 title: "📘 Módulo 1.6: Funções Elementares"
 description: "Introdução às principais famílias de funções reais usadas no Cálculo: afins, quadráticas, potências, raízes, exponenciais, logarítmicas e trigonométricas."
@@ -10,6 +11,7 @@ format:
   html:
     toc: true
     toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -20,7 +22,9 @@ page-layout: full
 
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.5 Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
+🎯 **Aula anterior:** 👉 [1.5 Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
+
+🎯 **Próxima aula:** 👉 [1.7 Funções Polinomiais e Racionais](1.7-funcoes-polinomiais-e-racionais.qmd)
 
 ***
 
@@ -30,8 +34,9 @@ Quais são as famílias de funções mais importantes para começar o estudo do 
 
 ::: {.callout-note title="📌 Objetivos do Post"}
 - Reconhecer as principais famílias de funções elementares usadas no Cálculo;
-- Relacionar fórmulas algébricas, domínios e gráficos;
-- Comparar comportamentos típicos: crescimento, decaimento, simetria, periodicidade e restrições de domínio.
+- Relacionar fórmulas algébricas, domínios, imagens e gráficos;
+- Identificar comportamentos típicos, como crescimento, decaimento, simetria, periodicidade e restrições de domínio;
+- Compreender por que essas famílias são importantes para o estudo de limites, derivadas e integrais.
 :::
 
 # 📘 Funções Elementares
@@ -40,13 +45,29 @@ O Cálculo estuda variações. Mas, para estudar variações, precisamos primeir
 
 É aí que entra o conceito de função.
 
-Uma função é uma regra que associa a cada elemento de um conjunto de partida exatamente um elemento de um conjunto de chegada. No curso de Cálculo de uma variável, trabalharemos principalmente com funções reais de variável real:
+Uma função é uma regra que associa a cada elemento de um conjunto de partida exatamente um elemento de um conjunto de chegada.
+
+No curso de Cálculo de uma variável, trabalharemos principalmente com funções reais de variável real:
 
 $$
-f:D \subset \mathbb{R} \longrightarrow \mathbb{R}.
+f:D\subseteq\mathbb{R}\longrightarrow\mathbb{R}.
 $$
 
-Isso significa que a variável de entrada $x$ é real, os valores de saída $f(x)$ também são reais e o domínio $D$ é um subconjunto da reta real.
+Isso significa que a variável de entrada $x$ pertence ao domínio $D$, que é um subconjunto dos números reais, e que os valores de saída também são reais.
+
+É importante distinguir três conceitos:
+
+- **Domínio:** conjunto de todas as entradas permitidas para a função.
+- **Contradomínio:** conjunto de chegada declarado para os valores da função.
+- **Imagem:** conjunto dos valores que a função efetivamente assume.
+
+A imagem é sempre um subconjunto do contradomínio.
+
+Em notação matemática:
+
+$$
+\operatorname{Im}(f)=\{f(x):x\in D\}.
+$$
 
 ***
 
@@ -55,10 +76,10 @@ Isso significa que a variável de entrada $x$ é real, os valores de saída $f(x
 Uma função pode ser entendida como uma máquina matemática:
 
 $$
-x \longmapsto f(x).
+x\longmapsto f(x).
 $$
 
-Você fornece um valor de entrada $x$ e a função devolve um valor de saída $f(x)$.
+Você fornece um valor de entrada $x$ e a função devolve um único valor de saída $f(x)$.
 
 Por exemplo, se
 
@@ -76,9 +97,11 @@ Cada valor de $x$ no domínio produz exatamente um valor de $f(x)$.
 
 ::: {.callout-note title="Ideia central"}
 Uma função não pode atribuir dois valores diferentes a uma mesma entrada.
+
+Entretanto, entradas diferentes podem produzir a mesma saída. Também não é obrigatório que todos os elementos do contradomínio sejam atingidos.
 :::
 
-O diagrama de flechas abaixo ilustra essa ideia: cada elemento do domínio aponta para exatamente um elemento no contradomínio.
+O diagrama de flechas abaixo ilustra essa ideia. Observe que duas entradas podem apontar para o mesmo elemento do contradomínio, enquanto outro elemento pode não ser atingido.
 
 ```{python}
 #| label: fig-diagrama-flechas-funcao
@@ -102,8 +125,15 @@ ax.axis("off")
 dominio = [(2.2, 4), (2.2, 2.8), (2.2, 1.6)]
 contradominio = [(7.8, 4), (7.8, 2.8), (7.8, 1.6)]
 
-elipse_dom = Ellipse((2.2, 2.8), width=2.6, height=3.7, fill=False, linewidth=2)
-elipse_contra = Ellipse((7.8, 2.8), width=2.8, height=3.7, fill=False, linewidth=2)
+elipse_dom = Ellipse(
+    (2.2, 2.8), width=2.6, height=3.7,
+    fill=False, linewidth=2
+)
+
+elipse_contra = Ellipse(
+    (7.8, 2.8), width=2.8, height=3.7,
+    fill=False, linewidth=2
+)
 
 ax.add_patch(elipse_dom)
 ax.add_patch(elipse_contra)
@@ -113,16 +143,24 @@ ax.text(7.8, 5.0, "Contradomínio", ha="center", fontsize=12, weight="bold")
 
 for i, (x, y) in enumerate(dominio, start=1):
     ax.scatter(x, y, s=350)
-    ax.text(x, y, f"x{i}", ha="center", va="center", color="white", fontsize=11, weight="bold")
+    ax.text(
+        x, y, f"x{i}",
+        ha="center", va="center",
+        color="white", fontsize=11, weight="bold"
+    )
 
 for j, (x, y) in enumerate(contradominio, start=1):
     ax.scatter(x, y, s=350)
-    ax.text(x, y, f"y{j}", ha="center", va="center", color="white", fontsize=11, weight="bold")
+    ax.text(
+        x, y, f"y{j}",
+        ha="center", va="center",
+        color="white", fontsize=11, weight="bold"
+    )
 
 arrow_pairs = [
     (dominio[0], contradominio[1]),
-    (dominio[1], contradominio[2]),
-    (dominio[2], contradominio[0]),
+    (dominio[1], contradominio[1]),
+    (dominio[2], contradominio[0])
 ]
 
 for (x1, y1), (x2, y2) in arrow_pairs:
@@ -133,9 +171,18 @@ for (x1, y1), (x2, y2) in arrow_pairs:
         arrowprops=dict(arrowstyle="->", linewidth=1.8)
     )
 
-ax.text(5, 0.45, "Cada entrada tem exatamente uma saída", ha="center", fontsize=11)
+ax.text(
+    5, 0.45,
+    "Cada entrada tem exatamente uma saída",
+    ha="center", fontsize=11
+)
 
-plt.savefig("images/1-6-diagrama-flechas-funcao.png", dpi=300, bbox_inches="tight")
+plt.savefig(
+    "images/1-6-diagrama-flechas-funcao.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -160,8 +207,15 @@ ax.axis("off")
 dominio = [(2.2, 4), (2.2, 2.8), (2.2, 1.6)]
 contradominio = [(7.8, 4), (7.8, 2.8), (7.8, 1.6)]
 
-elipse_dom = Ellipse((2.2, 2.8), width=2.6, height=3.7, fill=False, linewidth=2)
-elipse_contra = Ellipse((7.8, 2.8), width=2.8, height=3.7, fill=False, linewidth=2)
+elipse_dom = Ellipse(
+    (2.2, 2.8), width=2.6, height=3.7,
+    fill=False, linewidth=2
+)
+
+elipse_contra = Ellipse(
+    (7.8, 2.8), width=2.8, height=3.7,
+    fill=False, linewidth=2
+)
 
 ax.add_patch(elipse_dom)
 ax.add_patch(elipse_contra)
@@ -171,13 +225,26 @@ ax.text(7.8, 5.0, "Contradomínio", ha="center", fontsize=12, weight="bold")
 
 for i, (x, y) in enumerate(dominio, start=1):
     ax.scatter(x, y, s=350)
-    ax.text(x, y, f"x{i}", ha="center", va="center", color="white", fontsize=11, weight="bold")
+    ax.text(
+        x, y, f"x{i}",
+        ha="center", va="center",
+        color="white", fontsize=11, weight="bold"
+    )
 
 for j, (x, y) in enumerate(contradominio, start=1):
     ax.scatter(x, y, s=350)
-    ax.text(x, y, f"y{j}", ha="center", va="center", color="white", fontsize=11, weight="bold")
+    ax.text(
+        x, y, f"y{j}",
+        ha="center", va="center",
+        color="white", fontsize=11, weight="bold"
+    )
 
-arrow_pairs = [(dominio[0], contradominio[1]), (dominio[1], contradominio[2]), (dominio[2], contradominio[0])]
+arrow_pairs = [
+    (dominio[0], contradominio[1]),
+    (dominio[1], contradominio[1]),
+    (dominio[2], contradominio[0])
+]
+
 for (x1, y1), (x2, y2) in arrow_pairs:
     ax.annotate(
         "",
@@ -186,13 +253,26 @@ for (x1, y1), (x2, y2) in arrow_pairs:
         arrowprops=dict(arrowstyle="->", linewidth=1.8)
     )
 
-ax.text(5, 0.45, "Cada entrada tem exatamente uma saída", ha="center", fontsize=11)
+ax.text(
+    5, 0.45,
+    "Cada entrada tem exatamente uma saída",
+    ha="center", fontsize=11
+)
 
-plt.savefig("images/1-6-diagrama-flechas-funcao.png", dpi=300, bbox_inches="tight")
+plt.savefig(
+    "images/1-6-diagrama-flechas-funcao.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
 :::
+
+Observe que o diagrama representa uma função, embora duas entradas tenham a mesma imagem e um elemento do contradomínio não seja atingido. Isso é perfeitamente permitido.
+
+O requisito fundamental é que **cada elemento do domínio tenha exatamente uma imagem**.
 
 ***
 
@@ -204,19 +284,29 @@ $$
 f(x)=ax+b,
 $$
 
-com $a$ e $b$ reais.
+com $a,b\in\mathbb{R}$.
 
-O número $a$ é o coeficiente angular. Ele mede a inclinação da reta. O número $b$ é o coeficiente linear. Ele indica o ponto onde o gráfico corta o eixo vertical.
+O número $a$ é o **coeficiente angular**. Ele determina a inclinação da reta e indica o comportamento da função:
+
+- Se $a>0$, a função é crescente.
+- Se $a<0$, a função é decrescente.
+- Se $a=0$, a função é constante.
+
+O número $b$ é o **coeficiente linear**. Ele indica o valor da função quando $x=0$, ou seja, o ponto em que o gráfico intercepta o eixo vertical.
 
 Exemplos:
 
 $$
-f(x)=2x+1,\qquad g(x)=-3x+4,\qquad h(x)=5.
+f(x)=2x+1,\qquad
+g(x)=-3x+4,\qquad
+h(x)=5.
 $$
 
-Quando $a=0$, a função é constante.
+Quando $a=0$, temos uma função constante. Por exemplo, $h(x)=5$.
 
-As funções afins têm gráficos que são retas. Elas são fundamentais porque representam variações com taxa constante. No gráfico abaixo, comparamos uma função com $a>0$ e outra com $a<0$.
+As funções afins têm gráficos que são retas. Elas são fundamentais porque representam situações em que a taxa de variação é constante.
+
+No gráfico abaixo, comparamos uma função crescente e outra decrescente.
 
 ```{python}
 #| label: fig-funcoes-afins
@@ -238,14 +328,22 @@ g = -2*x + 1
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$f(x)=2x+1$ $(a>0)$")
 plt.plot(x, g, label=r"$g(x)=-2x+1$ $(a<0)$")
+
 plt.title("Funções afins com coeficiente angular positivo e negativo")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-afins-a-positivo-negativo.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-afins-a-positivo-negativo.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -268,14 +366,22 @@ g = -2*x + 1
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$f(x)=2x+1$ $(a>0)$")
 plt.plot(x, g, label=r"$g(x)=-2x+1$ $(a<0)$")
+
 plt.title("Funções afins com coeficiente angular positivo e negativo")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-afins-a-positivo-negativo.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-afins-a-positivo-negativo.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -291,19 +397,24 @@ $$
 f(x)=ax^2+bx+c,
 $$
 
-com $a\neq 0$.
+com $a,b,c\in\mathbb{R}$ e $a\neq 0$.
 
 O gráfico de uma função quadrática é uma parábola.
 
-Se $a>0$, a parábola tem concavidade voltada para cima. Se $a<0$, a concavidade é voltada para baixo.
+- Se $a>0$, a parábola tem concavidade voltada para cima.
+- Se $a<0$, a parábola tem concavidade voltada para baixo.
 
 Exemplos:
 
 $$
-f(x)=x^2,\qquad g(x)=-x^2+4x,\qquad h(x)=2x^2-3x+1.
+f(x)=x^2,\qquad
+g(x)=-x^2+4x,\qquad
+h(x)=2x^2-3x+1.
 $$
 
 As funções quadráticas aparecem em problemas de áreas, movimento, otimização e modelagem.
+
+Toda função quadrática tem domínio igual a $\mathbb{R}$. Sua imagem depende da posição do vértice e do sentido da concavidade.
 
 ```{python}
 #| label: fig-funcoes-quadraticas
@@ -325,14 +436,22 @@ g = -x**2
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$f(x)=x^2$ $(a>0)$")
 plt.plot(x, g, label=r"$g(x)=-x^2$ $(a<0)$")
+
 plt.title("Funções quadráticas: concavidade para cima e para baixo")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-quadraticas-a-positivo-negativo.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-quadraticas-a-positivo-negativo.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -355,14 +474,22 @@ g = -x**2
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$f(x)=x^2$ $(a>0)$")
 plt.plot(x, g, label=r"$g(x)=-x^2$ $(a<0)$")
+
 plt.title("Funções quadráticas: concavidade para cima e para baixo")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-quadraticas-a-positivo-negativo.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-quadraticas-a-positivo-negativo.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -372,23 +499,55 @@ plt.show()
 
 ## 🔢 Funções potência
 
-Uma função potência tem a forma
+Uma função potência básica tem a forma
 
 $$
 f(x)=x^n,
 $$
 
-em que $n$ é um número real ou, nos casos mais básicos, um inteiro.
+em que $n$ é um número inteiro.
 
 Exemplos importantes:
 
 $$
-f(x)=x,\qquad g(x)=x^2,\qquad h(x)=x^3,\qquad p(x)=x^{-1}=\frac{1}{x}.
+f(x)=x,\qquad
+g(x)=x^2,\qquad
+h(x)=x^3,\qquad
+p(x)=x^{-1}=\frac{1}{x}.
 $$
 
-Quando $n$ é positivo, a função potência costuma representar crescimento algébrico. Quando $n$ é negativo, aparecem funções racionais simples, com restrições no domínio.
+As funções potência apresentam comportamentos diferentes conforme o expoente.
 
-Os gráficos abaixo comparam, um par por vez, $n=1$ e $n=-1$, $n=2$ e $n=-2$, $n=3$ e $n=-3$, $n=4$ e $n=-4$. A separação em figuras verticais evita gráficos muito largos e facilita a leitura em telas menores.
+Quando o expoente é um inteiro positivo, a função está definida para todos os números reais.
+
+Quando o expoente é um inteiro negativo, temos:
+
+$$
+x^{-n}=\frac{1}{x^n},
+$$
+
+com $n$ inteiro positivo. Nesse caso, o domínio exclui o zero:
+
+$$
+D_f=\mathbb{R}\setminus\{0\}.
+$$
+
+Para expoentes inteiros positivos:
+
+- Expoentes pares produzem funções simétricas em relação ao eixo vertical.
+- Expoentes ímpares produzem funções simétricas em relação à origem.
+
+Para expoentes inteiros negativos, o comportamento também depende da paridade do expoente.
+
+::: {.callout-note title="Uma observação sobre expoentes reais"}
+Quando o expoente é um número real arbitrário, a definição de $x^n$ no conjunto dos reais exige mais cuidado. Para $x>0$, a potência está definida para qualquer expoente real. Para bases negativas ou para $x=0$, o domínio depende do expoente.
+
+Nesta primeira abordagem, trabalharemos principalmente com expoentes inteiros.
+:::
+
+Os gráficos abaixo comparam, um par por vez, $n=1$ e $n=-1$, $n=2$ e $n=-2$, $n=3$ e $n=-3$, $n=4$ e $n=-4$.
+
+A separação em figuras individuais facilita a leitura, especialmente em telas menores.
 
 ```{python}
 #| label: fig-funcoes-potencia
@@ -404,21 +563,33 @@ import matplotlib.pyplot as plt
 os.makedirs("images", exist_ok=True)
 
 x = np.linspace(-3, 3, 1200)
-x_no_zero = x[np.abs(x) > 0.08]
+mask = np.abs(x) > 0.08
 
 for n in [1, 2, 3, 4]:
     plt.figure(figsize=(6, 4.2))
     plt.axhline(0, linewidth=1)
     plt.axvline(0, linewidth=1)
+
     plt.plot(x, x**n, label=fr"$x^{n}$")
-    plt.plot(x_no_zero, x_no_zero**(-n), label=fr"$x^{{-{n}}}$")
+
+    y_neg = np.full_like(x, np.nan)
+    y_neg[mask] = x[mask]**(-n)
+
+    plt.plot(x, y_neg, label=fr"$x^{{-{n}}}$")
+
     plt.title(fr"Funções potência: $x^{n}$ e $x^{{-{n}}}$")
     plt.xlabel("x")
     plt.ylabel("y")
     plt.ylim(-10, 10)
     plt.grid(True)
     plt.legend()
-    plt.savefig(f"images/1-6-funcoes-potencia-n-{n}-e-menos-{n}.png", dpi=300, bbox_inches="tight")
+
+    plt.savefig(
+        f"images/1-6-funcoes-potencia-n-{n}-e-menos-{n}.png",
+        dpi=300,
+        bbox_inches="tight"
+    )
+
     plt.show()
 ```
 
@@ -435,21 +606,33 @@ import matplotlib.pyplot as plt
 os.makedirs("images", exist_ok=True)
 
 x = np.linspace(-3, 3, 1200)
-x_no_zero = x[np.abs(x) > 0.08]
+mask = np.abs(x) > 0.08
 
 for n in [1, 2, 3, 4]:
     plt.figure(figsize=(6, 4.2))
     plt.axhline(0, linewidth=1)
     plt.axvline(0, linewidth=1)
+
     plt.plot(x, x**n, label=fr"$x^{n}$")
-    plt.plot(x_no_zero, x_no_zero**(-n), label=fr"$x^{{-{n}}}$")
+
+    y_neg = np.full_like(x, np.nan)
+    y_neg[mask] = x[mask]**(-n)
+
+    plt.plot(x, y_neg, label=fr"$x^{{-{n}}}$")
+
     plt.title(fr"Funções potência: $x^{n}$ e $x^{{-{n}}}$")
     plt.xlabel("x")
     plt.ylabel("y")
     plt.ylim(-10, 10)
     plt.grid(True)
     plt.legend()
-    plt.savefig(f"images/1-6-funcoes-potencia-n-{n}-e-menos-{n}.png", dpi=300, bbox_inches="tight")
+
+    plt.savefig(
+        f"images/1-6-funcoes-potencia-n-{n}-e-menos-{n}.png",
+        dpi=300,
+        bbox_inches="tight"
+    )
+
     plt.show()
 ```
 
@@ -457,9 +640,9 @@ for n in [1, 2, 3, 4]:
 
 ***
 
-## 🧩 √ Funções raiz
+## 🧩 Funções raiz
 
-As funções raiz surgem quando tomamos potências fracionárias.
+As funções raiz surgem quando tomamos raízes de expressões que dependem da variável.
 
 O exemplo mais importante é
 
@@ -467,7 +650,7 @@ $$
 f(x)=\sqrt{x}.
 $$
 
-Essa função está definida, no conjunto dos reais, apenas para
+No conjunto dos reais, a raiz quadrada exige que o radicando seja não negativo:
 
 $$
 x\geq 0.
@@ -476,16 +659,49 @@ $$
 Portanto, seu domínio real é
 
 $$
-[0,+\infty).
+D_f=[0,+\infty).
+$$
+
+Além disso, como a raiz quadrada principal é sempre não negativa, sua imagem também é
+
+$$
+\operatorname{Im}(f)=[0,+\infty).
 $$
 
 Outros exemplos:
 
 $$
-g(x)=\sqrt{x-2},\qquad h(x)=\sqrt{9-x^2}.
+g(x)=\sqrt{x-2},\qquad
+h(x)=\sqrt{9-x^2}.
 $$
 
-A determinação do domínio de funções com raiz envolve inequações, como vimos na aula anterior. O gráfico abaixo mostra esses exemplos e destaca visualmente como o domínio aparece no desenho.
+Para determinar os domínios dessas funções, precisamos impor que os radicandos sejam não negativos:
+
+$$
+x-2\geq 0
+$$
+
+e
+
+$$
+9-x^2\geq 0.
+$$
+
+Assim, os domínios são, respectivamente,
+
+$$
+D_g=[2,+\infty)
+$$
+
+e
+
+$$
+D_h=[-3,3].
+$$
+
+A determinação do domínio de funções com raízes envolve inequações, como vimos na aula anterior.
+
+O gráfico abaixo mostra esses exemplos e destaca visualmente as restrições de domínio.
 
 ```{python}
 #| label: fig-funcoes-raiz
@@ -512,15 +728,23 @@ y3 = np.sqrt(9 - x3**2)
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x1, y1, label=r"$f(x)=\sqrt{x}$")
 plt.plot(x2, y2, label=r"$g(x)=\sqrt{x-2}$")
 plt.plot(x3, y3, label=r"$h(x)=\sqrt{9-x^2}$")
+
 plt.title("Exemplos de funções raiz e seus domínios")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-raiz-exemplos.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-raiz-exemplos.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -548,15 +772,23 @@ y3 = np.sqrt(9 - x3**2)
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x1, y1, label=r"$f(x)=\sqrt{x}$")
 plt.plot(x2, y2, label=r"$g(x)=\sqrt{x-2}$")
 plt.plot(x3, y3, label=r"$h(x)=\sqrt{9-x^2}$")
+
 plt.title("Exemplos de funções raiz e seus domínios")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-raiz-exemplos.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-raiz-exemplos.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -587,10 +819,19 @@ $$
 Exemplos:
 
 $$
-f(x)=2^x,\qquad g(x)=\left(\frac{1}{2}\right)^x,\qquad h(x)=e^x.
+f(x)=2^x,\qquad
+g(x)=\left(\frac{1}{2}\right)^x,\qquad
+h(x)=e^x.
 $$
 
-Quando $a>1$, a função cresce rapidamente. Quando $0<a<1$, ela decresce.
+O domínio de toda função exponencial básica é $\mathbb{R}$, e sua imagem é $(0,+\infty)$.
+
+Seu comportamento depende da base:
+
+- Quando $a>1$, a função é estritamente crescente.
+- Quando $0<a<1$, a função é estritamente decrescente.
+
+A função exponencial nunca assume valores negativos nem se anula. Seu gráfico possui o eixo horizontal como assíntota horizontal.
 
 A função
 
@@ -627,16 +868,24 @@ h = np.exp(x)
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$2^x$")
 plt.plot(x, g, label=r"$\left(\frac{1}{2}\right)^x$")
 plt.plot(x, h, label=r"$e^x$")
+
 plt.title("Funções exponenciais: crescimento e decaimento")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.ylim(0, 20)
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-exponenciais.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-exponenciais.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -660,16 +909,24 @@ h = np.exp(x)
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$2^x$")
 plt.plot(x, g, label=r"$\left(\frac{1}{2}\right)^x$")
 plt.plot(x, h, label=r"$e^x$")
+
 plt.title("Funções exponenciais: crescimento e decaimento")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.ylim(0, 20)
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-exponenciais.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-exponenciais.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -679,7 +936,7 @@ plt.show()
 
 ## 🪞 Funções logarítmicas
 
-A função logarítmica é a inversa da função exponencial.
+A função logarítmica é a inversa da função exponencial de mesma base.
 
 A função
 
@@ -705,6 +962,8 @@ $$
 a\neq 1.
 $$
 
+O domínio é $(0,+\infty)$ e a imagem é $\mathbb{R}$.
+
 O logaritmo responde à pergunta:
 
 > A que expoente devemos elevar a base $a$ para obter $x$?
@@ -727,7 +986,14 @@ $$
 \ln x,
 $$
 
-é o logaritmo de base $e$. Ele aparece constantemente em derivadas, integrais, crescimento contínuo e equações diferenciais.
+é o logaritmo de base $e$.
+
+Assim como acontece com as exponenciais, o comportamento da função logarítmica depende da base:
+
+- Se $a>1$, a função é estritamente crescente.
+- Se $0<a<1$, a função é estritamente decrescente.
+
+O logaritmo natural aparece constantemente em derivadas, integrais, crescimento contínuo e equações diferenciais.
 
 O gráfico abaixo compara $\log_2 x$, $\log_{1/2}x$ e $\ln x$.
 
@@ -745,6 +1011,7 @@ import matplotlib.pyplot as plt
 os.makedirs("images", exist_ok=True)
 
 x = np.linspace(0.05, 8, 500)
+
 f = np.log(x) / np.log(2)
 g = np.log(x) / np.log(1/2)
 h = np.log(x)
@@ -752,16 +1019,24 @@ h = np.log(x)
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$\log_2 x$")
 plt.plot(x, g, label=r"$\log_{1/2} x$")
 plt.plot(x, h, label=r"$\ln x$")
+
 plt.title("Funções logarítmicas: bases 2, 1/2 e e")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.ylim(-4, 4)
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-logaritmicas.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-logaritmicas.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -778,6 +1053,7 @@ import matplotlib.pyplot as plt
 os.makedirs("images", exist_ok=True)
 
 x = np.linspace(0.05, 8, 500)
+
 f = np.log(x) / np.log(2)
 g = np.log(x) / np.log(1/2)
 h = np.log(x)
@@ -785,16 +1061,24 @@ h = np.log(x)
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, f, label=r"$\log_2 x$")
 plt.plot(x, g, label=r"$\log_{1/2} x$")
 plt.plot(x, h, label=r"$\ln x$")
+
 plt.title("Funções logarítmicas: bases 2, 1/2 e e")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.ylim(-4, 4)
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-logaritmicas.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-logaritmicas.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -812,10 +1096,18 @@ $$
 
 Elas aparecem no estudo de fenômenos periódicos, ondas, movimento circular, oscilações e geometria.
 
-As funções seno e cosseno estão definidas para todos os reais:
+**Neste curso, os argumentos das funções trigonométricas serão considerados em radianos**, unidade padrão no Cálculo.
+
+As funções seno e cosseno estão definidas para todos os números reais:
 
 $$
 D_{\sin}=D_{\cos}=\mathbb{R}.
+$$
+
+Além disso, seus valores estão sempre entre $-1$ e $1$:
+
+$$
+\operatorname{Im}(\sin)=\operatorname{Im}(\cos)=[-1,1].
 $$
 
 A tangente, por outro lado, não está definida quando
@@ -824,13 +1116,32 @@ $$
 \cos x=0.
 $$
 
-Portanto, seu domínio exclui os pontos
+Isso acontece nos pontos
 
 $$
 x=\frac{\pi}{2}+k\pi,
 $$
 
 com $k\in\mathbb{Z}$.
+
+Portanto, seu domínio é
+
+$$
+D_{\tan}
+=
+\mathbb{R}\setminus
+\left\{
+\frac{\pi}{2}+k\pi:
+k\in\mathbb{Z}
+\right\}.
+$$
+
+A imagem da tangente é $\mathbb{R}$.
+
+Quanto à periodicidade:
+
+- Seno e cosseno têm período $2\pi$.
+- Tangente tem período $\pi$.
 
 ```{python}
 #| label: fig-funcoes-trigonometricas
@@ -846,26 +1157,35 @@ import matplotlib.pyplot as plt
 os.makedirs("images", exist_ok=True)
 
 x = np.linspace(-2*np.pi, 2*np.pi, 2000)
+
 sinx = np.sin(x)
 cosx = np.cos(x)
 tanx = np.tan(x)
 
 tan_plot = tanx.copy()
-tan_plot[np.abs(tan_plot) > 6] = np.nan
+tan_plot[np.abs(tan_plot) > 4] = np.nan
 
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, sinx, label=r"$\sin x$")
 plt.plot(x, cosx, label=r"$\cos x$")
 plt.plot(x, tan_plot, label=r"$\tan x$")
+
 plt.title("Funções trigonométricas básicas")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.ylim(-4, 4)
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-trigonometricas.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-trigonometricas.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -882,26 +1202,35 @@ import matplotlib.pyplot as plt
 os.makedirs("images", exist_ok=True)
 
 x = np.linspace(-2*np.pi, 2*np.pi, 2000)
+
 sinx = np.sin(x)
 cosx = np.cos(x)
 tanx = np.tan(x)
 
 tan_plot = tanx.copy()
-tan_plot[np.abs(tan_plot) > 6] = np.nan
+tan_plot[np.abs(tan_plot) > 4] = np.nan
 
 plt.figure(figsize=(6, 4.2))
 plt.axhline(0, linewidth=1)
 plt.axvline(0, linewidth=1)
+
 plt.plot(x, sinx, label=r"$\sin x$")
 plt.plot(x, cosx, label=r"$\cos x$")
 plt.plot(x, tan_plot, label=r"$\tan x$")
+
 plt.title("Funções trigonométricas básicas")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.ylim(-4, 4)
 plt.grid(True)
 plt.legend()
-plt.savefig("images/1-6-funcoes-trigonometricas.png", dpi=300, bbox_inches="tight")
+
+plt.savefig(
+    "images/1-6-funcoes-trigonometricas.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 ```
 
@@ -916,53 +1245,56 @@ Ao estudar uma função elementar, devemos sempre perguntar:
 1. Qual é o domínio?
 2. Qual é a imagem?
 3. O gráfico cresce ou decresce?
-4. Há zeros?
-5. Há assíntotas?
+4. Quais são os seus zeros?
+5. Existem assíntotas?
 6. Há simetrias?
-7. Que tipo de fenômeno essa função pode modelar?
+7. A função é periódica?
+8. Que tipo de fenômeno essa função pode modelar?
 
-Essas perguntas preparam o caminho para a ideia de limite. O Cálculo começa justamente quando passamos a perguntar o que acontece com $f(x)$ quando $x$ se aproxima de certo valor.
+Nem todas essas propriedades aparecem em todas as funções. Por isso, devemos investigar cada uma de acordo com sua natureza.
 
-***
-
-## 🧾 Uma primeira tabela de referência
-
-| Família | Forma típica | Comentário |
-|---|---|---|
-| Afim | $ax+b$ | Gráfico é uma reta |
-| Quadrática | $ax^2+bx+c$ | Gráfico é uma parábola |
-| Potência | $x^n$ | Crescimento algébrico |
-| Raiz | $\sqrt{x}$ | Domínio restrito nos reais |
-| Exponencial | $a^x$ | Crescimento ou decaimento rápido |
-| Logarítmica | $\log_a x$ | Inversa da exponencial |
-| Trigonométrica | $\sin x$, $\cos x$, $\tan x$ | Fenômenos periódicos |
+Essas perguntas preparam o caminho para a ideia de limite. O Cálculo começa justamente quando passamos a perguntar o que acontece com $f(x)$ quando $x$ se aproxima de determinado valor.
 
 ***
 
 ## 🧾 Quadro-resumo
 
-| Família | Forma típica | Domínio real mais comum | Comportamento principal |
+| Família | Forma típica | Domínio real | Comportamento principal |
 |---|---|---|---|
-| Função afim | \(f(x)=ax+b\) | \(\mathbb{R}\) | Reta; cresce se \(a>0\), decresce se \(a<0\) |
-| Função quadrática | \(f(x)=ax^2+bx+c\) | \(\mathbb{R}\) | Parábola; concavidade depende do sinal de \(a\) |
-| Função potência | \(f(x)=x^n\) | Depende de \(n\) | Pode representar crescimento algébrico ou comportamento racional |
-| Função raiz | \(f(x)=\sqrt{x}\) ou variações | Geralmente exige radicando \(\geq 0\) | Tem domínio restrito nos reais |
-| Função exponencial | \(f(x)=a^x\), \(a>0\), \(a\neq 1\) | \(\mathbb{R}\) | Cresce se \(a>1\), decresce se \(0<a<1\) |
-| Função logarítmica | \(f(x)=\log_a x\) | \((0,+\infty)\) | Inversa da exponencial; exige argumento positivo |
-| Funções trigonométricas | \(\sin x\), \(\cos x\), \(\tan x\) | Varia conforme a função | Modelam fenômenos periódicos |
+| Função afim | $ax+b$ | $\mathbb{R}$ | Reta; crescente se $a>0$, decrescente se $a<0$ e constante se $a=0$ |
+| Função quadrática | $ax^2+bx+c$ | $\mathbb{R}$ | Parábola; concavidade depende do sinal de $a$ |
+| Função potência | $x^n$ | Depende de $n$ | Comportamento depende do expoente e de sua paridade |
+| Função raiz | $\sqrt{x}$ | $[0,+\infty)$ | Crescente; imagem também igual a $[0,+\infty)$ |
+| Função exponencial | $a^x$ | $\mathbb{R}$ | Crescente se $a>1$ e decrescente se $0<a<1$ |
+| Função logarítmica | $\log_a x$ | $(0,+\infty)$ | Inversa da exponencial; crescente ou decrescente conforme a base |
+| Seno e cosseno | $\sin x$, $\cos x$ | $\mathbb{R}$ | Periódicas, com imagem $[-1,1]$ |
+| Tangente | $\tan x$ | $\mathbb{R}\setminus\left(\frac{\pi}{2}+\pi\mathbb{Z}\right)$ | Periódica, com período $\pi$ e imagem $\mathbb{R}$ |
 
-:::{.callout-note title="🧭 Ideia central do post"}
-As funções elementares formam o vocabulário básico do Cálculo.
+::: {.callout-note}
+Na linha da tangente, a notação
 
-Antes de estudar limites, derivadas e integrais, precisamos reconhecer:
+$$
+\frac{\pi}{2}+\pi\mathbb{Z}
+=
+\left\{
+\frac{\pi}{2}+k\pi:k\in\mathbb{Z}
+\right\}
+$$
 
-- a fórmula da função;
-- seu domínio;
-- seu comportamento gráfico;
-- seus pontos especiais, como zeros, assíntotas, simetrias ou periodicidade.
+representa todos os pontos em que a função tangente não está definida.
+:::
+
+::: {.callout-note title="Observação sobre a função potência"}
+Na tabela, para expoentes inteiros positivos, o domínio de $x^n$ é $\mathbb{R}$. Para expoentes inteiros negativos, o domínio é $\mathbb{R}\setminus\{0\}$.
 :::
 
 ***
+
+::: {.callout-tip title="🌉 Ponte para o Cálculo"}
+
+As funções elementares formam o repertório inicial do Cálculo. Os limites descrevem o comportamento local dessas funções, as derivadas quantificam suas taxas de variação e as integrais permitem estudar processos de acumulação. Conhecer seus domínios e propriedades gráficas ajuda a formular essas questões com precisão.
+
+:::
 
 # 🧪 Exercícios propostos
 
@@ -972,38 +1304,54 @@ Antes de estudar limites, derivadas e integrais, precisamos reconhecer:
 
 Classifique cada função como afim, quadrática, potência, raiz, exponencial, logarítmica ou trigonométrica:
 
-a) $f(x)=3x-2$  
-b) $g(x)=x^2-4x+1$  
-c) $h(x)=\sqrt{x+5}$  
-d) $p(x)=2^x$  
-e) $q(x)=\ln x$  
+a) $f(x)=3x-2$
+
+b) $g(x)=x^2-4x+1$
+
+c) $h(x)=\sqrt{x+5}$
+
+d) $p(x)=2^x$
+
+e) $q(x)=\ln x$
+
 f) $r(x)=\sin x$
+
+g) $s(x)=x^3$
 
 ## 🧪 Exercício 2
 
 Determine o domínio real das funções:
 
-a) $f(x)=\sqrt{x-3}$  
-b) $g(x)=\ln(x+1)$  
-c) $h(x)=\dfrac{1}{x}$  
+a) $f(x)=\sqrt{x-3}$
+
+b) $g(x)=\ln(x+1)$
+
+c) $h(x)=\dfrac{1}{x}$
+
 d) $p(x)=\sqrt{4-x^2}$
 
 ## 🧪 Exercício 3
 
 Calcule:
 
-a) $f(2)$ para $f(x)=3x+1$  
-b) $g(-1)$ para $g(x)=x^2+2x$  
-c) $h(4)$ para $h(x)=\sqrt{x}$  
+a) $f(2)$ para $f(x)=3x+1$
+
+b) $g(-1)$ para $g(x)=x^2+2x$
+
+c) $h(4)$ para $h(x)=\sqrt{x}$
+
 d) $p(3)$ para $p(x)=2^x$
 
 ## 🧪 Exercício 4
 
 Diga se cada afirmação é verdadeira ou falsa:
 
-a) A função $f(x)=x^2$ é afim.  
-b) A função $f(x)=2^x$ é exponencial.  
-c) A função $f(x)=\ln x$ está definida para todo $x\in\mathbb{R}$.  
+a) A função $f(x)=x^2$ é afim.
+
+b) A função $f(x)=2^x$ é exponencial.
+
+c) A função $f(x)=\ln x$ está definida para todo $x\in\mathbb{R}$.
+
 d) A função $f(x)=\sin x$ está definida para todo $x\in\mathbb{R}$.
 
 ## 🧪 Exercício 5
@@ -1014,52 +1362,143 @@ Explique, com suas palavras, por que o domínio é uma informação essencial no
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
 # ✅ Gabarito comentado
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
 
 ## 🧪 Exercício 1
 
-a) $f(x)=3x-2$ é afim.  
-b) $g(x)=x^2-4x+1$ é quadrática.  
-c) $h(x)=\sqrt{x+5}$ é uma função raiz.  
-d) $p(x)=2^x$ é exponencial.  
-e) $q(x)=\ln x$ é logarítmica.  
-f) $r(x)=\sin x$ é trigonométrica.
+a) $f(x)=3x-2$ é uma função afim, pois tem a forma $ax+b$.
+
+b) $g(x)=x^2-4x+1$ é uma função quadrática, pois contém um termo de segundo grau e seu coeficiente é diferente de zero.
+
+c) $h(x)=\sqrt{x+5}$ é uma função raiz.
+
+d) $p(x)=2^x$ é uma função exponencial, pois a variável aparece no expoente.
+
+e) $q(x)=\ln x$ é uma função logarítmica.
+
+f) $r(x)=\sin x$ é uma função trigonométrica.
+
+g) $s(x)=x^3$ é uma função potência, pois a variável está elevada a um expoente inteiro.
 
 ## 🧪 Exercício 2
 
-a) Para $f(x)=\sqrt{x-3}$, precisamos de $x-3\geq 0$, isto é, $x\geq 3$. Logo, $D_f=[3,+\infty)$.  
+**a)** Para $f(x)=\sqrt{x-3}$, precisamos de
 
-b) Para $g(x)=\ln(x+1)$, precisamos de $x+1>0$, isto é, $x>-1$. Logo, $D_g=(-1,+\infty)$.  
+$$
+x-3\geq 0.
+$$
 
-c) Para $h(x)=\dfrac{1}{x}$, precisamos de $x\neq 0$. Logo, $D_h=(-\infty,0)\cup(0,+\infty)$.  
+Logo,
 
-d) Para $p(x)=\sqrt{4-x^2}$, precisamos de $4-x^2\geq 0$, isto é, $x^2\leq 4$. Logo, $-2\leq x\leq 2$, e $D_p=[-2,2]$.
+$$
+x\geq 3.
+$$
+
+Portanto,
+
+$$
+D_f=[3,+\infty).
+$$
+
+**b)** Para $g(x)=\ln(x+1)$, o argumento do logaritmo deve ser positivo:
+
+$$
+x+1>0.
+$$
+
+Logo,
+
+$$
+x>-1.
+$$
+
+Portanto,
+
+$$
+D_g=(-1,+\infty).
+$$
+
+**c)** Para $h(x)=\dfrac{1}{x}$, o denominador não pode ser zero:
+
+$$
+x\neq 0.
+$$
+
+Portanto,
+
+$$
+D_h=(-\infty,0)\cup(0,+\infty).
+$$
+
+**d)** Para $p(x)=\sqrt{4-x^2}$, precisamos de
+
+$$
+4-x^2\geq 0.
+$$
+
+Assim,
+
+$$
+x^2\leq 4,
+$$
+
+o que equivale a
+
+$$
+-2\leq x\leq 2.
+$$
+
+Portanto,
+
+$$
+D_p=[-2,2].
+$$
 
 ## 🧪 Exercício 3
 
-a) $f(2)=3\cdot 2+1=7$.  
+**a)** Para $f(x)=3x+1$:
 
-b) $g(-1)=(-1)^2+2(-1)=1-2=-1$.  
+$$
+f(2)=3\cdot 2+1=7.
+$$
 
-c) $h(4)=\sqrt{4}=2$.  
+**b)** Para $g(x)=x^2+2x$:
 
-d) $p(3)=2^3=8$.
+$$
+g(-1)=(-1)^2+2(-1)=1-2=-1.
+$$
+
+**c)** Para $h(x)=\sqrt{x}$:
+
+$$
+h(4)=\sqrt{4}=2.
+$$
+
+**d)** Para $p(x)=2^x$:
+
+$$
+p(3)=2^3=8.
+$$
 
 ## 🧪 Exercício 4
 
-a) Falsa. $f(x)=x^2$ é quadrática.  
+**a) Falsa.** A função $f(x)=x^2$ é quadrática, não afim.
 
-b) Verdadeira. $f(x)=2^x$ é exponencial.  
+**b) Verdadeira.** A função $f(x)=2^x$ é exponencial, pois a variável aparece no expoente.
 
-c) Falsa. $\ln x$ só está definida, nos reais, para $x>0$.  
+**c) Falsa.** A função $\ln x$ está definida, nos reais, somente para $x>0$.
 
-d) Verdadeira. $\sin x$ está definida para todo número real.
+**d) Verdadeira.** A função $\sin x$ está definida para todo número real.
 
 ## 🧪 Exercício 5
 
-O domínio é essencial porque determina quais entradas são permitidas para a função. Sem conhecer o domínio, podemos tentar calcular valores que não fazem sentido nos reais, como $\sqrt{-1}$ ou $\ln 0$, dentro do contexto deste curso.
+O domínio é essencial porque determina quais valores podem ser utilizados como entradas da função.
+
+Sem conhecer o domínio, podemos tentar calcular valores que não fazem sentido no conjunto dos reais, como $\sqrt{-1}$ ou $\ln 0$, no contexto deste curso.
+
+Conhecer o domínio também permite compreender onde o gráfico da função existe e quais valores podem ser estudados em problemas matemáticos.
 
 :::
 
@@ -1068,6 +1507,7 @@ O domínio é essencial porque determina quais entradas são permitidas para a f
 # 🧩 Quiz — Funções Elementares
 
 :::::{.question}
+
 **Q1.** Uma função afim tem forma geral:
 
 ::::{.choices}
@@ -1080,13 +1520,19 @@ $f(x)=a^x$.
 :::
 
 :::{.choice}
+$f(x)=ax^2+b$.
+:::
+
+:::{.choice}
 $f(x)=\sqrt{x}$.
 :::
 ::::
+
 :::::
 
 :::::{.question}
-**Q2.** O domínio real de $\ln x$ é:
+
+**Q2.** O domínio real da função $f(x)=\ln x$ é:
 
 ::::{.choices}
 :::{.choice}
@@ -1100,41 +1546,100 @@ $(0,+\infty)$.
 :::{.choice}
 $[0,+\infty)$.
 :::
+
+:::{.choice}
+$\mathbb{R}\setminus\{0\}$.
+:::
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q3.** A função $e^x$ é especialmente importante no Cálculo porque:
 
 ::::{.choices}
 :::{.choice}
-Não possui valores positivos.
-:::
-
-:::{.choice}
-Está definida apenas para $x>0$.
+Sua derivada é $xe^x$.
 :::
 
 :::{.choice .correct-choice}
 Sua derivada é ela mesma.
 :::
+
+:::{.choice}
+Sua derivada é $\dfrac{1}{e^x}$.
+:::
+
+:::{.choice}
+Sua derivada é $\ln x$.
+:::
 ::::
+
+:::::
+
+:::::{.question}
+
+**Q4.** O domínio real da função tangente é:
+
+::::{.choices}
+:::{.choice}
+$\mathbb{R}$.
+:::
+
+:::{.choice}
+$\mathbb{R}\setminus\{k\pi:k\in\mathbb{Z}\}$.
+:::
+
+:::{.choice .correct-choice}
+$\mathbb{R}\setminus\left\{\dfrac{\pi}{2}+k\pi:k\in\mathbb{Z}\right\}$.
+:::
+
+:::{.choice}
+$(0,+\infty)$.
+:::
+::::
+
+:::::
+
+:::::{.question}
+
+**Q5.** O domínio real da função $f(x)=\sqrt{9-x^2}$ é:
+
+::::{.choices}
+:::{.choice .correct-choice}
+$[-3,3]$.
+:::
+
+:::{.choice}
+$(-3,3)$.
+:::
+
+:::{.choice}
+$[0,3]$.
+:::
+
+:::{.choice}
+$\mathbb{R}$.
+:::
+::::
+
 :::::
 
 ***
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.5 Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
+🎯 **Aula Anterior:** 👉 [1.5 Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
 
-🎯 **Próximo Post:** 👉 [1.7 Funções Polinomiais e Racionais](1.7-funcoes-polinomiais-e-racionais.qmd)
+🎯 **Próxima Aula:** 👉 [1.7 Funções Polinomiais e Racionais](1.7-funcoes-polinomiais-e-racionais.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.6-funcoes-elementares.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 
-:::{.callout-note}
+::: {.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::

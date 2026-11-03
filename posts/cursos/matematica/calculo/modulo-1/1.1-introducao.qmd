@@ -9,6 +9,8 @@ tags: [cálculo, matemática, história do cálculo, aplicações, cursos]
 format:
   html:
     toc: true
+    toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -25,7 +27,7 @@ resources:
   - ../data/area_exaustao_table.csv
 ---
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](../../../../matematica/index.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
 **Próxima aula:** [1.2 — Conjuntos Numéricos](1.2-conjuntos.qmd)
 
@@ -253,7 +255,7 @@ Substituir toda geometria por tabelas sem interpretação visual.
 
 **Próxima aula:** [1.2 — Conjuntos Numéricos](1.2-conjuntos.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](../../../../matematica/index.qmd) · [Voltar ao topo](#)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
