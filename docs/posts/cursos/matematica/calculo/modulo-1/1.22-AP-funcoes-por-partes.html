@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Aprofundamento sobre funções definidas por partes, domínio, gráficos, limites laterais e preparação para continuidade.">
+<meta name="description" content="Aprofundamento sobre funções definidas por partes, domínio, pontos de troca, limites laterais, descontinuidades e continuidade.">
 
 <title>🔬 Módulo 1.22-AP: Funções por Partes – Blog do Marcellini</title>
 <style>
@@ -127,14 +127,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="🔬 Módulo 1.22-AP: Funções por Partes – Blog do Marcellini">
-<meta property="og:description" content="Aprofundamento sobre funções definidas por partes, domínio, gráficos, limites laterais e preparação para continuidade.">
+<meta property="og:description" content="Aprofundamento sobre funções definidas por partes, domínio, pontos de troca, limites laterais, descontinuidades e continuidade.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="🔬 Módulo 1.22-AP: Funções por Partes – Blog do Marcellini">
-<meta name="twitter:description" content="Aprofundamento sobre funções definidas por partes, domínio, gráficos, limites laterais e preparação para continuidade.">
+<meta name="twitter:description" content="Aprofundamento sobre funções definidas por partes, domínio, pontos de troca, limites laterais, descontinuidades e continuidade.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -267,21 +267,22 @@ window.Quarto = {
    
   <ul>
   <li><a href="#funções-por-partes" id="toc-funções-por-partes" class="nav-link active" data-scroll-target="#funções-por-partes"><span class="header-section-number">1</span> 🔬 Funções por Partes</a>
-  <ul class="collapse">
-  <li><a href="#como-ler-uma-função-por-partes" id="toc-como-ler-uma-função-por-partes" class="nav-link" data-scroll-target="#como-ler-uma-função-por-partes"><span class="header-section-number">1.1</span> 🧩 Como ler uma função por partes</a></li>
+  <ul>
+  <li><a href="#como-interpretar-uma-função-por-partes" id="toc-como-interpretar-uma-função-por-partes" class="nav-link" data-scroll-target="#como-interpretar-uma-função-por-partes"><span class="header-section-number">1.1</span> 🧩 Como interpretar uma função por partes</a></li>
   <li><a href="#domínio-de-funções-por-partes" id="toc-domínio-de-funções-por-partes" class="nav-link" data-scroll-target="#domínio-de-funções-por-partes"><span class="header-section-number">1.2</span> 🧭 Domínio de funções por partes</a></li>
   <li><a href="#pontos-de-troca" id="toc-pontos-de-troca" class="nav-link" data-scroll-target="#pontos-de-troca"><span class="header-section-number">1.3</span> 🎯 Pontos de troca</a></li>
-  <li><a href="#limite-pela-esquerda-e-pela-direita" id="toc-limite-pela-esquerda-e-pela-direita" class="nav-link" data-scroll-target="#limite-pela-esquerda-e-pela-direita"><span class="header-section-number">1.4</span> 👈 Limite pela esquerda e pela direita</a></li>
-  <li><a href="#buracos" id="toc-buracos" class="nav-link" data-scroll-target="#buracos"><span class="header-section-number">1.5</span> 🕳️ Buracos</a></li>
-  <li><a href="#continuidade-por-encaixe" id="toc-continuidade-por-encaixe" class="nav-link" data-scroll-target="#continuidade-por-encaixe"><span class="header-section-number">1.6</span> 🧱 Continuidade por encaixe</a></li>
-  <li><a href="#gráficos-de-funções-por-partes" id="toc-gráficos-de-funções-por-partes" class="nav-link" data-scroll-target="#gráficos-de-funções-por-partes"><span class="header-section-number">1.7</span> 📊 Gráficos de funções por partes</a></li>
-  <li><a href="#por-que-isso-importa-para-limites" id="toc-por-que-isso-importa-para-limites" class="nav-link" data-scroll-target="#por-que-isso-importa-para-limites"><span class="header-section-number">1.8</span> 🌉 Por que isso importa para limites?</a></li>
+  <li><a href="#limites-laterais" id="toc-limites-laterais" class="nav-link" data-scroll-target="#limites-laterais"><span class="header-section-number">1.4</span> 👈 Limites laterais</a></li>
+  <li><a href="#quando-o-limite-bilateral-existe" id="toc-quando-o-limite-bilateral-existe" class="nav-link" data-scroll-target="#quando-o-limite-bilateral-existe"><span class="header-section-number">1.5</span> ⚖️ Quando o limite bilateral existe?</a></li>
+  <li><a href="#buracos-e-descontinuidades-removíveis" id="toc-buracos-e-descontinuidades-removíveis" class="nav-link" data-scroll-target="#buracos-e-descontinuidades-removíveis"><span class="header-section-number">1.6</span> 🕳️ Buracos e descontinuidades removíveis</a></li>
+  <li><a href="#descontinuidade-por-salto" id="toc-descontinuidade-por-salto" class="nav-link" data-scroll-target="#descontinuidade-por-salto"><span class="header-section-number">1.7</span> ↕️ Descontinuidade por salto</a></li>
+  <li><a href="#continuidade-em-um-ponto" id="toc-continuidade-em-um-ponto" class="nav-link" data-scroll-target="#continuidade-em-um-ponto"><span class="header-section-number">1.8</span> 🧱 Continuidade em um ponto</a></li>
+  <li><a href="#continuidade-por-encaixe" id="toc-continuidade-por-encaixe" class="nav-link" data-scroll-target="#continuidade-por-encaixe"><span class="header-section-number">1.9</span> 🧩 Continuidade por encaixe</a></li>
+  <li><a href="#um-exemplo-com-dois-parâmetros" id="toc-um-exemplo-com-dois-parâmetros" class="nav-link" data-scroll-target="#um-exemplo-com-dois-parâmetros"><span class="header-section-number">1.10</span> 🧮 Um exemplo com dois parâmetros</a></li>
+  <li><a href="#relação-com-o-estudo-dos-limites" id="toc-relação-com-o-estudo-dos-limites" class="nav-link" data-scroll-target="#relação-com-o-estudo-dos-limites"><span class="header-section-number">1.11</span> 🌉 Relação com o estudo dos limites</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
-  <ul class="collapse">
-  <li><a href="#quiz-funções-por-partes" id="toc-quiz-funções-por-partes" class="nav-link" data-scroll-target="#quiz-funções-por-partes"><span class="header-section-number">3.5</span> 🧩 Quiz — Funções por Partes</a></li>
-  </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#quiz-funções-por-partes" id="toc-quiz-funções-por-partes" class="nav-link" data-scroll-target="#quiz-funções-por-partes"><span class="header-section-number">4</span> 🧩 Quiz — Funções por Partes</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -302,7 +303,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Aprofundamento sobre funções definidas por partes, domínio, gráficos, limites laterais e preparação para continuidade.
+    Aprofundamento sobre funções definidas por partes, domínio, pontos de troca, limites laterais, descontinuidades e continuidade.
   </div>
 </div>
 
@@ -342,29 +343,34 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Este AP complementa a aula <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">1.10 Conceito Formal de Função</a>. Ele amplia o estudo sem interromper a sequência principal.</p>
-<p>↩︎️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">Voltar à aula de origem</a> · ▶️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">Continuar com 1.11 Revisão Gráfica e Algébrica</a></p>
+<p>Este aprofundamento complementa a <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">Aula 1.10 — Conceito Formal de Função</a>.</p>
+<p>Na aula principal, apresentamos a definição formal de função e introduzimos a ideia de utilizar regras diferentes em regiões distintas do domínio.</p>
+<p>Agora vamos aprofundar esse assunto, estudando os pontos de troca, os limites laterais, os diferentes tipos de descontinuidade e as condições para que as partes se encontrem.</p>
+<p>Você pode estudar este material agora ou retornar a ele quando iniciar o estudo dos limites e da continuidade.</p>
+<p>↩︎️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">Voltar à aula de origem</a> · ▶️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">Continuar com 1.11 — Revisão Gráfica e Algébrica</a></p>
 </div>
 </div>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html">1.21-AP — Domínio de Funções: Guia Completo</a></p>
 <hr>
 <section id="funções-por-partes" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 🔬 Funções por Partes</h1>
-<p>Uma função por partes é definida por regras diferentes em regiões diferentes do domínio.</p>
-<p>Esse tipo de função é essencial antes de estudar limites laterais, continuidade e descontinuidades.</p>
-<p>Por exemplo:</p>
+<p>Uma função por partes é definida por expressões diferentes em regiões distintas do domínio.</p>
+<p>Sua representação geral pode ser escrita como</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
-x+1, &amp; x&lt;2,\\
-x^2, &amp; x\geq 2.
+f_1(x), &amp; x\in A_1,\\
+f_2(x), &amp; x\in A_2,\\
+\vdots\\
+f_n(x), &amp; x\in A_n.
 \end{cases}
 \]</span></p>
-<p>Para calcular <span class="math inline">\(f(x)\)</span>, primeiro olhamos em qual região <span class="math inline">\(x\)</span> está. Depois usamos a regra correspondente.</p>
+<p>Cada expressão é utilizada somente na região indicada por sua condição.</p>
+<p>Esse tipo de função aparece em diferentes situações matemáticas e aplicações. Também é especialmente importante para compreender limites laterais, continuidade e descontinuidades.</p>
 <hr>
-<section id="como-ler-uma-função-por-partes" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="como-ler-uma-função-por-partes"><span class="header-section-number">1.1</span> 🧩 Como ler uma função por partes</h2>
-<p>Considere:</p>
+<section id="como-interpretar-uma-função-por-partes" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="como-interpretar-uma-função-por-partes"><span class="header-section-number">1.1</span> 🧩 Como interpretar uma função por partes</h2>
+<p>Considere</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
@@ -372,24 +378,31 @@ f(x)=
 x^2+1, &amp; x\geq 1.
 \end{cases}
 \]</span></p>
-<p>Se <span class="math inline">\(x=0\)</span>, usamos a primeira regra, pois <span class="math inline">\(0&lt;1\)</span>:</p>
+<p>Para calcular <span class="math inline">\(f(x)\)</span>, primeiro identificamos a condição satisfeita pelo valor de entrada. Depois aplicamos a expressão correspondente.</p>
+<p>Por exemplo, se <span class="math inline">\(x=0\)</span>, temos <span class="math inline">\(0&lt;1\)</span>. Portanto, usamos a primeira regra:</p>
 <p><span class="math display">\[
-f(0)=2\cdot 0=0.
+f(0)=2\cdot0=0.
 \]</span></p>
-<p>Se <span class="math inline">\(x=1\)</span>, usamos a segunda regra, pois <span class="math inline">\(1\geq 1\)</span>:</p>
+<p>Se <span class="math inline">\(x=1\)</span>, a primeira condição não é satisfeita. Como <span class="math inline">\(1\geq1\)</span>, utilizamos a segunda regra:</p>
 <p><span class="math display">\[
 f(1)=1^2+1=2.
 \]</span></p>
-<p>Se <span class="math inline">\(x=3\)</span>, usamos a segunda regra:</p>
+<p>Para <span class="math inline">\(x=3\)</span>, também utilizamos a segunda regra:</p>
 <p><span class="math display">\[
 f(3)=3^2+1=10.
 \]</span></p>
+<p>Observe que as condições precisam ser lidas com atenção. O sinal de desigualdade determina a qual trecho pertence cada valor.</p>
 <hr>
 </section>
 <section id="domínio-de-funções-por-partes" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="domínio-de-funções-por-partes"><span class="header-section-number">1.2</span> 🧭 Domínio de funções por partes</h2>
-<p>O domínio de uma função por partes é a união dos valores permitidos em cada trecho.</p>
-<p>Por exemplo:</p>
+<p>O domínio de uma função por partes é obtido considerando as restrições de cada expressão e as condições que delimitam sua região de aplicação.</p>
+<p>Em outras palavras, precisamos respeitar simultaneamente:</p>
+<ol type="1">
+<li>as condições de cada trecho;</li>
+<li>as restrições matemáticas da expressão utilizada naquele trecho.</li>
+</ol>
+<p>Considere</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
@@ -397,181 +410,485 @@ f(x)=
 \dfrac{1}{x-3}, &amp; x\geq 1.
 \end{cases}
 \]</span></p>
-<p>Na primeira parte, precisamos de</p>
+<p><strong>Primeira parte</strong></p>
+<p>A expressão é</p>
 <p><span class="math display">\[
-x+2\geq 0,
+\sqrt{x+2}.
 \]</span></p>
-<p>isto é,</p>
+<p>Para que a raiz seja real, precisamos de</p>
 <p><span class="math display">\[
-x\geq -2.
+x+2\geq0,
 \]</span></p>
-<p>Mas essa regra vale apenas quando</p>
+<p>ou seja,</p>
 <p><span class="math display">\[
-x&lt;1.
+x\geq-2.
 \]</span></p>
-<p>Logo, a primeira parte contribui com</p>
+<p>Mas essa expressão só vale quando <span class="math inline">\(x&lt;1\)</span>.</p>
+<p>Portanto, a primeira parte contribui com o intervalo</p>
 <p><span class="math display">\[
 [-2,1).
 \]</span></p>
-<p>Na segunda parte, precisamos de</p>
+<p><strong>Segunda parte</strong></p>
+<p>A expressão é</p>
 <p><span class="math display">\[
-x-3\neq 0,
+\frac{1}{x-3}.
 \]</span></p>
-<p>isto é,</p>
+<p>O denominador não pode ser zero:</p>
 <p><span class="math display">\[
-x\neq 3.
+x-3\neq0.
 \]</span></p>
-<p>Mas essa regra vale quando</p>
+<p>Logo,</p>
 <p><span class="math display">\[
-x\geq 1.
+x\neq3.
 \]</span></p>
-<p>Logo, a segunda parte contribui com</p>
+<p>Como essa regra vale para <span class="math inline">\(x\geq1\)</span>, a segunda parte contribui com</p>
 <p><span class="math display">\[
 [1,3)\cup(3,+\infty).
 \]</span></p>
-<p>Portanto,</p>
+<p><strong>Domínio total</strong></p>
+<p>Unindo as duas partes:</p>
 <p><span class="math display">\[
-D_f=[-2,3)\cup(3,+\infty).
+D_f=[-2,1)\cup[1,3)\cup(3,+\infty).
 \]</span></p>
+<p>Simplificando,</p>
+<p><span class="math display">\[
+\boxed{D_f=[-2,3)\cup(3,+\infty).}
+\]</span></p>
+<p>Observe que o valor <span class="math inline">\(x=1\)</span> pertence ao domínio, pois está incluído na segunda condição. Já <span class="math inline">\(x=3\)</span> não pertence ao domínio, pois anula o denominador.</p>
 <hr>
 </section>
 <section id="pontos-de-troca" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="pontos-de-troca"><span class="header-section-number">1.3</span> 🎯 Pontos de troca</h2>
-<p>Os pontos onde a regra muda são chamados aqui de pontos de troca.</p>
-<p>Em</p>
+<p>Os pontos nos quais a regra da função muda são chamados de <strong>pontos de troca</strong>.</p>
+<p>Considere novamente</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
 x+1, &amp; x&lt;2,\\
-x^2, &amp; x\geq 2,
+x^2, &amp; x\geq2.
 \end{cases}
 \]</span></p>
-<p>o ponto de troca é</p>
+<p>A regra muda em</p>
 <p><span class="math display">\[
 x=2.
 \]</span></p>
-<p>Esse ponto merece atenção especial porque nele podem ocorrer:</p>
+<p>Esse ponto merece atenção porque as expressões utilizadas à esquerda e à direita podem apresentar comportamentos diferentes.</p>
+<p>Em um ponto de troca, podemos encontrar situações como:</p>
 <ul>
-<li>buracos;</li>
-<li>saltos;</li>
-<li>mudança de fórmula;</li>
-<li>descontinuidade;</li>
-<li>continuidade por encaixe.</li>
+<li>as partes se encontram;</li>
+<li>as partes apresentam valores-limite diferentes;</li>
+<li>a função possui um valor diferente do limite;</li>
+<li>a função não está definida no ponto.</li>
 </ul>
+<p>Essas possibilidades serão examinadas por meio dos limites laterais.</p>
 <hr>
 </section>
-<section id="limite-pela-esquerda-e-pela-direita" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="limite-pela-esquerda-e-pela-direita"><span class="header-section-number">1.4</span> 👈 Limite pela esquerda e pela direita</h2>
-<p>Funções por partes são uma preparação natural para limites laterais.</p>
-<p>Para entender o comportamento perto de um ponto de troca <span class="math inline">\(a\)</span>, analisamos:</p>
-<ul>
-<li>o que acontece quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(a\)</span> pela esquerda;</li>
-<li>o que acontece quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(a\)</span> pela direita.</li>
-</ul>
-<p>Por exemplo:</p>
+<section id="limites-laterais" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="limites-laterais"><span class="header-section-number">1.4</span> 👈 Limites laterais</h2>
+<p>Para estudar o comportamento de uma função nas proximidades de um ponto <span class="math inline">\(a\)</span>, podemos investigar o que acontece quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(a\)</span> pela esquerda ou pela direita.</p>
+<p>Esses comportamentos são chamados de <strong>limite pela esquerda</strong> e <strong>limite pela direita</strong>.</p>
+<p>Usamos as notações</p>
+<p><span class="math display">\[
+\lim_{x\to a^-}f(x)
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to a^+}f(x).
+\]</span></p>
+<p>O símbolo <span class="math inline">\(a^-\)</span> indica aproximação pela esquerda, enquanto <span class="math inline">\(a^+\)</span> indica aproximação pela direita.</p>
+<p>Considere</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
 x+1, &amp; x&lt;2,\\
-x^2, &amp; x\geq 2.
+x^2, &amp; x\geq2.
 \end{cases}
 \]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela esquerda, usamos <span class="math inline">\(x+1\)</span>:</p>
+<p><strong>Aproximação pela esquerda</strong></p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela esquerda, utilizamos a expressão <span class="math inline">\(x+1\)</span>.</p>
+<p>Assim,</p>
 <p><span class="math display">\[
-x+1\to 3.
+\lim_{x\to2^-}f(x)
+=
+\lim_{x\to2^-}(x+1)
+=3.
 \]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela direita, usamos <span class="math inline">\(x^2\)</span>:</p>
+<p><strong>Aproximação pela direita</strong></p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela direita, utilizamos a expressão <span class="math inline">\(x^2\)</span>.</p>
+<p>Logo,</p>
 <p><span class="math display">\[
-x^2\to 4.
+\lim_{x\to2^+}f(x)
+=
+\lim_{x\to2^+}x^2
+=4.
 \]</span></p>
-<p>Como os comportamentos laterais são diferentes, há um salto.</p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\lim_{x\to2^-}f(x)=3
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to2^+}f(x)=4.
+\]</span></p>
+<p>Como os limites laterais são diferentes, o limite bilateral não existe:</p>
+<p><span class="math display">\[
+\boxed{\lim_{x\to2}f(x)\text{ não existe}.}
+\]</span></p>
+<p>Essa diferença caracteriza um comportamento de salto.</p>
 <hr>
 </section>
-<section id="buracos" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="buracos"><span class="header-section-number">1.5</span> 🕳️ Buracos</h2>
-<p>Um buraco pode ocorrer quando a função se aproxima de um valor, mas o valor definido no ponto é outro ou não existe.</p>
-<p>Exemplo:</p>
+<section id="quando-o-limite-bilateral-existe" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="quando-o-limite-bilateral-existe"><span class="header-section-number">1.5</span> ⚖️ Quando o limite bilateral existe?</h2>
+<p>Para que o limite bilateral de uma função exista em um ponto, os limites laterais precisam existir e ser iguais.</p>
+<p>Em particular, se</p>
+<p><span class="math display">\[
+\lim_{x\to a^-}f(x)=L
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to a^+}f(x)=L,
+\]</span></p>
+<p>então</p>
+<p><span class="math display">\[
+\boxed{\lim_{x\to a}f(x)=L.}
+\]</span></p>
+<p>Se os limites laterais forem diferentes, o limite bilateral não existe.</p>
+<p>Por exemplo, considere</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
-x+1, &amp; x\neq 2,\\
+2x+1, &amp; x&lt;1,\\
+x^2+2, &amp; x\geq1.
+\end{cases}
+\]</span></p>
+<p>Pela esquerda:</p>
+<p><span class="math display">\[
+\lim_{x\to1^-}f(x)
+=
+\lim_{x\to1^-}(2x+1)
+=3.
+\]</span></p>
+<p>Pela direita:</p>
+<p><span class="math display">\[
+\lim_{x\to1^+}f(x)
+=
+\lim_{x\to1^+}(x^2+2)
+=3.
+\]</span></p>
+<p>Como os dois resultados coincidem,</p>
+<p><span class="math display">\[
+\boxed{\lim_{x\to1}f(x)=3.}
+\]</span></p>
+<p>Observe, porém, que a existência do limite não garante, por si só, que a função seja contínua. Precisamos verificar também o valor da função no ponto.</p>
+<hr>
+</section>
+<section id="buracos-e-descontinuidades-removíveis" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="buracos-e-descontinuidades-removíveis"><span class="header-section-number">1.6</span> 🕳️ Buracos e descontinuidades removíveis</h2>
+<p>Uma descontinuidade removível ocorre quando o limite da função existe em determinado ponto, mas a função não está definida nesse ponto ou possui ali um valor diferente do limite.</p>
+<p>Considere</p>
+<p><span class="math display">\[
+f(x)=
+\begin{cases}
+x+1, &amp; x\neq2,\\
 10, &amp; x=2.
 \end{cases}
 \]</span></p>
-<p>Perto de <span class="math inline">\(2\)</span>, a função segue a reta</p>
+<p>Para valores próximos de <span class="math inline">\(2\)</span>, mas diferentes de <span class="math inline">\(2\)</span>, a função é dada por</p>
 <p><span class="math display">\[
-x+1.
+f(x)=x+1.
 \]</span></p>
-<p>Assim, os valores se aproximam de</p>
+<p>Assim,</p>
 <p><span class="math display">\[
-3.
+\lim_{x\to2}f(x)
+=
+\lim_{x\to2}(x+1)
+=3.
 \]</span></p>
-<p>Mas o valor da função em <span class="math inline">\(2\)</span> é</p>
+<p>Entretanto,</p>
 <p><span class="math display">\[
 f(2)=10.
 \]</span></p>
-<p>Esse é um exemplo típico de descontinuidade removível.</p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\lim_{x\to2}f(x)\neq f(2).
+\]</span></p>
+<p>O limite existe, mas não coincide com o valor da função.</p>
+<p>Essa descontinuidade é removível porque poderíamos redefinir o valor no ponto como</p>
+<p><span class="math display">\[
+f(2)=3
+\]</span></p>
+<p>e obter uma função contínua em <span class="math inline">\(x=2\)</span>.</p>
+<p>Outro exemplo importante é</p>
+<p><span class="math display">\[
+g(x)=\frac{x^2-4}{x-2},
+\qquad x\neq2.
+\]</span></p>
+<p>Fatorando o numerador:</p>
+<p><span class="math display">\[
+g(x)=\frac{(x-2)(x+2)}{x-2}.
+\]</span></p>
+<p>Para <span class="math inline">\(x\neq2\)</span>, podemos simplificar:</p>
+<p><span class="math display">\[
+g(x)=x+2.
+\]</span></p>
+<p>Consequentemente,</p>
+<p><span class="math display">\[
+\lim_{x\to2}g(x)=4.
+\]</span></p>
+<p>A função não está definida em <span class="math inline">\(x=2\)</span>, mas seu limite existe.</p>
+<p>O gráfico apresenta um ponto ausente em</p>
+<p><span class="math display">\[
+(2,4).
+\]</span></p>
+<p>Esse é outro exemplo de descontinuidade removível.</p>
 <hr>
 </section>
-<section id="continuidade-por-encaixe" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="continuidade-por-encaixe"><span class="header-section-number">1.6</span> 🧱 Continuidade por encaixe</h2>
-<p>Às vezes, escolhemos um parâmetro para fazer as partes se encontrarem.</p>
-<p>Considere:</p>
+<section id="descontinuidade-por-salto" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="descontinuidade-por-salto"><span class="header-section-number">1.7</span> ↕️ Descontinuidade por salto</h2>
+<p>Uma descontinuidade por salto ocorre quando os limites laterais existem e são finitos, mas possuem valores diferentes.</p>
+<p>Considere</p>
+<p><span class="math display">\[
+f(x)=
+\begin{cases}
+x+1, &amp; x&lt;2,\\
+x^2, &amp; x\geq2.
+\end{cases}
+\]</span></p>
+<p>Já calculamos:</p>
+<p><span class="math display">\[
+\lim_{x\to2^-}f(x)=3
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to2^+}f(x)=4.
+\]</span></p>
+<p>Como</p>
+<p><span class="math display">\[
+3\neq4,
+\]</span></p>
+<p>o limite bilateral não existe.</p>
+<p>A diferença entre os valores laterais caracteriza um salto de tamanho</p>
+<p><span class="math display">\[
+|4-3|=1.
+\]</span></p>
+<p>O valor efetivo da função no ponto é</p>
+<p><span class="math display">\[
+f(2)=4.
+\]</span></p>
+<p>A existência desse valor não elimina a descontinuidade, pois os limites laterais não coincidem.</p>
+<hr>
+</section>
+<section id="continuidade-em-um-ponto" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="continuidade-em-um-ponto"><span class="header-section-number">1.8</span> 🧱 Continuidade em um ponto</h2>
+<p>Uma função é contínua em um ponto <span class="math inline">\(a\)</span> quando satisfaz três condições:</p>
+<ol type="1">
+<li><span class="math inline">\(f(a)\)</span> está definida;</li>
+<li><span class="math inline">\(\lim_{x\to a}f(x)\)</span> existe;</li>
+<li>o limite é igual ao valor da função.</li>
+</ol>
+<p>Em notação matemática:</p>
+<p><span class="math display">\[
+\boxed{\lim_{x\to a}f(x)=f(a).}
+\]</span></p>
+<p>Essa igualdade reúne as três condições, desde que ambos os lados estejam definidos.</p>
+<p>Para uma função por partes, isso significa que os trechos precisam se encontrar no ponto de troca e que o valor atribuído à função nesse ponto deve coincidir com o limite comum.</p>
+<hr>
+</section>
+<section id="continuidade-por-encaixe" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="continuidade-por-encaixe"><span class="header-section-number">1.9</span> 🧩 Continuidade por encaixe</h2>
+<p>Considere a função</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
 x+2, &amp; x&lt;1,\\
-ax+1, &amp; x\geq 1.
+ax+1, &amp; x\geq1.
 \end{cases}
 \]</span></p>
-<p>Para as partes se encontrarem em <span class="math inline">\(x=1\)</span>, precisamos que:</p>
+<p>Queremos determinar o valor de <span class="math inline">\(a\)</span> para que a função seja contínua em <span class="math inline">\(x=1\)</span>.</p>
+<p>Primeiro, calculamos o limite pela esquerda:</p>
 <p><span class="math display">\[
-1+2=a\cdot 1+1.
+\lim_{x\to1^-}f(x)
+=
+\lim_{x\to1^-}(x+2)
+=3.
 \]</span></p>
-<p>Logo:</p>
+<p>Agora, calculamos o limite pela direita:</p>
 <p><span class="math display">\[
-3=a+1,
+\lim_{x\to1^+}f(x)
+=
+\lim_{x\to1^+}(ax+1)
+=a+1.
 \]</span></p>
-<p>portanto</p>
+<p>Para que os limites laterais coincidam, precisamos de</p>
 <p><span class="math display">\[
-a=2.
+3=a+1.
 \]</span></p>
-<p>Esse tipo de problema aparecerá no estudo de continuidade.</p>
+<p>Logo,</p>
+<p><span class="math display">\[
+\boxed{a=2.}
+\]</span></p>
+<p>Verifiquemos o valor da função no ponto:</p>
+<p><span class="math display">\[
+f(1)=2a+1.
+\]</span></p>
+<p>Com <span class="math inline">\(a=2\)</span>,</p>
+<p><span class="math display">\[
+f(1)=2\cdot2+1=5.
+\]</span></p>
+<p>Há um problema: os limites laterais não são iguais ao valor calculado? Vamos observar a expressão utilizada.</p>
+<p>Para a segunda parte, a função é <span class="math inline">\(ax+1\)</span>. Portanto,</p>
+<p><span class="math display">\[
+f(1)=a+1.
+\]</span></p>
+<p>Com <span class="math inline">\(a=2\)</span>,</p>
+<p><span class="math display">\[
+f(1)=3.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+\lim_{x\to1^-}f(x)
+=
+\lim_{x\to1^+}f(x)
+=
+f(1)=3.
+\]</span></p>
+<p>A função é contínua em <span class="math inline">\(x=1\)</span> quando</p>
+<p><span class="math display">\[
+\boxed{a=2.}
+\]</span></p>
 <hr>
 </section>
-<section id="gráficos-de-funções-por-partes" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="gráficos-de-funções-por-partes"><span class="header-section-number">1.7</span> 📊 Gráficos de funções por partes</h2>
-<p>O gráfico de uma função por partes é construído desenhando cada trecho apenas na região onde ele é válido.</p>
-<p>Cuidados importantes:</p>
-<ul>
-<li>use ponto aberto quando o extremo não pertence ao trecho;</li>
-<li>use ponto fechado quando o extremo pertence ao trecho;</li>
-<li>verifique se há valores isolados;</li>
-<li>respeite o domínio de cada regra.</li>
-</ul>
-<p>Por exemplo, em</p>
+<section id="um-exemplo-com-dois-parâmetros" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="um-exemplo-com-dois-parâmetros"><span class="header-section-number">1.10</span> 🧮 Um exemplo com dois parâmetros</h2>
+<p>Em problemas mais elaborados, podemos precisar determinar dois parâmetros simultaneamente.</p>
+<p>Considere</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
-x+1, &amp; x&lt;2,\\
-x^2, &amp; x\geq 2,
+ax+1, &amp; x&lt;2,\\
+x^2+b, &amp; x\geq2.
 \end{cases}
 \]</span></p>
-<p>o trecho da reta vale apenas para <span class="math inline">\(x&lt;2\)</span>, e o trecho da parábola vale para <span class="math inline">\(x\geq 2\)</span>.</p>
+<p>Queremos que a função seja contínua em <span class="math inline">\(x=2\)</span> e que</p>
+<p><span class="math display">\[
+f(2)=7.
+\]</span></p>
+<p>Como o segundo trecho define o valor no ponto,</p>
+<p><span class="math display">\[
+f(2)=2^2+b.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+4+b=7,
+\]</span></p>
+<p>e, portanto,</p>
+<p><span class="math display">\[
+b=3.
+\]</span></p>
+<p>Para a continuidade, os limites laterais precisam coincidir com o valor da função:</p>
+<p><span class="math display">\[
+\lim_{x\to2^-}f(x)
+=
+\lim_{x\to2^+}f(x)
+=
+f(2).
+\]</span></p>
+<p>Pela esquerda:</p>
+<p><span class="math display">\[
+\lim_{x\to2^-}(ax+1)=2a+1.
+\]</span></p>
+<p>Pela direita:</p>
+<p><span class="math display">\[
+\lim_{x\to2^+}(x^2+b)=4+b=7.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+2a+1=7.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+a=3.
+\]</span></p>
+<p>A função será contínua em <span class="math inline">\(x=2\)</span> e satisfará a condição solicitada quando</p>
+<p><span class="math display">\[
+\boxed{a=3,\qquad b=3.}
+\]</span></p>
 <hr>
 </section>
-<section id="por-que-isso-importa-para-limites" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="por-que-isso-importa-para-limites"><span class="header-section-number">1.8</span> 🌉 Por que isso importa para limites?</h2>
-<p>Limites exigem entender o que acontece quando <span class="math inline">\(x\)</span> se aproxima de um ponto.</p>
-<p>Funções por partes mostram que o comportamento pode depender do lado pelo qual nos aproximamos.</p>
-<p>Por isso, elas são fundamentais para estudar:</p>
-<ul>
-<li>limites laterais;</li>
-<li>continuidade;</li>
-<li>descontinuidades removíveis;</li>
-<li>descontinuidades por salto;</li>
-<li>funções definidas em contextos reais.</li>
-</ul>
+<section id="relação-com-o-estudo-dos-limites" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="relação-com-o-estudo-dos-limites"><span class="header-section-number">1.11</span> 🌉 Relação com o estudo dos limites</h2>
+<p>As funções por partes são especialmente úteis para compreender por que os limites laterais são necessários.</p>
+<p>Em uma função definida por uma única expressão, podemos frequentemente estudar o limite substituindo o valor de aproximação, desde que a função seja contínua naquele ponto.</p>
+<p>Em funções por partes, porém, a expressão utilizada pode mudar conforme o lado pelo qual nos aproximamos.</p>
+<p>Por isso, precisamos analisar separadamente:</p>
+<p><span class="math display">\[
+\lim_{x\to a^-}f(x)
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to a^+}f(x).
+\]</span></p>
+<p>Somente depois de comparar esses resultados podemos concluir se o limite bilateral existe.</p>
+<p>Essa análise será fundamental no estudo sistemático dos limites e da continuidade.</p>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Função por partes</td>
+<td>Uma função definida por expressões diferentes em regiões do domínio.</td>
+</tr>
+<tr class="even">
+<td>Ponto de troca</td>
+<td>Ponto no qual muda a expressão utilizada.</td>
+</tr>
+<tr class="odd">
+<td>Limite pela esquerda</td>
+<td>Comportamento da função quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(a\)</span> por valores menores que <span class="math inline">\(a\)</span>.</td>
+</tr>
+<tr class="even">
+<td>Limite pela direita</td>
+<td>Comportamento da função quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(a\)</span> por valores maiores que <span class="math inline">\(a\)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Limite bilateral</td>
+<td>Existe quando os limites laterais existem e são iguais.</td>
+</tr>
+<tr class="even">
+<td>Descontinuidade removível</td>
+<td>O limite existe, mas não coincide com o valor da função ou a função não está definida no ponto.</td>
+</tr>
+<tr class="odd">
+<td>Descontinuidade por salto</td>
+<td>Os limites laterais existem e são finitos, mas diferentes.</td>
+</tr>
+<tr class="even">
+<td>Continuidade</td>
+<td>O limite existe e coincide com o valor da função no ponto.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -587,173 +904,330 @@ x^2, &amp; x\geq 2,
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<section id="exercício-1" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
-<p>Considere:</p>
+<section id="exercício-1-cálculo-de-valores" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1-cálculo-de-valores"><span class="header-section-number">2.1</span> 🧪 Exercício 1 — Cálculo de valores</h2>
+<p>Considere</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
 x+2, &amp; x&lt;0,\\
-x^2, &amp; x\geq 0.
+x^2, &amp; x\geq0.
 \end{cases}
 \]</span></p>
 <p>Calcule:</p>
 <ol type="a">
-<li><span class="math inline">\(f(-3)\)</span><br>
-</li>
-<li><span class="math inline">\(f(0)\)</span><br>
-</li>
-<li><span class="math inline">\(f(2)\)</span></li>
+<li><p><span class="math inline">\(f(-3)\)</span>;</p></li>
+<li><p><span class="math inline">\(f(0)\)</span>;</p></li>
+<li><p><span class="math inline">\(f(2)\)</span>.</p></li>
 </ol>
 </section>
-<section id="exercício-2" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
-<p>Determine o domínio:</p>
+<section id="exercício-2-domínio" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2-domínio"><span class="header-section-number">2.2</span> 🧪 Exercício 2 — Domínio</h2>
+<p>Determine o domínio da função</p>
 <p><span class="math display">\[
 g(x)=
 \begin{cases}
 \sqrt{x+1}, &amp; x&lt;2,\\
-\dfrac{1}{x-4}, &amp; x\geq 2.
+\dfrac{1}{x-4}, &amp; x\geq2.
 \end{cases}
 \]</span></p>
 </section>
-<section id="exercício-3" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
-<p>Considere:</p>
+<section id="exercício-3-limites-laterais" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3-limites-laterais"><span class="header-section-number">2.3</span> 🧪 Exercício 3 — Limites laterais</h2>
+<p>Considere</p>
 <p><span class="math display">\[
 h(x)=
 \begin{cases}
 2x+1, &amp; x&lt;1,\\
-x^2+2, &amp; x\geq 1.
+x^2+2, &amp; x\geq1.
 \end{cases}
 \]</span></p>
-<p>Compare o comportamento pela esquerda e pela direita em <span class="math inline">\(x=1\)</span>.</p>
+<p>Determine:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to1^-}h(x)\)</span>;</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to1^+}h(x)\)</span>;</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to1}h(x)\)</span>, caso exista;</p></li>
+<li><p><span class="math inline">\(h(1)\)</span>.</p></li>
+</ol>
 </section>
-<section id="exercício-4" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Encontre <span class="math inline">\(a\)</span> para que as partes se encontrem em <span class="math inline">\(x=2\)</span>:</p>
+<section id="exercício-4-continuidade-por-parâmetro" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4-continuidade-por-parâmetro"><span class="header-section-number">2.4</span> 🧪 Exercício 4 — Continuidade por parâmetro</h2>
+<p>Encontre o valor de <span class="math inline">\(a\)</span> para que a função</p>
 <p><span class="math display">\[
 p(x)=
 \begin{cases}
 x+4, &amp; x&lt;2,\\
-ax, &amp; x\geq 2.
+ax, &amp; x\geq2
 \end{cases}
+\]</span></p>
+<p>seja contínua em <span class="math inline">\(x=2\)</span>.</p>
+</section>
+<section id="exercício-5-descontinuidade-removível" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5-descontinuidade-removível"><span class="header-section-number">2.5</span> 🧪 Exercício 5 — Descontinuidade removível</h2>
+<p>Considere</p>
+<p><span class="math display">\[
+q(x)=
+\begin{cases}
+\dfrac{x^2-9}{x-3}, &amp; x\neq3,\\
+10, &amp; x=3.
+\end{cases}
+\]</span></p>
+<p>Determine:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to3}q(x)\)</span>;</p></li>
+<li><p><span class="math inline">\(q(3)\)</span>;</p></li>
+<li><p>classifique a descontinuidade em <span class="math inline">\(x=3\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercício-6-dois-parâmetros" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6-dois-parâmetros"><span class="header-section-number">2.6</span> 🧪 Exercício 6 — Dois parâmetros</h2>
+<p>Determine <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> para que a função</p>
+<p><span class="math display">\[
+r(x)=
+\begin{cases}
+ax+2, &amp; x&lt;1,\\
+x^2+b, &amp; x\geq1
+\end{cases}
+\]</span></p>
+<p>seja contínua em <span class="math inline">\(x=1\)</span> e satisfaça</p>
+<p><span class="math display">\[
+r(1)=5.
 \]</span></p>
 </section>
 </div>
 </div>
 <hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito comentado">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
+<span class="screen-reader-only">Importante</span>✅ Gabarito comentado
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
-<section id="exercício-1-1" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
-<ol type="a">
-<li>Como <span class="math inline">\(-3&lt;0\)</span>, usamos <span class="math inline">\(x+2\)</span>:</li>
-</ol>
+<section id="exercício-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
+<p>A função é</p>
+<p><span class="math display">\[
+f(x)=
+\begin{cases}
+x+2, &amp; x&lt;0,\\
+x^2, &amp; x\geq0.
+\end{cases}
+\]</span></p>
+<p><strong>a)</strong> Como <span class="math inline">\(-3&lt;0\)</span>, utilizamos a primeira regra:</p>
 <p><span class="math display">\[
 f(-3)=-3+2=-1.
 \]</span></p>
-<ol start="2" type="a">
-<li>Como <span class="math inline">\(0\geq 0\)</span>, usamos <span class="math inline">\(x^2\)</span>:</li>
-</ol>
+<p><strong>b)</strong> Como <span class="math inline">\(0\geq0\)</span>, utilizamos a segunda regra:</p>
 <p><span class="math display">\[
 f(0)=0^2=0.
 \]</span></p>
-<ol start="3" type="a">
-<li>Como <span class="math inline">\(2\geq 0\)</span>, usamos <span class="math inline">\(x^2\)</span>:</li>
-</ol>
+<p><strong>c)</strong> Como <span class="math inline">\(2\geq0\)</span>, utilizamos a segunda regra:</p>
 <p><span class="math display">\[
 f(2)=2^2=4.
 \]</span></p>
 </section>
-<section id="exercício-2-1" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
+<section id="exercício-2" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
 <p>Na primeira parte, precisamos de</p>
 <p><span class="math display">\[
-x+1\geq 0,
+x+1\geq0,
 \]</span></p>
-<p>logo</p>
+<p>portanto,</p>
 <p><span class="math display">\[
-x\geq -1.
+x\geq-1.
 \]</span></p>
-<p>Como essa parte vale para <span class="math inline">\(x&lt;2\)</span>, ela contribui com</p>
+<p>Como essa expressão vale para <span class="math inline">\(x&lt;2\)</span>, sua contribuição para o domínio é</p>
 <p><span class="math display">\[
 [-1,2).
 \]</span></p>
 <p>Na segunda parte, precisamos de</p>
 <p><span class="math display">\[
-x-4\neq 0,
+x-4\neq0,
 \]</span></p>
-<p>logo</p>
+<p>ou seja,</p>
 <p><span class="math display">\[
-x\neq 4.
+x\neq4.
 \]</span></p>
-<p>Como essa parte vale para <span class="math inline">\(x\geq 2\)</span>, ela contribui com</p>
+<p>Como essa expressão vale para <span class="math inline">\(x\geq2\)</span>, sua contribuição é</p>
 <p><span class="math display">\[
 [2,4)\cup(4,+\infty).
 \]</span></p>
-<p>Portanto,</p>
+<p>Unindo os intervalos:</p>
 <p><span class="math display">\[
-D_g=[-1,4)\cup(4,+\infty).
-\]</span></p>
-</section>
-<section id="exercício-3-1" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
-<p>Pela esquerda de <span class="math inline">\(1\)</span>, usamos</p>
-<p><span class="math display">\[
-2x+1.
-\]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(1\)</span> pela esquerda:</p>
-<p><span class="math display">\[
-2x+1\to 3.
-\]</span></p>
-<p>Pela direita de <span class="math inline">\(1\)</span>, usamos</p>
-<p><span class="math display">\[
-x^2+2.
-\]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(1\)</span> pela direita:</p>
-<p><span class="math display">\[
-x^2+2\to 3.
-\]</span></p>
-<p>Os comportamentos laterais coincidem.</p>
-<p>Além disso,</p>
-<p><span class="math display">\[
-h(1)=1^2+2=3.
-\]</span></p>
-<p>Então as partes se encontram em <span class="math inline">\(x=1\)</span>.</p>
-</section>
-<section id="exercício-4-1" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<p>Para as partes se encontrarem em <span class="math inline">\(x=2\)</span>, precisamos que:</p>
-<p><span class="math display">\[
-2+4=2a.
+D_g=[-1,2)\cup[2,4)\cup(4,+\infty).
 \]</span></p>
 <p>Logo,</p>
 <p><span class="math display">\[
-6=2a,
+\boxed{D_g=[-1,4)\cup(4,+\infty).}
 \]</span></p>
-<p>portanto</p>
+</section>
+<section id="exercício-3" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
+<p>A função é</p>
+<p><span class="math display">\[
+h(x)=
+\begin{cases}
+2x+1, &amp; x&lt;1,\\
+x^2+2, &amp; x\geq1.
+\end{cases}
+\]</span></p>
+<p><strong>a) Limite pela esquerda</strong></p>
+<p>Utilizamos a primeira expressão:</p>
+<p><span class="math display">\[
+\lim_{x\to1^-}h(x)
+=
+\lim_{x\to1^-}(2x+1)
+=3.
+\]</span></p>
+<p><strong>b) Limite pela direita</strong></p>
+<p>Utilizamos a segunda expressão:</p>
+<p><span class="math display">\[
+\lim_{x\to1^+}h(x)
+=
+\lim_{x\to1^+}(x^2+2)
+=3.
+\]</span></p>
+<p><strong>c) Limite bilateral</strong></p>
+<p>Como os limites laterais existem e são iguais,</p>
+<p><span class="math display">\[
+\boxed{\lim_{x\to1}h(x)=3.}
+\]</span></p>
+<p><strong>d) Valor da função</strong></p>
+<p>Como <span class="math inline">\(1\)</span> pertence à segunda condição,</p>
+<p><span class="math display">\[
+h(1)=1^2+2=3.
+\]</span></p>
+<p>Portanto, a função é contínua em <span class="math inline">\(x=1\)</span>.</p>
+</section>
+<section id="exercício-4" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
+<p>A função é</p>
+<p><span class="math display">\[
+p(x)=
+\begin{cases}
+x+4, &amp; x&lt;2,\\
+ax, &amp; x\geq2.
+\end{cases}
+\]</span></p>
+<p>Para que seja contínua em <span class="math inline">\(x=2\)</span>, os limites laterais devem coincidir com o valor da função.</p>
+<p>Pela esquerda:</p>
+<p><span class="math display">\[
+\lim_{x\to2^-}p(x)=2+4=6.
+\]</span></p>
+<p>Pela direita:</p>
+<p><span class="math display">\[
+\lim_{x\to2^+}p(x)=2a.
+\]</span></p>
+<p>Como a função deve ser contínua,</p>
+<p><span class="math display">\[
+6=2a.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+\boxed{a=3.}
+\]</span></p>
+<p>Com esse valor,</p>
+<p><span class="math display">\[
+p(2)=3\cdot2=6,
+\]</span></p>
+<p>confirmando a continuidade.</p>
+</section>
+<section id="exercício-5" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
+<p>Para <span class="math inline">\(x\neq3\)</span>, temos</p>
+<p><span class="math display">\[
+q(x)=\frac{x^2-9}{x-3}.
+\]</span></p>
+<p>Fatorando o numerador:</p>
+<p><span class="math display">\[
+x^2-9=(x-3)(x+3).
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+q(x)=x+3,\qquad x\neq3.
+\]</span></p>
+<p><strong>a) Limite</strong></p>
+<p><span class="math display">\[
+\lim_{x\to3}q(x)
+=
+\lim_{x\to3}(x+3)
+=6.
+\]</span></p>
+<p><strong>b) Valor da função</strong></p>
+<p>Pela definição,</p>
+<p><span class="math display">\[
+q(3)=10.
+\]</span></p>
+<p><strong>c) Classificação</strong></p>
+<p>Como</p>
+<p><span class="math display">\[
+\lim_{x\to3}q(x)=6
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+q(3)=10,
+\]</span></p>
+<p>o limite existe, mas não coincide com o valor da função.</p>
+<p>Portanto, temos uma <strong>descontinuidade removível</strong> em <span class="math inline">\(x=3\)</span>.</p>
+<p>Se definíssemos <span class="math inline">\(q(3)=6\)</span>, a função se tornaria contínua nesse ponto.</p>
+</section>
+<section id="exercício-6" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<p>A função é</p>
+<p><span class="math display">\[
+r(x)=
+\begin{cases}
+ax+2, &amp; x&lt;1,\\
+x^2+b, &amp; x\geq1.
+\end{cases}
+\]</span></p>
+<p>A condição <span class="math inline">\(r(1)=5\)</span> fornece</p>
+<p><span class="math display">\[
+1^2+b=5.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+b=4.
+\]</span></p>
+<p>Para a continuidade em <span class="math inline">\(x=1\)</span>, o limite pela esquerda deve coincidir com o valor da função:</p>
+<p><span class="math display">\[
+a\cdot1+2=5.
+\]</span></p>
+<p>Logo,</p>
 <p><span class="math display">\[
 a=3.
 \]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+\boxed{a=3,\qquad b=4.}
+\]</span></p>
+<p>Verificando:</p>
+<p><span class="math display">\[
+\lim_{x\to1^-}r(x)=3+2=5,
+\]</span></p>
+<p><span class="math display">\[
+\lim_{x\to1^+}r(x)=1+4=5,
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+r(1)=5.
+\]</span></p>
+<p>As três condições coincidem, portanto a função é contínua em <span class="math inline">\(x=1\)</span>.</p>
 </section>
 </section>
 </div>
 </div>
 <hr>
-<section id="quiz-funções-por-partes" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="quiz-funções-por-partes"><span class="header-section-number">3.5</span> 🧩 Quiz — Funções por Partes</h2>
+</section>
+<section id="quiz-funções-por-partes" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Funções por Partes</h1>
 <div class="question">
 <p><strong>Q1.</strong> Em uma função por partes, para calcular <span class="math inline">\(f(x)\)</span> devemos primeiro:</p>
 <div class="choices">
@@ -773,51 +1247,64 @@ a=3.
 </div>
 </div>
 <div class="question">
-<p><strong>Q2.</strong> Pontos onde a regra da função muda são importantes porque:</p>
+<p><strong>Q2.</strong> Quando os limites laterais em um ponto existem, mas são diferentes, podemos concluir que:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Nunca afetam o gráfico.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>O limite bilateral existe.</p><p></p>
 </div>
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Podem produzir saltos, buracos ou mudanças de comportamento.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>O limite bilateral não existe.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Eliminam o domínio da função.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>A função é necessariamente contínua.</p><p></p>
 </div>
 </div>
 
 </div>
 </div>
 <div class="question">
-<p><strong>Q3.</strong> Funções por partes são especialmente úteis para preparar o estudo de:</p>
+<p><strong>Q3.</strong> Para que uma função seja contínua em <span class="math inline">\(x=a\)</span>, é necessário que:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Apenas <span class="math inline">\(f(a)\)</span> esteja definida.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Apenas os limites laterais sejam iguais.</p><p></p>
+</div>
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Limites laterais e continuidade.</p><p></p>
-</div>
-<div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Apenas multiplicação de frações.</p><p></p>
-</div>
-<div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Somente números naturais.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>O limite bilateral exista e seja igual a <span class="math inline">\(f(a)\)</span>.</p><p></p>
 </div>
 </div>
 
 </div>
 </div>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="🌉 Conexão com a sequência principal">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>🌉 Conexão com a sequência principal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O estudo das funções por partes prepara o caminho para a compreensão dos limites laterais e da continuidade.</p>
+<p>Esses conceitos serão retomados e formalizados no estudo de limites, quando investigaremos o comportamento das funções nas proximidades de pontos específicos.</p>
+</div>
+</div>
 </section>
-</section>
-<section id="navegação" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
-<p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">1.10 Conceito Formal de Função</a></p>
-<p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">1.11 Revisão Gráfica e Algébrica</a></p>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
+<p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">1.10 — Conceito Formal de Função</a></p>
+<p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">1.11 — Revisão Gráfica e Algébrica</a></p>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html">1.21-AP — Domínio de Funções: Guia Completo</a></p>
 <p>🔬 <strong>Próximo AP:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html">1.23-AP — Assíntotas e Comportamento no Infinito</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">Topo</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

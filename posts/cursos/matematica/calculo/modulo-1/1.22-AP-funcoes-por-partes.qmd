@@ -1,6 +1,6 @@
 ---
 title: "🔬 Módulo 1.22-AP: Funções por Partes"
-description: "Aprofundamento sobre funções definidas por partes, domínio, gráficos, limites laterais e preparação para continuidade."
+description: "Aprofundamento sobre funções definidas por partes, domínio, pontos de troca, limites laterais, descontinuidades e continuidade."
 author: "Blog do Marcellini"
 date: "2026-06-05"
 lang: pt-BR
@@ -10,6 +10,7 @@ format:
   html:
     toc: true
     toc-title: "Neste Aprofundamento"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -22,11 +23,17 @@ page-layout: full
 
 ::: {.callout-note title="🧭 Aprofundamento opcional"}
 
-Este AP complementa a aula [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd). Ele amplia o estudo sem interromper a sequência principal.
+Este aprofundamento complementa a [Aula 1.10 — Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd).
 
-↩️ [Voltar à aula de origem](1.10-conceito-formal-de-funcao.qmd) · ▶️ [Continuar com 1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+Na aula principal, apresentamos a definição formal de função e introduzimos a ideia de utilizar regras diferentes em regiões distintas do domínio.
 
-::: 
+Agora vamos aprofundar esse assunto, estudando os pontos de troca, os limites laterais, os diferentes tipos de descontinuidade e as condições para que as partes se encontrem.
+
+Você pode estudar este material agora ou retornar a ele quando iniciar o estudo dos limites e da continuidade.
+
+↩️ [Voltar à aula de origem](1.10-conceito-formal-de-funcao.qmd) · ▶️ [Continuar com 1.11 — Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+
+:::
 
 🔬 **AP anterior:** [1.21-AP — Domínio de Funções: Guia Completo](1.21-AP-dominio-de-funcoes-guia-completo.qmd)
 
@@ -34,27 +41,29 @@ Este AP complementa a aula [1.10 Conceito Formal de Função](1.10-conceito-form
 
 # 🔬 Funções por Partes
 
-Uma função por partes é definida por regras diferentes em regiões diferentes do domínio.
+Uma função por partes é definida por expressões diferentes em regiões distintas do domínio.
 
-Esse tipo de função é essencial antes de estudar limites laterais, continuidade e descontinuidades.
-
-Por exemplo:
+Sua representação geral pode ser escrita como
 
 $$
 f(x)=
 \begin{cases}
-x+1, & x<2,\\
-x^2, & x\geq 2.
+f_1(x), & x\in A_1,\\
+f_2(x), & x\in A_2,\\
+\vdots\\
+f_n(x), & x\in A_n.
 \end{cases}
 $$
 
-Para calcular $f(x)$, primeiro olhamos em qual região $x$ está. Depois usamos a regra correspondente.
+Cada expressão é utilizada somente na região indicada por sua condição.
+
+Esse tipo de função aparece em diferentes situações matemáticas e aplicações. Também é especialmente importante para compreender limites laterais, continuidade e descontinuidades.
 
 ***
 
-## 🧩 Como ler uma função por partes
+## 🧩 Como interpretar uma função por partes
 
-Considere:
+Considere
 
 $$
 f(x)=
@@ -64,31 +73,40 @@ x^2+1, & x\geq 1.
 \end{cases}
 $$
 
-Se $x=0$, usamos a primeira regra, pois $0<1$:
+Para calcular $f(x)$, primeiro identificamos a condição satisfeita pelo valor de entrada. Depois aplicamos a expressão correspondente.
+
+Por exemplo, se $x=0$, temos $0<1$. Portanto, usamos a primeira regra:
 
 $$
-f(0)=2\cdot 0=0.
+f(0)=2\cdot0=0.
 $$
 
-Se $x=1$, usamos a segunda regra, pois $1\geq 1$:
+Se $x=1$, a primeira condição não é satisfeita. Como $1\geq1$, utilizamos a segunda regra:
 
 $$
 f(1)=1^2+1=2.
 $$
 
-Se $x=3$, usamos a segunda regra:
+Para $x=3$, também utilizamos a segunda regra:
 
 $$
 f(3)=3^2+1=10.
 $$
 
+Observe que as condições precisam ser lidas com atenção. O sinal de desigualdade determina a qual trecho pertence cada valor.
+
 ***
 
 ## 🧭 Domínio de funções por partes
 
-O domínio de uma função por partes é a união dos valores permitidos em cada trecho.
+O domínio de uma função por partes é obtido considerando as restrições de cada expressão e as condições que delimitam sua região de aplicação.
 
-Por exemplo:
+Em outras palavras, precisamos respeitar simultaneamente:
+
+1. as condições de cada trecho;
+2. as restrições matemáticas da expressão utilizada naquele trecho.
+
+Considere
 
 $$
 f(x)=
@@ -98,237 +116,617 @@ f(x)=
 \end{cases}
 $$
 
-Na primeira parte, precisamos de
+**Primeira parte**
+
+A expressão é
 
 $$
-x+2\geq 0,
+\sqrt{x+2}.
 $$
 
-isto é,
+Para que a raiz seja real, precisamos de
 
 $$
-x\geq -2.
+x+2\geq0,
 $$
 
-Mas essa regra vale apenas quando
+ou seja,
 
 $$
-x<1.
+x\geq-2.
 $$
 
-Logo, a primeira parte contribui com
+Mas essa expressão só vale quando $x<1$.
+
+Portanto, a primeira parte contribui com o intervalo
 
 $$
 [-2,1).
 $$
 
-Na segunda parte, precisamos de
+**Segunda parte**
+
+A expressão é
 
 $$
-x-3\neq 0,
+\frac{1}{x-3}.
 $$
 
-isto é,
+O denominador não pode ser zero:
 
 $$
-x\neq 3.
+x-3\neq0.
 $$
 
-Mas essa regra vale quando
+Logo,
 
 $$
-x\geq 1.
+x\neq3.
 $$
 
-Logo, a segunda parte contribui com
+Como essa regra vale para $x\geq1$, a segunda parte contribui com
 
 $$
 [1,3)\cup(3,+\infty).
 $$
 
-Portanto,
+**Domínio total**
+
+Unindo as duas partes:
 
 $$
-D_f=[-2,3)\cup(3,+\infty).
+D_f=[-2,1)\cup[1,3)\cup(3,+\infty).
 $$
+
+Simplificando,
+
+$$
+\boxed{D_f=[-2,3)\cup(3,+\infty).}
+$$
+
+Observe que o valor $x=1$ pertence ao domínio, pois está incluído na segunda condição. Já $x=3$ não pertence ao domínio, pois anula o denominador.
 
 ***
 
 ## 🎯 Pontos de troca
 
-Os pontos onde a regra muda são chamados aqui de pontos de troca.
+Os pontos nos quais a regra da função muda são chamados de **pontos de troca**.
 
-Em
+Considere novamente
 
 $$
 f(x)=
 \begin{cases}
 x+1, & x<2,\\
-x^2, & x\geq 2,
+x^2, & x\geq2.
 \end{cases}
 $$
 
-o ponto de troca é
+A regra muda em
 
 $$
 x=2.
 $$
 
-Esse ponto merece atenção especial porque nele podem ocorrer:
+Esse ponto merece atenção porque as expressões utilizadas à esquerda e à direita podem apresentar comportamentos diferentes.
 
-- buracos;
-- saltos;
-- mudança de fórmula;
-- descontinuidade;
-- continuidade por encaixe.
+Em um ponto de troca, podemos encontrar situações como:
+
+- as partes se encontram;
+- as partes apresentam valores-limite diferentes;
+- a função possui um valor diferente do limite;
+- a função não está definida no ponto.
+
+Essas possibilidades serão examinadas por meio dos limites laterais.
 
 ***
 
-## 👈 Limite pela esquerda e pela direita
+## 👈 Limites laterais
 
-Funções por partes são uma preparação natural para limites laterais.
+Para estudar o comportamento de uma função nas proximidades de um ponto $a$, podemos investigar o que acontece quando $x$ se aproxima de $a$ pela esquerda ou pela direita.
 
-Para entender o comportamento perto de um ponto de troca $a$, analisamos:
+Esses comportamentos são chamados de **limite pela esquerda** e **limite pela direita**.
 
-- o que acontece quando $x$ se aproxima de $a$ pela esquerda;
-- o que acontece quando $x$ se aproxima de $a$ pela direita.
+Usamos as notações
 
-Por exemplo:
+$$
+\lim_{x\to a^-}f(x)
+$$
+
+e
+
+$$
+\lim_{x\to a^+}f(x).
+$$
+
+O símbolo $a^-$ indica aproximação pela esquerda, enquanto $a^+$ indica aproximação pela direita.
+
+Considere
 
 $$
 f(x)=
 \begin{cases}
 x+1, & x<2,\\
-x^2, & x\geq 2.
+x^2, & x\geq2.
 \end{cases}
 $$
 
-Quando $x$ se aproxima de $2$ pela esquerda, usamos $x+1$:
+**Aproximação pela esquerda**
+
+Quando $x$ se aproxima de $2$ pela esquerda, utilizamos a expressão $x+1$.
+
+Assim,
 
 $$
-x+1\to 3.
+\lim_{x\to2^-}f(x)
+=
+\lim_{x\to2^-}(x+1)
+=3.
 $$
 
-Quando $x$ se aproxima de $2$ pela direita, usamos $x^2$:
+**Aproximação pela direita**
+
+Quando $x$ se aproxima de $2$ pela direita, utilizamos a expressão $x^2$.
+
+Logo,
 
 $$
-x^2\to 4.
+\lim_{x\to2^+}f(x)
+=
+\lim_{x\to2^+}x^2
+=4.
 $$
 
-Como os comportamentos laterais são diferentes, há um salto.
+Portanto,
+
+$$
+\lim_{x\to2^-}f(x)=3
+$$
+
+e
+
+$$
+\lim_{x\to2^+}f(x)=4.
+$$
+
+Como os limites laterais são diferentes, o limite bilateral não existe:
+
+$$
+\boxed{\lim_{x\to2}f(x)\text{ não existe}.}
+$$
+
+Essa diferença caracteriza um comportamento de salto.
 
 ***
 
-## 🕳️ Buracos
+## ⚖️ Quando o limite bilateral existe?
 
-Um buraco pode ocorrer quando a função se aproxima de um valor, mas o valor definido no ponto é outro ou não existe.
+Para que o limite bilateral de uma função exista em um ponto, os limites laterais precisam existir e ser iguais.
 
-Exemplo:
+Em particular, se
+
+$$
+\lim_{x\to a^-}f(x)=L
+$$
+
+e
+
+$$
+\lim_{x\to a^+}f(x)=L,
+$$
+
+então
+
+$$
+\boxed{\lim_{x\to a}f(x)=L.}
+$$
+
+Se os limites laterais forem diferentes, o limite bilateral não existe.
+
+Por exemplo, considere
 
 $$
 f(x)=
 \begin{cases}
-x+1, & x\neq 2,\\
+2x+1, & x<1,\\
+x^2+2, & x\geq1.
+\end{cases}
+$$
+
+Pela esquerda:
+
+$$
+\lim_{x\to1^-}f(x)
+=
+\lim_{x\to1^-}(2x+1)
+=3.
+$$
+
+Pela direita:
+
+$$
+\lim_{x\to1^+}f(x)
+=
+\lim_{x\to1^+}(x^2+2)
+=3.
+$$
+
+Como os dois resultados coincidem,
+
+$$
+\boxed{\lim_{x\to1}f(x)=3.}
+$$
+
+Observe, porém, que a existência do limite não garante, por si só, que a função seja contínua. Precisamos verificar também o valor da função no ponto.
+
+***
+
+## 🕳️ Buracos e descontinuidades removíveis
+
+Uma descontinuidade removível ocorre quando o limite da função existe em determinado ponto, mas a função não está definida nesse ponto ou possui ali um valor diferente do limite.
+
+Considere
+
+$$
+f(x)=
+\begin{cases}
+x+1, & x\neq2,\\
 10, & x=2.
 \end{cases}
 $$
 
-Perto de $2$, a função segue a reta
+Para valores próximos de $2$, mas diferentes de $2$, a função é dada por
 
 $$
-x+1.
+f(x)=x+1.
 $$
 
-Assim, os valores se aproximam de
+Assim,
 
 $$
-3.
+\lim_{x\to2}f(x)
+=
+\lim_{x\to2}(x+1)
+=3.
 $$
 
-Mas o valor da função em $2$ é
+Entretanto,
 
 $$
 f(2)=10.
 $$
 
-Esse é um exemplo típico de descontinuidade removível.
+Portanto,
+
+$$
+\lim_{x\to2}f(x)\neq f(2).
+$$
+
+O limite existe, mas não coincide com o valor da função.
+
+Essa descontinuidade é removível porque poderíamos redefinir o valor no ponto como
+
+$$
+f(2)=3
+$$
+
+e obter uma função contínua em $x=2$.
+
+Outro exemplo importante é
+
+$$
+g(x)=\frac{x^2-4}{x-2},
+\qquad x\neq2.
+$$
+
+Fatorando o numerador:
+
+$$
+g(x)=\frac{(x-2)(x+2)}{x-2}.
+$$
+
+Para $x\neq2$, podemos simplificar:
+
+$$
+g(x)=x+2.
+$$
+
+Consequentemente,
+
+$$
+\lim_{x\to2}g(x)=4.
+$$
+
+A função não está definida em $x=2$, mas seu limite existe.
+
+O gráfico apresenta um ponto ausente em
+
+$$
+(2,4).
+$$
+
+Esse é outro exemplo de descontinuidade removível.
 
 ***
 
-## 🧱 Continuidade por encaixe
+## ↕️ Descontinuidade por salto
 
-Às vezes, escolhemos um parâmetro para fazer as partes se encontrarem.
+Uma descontinuidade por salto ocorre quando os limites laterais existem e são finitos, mas possuem valores diferentes.
 
-Considere:
-
-$$
-f(x)=
-\begin{cases}
-x+2, & x<1,\\
-ax+1, & x\geq 1.
-\end{cases}
-$$
-
-Para as partes se encontrarem em $x=1$, precisamos que:
-
-$$
-1+2=a\cdot 1+1.
-$$
-
-Logo:
-
-$$
-3=a+1,
-$$
-
-portanto
-
-$$
-a=2.
-$$
-
-Esse tipo de problema aparecerá no estudo de continuidade.
-
-***
-
-## 📊 Gráficos de funções por partes
-
-O gráfico de uma função por partes é construído desenhando cada trecho apenas na região onde ele é válido.
-
-Cuidados importantes:
-
-- use ponto aberto quando o extremo não pertence ao trecho;
-- use ponto fechado quando o extremo pertence ao trecho;
-- verifique se há valores isolados;
-- respeite o domínio de cada regra.
-
-Por exemplo, em
+Considere
 
 $$
 f(x)=
 \begin{cases}
 x+1, & x<2,\\
-x^2, & x\geq 2,
+x^2, & x\geq2.
 \end{cases}
 $$
 
-o trecho da reta vale apenas para $x<2$, e o trecho da parábola vale para $x\geq 2$.
+Já calculamos:
+
+$$
+\lim_{x\to2^-}f(x)=3
+$$
+
+e
+
+$$
+\lim_{x\to2^+}f(x)=4.
+$$
+
+Como
+
+$$
+3\neq4,
+$$
+
+o limite bilateral não existe.
+
+A diferença entre os valores laterais caracteriza um salto de tamanho
+
+$$
+|4-3|=1.
+$$
+
+O valor efetivo da função no ponto é
+
+$$
+f(2)=4.
+$$
+
+A existência desse valor não elimina a descontinuidade, pois os limites laterais não coincidem.
 
 ***
 
-## 🌉 Por que isso importa para limites?
+## 🧱 Continuidade em um ponto
 
-Limites exigem entender o que acontece quando $x$ se aproxima de um ponto.
+Uma função é contínua em um ponto $a$ quando satisfaz três condições:
 
-Funções por partes mostram que o comportamento pode depender do lado pelo qual nos aproximamos.
+1. $f(a)$ está definida;
+2. $\lim_{x\to a}f(x)$ existe;
+3. o limite é igual ao valor da função.
 
-Por isso, elas são fundamentais para estudar:
+Em notação matemática:
 
-- limites laterais;
-- continuidade;
-- descontinuidades removíveis;
-- descontinuidades por salto;
-- funções definidas em contextos reais.
+$$
+\boxed{\lim_{x\to a}f(x)=f(a).}
+$$
+
+Essa igualdade reúne as três condições, desde que ambos os lados estejam definidos.
+
+Para uma função por partes, isso significa que os trechos precisam se encontrar no ponto de troca e que o valor atribuído à função nesse ponto deve coincidir com o limite comum.
+
+***
+
+## 🧩 Continuidade por encaixe
+
+Considere a função
+
+$$
+f(x)=
+\begin{cases}
+x+2, & x<1,\\
+ax+1, & x\geq1.
+\end{cases}
+$$
+
+Queremos determinar o valor de $a$ para que a função seja contínua em $x=1$.
+
+Primeiro, calculamos o limite pela esquerda:
+
+$$
+\lim_{x\to1^-}f(x)
+=
+\lim_{x\to1^-}(x+2)
+=3.
+$$
+
+Agora, calculamos o limite pela direita:
+
+$$
+\lim_{x\to1^+}f(x)
+=
+\lim_{x\to1^+}(ax+1)
+=a+1.
+$$
+
+Para que os limites laterais coincidam, precisamos de
+
+$$
+3=a+1.
+$$
+
+Logo,
+
+$$
+\boxed{a=2.}
+$$
+
+Verifiquemos o valor da função no ponto:
+
+$$
+f(1)=2a+1.
+$$
+
+Com $a=2$,
+
+$$
+f(1)=2\cdot2+1=5.
+$$
+
+Há um problema: os limites laterais não são iguais ao valor calculado? Vamos observar a expressão utilizada.
+
+Para a segunda parte, a função é $ax+1$. Portanto,
+
+$$
+f(1)=a+1.
+$$
+
+Com $a=2$,
+
+$$
+f(1)=3.
+$$
+
+Assim,
+
+$$
+\lim_{x\to1^-}f(x)
+=
+\lim_{x\to1^+}f(x)
+=
+f(1)=3.
+$$
+
+A função é contínua em $x=1$ quando
+
+$$
+\boxed{a=2.}
+$$
+
+***
+
+## 🧮 Um exemplo com dois parâmetros
+
+Em problemas mais elaborados, podemos precisar determinar dois parâmetros simultaneamente.
+
+Considere
+
+$$
+f(x)=
+\begin{cases}
+ax+1, & x<2,\\
+x^2+b, & x\geq2.
+\end{cases}
+$$
+
+Queremos que a função seja contínua em $x=2$ e que
+
+$$
+f(2)=7.
+$$
+
+Como o segundo trecho define o valor no ponto,
+
+$$
+f(2)=2^2+b.
+$$
+
+Logo,
+
+$$
+4+b=7,
+$$
+
+e, portanto,
+
+$$
+b=3.
+$$
+
+Para a continuidade, os limites laterais precisam coincidir com o valor da função:
+
+$$
+\lim_{x\to2^-}f(x)
+=
+\lim_{x\to2^+}f(x)
+=
+f(2).
+$$
+
+Pela esquerda:
+
+$$
+\lim_{x\to2^-}(ax+1)=2a+1.
+$$
+
+Pela direita:
+
+$$
+\lim_{x\to2^+}(x^2+b)=4+b=7.
+$$
+
+Assim,
+
+$$
+2a+1=7.
+$$
+
+Portanto,
+
+$$
+a=3.
+$$
+
+A função será contínua em $x=2$ e satisfará a condição solicitada quando
+
+$$
+\boxed{a=3,\qquad b=3.}
+$$
+
+***
+
+## 🌉 Relação com o estudo dos limites
+
+As funções por partes são especialmente úteis para compreender por que os limites laterais são necessários.
+
+Em uma função definida por uma única expressão, podemos frequentemente estudar o limite substituindo o valor de aproximação, desde que a função seja contínua naquele ponto.
+
+Em funções por partes, porém, a expressão utilizada pode mudar conforme o lado pelo qual nos aproximamos.
+
+Por isso, precisamos analisar separadamente:
+
+$$
+\lim_{x\to a^-}f(x)
+$$
+
+e
+
+$$
+\lim_{x\to a^+}f(x).
+$$
+
+Somente depois de comparar esses resultados podemos concluir se o limite bilateral existe.
+
+Essa análise será fundamental no estudo sistemático dos limites e da continuidade.
+
+***
+
+::: {.callout-note title="📋 Quadro-resumo"}
+
+| Conceito | Significado |
+|---|---|
+| Função por partes | Uma função definida por expressões diferentes em regiões do domínio. |
+| Ponto de troca | Ponto no qual muda a expressão utilizada. |
+| Limite pela esquerda | Comportamento da função quando $x$ se aproxima de $a$ por valores menores que $a$. |
+| Limite pela direita | Comportamento da função quando $x$ se aproxima de $a$ por valores maiores que $a$. |
+| Limite bilateral | Existe quando os limites laterais existem e são iguais. |
+| Descontinuidade removível | O limite existe, mas não coincide com o valor da função ou a função não está definida no ponto. |
+| Descontinuidade por salto | Os limites laterais existem e são finitos, mas diferentes. |
+| Continuidade | O limite existe e coincide com o valor da função no ponto. |
+
+:::
 
 ***
 
@@ -336,85 +734,145 @@ Por isso, elas são fundamentais para estudar:
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## 🧪 Exercício 1
+## 🧪 Exercício 1 — Cálculo de valores
 
-Considere:
+Considere
 
 $$
 f(x)=
 \begin{cases}
 x+2, & x<0,\\
-x^2, & x\geq 0.
+x^2, & x\geq0.
 \end{cases}
 $$
 
 Calcule:
 
-a) $f(-3)$  
-b) $f(0)$  
-c) $f(2)$
+a) $f(-3)$;
 
-## 🧪 Exercício 2
+b) $f(0)$;
 
-Determine o domínio:
+c) $f(2)$.
+
+## 🧪 Exercício 2 — Domínio
+
+Determine o domínio da função
 
 $$
 g(x)=
 \begin{cases}
 \sqrt{x+1}, & x<2,\\
-\dfrac{1}{x-4}, & x\geq 2.
+\dfrac{1}{x-4}, & x\geq2.
 \end{cases}
 $$
 
-## 🧪 Exercício 3
+## 🧪 Exercício 3 — Limites laterais
 
-Considere:
+Considere
 
 $$
 h(x)=
 \begin{cases}
 2x+1, & x<1,\\
-x^2+2, & x\geq 1.
+x^2+2, & x\geq1.
 \end{cases}
 $$
 
-Compare o comportamento pela esquerda e pela direita em $x=1$.
+Determine:
 
-## 🧪 Exercício 4
+a) $\displaystyle\lim_{x\to1^-}h(x)$;
 
-Encontre $a$ para que as partes se encontrem em $x=2$:
+b) $\displaystyle\lim_{x\to1^+}h(x)$;
+
+c) $\displaystyle\lim_{x\to1}h(x)$, caso exista;
+
+d) $h(1)$.
+
+## 🧪 Exercício 4 — Continuidade por parâmetro
+
+Encontre o valor de $a$ para que a função
 
 $$
 p(x)=
 \begin{cases}
 x+4, & x<2,\\
-ax, & x\geq 2.
+ax, & x\geq2
 \end{cases}
+$$
+
+seja contínua em $x=2$.
+
+## 🧪 Exercício 5 — Descontinuidade removível
+
+Considere
+
+$$
+q(x)=
+\begin{cases}
+\dfrac{x^2-9}{x-3}, & x\neq3,\\
+10, & x=3.
+\end{cases}
+$$
+
+Determine:
+
+a) $\displaystyle\lim_{x\to3}q(x)$;
+
+b) $q(3)$;
+
+c) classifique a descontinuidade em $x=3$.
+
+## 🧪 Exercício 6 — Dois parâmetros
+
+Determine $a$ e $b$ para que a função
+
+$$
+r(x)=
+\begin{cases}
+ax+2, & x<1,\\
+x^2+b, & x\geq1
+\end{cases}
+$$
+
+seja contínua em $x=1$ e satisfaça
+
+$$
+r(1)=5.
 $$
 
 :::
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
+::: {.callout-important collapse="true" title="✅ Gabarito comentado"}
 
 # ✅ Gabarito comentado
 
 ## 🧪 Exercício 1
 
-a) Como $-3<0$, usamos $x+2$:
+A função é
+
+$$
+f(x)=
+\begin{cases}
+x+2, & x<0,\\
+x^2, & x\geq0.
+\end{cases}
+$$
+
+**a)** Como $-3<0$, utilizamos a primeira regra:
 
 $$
 f(-3)=-3+2=-1.
 $$
 
-b) Como $0\geq 0$, usamos $x^2$:
+**b)** Como $0\geq0$, utilizamos a segunda regra:
 
 $$
 f(0)=0^2=0.
 $$
 
-c) Como $2\geq 0$, usamos $x^2$:
+**c)** Como $2\geq0$, utilizamos a segunda regra:
 
 $$
 f(2)=2^2=4.
@@ -425,16 +883,16 @@ $$
 Na primeira parte, precisamos de
 
 $$
-x+1\geq 0,
+x+1\geq0,
 $$
 
-logo
+portanto,
 
 $$
-x\geq -1.
+x\geq-1.
 $$
 
-Como essa parte vale para $x<2$, ela contribui com
+Como essa expressão vale para $x<2$, sua contribuição para o domínio é
 
 $$
 [-1,2).
@@ -443,88 +901,253 @@ $$
 Na segunda parte, precisamos de
 
 $$
-x-4\neq 0,
+x-4\neq0,
 $$
 
-logo
+ou seja,
 
 $$
-x\neq 4.
+x\neq4.
 $$
 
-Como essa parte vale para $x\geq 2$, ela contribui com
+Como essa expressão vale para $x\geq2$, sua contribuição é
 
 $$
 [2,4)\cup(4,+\infty).
 $$
 
-Portanto,
+Unindo os intervalos:
 
 $$
-D_g=[-1,4)\cup(4,+\infty).
-$$
-
-## 🧪 Exercício 3
-
-Pela esquerda de $1$, usamos
-
-$$
-2x+1.
-$$
-
-Quando $x$ se aproxima de $1$ pela esquerda:
-
-$$
-2x+1\to 3.
-$$
-
-Pela direita de $1$, usamos
-
-$$
-x^2+2.
-$$
-
-Quando $x$ se aproxima de $1$ pela direita:
-
-$$
-x^2+2\to 3.
-$$
-
-Os comportamentos laterais coincidem.
-
-Além disso,
-
-$$
-h(1)=1^2+2=3.
-$$
-
-Então as partes se encontram em $x=1$.
-
-## 🧪 Exercício 4
-
-Para as partes se encontrarem em $x=2$, precisamos que:
-
-$$
-2+4=2a.
+D_g=[-1,2)\cup[2,4)\cup(4,+\infty).
 $$
 
 Logo,
 
 $$
-6=2a,
+\boxed{D_g=[-1,4)\cup(4,+\infty).}
 $$
 
-portanto
+## 🧪 Exercício 3
+
+A função é
+
+$$
+h(x)=
+\begin{cases}
+2x+1, & x<1,\\
+x^2+2, & x\geq1.
+\end{cases}
+$$
+
+**a) Limite pela esquerda**
+
+Utilizamos a primeira expressão:
+
+$$
+\lim_{x\to1^-}h(x)
+=
+\lim_{x\to1^-}(2x+1)
+=3.
+$$
+
+**b) Limite pela direita**
+
+Utilizamos a segunda expressão:
+
+$$
+\lim_{x\to1^+}h(x)
+=
+\lim_{x\to1^+}(x^2+2)
+=3.
+$$
+
+**c) Limite bilateral**
+
+Como os limites laterais existem e são iguais,
+
+$$
+\boxed{\lim_{x\to1}h(x)=3.}
+$$
+
+**d) Valor da função**
+
+Como $1$ pertence à segunda condição,
+
+$$
+h(1)=1^2+2=3.
+$$
+
+Portanto, a função é contínua em $x=1$.
+
+## 🧪 Exercício 4
+
+A função é
+
+$$
+p(x)=
+\begin{cases}
+x+4, & x<2,\\
+ax, & x\geq2.
+\end{cases}
+$$
+
+Para que seja contínua em $x=2$, os limites laterais devem coincidir com o valor da função.
+
+Pela esquerda:
+
+$$
+\lim_{x\to2^-}p(x)=2+4=6.
+$$
+
+Pela direita:
+
+$$
+\lim_{x\to2^+}p(x)=2a.
+$$
+
+Como a função deve ser contínua,
+
+$$
+6=2a.
+$$
+
+Logo,
+
+$$
+\boxed{a=3.}
+$$
+
+Com esse valor,
+
+$$
+p(2)=3\cdot2=6,
+$$
+
+confirmando a continuidade.
+
+## 🧪 Exercício 5
+
+Para $x\neq3$, temos
+
+$$
+q(x)=\frac{x^2-9}{x-3}.
+$$
+
+Fatorando o numerador:
+
+$$
+x^2-9=(x-3)(x+3).
+$$
+
+Assim,
+
+$$
+q(x)=x+3,\qquad x\neq3.
+$$
+
+**a) Limite**
+
+$$
+\lim_{x\to3}q(x)
+=
+\lim_{x\to3}(x+3)
+=6.
+$$
+
+**b) Valor da função**
+
+Pela definição,
+
+$$
+q(3)=10.
+$$
+
+**c) Classificação**
+
+Como
+
+$$
+\lim_{x\to3}q(x)=6
+$$
+
+e
+
+$$
+q(3)=10,
+$$
+
+o limite existe, mas não coincide com o valor da função.
+
+Portanto, temos uma **descontinuidade removível** em $x=3$.
+
+Se definíssemos $q(3)=6$, a função se tornaria contínua nesse ponto.
+
+## 🧪 Exercício 6
+
+A função é
+
+$$
+r(x)=
+\begin{cases}
+ax+2, & x<1,\\
+x^2+b, & x\geq1.
+\end{cases}
+$$
+
+A condição $r(1)=5$ fornece
+
+$$
+1^2+b=5.
+$$
+
+Portanto,
+
+$$
+b=4.
+$$
+
+Para a continuidade em $x=1$, o limite pela esquerda deve coincidir com o valor da função:
+
+$$
+a\cdot1+2=5.
+$$
+
+Logo,
 
 $$
 a=3.
 $$
 
+Assim,
+
+$$
+\boxed{a=3,\qquad b=4.}
+$$
+
+Verificando:
+
+$$
+\lim_{x\to1^-}r(x)=3+2=5,
+$$
+
+$$
+\lim_{x\to1^+}r(x)=1+4=5,
+$$
+
+e
+
+$$
+r(1)=5.
+$$
+
+As três condições coincidem, portanto a função é contínua em $x=1$.
+
 :::
 
 ***
 
-## 🧩 Quiz — Funções por Partes
+# 🧩 Quiz — Funções por Partes
 
 :::::{.question}
 **Q1.** Em uma função por partes, para calcular $f(x)$ devemos primeiro:
@@ -545,60 +1168,67 @@ Ignorar as condições.
 :::::
 
 :::::{.question}
-**Q2.** Pontos onde a regra da função muda são importantes porque:
+**Q2.** Quando os limites laterais em um ponto existem, mas são diferentes, podemos concluir que:
 
 ::::{.choices}
 :::{.choice}
-Nunca afetam o gráfico.
+O limite bilateral existe.
 :::
 
 :::{.choice .correct-choice}
-Podem produzir saltos, buracos ou mudanças de comportamento.
+O limite bilateral não existe.
 :::
 
 :::{.choice}
-Eliminam o domínio da função.
+A função é necessariamente contínua.
 :::
 ::::
 :::::
 
 :::::{.question}
-**Q3.** Funções por partes são especialmente úteis para preparar o estudo de:
+**Q3.** Para que uma função seja contínua em $x=a$, é necessário que:
 
 ::::{.choices}
+:::{.choice}
+Apenas $f(a)$ esteja definida.
+:::
+
+:::{.choice}
+Apenas os limites laterais sejam iguais.
+:::
+
 :::{.choice .correct-choice}
-Limites laterais e continuidade.
-:::
-
-:::{.choice}
-Apenas multiplicação de frações.
-:::
-
-:::{.choice}
-Somente números naturais.
+O limite bilateral exista e seja igual a $f(a)$.
 :::
 ::::
 :::::
 
 ***
 
+::: {.callout-tip title="🌉 Conexão com a sequência principal"}
+
+O estudo das funções por partes prepara o caminho para a compreensão dos limites laterais e da continuidade.
+
+Esses conceitos serão retomados e formalizados no estudo de limites, quando investigaremos o comportamento das funções nas proximidades de pontos específicos.
+
+:::
+
 # 🔗 Navegação
 
-↩️ **Voltar à aula de origem:** [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+↩️ **Voltar à aula de origem:** [1.10 — Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
 
-▶️ **Continuar a sequência principal:** [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+▶️ **Continuar a sequência principal:** [1.11 — Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
 
 🔬 **AP anterior:** [1.21-AP — Domínio de Funções: Guia Completo](1.21-AP-dominio-de-funcoes-guia-completo.qmd)
 
 🔬 **Próximo AP:** [1.23-AP — Assíntotas e Comportamento no Infinito](1.23-AP-assintotas-e-comportamento-no-infinito.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.22-AP-funcoes-por-partes.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 
-:::{.callout-note}
+::: {.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

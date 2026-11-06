@@ -10,6 +10,7 @@ format:
   html:
     toc: true
     toc-title: "Neste Aprofundamento"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -22,11 +23,13 @@ page-layout: full
 
 ::: {.callout-note title="🧭 Aprofundamento opcional"}
 
-Este AP complementa a aula [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd). Ele amplia o estudo sem interromper a sequência principal.
+Este aprofundamento complementa a aula [1.10 — Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd). Seu objetivo é desenvolver, com mais detalhes, uma das ideias fundamentais daquela aula: a determinação do domínio de uma função.
 
-↩️ [Voltar à aula de origem](1.10-conceito-formal-de-funcao.qmd) · ▶️ [Continuar com 1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+O conteúdo amplia a sequência principal sem interromper seu desenvolvimento.
 
-::: 
+↩️ [Voltar à aula de origem](1.10-conceito-formal-de-funcao.qmd) · ▶️ [Continuar com 1.11 — Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+
+:::
 
 🔬 **AP anterior:** [1.20-AP — Valor Absoluto, Distância e Vizinhanças](1.20-AP-valor-absoluto-distancia-vizinhancas.qmd)
 
@@ -34,178 +37,194 @@ Este AP complementa a aula [1.10 Conceito Formal de Função](1.10-conceito-form
 
 # 🔬 Domínio de Funções — Guia Completo
 
-O domínio de uma função é o conjunto das entradas permitidas.
+O **domínio de uma função** é o conjunto de todas as entradas para as quais a função está definida.
 
-No Cálculo, isso é decisivo. Antes de perguntar sobre limite, continuidade, derivada ou integral, precisamos saber onde a função existe.
+No Cálculo, determinar esse conjunto é fundamental. Antes de investigar limites, continuidade, derivadas ou integrais, precisamos saber em quais valores de entrada a função pode ser considerada.
 
-Este aprofundamento organiza as principais restrições de domínio que aparecem em funções reais.
+Neste aprofundamento, vamos organizar as principais restrições que aparecem no estudo de funções reais e aprender a combiná-las corretamente.
 
-***
+## 🧭 1. Regra geral
 
-## 🧭 Regra geral
+Para determinar o domínio real de uma função, fazemos a seguinte pergunta:
 
-Para encontrar o domínio real de uma função, fazemos a pergunta:
+> Para quais valores reais de \(x\) a expressão que define a função está matematicamente bem definida?
 
-> Para quais valores reais de $x$ a expressão faz sentido?
+As restrições mais comuns estão associadas a:
 
-As restrições mais comuns vêm de:
-
-- denominadores;
+- denominadores de frações;
 - raízes de índice par;
 - logaritmos;
-- tangente e outras funções trigonométricas com denominador;
-- composições;
+- funções trigonométricas que envolvem denominadores;
+- composições de funções;
 - funções definidas por partes.
 
-***
+Quando uma expressão apresenta mais de uma dessas operações, **todas as condições precisam ser satisfeitas simultaneamente**.
 
-## ➗ Frações
+Em termos de conjuntos, o domínio será a interseção dos conjuntos determinados por cada restrição, respeitando também as condições específicas de cada função.
 
-Em uma fração, o denominador não pode ser zero.
+## ➗ 2. Frações: o denominador não pode ser zero
 
-Por exemplo:
+Em uma fração, o denominador precisa ser diferente de zero.
+
+Considere:
 
 $$
 f(x)=\frac{1}{x-4}.
 $$
 
-Precisamos de
+Precisamos impor:
 
 $$
 x-4\neq 0.
 $$
 
-Logo,
+Logo:
 
 $$
 x\neq 4.
 $$
 
-Assim,
+Portanto, o domínio é:
 
 $$
 D_f=(-\infty,4)\cup(4,+\infty).
 $$
 
-***
+Observe que todos os números reais são permitidos, exceto \(4\).
 
-## 🌱 √ Raízes de índice par
+**Regra:** em qualquer expressão fracionária, devemos excluir os valores que anulam o denominador.
 
-Para raízes de índice par, o radicando precisa ser não negativo.
+## 🌱 3. Raízes de índice par
 
-Por exemplo:
+Para que uma raiz de índice par tenha valor real, seu radicando precisa ser não negativo.
+
+Considere:
 
 $$
 g(x)=\sqrt{x-3}.
 $$
 
-Precisamos de
+Precisamos de:
 
 $$
 x-3\geq 0.
 $$
 
-Logo,
+Logo:
 
 $$
 x\geq 3.
 $$
 
-Assim,
+Assim:
 
 $$
 D_g=[3,+\infty).
 $$
 
-Outro exemplo:
+Observe que o valor \(x=3\) está permitido, pois:
+
+$$
+\sqrt{3-3}=\sqrt{0}=0.
+$$
+
+### Outro exemplo: uma raiz com expressão quadrática
+
+Considere:
 
 $$
 h(x)=\sqrt{9-x^2}.
 $$
 
-Precisamos de
+Precisamos de:
 
 $$
 9-x^2\geq 0.
 $$
 
-Isso equivale a
+Reorganizando:
 
 $$
 x^2\leq 9.
 $$
 
-Logo,
+Portanto:
 
 $$
 -3\leq x\leq 3.
 $$
 
-Assim,
+O domínio é:
 
 $$
 D_h=[-3,3].
 $$
 
-***
+**Regra:** para raízes de índice par, o radicando deve ser maior ou igual a zero.
 
-## 📈 Logaritmos
+> Atenção: essa condição não se aplica da mesma maneira às raízes de índice ímpar. Por exemplo, \(\sqrt[3]{-8}=-2\) é um número real.
 
-Para logaritmos reais, o argumento precisa ser positivo.
+## 📈 4. Logaritmos
 
-Por exemplo:
+Para que um logaritmo esteja definido nos números reais, seu argumento precisa ser estritamente positivo.
+
+Considere:
 
 $$
 p(x)=\ln(x-2).
 $$
 
-Precisamos de
+Precisamos de:
 
 $$
 x-2>0.
 $$
 
-Logo,
+Logo:
 
 $$
 x>2.
 $$
 
-Assim,
+Assim:
 
 $$
 D_p=(2,+\infty).
 $$
 
-Se
+Observe que \(x=2\) não pertence ao domínio, pois o logaritmo de zero não está definido.
+
+### Outro exemplo
+
+Se:
 
 $$
 q(x)=\log_2(5-x),
 $$
 
-precisamos de
+precisamos de:
 
 $$
 5-x>0.
 $$
 
-Logo,
+Logo:
 
 $$
 x<5.
 $$
 
-Assim,
+Assim:
 
 $$
 D_q=(-\infty,5).
 $$
 
-***
+**Regra:** o argumento de um logaritmo real deve ser estritamente positivo.
 
-## 🧩 Composição de restrições
+## 🧩 5. Composição de restrições
 
-Quando a função combina várias operações, todas as restrições precisam ser satisfeitas ao mesmo tempo.
+Quando uma função combina diferentes operações, todas as restrições precisam ser satisfeitas simultaneamente.
 
 Considere:
 
@@ -213,41 +232,55 @@ $$
 f(x)=\frac{\sqrt{x-1}}{x-4}.
 $$
 
-Temos duas restrições:
+Temos duas condições.
 
-1. raiz quadrada:
+**1. Restrição da raiz quadrada**
 
-$$
-x-1\geq 0,
-$$
-
-logo
+O radicando precisa ser não negativo:
 
 $$
-x\geq 1;
+x-1\geq 0.
 $$
 
-2. denominador:
+Logo:
 
 $$
-x-4\neq 0,
+x\geq 1.
 $$
 
-logo
+**2. Restrição do denominador**
+
+O denominador precisa ser diferente de zero:
+
+$$
+x-4\neq 0.
+$$
+
+Logo:
 
 $$
 x\neq 4.
 $$
 
-Portanto,
+Precisamos combinar as duas condições:
 
 $$
-D_f=[1,4)\cup(4,+\infty).
+x\geq 1
+\qquad\text{e}\qquad
+x\neq 4.
 $$
 
-***
+Portanto:
 
-## 🔗 Logaritmo com fração
+$$
+\boxed{D_f=[1,4)\cup(4,+\infty).}
+$$
+
+A ideia central é que não basta satisfazer uma das condições: o número precisa satisfazer todas elas.
+
+## 🔗 6. Logaritmo com fração
+
+Quando o argumento de um logaritmo é uma fração, precisamos garantir que a fração inteira seja positiva.
 
 Considere:
 
@@ -255,220 +288,321 @@ $$
 g(x)=\ln\left(\frac{x-1}{x+2}\right).
 $$
 
-Precisamos de
+A condição fundamental é:
 
 $$
 \frac{x-1}{x+2}>0.
 $$
 
-Além disso, implicitamente
+Além disso, o denominador não pode ser zero:
 
 $$
 x+2\neq 0.
 $$
 
-Os pontos críticos são
+Os pontos críticos são os valores que anulam o numerador ou o denominador:
 
 $$
 x=1
+\qquad\text{e}\qquad
+x=-2.
+$$
+
+Eles dividem a reta real em três intervalos:
+
+$$
+(-\infty,-2),\quad (-2,1),\quad (1,+\infty).
+$$
+
+Analisando os sinais:
+
+| Intervalo | Numerador \(x-1\) | Denominador \(x+2\) | Fração |
+|---|---:|---:|---:|
+| \((-\infty,-2)\) | − | − | + |
+| \((-2,1)\) | − | + | − |
+| \((1,+\infty)\) | + | + | + |
+
+Como o argumento do logaritmo precisa ser positivo, selecionamos os intervalos nos quais a fração é positiva.
+
+Os extremos não são incluídos: em \(x=1\), o argumento seria zero; em \(x=-2\), a fração não estaria definida.
+
+Portanto:
+
+$$
+\boxed{D_g=(-\infty,-2)\cup(1,+\infty).}
+$$
+
+## 🧮 7. Domínio de função composta
+
+Considere duas funções:
+
+$$
+f:A\to\mathbb{R}
 $$
 
 e
 
 $$
-x=-2.
+g:B\to\mathbb{R}.
 $$
 
-Analisando sinais:
-
-- em $(-\infty,-2)$, a fração é positiva;
-- em $(-2,1)$, a fração é negativa;
-- em $(1,+\infty)$, a fração é positiva.
-
-Logo,
+A composição é definida por:
 
 $$
-D_g=(-\infty,-2)\cup(1,+\infty).
+(f\circ g)(x)=f(g(x)).
 $$
 
-***
+Para que essa composição esteja definida, precisamos verificar duas condições:
 
-## 🧮 Domínio de função composta
+1. \(x\) deve pertencer ao domínio de \(g\);
+2. \(g(x)\) deve pertencer ao domínio de \(f\).
 
-Se
+Em outras palavras, não basta que \(g(x)\) exista: o resultado produzido por \(g\) também precisa ser uma entrada permitida para \(f\).
 
-$$
-(f\circ g)(x)=f(g(x)),
-$$
+### Exemplo
 
-então precisamos que:
-
-1. $x$ pertença ao domínio de $g$;
-2. $g(x)$ pertença ao domínio de $f$.
-
-Por exemplo, se
+Considere:
 
 $$
 f(u)=\sqrt{u}
 $$
 
-e
+e:
 
 $$
-g(x)=x^2-4,
+g(x)=x^2-4.
 $$
 
-então
+A composição será:
 
 $$
 (f\circ g)(x)=\sqrt{x^2-4}.
 $$
 
-Precisamos de
+Como a raiz quadrada exige radicando não negativo:
 
 $$
 x^2-4\geq 0.
 $$
 
-Logo,
+Logo:
+
+$$
+x^2\geq 4.
+$$
+
+Portanto:
 
 $$
 x\leq -2
-$$
-
-ou
-
-$$
+\qquad\text{ou}\qquad
 x\geq 2.
 $$
 
-Assim,
+Assim:
 
 $$
-D_{f\circ g}=(-\infty,-2]\cup[2,+\infty).
+\boxed{D_{f\circ g}=(-\infty,-2]\cup[2,+\infty).}
 $$
 
-***
+## 🧱 8. Funções definidas por partes
 
-## 🧱 Funções por partes
+Em uma função definida por partes, cada expressão corresponde a uma região específica do domínio.
 
-Em funções definidas por partes, cada regra vale em uma região do domínio.
+Por isso, devemos analisar cada regra separadamente, respeitando o intervalo em que ela é válida.
 
-Por exemplo:
+Considere:
 
 $$
 f(x)=
 \begin{cases}
-\sqrt{x+1}, & x<2,\\
+\sqrt{x+1}, & x<2,\\[4pt]
 \dfrac{1}{x-3}, & x\geq 2.
 \end{cases}
 $$
 
-Na primeira parte, precisamos de
+### Primeira parte
+
+A primeira expressão é:
 
 $$
-x+1\geq 0,
+\sqrt{x+1}.
 $$
 
-isto é,
+A condição da raiz quadrada é:
+
+$$
+x+1\geq 0.
+$$
+
+Logo:
 
 $$
 x\geq -1.
 $$
 
-Mas essa parte só vale quando
+Entretanto, essa regra só vale para:
 
 $$
 x<2.
 $$
 
-Logo, a primeira parte contribui com
+Combinando as condições:
+
+$$
+-1\leq x<2.
+$$
+
+Portanto, a primeira parte contribui com:
 
 $$
 [-1,2).
 $$
 
-Na segunda parte, precisamos de
+### Segunda parte
+
+A segunda expressão é:
 
 $$
-x-3\neq 0,
+\frac{1}{x-3}.
 $$
 
-isto é,
+O denominador precisa ser diferente de zero:
+
+$$
+x-3\neq 0.
+$$
+
+Logo:
 
 $$
 x\neq 3.
 $$
 
-Mas essa parte só vale quando
+Mas essa regra só vale para:
 
 $$
 x\geq 2.
 $$
 
-Logo, a segunda parte contribui com
+Portanto, a segunda parte contribui com:
 
 $$
 [2,3)\cup(3,+\infty).
 $$
 
-Portanto,
+### Domínio total
+
+O domínio da função é a união dos conjuntos obtidos nas duas partes:
 
 $$
-D_f=[-1,3)\cup(3,+\infty).
+D_f=[-1,2)\cup[2,3)\cup(3,+\infty).
 $$
 
-***
+Simplificando:
 
-## ⚠️ Erros comuns
+$$
+\boxed{D_f=[-1,3)\cup(3,+\infty).}
+$$
 
-Alguns erros aparecem com frequência:
+Observe que \(x=2\) pertence ao domínio, pois a segunda expressão está definida nesse ponto.
 
-- esquecer que denominador não pode ser zero;
-- usar $>$ em vez de $\geq$ em raízes quadradas;
-- usar $\geq$ em vez de $>$ em logaritmos;
-- cancelar fatores e esquecer restrições do domínio original;
-- analisar a fórmula simplificada e esquecer a expressão original.
+**Ideia fundamental:** em funções por partes, cada restrição deve ser combinada com a condição que determina onde aquela expressão pode ser utilizada.
 
-Por exemplo:
+## ⚠️ 9. Erros comuns na determinação do domínio
+
+Alguns erros aparecem frequentemente durante a resolução de exercícios.
+
+- Esquecer que o denominador de uma fração não pode ser zero.
+- Exigir que o radicando de uma raiz quadrada seja positivo, quando a condição correta é ser não negativo.
+- Permitir argumento igual a zero em um logaritmo, quando ele precisa ser estritamente positivo.
+- Cancelar fatores algébricos e esquecer as restrições da expressão original.
+- Analisar uma expressão de função por partes fora do intervalo em que ela é válida.
+- Determinar o domínio de uma composição considerando somente uma das funções envolvidas.
+
+### Um exemplo importante: expressões equivalentes, domínios diferentes
+
+Considere:
 
 $$
 f(x)=\frac{x^2-1}{x-1}.
 $$
 
-Para $x\neq 1$, temos
+Fatorando o numerador:
+
+$$
+f(x)=\frac{(x-1)(x+1)}{x-1}.
+$$
+
+Para \(x\neq 1\), podemos simplificar:
 
 $$
 f(x)=x+1.
 $$
 
-Mas o domínio original exclui $x=1$.
+Entretanto, a expressão original não está definida em \(x=1\).
 
-Logo, o gráfico é a reta $y=x+1$ com um buraco em $x=1$.
+Assim, seu domínio é:
 
-***
+$$
+D_f=\mathbb{R}\setminus\{1\}.
+$$
 
-# 🧪 Exercícios propostos
+Já a função:
+
+$$
+g(x)=x+1
+$$
+
+tem domínio:
+
+$$
+D_g=\mathbb{R}.
+$$
+
+Portanto, embora as duas expressões produzam o mesmo valor para todo \(x\neq 1\), elas não definem a mesma função quando consideramos seus domínios naturais.
+
+A representação gráfica de \(f\) corresponde à reta \(y=x+1\), com um ponto ausente em:
+
+$$
+(1,2).
+$$
+
+Esse ponto ausente é chamado de **descontinuidade removível**: a expressão simplificada sugere o valor que preencheria o ponto, mas a função original não o assume.
+
+::: {.callout-important title="💡 Uma distinção essencial"}
+
+Simplificar uma expressão algébrica não significa automaticamente ampliar o domínio da função original.
+
+As restrições impostas pela expressão inicial precisam ser preservadas.
+
+:::
+
+## 🧪 10. Exercícios propostos
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## 🧪 Exercício 1
+### 🧪 Exercício 1 — Restrições básicas
 
-Determine o domínio real:
+Determine o domínio real de cada função:
 
-a) $f(x)=\dfrac{1}{x+7}$  
-b) $g(x)=\sqrt{x-5}$  
-c) $h(x)=\ln(x+4)$  
+a) \(f(x)=\dfrac{1}{x+7}\)
 
-## 🧪 Exercício 2
+b) \(g(x)=\sqrt{x-5}\)
 
-Determine o domínio real:
+c) \(h(x)=\ln(x+4)\)
 
-a) $p(x)=\dfrac{\sqrt{x-2}}{x-6}$  
-b) $q(x)=\ln(3-x)$  
-c) $r(x)=\sqrt{x^2-16}$  
+### 🧪 Exercício 2 — Combinação de restrições
 
-## 🧪 Exercício 3
+Determine o domínio real de cada função:
+
+a) \(p(x)=\dfrac{\sqrt{x-2}}{x-6}\)
+
+b) \(q(x)=\ln(3-x)\)
+
+c) \(r(x)=\sqrt{x^2-16}\)
+
+### 🧪 Exercício 3 — Logaritmo com fração
 
 Determine o domínio de:
 
@@ -476,225 +610,322 @@ $$
 s(x)=\ln\left(\frac{x+1}{x-3}\right).
 $$
 
-## 🧪 Exercício 4
+### 🧪 Exercício 4 — Domínios e simplificação
 
-Explique por que
+Explique por que as expressões
 
 $$
 \frac{x^2-4}{x-2}
-$$
-
-não tem domínio igual ao de
-
-$$
-x+2.
-$$
-
-:::
-
-***
-
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
-# ✅ Gabarito comentado
-
-## 🧪 Exercício 1
-
-a)
-
-$$
-x+7\neq 0
-$$
-
-logo
-
-$$
-x\neq -7.
-$$
-
-Assim,
-
-$$
-D_f=(-\infty,-7)\cup(-7,+\infty).
-$$
-
-b)
-
-$$
-x-5\geq 0
-$$
-
-logo
-
-$$
-x\geq 5.
-$$
-
-Assim,
-
-$$
-D_g=[5,+\infty).
-$$
-
-c)
-
-$$
-x+4>0
-$$
-
-logo
-
-$$
-x>-4.
-$$
-
-Assim,
-
-$$
-D_h=(-4,+\infty).
-$$
-
-## 🧪 Exercício 2
-
-a) Precisamos de $x-2\geq 0$ e $x-6\neq 0$. Logo:
-
-$$
-D_p=[2,6)\cup(6,+\infty).
-$$
-
-b)
-
-$$
-3-x>0
-$$
-
-logo
-
-$$
-x<3.
-$$
-
-Assim,
-
-$$
-D_q=(-\infty,3).
-$$
-
-c)
-
-$$
-x^2-16\geq 0
-$$
-
-logo
-
-$$
-x\leq -4
-$$
-
-ou
-
-$$
-x\geq 4.
-$$
-
-Assim,
-
-$$
-D_r=(-\infty,-4]\cup[4,+\infty).
-$$
-
-## 🧪 Exercício 3
-
-Precisamos de
-
-$$
-\frac{x+1}{x-3}>0.
-$$
-
-Os pontos críticos são $x=-1$ e $x=3$.
-
-A fração é positiva em
-
-$$
-(-\infty,-1)
 $$
 
 e
 
 $$
-(3,+\infty).
+x+2
 $$
 
-Logo,
-
-$$
-D_s=(-\infty,-1)\cup(3,+\infty).
-$$
-
-## 🧪 Exercício 4
-
-A expressão
-
-$$
-\frac{x^2-4}{x-2}
-$$
-
-tem denominador zero em $x=2$, portanto $x=2$ não pertence ao domínio original.
-
-Embora
-
-$$
-\frac{x^2-4}{x-2}=x+2
-$$
-
-para $x\neq 2$, a função original mantém a restrição $x\neq 2$.
-
-Já $x+2$ está definida para todo real.
+não possuem o mesmo domínio natural, embora sejam equivalentes para \(x\neq 2\).
 
 :::
 
 ***
 
-## 🧩 Quiz — Domínio de Funções
+## ✅ Gabarito comentado
+
+::: {.callout-important collapse=true title="🔎 Clique para consultar as resoluções"}
+
+### 🧪 Exercício 1 — Restrições básicas
+
+**a)**
+
+O denominador precisa ser diferente de zero:
+
+$$
+x+7\neq 0.
+$$
+
+Logo:
+
+$$
+x\neq -7.
+$$
+
+Portanto:
+
+$$
+\boxed{D_f=(-\infty,-7)\cup(-7,+\infty).}
+$$
+
+**b)**
+
+O radicando precisa ser não negativo:
+
+$$
+x-5\geq 0.
+$$
+
+Logo:
+
+$$
+x\geq 5.
+$$
+
+Portanto:
+
+$$
+\boxed{D_g=[5,+\infty).}
+$$
+
+**c)**
+
+O argumento do logaritmo precisa ser positivo:
+
+$$
+x+4>0.
+$$
+
+Logo:
+
+$$
+x>-4.
+$$
+
+Portanto:
+
+$$
+\boxed{D_h=(-4,+\infty).}
+$$
+
+### 🧪 Exercício 2 — Combinação de restrições
+
+**a)**
+
+Precisamos satisfazer simultaneamente:
+
+$$
+x-2\geq 0
+$$
+
+e:
+
+$$
+x-6\neq 0.
+$$
+
+Logo:
+
+$$
+x\geq 2
+\qquad\text{e}\qquad
+x\neq 6.
+$$
+
+Portanto:
+
+$$
+\boxed{D_p=[2,6)\cup(6,+\infty).}
+$$
+
+**b)**
+
+O argumento do logaritmo precisa ser positivo:
+
+$$
+3-x>0.
+$$
+
+Logo:
+
+$$
+x<3.
+$$
+
+Portanto:
+
+$$
+\boxed{D_q=(-\infty,3).}
+$$
+
+**c)**
+
+O radicando precisa ser não negativo:
+
+$$
+x^2-16\geq 0.
+$$
+
+Logo:
+
+$$
+x^2\geq 16.
+$$
+
+Portanto:
+
+$$
+x\leq -4
+\qquad\text{ou}\qquad
+x\geq 4.
+$$
+
+Assim:
+
+$$
+\boxed{D_r=(-\infty,-4]\cup[4,+\infty).}
+$$
+
+### 🧪 Exercício 3 — Logaritmo com fração
+
+Precisamos de:
+
+$$
+\frac{x+1}{x-3}>0.
+$$
+
+Os pontos críticos são:
+
+$$
+x=-1
+\qquad\text{e}\qquad
+x=3.
+$$
+
+Eles dividem a reta real nos intervalos:
+
+$$
+(-\infty,-1),\quad (-1,3),\quad (3,+\infty).
+$$
+
+A fração é positiva quando numerador e denominador possuem o mesmo sinal.
+
+Isso ocorre nos intervalos:
+
+$$
+(-\infty,-1)
+$$
+
+e:
+
+$$
+(3,+\infty).
+$$
+
+Os extremos são excluídos porque, em \(x=-1\), o argumento do logaritmo seria zero, e em \(x=3\), a fração não estaria definida.
+
+Portanto:
+
+$$
+\boxed{D_s=(-\infty,-1)\cup(3,+\infty).}
+$$
+
+### 🧪 Exercício 4 — Domínios e simplificação
+
+Considere:
+
+$$
+f(x)=\frac{x^2-4}{x-2}.
+$$
+
+O denominador não pode ser zero:
+
+$$
+x-2\neq 0.
+$$
+
+Logo:
+
+$$
+x\neq 2.
+$$
+
+Fatorando o numerador:
+
+$$
+f(x)=\frac{(x-2)(x+2)}{x-2}.
+$$
+
+Para \(x\neq 2\), podemos simplificar:
+
+$$
+f(x)=x+2.
+$$
+
+Entretanto, a restrição original continua válida.
+
+Assim:
+
+$$
+D_f=\mathbb{R}\setminus\{2\}.
+$$
+
+Já a expressão:
+
+$$
+g(x)=x+2
+$$
+
+está definida para todos os números reais:
+
+$$
+D_g=\mathbb{R}.
+$$
+
+Portanto:
+
+$$
+\boxed{D_f\neq D_g.}
+$$
+
+A simplificação algébrica é válida apenas para \(x\neq 2\), e não elimina a restrição que existia na expressão original.
+
+:::
+
+***
+
+## 🧩 11. Quiz — Domínio de Funções
 
 :::::{.question}
-**Q1.** Para $\sqrt{x-1}$ estar definida nos reais, precisamos de:
+
+**Q1.** Para que a expressão \(\sqrt{x-1}\) esteja definida nos números reais, precisamos de:
 
 ::::{.choices}
 :::{.choice .correct-choice}
-$x-1\geq 0$.
+\(x-1\geq 0\).
 :::
 
 :::{.choice}
-$x-1>0$ obrigatoriamente.
+\(x-1>0\) obrigatoriamente.
 :::
 
 :::{.choice}
-$x-1\neq 0$.
+\(x-1\neq 0\).
 :::
 ::::
+
 :::::
 
 :::::{.question}
-**Q2.** Para $\ln(x+2)$ estar definido, precisamos de:
+
+**Q2.** Para que \(\ln(x+2)\) esteja definido nos números reais, precisamos de:
 
 ::::{.choices}
 :::{.choice}
-$x+2\geq 0$.
+\(x+2\geq 0\).
 :::
 
 :::{.choice .correct-choice}
-$x+2>0$.
+\(x+2>0\).
 :::
 
 :::{.choice}
-$x+2\neq 0$ apenas.
+\(x+2\neq 0\) apenas.
 :::
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q3.** Em uma fração, o denominador deve ser:
 
 ::::{.choices}
@@ -710,21 +941,44 @@ Sempre negativo.
 Diferente de zero.
 :::
 ::::
+
 :::::
 
 ***
 
-# 🔗 Navegação
+## 🧭 12. Síntese do aprofundamento
 
-↩️ **Voltar à aula de origem:** [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+| Operação | Condição para existência real |
+|---|---|
+| Fração \(\dfrac{a(x)}{b(x)}\) | \(b(x)\neq 0\) |
+| Raiz de índice par \(\sqrt[2n]{a(x)}\) | \(a(x)\geq 0\) |
+| Logaritmo \(\log_b(a(x))\) | \(a(x)>0\), com \(b>0\) e \(b\neq 1\) |
+| Composição \(f(g(x))\) | \(x\in D_g\) e \(g(x)\in D_f\) |
+| Função por partes | Cada regra deve respeitar sua condição e suas restrições próprias |
 
-▶️ **Continuar a sequência principal:** [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+A determinação do domínio é uma etapa fundamental na análise de funções. Ela estabelece onde podemos estudar o comportamento da função e prepara o caminho para os conceitos centrais do Cálculo.
+
+::: {.callout-tip title="📚 Conexão com as próximas aulas"}
+
+Na Aula 1.10, estudamos o conceito formal de função e a distinção entre domínio, contradomínio e imagem.
+
+Neste aprofundamento, desenvolvemos técnicas para determinar o domínio de expressões mais elaboradas.
+
+Na Aula 1.22-AP, ampliaremos o estudo das funções definidas por partes, explorando a interpretação de cada regra, os pontos de transição e o comportamento das funções nesses pontos.
+
+:::
+
+## 🔗 13. Navegação
+
+↩️ **Voltar à aula de origem:** [1.10 — Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+
+▶️ **Continuar a sequência principal:** [1.11 — Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
 
 🔬 **AP anterior:** [1.20-AP — Valor Absoluto, Distância e Vizinhanças](1.20-AP-valor-absoluto-distancia-vizinhancas.qmd)
 
 🔬 **Próximo AP:** [1.22-AP — Funções por Partes](1.22-AP-funcoes-por-partes.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.21-AP-dominio-de-funcoes-guia-completo.qmd)
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](#)
 
 ***
 
@@ -733,4 +987,3 @@ Diferente de zero.
 :::{.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

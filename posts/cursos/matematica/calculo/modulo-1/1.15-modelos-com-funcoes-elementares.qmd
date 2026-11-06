@@ -10,8 +10,11 @@ format:
   html:
     toc: true
     toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
+    mermaid:
+      theme: default
     fig-align: center
     code-overflow: scroll
     highlight-style: github
@@ -20,9 +23,30 @@ page-layout: full
 
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
+🎯 **Aula anterior:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
+
+🎯 **Próxima aula:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
 
 ***
+
+::: {.callout-tip title="❓ Pergunta Disparadora"}
+
+Como escolher uma função matemática para representar um fenômeno real? O que os parâmetros do modelo nos dizem sobre esse fenômeno?
+
+:::
+
+::: {.callout-note title="📌 Objetivos de Aprendizagem"}
+
+Ao final desta aula, você deverá ser capaz de:
+
+- Compreender o processo de modelagem matemática e sua relação com situações reais.
+- Identificar variáveis, parâmetros e unidades de medida em um modelo.
+- Construir e interpretar modelos lineares e quadráticos.
+- Reconhecer situações que podem ser representadas por modelos exponenciais, logarítmicos, racionais e trigonométricos.
+- Escolher tipos de funções adequados à descrição de diferentes fenômenos.
+- Analisar restrições de domínio, hipóteses e limitações dos modelos matemáticos.
+
+:::
 
 # 📘 Modelos com Funções Elementares
 
@@ -39,7 +63,7 @@ Por exemplo:
 - a altura de um objeto lançado pode ser função do tempo;
 - a intensidade de uma onda pode ser função da posição.
 
-Neste post, vamos ver como funções elementares podem ser usadas para representar situações simples.
+Nesta aula, vamos ver como funções elementares podem ser usadas para representar situações simples.
 
 O objetivo não é transformar a realidade em fórmulas perfeitas. O objetivo é aprender a escolher uma função que capture o comportamento principal de um fenômeno.
 
@@ -62,12 +86,14 @@ $$
 C(x)=5+3x
 $$
 
-pode representar uma tarifa fixa de $5$ reais mais $3$ reais por quilômetro.
+pode representar uma tarifa fixa de R$ 5,00 mais R$ 3,00 por quilômetro.
 
-Esse é um modelo linear.
+Esse é um modelo afim.
 
 ::: {.callout-note title="Ideia central"}
+
 Um modelo matemático não é a realidade completa. Ele é uma representação simplificada que ajuda a entender, prever ou calcular.
+
 :::
 
 ***
@@ -94,19 +120,27 @@ A variável dependente é $C(x)$, o custo.
 
 Os parâmetros são $5$ e $3$.
 
-O número $5$ representa custo fixo. O número $3$ representa custo por unidade de distância.
+O número $5$ representa o custo fixo. O número $3$ representa o custo por unidade de distância.
+
+As unidades também são importantes. Se o custo é medido em reais e a distância em quilômetros, o coeficiente $3$ representa reais por quilômetro.
 
 ***
 
-## 🛠️ Modelos lineares
+## 🛠️ Modelos lineares e afins
 
-Um modelo linear ou afim tem a forma
+Um modelo afim tem a forma
 
 $$
-f(x)=ax+b.
+f(x)=ax+b,
 $$
 
-Ele representa situações em que a taxa de variação é constante.
+em que $a$ e $b$ são constantes reais.
+
+Quando $b=0$, temos uma função linear no sentido matemático estrito. Quando $b\neq 0$, temos uma função afim.
+
+Em aplicações, é comum utilizar a expressão modelo linear para ambos os casos.
+
+Esse modelo representa situações em que a taxa de variação é constante.
 
 Exemplo:
 
@@ -118,11 +152,9 @@ $$
 
 Aqui, cada unidade a mais aumenta o custo em R$ 8,00.
 
-Essa taxa constante é a característica principal de um modelo linear.
+Essa taxa constante é a característica principal de um modelo afim.
 
-***
-
-## 🔎 Interpretação dos coeficientes
+### 🔎 Interpretação dos coeficientes
 
 No modelo
 
@@ -150,9 +182,46 @@ $$
 C(0)=20.
 $$
 
-Isso significa que, mesmo com zero unidades, há um custo fixo de R$ 20,00.
+Isso significa que, mesmo com zero unidades produzidas, há um custo fixo de R$ 20,00.
 
-O coeficiente $8$ indica que cada unidade aumenta o custo em R$ 8,00.
+O coeficiente $8$ indica que cada unidade adicional aumenta o custo em R$ 8,00.
+
+Se o custo é medido em reais e a quantidade em unidades, a unidade do coeficiente $8$ é reais por unidade produzida.
+
+### 📈 Visualização: modelo afim de custo
+
+O gráfico representa o custo total em função da quantidade produzida.
+
+![Modelo afim de custo: custo fixo e custo variável.](images/1.15-modelo-afim.svg){#fig-modelo-afim fig-alt="Gráfico do custo C(x)=20+8x, destacando o custo fixo e a taxa de crescimento constante." width="85%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código Python"}
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 300)
+C = 20 + 8*x
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+ax.plot(x, C, linewidth=2.5, label=r"$C(x)=20+8x$")
+ax.scatter([0, 5, 10], [20, 60, 100], zorder=3)
+
+ax.set_title("Modelo afim: custo de produção")
+ax.set_xlabel("Quantidade produzida (unidades)")
+ax.set_ylabel("Custo (R$)")
+ax.grid(alpha=0.3)
+ax.legend()
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 110)
+
+fig.tight_layout()
+fig.savefig("images/1.15-modelo-afim.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
 
 ***
 
@@ -178,15 +247,16 @@ $$
 h(t)=-5t^2+20t+1.
 $$
 
-Aqui, $t$ representa o tempo e $h(t)$ representa a altura.
+Aqui:
 
-O termo $-5t^2$ está associado ao efeito da gravidade.
+- $t$ representa o tempo, em segundos;
+- $h(t)$ representa a altura, em metros.
+
+O termo $-5t^2$ está associado ao efeito da gravidade, considerando uma aceleração gravitacional de módulo aproximado de $10\,\text{m/s}^2$ e desprezando a resistência do ar.
 
 O gráfico dessa função é uma parábola com concavidade voltada para baixo.
 
-***
-
-## 🛠️ Máximo em um modelo quadrático
+### 🛠️ Máximo em um modelo quadrático
 
 Em um modelo quadrático com concavidade para baixo, o vértice representa um valor máximo.
 
@@ -238,7 +308,76 @@ $$
 h(2)=-5(2)^2+20(2)+1=-20+40+1=21.
 $$
 
-A altura máxima é $21$.
+A altura máxima é $21$ metros.
+
+### 📈 Visualização: trajetória vertical
+
+O gráfico apresenta o trecho da parábola correspondente ao movimento físico, desde o lançamento até o instante em que o objeto atinge o solo.
+
+![Trajetória vertical idealizada de um objeto.](images/1.15-modelo-quadratico.svg){#fig-modelo-quadratico fig-alt="Gráfico da altura h(t)=-5t²+20t+1, com altura máxima de 21 metros no instante de 2 segundos." width="85%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código Python"}
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+raiz = (20 + np.sqrt(420)) / 10
+
+t = np.linspace(0, raiz, 300)
+h = -5*t**2 + 20*t + 1
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+ax.plot(t, h, linewidth=2.5,
+        label=r"$h(t)=-5t^2+20t+1$")
+
+ax.scatter([2], [21], zorder=3,
+           label="Altura máxima: 21 m")
+
+ax.axhline(0, color="black", linewidth=0.8)
+ax.axvline(2, color="gray", linestyle="--", alpha=0.7)
+
+ax.set_title("Modelo quadrático: movimento vertical")
+ax.set_xlabel("Tempo (s)")
+ax.set_ylabel("Altura (m)")
+ax.grid(alpha=0.3)
+ax.legend()
+ax.set_xlim(0, raiz + 0.1)
+ax.set_ylim(-1, 24)
+
+fig.tight_layout()
+fig.savefig("images/1.15-modelo-quadratico.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
+
+::: {.callout-note title="📌 Interpretação física do modelo"}
+
+Embora a função quadrática esteja definida para todo número real, o movimento físico começa em $t=0$ e termina quando o objeto atinge o solo.
+
+Para determinar esse instante, resolvemos
+
+$$
+-5t^2+20t+1=0.
+$$
+
+A raiz positiva é
+
+$$
+t=\frac{20+\sqrt{420}}{10}\approx 4{,}05\text{ s}.
+$$
+
+Portanto, o intervalo de interesse físico é aproximadamente
+
+$$
+0\leq t\leq 4{,}05.
+$$
+
+O gráfico completo da parábola é matematicamente válido, mas somente esse trecho representa o movimento descrito pelo modelo.
+
+:::
 
 ***
 
@@ -280,9 +419,9 @@ $$
 Q(t)=1000(1{,}10)^t.
 $$
 
-***
+O fator $1{,}10$ significa que, a cada período, a população passa a corresponder a $110\%$ do valor anterior.
 
-## 📉 Decaimento exponencial
+### 📉 Decaimento exponencial
 
 O decaimento exponencial aparece quando uma quantidade diminui por uma razão constante.
 
@@ -320,11 +459,74 @@ $$
 
 A cada unidade de tempo, a quantidade é multiplicada por $\frac{1}{2}$.
 
+### 📈 Visualização: crescimento e decaimento exponencial
+
+O gráfico compara dois comportamentos:
+
+- crescimento de uma população por fator multiplicativo;
+- redução da massa de uma substância por um fator constante.
+
+![Comparação entre crescimento e decaimento exponencial.](images/1.15-modelos-exponenciais.svg){#fig-modelos-exponenciais fig-alt="Gráfico comparando Q(t)=1000 vezes 1,10 elevado a t e M(t)=80 vezes 0,5 elevado a t." width="85%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código Python"}
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, 10, 300)
+
+Q = 1000 * (1.10)**t
+M = 80 * (0.5)**t
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+ax.plot(t, Q, linewidth=2.5,
+        label=r"Crescimento: $Q(t)=1000(1{,}10)^t$")
+
+ax.plot(t, M, linewidth=2.5,
+        label=r"Decaimento: $M(t)=80(0{,}5)^t$")
+
+ax.set_title("Modelos exponenciais")
+ax.set_xlabel("Tempo (períodos)")
+ax.set_ylabel("Quantidade")
+ax.grid(alpha=0.3)
+ax.legend()
+
+fig.tight_layout()
+fig.savefig("images/1.15-modelos-exponenciais.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
+
+### 🔎 Tempo discreto e tempo contínuo
+
+O modelo
+
+$$
+Q(t)=Q_0a^t
+$$
+
+é especialmente adequado quando $t$ representa períodos sucessivos e a quantidade é multiplicada pelo mesmo fator a cada período.
+
+Se o tempo for considerado contínuo, uma forma bastante utilizada é
+
+$$
+Q(t)=Q_0e^{kt},
+$$
+
+em que $k$ é uma constante real.
+
+Se $k>0$, temos crescimento exponencial. Se $k<0$, temos decaimento exponencial.
+
+Essa distinção será importante posteriormente, quando estudarmos derivadas e equações diferenciais.
+
 ***
 
 ## 🛠️ Modelos logarítmicos
 
-Modelos logarítmicos aparecem quando o crescimento é rápido no início e depois desacelera.
+Modelos logarítmicos aparecem em situações nas quais a variável dependente apresenta crescimento cada vez mais lento em relação à variável independente.
 
 Uma forma simples é
 
@@ -333,6 +535,12 @@ f(x)=a\ln x+b,
 $$
 
 com
+
+$$
+a>0
+$$
+
+e
 
 $$
 x>0.
@@ -348,11 +556,46 @@ $$
 
 cresce, mas cada vez mais lentamente.
 
-O domínio é
+O domínio natural é
 
 $$
 (0,+\infty).
 $$
+
+É importante observar que nem todo fenômeno cujo crescimento desacelera é necessariamente logarítmico. A adequação desse modelo deve ser avaliada a partir do comportamento observado e dos dados disponíveis.
+
+### 📈 Visualização: modelo logarítmico
+
+![Comportamento crescente e desacelerado de uma função logarítmica.](images/1.15-modelo-logaritmico.svg){#fig-modelo-logaritmico fig-alt="Gráfico de f(x)=2 ln x+1, mostrando crescimento cada vez mais lento para x positivo." width="85%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código Python"}
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0.05, 10, 400)
+y = 2*np.log(x) + 1
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+ax.plot(x, y, linewidth=2.5,
+        label=r"$f(x)=2\ln(x)+1$")
+
+ax.axvline(0, color="gray", linestyle="--", alpha=0.7)
+
+ax.set_title("Modelo logarítmico")
+ax.set_xlabel("x")
+ax.set_ylabel("f(x)")
+ax.grid(alpha=0.3)
+ax.legend()
+
+fig.tight_layout()
+fig.savefig("images/1.15-modelo-logaritmico.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
 
 ***
 
@@ -364,7 +607,7 @@ $$
 f(x)=\frac{p(x)}{q(x)},
 $$
 
-onde $p$ e $q$ são polinômios.
+onde $p$ e $q$ são polinômios e $q(x)\neq 0$.
 
 Eles aparecem em situações com taxas, razões, eficiência, concentração e comportamentos com assíntotas.
 
@@ -374,25 +617,81 @@ $$
 f(x)=\frac{x}{x+1}.
 $$
 
-Essa função está definida para
+O domínio natural é
 
 $$
-x\neq -1.
+\mathbb{R}\setminus\{-1\}.
 $$
 
-Quando $x$ cresce muito, temos
+Para valores positivos de $x$, temos
+
+$$
+0\leq \frac{x}{x+1}<1.
+$$
+
+Quando $x$ cresce muito,
 
 $$
 \frac{x}{x+1}\approx 1.
 $$
 
-Assim, o gráfico se aproxima da reta horizontal
+Além disso,
 
 $$
-y=1.
+\lim_{x\to+\infty}\frac{x}{x+1}=1.
 $$
+
+Portanto, a reta
+
+$$
+y=1
+$$
+
+é uma assíntota horizontal.
+
+O gráfico se aproxima dessa reta à medida que $x$ cresce, sem atingi-la para nenhum valor finito de $x$.
 
 Esse tipo de comportamento será estudado com mais precisão no módulo de limites.
+
+### 📈 Visualização: modelo racional
+
+![Gráfico de uma função racional com assíntotas.](images/1.15-modelo-racional.svg){#fig-modelo-racional fig-alt="Gráfico de f(x)=x/(x+1), com assíntota vertical x=-1 e horizontal y=1." width="85%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código Python"}
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+x1 = np.linspace(-5, -1.05, 300)
+x2 = np.linspace(-0.95, 5, 300)
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+ax.plot(x1, x1/(x1+1), linewidth=2.5)
+ax.plot(x2, x2/(x2+1), linewidth=2.5,
+        label=r"$f(x)=\frac{x}{x+1}$")
+
+ax.axvline(-1, color="red", linestyle="--",
+           label=r"Assíntota vertical: $x=-1$")
+
+ax.axhline(1, color="green", linestyle="--",
+           label=r"Assíntota horizontal: $y=1$")
+
+ax.set_title("Modelo racional")
+ax.set_xlabel("x")
+ax.set_ylabel("f(x)")
+ax.set_xlim(-5, 5)
+ax.set_ylim(-5, 5)
+ax.grid(alpha=0.3)
+ax.legend()
+
+fig.tight_layout()
+fig.savefig("images/1.15-modelo-racional.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
 
 ***
 
@@ -413,13 +712,83 @@ Nessa expressão:
 - $C$ desloca o gráfico horizontalmente;
 - $D$ desloca o gráfico verticalmente.
 
+A amplitude é $|A|$ e, quando $B\neq 0$, o período é
+
+$$
+P=\frac{2\pi}{|B|}.
+$$
+
 Por exemplo,
 
 $$
 T(t)=10\sin\left(\frac{2\pi}{24}t\right)+20
 $$
 
-pode representar uma temperatura diária oscilando em torno de $20^\circ$ com amplitude $10^\circ$ e período de $24$ horas.
+pode representar, de maneira idealizada, uma temperatura diária oscilando em torno de $20^\circ$C.
+
+Nesse modelo:
+
+- a amplitude é $10^\circ$C;
+- a temperatura média é $20^\circ$C;
+- o período é $24$ horas;
+- a temperatura varia entre $10^\circ$C e $30^\circ$C.
+
+Como a função seno atinge seu máximo quando o argumento é $\frac{\pi}{2}$, o modelo atinge a temperatura máxima quando
+
+$$
+\frac{2\pi}{24}t=\frac{\pi}{2}.
+$$
+
+Logo,
+
+$$
+t=6.
+$$
+
+Assim, o modelo prevê temperatura máxima de $30^\circ$C às 6 horas, considerando que $t=0$ corresponde à meia-noite.
+
+A escolha da fase inicial deve ser ajustada quando desejamos representar dados reais de temperatura.
+
+### 📈 Visualização: modelo trigonométrico
+
+![Modelo trigonométrico de temperatura diária.](images/1.15-modelo-trigonometrico.svg){#fig-modelo-trigonometrico fig-alt="Gráfico de T(t)=10 sen(2 pi t/24)+20, com amplitude de 10 graus e período de 24 horas." width="85%"}
+
+::: {.callout-note collapse="true" title="Clique para ver o código Python"}
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, 48, 500)
+T = 10*np.sin((2*np.pi/24)*t) + 20
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+ax.plot(t, T, linewidth=2.5,
+        label="Temperatura")
+
+ax.axhline(20, color="gray", linestyle="--",
+           label="Temperatura média")
+
+ax.axhline(30, color="red", linestyle=":",
+           label="Máximo: 30 °C")
+
+ax.axhline(10, color="blue", linestyle=":",
+           label="Mínimo: 10 °C")
+
+ax.set_title("Modelo trigonométrico: temperatura diária")
+ax.set_xlabel("Tempo (horas)")
+ax.set_ylabel("Temperatura (°C)")
+ax.set_xticks(np.arange(0, 49, 6))
+ax.grid(alpha=0.3)
+ax.legend()
+
+fig.tight_layout()
+fig.savefig("images/1.15-modelo-trigonometrico.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
+:::
 
 ***
 
@@ -427,16 +796,26 @@ pode representar uma temperatura diária oscilando em torno de $20^\circ$ com am
 
 Uma parte importante da modelagem é escolher a família de funções adequada.
 
-| Comportamento observado | Modelo possível |
-|---|---|
-| Variação por soma constante | Linear |
-| Trajetória parabólica ou otimização simples | Quadrático |
-| Crescimento por fator constante | Exponencial |
-| Crescimento rápido e depois lento | Logarítmico |
-| Razões e assíntotas | Racional |
-| Oscilações e ciclos | Trigonométrico |
+| Comportamento observado | Modelo possível | Característica matemática |
+|---|---|---|
+| Variação por soma constante | Linear ou afim | Taxa de variação constante |
+| Trajetória parabólica ou otimização simples | Quadrático | Variação da taxa de crescimento |
+| Crescimento por fator constante | Exponencial | Taxa relativa constante |
+| Crescimento cada vez mais lento | Logarítmico | Crescimento desacelerado |
+| Relações entre razões e grandezas | Racional | Quociente de polinômios |
+| Oscilações e ciclos | Trigonométrico | Periodicidade |
 
 Essa escolha depende do contexto, dos dados e da pergunta que queremos responder.
+
+::: {.callout-tip title="Uma observação importante"}
+
+A tabela apresenta possibilidades, não regras absolutas.
+
+Um mesmo fenômeno pode ser descrito por diferentes modelos, dependendo do intervalo analisado, da precisão desejada e das hipóteses adotadas.
+
+Na modelagem matemática, a escolha de uma função deve ser justificada pelo comportamento do fenômeno e, sempre que possível, pela comparação com dados reais.
+
+:::
 
 ***
 
@@ -465,7 +844,9 @@ $$
 Mesmo que a fórmula faça sentido para $x=-2$, esse valor não tem interpretação no problema.
 
 ::: {.callout-warning title="Cuidado"}
+
 Em modelos, sempre pergunte se o valor da variável faz sentido no contexto.
+
 :::
 
 ***
@@ -486,12 +867,45 @@ Por isso, ao usar modelos, devemos perguntar:
 - em que intervalo o modelo é razoável?
 - quais fatores foram ignorados?
 - os resultados fazem sentido?
+- os dados disponíveis sustentam a escolha da função?
 
 Modelar não é apenas calcular. É interpretar.
 
 ***
 
-## 🌉 Por que isso importa para o Cálculo?
+::: {.callout-note title="📋 Quadro-resumo"}
+
+| Tipo de modelo | Característica principal | Aplicação ilustrativa |
+|---|---|---|
+| Linear ou afim | Taxa de variação constante | Custo com parcela fixa e variável |
+| Quadrático | Comportamento parabólico | Trajetórias idealizadas |
+| Exponencial | Variação multiplicativa | Crescimento e decaimento |
+| Logarítmico | Crescimento desacelerado | Fenômenos em escala logarítmica |
+| Racional | Quociente de polinômios | Relações entre grandezas e taxas |
+| Trigonométrico | Comportamento periódico | Oscilações idealizadas |
+
+**Exemplo — interpretação de parâmetros**
+
+Considere o modelo de custo
+
+$$
+C(q)=C_0+cq,
+\qquad q\geq 0.
+$$
+
+Nesse modelo, $C_0$ representa o custo fixo, $c$ representa o custo por unidade produzida e $q$ representa a quantidade produzida.
+
+A interpretação depende das unidades e do contexto.
+
+Por exemplo, se $q$ representa unidades inteiras, o domínio contextual deve respeitar essa condição.
+
+**Atenção:** um modelo matemático é uma representação simplificada de um fenômeno. Sua adequação depende das hipóteses adotadas, dos dados disponíveis e do intervalo em que se pretende utilizá-lo.
+
+:::
+
+***
+
+::: {.callout-note title="🌉 Ponte para o Cálculo"}
 
 O Cálculo nasceu de problemas de variação, movimento, área e acumulação.
 
@@ -505,7 +919,7 @@ Modelos com funções elementares serão o ponto de partida para perguntas como:
 
 Essas perguntas levarão naturalmente a limites, derivadas e integrais.
 
-***
+:::
 
 # 🧪 Exercícios propostos
 
@@ -515,8 +929,10 @@ Essas perguntas levarão naturalmente a limites, derivadas e integrais.
 
 Uma corrida de aplicativo cobra uma taxa fixa de R$ 6,00 mais R$ 2,50 por quilômetro.
 
-a) Escreva uma função $C(x)$ para o custo em função da distância $x$.  
-b) Calcule $C(10)$.  
+a) Escreva uma função $C(x)$ para o custo em função da distância $x$.
+
+b) Calcule $C(10)$.
+
 c) Interprete o coeficiente de $x$.
 
 ## 🧪 Exercício 2
@@ -527,42 +943,57 @@ $$
 h(t)=-5t^2+30t+2.
 $$
 
-a) Qual é o tipo de função?  
-b) Em que instante ocorre a altura máxima?  
+Considere que o tempo é medido em segundos e a altura em metros.
+
+a) Qual é o tipo de função?
+
+b) Em que instante ocorre a altura máxima?
+
 c) Qual é a altura máxima?
+
+d) Determine aproximadamente o intervalo de tempo durante o qual o modelo representa o movimento até o objeto atingir o solo.
 
 ## 🧪 Exercício 3
 
 Uma população inicial de $500$ indivíduos cresce $20\%$ por período.
 
-a) Escreva um modelo exponencial para a população.  
+a) Escreva um modelo exponencial para a população.
+
 b) Calcule a população após $3$ períodos.
 
 ## 🧪 Exercício 4
 
-Determine o domínio natural, no contexto indicado:
+Determine o domínio contextual indicado:
 
-a) $C(x)=15+4x$, onde $x$ é quantidade produzida.  
-b) $A(r)=\pi r^2$, onde $r$ é o raio de um círculo.  
+a) $C(x)=15+4x$, onde $x$ é quantidade produzida.
+
+b) $A(r)=\pi r^2$, onde $r$ é o raio de um círculo.
+
 c) $P(t)=1000(1{,}05)^t$, onde $t$ é tempo após o início da observação.
 
 ## 🧪 Exercício 5
 
 Associe cada situação a um tipo provável de modelo: linear, quadrático, exponencial, logarítmico, racional ou trigonométrico.
 
-a) Temperatura diária variando de forma periódica.  
-b) Crescimento de uma aplicação com juros compostos.  
-c) Custo com taxa fixa mais valor por unidade.  
-d) Altura de um projétil em função do tempo.  
+a) Temperatura diária variando de forma periódica.
+
+b) Crescimento de uma aplicação com juros compostos.
+
+c) Custo com taxa fixa mais valor por unidade.
+
+d) Altura de um projétil em função do tempo.
+
 e) Quantidade que se aproxima de um limite horizontal.
+
+f) Uma substância radioativa perde uma porcentagem fixa de sua massa a cada período.
 
 :::
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
 # ✅ Gabarito comentado
+
+::: {.callout-important collapse="true" title="✅ Clique para consultar o gabarito"}
 
 ## 🧪 Exercício 1
 
@@ -616,15 +1047,51 @@ $$
 t_v=-\frac{30}{2(-5)}=3.
 $$
 
-A altura máxima ocorre em $t=3$.
+A altura máxima ocorre em $t=3$ segundos.
 
 c)
 
 $$
-h(3)=-5(3)^2+30(3)+2=-45+90+2=47.
+h(3)=-5(3)^2+30(3)+2.
 $$
 
-A altura máxima é $47$.
+Portanto,
+
+$$
+h(3)=-45+90+2=47.
+$$
+
+A altura máxima é $47$ metros.
+
+d) O objeto atinge o solo quando
+
+$$
+-5t^2+30t+2=0.
+$$
+
+Pela fórmula de Bhaskara,
+
+$$
+t=\frac{-30\pm\sqrt{30^2-4(-5)(2)}}{2(-5)}.
+$$
+
+Assim,
+
+$$
+t=\frac{-30\pm\sqrt{940}}{-10}.
+$$
+
+A raiz positiva é
+
+$$
+t=\frac{30+\sqrt{940}}{10}\approx 6{,}07.
+$$
+
+Logo, o intervalo de tempo de interesse físico é aproximadamente
+
+$$
+0\leq t\leq 6{,}07.
+$$
 
 ## 🧪 Exercício 3
 
@@ -658,7 +1125,7 @@ $$
 P(3)=500\cdot 1{,}728=864.
 $$
 
-A população após $3$ períodos é $864$ indivíduos, segundo o modelo.
+A população após $3$ períodos é de $864$ indivíduos, segundo o modelo.
 
 ## 🧪 Exercício 4
 
@@ -688,26 +1155,30 @@ $$
 
 ## 🧪 Exercício 5
 
-a) Temperatura diária variando de forma periódica: modelo trigonométrico.  
+a) Temperatura diária variando de forma periódica: modelo trigonométrico.
 
-b) Crescimento com juros compostos: modelo exponencial.  
+b) Crescimento com juros compostos: modelo exponencial.
 
-c) Custo com taxa fixa mais valor por unidade: modelo linear.  
+c) Custo com taxa fixa mais valor por unidade: modelo afim.
 
-d) Altura de um projétil em função do tempo: modelo quadrático.  
+d) Altura de um projétil em função do tempo: modelo quadrático.
 
 e) Quantidade que se aproxima de um limite horizontal: modelo racional ou outro modelo com assíntota horizontal.
+
+f) Perda de uma porcentagem fixa da massa a cada período: modelo exponencial de decaimento.
 
 :::
 
 ***
 
-## 🧩 Quiz — Modelos com Funções Elementares
+# 🧩 Quiz — Modelos com Funções Elementares
 
 :::::{.question}
-**Q1.** Um modelo linear é adequado quando a situação apresenta:
+
+**Q1.** Um modelo linear ou afim é adequado quando a situação apresenta:
 
 ::::{.choices}
+
 :::{.choice .correct-choice}
 Variação por soma constante.
 :::
@@ -719,13 +1190,17 @@ Oscilação periódica obrigatória.
 :::{.choice}
 Domínio sempre negativo.
 :::
+
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q2.** Um modelo exponencial é típico quando há:
 
 ::::{.choices}
+
 :::{.choice}
 Crescimento por soma constante.
 :::
@@ -737,13 +1212,17 @@ Crescimento ou decaimento por fator multiplicativo constante.
 :::{.choice}
 Apenas valores periódicos entre $-1$ e $1$.
 :::
+
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q3.** Em modelagem, o domínio deve considerar:
 
 ::::{.choices}
+
 :::{.choice}
 Apenas a fórmula algébrica, nunca o contexto.
 :::
@@ -755,24 +1234,27 @@ A fórmula e também o significado das variáveis no contexto.
 :::{.choice}
 Somente números negativos.
 :::
+
 ::::
+
 :::::
 
 ***
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
+🎯 **Aula anterior:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
 
-🎯 **Próximo Post:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
+🎯 **Próxima aula:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.15-modelos-com-funcoes-elementares.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 
-:::{.callout-note}
-Criado por Blog do Marcellini com ❤️ e código.
-:::
+::: {.callout-note}
 
+Criado por Blog do Marcellini com ❤️ e código.
+
+:::

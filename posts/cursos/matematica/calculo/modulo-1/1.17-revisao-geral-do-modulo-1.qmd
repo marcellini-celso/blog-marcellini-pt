@@ -1,6 +1,6 @@
 ---
 title: "📘 Módulo 1.17: Revisão Geral do Módulo 1"
-description: "Revisão geral do Módulo 1 do Curso de Cálculo: pré-cálculo essencial, funções, gráficos, modelos, composição, inversas e comportamento assintótico."
+description: "Revisão integradora dos fundamentos do pré-cálculo: números reais, intervalos, funções, gráficos, operações, modelagem, crescimento e comportamento assintótico."
 author: "Blog do Marcellini"
 date: "2026-06-05"
 lang: pt-BR
@@ -10,8 +10,11 @@ format:
   html:
     toc: true
     toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
+    mermaid:
+      theme: default
     fig-align: center
     code-overflow: scroll
     highlight-style: github
@@ -20,209 +23,225 @@ page-layout: full
 
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
+🎯 **Aula anterior:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
 
 ***
+
+::: {.callout-tip title="❓ Pergunta Disparadora"}
+
+Como os conhecimentos sobre números reais, funções e gráficos se articulam para preparar o estudo do Cálculo?
+
+Por que precisamos compreender o domínio de uma função antes de investigar seu comportamento?
+
+Como podemos relacionar expressões algébricas, representações gráficas e situações concretas?
+
+O que já sabemos sobre o comportamento de uma função quando sua variável se aproxima de determinado valor ou cresce indefinidamente?
+
+:::
+
+::: {.callout-note title="📌 Objetivos de Aprendizagem"}
+
+Ao final desta revisão, você deverá ser capaz de:
+
+- Reconhecer os principais conjuntos numéricos e trabalhar com intervalos reais.
+- Resolver equações e inequações utilizadas na análise de funções.
+- Interpretar o valor absoluto como medida de distância.
+- Identificar as principais famílias de funções elementares.
+- Determinar e interpretar o domínio, o contradomínio e a imagem de uma função.
+- Relacionar representações algébricas, tabulares e gráficas.
+- Reconhecer transformações gráficas fundamentais.
+- Calcular composições e compreender as condições de existência de funções inversas.
+- Identificar modelos matemáticos em situações contextualizadas.
+- Comparar taxas de crescimento e interpretar o comportamento assintótico.
+- Reconhecer os conhecimentos necessários para iniciar o estudo de limites.
+
+:::
 
 # 📘 Revisão Geral do Módulo 1
 
-Chegamos ao fechamento do primeiro módulo do Curso de Cálculo.
+Ao longo do Módulo 1, estudamos os fundamentos matemáticos necessários para compreender o comportamento das funções.
 
-Este módulo teve uma função essencial: preparar o terreno para o estudo de limites, continuidade, derivadas e integrais.
+Esse percurso não foi uma coleção isolada de definições e procedimentos. Cada conteúdo contribuiu para desenvolver uma linguagem matemática que será utilizada no estudo dos limites, da continuidade, das derivadas e, posteriormente, das integrais.
 
-Antes de entrar no Cálculo propriamente dito, revisamos ideias fundamentais de pré-cálculo:
+Revisitamos diferentes assuntos:
 
-- conjuntos numéricos;
-- números reais;
-- intervalos;
-- equações e inequações;
-- valor absoluto;
-- funções elementares;
-- funções polinomiais e racionais;
-- exponenciais e logaritmos;
-- trigonometria;
-- definição formal de função;
-- leitura gráfica e algébrica;
-- transformações gráficas;
-- composição;
-- inversas;
-- modelagem;
-- crescimento e comportamento assintótico.
+- Conjuntos numéricos e números reais.
+- Intervalos, equações e inequações.
+- Valor absoluto e interpretação de distância.
+- Funções elementares e suas propriedades.
+- Funções polinomiais, racionais, exponenciais e logarítmicas.
+- Trigonometria e funções periódicas.
+- Definição formal de função.
+- Domínio, contradomínio e imagem.
+- Representações algébricas e gráficas.
+- Transformações de gráficos.
+- Composição e inversão de funções.
+- Modelagem matemática.
+- Crescimento e comportamento assintótico.
 
-Este post organiza essas ideias e mostra como elas se conectam.
+Nesta aula, vamos integrar esses conhecimentos, destacando as relações entre eles e identificando o que precisamos dominar antes de avançar para o estudo dos limites.
 
 ***
 
-## 🧭 O papel do Módulo 1
+## 🧭 O papel do Módulo 1 na construção do Cálculo
 
-O Cálculo não começa com derivadas.
+O Cálculo não começa com a aplicação de fórmulas de derivação ou integração.
 
-Antes de falar em derivada, precisamos entender função.
+Antes disso, precisamos compreender os objetos matemáticos sobre os quais essas operações serão realizadas.
 
-Antes de falar em limite, precisamos entender comportamento.
+Uma função pode representar uma grande variedade de fenômenos:
 
-Antes de falar em continuidade, precisamos entender domínio, gráfico e proximidade.
+- A posição de um objeto em movimento.
+- O crescimento de uma população.
+- A variação de uma temperatura.
+- O custo de produção de uma empresa.
+- A área de uma região.
+- A concentração de uma substância ao longo do tempo.
 
-Antes de falar em integral, precisamos entender área, variação e acumulação.
+Em todos esses casos, queremos investigar como uma quantidade depende de outra.
 
-Por isso, o Módulo 1 funciona como uma base.
+Para isso, precisamos saber interpretar expressões, reconhecer restrições, analisar gráficos e compreender o comportamento das funções em diferentes regiões de seus domínios.
 
-Ele não é uma revisão decorativa. Ele é a fundação conceitual do curso.
+::: {.callout-note title="💡 Ideia central"}
 
-::: {.callout-note title="Ideia central"}
-O Cálculo estuda variação, aproximação e acumulação. Para isso, precisamos dominar a linguagem das funções.
+O Cálculo estuda variação, aproximação e acumulação.
+
+Para desenvolver essas ideias, precisamos dominar a linguagem das funções e compreender como elas se comportam.
+
 :::
 
 ***
 
 ## 🔢 Conjuntos e números reais
 
-O curso começou revisando conjuntos e números reais.
+Os conjuntos numéricos fornecem o universo no qual trabalhamos.
 
-A linguagem de conjuntos permite organizar objetos matemáticos e escrever afirmações com precisão.
+Os principais conjuntos estudados são:
 
-Vimos ideias como:
+| Conjunto | Símbolo | Caracterização |
+|---|---|---|
+| Naturais | $\mathbb{N}$ | Números naturais |
+| Inteiros | $\mathbb{Z}$ | Naturais, seus opostos e o zero |
+| Racionais | $\mathbb{Q}$ | Números que podem ser escritos como fração de inteiros |
+| Reais | $\mathbb{R}$ | Racionais e irracionais |
 
-$$
-x\in A,
-$$
-
-$$
-A\subseteq B,
-$$
-
-união,
+A relação de inclusão entre esses conjuntos pode ser representada por:
 
 $$
-A\cup B,
+\mathbb{N}\subseteq\mathbb{Z}
+\subseteq\mathbb{Q}\subseteq\mathbb{R}.
 $$
 
-interseção,
+Os números irracionais pertencem a $\mathbb{R}$, mas não a $\mathbb{Q}$.
+
+Entre eles estão números importantes como:
 
 $$
-A\cap B,
+\sqrt{2},\qquad \pi,\qquad e.
 $$
 
-e diferença,
+### Operações com conjuntos
 
-$$
-A\setminus B.
-$$
+Sejam $A$ e $B$ dois conjuntos.
 
-Também revisamos os principais conjuntos numéricos:
+Podemos destacar:
 
-$$
-\mathbb{N},\quad \mathbb{Z},\quad \mathbb{Q},\quad \mathbb{R}.
-$$
+- União: $A\cup B$.
+- Interseção: $A\cap B$.
+- Diferença: $A\setminus B$.
+- Inclusão: $A\subseteq B$.
+- Pertinência: $x\in A$.
 
-No Cálculo de uma variável real, trabalhamos principalmente com funções definidas em subconjuntos de $\mathbb{R}$.
+Essas operações são importantes para descrever conjuntos de soluções, domínios e outras regiões do conjunto dos números reais.
+
+No Cálculo de uma variável real, trabalharemos frequentemente com funções definidas em subconjuntos de $\mathbb{R}$.
 
 ***
 
-## 📏 Intervalos
+## 📏 Intervalos reais
 
-Intervalos são subconjuntos especiais da reta real.
+Os intervalos permitem representar conjuntos de números reais que satisfazem determinadas condições.
 
-Eles aparecem o tempo todo no Cálculo.
+Os principais exemplos são:
 
-Por exemplo:
+| Intervalo | Interpretação |
+|---|---|
+| $(a,b)$ | $a<x<b$ |
+| $[a,b]$ | $a\leq x\leq b$ |
+| $(a,b]$ | $a<x\leq b$ |
+| $[a,b)$ | $a\leq x<b$ |
+| $(a,+\infty)$ | $x>a$ |
+| $[a,+\infty)$ | $x\geq a$ |
 
-$$
-(a,b),
-$$
+Os símbolos $+\infty$ e $-\infty$ nunca são incluídos como extremidades de intervalos.
 
-$$
-[a,b],
-$$
+### Aplicações dos intervalos
 
-$$
-(a,b],
-$$
+Os intervalos aparecem em diversas situações do Cálculo:
 
-$$
-[a,+\infty).
-$$
+- Na determinação do domínio de uma função.
+- Na representação de soluções de inequações.
+- Na identificação de intervalos de crescimento e decrescimento.
+- Na análise de continuidade.
+- Na definição de intervalos de integração.
 
-Intervalos ajudam a descrever domínios, soluções de inequações, regiões de crescimento, intervalos de continuidade e intervalos de integração.
-
-Quando dizemos que uma função é contínua em
-
-$$
-[a,b],
-$$
-
-ou que uma integral é calculada de
-
-$$
-a
-$$
-
-até
-
-$$
-b,
-$$
-
-estamos usando a linguagem dos intervalos.
+Por exemplo, quando dizemos que uma função é contínua em $[a,b]$, estamos considerando seu comportamento em todo esse intervalo, incluindo as extremidades, com a interpretação apropriada de continuidade lateral nos extremos.
 
 ***
 
 ## 🧮 Equações e inequações
 
-Equações e inequações aparecem em praticamente todas as etapas do Cálculo.
+Equações e inequações são ferramentas fundamentais para determinar conjuntos de valores que satisfazem determinadas condições.
 
-Usamos equações para encontrar:
+As equações aparecem, por exemplo, na determinação de:
 
-- zeros de funções;
-- pontos críticos;
-- interseções;
-- soluções de problemas;
-- pontos onde uma expressão muda de comportamento.
+- Zeros de funções.
+- Pontos de interseção entre gráficos.
+- Valores desconhecidos em modelos matemáticos.
+- Soluções de problemas algébricos.
 
-Usamos inequações para determinar:
+As inequações permitem identificar:
 
-- domínios;
-- sinais;
-- intervalos de validade;
-- regiões onde uma função é positiva ou negativa.
+- Regiões nas quais uma função é positiva ou negativa.
+- Intervalos de validade de determinadas expressões.
+- Restrições de domínio.
+- Conjuntos de soluções de problemas.
 
-Por exemplo, para determinar o domínio de
+### Exemplo: determinação de domínio
+
+Considere a função:
 
 $$
-f(x)=\sqrt{x-3},
+f(x)=\sqrt{x-3}.
 $$
 
-resolvemos a inequação
+Para que a raiz quadrada esteja definida no conjunto dos reais, precisamos exigir:
 
 $$
 x-3\geq 0.
 $$
 
-Logo,
+Resolvendo a inequação:
 
 $$
 x\geq 3.
 $$
 
-Assim,
+Portanto, o domínio é:
 
 $$
-D_f=[3,+\infty).
+\boxed{D(f)=[3,+\infty).}
 $$
+
+Esse exemplo mostra como uma inequação pode determinar o domínio de uma função.
 
 ***
 
-## 📐 Valor absoluto
+## 📐 Valor absoluto e distância
 
-O valor absoluto mede distância até zero.
+O valor absoluto de um número real representa sua distância até zero na reta real.
 
-Para qualquer real $x$,
-
-$$
-|x|\geq 0.
-$$
-
-Além disso,
+Sua definição é:
 
 $$
 |x|=
@@ -232,109 +251,163 @@ x, & x\geq 0,\\
 \end{cases}
 $$
 
-Essa definição por partes é importante porque muitas funções no Cálculo também serão definidas por partes.
-
-O valor absoluto também aparece em desigualdades de distância:
+Algumas propriedades importantes são:
 
 $$
-|x-a|<\varepsilon
-$$
-
-significa que $x$ está a uma distância menor que $\varepsilon$ de $a$.
-
-Essa ideia será essencial na definição formal de limite.
-
-***
-
-## 🧩 Funções elementares
-
-Revisamos várias famílias de funções elementares.
-
-Entre elas:
-
-- funções afins;
-- funções quadráticas;
-- funções polinomiais;
-- funções racionais;
-- funções exponenciais;
-- funções logarítmicas;
-- funções trigonométricas.
-
-Essas funções são os blocos básicos do Cálculo.
-
-Muitas funções mais complexas são construídas a partir delas por soma, produto, quociente, composição e transformação.
-
-Por isso, reconhecer famílias de funções ajuda a prever comportamento.
-
-***
-
-## 🧩 Funções polinomiais e racionais
-
-Funções polinomiais têm a forma
-
-$$
-p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0.
-$$
-
-Elas são definidas em todo $\mathbb{R}$.
-
-Funções racionais têm a forma
-
-$$
-r(x)=\frac{p(x)}{q(x)},
-$$
-
-com $q(x)\neq 0$.
-
-As funções racionais exigem cuidado com o domínio, pois o denominador não pode ser zero.
-
-Por exemplo,
-
-$$
-f(x)=\frac{1}{x-2}
-$$
-
-tem domínio
-
-$$
-\mathbb{R}\setminus\{2\}.
-$$
-
-Esse ponto excluído pode gerar uma assíntota vertical.
-
-***
-
-## 🚀 Exponenciais e logaritmos
-
-Funções exponenciais têm a forma
-
-$$
-f(x)=a^x,
-$$
-
-com $a>0$ e $a\neq 1$.
-
-Quando $a>1$, a função cresce.
-
-Quando $0<a<1$, a função decresce.
-
-Funções logarítmicas são inversas das exponenciais.
-
-Em especial,
-
-$$
-e^x
+|x|\geq 0
 $$
 
 e
 
 $$
-\ln x
+|-x|=|x|.
 $$
 
-são funções inversas.
+Além disso, para quaisquer números reais $a$ e $b$:
 
-Temos:
+$$
+|a-b|
+$$
+
+representa a distância entre eles na reta real.
+
+### Valor absoluto e vizinhanças
+
+A desigualdade
+
+$$
+|x-a|<\varepsilon,
+\qquad \varepsilon>0,
+$$
+
+significa que a distância entre $x$ e $a$ é menor que $\varepsilon$.
+
+Podemos reescrevê-la como:
+
+$$
+a-\varepsilon<x<a+\varepsilon.
+$$
+
+Portanto:
+
+$$
+|x-a|<\varepsilon
+\iff
+x\in(a-\varepsilon,a+\varepsilon).
+$$
+
+Essa interpretação será fundamental para compreender a definição formal de limite, na qual estudaremos o comportamento de uma função quando sua variável se aproxima de determinado valor.
+
+***
+
+## 🧩 Funções elementares
+
+Durante o módulo, estudamos diferentes famílias de funções.
+
+Cada família possui características próprias, que podem ser identificadas por suas expressões algébricas e representações gráficas.
+
+| Família | Exemplo | Característica |
+|---|---|---|
+| Afim | $f(x)=2x+1$ | Gráfico em reta |
+| Quadrática | $f(x)=x^2-4$ | Gráfico parabólico |
+| Polinomial | $f(x)=x^3-2x+1$ | Expressão formada por potências inteiras não negativas |
+| Racional | $f(x)=\frac{1}{x-1}$ | Quociente de polinômios |
+| Exponencial | $f(x)=2^x$ | Variável no expoente |
+| Logarítmica | $f(x)=\ln x$ | Inversa de uma exponencial |
+| Trigonométrica | $f(x)=\sin x$ | Comportamento periódico |
+
+Essas funções também podem ser combinadas por operações algébricas, composições e transformações gráficas.
+
+***
+
+## 🧩 Funções polinomiais e racionais
+
+Uma função polinomial pode ser escrita na forma:
+
+$$
+p(x)=a_nx^n+a_{n-1}x^{n-1}
++\cdots+a_1x+a_0,
+$$
+
+em que $a_n\neq 0$ e os coeficientes são números reais.
+
+Seu domínio é todo o conjunto dos números reais:
+
+$$
+D(p)=\mathbb{R}.
+$$
+
+Uma função racional é definida pelo quociente de dois polinômios:
+
+$$
+r(x)=\frac{p(x)}{q(x)},
+$$
+
+com a restrição:
+
+$$
+q(x)\neq 0.
+$$
+
+### Exemplo
+
+Considere:
+
+$$
+f(x)=\frac{1}{x-2}.
+$$
+
+O denominador não pode ser igual a zero. Assim:
+
+$$
+x-2\neq 0
+\implies x\neq 2.
+$$
+
+Logo:
+
+$$
+\boxed{D(f)=\mathbb{R}\setminus\{2\}.}
+$$
+
+A exclusão de um ponto do domínio pode estar relacionada a comportamentos especiais do gráfico, como uma assíntota vertical ou uma descontinuidade removível.
+
+***
+
+## 🚀 Funções exponenciais e logarítmicas
+
+Uma função exponencial tem a forma:
+
+$$
+f(x)=a^x,
+$$
+
+com:
+
+$$
+a>0,\qquad a\neq 1.
+$$
+
+Seu comportamento depende da base:
+
+- Se $a>1$, a função é estritamente crescente.
+- Se $0<a<1$, a função é estritamente decrescente.
+
+A função logarítmica é a inversa da função exponencial correspondente.
+
+Em particular, as funções exponencial natural e logarítmica natural são inversas:
+
+$$
+f(x)=e^x
+$$
+
+e
+
+$$
+g(x)=\ln x.
+$$
+
+Por isso:
 
 $$
 \ln(e^x)=x
@@ -343,170 +416,203 @@ $$
 e
 
 $$
-e^{\ln x}=x,
+e^{\ln x}=x,\qquad x>0.
 $$
 
-com $x>0$ na segunda igualdade.
-
-Essas funções serão centrais no estudo de derivadas e integrais.
+Essas relações são importantes em equações, modelos de crescimento e problemas que envolvem taxas de variação.
 
 ***
 
 ## 🌊 Trigonometria essencial
 
-A trigonometria entra no Cálculo por meio de funções como:
+As funções trigonométricas fundamentais incluem:
 
 $$
 \sin x,\qquad \cos x,\qquad \tan x.
 $$
 
-O uso de radianos é fundamental.
+Elas aparecem em fenômenos periódicos, como oscilações, movimentos circulares e ondas.
 
-No Cálculo, os ângulos devem ser medidos em radianos porque essa medida se conecta naturalmente ao comprimento de arco no círculo unitário.
-
-Alguns fatos importantes:
+Uma identidade fundamental é:
 
 $$
-\sin^2 x+\cos^2 x=1,
+\sin^2x+\cos^2x=1.
 $$
 
-$$
-\tan x=\frac{\sin x}{\cos x},
-$$
+Quando $\cos x\neq 0$, também temos:
 
 $$
-\sin(x+2\pi)=\sin x,
+\tan x=\frac{\sin x}{\cos x}.
 $$
+
+As funções seno e cosseno são periódicas, com período $2\pi$:
+
+$$
+\sin(x+2\pi)=\sin x
+$$
+
+e
 
 $$
 \cos(x+2\pi)=\cos x.
 $$
 
-As funções trigonométricas serão indispensáveis em limites, derivadas, integrais, equações diferenciais e modelos periódicos.
+### A importância dos radianos
+
+No estudo do Cálculo, utilizamos frequentemente a medida de ângulos em radianos.
+
+Essa escolha não é apenas uma convenção. Ela permite estabelecer relações matemáticas especialmente simples entre funções trigonométricas e limites, que serão importantes no desenvolvimento posterior da teoria.
 
 ***
 
 ## 📐 Definição formal de função
 
-Uma função
+Uma função é uma relação que associa a cada elemento de um conjunto de partida exatamente um elemento de um conjunto de chegada.
+
+Representamos uma função por:
 
 $$
-f:A\to B
+f:A\to B.
 $$
 
-associa a cada elemento de $A$ exatamente um elemento de $B$.
-
-O conjunto $A$ é o domínio.
-
-O conjunto $B$ é o contradomínio.
-
-A imagem é o conjunto dos valores realmente atingidos por $f$.
-
-Esses três conceitos precisam ser distinguidos:
+Nessa notação:
 
 | Conceito | Significado |
 |---|---|
-| Domínio | entradas permitidas |
-| Contradomínio | conjunto declarado das saídas |
-| Imagem | valores realmente assumidos |
+| Domínio | Conjunto de partida $A$ |
+| Contradomínio | Conjunto de chegada $B$ |
+| Imagem | Conjunto dos valores efetivamente assumidos pela função |
 
-No Cálculo, o domínio é especialmente importante. Ele determina onde podemos falar de limite, continuidade, derivada e integral.
+A imagem é um subconjunto do contradomínio:
+
+$$
+\operatorname{Im}(f)\subseteq B.
+$$
+
+### Exemplo
+
+Considere:
+
+$$
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2.
+$$
+
+O domínio é:
+
+$$
+D(f)=\mathbb{R}.
+$$
+
+Entretanto, como o quadrado de um número real nunca é negativo, sua imagem é:
+
+$$
+\operatorname{Im}(f)=[0,+\infty).
+$$
+
+Observe que domínio, contradomínio e imagem são conceitos diferentes.
+
+O domínio merece atenção especial porque determina os valores para os quais podemos avaliar a função e investigar seu comportamento.
 
 ***
 
-## 🔎 Leitura gráfica e algébrica
+## 🔎 Leitura algébrica e gráfica de funções
 
-Uma função pode ser analisada por sua fórmula e por seu gráfico.
+Uma função pode ser estudada por diferentes representações.
 
-A leitura algébrica ajuda a encontrar:
+A representação algébrica apresenta a regra que associa cada entrada à sua saída.
 
-- domínio;
-- zeros;
-- sinais;
-- fatorações;
-- simplificações;
-- restrições.
+A representação gráfica permite visualizar o comportamento da função no plano cartesiano.
 
-A leitura gráfica ajuda a visualizar:
+Também podemos utilizar tabelas de valores para organizar informações.
 
-- crescimento;
-- decrescimento;
-- máximos;
-- mínimos;
-- buracos;
-- saltos;
-- assíntotas;
-- simetrias.
+### O que investigar algebricamente?
 
-As duas leituras devem ser usadas juntas.
+- Domínio.
+- Zeros da função.
+- Sinal da função.
+- Fatoração e simplificação.
+- Restrições da expressão.
+- Relações entre variáveis.
 
-O Cálculo formaliza muitas percepções gráficas por meio de limites, derivadas e integrais.
+### O que investigar graficamente?
+
+- Intervalos de crescimento e decrescimento.
+- Pontos de máximo e mínimo.
+- Interseções com os eixos.
+- Simetrias.
+- Descontinuidades.
+- Assíntotas.
+- Comportamento global.
+
+As duas perspectivas são complementares.
+
+O estudo do Cálculo permitirá transformar muitas observações gráficas em afirmações matemáticas rigorosas, utilizando limites, continuidade e derivadas.
 
 ***
 
 ## 🔄 Transformações gráficas
 
-Transformações gráficas permitem construir gráficos novos a partir de gráficos conhecidos.
+A partir de uma função conhecida, podemos construir outras funções por meio de transformações de seu gráfico.
 
-Exemplos:
+Considere uma função $f(x)$.
 
-$$
-f(x)+k
-$$
+| Expressão | Transformação |
+|---|---|
+| $f(x)+k$ | Translação vertical |
+| $f(x-h)$ | Translação horizontal |
+| $-f(x)$ | Reflexão em relação ao eixo horizontal |
+| $f(-x)$ | Reflexão em relação ao eixo vertical |
+| $af(x)$ | Escala vertical |
+| $f(bx)$ | Escala horizontal |
 
-desloca o gráfico verticalmente.
+### Escala vertical
 
-$$
-f(x-h)
-$$
-
-desloca o gráfico horizontalmente.
-
-$$
--f(x)
-$$
-
-reflete o gráfico em relação ao eixo horizontal.
+Na transformação:
 
 $$
-f(-x)
+g(x)=af(x),
 $$
 
-reflete o gráfico em relação ao eixo vertical.
+temos:
+
+- Se $|a|>1$, ocorre alongamento vertical.
+- Se $0<|a|<1$, ocorre compressão vertical.
+- Se $a<0$, também ocorre reflexão em relação ao eixo horizontal.
+
+### Escala horizontal
+
+Na transformação:
 
 $$
-af(x)
+g(x)=f(bx),
 $$
 
-alonga ou comprime verticalmente.
+temos:
 
-$$
-f(bx)
-$$
+- Se $|b|>1$, ocorre compressão horizontal.
+- Se $0<|b|<1$, ocorre alongamento horizontal.
+- Se $b<0$, também ocorre reflexão em relação ao eixo vertical.
 
-alonga ou comprime horizontalmente.
-
-Essas transformações ajudam a reconhecer rapidamente o comportamento de funções.
+Essas transformações são úteis para compreender como alterações na expressão algébrica modificam a representação gráfica.
 
 ***
 
 ## 🔗 Composição de funções
 
-A composição de funções é dada por
+A composição permite aplicar uma função ao resultado produzido por outra.
+
+Sejam duas funções $f$ e $g$. A composição de $f$ com $g$ é definida por:
 
 $$
 (f\circ g)(x)=f(g(x)).
 $$
 
-A função mais próxima de $x$ é aplicada primeiro.
+Primeiro aplicamos $g$ e, em seguida, aplicamos $f$ ao resultado.
 
-Em geral,
+### Exemplo
 
-$$
-f\circ g\neq g\circ f.
-$$
-
-Por exemplo, se
+Considere:
 
 $$
 f(x)=x^2
@@ -515,30 +621,57 @@ $$
 e
 
 $$
-g(x)=x+1,
+g(x)=x+1.
 $$
 
-então
+A primeira composição é:
 
 $$
-(f\circ g)(x)=(x+1)^2,
+\begin{aligned}
+(f\circ g)(x)
+&=f(g(x))\\
+&=f(x+1)\\
+&=(x+1)^2.
+\end{aligned}
 $$
 
-enquanto
+A segunda composição é:
 
 $$
-(g\circ f)(x)=x^2+1.
+\begin{aligned}
+(g\circ f)(x)
+&=g(f(x))\\
+&=g(x^2)\\
+&=x^2+1.
+\end{aligned}
 $$
 
-A composição será essencial para a regra da cadeia no estudo de derivadas.
+Portanto:
+
+$$
+\boxed{f\circ g\neq g\circ f.}
+$$
+
+Em geral, a composição não é comutativa.
+
+### Condição de existência
+
+Para que $(f\circ g)(x)$ esteja definida, precisamos que:
+
+1. $x$ pertença ao domínio de $g$.
+2. $g(x)$ pertença ao domínio de $f$.
+
+Essa operação será essencial no estudo da regra da cadeia, uma das ferramentas fundamentais do cálculo diferencial.
 
 ***
 
 ## 🪞 Função inversa
 
-Uma função inversa desfaz a ação da função original.
+A função inversa desfaz a operação realizada pela função original.
 
-Se $f$ tem inversa $f^{-1}$, então:
+Uma função $f:A\to B$ possui inversa $f^{-1}:B\to A$ quando é bijetiva, isto é, injetiva e sobrejetiva.
+
+Nesse caso:
 
 $$
 f^{-1}(f(x))=x
@@ -547,194 +680,252 @@ $$
 e
 
 $$
-f(f^{-1}(x))=x.
+f(f^{-1}(y))=y.
 $$
 
-Para uma função ter inversa, ela precisa ser bijetiva.
+Quando o contradomínio é escolhido como sendo a própria imagem da função, a injetividade é suficiente para garantir a existência da inversa.
 
-Quando uma função não é injetiva em todo o seu domínio, podemos às vezes restringir o domínio para obter uma inversa.
+### Exemplo: uma função sem inversa em todo o domínio
 
-Por exemplo,
+Considere:
 
 $$
-f(x)=x^2
+f(x)=x^2.
 $$
 
-não tem inversa em todo $\mathbb{R}$, mas a função
+A função não é injetiva em $\mathbb{R}$, pois:
+
+$$
+f(2)=f(-2)=4.
+$$
+
+Portanto, não possui inversa como função de $\mathbb{R}$ em $\mathbb{R}$.
+
+Entretanto, podemos restringir seu domínio:
 
 $$
 f:[0,+\infty)\to[0,+\infty),
-\qquad f(x)=x^2
+\qquad f(x)=x^2.
 $$
 
-tem inversa
+Nessa restrição, a função é bijetiva e sua inversa é:
 
 $$
-f^{-1}(x)=\sqrt{x}.
+\boxed{f^{-1}(x)=\sqrt{x}.}
 $$
+
+Esse exemplo mostra que a existência de uma função inversa depende das propriedades da função e dos conjuntos considerados.
 
 ***
 
-## 🛠️ Modelagem com funções
+## 🛠️ Modelagem matemática com funções
 
-Funções elementares servem para construir modelos.
+Uma função pode representar matematicamente uma situação concreta.
 
-Alguns padrões comuns são:
+A escolha do modelo depende das características do fenômeno investigado.
 
 | Situação | Modelo possível |
 |---|---|
-| taxa constante | função linear |
-| trajetória parabólica | função quadrática |
-| crescimento por fator | função exponencial |
-| crescimento lento | função logarítmica |
-| comportamento com assíntotas | função racional |
-| fenômenos periódicos | função trigonométrica |
+| Variação a uma taxa constante | Função afim |
+| Trajetória parabólica idealizada | Função quadrática |
+| Crescimento multiplicativo | Função exponencial |
+| Crescimento logarítmico | Função logarítmica |
+| Comportamento representado por quocientes | Função racional |
+| Fenômenos periódicos | Funções trigonométricas |
 
-Ao modelar, devemos sempre considerar o contexto.
+### O domínio no contexto de um modelo
 
-Se $x$ representa quantidade, normalmente
+É importante distinguir o domínio algébrico de uma expressão e o domínio que faz sentido em uma aplicação.
 
-$$
-x\geq 0.
-$$
-
-Se $t$ representa tempo após o início de um experimento, normalmente
+Por exemplo, se $t$ representa o tempo transcorrido em um experimento, normalmente consideramos:
 
 $$
 t\geq 0.
 $$
 
-Nem todo valor permitido pela fórmula faz sentido no problema real.
+Se $x$ representa a quantidade de produtos fabricados, também podemos exigir:
+
+$$
+x\geq 0.
+$$
+
+Dependendo do contexto, ainda pode ser necessário restringir $x$ aos números inteiros não negativos.
+
+Assim, o modelo matemático precisa respeitar tanto as condições algébricas quanto o significado das variáveis.
 
 ***
 
 ## 📈 Crescimento e comportamento assintótico
 
-No final do módulo, estudamos como comparar o crescimento de funções e como observar tendências extremas.
+Na Aula 1.16, estudamos como comparar o crescimento de diferentes funções e reconhecer comportamentos assintóticos.
 
-Uma hierarquia intuitiva importante é:
-
-$$
-\ln x
-$$
-
-cresce mais lentamente que
+Para $x\to+\infty$, uma hierarquia importante é:
 
 $$
-x^\alpha
+\ln x \ll x^\alpha \ll a^x,
 $$
 
-para $\alpha>0$,
-
-que cresce mais lentamente que
+com:
 
 $$
-a^x
+\alpha>0,\qquad a>1.
 $$
 
-para $a>1$.
+Isso significa que:
 
-Também vimos assíntotas.
+- O logaritmo cresce mais lentamente que qualquer potência positiva de $x$.
+- Uma potência positiva de $x$ cresce mais lentamente que uma exponencial de base maior que $1$.
 
-Uma assíntota vertical pode aparecer quando a função cresce sem limite perto de um ponto.
-
-Uma assíntota horizontal aparece quando a função se aproxima de um valor constante quando
-
-$$
-x\to+\infty
-$$
-
-ou
+Essa comparação pode ser expressa por limites:
 
 $$
-x\to-\infty.
+\lim_{x\to+\infty}\frac{\ln x}{x^\alpha}=0
 $$
 
-Essas ideias serão formalizadas no módulo de limites.
+e
+
+$$
+\lim_{x\to+\infty}\frac{x^\alpha}{a^x}=0.
+$$
+
+### Assíntotas
+
+Uma assíntota é uma reta que descreve uma aproximação do gráfico de uma função em determinada região.
+
+Os três tipos fundamentais são:
+
+| Tipo | Característica |
+|---|---|
+| Vertical | Relacionada ao comportamento ilimitado nas proximidades de uma abscissa |
+| Horizontal | Aproximação de uma reta horizontal quando $x$ tende ao infinito |
+| Oblíqua | Aproximação de uma reta inclinada quando $x$ tende ao infinito |
+
+Por exemplo, a função:
+
+$$
+f(x)=\frac{1}{x-2}
+$$
+
+apresenta uma assíntota vertical em:
+
+$$
+x=2.
+$$
+
+Já a função:
+
+$$
+g(x)=\frac{x}{x+1}
+$$
+
+apresenta uma assíntota horizontal em:
+
+$$
+y=1.
+$$
+
+Essas ideias serão formalizadas por meio dos limites no próximo módulo.
 
 ***
 
 ## 🗺️ Mapa conceitual do Módulo 1
 
-Podemos resumir o módulo assim:
+O percurso desenvolvido neste módulo pode ser sintetizado da seguinte maneira:
 
 ```text
 Números reais
-   ↓
+     ↓
 Intervalos e inequações
-   ↓
+     ↓
 Domínios de funções
-   ↓
+     ↓
 Famílias de funções elementares
-   ↓
+     ↓
 Gráficos e transformações
-   ↓
+     ↓
 Composição e inversas
-   ↓
-Modelagem
-   ↓
+     ↓
+Modelagem matemática
+     ↓
 Crescimento e comportamento assintótico
-   ↓
+     ↓
 Limites
 ```
 
-O próximo módulo começará exatamente no último ponto: **limites**.
+O mapa evidencia que o estudo dos limites não aparece isoladamente. Ele se apoia em conhecimentos algébricos, funcionais e gráficos desenvolvidos ao longo do módulo.
 
 ***
 
-## ✅ Checklist para seguir para limites
+## 📋 Quadro-resumo — Síntese do Módulo 1
 
-Antes de avançar, é importante que você consiga:
+::: {.callout-note title="📋 Quadro-resumo"}
 
-- identificar o domínio de funções simples;
-- resolver inequações básicas;
-- reconhecer funções polinomiais, racionais, exponenciais, logarítmicas e trigonométricas;
-- interpretar gráficos;
-- encontrar zeros de funções;
-- analisar sinais;
-- reconhecer transformações gráficas;
-- calcular composições;
-- entender quando uma função pode ter inversa;
-- comparar crescimentos básicos;
-- reconhecer assíntotas simples.
+| Eixo de estudo | Conceitos fundamentais |
+|---|---|
+| Fundamentos algébricos | Números reais, intervalos, equações, inequações e valor absoluto |
+| Funções elementares | Funções afins, quadráticas, polinomiais, racionais, exponenciais, logarítmicas e trigonométricas |
+| Definição de função | Domínio, contradomínio e imagem |
+| Representações | Expressões algébricas, tabelas e gráficos |
+| Transformações | Translações, reflexões, alongamentos e compressões |
+| Operações | Composição e função inversa |
+| Modelagem | Variáveis, parâmetros e restrições de contexto |
+| Comportamento | Crescimento, decrescimento, termo dominante e assíntotas |
 
-Se algum desses pontos ainda parece frágil, vale revisar os posts anteriores antes de seguir.
+**Integração dos conhecimentos**
+
+Os conteúdos estudados formam uma base articulada para compreender como as funções são definidas, representadas, transformadas e utilizadas na descrição de fenômenos.
+
+**Preparação para o Cálculo**
+
+O domínio das funções e de seus comportamentos permite avançar para questões mais profundas sobre aproximação, continuidade e variação.
+
+A meta não é memorizar isoladamente todas as fórmulas, mas compreender as relações entre os conceitos.
+
+:::
 
 ***
 
-## 🚀 O que vem agora?
+::: {.callout-note title="🌉 Ponte para o Cálculo"}
 
-Com essa base, estamos prontos para começar o estudo de limites. O **Módulo 2 está em preparação**; enquanto ele não é publicado, você pode revisar os pontos em que encontrou dificuldade ou explorar a trilha opcional de aprofundamentos AP.
+O Módulo 1 desenvolveu a linguagem matemática necessária para estudar funções.
 
-O limite é a ideia que permite responder perguntas como:
+Agora podemos formular perguntas mais profundas:
 
-- o que acontece com $f(x)$ quando $x$ se aproxima de um ponto?
-- uma função se aproxima de algum valor?
-- há buraco no gráfico?
-- há salto?
-- há assíntota?
-- qual é a inclinação instantânea de uma curva?
+- O que acontece com $f(x)$ quando $x$ se aproxima de determinado valor?
+- Uma função pode se aproximar de um número mesmo sem assumir esse valor?
+- Como descrever matematicamente o comportamento de uma função nas proximidades de um ponto?
+- Como investigar situações em que a função cresce sem limite?
+- Como determinar a taxa de variação instantânea?
 
-A partir dos limites, construiremos continuidade, derivadas e integrais.
+Essas perguntas nos conduzem ao estudo dos **limites**.
+
+Os limites permitirão desenvolver formalmente as ideias de continuidade e derivada e, posteriormente, compreender a integral.
+
+:::
 
 ***
 
 # 🧪 Exercícios propostos
 
-::: {.callout-note title="📝 Exercícios"}
+::: {.callout-note title="📝 Exercícios de revisão"}
 
-## 🧪 Exercício 1
+Os exercícios a seguir retomam os principais conhecimentos do Módulo 1. Procure resolver cada questão antes de consultar o gabarito comentado.
 
-Determine o domínio real das funções:
+## 🧪 Exercício 1 — Domínio de funções
 
-a) $f(x)=\sqrt{x-2}$  
-b) $g(x)=\dfrac{1}{x+5}$  
-c) $h(x)=\ln(x-1)$  
+Determine o domínio das funções:
+
+a) $f(x)=\sqrt{x-2}$
+
+b) $g(x)=\dfrac{1}{x+5}$
+
+c) $h(x)=\ln(x-1)$
+
 d) $p(x)=\dfrac{x+1}{x^2-4}$
 
-## 🧪 Exercício 2
+## 🧪 Exercício 2 — Análise de uma função quadrática
 
-Considere
+Considere:
 
 $$
 f(x)=x^2-4.
@@ -742,14 +933,17 @@ $$
 
 Determine:
 
-a) os zeros;  
-b) a interseção com o eixo vertical;  
-c) os intervalos em que $f(x)>0$;  
-d) os intervalos em que $f(x)<0$.
+a) Os zeros da função.
 
-## 🧪 Exercício 3
+b) A interseção do gráfico com o eixo vertical.
 
-Considere
+c) Os intervalos nos quais a função é positiva.
+
+d) Os intervalos nos quais a função é negativa.
+
+## 🧪 Exercício 3 — Composição de funções
+
+Considere:
 
 $$
 f(x)=x^2
@@ -761,313 +955,374 @@ $$
 g(x)=x+3.
 $$
 
-Calcule:
+Determine:
 
-a) $(f\circ g)(x)$  
-b) $(g\circ f)(x)$  
-c) $(f\circ g)(1)$  
-d) $(g\circ f)(1)$
+a) $(f\circ g)(x)$.
 
-## 🧪 Exercício 4
+b) $(g\circ f)(x)$.
 
-Determine a inversa de
+c) $(f\circ g)(1)$.
+
+d) $(g\circ f)(1)$.
+
+## 🧪 Exercício 4 — Função inversa
+
+Determine a função inversa de:
 
 $$
 f(x)=3x-6.
 $$
 
-Verifique por composição.
+Em seguida, verifique o resultado calculando as composições:
 
-## 🧪 Exercício 5
+$$
+f^{-1}(f(x))
+$$
 
-Associe cada função ao tipo de comportamento dominante:
+e
 
-a) $f(x)=2^x$  
-b) $g(x)=\ln x$  
-c) $h(x)=x^3$  
-d) $p(x)=\dfrac{x}{x+1}$  
+$$
+f(f^{-1}(x)).
+$$
+
+## 🧪 Exercício 5 — Classificação de funções
+
+Classifique cada função de acordo com sua família:
+
+a) $f(x)=2^x$
+
+b) $g(x)=\ln x$
+
+c) $h(x)=x^3$
+
+d) $p(x)=\dfrac{x}{x+1}$
+
 e) $q(x)=\sin x$
 
-Use as opções: exponencial, logarítmico, polinomial, racional com assíntota horizontal, periódico.
+Utilize as classificações:
+
+- Exponencial.
+- Logarítmica.
+- Polinomial.
+- Racional.
+- Trigonométrica periódica.
+
+Identifique também a assíntota horizontal da função do item d), se existir.
 
 :::
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
 # ✅ Gabarito comentado
 
-## 🧪 Exercício 1
+::: {.callout-important collapse="true" title="✅ Clique para consultar o gabarito"}
 
-a) Para
+## 🧪 Exercício 1 — Domínio de funções
+
+**a)** Para:
 
 $$
 f(x)=\sqrt{x-2},
 $$
 
-precisamos de
+precisamos exigir:
 
 $$
 x-2\geq 0.
 $$
 
-Logo,
+Logo:
 
 $$
-x\geq 2
+\boxed{D(f)=[2,+\infty).}
 $$
 
-e
-
-$$
-D_f=[2,+\infty).
-$$
-
-b) Para
+**b)** Para:
 
 $$
 g(x)=\frac{1}{x+5},
 $$
 
-precisamos de
+o denominador não pode ser zero:
 
 $$
-x+5\neq 0.
+x+5\neq 0
+\implies x\neq -5.
 $$
 
-Logo,
+Portanto:
 
 $$
-x\neq -5
+\boxed{D(g)=\mathbb{R}\setminus\{-5\}.}
 $$
 
-e
-
-$$
-D_g=(-\infty,-5)\cup(-5,+\infty).
-$$
-
-c) Para
+**c)** Para:
 
 $$
 h(x)=\ln(x-1),
 $$
 
-precisamos de
+o argumento do logaritmo precisa ser positivo:
 
 $$
 x-1>0.
 $$
 
-Logo,
+Assim:
 
 $$
-x>1
+\boxed{D(h)=(1,+\infty).}
 $$
 
-e
-
-$$
-D_h=(1,+\infty).
-$$
-
-d) Para
+**d)** Para:
 
 $$
 p(x)=\frac{x+1}{x^2-4},
 $$
 
-precisamos de
+o denominador deve ser diferente de zero:
 
 $$
 x^2-4\neq 0.
 $$
 
-Como
+Fatorando:
 
 $$
-x^2-4=(x-2)(x+2),
+(x-2)(x+2)\neq 0.
 $$
 
-temos
+Logo:
 
 $$
-x\neq -2
+x\neq -2,\qquad x\neq 2.
 $$
 
-e
+Portanto:
 
 $$
-x\neq 2.
+\boxed{
+D(p)=
+(-\infty,-2)\cup(-2,2)\cup(2,+\infty).
+}
 $$
 
-Portanto,
+## 🧪 Exercício 2 — Análise de uma função quadrática
+
+Temos:
 
 $$
-D_p=(-\infty,-2)\cup(-2,2)\cup(2,+\infty).
+f(x)=x^2-4.
 $$
 
-## 🧪 Exercício 2
-
-Temos
+Fatorando:
 
 $$
-f(x)=x^2-4=(x-2)(x+2).
+f(x)=(x-2)(x+2).
 $$
 
-a) Os zeros são
+**a) Zeros da função**
+
+Resolvendo:
 
 $$
-x=-2
+(x-2)(x+2)=0,
 $$
 
-e
+obtemos:
 
 $$
-x=2.
+\boxed{x=-2\quad\text{ou}\quad x=2.}
 $$
 
-b) A interseção com o eixo vertical ocorre em $x=0$:
+**b) Interseção com o eixo vertical**
+
+Calculamos:
 
 $$
 f(0)=0^2-4=-4.
 $$
 
-Logo, o ponto é
+Portanto, o gráfico intercepta o eixo vertical no ponto:
 
 $$
-(0,-4).
+\boxed{(0,-4).}
 $$
 
-c) A função é positiva fora das raízes:
+**c) Onde a função é positiva**
+
+Como a parábola tem concavidade voltada para cima, seus valores são positivos fora das raízes:
 
 $$
-f(x)>0
+\boxed{(-\infty,-2)\cup(2,+\infty).}
 $$
 
-em
+**d) Onde a função é negativa**
+
+Entre as raízes, a função assume valores negativos:
 
 $$
-(-\infty,-2)\cup(2,+\infty).
+\boxed{(-2,2).}
 $$
 
-d) A função é negativa entre as raízes:
+## 🧪 Exercício 3 — Composição de funções
+
+Temos:
 
 $$
-f(x)<0
+f(x)=x^2,\qquad g(x)=x+3.
 $$
 
-em
+**a) Primeira composição**
 
 $$
-(-2,2).
+\begin{aligned}
+(f\circ g)(x)
+&=f(g(x))\\
+&=f(x+3)\\
+&=(x+3)^2.
+\end{aligned}
 $$
 
-## 🧪 Exercício 3
-
-Temos
+Logo:
 
 $$
-f(x)=x^2
+\boxed{(f\circ g)(x)=(x+3)^2.}
 $$
 
-e
+**b) Segunda composição**
 
 $$
-g(x)=x+3.
+\begin{aligned}
+(g\circ f)(x)
+&=g(f(x))\\
+&=g(x^2)\\
+&=x^2+3.
+\end{aligned}
 $$
 
-a)
+Logo:
 
 $$
-(f\circ g)(x)=f(g(x))=f(x+3)=(x+3)^2.
+\boxed{(g\circ f)(x)=x^2+3.}
 $$
 
-b)
+**c) Valor da primeira composição em $x=1$**
 
 $$
-(g\circ f)(x)=g(f(x))=g(x^2)=x^2+3.
+(f\circ g)(1)=(1+3)^2.
 $$
 
-c)
+Portanto:
 
 $$
-(f\circ g)(1)=(1+3)^2=16.
+\boxed{(f\circ g)(1)=16.}
 $$
 
-d)
+**d) Valor da segunda composição em $x=1$**
 
 $$
-(g\circ f)(1)=1^2+3=4.
+(g\circ f)(1)=1^2+3.
 $$
 
-## 🧪 Exercício 4
-
-Temos
+Portanto:
 
 $$
-f(x)=3x-6.
+\boxed{(g\circ f)(1)=4.}
 $$
 
-Escrevemos
+## 🧪 Exercício 4 — Função inversa
+
+Considere:
 
 $$
 y=3x-6.
 $$
 
-Então
+Isolando $x$:
 
 $$
-y+6=3x,
+y+6=3x.
 $$
 
-logo
+Assim:
 
 $$
 x=\frac{y+6}{3}.
 $$
 
-Portanto,
+Trocando as variáveis, obtemos:
 
 $$
-f^{-1}(x)=\frac{x+6}{3}.
+\boxed{f^{-1}(x)=\frac{x+6}{3}.}
 $$
 
-Verificando:
+**Verificação da primeira composição**
 
 $$
-f^{-1}(f(x))=f^{-1}(3x-6)=\frac{(3x-6)+6}{3}=x.
+\begin{aligned}
+f^{-1}(f(x))
+&=\frac{(3x-6)+6}{3}\\
+&=\frac{3x}{3}\\
+&=x.
+\end{aligned}
 $$
 
-E:
+**Verificação da segunda composição**
 
 $$
-f(f^{-1}(x))=f\left(\frac{x+6}{3}\right)=3\cdot\frac{x+6}{3}-6=x+6-6=x.
+\begin{aligned}
+f(f^{-1}(x))
+&=3\left(\frac{x+6}{3}\right)-6\\
+&=x+6-6\\
+&=x.
+\end{aligned}
 $$
 
-## 🧪 Exercício 5
+As duas composições retornam o valor original. Portanto, a inversa está correta.
 
-a) $f(x)=2^x$: exponencial.  
+## 🧪 Exercício 5 — Classificação de funções
 
-b) $g(x)=\ln x$: logarítmico.  
+**a)** $2^x$: função exponencial.
 
-c) $h(x)=x^3$: polinomial.  
+**b)** $\ln x$: função logarítmica.
 
-d) $p(x)=\dfrac{x}{x+1}$: racional com assíntota horizontal.  
+**c)** $x^3$: função polinomial.
 
-e) $q(x)=\sin x$: periódico.
+**d)** $\dfrac{x}{x+1}$: função racional.
+
+Para identificar sua assíntota horizontal, dividimos o numerador e o denominador por $x$:
+
+$$
+\frac{x}{x+1}
+=
+\frac{1}{1+\frac{1}{x}}.
+$$
+
+Quando $x$ tende ao infinito, a expressão se aproxima de $1$.
+
+Portanto:
+
+$$
+\boxed{y=1}
+$$
+
+é sua assíntota horizontal.
+
+**e)** $\sin x$: função trigonométrica periódica.
 
 :::
 
 ***
 
-## 🧩 Quiz — Revisão Geral do Módulo 1
+# 🧩 Quiz — Revisão Geral do Módulo 1
 
 :::::{.question}
-**Q1.** O domínio de $f(x)=\sqrt{x-4}$ é:
+
+**Q1.** Qual é o domínio da função $f(x)=\sqrt{x-4}$?
 
 ::::{.choices}
+
 :::{.choice}
 $(-\infty,4]$.
 :::
@@ -1077,72 +1332,106 @@ $[4,+\infty)$.
 :::
 
 :::{.choice}
+$(4,+\infty)$.
+:::
+
+:::{.choice}
 $\mathbb{R}$.
 :::
+
 ::::
+
 :::::
 
 :::::{.question}
-**Q2.** Se $f(x)=x^2$ e $g(x)=x+1$, então $(f\circ g)(x)$ é:
+
+**Q2.** Se $f(x)=x^2$ e $g(x)=x+1$, qual é a expressão de $(f\circ g)(x)$?
 
 ::::{.choices}
-:::{.choice .correct-choice}
-$(x+1)^2$.
-:::
 
 :::{.choice}
 $x^2+1$.
 :::
 
-:::{.choice}
-$x+2$.
+:::{.choice .correct-choice}
+$(x+1)^2$.
 :::
+
+:::{.choice}
+$x^2+x$.
+:::
+
+:::{.choice}
+$2x+1$.
+:::
+
 ::::
+
 :::::
 
 :::::{.question}
-**Q3.** A função $e^x$ tem como inversa:
+
+**Q3.** Qual é a função inversa de $f(x)=e^x$?
 
 ::::{.choices}
+
 :::{.choice}
-$x^2$.
+$f^{-1}(x)=e^{-x}$.
+:::
+
+:::{.choice}
+$f^{-1}(x)=\log_{10}x$.
 :::
 
 :::{.choice .correct-choice}
-$\ln x$.
+$f^{-1}(x)=\ln x$.
 :::
 
 :::{.choice}
-$\sin x$.
+$f^{-1}(x)=x^2$.
 :::
+
 ::::
+
 :::::
 
 :::::{.question}
-**Q4.** Uma assíntota horizontal descreve o comportamento da função quando:
+
+**Q4.** Uma função possui assíntota horizontal $y=L$ quando:
 
 ::::{.choices}
+
 :::{.choice}
-$x$ é sempre igual a zero.
+Seu domínio é limitado.
+:::
+
+:::{.choice}
+Seu gráfico intercepta o eixo horizontal.
 :::
 
 :::{.choice .correct-choice}
-$x$ tende a $+\infty$ ou $-\infty$.
+Seus valores se aproximam de $L$ quando $x$ tende a $+\infty$ ou a $-\infty$, em pelo menos uma dessas direções.
 :::
 
 :::{.choice}
-A função é necessariamente constante.
+Ela é necessariamente uma função polinomial.
 :::
+
 ::::
+
 :::::
 
 ***
 
 # 🔬 Aprofundamentos para preparar o estudo de limites
 
-Você concluiu a sequência principal do Módulo 1. Os seis AP abaixo são opcionais: escolha o tema de que precisa ou percorra a trilha de 1.18-AP a 1.23-AP. Em cada um, há links para voltar à aula de origem e retomar a sequência principal.
+Ao longo do Módulo 1, desenvolvemos os conhecimentos essenciais para compreender funções e seus comportamentos.
 
-| Aprofundamento | Retomar a aula principal |
+Além da sequência principal, há seis aprofundamentos opcionais que permitem explorar alguns assuntos com maior rigor e detalhamento.
+
+Essas leituras não são obrigatórias para concluir a revisão. Você pode realizá-las agora ou retornar a elas quando desejar reforçar determinado conteúdo.
+
+| Aprofundamento opcional | Aula principal relacionada |
 |---|---|
 | [1.18-AP — Conjuntos Numéricos](1.18-AP-conjuntos.qmd) | [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd) |
 | [1.19-AP — Valor Absoluto e Inequações Modulares](1.19-AP-valor-absoluto.qmd) | [1.3 Intervalos e Inequações](1.3-intervalos-inequacoes.qmd) |
@@ -1151,19 +1440,33 @@ Você concluiu a sequência principal do Módulo 1. Os seis AP abaixo são opcio
 | [1.22-AP — Funções por Partes](1.22-AP-funcoes-por-partes.qmd) | [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd) |
 | [1.23-AP — Assíntotas e Comportamento no Infinito](1.23-AP-assintotas-e-comportamento-no-infinito.qmd) | [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd) |
 
-::: {.callout-note title="🚧 Módulo 2 — Limites: em preparação"}
+::: {.callout-tip title="📌 Como utilizar os aprofundamentos"}
 
-As aulas do próximo módulo ainda não estão publicadas. Você pode [consultar os temas previstos no sumário](../index.qmd#módulo-2-limites).
+Os aprofundamentos são materiais complementares. A sequência principal do curso permanece organizada em suas aulas regulares.
 
-::: 
+Cada leitura opcional está relacionada a uma aula específica, permitindo que você retorne ao conteúdo principal sempre que necessário.
+
+:::
+
+::: {.callout-note title="🚀 Módulo 2 — Limites"}
+
+<badge color="info">Em preparação</badge>
+
+O próximo módulo será dedicado ao estudo dos limites, começando pela compreensão intuitiva da aproximação e avançando gradualmente para sua definição matemática.
+
+[← Voltar ao Sumário do Curso](../index.qmd#módulo-2-limites)
+
+:::
+
+***
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
+🎯 **Aula anterior:** 👉 [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd)
 
-🔬 **Próxima leitura opcional:** 👉 [1.18-AP — Conjuntos Numéricos](1.18-AP-conjuntos.qmd)
+🎯 **Leitura complementar:** 👉 [1.18-AP — Conjuntos Numéricos](1.18-AP-conjuntos.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.17-revisao-geral-do-modulo-1.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
@@ -1172,4 +1475,3 @@ As aulas do próximo módulo ainda não estão publicadas. Você pode [consultar
 :::{.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

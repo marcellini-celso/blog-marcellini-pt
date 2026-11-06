@@ -10,8 +10,11 @@ format:
   html:
     toc: true
     toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
+    mermaid:
+      theme: default
     fig-align: center
     code-overflow: scroll
     highlight-style: github
@@ -20,9 +23,31 @@ page-layout: full
 
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
+🎯 **Aula anterior:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
+
+🎯 **Próxima aula:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
 
 ***
+
+::: {.callout-tip title="❓ Pergunta Disparadora"}
+
+Se uma função transforma uma entrada em uma saída, o que acontece quando utilizamos essa saída como entrada de outra função? A ordem dessas operações importa?
+
+:::
+
+::: {.callout-note title="📌 Objetivos de Aprendizagem"}
+
+Ao final desta aula, você deverá ser capaz de:
+
+- Definir e calcular a composição de funções.
+- Interpretar a ordem das operações e reconhecer que a composição, em geral, não é comutativa.
+- Determinar o domínio de funções compostas, considerando as restrições de cada etapa.
+- Compor funções elementares, incluindo funções polinomiais, racionais, exponenciais, logarítmicas e radicais.
+- Decompor expressões em composições de funções mais simples.
+- Reconhecer as propriedades de associatividade e identidade da composição.
+- Relacionar a composição às transformações gráficas, à modelagem matemática e ao estudo posterior do Cálculo.
+
+:::
 
 # 📘 Composição de Funções
 
@@ -105,8 +130,22 @@ $$
 não significa multiplicação. Ela indica composição.
 
 ::: {.callout-note title="Ideia central"}
+
 Em $(f\circ g)(x)=f(g(x))$, a função que está mais perto de $x$ é aplicada primeiro.
+
 :::
+
+**Ilustração — O caminho percorrido pela entrada**
+
+```{mermaid}
+flowchart LR
+    X["Entrada: x"] --> G["Aplicar g"]
+    G --> GX["Resultado: g(x)"]
+    GX --> F["Aplicar f"]
+    F --> FGX["Resultado final: f(g(x))"]
+```
+
+A composição pode ser entendida como uma sequência de etapas: a entrada passa primeiro por $g$ e, em seguida, o resultado passa por $f$.
 
 ***
 
@@ -248,6 +287,33 @@ $$
 
 Logo, as duas composições não são iguais.
 
+**Ilustração — Comparando as duas ordens**
+
+```{mermaid}
+%%| fig-width: 5.5
+%%| fig-height: 2.7
+%%| fig-responsive: false
+%%{init: {"theme": "default", "flowchart": {"nodeSpacing": 16, "rankSpacing": 18, "diagramPadding": 4, "minNodeWidth": 82}}}%%
+flowchart LR
+    subgraph A["Primeiro g, depois f"]
+        direction TB
+        X1["x = 1"] --> G1["g(1) = 4"] --> F1["f(4) = 16"]
+    end
+
+    subgraph B["Primeiro f, depois g"]
+        direction TB
+        X2["x = 1"] --> F2["f(1) = 1"] --> G2["g(1) = 4"]
+    end
+```
+
+A ilustração mostra que a mesma entrada pode produzir resultados diferentes quando mudamos a ordem de aplicação das funções.
+
+::: {.callout-important title="Atenção"}
+
+A composição não é, em geral, comutativa. Isso não significa que $f\circ g$ e $g\circ f$ sejam sempre diferentes, mas que não podemos trocar a ordem das funções sem verificar o resultado.
+
+:::
+
 ***
 
 ## 🔗 Composição com funções elementares
@@ -308,7 +374,29 @@ $$
 p(x)=f(g(x))=\ln(3x-2).
 $$
 
+Para que essa expressão esteja definida nos reais, precisamos de
+
+$$
+3x-2>0,
+$$
+
+isto é,
+
+$$
+x>\frac{2}{3}.
+$$
+
 Essa forma de enxergar funções será essencial quando estudarmos a **regra da cadeia** em derivadas.
+
+**Ilustração — Uma função construída em duas etapas**
+
+```{mermaid}
+flowchart LR
+    X["Entrada: x"] --> G["Elevar ao quadrado e somar 1"]
+    G --> GX["x² + 1"]
+    GX --> F["Extrair a raiz quadrada"]
+    F --> H["√(x² + 1)"]
+```
 
 ***
 
@@ -339,8 +427,22 @@ $$
 g(x)\in D_f.
 $$
 
+**Ilustração — Verificando o domínio em duas etapas**
+
+```{mermaid}
+flowchart TD
+    A["Escolher x"] --> B{"x pertence ao domínio de g?"}
+    B -- "Não" --> X["A composição não está definida"]
+    B -- "Sim" --> C["Calcular g(x)"]
+    C --> D{"g(x) pertence ao domínio de f?"}
+    D -- "Não" --> X
+    D -- "Sim" --> E["Calcular f(g(x))"]
+```
+
 ::: {.callout-warning title="Cuidado com o domínio"}
+
 Não basta olhar apenas para a fórmula final simplificada. O domínio da composição depende das restrições de cada função envolvida.
+
 :::
 
 ***
@@ -571,6 +673,122 @@ Essa leitura será indispensável para derivar funções compostas.
 
 ***
 
+## 🔁 Associatividade da composição
+
+A composição de funções possui a propriedade da **associatividade**.
+
+Quando todas as composições estão bem definidas, temos:
+
+$$
+h\circ(g\circ f)=(h\circ g)\circ f.
+$$
+
+Isso significa que podemos mudar o agrupamento das funções sem alterar a ordem em que elas são aplicadas.
+
+Considere três funções:
+
+$$
+f(x)=x+1,
+$$
+
+$$
+g(x)=2x,
+$$
+
+e
+
+$$
+h(x)=x^2.
+$$
+
+Aplicando primeiro $f$, depois $g$ e, por último, $h$, obtemos:
+
+$$
+h(g(f(x)))=[2(x+1)]^2.
+$$
+
+Portanto,
+
+$$
+h(g(f(x)))=4(x+1)^2.
+$$
+
+O resultado é o mesmo independentemente de agruparmos a composição como $h\circ(g\circ f)$ ou como $(h\circ g)\circ f$.
+
+**Ilustração — Três funções em sequência**
+
+```{mermaid}
+flowchart LR
+    X["Entrada: x"] --> F["Aplicar f"]
+    F --> G["Aplicar g"]
+    G --> H["Aplicar h"]
+    H --> Y["Resultado final"]
+```
+
+::: {.callout-note title="Não confunda"}
+
+A composição é associativa, mas, em geral, não é comutativa.
+
+- **Associatividade:** podemos mudar o agrupamento das funções.
+- **Comutatividade:** trocar a ordem das funções.
+
+A primeira propriedade vale para composições bem definidas; a segunda não vale em geral.
+
+:::
+
+***
+
+## 🎯 Função identidade e composição
+
+A **função identidade** é aquela que devolve exatamente o valor que recebe.
+
+Sua expressão é:
+
+$$
+I(x)=x.
+$$
+
+Para uma função $f:A\to B$, podemos considerar duas funções identidade:
+
+- $I_A:A\to A$, identidade no conjunto de partida;
+- $I_B:B\to B$, identidade no conjunto de chegada.
+
+A composição com a identidade adequada preserva a função:
+
+$$
+f\circ I_A=f
+$$
+
+e
+
+$$
+I_B\circ f=f.
+$$
+
+Isso acontece porque a identidade não modifica o valor recebido.
+
+**Exemplo:** considere
+
+$$
+f(x)=x^2+3.
+$$
+
+Como $I(x)=x$, temos:
+
+$$
+(f\circ I)(x)=f(I(x))=f(x)=x^2+3.
+$$
+
+Também:
+
+$$
+(I\circ f)(x)=I(f(x))=f(x)=x^2+3.
+$$
+
+Em ambos os casos, o resultado é a própria função $f$.
+
+***
+
 ## 🔗 Composição e transformações gráficas
 
 Muitas transformações gráficas podem ser vistas como composições.
@@ -585,6 +803,12 @@ $$
 
 $$
 g(x)=x-3.
+$$
+
+Assim,
+
+$$
+h=f\circ g.
 $$
 
 Já
@@ -608,6 +832,39 @@ $$
 $$
 
 podem ser entendidas como aplicar $f$ e depois transformar o resultado.
+
+Para explicitar essa composição, podemos definir uma função externa:
+
+$$
+r(u)=2u+1.
+$$
+
+Então,
+
+$$
+2f(x)+1=r(f(x))=(r\circ f)(x).
+$$
+
+**Ilustração — Transformações na entrada e na saída**
+
+```{mermaid}
+flowchart TB
+    subgraph A["Transformação na entrada"]
+        direction TB
+        X1["Entrada: x"] --> T["Transformação: x - 3"]
+        T --> F1["Aplicar f"]
+        F1 --> Y1["Resultado: f(x - 3)"]
+    end
+
+    subgraph B["Transformação na saída"]
+        direction TB
+        X2["Entrada: x"] --> F2["Aplicar f"]
+        F2 --> R["Transformação: 2u + 1"]
+        R --> Y2["Resultado: 2f(x) + 1"]
+    end
+
+    Y1 ~~~ X2
+```
 
 ***
 
@@ -643,11 +900,66 @@ $$
 
 Esse é um exemplo de composição.
 
+**Ilustração — Da passagem do tempo à temperatura**
+
+```{mermaid}
+flowchart LR
+    T["Tempo: t"] --> A["Altitude: A(t)"]
+    A --> TEMP["Temperatura: T(A(t))"]
+```
+
+A composição permite conectar modelos matemáticos diferentes e estudar como uma variável influencia outra por meio de etapas intermediárias.
+
 ***
 
-## 🌉 Por que isso importa para o Cálculo?
+::: {.callout-note title="📋 Quadro-resumo"}
 
-A composição de funções é uma das ideias mais importantes para derivadas.
+| Conceito | Expressão ou condição | Interpretação |
+|---|---|---|
+| Composição | $(f\circ g)(x)=f(g(x))$ | Aplicamos primeiro $g$ e depois $f$ |
+| Ordem | Em geral, $f\circ g\neq g\circ f$ | A ordem das operações importa |
+| Domínio | $x\in D_g$ e $g(x)\in D_f$ | A entrada deve ser válida para $g$ e sua saída para $f$ |
+| Associatividade | $h\circ(g\circ f)=(h\circ g)\circ f$ | Podemos reagrupar composições bem definidas |
+| Identidade | $I(x)=x$ | Compor com a identidade adequada preserva a função |
+| Decomposição | $F=f\circ g$ | Uma expressão pode ser interpretada como operações sucessivas |
+
+**Domínio da composição:**
+
+$$
+\operatorname{Dom}(f\circ g)
+=
+\left\{
+x\in\operatorname{Dom}(g)
+\;\middle|\;
+g(x)\in\operatorname{Dom}(f)
+\right\}.
+$$
+
+**Exemplo:** considere
+
+$$
+g(x)=x^2+1,
+\qquad
+f(u)=\sqrt{u}.
+$$
+
+Então,
+
+$$
+(f\circ g)(x)=\sqrt{x^2+1}.
+$$
+
+Nesse caso, a função composta está definida para todo $x\in\mathbb{R}$, pois $x^2+1>0$.
+
+**Atenção:** não basta verificar separadamente os domínios de $f$ e de $g$. É necessário garantir que $g(x)$ pertença ao domínio de $f$.
+
+:::
+
+***
+
+::: {.callout-note title="🌉 Ponte para o Cálculo"}
+
+A composição de funções é uma das ideias mais importantes para o estudo das derivadas.
 
 Quando estudarmos a regra da cadeia, veremos que a derivada de
 
@@ -659,9 +971,9 @@ depende da derivada da função externa $f$ e da derivada da função interna $g
 
 A regra da cadeia é uma das ferramentas centrais do Cálculo Diferencial.
 
-Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição.
+Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição e identificar corretamente suas funções interna e externa.
 
-***
+:::
 
 # 🧪 Exercícios propostos
 
@@ -711,7 +1023,7 @@ d) o domínio de $g\circ f$
 
 ## 🧪 Exercício 3
 
-Determine o domínio real das funções compostas:
+Determine o domínio real das funções:
 
 a) $h(x)=\ln(x-3)$  
 b) $p(x)=\sqrt{2x+4}$  
@@ -738,9 +1050,9 @@ $$
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
 # ✅ Gabarito comentado
+
+::: {.callout-important collapse="true" title="✅ Gabarito"}
 
 ## 🧪 Exercício 1
 
@@ -1026,7 +1338,7 @@ $$
 
 ***
 
-## 🧩 Quiz — Composição de Funções
+# 🧩 Quiz — Composição de Funções
 
 :::::{.question}
 **Q1.** Na composição $(f\circ g)(x)=f(g(x))$, qual função é aplicada primeiro?
@@ -1086,11 +1398,11 @@ $f(x)$ seja sempre igual a $g(x)$.
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
+🎯 **Aula anterior:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
 
-🎯 **Próximo Post:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
+🎯 **Próxima aula:** 👉 [1.14 Função Inversa](1.14-funcao-inversa.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.13-composicao-de-funcoes.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
@@ -1099,4 +1411,3 @@ $f(x)$ seja sempre igual a $g(x)$.
 :::{.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

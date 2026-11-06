@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Aprofundamento sobre assíntotas verticais, horizontais, oblíquas e comportamento de funções no infinito.">
+<meta name="description" content="Aprofundamento sobre limites infinitos, assíntotas verticais, horizontais, oblíquas e polinomiais, funções racionais e comportamento no infinito.">
 
 <title>🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito – Blog do Marcellini</title>
 <style>
@@ -127,14 +127,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito – Blog do Marcellini">
-<meta property="og:description" content="Aprofundamento sobre assíntotas verticais, horizontais, oblíquas e comportamento de funções no infinito.">
+<meta property="og:description" content="Aprofundamento sobre limites infinitos, assíntotas verticais, horizontais, oblíquas e polinomiais, funções racionais e comportamento no infinito.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito – Blog do Marcellini">
-<meta name="twitter:description" content="Aprofundamento sobre assíntotas verticais, horizontais, oblíquas e comportamento de funções no infinito.">
+<meta name="twitter:description" content="Aprofundamento sobre limites infinitos, assíntotas verticais, horizontais, oblíquas e polinomiais, funções racionais e comportamento no infinito.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -267,28 +267,66 @@ window.Quarto = {
    
   <ul>
   <li><a href="#assíntotas-e-comportamento-no-infinito" id="toc-assíntotas-e-comportamento-no-infinito" class="nav-link active" data-scroll-target="#assíntotas-e-comportamento-no-infinito"><span class="header-section-number">1</span> 🔬 Assíntotas e Comportamento no Infinito</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#o-que-é-uma-assíntota" id="toc-o-que-é-uma-assíntota" class="nav-link" data-scroll-target="#o-que-é-uma-assíntota"><span class="header-section-number">1.1</span> 🧱 O que é uma assíntota?</a></li>
-  <li><a href="#assíntota-vertical" id="toc-assíntota-vertical" class="nav-link" data-scroll-target="#assíntota-vertical"><span class="header-section-number">1.2</span> 📍 Assíntota vertical</a></li>
-  <li><a href="#nem-todo-ponto-excluído-é-assíntota-vertical" id="toc-nem-todo-ponto-excluído-é-assíntota-vertical" class="nav-link" data-scroll-target="#nem-todo-ponto-excluído-é-assíntota-vertical"><span class="header-section-number">1.3</span> ⚠️ Nem todo ponto excluído é assíntota vertical</a></li>
-  <li><a href="#assíntotas-verticais-em-funções-racionais" id="toc-assíntotas-verticais-em-funções-racionais" class="nav-link" data-scroll-target="#assíntotas-verticais-em-funções-racionais"><span class="header-section-number">1.4</span> ➗ Assíntotas verticais em funções racionais</a></li>
-  <li><a href="#assíntota-horizontal" id="toc-assíntota-horizontal" class="nav-link" data-scroll-target="#assíntota-horizontal"><span class="header-section-number">1.5</span> 🌅 Assíntota horizontal</a></li>
-  <li><a href="#regra-prática-para-funções-racionais" id="toc-regra-prática-para-funções-racionais" class="nav-link" data-scroll-target="#regra-prática-para-funções-racionais"><span class="header-section-number">1.6</span> 🧮 Regra prática para funções racionais</a>
+  <li><a href="#assíntota-vertical" id="toc-assíntota-vertical" class="nav-link" data-scroll-target="#assíntota-vertical"><span class="header-section-number">1.2</span> 📍 Assíntota vertical</a>
   <ul class="collapse">
-  <li><a href="#grau-do-numerador-menor-que-o-grau-do-denominador" id="toc-grau-do-numerador-menor-que-o-grau-do-denominador" class="nav-link" data-scroll-target="#grau-do-numerador-menor-que-o-grau-do-denominador"><span class="header-section-number">1.6.1</span> 🧮 Grau do numerador menor que o grau do denominador</a></li>
-  <li><a href="#graus-iguais" id="toc-graus-iguais" class="nav-link" data-scroll-target="#graus-iguais"><span class="header-section-number">1.6.2</span> 🧮 Graus iguais</a></li>
-  <li><a href="#grau-do-numerador-maior" id="toc-grau-do-numerador-maior" class="nav-link" data-scroll-target="#grau-do-numerador-maior"><span class="header-section-number">1.6.3</span> 🧮 Grau do numerador maior</a></li>
+  <li><a href="#exemplo-1-a-função-recíproca-deslocada" id="toc-exemplo-1-a-função-recíproca-deslocada" class="nav-link" data-scroll-target="#exemplo-1-a-função-recíproca-deslocada"><span class="header-section-number">1.2.1</span> Exemplo 1 — A função recíproca deslocada</a></li>
+  <li><a href="#exemplo-2-os-dois-lados-podem-apresentar-o-mesmo-sinal" id="toc-exemplo-2-os-dois-lados-podem-apresentar-o-mesmo-sinal" class="nav-link" data-scroll-target="#exemplo-2-os-dois-lados-podem-apresentar-o-mesmo-sinal"><span class="header-section-number">1.2.2</span> Exemplo 2 — Os dois lados podem apresentar o mesmo sinal</a></li>
+  <li><a href="#atenção-aos-limites-laterais" id="toc-atenção-aos-limites-laterais" class="nav-link" data-scroll-target="#atenção-aos-limites-laterais"><span class="header-section-number">1.2.3</span> Atenção aos limites laterais</a></li>
   </ul></li>
-  <li><a href="#assíntota-oblíqua" id="toc-assíntota-oblíqua" class="nav-link" data-scroll-target="#assíntota-oblíqua"><span class="header-section-number">1.7</span> 📐 Assíntota oblíqua</a></li>
-  <li><a href="#termo-dominante" id="toc-termo-dominante" class="nav-link" data-scroll-target="#termo-dominante"><span class="header-section-number">1.8</span> 🔍 Termo dominante</a></li>
-  <li><a href="#comportamento-no-infinito" id="toc-comportamento-no-infinito" class="nav-link" data-scroll-target="#comportamento-no-infinito"><span class="header-section-number">1.9</span> ♾️ Comportamento no infinito</a></li>
-  <li><a href="#ponte-para-limites" id="toc-ponte-para-limites" class="nav-link" data-scroll-target="#ponte-para-limites"><span class="header-section-number">1.10</span> 🌉 Ponte para limites</a></li>
-  </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <li><a href="#nem-todo-ponto-excluído-é-uma-assíntota-vertical" id="toc-nem-todo-ponto-excluído-é-uma-assíntota-vertical" class="nav-link" data-scroll-target="#nem-todo-ponto-excluído-é-uma-assíntota-vertical"><span class="header-section-number">1.3</span> ⚠️ Nem todo ponto excluído é uma assíntota vertical</a>
   <ul class="collapse">
-  <li><a href="#quiz-assíntotas-e-comportamento-no-infinito" id="toc-quiz-assíntotas-e-comportamento-no-infinito" class="nav-link" data-scroll-target="#quiz-assíntotas-e-comportamento-no-infinito"><span class="header-section-number">3.5</span> 🧩 Quiz — Assíntotas e Comportamento no Infinito</a></li>
+  <li><a href="#comparação-entre-os-dois-casos" id="toc-comparação-entre-os-dois-casos" class="nav-link" data-scroll-target="#comparação-entre-os-dois-casos"><span class="header-section-number">1.3.1</span> Comparação entre os dois casos</a></li>
   </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  <li><a href="#assíntotas-verticais-em-funções-racionais" id="toc-assíntotas-verticais-em-funções-racionais" class="nav-link" data-scroll-target="#assíntotas-verticais-em-funções-racionais"><span class="header-section-number">1.4</span> ➗ Assíntotas verticais em funções racionais</a>
+  <ul class="collapse">
+  <li><a href="#procedimento-de-análise" id="toc-procedimento-de-análise" class="nav-link" data-scroll-target="#procedimento-de-análise"><span class="header-section-number">1.4.1</span> Procedimento de análise</a></li>
+  <li><a href="#exemplo-3-dois-candidatos-duas-assíntotas" id="toc-exemplo-3-dois-candidatos-duas-assíntotas" class="nav-link" data-scroll-target="#exemplo-3-dois-candidatos-duas-assíntotas"><span class="header-section-number">1.4.2</span> Exemplo 3 — Dois candidatos, duas assíntotas</a></li>
+  <li><a href="#exemplo-4-cancelamento-de-um-fator" id="toc-exemplo-4-cancelamento-de-um-fator" class="nav-link" data-scroll-target="#exemplo-4-cancelamento-de-um-fator"><span class="header-section-number">1.4.3</span> Exemplo 4 — Cancelamento de um fator</a></li>
+  </ul></li>
+  <li><a href="#assíntota-horizontal" id="toc-assíntota-horizontal" class="nav-link" data-scroll-target="#assíntota-horizontal"><span class="header-section-number">1.5</span> 🌅 Assíntota horizontal</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-5-assíntota-horizontal" id="toc-exemplo-5-assíntota-horizontal" class="nav-link" data-scroll-target="#exemplo-5-assíntota-horizontal"><span class="header-section-number">1.5.1</span> Exemplo 5 — Assíntota horizontal</a></li>
+  <li><a href="#exemplo-6-assíntotas-horizontais-diferentes" id="toc-exemplo-6-assíntotas-horizontais-diferentes" class="nav-link" data-scroll-target="#exemplo-6-assíntotas-horizontais-diferentes"><span class="header-section-number">1.5.2</span> Exemplo 6 — Assíntotas horizontais diferentes</a></li>
+  </ul></li>
+  <li><a href="#regra-prática-para-assíntotas-horizontais-em-funções-racionais" id="toc-regra-prática-para-assíntotas-horizontais-em-funções-racionais" class="nav-link" data-scroll-target="#regra-prática-para-assíntotas-horizontais-em-funções-racionais"><span class="header-section-number">1.6</span> 🧮 Regra prática para assíntotas horizontais em funções racionais</a>
+  <ul class="collapse">
+  <li><a href="#caso-1-grau-do-numerador-menor-que-o-grau-do-denominador" id="toc-caso-1-grau-do-numerador-menor-que-o-grau-do-denominador" class="nav-link" data-scroll-target="#caso-1-grau-do-numerador-menor-que-o-grau-do-denominador"><span class="header-section-number">1.6.1</span> Caso 1 — Grau do numerador menor que o grau do denominador</a></li>
+  <li><a href="#caso-2-graus-iguais" id="toc-caso-2-graus-iguais" class="nav-link" data-scroll-target="#caso-2-graus-iguais"><span class="header-section-number">1.6.2</span> Caso 2 — Graus iguais</a></li>
+  <li><a href="#caso-3-grau-do-numerador-maior-que-o-grau-do-denominador" id="toc-caso-3-grau-do-numerador-maior-que-o-grau-do-denominador" class="nav-link" data-scroll-target="#caso-3-grau-do-numerador-maior-que-o-grau-do-denominador"><span class="header-section-number">1.6.3</span> Caso 3 — Grau do numerador maior que o grau do denominador</a></li>
+  <li><a href="#quadro-resumo" id="toc-quadro-resumo" class="nav-link" data-scroll-target="#quadro-resumo"><span class="header-section-number">1.6.4</span> Quadro-resumo</a></li>
+  </ul></li>
+  <li><a href="#termo-dominante-e-funções-racionais" id="toc-termo-dominante-e-funções-racionais" class="nav-link" data-scroll-target="#termo-dominante-e-funções-racionais"><span class="header-section-number">1.7</span> 🔍 Termo dominante e funções racionais</a>
+  <ul class="collapse">
+  <li><a href="#por-que-o-procedimento-funciona" id="toc-por-que-o-procedimento-funciona" class="nav-link" data-scroll-target="#por-que-o-procedimento-funciona"><span class="header-section-number">1.7.1</span> Por que o procedimento funciona?</a></li>
+  </ul></li>
+  <li><a href="#assíntota-oblíqua" id="toc-assíntota-oblíqua" class="nav-link" data-scroll-target="#assíntota-oblíqua"><span class="header-section-number">1.8</span> 📐 Assíntota oblíqua</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-7-divisão-de-polinômios" id="toc-exemplo-7-divisão-de-polinômios" class="nav-link" data-scroll-target="#exemplo-7-divisão-de-polinômios"><span class="header-section-number">1.8.1</span> Exemplo 7 — Divisão de polinômios</a></li>
+  <li><a href="#exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero" id="toc-exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero" class="nav-link" data-scroll-target="#exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero"><span class="header-section-number">1.8.2</span> Exemplo 8 — Assíntota oblíqua com intercepto diferente de zero</a></li>
+  </ul></li>
+  <li><a href="#método-geral-para-encontrar-uma-assíntota-oblíqua" id="toc-método-geral-para-encontrar-uma-assíntota-oblíqua" class="nav-link" data-scroll-target="#método-geral-para-encontrar-uma-assíntota-oblíqua"><span class="header-section-number">1.9</span> ➗ Método geral para encontrar uma assíntota oblíqua</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-9-divisão-completa" id="toc-exemplo-9-divisão-completa" class="nav-link" data-scroll-target="#exemplo-9-divisão-completa"><span class="header-section-number">1.9.1</span> Exemplo 9 — Divisão completa</a></li>
+  <li><a href="#regra-prática" id="toc-regra-prática" class="nav-link" data-scroll-target="#regra-prática"><span class="header-section-number">1.9.2</span> Regra prática</a></li>
+  </ul></li>
+  <li><a href="#assíntotas-polinomiais" id="toc-assíntotas-polinomiais" class="nav-link" data-scroll-target="#assíntotas-polinomiais"><span class="header-section-number">1.10</span> 📈 Assíntotas polinomiais</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-10-aproximação-por-uma-parábola" id="toc-exemplo-10-aproximação-por-uma-parábola" class="nav-link" data-scroll-target="#exemplo-10-aproximação-por-uma-parábola"><span class="header-section-number">1.10.1</span> Exemplo 10 — Aproximação por uma parábola</a></li>
+  <li><a href="#quando-isso-pode-acontecer" id="toc-quando-isso-pode-acontecer" class="nav-link" data-scroll-target="#quando-isso-pode-acontecer"><span class="header-section-number">1.10.2</span> Quando isso pode acontecer?</a></li>
+  </ul></li>
+  <li><a href="#comportamento-no-infinito" id="toc-comportamento-no-infinito" class="nav-link" data-scroll-target="#comportamento-no-infinito"><span class="header-section-number">1.11</span> ♾️ Comportamento no infinito</a>
+  <ul class="collapse">
+  <li><a href="#exemplos-fundamentais" id="toc-exemplos-fundamentais" class="nav-link" data-scroll-target="#exemplos-fundamentais"><span class="header-section-number">1.11.1</span> Exemplos fundamentais</a></li>
+  </ul></li>
+  <li><a href="#comparação-de-crescimento-e-limites-de-quocientes" id="toc-comparação-de-crescimento-e-limites-de-quocientes" class="nav-link" data-scroll-target="#comparação-de-crescimento-e-limites-de-quocientes"><span class="header-section-number">1.12</span> ⚖️ Comparação de crescimento e limites de quocientes</a></li>
+  <li><a href="#ponte-para-limites" id="toc-ponte-para-limites" class="nav-link" data-scroll-target="#ponte-para-limites"><span class="header-section-number">1.13</span> 🌉 Ponte para limites</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">3</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-assíntotas-e-comportamento-no-infinito" id="toc-quiz-assíntotas-e-comportamento-no-infinito" class="nav-link" data-scroll-target="#quiz-assíntotas-e-comportamento-no-infinito"><span class="header-section-number">4</span> 🧩 Quiz — Assíntotas e Comportamento no Infinito</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -310,7 +348,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Aprofundamento sobre assíntotas verticais, horizontais, oblíquas e comportamento de funções no infinito.
+    Aprofundamento sobre limites infinitos, assíntotas verticais, horizontais, oblíquas e polinomiais, funções racionais e comportamento no infinito.
   </div>
 </div>
 
@@ -356,80 +394,251 @@ window.Quarto = {
 </div>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">1.22-AP — Funções por Partes</a></p>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quando uma função racional deixa de estar definida em determinado ponto, podemos concluir imediatamente que existe uma assíntota vertical?</p>
+<p>Como determinar se uma função se aproxima de uma reta inclinada, em vez de uma reta horizontal?</p>
+<p>E se o gráfico se aproximar de uma curva polinomial de grau maior que um?</p>
+<p>Essas perguntas nos levam a investigar com mais profundidade os limites e o comportamento das funções no infinito.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos de Aprendizagem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos de Aprendizagem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao final deste aprofundamento, você deverá ser capaz de:</p>
+<ul>
+<li>Interpretar assíntotas por meio de limites.</li>
+<li>Identificar assíntotas verticais utilizando limites laterais.</li>
+<li>Diferenciar assíntotas verticais de descontinuidades removíveis.</li>
+<li>Analisar os pontos problemáticos de funções racionais.</li>
+<li>Determinar assíntotas horizontais pela comparação dos graus dos polinômios.</li>
+<li>Utilizar os termos dominantes para investigar o comportamento no infinito.</li>
+<li>Determinar assíntotas oblíquas por meio da divisão de polinômios.</li>
+<li>Reconhecer situações em que uma função possui assíntota polinomial.</li>
+<li>Distinguir o comportamento de uma função quando <span class="math inline">\(x\to+\infty\)</span> e quando <span class="math inline">\(x\to-\infty\)</span>.</li>
+</ul>
+</div>
+</div>
 <section id="assíntotas-e-comportamento-no-infinito" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 🔬 Assíntotas e Comportamento no Infinito</h1>
-<p>Assíntotas descrevem retas das quais o gráfico de uma função se aproxima.</p>
-<p>Elas ajudam a entender o comportamento da função perto de pontos problemáticos ou quando <span class="math inline">\(x\)</span> cresce sem limite.</p>
-<p>Este aprofundamento prepara o módulo de limites, especialmente limites infinitos e limites no infinito.</p>
+<p>Assíntotas são retas que descrevem a aproximação de um gráfico em determinadas regiões do plano.</p>
+<p>Elas ajudam a compreender o comportamento de uma função:</p>
+<ul>
+<li>nas proximidades de pontos em que seus valores podem crescer ou decrescer sem limite;</li>
+<li>quando a variável independente tende a <span class="math inline">\(+\infty\)</span>;</li>
+<li>quando a variável independente tende a <span class="math inline">\(-\infty\)</span>.</li>
+</ul>
+<p>Na aula 1.16, apresentamos os conceitos fundamentais de assíntotas e comportamento assintótico. Neste aprofundamento, vamos desenvolver os procedimentos matemáticos que permitem identificá-las e justificá-las.</p>
+<p>O instrumento central será o <strong>limite</strong>.</p>
 <hr>
 <section id="o-que-é-uma-assíntota" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="o-que-é-uma-assíntota"><span class="header-section-number">1.1</span> 🧱 O que é uma assíntota?</h2>
-<p>Uma assíntota é uma reta que serve como referência para o comportamento de um gráfico.</p>
-<p>As mais comuns neste momento são:</p>
+<p>Uma reta pode ser considerada assíntota de uma função quando a distância vertical entre o gráfico e essa reta tende a zero em determinada situação.</p>
+<p>Os três tipos fundamentais são:</p>
 <ul>
-<li>assíntotas verticais;</li>
-<li>assíntotas horizontais;</li>
-<li>assíntotas oblíquas.</li>
+<li><strong>Assíntota vertical:</strong> relacionada ao comportamento da função nas proximidades de uma abscissa.</li>
+<li><strong>Assíntota horizontal:</strong> relacionada à aproximação da função a uma constante quando <span class="math inline">\(x\)</span> tende ao infinito.</li>
+<li><strong>Assíntota oblíqua:</strong> relacionada à aproximação da função a uma reta inclinada quando <span class="math inline">\(x\)</span> tende ao infinito.</li>
 </ul>
-<p>Cada tipo responde a uma pergunta diferente.</p>
+<p>Existe ainda uma generalização importante: uma função pode se aproximar de uma curva polinomial de grau superior a um. Nesse caso, podemos falar em <strong>assíntota polinomial</strong>.</p>
+<p>Cada tipo de assíntota corresponde a uma condição matemática específica, que será desenvolvida a seguir.</p>
 <hr>
 </section>
 <section id="assíntota-vertical" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="assíntota-vertical"><span class="header-section-number">1.2</span> 📍 Assíntota vertical</h2>
-<p>Uma assíntota vertical ocorre quando a função cresce ou decresce sem limite perto de certo valor de <span class="math inline">\(x\)</span>.</p>
-<p>Por exemplo:</p>
+<p>Uma reta vertical <span class="math inline">\(x=a\)</span> é uma <strong>assíntota vertical</strong> de uma função <span class="math inline">\(f\)</span> quando pelo menos um dos limites laterais é infinito positivo ou negativo:</p>
+<p><span class="math display">\[
+\lim_{x\to a^-}f(x)=+\infty,
+\]</span></p>
+<p><span class="math display">\[
+\lim_{x\to a^-}f(x)=-\infty,
+\]</span></p>
+<p><span class="math display">\[
+\lim_{x\to a^+}f(x)=+\infty
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+\lim_{x\to a^+}f(x)=-\infty.
+\]</span></p>
+<p>Não é necessário que os dois limites laterais sejam iguais. Basta que pelo menos um deles seja infinito.</p>
+<section id="exemplo-1-a-função-recíproca-deslocada" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="exemplo-1-a-função-recíproca-deslocada"><span class="header-section-number">1.2.1</span> Exemplo 1 — A função recíproca deslocada</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{1}{x-2}.
 \]</span></p>
-<p>O denominador zera em</p>
+<p>O domínio da função é:</p>
 <p><span class="math display">\[
-x=2.
+D(f)=\mathbb{R}\setminus\{2\}.
 \]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span>, os valores da função crescem em módulo.</p>
-<p>Assim, temos uma assíntota vertical:</p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela direita, temos <span class="math inline">\(x-2&gt;0\)</span> e o denominador se aproxima de zero por valores positivos:</p>
 <p><span class="math display">\[
-x=2.
+\lim_{x\to 2^+}\frac{1}{x-2}=+\infty.
 \]</span></p>
-<p>No módulo de limites, escreveremos:</p>
-<p><span class="math display">\[
-\lim_{x\to 2^+}\frac{1}{x-2}=+\infty
-\]</span></p>
-<p>e</p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela esquerda, temos <span class="math inline">\(x-2&lt;0\)</span> e o denominador se aproxima de zero por valores negativos:</p>
 <p><span class="math display">\[
 \lim_{x\to 2^-}\frac{1}{x-2}=-\infty.
 \]</span></p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+\boxed{x=2}
+\]</span></p>
+<p>é uma assíntota vertical.</p>
+<p><strong>Interpretação:</strong> o gráfico apresenta dois ramos que se afastam indefinidamente do eixo horizontal nas proximidades de <span class="math inline">\(x=2\)</span>, um em direção a <span class="math inline">\(+\infty\)</span> e outro em direção a <span class="math inline">\(-\infty\)</span>.</p>
+</section>
+<section id="exemplo-2-os-dois-lados-podem-apresentar-o-mesmo-sinal" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="exemplo-2-os-dois-lados-podem-apresentar-o-mesmo-sinal"><span class="header-section-number">1.2.2</span> Exemplo 2 — Os dois lados podem apresentar o mesmo sinal</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+g(x)=\frac{1}{(x-1)^2}.
+\]</span></p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(1\)</span>, o denominador permanece positivo e se aproxima de zero:</p>
+<p><span class="math display">\[
+\lim_{x\to 1^-}\frac{1}{(x-1)^2}=+\infty
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to 1^+}\frac{1}{(x-1)^2}=+\infty.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{x=1}
+\]</span></p>
+<p>é uma assíntota vertical.</p>
+<p>Observe que, diferentemente do exemplo anterior, os dois ramos crescem em direção a <span class="math inline">\(+\infty\)</span>.</p>
+</section>
+<section id="atenção-aos-limites-laterais" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="atenção-aos-limites-laterais"><span class="header-section-number">1.2.3</span> Atenção aos limites laterais</h3>
+<p>O comportamento de uma função nas proximidades de uma assíntota vertical depende do lado pelo qual nos aproximamos do ponto.</p>
+<p>Por isso, não devemos analisar apenas a expressão algébrica. É importante verificar os sinais dos fatores que aparecem no numerador e no denominador.</p>
 <hr>
 </section>
-<section id="nem-todo-ponto-excluído-é-assíntota-vertical" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="nem-todo-ponto-excluído-é-assíntota-vertical"><span class="header-section-number">1.3</span> ⚠️ Nem todo ponto excluído é assíntota vertical</h2>
+</section>
+<section id="nem-todo-ponto-excluído-é-uma-assíntota-vertical" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="nem-todo-ponto-excluído-é-uma-assíntota-vertical"><span class="header-section-number">1.3</span> ⚠️ Nem todo ponto excluído é uma assíntota vertical</h2>
+<p>Um erro comum é considerar que todo ponto em que o denominador de uma função racional se anula produz uma assíntota vertical.</p>
+<p>Isso não é verdade.</p>
 <p>Considere:</p>
 <p><span class="math display">\[
 g(x)=\frac{x^2-4}{x-2}.
 \]</span></p>
-<p>O denominador zera em <span class="math inline">\(x=2\)</span>, mas o numerador também zera.</p>
-<p>Fatorando:</p>
+<p>O denominador se anula em:</p>
+<p><span class="math display">\[
+x=2.
+\]</span></p>
+<p>Entretanto, o numerador também se anula nesse ponto.</p>
+<p>Fatorando o numerador:</p>
 <p><span class="math display">\[
 x^2-4=(x-2)(x+2).
 \]</span></p>
-<p>Para <span class="math inline">\(x\neq 2\)</span>,</p>
+<p>Para <span class="math inline">\(x\neq 2\)</span>, podemos simplificar:</p>
 <p><span class="math display">\[
 g(x)=x+2.
 \]</span></p>
-<p>O gráfico é uma reta com um buraco em <span class="math inline">\(x=2\)</span>, não uma assíntota vertical.</p>
-<p>Logo, pontos excluídos podem produzir:</p>
-<ul>
-<li>assíntotas verticais;</li>
-<li>buracos;</li>
-<li>outros tipos de descontinuidade.</li>
-</ul>
-<p>É preciso analisar o comportamento.</p>
+<p>Portanto, embora a função original não esteja definida em <span class="math inline">\(x=2\)</span>, seus valores se aproximam de:</p>
+<p><span class="math display">\[
+\lim_{x\to 2}\frac{x^2-4}{x-2}
+=
+\lim_{x\to 2}(x+2)
+=4.
+\]</span></p>
+<p>O limite existe e é finito.</p>
+<p>Assim, não há assíntota vertical em <span class="math inline">\(x=2\)</span>.</p>
+<p>O gráfico corresponde à reta <span class="math inline">\(y=x+2\)</span>, mas com um ponto removido:</p>
+<p><span class="math display">\[
+(2,4).
+\]</span></p>
+<p>Esse tipo de descontinuidade é chamado de <strong>descontinuidade removível</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Descontinuidade removível">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Descontinuidade removível
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uma descontinuidade é removível quando a função apresenta um limite finito no ponto, mas não está definida ali ou possui um valor diferente desse limite.</p>
+<p>No exemplo:</p>
+<p><span class="math display">\[
+\lim_{x\to 2}g(x)=4,
+\]</span></p>
+<p>mas <span class="math inline">\(g(2)\)</span> não existe.</p>
+<p>Se definíssemos uma nova função atribuindo <span class="math inline">\(g(2)=4\)</span>, eliminaríamos essa descontinuidade.</p>
+<p>Portanto, um ponto excluído do domínio não implica necessariamente uma assíntota vertical.</p>
+</div>
+</div>
+<section id="comparação-entre-os-dois-casos" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="comparação-entre-os-dois-casos"><span class="header-section-number">1.3.1</span> Comparação entre os dois casos</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situação</th>
+<th>Comportamento do limite</th>
+<th>Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\dfrac{1}{x-2}\)</span> em <span class="math inline">\(x=2\)</span></td>
+<td>Limites laterais infinitos</td>
+<td>Assíntota vertical</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\dfrac{x^2-4}{x-2}\)</span> em <span class="math inline">\(x=2\)</span></td>
+<td>Limite finito igual a <span class="math inline">\(4\)</span></td>
+<td>Descontinuidade removível</td>
+</tr>
+</tbody>
+</table>
+<p>A análise dos limites permite distinguir situações que, observando apenas o denominador, poderiam parecer iguais.</p>
 <hr>
+</section>
 </section>
 <section id="assíntotas-verticais-em-funções-racionais" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="assíntotas-verticais-em-funções-racionais"><span class="header-section-number">1.4</span> ➗ Assíntotas verticais em funções racionais</h2>
-<p>Em funções racionais, candidatos a assíntotas verticais aparecem onde o denominador zera.</p>
-<p>Mas devemos verificar se há cancelamento.</p>
-<p>Exemplo:</p>
+<p>Uma função racional é expressa pelo quociente de dois polinômios:</p>
+<p><span class="math display">\[
+f(x)=\frac{P(x)}{Q(x)},
+\]</span></p>
+<p>em que <span class="math inline">\(Q(x)\)</span> não é o polinômio nulo.</p>
+<p>Os pontos em que o denominador se anula são candidatos a assíntotas verticais.</p>
+<p>Entretanto, antes de concluir, devemos investigar se existe algum fator comum entre numerador e denominador.</p>
+<section id="procedimento-de-análise" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="procedimento-de-análise"><span class="header-section-number">1.4.1</span> Procedimento de análise</h3>
+<p>Para investigar as assíntotas verticais de uma função racional:</p>
+<ol type="1">
+<li>Determine os valores que anulam o denominador.</li>
+<li>Fatore o numerador e o denominador, quando possível.</li>
+<li>Simplifique os fatores comuns, respeitando as restrições do domínio original.</li>
+<li>Analise os limites laterais nos pontos excluídos.</li>
+<li>Identifique quais pontos produzem limites infinitos.</li>
+</ol>
+</section>
+<section id="exemplo-3-dois-candidatos-duas-assíntotas" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="exemplo-3-dois-candidatos-duas-assíntotas"><span class="header-section-number">1.4.2</span> Exemplo 3 — Dois candidatos, duas assíntotas</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{x+1}{x^2-9}.
 \]</span></p>
@@ -437,7 +646,11 @@ f(x)=\frac{x+1}{x^2-9}.
 <p><span class="math display">\[
 x^2-9=(x-3)(x+3).
 \]</span></p>
-<p>O denominador zera em</p>
+<p>O domínio é:</p>
+<p><span class="math display">\[
+D(f)=\mathbb{R}\setminus\{-3,3\}.
+\]</span></p>
+<p>Os candidatos a assíntotas verticais são:</p>
 <p><span class="math display">\[
 x=3
 \]</span></p>
@@ -445,142 +658,238 @@ x=3
 <p><span class="math display">\[
 x=-3.
 \]</span></p>
-<p>Como o numerador não zera nesses pontos, temos assíntotas verticais:</p>
+<p>O numerador não se anula em nenhum desses pontos:</p>
 <p><span class="math display">\[
-x=3
+3+1=4\neq 0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+-3+1=-2\neq 0.
+\]</span></p>
+<p>Logo, não existe cancelamento de fatores.</p>
+<p>Nas proximidades de <span class="math inline">\(x=3\)</span>, o denominador tende a zero, enquanto o numerador tende a <span class="math inline">\(4\)</span>. Os limites laterais são infinitos.</p>
+<p>Nas proximidades de <span class="math inline">\(x=-3\)</span>, o numerador tende a <span class="math inline">\(-2\)</span> e o denominador também tende a zero, produzindo novamente limites laterais infinitos.</p>
+<p>Portanto, as duas retas são assíntotas verticais:</p>
+<p><span class="math display">\[
+\boxed{x=3\qquad\text{e}\qquad x=-3.}
+\]</span></p>
+</section>
+<section id="exemplo-4-cancelamento-de-um-fator" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="exemplo-4-cancelamento-de-um-fator"><span class="header-section-number">1.4.3</span> Exemplo 4 — Cancelamento de um fator</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+g(x)=\frac{(x-2)(x+1)}{(x-2)(x+3)}.
+\]</span></p>
+<p>O domínio original exclui:</p>
+<p><span class="math display">\[
+x=2
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
 x=-3.
 \]</span></p>
+<p>Para os demais valores de <span class="math inline">\(x\)</span>, podemos simplificar:</p>
+<p><span class="math display">\[
+g(x)=\frac{x+1}{x+3}.
+\]</span></p>
+<p>Em <span class="math inline">\(x=2\)</span>, o limite é finito:</p>
+<p><span class="math display">\[
+\lim_{x\to 2}g(x)
+=
+\frac{2+1}{2+3}
+=
+\frac{3}{5}.
+\]</span></p>
+<p>Logo, <span class="math inline">\(x=2\)</span> corresponde a uma descontinuidade removível.</p>
+<p>Em <span class="math inline">\(x=-3\)</span>, entretanto, o denominador da expressão simplificada se aproxima de zero, enquanto o numerador tende a <span class="math inline">\(-2\)</span>.</p>
+<p>Assim, existem limites laterais infinitos e:</p>
+<p><span class="math display">\[
+\boxed{x=-3}
+\]</span></p>
+<p>é uma assíntota vertical.</p>
+<p><strong>Conclusão:</strong> a simplificação algébrica ajuda a identificar os pontos removíveis, mas os limites são o critério definitivo para reconhecer uma assíntota vertical.</p>
 <hr>
+</section>
 </section>
 <section id="assíntota-horizontal" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="assíntota-horizontal"><span class="header-section-number">1.5</span> 🌅 Assíntota horizontal</h2>
-<p>Uma assíntota horizontal descreve o comportamento da função quando</p>
+<p>Uma reta horizontal <span class="math inline">\(y=L\)</span> é uma <strong>assíntota horizontal</strong> de uma função quando:</p>
 <p><span class="math display">\[
-x\to+\infty
+\lim_{x\to+\infty}f(x)=L
 \]</span></p>
 <p>ou</p>
 <p><span class="math display">\[
-x\to-\infty.
+\lim_{x\to-\infty}f(x)=L,
 \]</span></p>
-<p>Por exemplo:</p>
+<p>com <span class="math inline">\(L\)</span> finito.</p>
+<p>A função não precisa se aproximar da mesma reta nas duas direções.</p>
+<section id="exemplo-5-assíntota-horizontal" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="exemplo-5-assíntota-horizontal"><span class="header-section-number">1.5.1</span> Exemplo 5 — Assíntota horizontal</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{x}{x+1}.
 \]</span></p>
-<p>Dividindo numerador e denominador por <span class="math inline">\(x\)</span>:</p>
+<p>Dividindo o numerador e o denominador por <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[
 f(x)=\frac{1}{1+\frac{1}{x}}.
 \]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> cresce sem limite,</p>
-<p><span class="math display">\[
-\frac{1}{x}
-\]</span></p>
-<p>se aproxima de zero.</p>
-<p>Logo,</p>
-<p><span class="math display">\[
-f(x)
-\]</span></p>
-<p>se aproxima de</p>
-<p><span class="math display">\[
-1.
-\]</span></p>
-<p>Assim, a assíntota horizontal é</p>
-<p><span class="math display">\[
-y=1.
-\]</span></p>
-<hr>
-</section>
-<section id="regra-prática-para-funções-racionais" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="regra-prática-para-funções-racionais"><span class="header-section-number">1.6</span> 🧮 Regra prática para funções racionais</h2>
-<p>Considere uma função racional:</p>
-<p><span class="math display">\[
-f(x)=\frac{p(x)}{q(x)}.
-\]</span></p>
-<p>Para assíntotas horizontais, comparamos os graus de <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span>.</p>
-<section id="grau-do-numerador-menor-que-o-grau-do-denominador" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" class="anchored" data-anchor-id="grau-do-numerador-menor-que-o-grau-do-denominador"><span class="header-section-number">1.6.1</span> 🧮 Grau do numerador menor que o grau do denominador</h3>
-<p>Se</p>
-<p><span class="math display">\[
-\deg(p)&lt;\deg(q),
-\]</span></p>
-<p>então a assíntota horizontal é</p>
-<p><span class="math display">\[
-y=0.
-\]</span></p>
-<p>Exemplo:</p>
-<p><span class="math display">\[
-f(x)=\frac{x+1}{x^2+3}.
-\]</span></p>
-</section>
-<section id="graus-iguais" class="level3" data-number="1.6.2">
-<h3 data-number="1.6.2" class="anchored" data-anchor-id="graus-iguais"><span class="header-section-number">1.6.2</span> 🧮 Graus iguais</h3>
-<p>Se</p>
-<p><span class="math display">\[
-\deg(p)=\deg(q),
-\]</span></p>
-<p>a assíntota horizontal é a razão dos coeficientes líderes.</p>
-<p>Exemplo:</p>
-<p><span class="math display">\[
-f(x)=\frac{3x^2+1}{2x^2-5}.
-\]</span></p>
-<p>A assíntota horizontal é</p>
-<p><span class="math display">\[
-y=\frac{3}{2}.
-\]</span></p>
-</section>
-<section id="grau-do-numerador-maior" class="level3" data-number="1.6.3">
-<h3 data-number="1.6.3" class="anchored" data-anchor-id="grau-do-numerador-maior"><span class="header-section-number">1.6.3</span> 🧮 Grau do numerador maior</h3>
-<p>Se</p>
-<p><span class="math display">\[
-\deg(p)&gt;\deg(q),
-\]</span></p>
-<p>não há assíntota horizontal.</p>
-<p>Pode haver assíntota oblíqua ou polinomial.</p>
-<hr>
-</section>
-</section>
-<section id="assíntota-oblíqua" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="assíntota-oblíqua"><span class="header-section-number">1.7</span> 📐 Assíntota oblíqua</h2>
-<p>Uma assíntota oblíqua aparece quando o gráfico se aproxima de uma reta inclinada.</p>
-<p>Exemplo:</p>
-<p><span class="math display">\[
-f(x)=\frac{x^2+1}{x}.
-\]</span></p>
-<p>Dividindo:</p>
-<p><span class="math display">\[
-f(x)=x+\frac{1}{x}.
-\]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> tende a <span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span>,</p>
+<p>Quando <span class="math inline">\(x\to+\infty\)</span> ou <span class="math inline">\(x\to-\infty\)</span>:</p>
 <p><span class="math display">\[
 \frac{1}{x}\to 0.
 \]</span></p>
-<p>Logo, o gráfico se aproxima da reta</p>
+<p>Consequentemente:</p>
 <p><span class="math display">\[
-y=x.
+\lim_{x\to+\infty}\frac{x}{x+1}=1
 \]</span></p>
-<p>Essa reta é uma assíntota oblíqua.</p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}\frac{x}{x+1}=1.
+\]</span></p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+\boxed{y=1}
+\]</span></p>
+<p>é uma assíntota horizontal nas duas direções.</p>
+</section>
+<section id="exemplo-6-assíntotas-horizontais-diferentes" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="exemplo-6-assíntotas-horizontais-diferentes"><span class="header-section-number">1.5.2</span> Exemplo 6 — Assíntotas horizontais diferentes</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+g(x)=\frac{x}{\sqrt{x^2+1}}.
+\]</span></p>
+<p>Podemos escrever:</p>
+<p><span class="math display">\[
+g(x)=
+\frac{x}{|x|\sqrt{1+\frac{1}{x^2}}}.
+\]</span></p>
+<p>Para <span class="math inline">\(x\to+\infty\)</span>, temos <span class="math inline">\(|x|=x\)</span>. Assim:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}g(x)=1.
+\]</span></p>
+<p>Para <span class="math inline">\(x\to-\infty\)</span>, temos <span class="math inline">\(|x|=-x\)</span>. Portanto:</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}g(x)=-1.
+\]</span></p>
+<p>Logo, essa função apresenta duas assíntotas horizontais:</p>
+<p><span class="math display">\[
+\boxed{y=1\quad\text{quando }x\to+\infty}
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\boxed{y=-1\quad\text{quando }x\to-\infty.}
+\]</span></p>
+<p>Esse exemplo mostra por que é importante investigar separadamente os dois sentidos do infinito.</p>
 <hr>
 </section>
-<section id="termo-dominante" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="termo-dominante"><span class="header-section-number">1.8</span> 🔍 Termo dominante</h2>
-<p>O comportamento no infinito é frequentemente governado pelo termo dominante.</p>
-<p>Em um polinômio:</p>
+</section>
+<section id="regra-prática-para-assíntotas-horizontais-em-funções-racionais" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="regra-prática-para-assíntotas-horizontais-em-funções-racionais"><span class="header-section-number">1.6</span> 🧮 Regra prática para assíntotas horizontais em funções racionais</h2>
+<p>Considere:</p>
 <p><span class="math display">\[
-p(x)=5x^4-3x^2+x-8,
+f(x)=\frac{P(x)}{Q(x)},
 \]</span></p>
-<p>o termo dominante é</p>
+<p>em que <span class="math inline">\(P\)</span> e <span class="math inline">\(Q\)</span> são polinômios não nulos.</p>
+<p>Para determinar o comportamento no infinito, comparamos os graus dos polinômios.</p>
+<p>Sejam:</p>
 <p><span class="math display">\[
-5x^4.
+m=\deg(P)
 \]</span></p>
-<p>Para valores muito grandes de <span class="math inline">\(x\)</span>, os termos de menor grau têm importância relativa menor.</p>
-<p>Em funções racionais, comparamos os termos dominantes do numerador e do denominador.</p>
-<p>Por exemplo:</p>
+<p>e</p>
+<p><span class="math display">\[
+n=\deg(Q).
+\]</span></p>
+<section id="caso-1-grau-do-numerador-menor-que-o-grau-do-denominador" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="caso-1-grau-do-numerador-menor-que-o-grau-do-denominador"><span class="header-section-number">1.6.1</span> Caso 1 — Grau do numerador menor que o grau do denominador</h3>
+<p>Se:</p>
+<p><span class="math display">\[
+m&lt;n,
+\]</span></p>
+<p>o denominador cresce mais rapidamente em módulo que o numerador.</p>
+<p>Assim:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}\frac{P(x)}{Q(x)}=0.
+\]</span></p>
+<p>A assíntota horizontal é:</p>
+<p><span class="math display">\[
+\boxed{y=0.}
+\]</span></p>
+<p><strong>Exemplo:</strong></p>
+<p><span class="math display">\[
+f(x)=\frac{x+1}{x^2+3}.
+\]</span></p>
+<p>O grau do numerador é <span class="math inline">\(1\)</span> e o do denominador é <span class="math inline">\(2\)</span>.</p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+\boxed{y=0.}
+\]</span></p>
+</section>
+<section id="caso-2-graus-iguais" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="caso-2-graus-iguais"><span class="header-section-number">1.6.2</span> Caso 2 — Graus iguais</h3>
+<p>Se:</p>
+<p><span class="math display">\[
+m=n,
+\]</span></p>
+<p>a assíntota horizontal é dada pela razão entre os coeficientes líderes.</p>
+<p><strong>Exemplo:</strong></p>
+<p><span class="math display">\[
+f(x)=\frac{3x^2+1}{2x^2-5}.
+\]</span></p>
+<p>Os coeficientes líderes são <span class="math inline">\(3\)</span> e <span class="math inline">\(2\)</span>.</p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{y=\frac{3}{2}.}
+\]</span></p>
+</section>
+<section id="caso-3-grau-do-numerador-maior-que-o-grau-do-denominador" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="caso-3-grau-do-numerador-maior-que-o-grau-do-denominador"><span class="header-section-number">1.6.3</span> Caso 3 — Grau do numerador maior que o grau do denominador</h3>
+<p>Se:</p>
+<p><span class="math display">\[
+m&gt;n,
+\]</span></p>
+<p>não existe assíntota horizontal finita.</p>
+<p>Entretanto, pode existir uma assíntota oblíqua ou uma assíntota polinomial.</p>
+<p>Para investigá-las, utilizamos a divisão de polinômios.</p>
+</section>
+<section id="quadro-resumo" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="quadro-resumo"><span class="header-section-number">1.6.4</span> Quadro-resumo</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparação dos graus</th>
+<th>Comportamento no infinito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\deg(P)&lt;\deg(Q)\)</span></td>
+<td>Assíntota horizontal <span class="math inline">\(y=0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\deg(P)=\deg(Q)\)</span></td>
+<td>Assíntota horizontal dada pela razão dos coeficientes líderes</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\deg(P)&gt;\deg(Q)\)</span></td>
+<td>Não há assíntota horizontal finita; pode haver assíntota polinomial</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observação:</strong> essas regras pressupõem que a função racional esteja escrita após a simplificação dos fatores comuns. A existência de assíntotas verticais deve ser investigada separadamente.</p>
+<hr>
+</section>
+</section>
+<section id="termo-dominante-e-funções-racionais" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="termo-dominante-e-funções-racionais"><span class="header-section-number">1.7</span> 🔍 Termo dominante e funções racionais</h2>
+<p>O comportamento de uma função racional no infinito é frequentemente governado pelos termos de maior grau do numerador e do denominador.</p>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{4x^3-1}{2x^3+7x}.
 \]</span></p>
-<p>Os termos dominantes são</p>
+<p>Os termos dominantes são:</p>
 <p><span class="math display">\[
 4x^3
 \]</span></p>
@@ -588,53 +897,342 @@ f(x)=\frac{4x^3-1}{2x^3+7x}.
 <p><span class="math display">\[
 2x^3.
 \]</span></p>
-<p>Logo, a função se aproxima de</p>
+<p>Dividindo o numerador e o denominador por <span class="math inline">\(x^3\)</span>:</p>
 <p><span class="math display">\[
-\frac{4x^3}{2x^3}=2.
+f(x)=
+\frac{4-\frac{1}{x^3}}
+{2+\frac{7}{x^2}}.
 \]</span></p>
-<p>A assíntota horizontal é</p>
+<p>Quando <span class="math inline">\(x\to+\infty\)</span> ou <span class="math inline">\(x\to-\infty\)</span>, os termos com potências negativas de <span class="math inline">\(x\)</span> tendem a zero.</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-y=2.
+\lim_{x\to\pm\infty}f(x)
+=
+\frac{4}{2}=2.
 \]</span></p>
+<p>A assíntota horizontal é:</p>
+<p><span class="math display">\[
+\boxed{y=2.}
+\]</span></p>
+<section id="por-que-o-procedimento-funciona" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="por-que-o-procedimento-funciona"><span class="header-section-number">1.7.1</span> Por que o procedimento funciona?</h3>
+<p>Quando dividimos todos os termos pela maior potência de <span class="math inline">\(x\)</span> presente no denominador, os termos de menor grau passam a aparecer como frações que tendem a zero.</p>
+<p>Dessa forma, os coeficientes dos termos dominantes determinam o limite.</p>
+<p>Essa é a justificativa algébrica para a regra prática baseada na comparação dos graus.</p>
 <hr>
 </section>
-<section id="comportamento-no-infinito" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="comportamento-no-infinito"><span class="header-section-number">1.9</span> ♾️ Comportamento no infinito</h2>
-<p>Quando perguntamos o que acontece com uma função quando</p>
+</section>
+<section id="assíntota-oblíqua" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="assíntota-oblíqua"><span class="header-section-number">1.8</span> 📐 Assíntota oblíqua</h2>
+<p>Uma reta inclinada pode ser assíntota de uma função quando a diferença entre a função e a reta tende a zero.</p>
+<p>Uma reta:</p>
 <p><span class="math display">\[
-x\to+\infty,
+y=mx+b,
 \]</span></p>
-<p>estamos estudando o comportamento no infinito.</p>
-<p>Alguns exemplos:</p>
+<p>com <span class="math inline">\(m\neq 0\)</span>, é uma assíntota oblíqua em uma direção do infinito quando:</p>
 <p><span class="math display">\[
-\frac{1}{x}\to 0,
+\lim_{x\to\pm\infty}
+\left[f(x)-(mx+b)\right]=0.
 \]</span></p>
+<p>A expressão <span class="math inline">\(\pm\infty\)</span> deve ser interpretada separadamente: a condição pode valer para <span class="math inline">\(+\infty\)</span>, para <span class="math inline">\(-\infty\)</span> ou para ambos.</p>
+<section id="exemplo-7-divisão-de-polinômios" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="exemplo-7-divisão-de-polinômios"><span class="header-section-number">1.8.1</span> Exemplo 7 — Divisão de polinômios</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
-x^2\to+\infty,
+f(x)=\frac{x^2+1}{x}.
 \]</span></p>
+<p>Dividindo cada termo do numerador por <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[
-e^x\to+\infty,
+f(x)=x+\frac{1}{x}.
 \]</span></p>
+<p>A reta candidata a assíntota oblíqua é:</p>
 <p><span class="math display">\[
-\ln x\to+\infty,
+y=x.
 \]</span></p>
-<p>mas cresce lentamente.</p>
-<p>Essas afirmações serão formalizadas com limites no infinito.</p>
+<p>Para verificar:</p>
+<p><span class="math display">\[
+f(x)-x=\frac{1}{x}.
+\]</span></p>
+<p>Como:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{1}{x}=0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}\frac{1}{x}=0,
+\]</span></p>
+<p>a reta:</p>
+<p><span class="math display">\[
+\boxed{y=x}
+\]</span></p>
+<p>é uma assíntota oblíqua nas duas direções.</p>
+</section>
+<section id="exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero" class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero"><span class="header-section-number">1.8.2</span> Exemplo 8 — Assíntota oblíqua com intercepto diferente de zero</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+g(x)=\frac{x^2+2x+1}{x}.
+\]</span></p>
+<p>Dividindo:</p>
+<p><span class="math display">\[
+g(x)=x+2+\frac{1}{x}.
+\]</span></p>
+<p>A reta candidata é:</p>
+<p><span class="math display">\[
+y=x+2.
+\]</span></p>
+<p>A diferença entre a função e a reta é:</p>
+<p><span class="math display">\[
+g(x)-(x+2)=\frac{1}{x}.
+\]</span></p>
+<p>Como:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}\frac{1}{x}=0,
+\]</span></p>
+<p>concluímos que:</p>
+<p><span class="math display">\[
+\boxed{y=x+2}
+\]</span></p>
+<p>é uma assíntota oblíqua nas duas direções do infinito.</p>
 <hr>
 </section>
-<section id="ponte-para-limites" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="ponte-para-limites"><span class="header-section-number">1.10</span> 🌉 Ponte para limites</h2>
-<p>Assíntotas são uma tradução geométrica de certos limites.</p>
-<p>Assíntota vertical:</p>
+</section>
+<section id="método-geral-para-encontrar-uma-assíntota-oblíqua" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="método-geral-para-encontrar-uma-assíntota-oblíqua"><span class="header-section-number">1.9</span> ➗ Método geral para encontrar uma assíntota oblíqua</h2>
+<p>Considere uma função racional:</p>
 <p><span class="math display">\[
-x=a
+f(x)=\frac{P(x)}{Q(x)}.
 \]</span></p>
-<p>está ligada a limites infinitos quando <span class="math inline">\(x\to a\)</span>.</p>
-<p>Assíntota horizontal:</p>
+<p>Quando o grau do numerador supera o grau do denominador exatamente em uma unidade, a divisão de polinômios produz um quociente de primeiro grau.</p>
+<p>Podemos escrever:</p>
 <p><span class="math display">\[
-y=L
+P(x)=Q(x)(mx+b)+R(x),
 \]</span></p>
-<p>está ligada a limites no infinito:</p>
+<p>em que o resto <span class="math inline">\(R(x)\)</span> possui grau menor que o de <span class="math inline">\(Q(x)\)</span>.</p>
+<p>Dividindo por <span class="math inline">\(Q(x)\)</span>:</p>
+<p><span class="math display">\[
+f(x)=mx+b+\frac{R(x)}{Q(x)}.
+\]</span></p>
+<p>Se:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}\frac{R(x)}{Q(x)}=0,
+\]</span></p>
+<p>então a reta:</p>
+<p><span class="math display">\[
+\boxed{y=mx+b}
+\]</span></p>
+<p>é uma assíntota oblíqua na direção considerada.</p>
+<section id="exemplo-9-divisão-completa" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="exemplo-9-divisão-completa"><span class="header-section-number">1.9.1</span> Exemplo 9 — Divisão completa</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=\frac{2x^2+3x-1}{x+1}.
+\]</span></p>
+<p>Efetuando a divisão de polinômios:</p>
+<p><span class="math display">\[
+\frac{2x^2+3x-1}{x+1}
+=
+2x+1-\frac{2}{x+1}.
+\]</span></p>
+<p>A reta candidata é:</p>
+<p><span class="math display">\[
+y=2x+1.
+\]</span></p>
+<p>A diferença entre a função e a reta é:</p>
+<p><span class="math display">\[
+f(x)-(2x+1)=-\frac{2}{x+1}.
+\]</span></p>
+<p>Como:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}-\frac{2}{x+1}=0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}-\frac{2}{x+1}=0,
+\]</span></p>
+<p>a assíntota oblíqua é:</p>
+<p><span class="math display">\[
+\boxed{y=2x+1.}
+\]</span></p>
+</section>
+<section id="regra-prática" class="level3" data-number="1.9.2">
+<h3 data-number="1.9.2" class="anchored" data-anchor-id="regra-prática"><span class="header-section-number">1.9.2</span> Regra prática</h3>
+<p>Para funções racionais:</p>
+<ul>
+<li>Se o grau do numerador é menor que o do denominador, podemos ter assíntota horizontal <span class="math inline">\(y=0\)</span>.</li>
+<li>Se os graus são iguais, podemos ter uma assíntota horizontal determinada pelos coeficientes líderes.</li>
+<li>Se o grau do numerador supera o do denominador em uma unidade, podemos obter uma assíntota oblíqua.</li>
+<li>Se a diferença entre os graus é maior que uma unidade, podemos obter uma assíntota polinomial de grau superior.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="assíntotas-polinomiais" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="assíntotas-polinomiais"><span class="header-section-number">1.10</span> 📈 Assíntotas polinomiais</h2>
+<p>A ideia de assíntota não precisa ficar restrita às retas.</p>
+<p>Uma função pode se aproximar de um polinômio de grau superior a um.</p>
+<p>Seja <span class="math inline">\(P(x)\)</span> um polinômio. Dizemos que <span class="math inline">\(P(x)\)</span> é uma assíntota polinomial de <span class="math inline">\(f(x)\)</span> em uma direção do infinito quando:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}[f(x)-P(x)]=0.
+\]</span></p>
+<section id="exemplo-10-aproximação-por-uma-parábola" class="level3" data-number="1.10.1">
+<h3 data-number="1.10.1" class="anchored" data-anchor-id="exemplo-10-aproximação-por-uma-parábola"><span class="header-section-number">1.10.1</span> Exemplo 10 — Aproximação por uma parábola</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^3+2x^2+1}{x}.
+\]</span></p>
+<p>Dividindo os termos:</p>
+<p><span class="math display">\[
+f(x)=x^2+2x+\frac{1}{x}.
+\]</span></p>
+<p>A função se aproxima do polinômio:</p>
+<p><span class="math display">\[
+P(x)=x^2+2x.
+\]</span></p>
+<p>De fato:</p>
+<p><span class="math display">\[
+f(x)-P(x)=\frac{1}{x}.
+\]</span></p>
+<p>Como:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}\frac{1}{x}=0,
+\]</span></p>
+<p>temos:</p>
+<p><span class="math display">\[
+\boxed{P(x)=x^2+2x.}
+\]</span></p>
+<p>Esse polinômio é uma assíntota polinomial de grau dois.</p>
+<p>Observe que não se trata de uma assíntota oblíqua, pois a expressão de aproximação é uma parábola, e não uma reta.</p>
+</section>
+<section id="quando-isso-pode-acontecer" class="level3" data-number="1.10.2">
+<h3 data-number="1.10.2" class="anchored" data-anchor-id="quando-isso-pode-acontecer"><span class="header-section-number">1.10.2</span> Quando isso pode acontecer?</h3>
+<p>Em funções racionais, a divisão de polinômios pode produzir quocientes de diferentes graus.</p>
+<ul>
+<li>Quociente constante: comportamento associado a uma assíntota horizontal.</li>
+<li>Quociente de primeiro grau: comportamento associado a uma assíntota oblíqua.</li>
+<li>Quociente de grau superior a um: possibilidade de assíntota polinomial.</li>
+</ul>
+<p>A análise do resto da divisão permite verificar se essa aproximação realmente ocorre.</p>
+<hr>
+</section>
+</section>
+<section id="comportamento-no-infinito" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="comportamento-no-infinito"><span class="header-section-number">1.11</span> ♾️ Comportamento no infinito</h2>
+<p>O comportamento no infinito descreve o que acontece com uma função quando a variável independente cresce ou decresce sem limite.</p>
+<p>É importante distinguir:</p>
+<p><span class="math display">\[
+x\to+\infty
+\]</span></p>
+<p>de</p>
+<p><span class="math display">\[
+x\to-\infty.
+\]</span></p>
+<p>O comportamento pode ser diferente em cada direção.</p>
+<section id="exemplos-fundamentais" class="level3" data-number="1.11.1">
+<h3 data-number="1.11.1" class="anchored" data-anchor-id="exemplos-fundamentais"><span class="header-section-number">1.11.1</span> Exemplos fundamentais</h3>
+<p><strong>Função recíproca</strong></p>
+<p><span class="math display">\[
+f(x)=\frac{1}{x}.
+\]</span></p>
+<p>Temos:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{1}{x}=0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}\frac{1}{x}=0.
+\]</span></p>
+<p><strong>Função quadrática</strong></p>
+<p><span class="math display">\[
+g(x)=x^2.
+\]</span></p>
+<p>Temos:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}x^2=+\infty
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}x^2=+\infty.
+\]</span></p>
+<p><strong>Função cúbica</strong></p>
+<p><span class="math display">\[
+h(x)=x^3.
+\]</span></p>
+<p>Temos:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}x^3=+\infty
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}x^3=-\infty.
+\]</span></p>
+<p><strong>Função exponencial</strong></p>
+<p><span class="math display">\[
+p(x)=e^x.
+\]</span></p>
+<p>Temos:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}e^x=+\infty
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}e^x=0.
+\]</span></p>
+<p><strong>Função logarítmica</strong></p>
+<p><span class="math display">\[
+q(x)=\ln x.
+\]</span></p>
+<p>Seu domínio é <span class="math inline">\(x&gt;0\)</span>, e:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\ln x=+\infty.
+\]</span></p>
+<p>Esses exemplos mostram que o comportamento no infinito depende da estrutura da função.</p>
+<hr>
+</section>
+</section>
+<section id="comparação-de-crescimento-e-limites-de-quocientes" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="comparação-de-crescimento-e-limites-de-quocientes"><span class="header-section-number">1.12</span> ⚖️ Comparação de crescimento e limites de quocientes</h2>
+<p>A comparação entre duas funções pode ser realizada por meio do limite do quociente.</p>
+<p>Se <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(g(x)\)</span> são positivas para valores suficientemente grandes de <span class="math inline">\(x\)</span> e:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{f(x)}{g(x)}=0,
+\]</span></p>
+<p>dizemos que <span class="math inline">\(f\)</span> cresce mais lentamente que <span class="math inline">\(g\)</span>, no sentido assintótico.</p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{x}{x^2}
+=
+\lim_{x\to+\infty}\frac{1}{x}
+=0.
+\]</span></p>
+<p>Portanto, <span class="math inline">\(x^2\)</span> cresce mais rapidamente que <span class="math inline">\(x\)</span>.</p>
+<p>Outro exemplo:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{\ln x}{x}=0.
+\]</span></p>
+<p>Assim, <span class="math inline">\(x\)</span> cresce mais rapidamente que <span class="math inline">\(\ln x\)</span>.</p>
+<p>Também temos:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{x^3}{e^x}=0.
+\]</span></p>
+<p>Portanto, a função exponencial <span class="math inline">\(e^x\)</span> cresce mais rapidamente que o polinômio <span class="math inline">\(x^3\)</span>.</p>
+<p>Esses resultados ajudam a compreender a hierarquia de crescimento apresentada na aula 1.16.</p>
+<hr>
+</section>
+<section id="ponte-para-limites" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="ponte-para-limites"><span class="header-section-number">1.13</span> 🌉 Ponte para limites</h2>
+<p>As assíntotas são uma tradução geométrica de determinados limites.</p>
+<p><strong>Assíntota vertical</strong></p>
+<p>Uma reta <span class="math inline">\(x=a\)</span> é assíntota vertical quando pelo menos um dos limites laterais é infinito:</p>
+<p><span class="math display">\[
+\lim_{x\to a^-}f(x)=\pm\infty
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+\lim_{x\to a^+}f(x)=\pm\infty.
+\]</span></p>
+<p><strong>Assíntota horizontal</strong></p>
+<p>Uma reta <span class="math inline">\(y=L\)</span> é assíntota horizontal quando:</p>
 <p><span class="math display">\[
 \lim_{x\to+\infty}f(x)=L
 \]</span></p>
@@ -642,12 +1240,111 @@ y=L
 <p><span class="math display">\[
 \lim_{x\to-\infty}f(x)=L.
 \]</span></p>
-<p>Assíntota oblíqua:</p>
+<p><strong>Assíntota oblíqua</strong></p>
+<p>Uma reta <span class="math inline">\(y=mx+b\)</span>, com <span class="math inline">\(m\neq 0\)</span>, é assíntota oblíqua em uma direção do infinito quando:</p>
 <p><span class="math display">\[
-y=mx+b
+\lim_{x\to\pm\infty}
+[f(x)-(mx+b)]=0.
 \]</span></p>
-<p>indica que a diferença entre o gráfico e essa reta tende a zero no infinito.</p>
+<p><strong>Assíntota polinomial</strong></p>
+<p>Um polinômio <span class="math inline">\(P(x)\)</span> é assíntota polinomial quando:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}[f(x)-P(x)]=0.
+\]</span></p>
+<p>Essas definições mostram que o cálculo de limites não é apenas uma ferramenta algébrica: ele permite compreender geometricamente o comportamento de uma função.</p>
 <hr>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de comportamento</th>
+<th>Condição matemática</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Assíntota vertical <span class="math inline">\(x=a\)</span></td>
+<td>Pelo menos um limite lateral em <span class="math inline">\(a\)</span> é infinito</td>
+</tr>
+<tr class="even">
+<td>Assíntota horizontal <span class="math inline">\(y=L\)</span></td>
+<td>O limite da função no infinito é <span class="math inline">\(L\)</span></td>
+</tr>
+<tr class="odd">
+<td>Assíntota oblíqua <span class="math inline">\(y=mx+b\)</span></td>
+<td>A diferença entre a função e a reta tende a zero</td>
+</tr>
+<tr class="even">
+<td>Assíntota polinomial <span class="math inline">\(P(x)\)</span></td>
+<td>A diferença entre a função e o polinômio tende a zero</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Funções racionais</strong></p>
+<p>Para:</p>
+<p><span class="math display">\[
+f(x)=\frac{P(x)}{Q(x)},
+\]</span></p>
+<p>a comparação dos graus permite investigar o comportamento no infinito.</p>
+<ul>
+<li>Grau do numerador menor: assíntota horizontal <span class="math inline">\(y=0\)</span>.</li>
+<li>Graus iguais: assíntota horizontal dada pela razão dos coeficientes líderes.</li>
+<li>Grau do numerador maior: não existe assíntota horizontal finita; pode haver assíntota oblíqua ou polinomial.</li>
+</ul>
+<p><strong>Assíntotas verticais</strong></p>
+<p>Os zeros do denominador são candidatos a assíntotas verticais. É necessário verificar se ocorre cancelamento de fatores e analisar os limites laterais.</p>
+<p><strong>Divisão de polinômios</strong></p>
+<p>A divisão permite escrever uma função racional como:</p>
+<p><span class="math display">\[
+f(x)=P(x)+\frac{R(x)}{Q(x)}.
+\]</span></p>
+<p>Se:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}\frac{R(x)}{Q(x)}=0,
+\]</span></p>
+<p>então <span class="math inline">\(P(x)\)</span> descreve o comportamento assintótico da função na direção considerada.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="🌉 Conexão com o Módulo 2 — Limites">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🌉 Conexão com o Módulo 2 — Limites
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Neste aprofundamento, utilizamos limites para compreender o comportamento de funções nas proximidades de pontos e no infinito.</p>
+<p>No módulo de limites, desenvolveremos formalmente os procedimentos que permitem calcular essas expressões.</p>
+<p>Entre os assuntos que serão aprofundados estão:</p>
+<ul>
+<li>Limites laterais.</li>
+<li>Limites infinitos.</li>
+<li>Limites no infinito.</li>
+<li>Propriedades algébricas dos limites.</li>
+<li>Indeterminações.</li>
+<li>Técnicas de fatoração e simplificação.</li>
+<li>Divisão de polinômios.</li>
+<li>Comparação de crescimento.</li>
+</ul>
+<p>As assíntotas representam uma aplicação geométrica importante desses conceitos.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="exercícios-propostos" class="level1" data-number="2">
@@ -662,74 +1359,191 @@ y=mx+b
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<section id="exercício-1" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
-<p>Determine as assíntotas verticais:</p>
+<section id="exercício-1-assíntotas-verticais" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1-assíntotas-verticais"><span class="header-section-number">2.1</span> 🧪 Exercício 1 — Assíntotas verticais</h2>
+<p>Determine as assíntotas verticais de cada função. Justifique sua resposta.</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=\dfrac{1}{x-5}\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\dfrac{x+2}{x^2-1}\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=\dfrac{x}{x^2-4}\)</span></li>
-</ol>
-</section>
-<section id="exercício-2" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
-<p>Determine a assíntota horizontal:</p>
-<ol type="a">
-<li><span class="math inline">\(f(x)=\dfrac{2x+1}{x-3}\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\dfrac{x+4}{x^2+1}\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=\dfrac{5x^3-1}{2x^3+x}\)</span></li>
-</ol>
-</section>
-<section id="exercício-3" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
-<p>Explique por que</p>
-<p><span class="math display">\[
-\frac{x^2-9}{x-3}
-\]</span></p>
-<p>não tem assíntota vertical em <span class="math inline">\(x=3\)</span>.</p>
-</section>
-<section id="exercício-4" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Determine a assíntota oblíqua de</p>
-<p><span class="math display">\[
-f(x)=\frac{x^2+2x+1}{x}.
-\]</span></p>
-</section>
-</div>
-</div>
-<hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
-<section id="exercício-1-1" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
-<ol type="a">
-<li>O denominador zera em <span class="math inline">\(x=5\)</span>. Logo, a assíntota vertical é</li>
+<li></li>
 </ol>
 <p><span class="math display">\[
-x=5.
+f(x)=\frac{1}{x-5}
 \]</span></p>
 <ol start="2" type="a">
 <li></li>
 </ol>
 <p><span class="math display">\[
+g(x)=\frac{x+2}{x^2-1}
+\]</span></p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+h(x)=\frac{x}{x^2-4}
+\]</span></p>
+<ol start="4" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+p(x)=\frac{x^2-4}{x-2}
+\]</span></p>
+</section>
+<section id="exercício-2-descontinuidades-removíveis" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2-descontinuidades-removíveis"><span class="header-section-number">2.2</span> 🧪 Exercício 2 — Descontinuidades removíveis</h2>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2-9}{x-3}.
+\]</span></p>
+<ol type="a">
+<li><p>Determine o domínio da função.</p></li>
+<li><p>Simplifique a expressão para os valores permitidos.</p></li>
+<li><p>Calcule:</p></li>
+</ol>
+<p><span class="math display">\[
+\lim_{x\to 3}f(x).
+\]</span></p>
+<ol start="4" type="a">
+<li>Explique por que <span class="math inline">\(x=3\)</span> não é uma assíntota vertical.</li>
+</ol>
+</section>
+<section id="exercício-3-assíntotas-horizontais" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3-assíntotas-horizontais"><span class="header-section-number">2.3</span> 🧪 Exercício 3 — Assíntotas horizontais</h2>
+<p>Determine as assíntotas horizontais de cada função:</p>
+<ol type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+f(x)=\frac{2x+1}{x-3}
+\]</span></p>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+g(x)=\frac{x+4}{x^2+1}
+\]</span></p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+h(x)=\frac{5x^3-1}{2x^3+x}
+\]</span></p>
+<ol start="4" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[
+p(x)=\frac{3x^2+1}{x^2-5}
+\]</span></p>
+</section>
+<section id="exercício-4-comportamento-nas-duas-direções" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4-comportamento-nas-duas-direções"><span class="header-section-number">2.4</span> 🧪 Exercício 4 — Comportamento nas duas direções</h2>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=\frac{x}{\sqrt{x^2+4}}.
+\]</span></p>
+<ol type="a">
+<li>Calcule:</li>
+</ol>
+<p><span class="math display">\[
+\lim_{x\to+\infty}f(x).
+\]</span></p>
+<ol start="2" type="a">
+<li>Calcule:</li>
+</ol>
+<p><span class="math display">\[
+\lim_{x\to-\infty}f(x).
+\]</span></p>
+<ol start="3" type="a">
+<li>Determine as assíntotas horizontais da função.</li>
+</ol>
+</section>
+<section id="exercício-5-assíntota-oblíqua" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5-assíntota-oblíqua"><span class="header-section-number">2.5</span> 🧪 Exercício 5 — Assíntota oblíqua</h2>
+<p>Determine a assíntota oblíqua da função:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2+2x+1}{x}.
+\]</span></p>
+<p>Utilize a divisão dos termos e verifique sua resposta por meio de um limite.</p>
+</section>
+<section id="exercício-6-divisão-de-polinômios" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6-divisão-de-polinômios"><span class="header-section-number">2.6</span> 🧪 Exercício 6 — Divisão de polinômios</h2>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=\frac{2x^2+3x-1}{x+1}.
+\]</span></p>
+<ol type="a">
+<li><p>Efetue a divisão de polinômios.</p></li>
+<li><p>Escreva a função como soma do quociente e de uma fração.</p></li>
+<li><p>Determine a assíntota oblíqua.</p></li>
+</ol>
+</section>
+<section id="exercício-7-assíntota-polinomial" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="exercício-7-assíntota-polinomial"><span class="header-section-number">2.7</span> 🧪 Exercício 7 — Assíntota polinomial</h2>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^3+2x^2+1}{x}.
+\]</span></p>
+<ol type="a">
+<li><p>Reescreva a função como soma de termos.</p></li>
+<li><p>Determine o polinômio que descreve seu comportamento assintótico.</p></li>
+<li><p>Justifique sua resposta utilizando limites.</p></li>
+</ol>
+</section>
+<section id="exercício-8-análise-completa" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="exercício-8-análise-completa"><span class="header-section-number">2.8</span> 🧪 Exercício 8 — Análise completa</h2>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2-1}{x^2-x}.
+\]</span></p>
+<ol type="a">
+<li><p>Determine o domínio.</p></li>
+<li><p>Fatore o numerador e o denominador.</p></li>
+<li><p>Simplifique a expressão, respeitando as restrições do domínio original.</p></li>
+<li><p>Identifique eventuais descontinuidades removíveis.</p></li>
+<li><p>Determine as assíntotas verticais.</p></li>
+<li><p>Determine a assíntota horizontal.</p></li>
+</ol>
+</section>
+</div>
+</div>
+<hr>
+</section>
+<section id="gabarito-comentado" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Clique para consultar o gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>✅ Clique para consultar o gabarito
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="exercício-1-assíntotas-verticais-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-assíntotas-verticais-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1 — Assíntotas verticais</h2>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+f(x)=\frac{1}{x-5}.
+\]</span></p>
+<p>O denominador se anula em:</p>
+<p><span class="math display">\[
+x=5.
+\]</span></p>
+<p>Como o numerador não se anula nesse ponto, os limites laterais são infinitos.</p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{x=5.}
+\]</span></p>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+g(x)=\frac{x+2}{x^2-1}.
+\]</span></p>
+<p>Fatorando o denominador:</p>
+<p><span class="math display">\[
 x^2-1=(x-1)(x+1).
 \]</span></p>
-<p>O denominador zera em <span class="math inline">\(x=1\)</span> e <span class="math inline">\(x=-1\)</span>. Como o numerador não zera nesses pontos, as assíntotas verticais são</p>
+<p>Os candidatos são:</p>
 <p><span class="math display">\[
 x=1
 \]</span></p>
@@ -737,91 +1551,343 @@ x=1
 <p><span class="math display">\[
 x=-1.
 \]</span></p>
-<ol start="3" type="a">
-<li></li>
-</ol>
+<p>O numerador não se anula nesses pontos:</p>
 <p><span class="math display">\[
-x^2-4=(x-2)(x+2).
-\]</span></p>
-<p>O denominador zera em <span class="math inline">\(x=2\)</span> e <span class="math inline">\(x=-2\)</span>. O numerador não zera nesses pontos. Logo, as assíntotas verticais são</p>
-<p><span class="math display">\[
-x=2
+1+2=3
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-x=-2.
+-1+2=1.
 \]</span></p>
+<p>Portanto, as assíntotas verticais são:</p>
+<p><span class="math display">\[
+\boxed{x=1\quad\text{e}\quad x=-1.}
+\]</span></p>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+h(x)=\frac{x}{x^2-4}.
+\]</span></p>
+<p>Fatorando:</p>
+<p><span class="math display">\[
+x^2-4=(x-2)(x+2).
+\]</span></p>
+<p>Os candidatos são <span class="math inline">\(x=2\)</span> e <span class="math inline">\(x=-2\)</span>.</p>
+<p>O numerador não se anula nesses pontos:</p>
+<p><span class="math display">\[
+2\neq 0,\qquad -2\neq 0.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{x=2\quad\text{e}\quad x=-2.}
+\]</span></p>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+p(x)=\frac{x^2-4}{x-2}.
+\]</span></p>
+<p>Fatorando:</p>
+<p><span class="math display">\[
+p(x)=\frac{(x-2)(x+2)}{x-2}.
+\]</span></p>
+<p>Para <span class="math inline">\(x\neq 2\)</span>:</p>
+<p><span class="math display">\[
+p(x)=x+2.
+\]</span></p>
+<p>Assim:</p>
+<p><span class="math display">\[
+\lim_{x\to 2}p(x)=4.
+\]</span></p>
+<p>O limite é finito. Portanto, <span class="math inline">\(x=2\)</span> representa uma descontinuidade removível, não uma assíntota vertical.</p>
+<p><strong>Resposta:</strong> não há assíntota vertical.</p>
 </section>
-<section id="exercício-2-1" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
-<ol type="a">
-<li>Os graus são iguais. A razão dos coeficientes líderes é</li>
-</ol>
+<section id="exercício-2-descontinuidades-removíveis-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-descontinuidades-removíveis-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2 — Descontinuidades removíveis</h2>
+<p>Temos:</p>
 <p><span class="math display">\[
-\frac{2}{1}=2.
+f(x)=\frac{x^2-9}{x-3}.
 \]</span></p>
-<p>Logo, a assíntota horizontal é</p>
+<p><strong>a)</strong> O denominador não pode ser zero:</p>
 <p><span class="math display">\[
-y=2.
+x-3\neq 0.
 \]</span></p>
-<ol start="2" type="a">
-<li>O grau do numerador é menor que o grau do denominador. Logo, a assíntota horizontal é</li>
-</ol>
+<p>Logo:</p>
 <p><span class="math display">\[
-y=0.
+D(f)=\mathbb{R}\setminus\{3\}.
 \]</span></p>
-<ol start="3" type="a">
-<li>Os graus são iguais. A razão dos coeficientes líderes é</li>
-</ol>
-<p><span class="math display">\[
-\frac{5}{2}.
-\]</span></p>
-<p>Logo, a assíntota horizontal é</p>
-<p><span class="math display">\[
-y=\frac{5}{2}.
-\]</span></p>
-</section>
-<section id="exercício-3-1" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
-<p>Temos</p>
+<p><strong>b)</strong> Fatorando:</p>
 <p><span class="math display">\[
 x^2-9=(x-3)(x+3).
 \]</span></p>
-<p>Logo, para <span class="math inline">\(x\neq 3\)</span>,</p>
+<p>Para <span class="math inline">\(x\neq 3\)</span>:</p>
 <p><span class="math display">\[
-\frac{x^2-9}{x-3}=x+3.
+f(x)=x+3.
 \]</span></p>
-<p>O ponto <span class="math inline">\(x=3\)</span> é excluído do domínio original, mas a função não cresce sem limite perto de <span class="math inline">\(3\)</span>. Ela se aproxima de <span class="math inline">\(6\)</span>.</p>
-<p>Portanto, há um buraco, não uma assíntota vertical.</p>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+\lim_{x\to 3}f(x)
+=
+\lim_{x\to 3}(x+3)
+=6.
+\]</span></p>
+<p><strong>d)</strong> O limite é finito. Portanto, o gráfico apresenta um buraco no ponto:</p>
+<p><span class="math display">\[
+(3,6).
+\]</span></p>
+<p>Não existe assíntota vertical em <span class="math inline">\(x=3\)</span>.</p>
 </section>
-<section id="exercício-4-1" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<p>Dividindo:</p>
+<section id="exercício-3-assíntotas-horizontais-1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-assíntotas-horizontais-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3 — Assíntotas horizontais</h2>
+<p><strong>a)</strong></p>
 <p><span class="math display">\[
-\frac{x^2+2x+1}{x}=x+2+\frac{1}{x}.
+f(x)=\frac{2x+1}{x-3}.
 \]</span></p>
-<p>Como</p>
+<p>Os graus são iguais. A razão dos coeficientes líderes é:</p>
 <p><span class="math display">\[
-\frac{1}{x}\to 0
+\frac{2}{1}=2.
 \]</span></p>
-<p>quando <span class="math inline">\(x\to\pm\infty\)</span>, a assíntota oblíqua é</p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{y=2.}
+\]</span></p>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+g(x)=\frac{x+4}{x^2+1}.
+\]</span></p>
+<p>O grau do numerador é menor que o grau do denominador.</p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{y=0.}
+\]</span></p>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+h(x)=\frac{5x^3-1}{2x^3+x}.
+\]</span></p>
+<p>Os graus são iguais. A razão dos coeficientes líderes é:</p>
+<p><span class="math display">\[
+\frac{5}{2}.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{y=\frac{5}{2}.}
+\]</span></p>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+p(x)=\frac{3x^2+1}{x^2-5}.
+\]</span></p>
+<p>Os graus são iguais. A razão dos coeficientes líderes é:</p>
+<p><span class="math display">\[
+\frac{3}{1}=3.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{y=3.}
+\]</span></p>
+</section>
+<section id="exercício-4-comportamento-nas-duas-direções-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-comportamento-nas-duas-direções-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4 — Comportamento nas duas direções</h2>
+<p>Temos:</p>
+<p><span class="math display">\[
+f(x)=\frac{x}{\sqrt{x^2+4}}.
+\]</span></p>
+<p>Podemos escrever:</p>
+<p><span class="math display">\[
+f(x)=
+\frac{x}{|x|\sqrt{1+\frac{4}{x^2}}}.
+\]</span></p>
+<p><strong>a)</strong> Quando <span class="math inline">\(x\to+\infty\)</span>, temos <span class="math inline">\(|x|=x\)</span>:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}f(x)
+=
+\frac{1}{\sqrt{1+0}}
+=1.
+\]</span></p>
+<p><strong>b)</strong> Quando <span class="math inline">\(x\to-\infty\)</span>, temos <span class="math inline">\(|x|=-x\)</span>:</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}f(x)
+=
+-\frac{1}{\sqrt{1+0}}
+=-1.
+\]</span></p>
+<p><strong>c)</strong> As assíntotas horizontais são:</p>
+<p><span class="math display">\[
+\boxed{y=1\quad\text{em }+\infty}
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\boxed{y=-1\quad\text{em }-\infty.}
+\]</span></p>
+</section>
+<section id="exercício-5-assíntota-oblíqua-1" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-assíntota-oblíqua-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5 — Assíntota oblíqua</h2>
+<p>Temos:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2+2x+1}{x}.
+\]</span></p>
+<p>Dividindo os termos por <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+f(x)=x+2+\frac{1}{x}.
+\]</span></p>
+<p>A reta candidata é:</p>
 <p><span class="math display">\[
 y=x+2.
 \]</span></p>
+<p>Calculando a diferença:</p>
+<p><span class="math display">\[
+f(x)-(x+2)=\frac{1}{x}.
+\]</span></p>
+<p>Como:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{1}{x}=0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}\frac{1}{x}=0,
+\]</span></p>
+<p>a assíntota oblíqua é:</p>
+<p><span class="math display">\[
+\boxed{y=x+2.}
+\]</span></p>
 </section>
+<section id="exercício-6-divisão-de-polinômios-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-divisão-de-polinômios-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6 — Divisão de polinômios</h2>
+<p>Temos:</p>
+<p><span class="math display">\[
+f(x)=\frac{2x^2+3x-1}{x+1}.
+\]</span></p>
+<p><strong>a)</strong> Efetuando a divisão:</p>
+<p><span class="math display">\[
+2x^2+3x-1=(x+1)(2x+1)-2.
+\]</span></p>
+<p><strong>b)</strong> Portanto:</p>
+<p><span class="math display">\[
+f(x)=2x+1-\frac{2}{x+1}.
+\]</span></p>
+<p><strong>c)</strong> A reta candidata é:</p>
+<p><span class="math display">\[
+y=2x+1.
+\]</span></p>
+<p>A diferença é:</p>
+<p><span class="math display">\[
+f(x)-(2x+1)=-\frac{2}{x+1}.
+\]</span></p>
+<p>Como:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}-\frac{2}{x+1}=0,
+\]</span></p>
+<p>a assíntota oblíqua é:</p>
+<p><span class="math display">\[
+\boxed{y=2x+1.}
+\]</span></p>
 </section>
+<section id="exercício-7-assíntota-polinomial-1" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="exercício-7-assíntota-polinomial-1"><span class="header-section-number">3.7</span> 🧪 Exercício 7 — Assíntota polinomial</h2>
+<p>Temos:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^3+2x^2+1}{x}.
+\]</span></p>
+<p><strong>a)</strong> Dividindo os termos:</p>
+<p><span class="math display">\[
+f(x)=x^2+2x+\frac{1}{x}.
+\]</span></p>
+<p><strong>b)</strong> O polinômio candidato é:</p>
+<p><span class="math display">\[
+P(x)=x^2+2x.
+\]</span></p>
+<p><strong>c)</strong> A diferença entre a função e o polinômio é:</p>
+<p><span class="math display">\[
+f(x)-P(x)=\frac{1}{x}.
+\]</span></p>
+<p>Como:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{1}{x}=0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}\frac{1}{x}=0,
+\]</span></p>
+<p>concluímos que:</p>
+<p><span class="math display">\[
+\boxed{P(x)=x^2+2x}
+\]</span></p>
+<p>é uma assíntota polinomial nas duas direções do infinito.</p>
+</section>
+<section id="exercício-8-análise-completa-1" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="exercício-8-análise-completa-1"><span class="header-section-number">3.8</span> 🧪 Exercício 8 — Análise completa</h2>
+<p>Temos:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2-1}{x^2-x}.
+\]</span></p>
+<p><strong>a)</strong> O denominador não pode ser zero:</p>
+<p><span class="math display">\[
+x^2-x=x(x-1).
+\]</span></p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+D(f)=\mathbb{R}\setminus\{0,1\}.
+\]</span></p>
+<p><strong>b)</strong> Fatorando numerador e denominador:</p>
+<p><span class="math display">\[
+x^2-1=(x-1)(x+1)
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+x^2-x=x(x-1).
+\]</span></p>
+<p><strong>c)</strong> Para os valores permitidos:</p>
+<p><span class="math display">\[
+f(x)=
+\frac{(x-1)(x+1)}{x(x-1)}
+=
+\frac{x+1}{x}.
+\]</span></p>
+<p>A expressão simplificada é:</p>
+<p><span class="math display">\[
+f(x)=1+\frac{1}{x},
+\]</span></p>
+<p>mas as restrições originais <span class="math inline">\(x\neq 0\)</span> e <span class="math inline">\(x\neq 1\)</span> devem ser mantidas.</p>
+<p><strong>d)</strong> Em <span class="math inline">\(x=1\)</span>, o limite é:</p>
+<p><span class="math display">\[
+\lim_{x\to 1}f(x)
+=
+\frac{1+1}{1}
+=2.
+\]</span></p>
+<p>Portanto, existe uma descontinuidade removível em:</p>
+<p><span class="math display">\[
+(1,2).
+\]</span></p>
+<p><strong>e)</strong> Em <span class="math inline">\(x=0\)</span>, a expressão simplificada apresenta comportamento ilimitado:</p>
+<p><span class="math display">\[
+f(x)=1+\frac{1}{x}.
+\]</span></p>
+<p>Assim, existe uma assíntota vertical:</p>
+<p><span class="math display">\[
+\boxed{x=0.}
+\]</span></p>
+<p><strong>f)</strong> Para <span class="math inline">\(x\to\pm\infty\)</span>:</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}
+\left(1+\frac{1}{x}\right)=1.
+\]</span></p>
+<p>Logo, a assíntota horizontal é:</p>
+<p><span class="math display">\[
+\boxed{y=1.}
+\]</span></p>
+<p><strong>Conclusão:</strong> a função apresenta uma descontinuidade removível em <span class="math inline">\(x=1\)</span>, uma assíntota vertical em <span class="math inline">\(x=0\)</span> e uma assíntota horizontal <span class="math inline">\(y=1\)</span>.</p>
+</section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-assíntotas-e-comportamento-no-infinito" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="quiz-assíntotas-e-comportamento-no-infinito"><span class="header-section-number">3.5</span> 🧩 Quiz — Assíntotas e Comportamento no Infinito</h2>
+</section>
+<section id="quiz-assíntotas-e-comportamento-no-infinito" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Assíntotas e Comportamento no Infinito</h1>
 <div class="question">
 <p><strong>Q1.</strong> Uma assíntota vertical está associada a:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Crescimento ou decrescimento sem limite perto de certo valor de <span class="math inline">\(x\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Pelo menos um limite lateral infinito nas proximidades de determinado valor de <span class="math inline">\(x\)</span>.</p><p></p>
 </div>
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Uma função constante.</p><p></p>
@@ -834,7 +1900,7 @@ y=x+2.
 </div>
 </div>
 <div class="question">
-<p><strong>Q2.</strong> Se uma função racional tem graus iguais no numerador e denominador, a assíntota horizontal é:</p>
+<p><strong>Q2.</strong> Se uma função racional possui graus iguais no numerador e no denominador, sua assíntota horizontal é:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -852,7 +1918,11 @@ y=x+2.
 </div>
 </div>
 <div class="question">
-<p><strong>Q3.</strong> A função <span class="math inline">\(\dfrac{x^2-4}{x-2}\)</span> tem em <span class="math inline">\(x=2\)</span>:</p>
+<p><strong>Q3.</strong> A função</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2-4}{x-2}
+\]</span></p>
+<p>apresenta em <span class="math inline">\(x=2\)</span>:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -860,7 +1930,7 @@ y=x+2.
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Assíntota vertical obrigatoriamente.</p><p></p>
 </div>
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Um buraco, pois há cancelamento do fator <span class="math inline">\(x-2\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Uma descontinuidade removível, pois o fator <span class="math inline">\(x-2\)</span> pode ser cancelado.</p><p></p>
 </div>
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Uma assíntota horizontal.</p><p></p>
@@ -869,17 +1939,74 @@ y=x+2.
 
 </div>
 </div>
+<div class="question">
+<p><strong>Q4.</strong> A função</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2+1}{x}
+\]</span></p>
+<p>possui qual assíntota oblíqua?</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(y=0\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(y=x+1\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(y=x\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q5.</strong> Quando a diferença entre uma função e um polinômio <span class="math inline">\(P(x)\)</span> tende a zero no infinito, podemos dizer que:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>A função é necessariamente constante.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>O polinômio descreve uma assíntota polinomial da função.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>A função não possui domínio.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="🔬 Quer aprofundar ainda mais?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>🔬 Quer aprofundar ainda mais?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O estudo das assíntotas utiliza conceitos que serão formalizados no módulo de limites.</p>
+<p>Você pode continuar a sequência principal do curso ou revisitar este aprofundamento depois de estudar limites, quando os procedimentos apresentados aqui poderão ser compreendidos com ainda mais profundidade.</p>
+<ul>
+<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 — Crescimento e Comportamento Assintótico</a> — Aula de origem deste aprofundamento.</li>
+<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">1.17 — Revisão Geral do Módulo 1</a> — Continuação da sequência principal.</li>
+</ul>
+</div>
+</div>
 </section>
-</section>
-<section id="navegação" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
 <p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
 <p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">1.17 Revisão Geral do Módulo 1</a></p>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">1.22-AP — Funções por Partes</a></p>
 <p>✅ <strong>Trilha AP concluída:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">Voltar à revisão geral</a>.</p>
 <p>🚧 <strong>Módulo 2 — Limites: em preparação.</strong> <a href="../../../../../posts/cursos/matematica/calculo/index.html#módulo-2-limites">Consultar os temas previstos</a>.</p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html">Topo</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="#">Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

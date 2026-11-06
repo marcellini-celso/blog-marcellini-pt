@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.">
+<meta name="description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e perfuradas, e a ponte conceitual para limites.">
 
 <title>🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças – Blog do Marcellini</title>
 <style>
@@ -127,14 +127,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças – Blog do Marcellini">
-<meta property="og:description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.">
+<meta property="og:description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e perfuradas, e a ponte conceitual para limites.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças – Blog do Marcellini">
-<meta name="twitter:description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.">
+<meta name="twitter:description" content="Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e perfuradas, e a ponte conceitual para limites.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -267,22 +267,34 @@ window.Quarto = {
    
   <ul>
   <li><a href="#valor-absoluto-distância-e-vizinhanças" id="toc-valor-absoluto-distância-e-vizinhanças" class="nav-link active" data-scroll-target="#valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">1</span> 🔬 Valor Absoluto, Distância e Vizinhanças</a>
+  <ul>
+  <li><a href="#valor-absoluto-como-distância-até-zero" id="toc-valor-absoluto-como-distância-até-zero" class="nav-link" data-scroll-target="#valor-absoluto-como-distância-até-zero"><span class="header-section-number">1.1</span> 📦 1. Valor absoluto como distância até zero</a></li>
+  <li><a href="#distância-entre-dois-pontos-reais" id="toc-distância-entre-dois-pontos-reais" class="nav-link" data-scroll-target="#distância-entre-dois-pontos-reais"><span class="header-section-number">1.2</span> 📏 2. Distância entre dois pontos reais</a></li>
+  <li><a href="#vizinhança-aberta" id="toc-vizinhança-aberta" class="nav-link" data-scroll-target="#vizinhança-aberta"><span class="header-section-number">1.3</span> 🎯 3. Vizinhança aberta</a>
   <ul class="collapse">
-  <li><a href="#valor-absoluto-como-distância-até-zero" id="toc-valor-absoluto-como-distância-até-zero" class="nav-link" data-scroll-target="#valor-absoluto-como-distância-até-zero"><span class="header-section-number">1.1</span> 📦 Valor absoluto como distância até zero</a></li>
-  <li><a href="#distância-entre-dois-pontos" id="toc-distância-entre-dois-pontos" class="nav-link" data-scroll-target="#distância-entre-dois-pontos"><span class="header-section-number">1.2</span> 📏 Distância entre dois pontos</a></li>
-  <li><a href="#vizinhança-aberta" id="toc-vizinhança-aberta" class="nav-link" data-scroll-target="#vizinhança-aberta"><span class="header-section-number">1.3</span> 🎯 Vizinhança aberta</a></li>
-  <li><a href="#exemplo-com-centro-3" id="toc-exemplo-com-centro-3" class="nav-link" data-scroll-target="#exemplo-com-centro-3"><span class="header-section-number">1.4</span> ✅ Exemplo com centro 3</a></li>
-  <li><a href="#vizinhança-furada" id="toc-vizinhança-furada" class="nav-link" data-scroll-target="#vizinhança-furada"><span class="header-section-number">1.5</span> 🧭 Vizinhança furada</a></li>
-  <li><a href="#desigualdades-equivalentes" id="toc-desigualdades-equivalentes" class="nav-link" data-scroll-target="#desigualdades-equivalentes"><span class="header-section-number">1.6</span> 🔁 Desigualdades equivalentes</a></li>
-  <li><a href="#desigualdades-com-valor-absoluto" id="toc-desigualdades-com-valor-absoluto" class="nav-link" data-scroll-target="#desigualdades-com-valor-absoluto"><span class="header-section-number">1.7</span> ⚖️ Desigualdades com valor absoluto</a></li>
-  <li><a href="#desigualdades-do-tipo-maior-que" id="toc-desigualdades-do-tipo-maior-que" class="nav-link" data-scroll-target="#desigualdades-do-tipo-maior-que"><span class="header-section-number">1.8</span> 🚪 Desigualdades do tipo maior que</a></li>
-  <li><a href="#ponte-para-limites" id="toc-ponte-para-limites" class="nav-link" data-scroll-target="#ponte-para-limites"><span class="header-section-number">1.9</span> 🌉 Ponte para limites</a></li>
+  <li><a href="#exemplo-vizinhança-de-centro-3" id="toc-exemplo-vizinhança-de-centro-3" class="nav-link" data-scroll-target="#exemplo-vizinhança-de-centro-3"><span class="header-section-number">1.3.1</span> Exemplo: vizinhança de centro 3</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <li><a href="#vizinhança-furada" id="toc-vizinhança-furada" class="nav-link" data-scroll-target="#vizinhança-furada"><span class="header-section-number">1.4</span> 🧭 4. Vizinhança furada</a></li>
+  <li><a href="#desigualdades-equivalentes" id="toc-desigualdades-equivalentes" class="nav-link" data-scroll-target="#desigualdades-equivalentes"><span class="header-section-number">1.5</span> 🔁 5. Desigualdades equivalentes</a></li>
+  <li><a href="#desigualdades-com-valor-absoluto-menor-ou-igual" id="toc-desigualdades-com-valor-absoluto-menor-ou-igual" class="nav-link" data-scroll-target="#desigualdades-com-valor-absoluto-menor-ou-igual"><span class="header-section-number">1.6</span> ⚖️ 6. Desigualdades com valor absoluto: menor ou igual</a>
   <ul class="collapse">
-  <li><a href="#quiz-valor-absoluto-distância-e-vizinhanças" id="toc-quiz-valor-absoluto-distância-e-vizinhanças" class="nav-link" data-scroll-target="#quiz-valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">3.5</span> 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças</a></li>
+  <li><a href="#exemplo" id="toc-exemplo" class="nav-link" data-scroll-target="#exemplo"><span class="header-section-number">1.6.1</span> Exemplo</a></li>
   </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  <li><a href="#desigualdades-com-valor-absoluto-maior-que" id="toc-desigualdades-com-valor-absoluto-maior-que" class="nav-link" data-scroll-target="#desigualdades-com-valor-absoluto-maior-que"><span class="header-section-number">1.7</span> 🚪 7. Desigualdades com valor absoluto: maior que</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-1" id="toc-exemplo-1" class="nav-link" data-scroll-target="#exemplo-1"><span class="header-section-number">1.7.1</span> Exemplo</a></li>
+  <li><a href="#e-quando-a-desigualdade-é-maior-ou-igual" id="toc-e-quando-a-desigualdade-é-maior-ou-igual" class="nav-link" data-scroll-target="#e-quando-a-desigualdade-é-maior-ou-igual"><span class="header-section-number">1.7.2</span> E quando a desigualdade é maior ou igual?</a></li>
+  </ul></li>
+  <li><a href="#a-ponte-para-os-limites" id="toc-a-ponte-para-os-limites" class="nav-link" data-scroll-target="#a-ponte-para-os-limites"><span class="header-section-number">1.8</span> 🌉 8. A ponte para os limites</a>
+  <ul class="collapse">
+  <li><a href="#a-definição-formal-de-limite" id="toc-a-definição-formal-de-limite" class="nav-link" data-scroll-target="#a-definição-formal-de-limite"><span class="header-section-number">1.8.1</span> A definição formal de limite</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">1.9</span> 🧪 9. Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">1.10</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-valor-absoluto-distância-e-vizinhanças" id="toc-quiz-valor-absoluto-distância-e-vizinhanças" class="nav-link" data-scroll-target="#quiz-valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">1.11</span> 🧩 10. Quiz — Valor Absoluto, Distância e Vizinhanças</a></li>
+  <li><a href="#conexão-com-o-estudo-de-limites" id="toc-conexão-com-o-estudo-de-limites" class="nav-link" data-scroll-target="#conexão-com-o-estudo-de-limites"><span class="header-section-number">1.12</span> 🌉 11. Conexão com o estudo de limites</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">1.13</span> 🔗 12. Navegação</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -304,7 +316,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites.
+    Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e perfuradas, e a ponte conceitual para limites.
   </div>
 </div>
 
@@ -344,26 +356,26 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Este AP complementa a aula <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a>. Ele amplia o estudo sem interromper a sequência principal.</p>
-<p>↩︎️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">Voltar à aula de origem</a> · ▶️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.5-equacoes-e-inequacoes.html">Continuar com 1.5 Equações e Inequações</a></p>
+<p>Este aprofundamento complementa a aula <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 — Números Reais e Intervalos</a>.</p>
+<p>Na aula principal, estudamos os números reais, os intervalos e uma primeira interpretação do valor absoluto como distância. Aqui, desenvolveremos essa ideia com mais profundidade, introduzindo vizinhanças abertas, vizinhanças furadas e a linguagem matemática que será utilizada na definição formal de limite.</p>
+<p>O conteúdo amplia a sequência principal sem interromper seu desenvolvimento.</p>
+<p>↩︎️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">Voltar à aula de origem</a> · ▶️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.5-equacoes-e-inequacoes.html">Continuar com 1.5 — Equações e Inequações</a></p>
 </div>
 </div>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">1.19-AP — Valor Absoluto e Inequações Modulares</a></p>
 <hr>
 <section id="valor-absoluto-distância-e-vizinhanças" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 🔬 Valor Absoluto, Distância e Vizinhanças</h1>
-<p>Este aprofundamento prepara uma das ideias mais importantes para o estudo de limites: <strong>proximidade</strong>.</p>
+<p>Este aprofundamento desenvolve uma das ideias mais importantes para o estudo de limites: <strong>proximidade</strong>.</p>
 <p>Quando escrevemos</p>
 <p><span class="math display">\[
 |x-a|&lt;\varepsilon,
 \]</span></p>
-<p>estamos dizendo que <span class="math inline">\(x\)</span> está perto de <span class="math inline">\(a\)</span>.</p>
-<p>Mais precisamente: a distância entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> é menor que <span class="math inline">\(\varepsilon\)</span>.</p>
-<p>Essa pequena expressão será essencial para entender a definição formal de limite.</p>
-<hr>
+<p>estamos afirmando que <span class="math inline">\(x\)</span> está suficientemente próximo de <span class="math inline">\(a\)</span>, no sentido de que a distância entre esses dois números é menor que <span class="math inline">\(\varepsilon\)</span>.</p>
+<p>Essa interpretação geométrica será essencial para compreender a definição formal de limite.</p>
 <section id="valor-absoluto-como-distância-até-zero" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="valor-absoluto-como-distância-até-zero"><span class="header-section-number">1.1</span> 📦 Valor absoluto como distância até zero</h2>
-<p>O valor absoluto de um número real <span class="math inline">\(x\)</span> é definido por</p>
+<h2 data-number="1.1" class="anchored" data-anchor-id="valor-absoluto-como-distância-até-zero"><span class="header-section-number">1.1</span> 📦 1. Valor absoluto como distância até zero</h2>
+<p>O valor absoluto de um número real <span class="math inline">\(x\)</span> é definido por:</p>
 <p><span class="math display">\[
 |x|=
 \begin{cases}
@@ -371,50 +383,73 @@ x, &amp; x\geq 0,\\
 -x, &amp; x&lt;0.
 \end{cases}
 \]</span></p>
-<p>Geometricamente, <span class="math inline">\(|x|\)</span> mede a distância de <span class="math inline">\(x\)</span> até zero na reta real.</p>
+<p>Geometricamente, <span class="math inline">\(|x|\)</span> representa a distância entre o número <span class="math inline">\(x\)</span> e a origem da reta real.</p>
 <p>Por exemplo:</p>
 <p><span class="math display">\[
-|5|=5,
+|5|=5
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
 |-5|=5.
 \]</span></p>
-<p>Os números <span class="math inline">\(5\)</span> e <span class="math inline">\(-5\)</span> estão à mesma distância da origem.</p>
-<hr>
-</section>
-<section id="distância-entre-dois-pontos" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="distância-entre-dois-pontos"><span class="header-section-number">1.2</span> 📏 Distância entre dois pontos</h2>
-<p>A distância entre dois números reais <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> é dada por</p>
+<p>Os números <span class="math inline">\(5\)</span> e <span class="math inline">\(-5\)</span> estão à mesma distância do zero, embora estejam em lados opostos da reta.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="💡 Interpretação geométrica">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>💡 Interpretação geométrica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O valor absoluto não mede se um número é positivo ou negativo. Ele mede sua distância até zero.</p>
+<p>Por isso, seu resultado nunca é negativo:</p>
 <p><span class="math display">\[
-|x-a|.
+|x|\geq 0.
 \]</span></p>
-<p>Por exemplo, a distância entre <span class="math inline">\(7\)</span> e <span class="math inline">\(3\)</span> é</p>
+</div>
+</div>
+</section>
+<section id="distância-entre-dois-pontos-reais" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="distância-entre-dois-pontos-reais"><span class="header-section-number">1.2</span> 📏 2. Distância entre dois pontos reais</h2>
+<p>A distância entre dois números reais <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> é dada por:</p>
+<p><span class="math display">\[
+d(x,a)=|x-a|.
+\]</span></p>
+<p>Essa expressão funciona independentemente da posição relativa dos dois números.</p>
+<p>Por exemplo, a distância entre <span class="math inline">\(7\)</span> e <span class="math inline">\(3\)</span> é:</p>
 <p><span class="math display">\[
 |7-3|=4.
 \]</span></p>
-<p>A distância entre <span class="math inline">\(-1\)</span> e <span class="math inline">\(3\)</span> também é</p>
+<p>A distância entre <span class="math inline">\(-1\)</span> e <span class="math inline">\(3\)</span> também é:</p>
 <p><span class="math display">\[
 |-1-3|=|-4|=4.
 \]</span></p>
-<p>Logo, a expressão</p>
+<p>Portanto, a expressão</p>
 <p><span class="math display">\[
 |x-a|
 \]</span></p>
-<p>mede quanto <span class="math inline">\(x\)</span> está afastado de <span class="math inline">\(a\)</span>.</p>
-<hr>
+<p>mede quanto <span class="math inline">\(x\)</span> está afastado de <span class="math inline">\(a\)</span> na reta real.</p>
+<p>É importante observar que a distância é simétrica:</p>
+<p><span class="math display">\[
+|x-a|=|a-x|.
+\]</span></p>
+<p>Assim, a distância de <span class="math inline">\(x\)</span> até <span class="math inline">\(a\)</span> é igual à distância de <span class="math inline">\(a\)</span> até <span class="math inline">\(x\)</span>.</p>
 </section>
 <section id="vizinhança-aberta" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="vizinhança-aberta"><span class="header-section-number">1.3</span> 🎯 Vizinhança aberta</h2>
-<p>Uma vizinhança aberta de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\varepsilon&gt;0\)</span> é o intervalo</p>
+<h2 data-number="1.3" class="anchored" data-anchor-id="vizinhança-aberta"><span class="header-section-number">1.3</span> 🎯 3. Vizinhança aberta</h2>
+<p>Uma <strong>vizinhança aberta</strong> de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\varepsilon&gt;0\)</span> é o intervalo:</p>
 <p><span class="math display">\[
 (a-\varepsilon,\;a+\varepsilon).
 \]</span></p>
-<p>Equivalentemente, é o conjunto dos reais <span class="math inline">\(x\)</span> tais que</p>
+<p>Equivalentemente, podemos representar essa vizinhança pelo conjunto:</p>
 <p><span class="math display">\[
-|x-a|&lt;\varepsilon.
+V_\varepsilon(a)
+=
+\{x\in\mathbb{R}:|x-a|&lt;\varepsilon\}.
 \]</span></p>
-<p>Portanto,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
 |x-a|&lt;\varepsilon
 \]</span></p>
@@ -422,101 +457,148 @@ x, &amp; x\geq 0,\\
 <p><span class="math display">\[
 a-\varepsilon&lt;x&lt;a+\varepsilon
 \]</span></p>
-<p>dizem a mesma coisa.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
+<p>expressam exatamente a mesma condição.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Ideia central">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Ideia central
+<span class="screen-reader-only">Nota</span>📌 Ideia central
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Uma vizinhança aberta reúne todos os pontos que estão a uma distância menor que <span class="math inline">\(\varepsilon\)</span> do centro <span class="math inline">\(a\)</span>.</p>
+<p>Uma vizinhança aberta reúne todos os pontos da reta real que estão a uma distância menor que <span class="math inline">\(\varepsilon\)</span> do centro <span class="math inline">\(a\)</span>.</p>
+<p>O centro pertence à vizinhança, mas suas extremidades não.</p>
 </div>
 </div>
-<hr>
-</section>
-<section id="exemplo-com-centro-3" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="exemplo-com-centro-3"><span class="header-section-number">1.4</span> ✅ Exemplo com centro 3</h2>
-<p>Se</p>
+<section id="exemplo-vizinhança-de-centro-3" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="exemplo-vizinhança-de-centro-3"><span class="header-section-number">1.3.1</span> Exemplo: vizinhança de centro 3</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
 a=3
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-\varepsilon=0{,}5,
+\varepsilon=0{,}5.
 \]</span></p>
-<p>então a vizinhança aberta é</p>
+<p>A vizinhança aberta será:</p>
 <p><span class="math display">\[
-(3-0{,}5,\;3+0{,}5)=(2{,}5,\;3{,}5).
+(3-0{,}5,\;3+0{,}5).
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+V_{0{,}5}(3)=(2{,}5,\;3{,}5).
 \]</span></p>
 <p>Também podemos escrever:</p>
 <p><span class="math display">\[
 |x-3|&lt;0{,}5.
 \]</span></p>
 <p>Isso significa que <span class="math inline">\(x\)</span> está a uma distância menor que <span class="math inline">\(0{,}5\)</span> de <span class="math inline">\(3\)</span>.</p>
-<hr>
 </section>
-<section id="vizinhança-furada" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="vizinhança-furada"><span class="header-section-number">1.5</span> 🧭 Vizinhança furada</h2>
-<p>Em limites, muitas vezes queremos estudar o que acontece <strong>perto</strong> de <span class="math inline">\(a\)</span>, mas sem usar o próprio ponto <span class="math inline">\(a\)</span>.</p>
-<p>Para isso, usamos uma vizinhança furada:</p>
+</section>
+<section id="vizinhança-furada" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="vizinhança-furada"><span class="header-section-number">1.4</span> 🧭 4. Vizinhança furada</h2>
+<p>No estudo de limites, frequentemente queremos analisar o comportamento de uma função perto de um ponto, mas sem considerar necessariamente o próprio ponto.</p>
+<p>Para isso, utilizamos uma <strong>vizinhança furada</strong>.</p>
+<p>Sua representação é:</p>
 <p><span class="math display">\[
 0&lt;|x-a|&lt;\varepsilon.
 \]</span></p>
-<p>Essa desigualdade diz duas coisas:</p>
+<p>Essa desigualdade reúne duas condições:</p>
 <ol type="1">
-<li><span class="math inline">\(x\)</span> está perto de <span class="math inline">\(a\)</span>;</li>
-<li><span class="math inline">\(x\neq a\)</span>.</li>
+<li><span class="math inline">\(x\)</span> está a uma distância menor que <span class="math inline">\(\varepsilon\)</span> de <span class="math inline">\(a\)</span>;</li>
+<li><span class="math inline">\(x\)</span> é diferente de <span class="math inline">\(a\)</span>.</li>
 </ol>
-<p>A condição</p>
+<p>A primeira condição garante a proximidade. A segunda exclui o centro.</p>
+<p>Podemos representar a vizinhança furada por:</p>
 <p><span class="math display">\[
-0&lt;|x-a|
+(a-\varepsilon,a)\cup(a,a+\varepsilon).
 \]</span></p>
-<p>exclui o centro.</p>
-<p>Isso será muito importante em limites, porque o limite de uma função em <span class="math inline">\(a\)</span> depende do comportamento perto de <span class="math inline">\(a\)</span>, não necessariamente do valor da função em <span class="math inline">\(a\)</span>.</p>
-<hr>
+<p>Ou, em notação de conjuntos:</p>
+<p><span class="math display">\[
+V_\varepsilon^*(a)
+=
+\{x\in\mathbb{R}:0&lt;|x-a|&lt;\varepsilon\}.
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="💡 Por que excluir o centro?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>💡 Por que excluir o centro?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O limite de uma função em <span class="math inline">\(a\)</span> depende do comportamento de seus valores quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(a\)</span>, e não necessariamente do valor que a função assume exatamente em <span class="math inline">\(a\)</span>.</p>
+<p>Por isso, a definição de limite utiliza uma vizinhança furada.</p>
+</div>
+</div>
 </section>
-<section id="desigualdades-equivalentes" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="desigualdades-equivalentes"><span class="header-section-number">1.6</span> 🔁 Desigualdades equivalentes</h2>
-<p>A desigualdade</p>
+<section id="desigualdades-equivalentes" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="desigualdades-equivalentes"><span class="header-section-number">1.5</span> 🔁 5. Desigualdades equivalentes</h2>
+<p>Vamos desenvolver a equivalência que conecta valor absoluto e intervalos.</p>
+<p>Considere:</p>
 <p><span class="math display">\[
-|x-a|&lt;\varepsilon
+|x-a|&lt;\varepsilon,
+\qquad \varepsilon&gt;0.
 \]</span></p>
-<p>é equivalente a</p>
+<p>Pela definição de valor absoluto, essa condição equivale a:</p>
 <p><span class="math display">\[
 -\varepsilon&lt;x-a&lt;\varepsilon.
 \]</span></p>
-<p>Somando <span class="math inline">\(a\)</span> nos três membros, obtemos</p>
+<p>Somando <span class="math inline">\(a\)</span> aos três membros:</p>
 <p><span class="math display">\[
 a-\varepsilon&lt;x&lt;a+\varepsilon.
 \]</span></p>
-<p>Assim,</p>
+<p>Assim:</p>
 <p><span class="math display">\[
+\boxed{
 |x-a|&lt;\varepsilon
-\quad\Longleftrightarrow\quad
-x\in(a-\varepsilon,a+\varepsilon).
+\iff
+a-\varepsilon&lt;x&lt;a+\varepsilon.
+}
 \]</span></p>
-<p>Essa equivalência é uma das ferramentas fundamentais para traduzir linguagem algébrica em linguagem geométrica.</p>
-<hr>
-</section>
-<section id="desigualdades-com-valor-absoluto" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="desigualdades-com-valor-absoluto"><span class="header-section-number">1.7</span> ⚖️ Desigualdades com valor absoluto</h2>
-<p>Também temos a forma fechada:</p>
+<p>Em termos de intervalos:</p>
 <p><span class="math display">\[
-|x-a|\leq r
+\boxed{
+x\in(a-\varepsilon,a+\varepsilon).
+}
 \]</span></p>
-<p>equivalente a</p>
+<p>Essa equivalência é uma ferramenta importante para traduzir uma condição algébrica em uma região geométrica da reta real.</p>
+</section>
+<section id="desigualdades-com-valor-absoluto-menor-ou-igual" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="desigualdades-com-valor-absoluto-menor-ou-igual"><span class="header-section-number">1.6</span> ⚖️ 6. Desigualdades com valor absoluto: menor ou igual</h2>
+<p>Também podemos trabalhar com desigualdades não estritas:</p>
+<p><span class="math display">\[
+|x-a|\leq r,
+\qquad r\geq 0.
+\]</span></p>
+<p>Essa condição significa que a distância entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> é menor ou igual a <span class="math inline">\(r\)</span>.</p>
+<p>Ela equivale a:</p>
+<p><span class="math display">\[
+-r\leq x-a\leq r.
+\]</span></p>
+<p>Somando <span class="math inline">\(a\)</span> aos três membros:</p>
 <p><span class="math display">\[
 a-r\leq x\leq a+r.
 \]</span></p>
-<p>Por exemplo:</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-|x-2|\leq 5
+\boxed{
+|x-a|\leq r
+\iff
+x\in[a-r,a+r].
+}
 \]</span></p>
-<p>equivale a</p>
+<section id="exemplo" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="exemplo"><span class="header-section-number">1.6.1</span> Exemplo</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+|x-2|\leq 5.
+\]</span></p>
+<p>Temos:</p>
 <p><span class="math display">\[
 -5\leq x-2\leq 5.
 \]</span></p>
@@ -524,20 +606,27 @@ a-r\leq x\leq a+r.
 <p><span class="math display">\[
 -3\leq x\leq 7.
 \]</span></p>
-<p>Logo, a solução é</p>
+<p>Logo, a solução é:</p>
 <p><span class="math display">\[
-[-3,7].
+\boxed{x\in[-3,7].}
 \]</span></p>
-<hr>
+<p>Observe a diferença entre as duas situações:</p>
+<ul>
+<li><span class="math inline">\(|x-a|&lt;r\)</span>: intervalo aberto;</li>
+<li><span class="math inline">\(|x-a|\leq r\)</span>: intervalo fechado.</li>
+</ul>
 </section>
-<section id="desigualdades-do-tipo-maior-que" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="desigualdades-do-tipo-maior-que"><span class="header-section-number">1.8</span> 🚪 Desigualdades do tipo maior que</h2>
+</section>
+<section id="desigualdades-com-valor-absoluto-maior-que" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="desigualdades-com-valor-absoluto-maior-que"><span class="header-section-number">1.7</span> 🚪 7. Desigualdades com valor absoluto: maior que</h2>
 <p>A desigualdade</p>
 <p><span class="math display">\[
-|x-a|&gt;r
+|x-a|&gt;r,
+\qquad r\geq 0,
 \]</span></p>
 <p>significa que <span class="math inline">\(x\)</span> está a uma distância maior que <span class="math inline">\(r\)</span> de <span class="math inline">\(a\)</span>.</p>
-<p>Isso corresponde a dois intervalos:</p>
+<p>Nesse caso, <span class="math inline">\(x\)</span> precisa estar fora do intervalo centrado em <span class="math inline">\(a\)</span>.</p>
+<p>Isso corresponde a duas possibilidades:</p>
 <p><span class="math display">\[
 x&lt;a-r
 \]</span></p>
@@ -545,33 +634,72 @@ x&lt;a-r
 <p><span class="math display">\[
 x&gt;a+r.
 \]</span></p>
-<p>Por exemplo:</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-|x-3|&gt;2
+\boxed{
+|x-a|&gt;r
+\iff
+x\in(-\infty,a-r)\cup(a+r,+\infty).
+}
 \]</span></p>
-<p>equivale a</p>
+<section id="exemplo-1" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="exemplo-1"><span class="header-section-number">1.7.1</span> Exemplo</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
-x&lt;1
+|x-3|&gt;2.
+\]</span></p>
+<p>Temos duas possibilidades:</p>
+<p><span class="math display">\[
+x&lt;3-2
 \]</span></p>
 <p>ou</p>
 <p><span class="math display">\[
+x&gt;3+2.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+x&lt;1
+\qquad\text{ou}\qquad
 x&gt;5.
 \]</span></p>
-<p>Logo, a solução é</p>
+<p>A solução é:</p>
 <p><span class="math display">\[
+\boxed{
 (-\infty,1)\cup(5,+\infty).
+}
 \]</span></p>
-<hr>
 </section>
-<section id="ponte-para-limites" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="ponte-para-limites"><span class="header-section-number">1.9</span> 🌉 Ponte para limites</h2>
-<p>A definição formal de limite usa exatamente a linguagem de distância e vizinhança.</p>
-<p>Dizer que</p>
+<section id="e-quando-a-desigualdade-é-maior-ou-igual" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="e-quando-a-desigualdade-é-maior-ou-igual"><span class="header-section-number">1.7.2</span> E quando a desigualdade é maior ou igual?</h3>
+<p>Se:</p>
 <p><span class="math display">\[
-\lim_{x\to a}f(x)=L
+|x-a|\geq r,
 \]</span></p>
-<p>significa, informalmente, que podemos tornar <span class="math inline">\(f(x)\)</span> tão perto de <span class="math inline">\(L\)</span> quanto quisermos, desde que <span class="math inline">\(x\)</span> esteja suficientemente perto de <span class="math inline">\(a\)</span>.</p>
-<p>A linguagem formal usa expressões como:</p>
+<p>então:</p>
+<p><span class="math display">\[
+x\leq a-r
+\qquad\text{ou}\qquad
+x\geq a+r.
+\]</span></p>
+<p>Assim:</p>
+<p><span class="math display">\[
+\boxed{
+|x-a|\geq r
+\iff
+x\in(-\infty,a-r]\cup[a+r,+\infty).
+}
+\]</span></p>
+</section>
+</section>
+<section id="a-ponte-para-os-limites" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="a-ponte-para-os-limites"><span class="header-section-number">1.8</span> 🌉 8. A ponte para os limites</h2>
+<p>A definição formal de limite utiliza exatamente a linguagem de distância e vizinhança que desenvolvemos até aqui.</p>
+<p>Considere a afirmação:</p>
+<p><span class="math display">\[
+\lim_{x\to a}f(x)=L.
+\]</span></p>
+<p>Informalmente, ela significa que podemos tornar <span class="math inline">\(f(x)\)</span> tão próximo de <span class="math inline">\(L\)</span> quanto desejarmos, desde que escolhamos <span class="math inline">\(x\)</span> suficientemente próximo de <span class="math inline">\(a\)</span>, sem exigir que <span class="math inline">\(x=a\)</span>.</p>
+<p>A linguagem matemática utiliza duas desigualdades:</p>
 <p><span class="math display">\[
 0&lt;|x-a|&lt;\delta
 \]</span></p>
@@ -579,12 +707,60 @@ x&gt;5.
 <p><span class="math display">\[
 |f(x)-L|&lt;\varepsilon.
 \]</span></p>
-<p>Por isso, compreender valor absoluto como distância é essencial antes de estudar limites com rigor.</p>
+<p>Cada uma desempenha um papel específico.</p>
+<p><strong>Na entrada da função:</strong></p>
+<p><span class="math display">\[
+0&lt;|x-a|&lt;\delta.
+\]</span></p>
+<p>Essa condição indica que <span class="math inline">\(x\)</span> está em uma vizinhança furada de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\delta\)</span>.</p>
+<p><strong>Na saída da função:</strong></p>
+<p><span class="math display">\[
+|f(x)-L|&lt;\varepsilon.
+\]</span></p>
+<p>Essa condição indica que <span class="math inline">\(f(x)\)</span> está a uma distância menor que <span class="math inline">\(\varepsilon\)</span> de <span class="math inline">\(L\)</span>.</p>
+<p>Portanto:</p>
+<ul>
+<li><span class="math inline">\(\delta\)</span> controla a proximidade de <span class="math inline">\(x\)</span> em relação a <span class="math inline">\(a\)</span>;</li>
+<li><span class="math inline">\(\varepsilon\)</span> controla a proximidade de <span class="math inline">\(f(x)\)</span> em relação a <span class="math inline">\(L\)</span>.</li>
+</ul>
+<section id="a-definição-formal-de-limite" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="a-definição-formal-de-limite"><span class="header-section-number">1.8.1</span> A definição formal de limite</h3>
+<p>Seja <span class="math inline">\(f:A\to\mathbb{R}\)</span>, e suponha que <span class="math inline">\(a\)</span> seja um ponto de acumulação do domínio <span class="math inline">\(A\)</span>.</p>
+<p>Dizemos que:</p>
+<p><span class="math display">\[
+\lim_{x\to a}f(x)=L
+\]</span></p>
+<p>quando:</p>
+<p><span class="math display">\[
+\forall\varepsilon&gt;0,\ \exists\delta&gt;0
+\]</span></p>
+<p>tal que, para todo <span class="math inline">\(x\in A\)</span>,</p>
+<p><span class="math display">\[
+0&lt;|x-a|&lt;\delta
+\quad\Longrightarrow\quad
+|f(x)-L|&lt;\varepsilon.
+\]</span></p>
+<p>Essa definição afirma que, para qualquer tolerância positiva <span class="math inline">\(\varepsilon\)</span> escolhida para os valores da função, existe uma tolerância positiva <span class="math inline">\(\delta\)</span> que garante o resultado desejado para as entradas suficientemente próximas de <span class="math inline">\(a\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Uma interpretação importante">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>💡 Uma interpretação importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O número <span class="math inline">\(\varepsilon\)</span> é escolhido primeiro. Depois, precisamos encontrar um <span class="math inline">\(\delta\)</span> que garanta a aproximação desejada.</p>
+<p>Não precisamos que <span class="math inline">\(\delta\)</span> seja igual a <span class="math inline">\(\varepsilon\)</span>. O valor de <span class="math inline">\(\delta\)</span> depende da função, do ponto <span class="math inline">\(a\)</span> e da tolerância <span class="math inline">\(\varepsilon\)</span> escolhida.</p>
+</div>
+</div>
+<p>Não é necessário dominar todos os detalhes dessa definição neste momento. O objetivo deste aprofundamento é compreender de onde vêm as expressões de valor absoluto que aparecem nela.</p>
 <hr>
 </section>
 </section>
-<section id="exercícios-propostos" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 🧪 Exercícios propostos</h1>
+<section id="exercícios-propostos" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="exercícios-propostos"><span class="header-section-number">1.9</span> 🧪 9. Exercícios propostos</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -595,183 +771,219 @@ x&gt;5.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<section id="exercício-1" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
-<p>Escreva na forma de intervalo:</p>
+<section id="exercício-1-escrevendo-intervalos" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="exercício-1-escrevendo-intervalos"><span class="header-section-number">1.9.1</span> 🧪 Exercício 1 — Escrevendo intervalos</h3>
+<p>Escreva cada desigualdade na forma de intervalo:</p>
 <ol type="a">
-<li><span class="math inline">\(|x-4|&lt;2\)</span><br>
-</li>
-<li><span class="math inline">\(|x+1|&lt;3\)</span><br>
-</li>
-<li><span class="math inline">\(|x-5|\leq 1\)</span></li>
+<li><p><span class="math inline">\(|x-4|&lt;2\)</span></p></li>
+<li><p><span class="math inline">\(|x+1|&lt;3\)</span></p></li>
+<li><p><span class="math inline">\(|x-5|\leq 1\)</span></p></li>
 </ol>
 </section>
-<section id="exercício-2" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
-<p>Escreva usando valor absoluto:</p>
+<section id="exercício-2-escrevendo-com-valor-absoluto" class="level3" data-number="1.9.2">
+<h3 data-number="1.9.2" class="anchored" data-anchor-id="exercício-2-escrevendo-com-valor-absoluto"><span class="header-section-number">1.9.2</span> 🧪 Exercício 2 — Escrevendo com valor absoluto</h3>
+<p>Escreva cada intervalo usando uma desigualdade com valor absoluto:</p>
 <ol type="a">
-<li><span class="math inline">\(x\in(2,8)\)</span><br>
-</li>
-<li><span class="math inline">\(x\in(-3,3)\)</span><br>
-</li>
-<li><span class="math inline">\(x\in[1,5]\)</span></li>
+<li><p><span class="math inline">\(x\in(2,8)\)</span></p></li>
+<li><p><span class="math inline">\(x\in(-3,3)\)</span></p></li>
+<li><p><span class="math inline">\(x\in[1,5]\)</span></p></li>
 </ol>
 </section>
-<section id="exercício-3" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
+<section id="exercício-3-desigualdades-modulares" class="level3" data-number="1.9.3">
+<h3 data-number="1.9.3" class="anchored" data-anchor-id="exercício-3-desigualdades-modulares"><span class="header-section-number">1.9.3</span> 🧪 Exercício 3 — Desigualdades modulares</h3>
 <p>Resolva:</p>
 <ol type="a">
-<li><span class="math inline">\(|x-2|&gt;4\)</span><br>
-</li>
-<li><span class="math inline">\(|x+3|\geq 2\)</span></li>
+<li><p><span class="math inline">\(|x-2|&gt;4\)</span></p></li>
+<li><p><span class="math inline">\(|x+3|\geq 2\)</span></p></li>
 </ol>
 </section>
-<section id="exercício-4" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Explique o significado geométrico de</p>
+<section id="exercício-4-interpretação-geométrica" class="level3" data-number="1.9.4">
+<h3 data-number="1.9.4" class="anchored" data-anchor-id="exercício-4-interpretação-geométrica"><span class="header-section-number">1.9.4</span> 🧪 Exercício 4 — Interpretação geométrica</h3>
+<p>Explique o significado geométrico da expressão:</p>
 <p><span class="math display">\[
 0&lt;|x-a|&lt;\varepsilon.
 \]</span></p>
 </section>
+<section id="exercício-5-vizinhança-aberta" class="level3" data-number="1.9.5">
+<h3 data-number="1.9.5" class="anchored" data-anchor-id="exercício-5-vizinhança-aberta"><span class="header-section-number">1.9.5</span> 🧪 Exercício 5 — Vizinhança aberta</h3>
+<p>Determine a vizinhança aberta de centro <span class="math inline">\(a=4\)</span> e raio <span class="math inline">\(\varepsilon=0{,}2\)</span>, escrevendo sua resposta:</p>
+<ol type="a">
+<li><p>na forma de intervalo;</p></li>
+<li><p>por meio de uma desigualdade com valor absoluto.</p></li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+</section>
+<section id="gabarito-comentado" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="gabarito-comentado"><span class="header-section-number">1.10</span> ✅ Gabarito comentado</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="🔎 Clique para consultar as resoluções">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
+<span class="screen-reader-only">Importante</span>🔎 Clique para consultar as resoluções
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
-<section id="exercício-1-1" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
-<ol type="a">
-<li></li>
-</ol>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="exercício-1-escrevendo-intervalos-1" class="level3" data-number="1.10.1">
+<h3 data-number="1.10.1" class="anchored" data-anchor-id="exercício-1-escrevendo-intervalos-1"><span class="header-section-number">1.10.1</span> 🧪 Exercício 1 — Escrevendo intervalos</h3>
+<p><strong>a)</strong></p>
 <p><span class="math display">\[
 |x-4|&lt;2
 \]</span></p>
-<p>equivale a</p>
+<p>Equivale a:</p>
 <p><span class="math display">\[
 4-2&lt;x&lt;4+2.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo:</p>
 <p><span class="math display">\[
-x\in(2,6).
+\boxed{x\in(2,6).}
 \]</span></p>
-<ol start="2" type="a">
-<li></li>
-</ol>
+<p><strong>b)</strong></p>
+<p>Podemos escrever:</p>
 <p><span class="math display">\[
-|x+1|&lt;3
+|x+1|=|x-(-1)|.
 \]</span></p>
-<p>é o mesmo que</p>
+<p>Assim:</p>
 <p><span class="math display">\[
 |x-(-1)|&lt;3.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo:</p>
 <p><span class="math display">\[
-x\in(-4,2).
+\boxed{x\in(-4,2).}
 \]</span></p>
-<ol start="3" type="a">
-<li></li>
-</ol>
+<p><strong>c)</strong></p>
 <p><span class="math display">\[
 |x-5|\leq 1
 \]</span></p>
-<p>equivale a</p>
+<p>Equivale a:</p>
 <p><span class="math display">\[
 5-1\leq x\leq 5+1.
 \]</span></p>
-<p>Logo,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-x\in[4,6].
+\boxed{x\in[4,6].}
 \]</span></p>
 </section>
-<section id="exercício-2-1" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
-<ol type="a">
-<li>O intervalo <span class="math inline">\((2,8)\)</span> tem centro <span class="math inline">\(5\)</span> e raio <span class="math inline">\(3\)</span>. Logo:</li>
-</ol>
+<section id="exercício-2-escrevendo-com-valor-absoluto-1" class="level3" data-number="1.10.2">
+<h3 data-number="1.10.2" class="anchored" data-anchor-id="exercício-2-escrevendo-com-valor-absoluto-1"><span class="header-section-number">1.10.2</span> 🧪 Exercício 2 — Escrevendo com valor absoluto</h3>
+<p><strong>a)</strong></p>
+<p>O intervalo <span class="math inline">\((2,8)\)</span> tem centro:</p>
 <p><span class="math display">\[
-|x-5|&lt;3.
+a=\frac{2+8}{2}=5
 \]</span></p>
-<ol start="2" type="a">
-<li>O intervalo <span class="math inline">\((-3,3)\)</span> tem centro <span class="math inline">\(0\)</span> e raio <span class="math inline">\(3\)</span>. Logo:</li>
-</ol>
+<p>e raio:</p>
 <p><span class="math display">\[
-|x|&lt;3.
+r=\frac{8-2}{2}=3.
 \]</span></p>
-<ol start="3" type="a">
-<li>O intervalo <span class="math inline">\([1,5]\)</span> tem centro <span class="math inline">\(3\)</span> e raio <span class="math inline">\(2\)</span>. Logo:</li>
-</ol>
+<p>Logo:</p>
 <p><span class="math display">\[
-|x-3|\leq 2.
+\boxed{|x-5|&lt;3.}
+\]</span></p>
+<p><strong>b)</strong></p>
+<p>O intervalo <span class="math inline">\((-3,3)\)</span> tem centro <span class="math inline">\(0\)</span> e raio <span class="math inline">\(3\)</span>.</p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{|x|&lt;3.}
+\]</span></p>
+<p><strong>c)</strong></p>
+<p>O intervalo <span class="math inline">\([1,5]\)</span> tem centro:</p>
+<p><span class="math display">\[
+a=\frac{1+5}{2}=3
+\]</span></p>
+<p>e raio:</p>
+<p><span class="math display">\[
+r=\frac{5-1}{2}=2.
+\]</span></p>
+<p>Como o intervalo é fechado, utilizamos a desigualdade não estrita:</p>
+<p><span class="math display">\[
+\boxed{|x-3|\leq 2.}
 \]</span></p>
 </section>
-<section id="exercício-3-1" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
-<ol type="a">
-<li></li>
-</ol>
+<section id="exercício-3-desigualdades-modulares-1" class="level3" data-number="1.10.3">
+<h3 data-number="1.10.3" class="anchored" data-anchor-id="exercício-3-desigualdades-modulares-1"><span class="header-section-number">1.10.3</span> 🧪 Exercício 3 — Desigualdades modulares</h3>
+<p><strong>a)</strong></p>
 <p><span class="math display">\[
 |x-2|&gt;4
 \]</span></p>
-<p>significa:</p>
+<p>Isso significa:</p>
 <p><span class="math display">\[
 x&lt;2-4
 \]</span></p>
-<p>ou</p>
+<p>ou:</p>
 <p><span class="math display">\[
 x&gt;2+4.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo:</p>
 <p><span class="math display">\[
-x\in(-\infty,-2)\cup(6,+\infty).
+\boxed{x\in(-\infty,-2)\cup(6,+\infty).}
 \]</span></p>
-<ol start="2" type="a">
-<li></li>
-</ol>
+<p><strong>b)</strong></p>
 <p><span class="math display">\[
 |x+3|\geq 2
 \]</span></p>
-<p>é o mesmo que</p>
+<p>Podemos escrever:</p>
 <p><span class="math display">\[
 |x-(-3)|\geq 2.
 \]</span></p>
 <p>Logo:</p>
 <p><span class="math display">\[
-x\leq -5
+x\leq -3-2
 \]</span></p>
-<p>ou</p>
+<p>ou:</p>
 <p><span class="math display">\[
-x\geq -1.
+x\geq -3+2.
 \]</span></p>
-<p>Portanto,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-x\in(-\infty,-5]\cup[-1,+\infty).
+\boxed{x\in(-\infty,-5]\cup[-1,+\infty).}
 \]</span></p>
 </section>
-<section id="exercício-4-1" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<p>A expressão</p>
+<section id="exercício-4-interpretação-geométrica-1" class="level3" data-number="1.10.4">
+<h3 data-number="1.10.4" class="anchored" data-anchor-id="exercício-4-interpretação-geométrica-1"><span class="header-section-number">1.10.4</span> 🧪 Exercício 4 — Interpretação geométrica</h3>
+<p>A expressão:</p>
 <p><span class="math display">\[
 0&lt;|x-a|&lt;\varepsilon
 \]</span></p>
-<p>significa que <span class="math inline">\(x\)</span> está dentro da vizinhança aberta de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\varepsilon\)</span>, mas <span class="math inline">\(x\)</span> não pode ser igual a <span class="math inline">\(a\)</span>. É uma vizinhança furada.</p>
+<p>indica que <span class="math inline">\(x\)</span> pertence à vizinhança aberta de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\varepsilon\)</span>, mas não pode ser igual ao próprio centro.</p>
+<p>É uma vizinhança furada, representada por:</p>
+<p><span class="math display">\[
+(a-\varepsilon,a)\cup(a,a+\varepsilon).
+\]</span></p>
 </section>
+<section id="exercício-5-vizinhança-aberta-1" class="level3" data-number="1.10.5">
+<h3 data-number="1.10.5" class="anchored" data-anchor-id="exercício-5-vizinhança-aberta-1"><span class="header-section-number">1.10.5</span> 🧪 Exercício 5 — Vizinhança aberta</h3>
+<p>Temos:</p>
+<p><span class="math display">\[
+a=4
+\qquad\text{e}\qquad
+\varepsilon=0{,}2.
+\]</span></p>
+<p><strong>a) Na forma de intervalo:</strong></p>
+<p><span class="math display">\[
+(4-0{,}2,\;4+0{,}2).
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{(3{,}8,\;4{,}2).}
+\]</span></p>
+<p><strong>b) Com valor absoluto:</strong></p>
+<p><span class="math display">\[
+\boxed{|x-4|&lt;0{,}2.}
+\]</span></p>
 </section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-valor-absoluto-distância-e-vizinhanças" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="quiz-valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">3.5</span> 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças</h2>
+</section>
+<section id="quiz-valor-absoluto-distância-e-vizinhanças" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="quiz-valor-absoluto-distância-e-vizinhanças"><span class="header-section-number">1.11</span> 🧩 10. Quiz — Valor Absoluto, Distância e Vizinhanças</h2>
 <div class="question">
 <p><strong>Q1.</strong> A expressão <span class="math inline">\(|x-a|\)</span> representa:</p>
 <div class="choices">
@@ -826,16 +1038,46 @@ x\in(-\infty,-5]\cup[-1,+\infty).
 
 </div>
 </div>
+<div class="question">
+<p><strong>Q4.</strong> Na definição formal de limite, o número <span class="math inline">\(\delta\)</span> controla:</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>A distância entre <span class="math inline">\(f(x)\)</span> e <span class="math inline">\(L\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>A distância entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>O valor da função no ponto <span class="math inline">\(a\)</span>.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
 <hr>
 </section>
+<section id="conexão-com-o-estudo-de-limites" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="conexão-com-o-estudo-de-limites"><span class="header-section-number">1.12</span> 🌉 11. Conexão com o estudo de limites</h2>
+<p>Neste aprofundamento, partimos de uma interpretação geométrica simples — o valor absoluto como distância — e chegamos à linguagem utilizada na definição formal de limite.</p>
+<p>A sequência de ideias é:</p>
+<ol type="1">
+<li>O valor absoluto representa uma distância na reta real.</li>
+<li>A distância permite definir vizinhanças abertas.</li>
+<li>A exclusão do centro produz uma vizinhança furada.</li>
+<li>As vizinhanças permitem descrever matematicamente a aproximação de uma variável a um ponto.</li>
+<li>A linguagem de <span class="math inline">\(\varepsilon\)</span> e <span class="math inline">\(\delta\)</span> formaliza a aproximação dos valores de uma função.</li>
+</ol>
+<p>Essa construção será retomada quando estudarmos limites com maior rigor matemático.</p>
 </section>
-<section id="navegação" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
-<p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
-<p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.5-equacoes-e-inequacoes.html">1.5 Equações e Inequações</a></p>
+<section id="navegação" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="navegação"><span class="header-section-number">1.13</span> 🔗 12. Navegação</h2>
+<p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 — Números Reais e Intervalos</a></p>
+<p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.5-equacoes-e-inequacoes.html">1.5 — Equações e Inequações</a></p>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">1.19-AP — Valor Absoluto e Inequações Modulares</a></p>
 <p>🔬 <strong>Próximo AP:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html">1.21-AP — Domínio de Funções: Guia Completo</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html">Topo</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="#">Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -853,6 +1095,7 @@ Nota
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

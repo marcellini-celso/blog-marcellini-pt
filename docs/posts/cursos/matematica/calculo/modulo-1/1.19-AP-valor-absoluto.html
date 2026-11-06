@@ -269,18 +269,18 @@ window.Quarto = {
   <li><a href="#definição-de-módulo" id="toc-definição-de-módulo" class="nav-link active" data-scroll-target="#definição-de-módulo"><span class="header-section-number">1</span> 📌 Definição de Módulo</a></li>
   <li><a href="#interpretação-geométrica" id="toc-interpretação-geométrica" class="nav-link" data-scroll-target="#interpretação-geométrica"><span class="header-section-number">2</span> 📍 Interpretação Geométrica</a></li>
   <li><a href="#propriedades-do-módulo" id="toc-propriedades-do-módulo" class="nav-link" data-scroll-target="#propriedades-do-módulo"><span class="header-section-number">3</span> 🧱 Propriedades do Módulo</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#equivalências-úteis-para-inequações-modulares" id="toc-equivalências-úteis-para-inequações-modulares" class="nav-link" data-scroll-target="#equivalências-úteis-para-inequações-modulares"><span class="header-section-number">3.1</span> 📌 Equivalências úteis para inequações modulares</a></li>
   </ul></li>
   <li><a href="#exemplos-resolvidos" id="toc-exemplos-resolvidos" class="nav-link" data-scroll-target="#exemplos-resolvidos"><span class="header-section-number">4</span> ✅ Exemplos Resolvidos</a></li>
   <li><a href="#inequações-modulares" id="toc-inequações-modulares" class="nav-link" data-scroll-target="#inequações-modulares"><span class="header-section-number">5</span> ⚖️ Inequações Modulares</a>
-  <ul class="collapse">
-  <li><a href="#quebra-por-casos-básicos-com-age0" id="toc-quebra-por-casos-básicos-com-age0" class="nav-link" data-scroll-target="#quebra-por-casos-básicos-com-age0"><span class="header-section-number">5.1</span> 🔎 Quebra por casos básicos (com <span class="math inline">\(a\ge0\)</span>)</a></li>
+  <ul>
+  <li><a href="#os-quatro-casos-básicos" id="toc-os-quatro-casos-básicos" class="nav-link" data-scroll-target="#os-quatro-casos-básicos"><span class="header-section-number">5.1</span> 🔎 Os quatro casos básicos</a></li>
   <li><a href="#formas-centradas" id="toc-formas-centradas" class="nav-link" data-scroll-target="#formas-centradas"><span class="header-section-number">5.2</span> 🎯 Formas centradas</a></li>
-  <li><a href="#micro-exemplos" id="toc-micro-exemplos" class="nav-link" data-scroll-target="#micro-exemplos"><span class="header-section-number">5.3</span> ⚙️ Micro-exemplos</a></li>
+  <li><a href="#microexemplos" id="toc-microexemplos" class="nav-link" data-scroll-target="#microexemplos"><span class="header-section-number">5.3</span> ⚙️ Microexemplos</a></li>
   </ul></li>
   <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">6</span> 🧪 Exercícios Propostos</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#quiz-valor-absoluto-e-inequações-modulares" id="toc-quiz-valor-absoluto-e-inequações-modulares" class="nav-link" data-scroll-target="#quiz-valor-absoluto-e-inequações-modulares"><span class="header-section-number">6.1</span> 🧩 Quiz — Valor Absoluto e Inequações Modulares</a></li>
   </ul></li>
   <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">7</span> 🔗 Navegação</a></li>
@@ -361,16 +361,14 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Ao concluir este aprofundamento, você deverá ser capaz de:</p>
 <ul>
-<li>Definir o valor absoluto (módulo) e interpretar geometricamente.<br>
-</li>
-<li>Apresentar propriedades fundamentais do módulo.<br>
-</li>
-<li>Introduzir e aplicar a desigualdade triangular.<br>
-</li>
-<li>Resolver inequações com módulo.<br>
-</li>
-<li>Fixar o aprendizado com exemplos e exercícios.</li>
+<li>Definir o valor absoluto (módulo) e interpretá-lo geometricamente;</li>
+<li>Apresentar e aplicar propriedades fundamentais do módulo;</li>
+<li>Compreender e utilizar a desigualdade triangular;</li>
+<li>Aplicar a desigualdade triangular reversa;</li>
+<li>Resolver equações e inequações com valor absoluto;</li>
+<li>Relacionar inequações modulares à representação de intervalos na reta real.</li>
 </ul>
 </div>
 </div>
@@ -387,28 +385,37 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O <strong>valor absoluto</strong> (ou módulo) de um número real <span class="math inline">\(x\)</span> é definido por:</p>
+<p>O <strong>valor absoluto</strong>, também chamado de <strong>módulo</strong>, de um número real <span class="math inline">\(x\)</span> é definido por</p>
 <p><span class="math display">\[
-|x| =
+|x|=
 \begin{cases}
-x, &amp; \text{se } x \ge 0, \\
--x, &amp; \text{se } x &lt; 0.
+x, &amp; \text{se } x\geq 0,\\
+-x, &amp; \text{se } x&lt;0.
 \end{cases}
 \]</span></p>
+<p>Em outras palavras, o módulo de um número é o próprio número quando ele é não negativo e seu oposto quando ele é negativo.</p>
 </div>
 </div>
 <hr>
 </section>
 <section id="interpretação-geométrica" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> 📍 Interpretação Geométrica</h1>
-<ul>
-<li>O módulo representa a <strong>distância de <span class="math inline">\(x\)</span> até a origem</strong> na reta real.<br>
-</li>
-<li>Logo, <span class="math inline">\(|x|\ge 0\)</span> para todo <span class="math inline">\(x \in \mathbb{R}\)</span>.</li>
-</ul>
+<p>Na reta real, o módulo de um número representa a <strong>distância desse número até a origem</strong>.</p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+|5|=5
+\qquad\text{e}\qquad
+|-5|=5.
+\]</span></p>
+<p>Embora <span class="math inline">\(5\)</span> e <span class="math inline">\(-5\)</span> estejam em lados opostos da origem, ambos estão a uma distância igual a <span class="math inline">\(5\)</span> unidades dela.</p>
+<p>Consequentemente,</p>
+<p><span class="math display">\[
+|x|\geq 0
+\qquad\text{para todo }x\in\mathbb{R}.
+\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/imagem1-modulo1_3.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Módulo"></p>
+<p><img src="../images/imagem1-modulo1_3.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Interpretação geométrica do valor absoluto como distância até a origem."></p>
 </figure>
 </div>
 <hr>
@@ -425,18 +432,37 @@ x, &amp; \text{se } x \ge 0, \\
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Para quaisquer números reais <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>, valem as seguintes propriedades:</p>
 <ol type="1">
-<li><span class="math inline">\(|x|\ge 0\)</span> e <span class="math inline">\(|x|=0 \iff x=0\)</span>.<br>
-</li>
-<li><span class="math inline">\(|xy|=|x|\cdot|y|\)</span>.<br>
-</li>
-<li><span class="math inline">\(|\dfrac{x}{y}|=\dfrac{|x|}{|y|}\)</span>, se <span class="math inline">\(y\ne0\)</span>.<br>
-</li>
-<li><span class="math inline">\(|x+y|\le |x|+|y|\)</span> (<strong>desigualdade triangular</strong>).</li>
-<li><span class="math inline">\(||x|-|y||\le |x-y|\)</span> (<strong>desigualdade triangular reversa</strong>).<br>
-</li>
-<li><span class="math inline">\(|x|=\max\{x,-x\}=\sqrt{x^2}\)</span>.<br>
-</li>
+<li><p><strong>Não negatividade:</strong></p>
+<p><span class="math display">\[
+|x|\geq 0
+\qquad\text{e}\qquad
+|x|=0\iff x=0.
+\]</span></p></li>
+<li><p><strong>Módulo de um produto:</strong></p>
+<p><span class="math display">\[
+|xy|=|x|\cdot|y|.
+\]</span></p></li>
+<li><p><strong>Módulo de um quociente:</strong></p>
+<p><span class="math display">\[
+\left|\frac{x}{y}\right|
+=
+\frac{|x|}{|y|},
+\qquad y\neq 0.
+\]</span></p></li>
+<li><p><strong>Desigualdade triangular:</strong></p>
+<p><span class="math display">\[
+|x+y|\leq |x|+|y|.
+\]</span></p></li>
+<li><p><strong>Desigualdade triangular reversa:</strong></p>
+<p><span class="math display">\[
+\big||x|-|y|\big|\leq |x-y|.
+\]</span></p></li>
+<li><p><strong>Caracterizações do módulo:</strong></p>
+<p><span class="math display">\[
+|x|=\max\{x,-x\}=\sqrt{x^2}.
+\]</span></p></li>
 </ol>
 </div>
 </div>
@@ -452,46 +478,137 @@ x, &amp; \text{se } x \ge 0, \\
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ul>
-<li><p><strong>(1)</strong> Por definição, <span class="math inline">\(|x|\)</span> é a distância até a origem. Distância nunca é negativa, e só é nula quando o ponto é a própria origem (<span class="math inline">\(x=0\)</span>).</p></li>
-<li><p><strong>(2)</strong> Sejam <span class="math inline">\(x,y\in\mathbb{R}\)</span>. Como o sinal de um produto é o produto dos sinais,<br>
-<span class="math display">\[
-|xy| = (\pm x)\cdot(\pm y) = |x|\cdot |y|.
-\]</span></p></li>
-<li><p><strong>(3)</strong> Para <span class="math inline">\(y\ne0\)</span>, basta dividir a igualdade da propriedade anterior:<br>
-<span class="math display">\[
-|x/y| = \frac{|x|}{|y|}.
-\]</span></p></li>
-<li><p><strong>(4) Desigualdade triangular:</strong> pela interpretação geométrica, <span class="math inline">\(|x+y|\)</span> representa a distância entre <span class="math inline">\(0\)</span> e <span class="math inline">\(x+y\)</span>. Essa distância nunca pode ser maior que a soma das distâncias de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> até <span class="math inline">\(0\)</span>. Formalmente:<br>
-<span class="math display">\[
-|x+y|^2 = (x+y)^2 = x^2 + 2xy + y^2 \le (|x|+|y|)^2,
-\]</span> o que implica <span class="math inline">\(|x+y|\le |x|+|y|\)</span>.</p></li>
-<li><p><strong>(5) Desigualdade triangular reversa:</strong> pela desigualdade triangular, <span class="math inline">\(|x|=|(x-y)+y|\le |x-y|+|y|\Rightarrow |x|-|y|\le |x-y|\)</span>.<br>
-Trocando os papéis de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>, obtemos <span class="math inline">\(|y|-|x|\le |x-y|\)</span>.<br>
-Juntando as duas: <span class="math inline">\(||x|-|y||\le |x-y|\)</span>.</p></li>
-<li><p><strong>(6) Caracterizações de <span class="math inline">\(|x|\)</span>:</strong><br>
-Pela definição por casos, <span class="math inline">\(|x|=x\)</span> se <span class="math inline">\(x\ge0\)</span> e <span class="math inline">\(|x|=-x\)</span> se <span class="math inline">\(x&lt;0\)</span>.<br>
-Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="math inline">\(|x|\ge0\)</span> e <span class="math inline">\(|x|^2=x^2\)</span>, segue <span class="math inline">\(|x|=\sqrt{x^2}\)</span>.<br>
-</p></li>
-</ul>
+<p><strong>(1) Não negatividade</strong></p>
+<p>Pela definição por casos, se <span class="math inline">\(x\geq 0\)</span>, então <span class="math inline">\(|x|=x\geq 0\)</span>. Se <span class="math inline">\(x&lt;0\)</span>, então <span class="math inline">\(|x|=-x&gt;0\)</span>.</p>
+<p>Além disso, o módulo só é nulo quando <span class="math inline">\(x=0\)</span>.</p>
+<p><strong>(2) Módulo de um produto</strong></p>
+<p>Como <span class="math inline">\(|xy|\)</span> e <span class="math inline">\(|x||y|\)</span> são não negativos, basta observar que seus quadrados são iguais:</p>
+<p><span class="math display">\[
+\begin{aligned}
+|xy|^2
+&amp;=(xy)^2\\
+&amp;=x^2y^2\\
+&amp;=|x|^2|y|^2\\
+&amp;=(|x||y|)^2.
+\end{aligned}
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+|xy|=|x||y|.
+\]</span></p>
+<p><strong>(3) Módulo de um quociente</strong></p>
+<p>Para <span class="math inline">\(y\neq 0\)</span>, aplicando a propriedade do produto ao número <span class="math inline">\(x/y\)</span>, temos</p>
+<p><span class="math display">\[
+\left|\frac{x}{y}\right|
+=
+\frac{|x|}{|y|}.
+\]</span></p>
+<p>Isso também pode ser verificado elevando os dois lados ao quadrado e observando que ambos são não negativos.</p>
+<p><strong>(4) Desigualdade triangular</strong></p>
+<p>Sabemos que</p>
+<p><span class="math display">\[
+xy\leq |x||y|.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+\begin{aligned}
+|x+y|^2
+&amp;=(x+y)^2\\
+&amp;=x^2+2xy+y^2\\
+&amp;\leq x^2+2|x||y|+y^2\\
+&amp;=(|x|+|y|)^2.
+\end{aligned}
+\]</span></p>
+<p>Como os dois lados da desigualdade <span class="math inline">\(|x+y|\leq |x|+|y|\)</span> são não negativos, a desigualdade entre seus quadrados implica a desigualdade original:</p>
+<p><span class="math display">\[
+|x+y|\leq |x|+|y|.
+\]</span></p>
+<p>Geometricamente, essa propriedade expressa a ideia de que a distância direta entre dois pontos não supera o comprimento de um caminho que passa por um ponto intermediário.</p>
+<p><strong>(5) Desigualdade triangular reversa</strong></p>
+<p>Pela desigualdade triangular,</p>
+<p><span class="math display">\[
+\begin{aligned}
+|x|
+&amp;=|(x-y)+y|\\
+&amp;\leq |x-y|+|y|.
+\end{aligned}
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+|x|-|y|\leq |x-y|.
+\]</span></p>
+<p>Trocando os papéis de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>, obtemos</p>
+<p><span class="math display">\[
+|y|-|x|\leq |x-y|.
+\]</span></p>
+<p>As duas desigualdades podem ser reunidas na forma</p>
+<p><span class="math display">\[
+-\lvert x-y\rvert
+\leq |x|-|y|
+\leq |x-y|.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\big||x|-|y|\big|\leq |x-y|.
+\]</span></p>
+<p><strong>(6) Caracterizações do módulo</strong></p>
+<p>Pela definição por casos, temos</p>
+<p><span class="math display">\[
+|x|=
+\begin{cases}
+x, &amp; x\geq 0,\\
+-x, &amp; x&lt;0.
+\end{cases}
+\]</span></p>
+<p>Assim, <span class="math inline">\(|x|\)</span> é o maior entre <span class="math inline">\(x\)</span> e <span class="math inline">\(-x\)</span>:</p>
+<p><span class="math display">\[
+|x|=\max\{x,-x\}.
+\]</span></p>
+<p>Além disso, como <span class="math inline">\(|x|\geq 0\)</span> e <span class="math inline">\(|x|^2=x^2\)</span>, segue que</p>
+<p><span class="math display">\[
+|x|=\sqrt{x^2}.
+\]</span></p>
 </div>
 </div>
 </div>
 <hr>
 <section id="equivalências-úteis-para-inequações-modulares" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="equivalências-úteis-para-inequações-modulares"><span class="header-section-number">3.1</span> 📌 Equivalências úteis para inequações modulares</h2>
-<p>Se <span class="math inline">\(a\ge0\)</span>, valem:</p>
+<p>Se <span class="math inline">\(a\geq 0\)</span>, valem as seguintes equivalências:</p>
 <ul>
-<li><span class="math inline">\(|x|&lt;a \iff -a&lt;x&lt;a\)</span>.<br>
-</li>
-<li><span class="math inline">\(|x|\le a \iff -a\le x\le a\)</span>.<br>
-</li>
-<li><span class="math inline">\(|x|&gt;a \iff x&lt;-a \ \text{ou}\ x&gt;a\)</span>.<br>
-</li>
-<li><span class="math inline">\(|x|\ge a \iff x\le -a \ \text{ou}\ x\ge a\)</span>.<br>
-</li>
-<li><span class="math inline">\(|x-c|&lt;r \iff c-r&lt;x&lt;c+r\)</span> (intervalo aberto de raio <span class="math inline">\(r\)</span> centrado em <span class="math inline">\(c\)</span>).</li>
+<li><p><strong>Módulo menor que:</strong></p>
+<p><span class="math display">\[
+|x|&lt;a
+\iff
+-a&lt;x&lt;a.
+\]</span></p></li>
+<li><p><strong>Módulo menor ou igual:</strong></p>
+<p><span class="math display">\[
+|x|\leq a
+\iff
+-a\leq x\leq a.
+\]</span></p></li>
+<li><p><strong>Módulo maior que:</strong></p>
+<p><span class="math display">\[
+|x|&gt;a
+\iff
+x&lt;-a\quad\text{ou}\quad x&gt;a.
+\]</span></p></li>
+<li><p><strong>Módulo maior ou igual:</strong></p>
+<p><span class="math display">\[
+|x|\geq a
+\iff
+x\leq -a\quad\text{ou}\quad x\geq a.
+\]</span></p></li>
 </ul>
+<p>De maneira mais geral, para <span class="math inline">\(r\geq 0\)</span>:</p>
+<p><span class="math display">\[
+|x-c|&lt;r
+\iff
+c-r&lt;x&lt;c+r.
+\]</span></p>
+<p>Essa última equivalência descreve um intervalo aberto centrado em <span class="math inline">\(c\)</span>, com raio <span class="math inline">\(r\)</span>.</p>
+<hr>
 </section>
 </section>
 <section id="exemplos-resolvidos" class="level1" data-number="4">
@@ -506,8 +623,9 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Resolva: <span class="math display">\[
-|x| = 3
+<p>Resolva a equação</p>
+<p><span class="math display">\[
+|x|=3.
 \]</span></p>
 <div class="callout callout-style-default callout-note callout-titled" title="Resolução">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -521,10 +639,15 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Por definição:<br>
-- Se <span class="math inline">\(x\ge0\)</span>, então <span class="math inline">\(|x|=x=3 \Rightarrow x=3\)</span>.<br>
-- Se <span class="math inline">\(x&lt;0\)</span>, então <span class="math inline">\(|x|=-x=3 \Rightarrow x=-3\)</span>.</p>
-<p>✅ <strong>Solução:</strong> <span class="math inline">\(\{-3,3\}\)</span>.</p>
+<p>Pela definição do módulo, temos dois casos:</p>
+<ul>
+<li>Se <span class="math inline">\(x\geq 0\)</span>, então <span class="math inline">\(|x|=x=3\)</span>, de onde <span class="math inline">\(x=3\)</span>.</li>
+<li>Se <span class="math inline">\(x&lt;0\)</span>, então <span class="math inline">\(|x|=-x=3\)</span>, de onde <span class="math inline">\(x=-3\)</span>.</li>
+</ul>
+<p>Portanto, o conjunto solução é</p>
+<p><span class="math display">\[
+\boxed{S=\{-3,3\}}.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -541,8 +664,9 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Resolva: <span class="math display">\[
-|x-2| &lt; 5
+<p>Resolva a inequação</p>
+<p><span class="math display">\[
+|x-2|&lt;5.
 \]</span></p>
 <div class="callout callout-style-default callout-note callout-titled" title="Resolução">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -556,8 +680,18 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(|x-2|&lt;5 \iff -5 &lt; x-2 &lt; 5 \iff -3 &lt; x &lt; 7\)</span>.</p>
-<p>✅ <strong>Solução:</strong> <span class="math inline">\((-3,7)\)</span>.</p>
+<p>Aplicando a equivalência para módulo menor que:</p>
+<p><span class="math display">\[
+\begin{aligned}
+|x-2|&lt;5
+&amp;\iff -5&lt;x-2&lt;5\\
+&amp;\iff -3&lt;x&lt;7.
+\end{aligned}
+\]</span></p>
+<p>Portanto, o conjunto solução é</p>
+<p><span class="math display">\[
+\boxed{S=(-3,7)}.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -577,50 +711,65 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Uma <strong>inequação modular</strong> é uma inequação que envolve valor absoluto, como <span class="math display">\[
-|f(x)| \ \{&lt;, \le, &gt;, \ge\}\ a,
-\]</span> com <span class="math inline">\(a\ge0\)</span>. A resolução usa a definição por partes do módulo.</p>
+<p>Uma <strong>inequação modular</strong> é uma desigualdade que contém uma expressão com valor absoluto, como</p>
+<p><span class="math display">\[
+|f(x)|&lt;a,\qquad
+|f(x)|\leq a,\qquad
+|f(x)|&gt;a
+\quad\text{ou}\quad
+|f(x)|\geq a.
+\]</span></p>
+<p>As equivalências fundamentais apresentadas a seguir pressupõem <span class="math inline">\(a\geq 0\)</span>.</p>
 </div>
 </div>
 <hr>
-<section id="quebra-por-casos-básicos-com-age0" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="quebra-por-casos-básicos-com-age0"><span class="header-section-number">5.1</span> 🔎 Quebra por casos básicos (com <span class="math inline">\(a\ge0\)</span>)</h2>
-<ul>
-<li><p><strong>Caso 1 — menor que</strong><br>
-<span class="math display">\[
-|f(x)|&lt;a \iff -a&lt;f(x)&lt;a.
-\]</span></p></li>
-<li><p><strong>Caso 2 — menor ou igual</strong><br>
-<span class="math display">\[
-|f(x)|\le a \iff -a\le f(x)\le a.
-\]</span></p></li>
-<li><p><strong>Caso 3 — maior que</strong><br>
-<span class="math display">\[
-|f(x)|&gt;a \iff f(x)&lt;-a \ \ \text{ou}\ \ f(x)&gt;a.
-\]</span></p></li>
-<li><p><strong>Caso 4 — maior ou igual</strong><br>
-<span class="math display">\[
-|f(x)|\ge a \iff f(x)\le -a \ \ \text{ou}\ \ f(x)\ge a.
-\]</span></p></li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled" title="🚧 Casos-limite com (a=0)">
+<section id="os-quatro-casos-básicos" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="os-quatro-casos-básicos"><span class="header-section-number">5.1</span> 🔎 Os quatro casos básicos</h2>
+<p>Para <span class="math inline">\(a\geq 0\)</span>, temos:</p>
+<p><strong>Caso 1 — menor que</strong></p>
+<p><span class="math display">\[
+|f(x)|&lt;a
+\iff
+-a&lt;f(x)&lt;a.
+\]</span></p>
+<p><strong>Caso 2 — menor ou igual</strong></p>
+<p><span class="math display">\[
+|f(x)|\leq a
+\iff
+-a\leq f(x)\leq a.
+\]</span></p>
+<p><strong>Caso 3 — maior que</strong></p>
+<p><span class="math display">\[
+|f(x)|&gt;a
+\iff
+f(x)&lt;-a
+\quad\text{ou}\quad
+f(x)&gt;a.
+\]</span></p>
+<p><strong>Caso 4 — maior ou igual</strong></p>
+<p><span class="math display">\[
+|f(x)|\geq a
+\iff
+f(x)\leq -a
+\quad\text{ou}\quad
+f(x)\geq a.
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="🚧 Casos-limite com $a=0$">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Dica</span>🚧 Casos-limite com (a=0)
+<span class="screen-reader-only">Dica</span>🚧 Casos-limite com <span class="math inline">\(a=0\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Quando <span class="math inline">\(a=0\)</span>, as equivalências assumem formas particulares:</p>
 <ul>
-<li><span class="math inline">\(|f(x)|&lt;0\)</span>: <strong>sem solução</strong>.<br>
-</li>
-<li><span class="math inline">\(|f(x)|\le0\)</span>: <strong>equivale a</strong> <span class="math inline">\(f(x)=0\)</span>.<br>
-</li>
-<li><span class="math inline">\(|f(x)|&gt;0\)</span>: <strong>equivale a</strong> <span class="math inline">\(f(x)\ne0\)</span>.<br>
-</li>
-<li><span class="math inline">\(|f(x)|\ge0\)</span>: <strong>sempre verdadeira</strong> (para todo <span class="math inline">\(x\)</span>).</li>
+<li><span class="math inline">\(|f(x)|&lt;0\)</span>: <strong>não possui solução</strong>, pois o módulo nunca é negativo.</li>
+<li><span class="math inline">\(|f(x)|\leq 0\)</span>: equivale a <span class="math inline">\(f(x)=0\)</span>.</li>
+<li><span class="math inline">\(|f(x)|&gt;0\)</span>: equivale a <span class="math inline">\(f(x)\neq 0\)</span>.</li>
+<li><span class="math inline">\(|f(x)|\geq 0\)</span>: é <strong>sempre verdadeira</strong>, para todo <span class="math inline">\(x\)</span> do domínio de <span class="math inline">\(f\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -628,25 +777,64 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </section>
 <section id="formas-centradas" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="formas-centradas"><span class="header-section-number">5.2</span> 🎯 Formas centradas</h2>
-<p>Para <span class="math inline">\(|x-c| \ \{&lt;,\le,&gt;,\ge\}\ r\)</span> com <span class="math inline">\(r\ge0\)</span>:</p>
+<p>Para <span class="math inline">\(|x-c|\)</span> e <span class="math inline">\(r\geq 0\)</span>, temos:</p>
 <ul>
-<li><span class="math inline">\(|x-c|&lt;r \iff c-r&lt;x&lt;c+r\)</span> <em>(intervalo aberto)</em><br>
-</li>
-<li><span class="math inline">\(|x-c|\le r \iff c-r\le x\le c+r\)</span> <em>(intervalo fechado)</em><br>
-</li>
-<li><span class="math inline">\(|x-c|&gt;r \iff x&lt;c-r \ \text{ou}\ x&gt;c+r\)</span> <em>(fora do intervalo)</em><br>
-</li>
-<li><span class="math inline">\(|x-c|\ge r \iff x\le c-r \ \text{ou}\ x\ge c+r\)</span></li>
+<li><p><strong>Intervalo aberto:</strong></p>
+<p><span class="math display">\[
+|x-c|&lt;r
+\iff
+c-r&lt;x&lt;c+r.
+\]</span></p></li>
+<li><p><strong>Intervalo fechado:</strong></p>
+<p><span class="math display">\[
+|x-c|\leq r
+\iff
+c-r\leq x\leq c+r.
+\]</span></p></li>
+<li><p><strong>Região exterior ao intervalo:</strong></p>
+<p><span class="math display">\[
+|x-c|&gt;r
+\iff
+x&lt;c-r\quad\text{ou}\quad x&gt;c+r.
+\]</span></p></li>
+<li><p><strong>Região exterior, incluindo as extremidades:</strong></p>
+<p><span class="math display">\[
+|x-c|\geq r
+\iff
+x\leq c-r\quad\text{ou}\quad x\geq c+r.
+\]</span></p></li>
 </ul>
 <hr>
 </section>
-<section id="micro-exemplos" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="micro-exemplos"><span class="header-section-number">5.3</span> ⚙️ Micro-exemplos</h2>
-<ul>
-<li><span class="math inline">\(|x-2|&lt;5 \iff -5&lt;x-2&lt;5 \iff -3&lt;x&lt;7\)</span>.<br>
-</li>
-<li><span class="math inline">\(|2x+1|\ge3 \iff 2x+1\le-3\ \text{ou}\ 2x+1\ge3 \iff x\le-2\ \text{ou}\ x\ge1\)</span>.</li>
-</ul>
+<section id="microexemplos" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="microexemplos"><span class="header-section-number">5.3</span> ⚙️ Microexemplos</h2>
+<p><strong>Exemplo 1</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+|x-2|&lt;5
+&amp;\iff -5&lt;x-2&lt;5\\
+&amp;\iff -3&lt;x&lt;7.
+\end{aligned}
+\]</span></p>
+<p><strong>Exemplo 2</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+|2x+1|\geq 3
+&amp;\iff 2x+1\leq -3
+   \quad\text{ou}\quad
+   2x+1\geq 3\\
+&amp;\iff 2x\leq -4
+   \quad\text{ou}\quad
+   2x\geq 2\\
+&amp;\iff x\leq -2
+   \quad\text{ou}\quad
+   x\geq 1.
+\end{aligned}
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+\boxed{S=(-\infty,-2]\cup[1,+\infty)}.
+\]</span></p>
 <hr>
 </section>
 </section>
@@ -662,16 +850,22 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li>Resolva: <span class="math inline">\(|x+1|\le4\)</span>.<br>
-</li>
-<li>Resolva: <span class="math inline">\(|2x-3|&gt;5\)</span>.<br>
-</li>
-<li>Resolva: <span class="math inline">\(|x^2-1|&lt;3\)</span>.<br>
-</li>
-<li>Verifique se <span class="math inline">\(|x+y|\le |x|+|y|\)</span> para <span class="math inline">\(x=2, y=-5\)</span>.<br>
-</li>
-</ol>
+<p><strong>1.</strong> Resolva:</p>
+<p><span class="math display">\[
+|x+1|\leq 4.
+\]</span></p>
+<p><strong>2.</strong> Resolva:</p>
+<p><span class="math display">\[
+|2x-3|&gt;5.
+\]</span></p>
+<p><strong>3.</strong> Resolva:</p>
+<p><span class="math display">\[
+|x^2-1|&lt;3.
+\]</span></p>
+<p><strong>4.</strong> Verifique se a desigualdade triangular é satisfeita para <span class="math inline">\(x=2\)</span> e <span class="math inline">\(y=-5\)</span>:</p>
+<p><span class="math display">\[
+|x+y|\leq |x|+|y|.
+\]</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
@@ -686,20 +880,74 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><span class="math inline">\(-4\le x+1\le4 \Rightarrow -5\le x\le3\)</span>.<br>
-</li>
-<li><span class="math inline">\(|2x-3|&gt;5 \Rightarrow 2x-3&gt;5\)</span> ou <span class="math inline">\(2x-3&lt;-5\)</span> ⇒ <span class="math inline">\(x&gt;4\)</span> ou <span class="math inline">\(x&lt;-1\)</span>.<br>
-</li>
-<li><span class="math inline">\(|x^2-1|&lt;3 \Rightarrow -3&lt;x^2-1&lt;3 \Rightarrow -2&lt;x^2&lt;4\)</span>. Como <span class="math inline">\(x^2\ge0\)</span>, fica <span class="math inline">\(0\le x^2&lt;4 \Rightarrow -2&lt;x&lt;2\)</span>.<br>
-</li>
-<li><span class="math inline">\(|2+(-5)|=|-3|=3\)</span> e <span class="math inline">\(|2|+|{-5}|=2+5=7\)</span>. De fato, <span class="math inline">\(3\le7\)</span>.<br>
-</li>
-</ol>
+<p><strong>1.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+|x+1|\leq 4
+&amp;\iff -4\leq x+1\leq 4\\
+&amp;\iff -5\leq x\leq 3.
+\end{aligned}
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\boxed{S=[-5,3]}.
+\]</span></p>
+<p><strong>2.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+|2x-3|&gt;5
+&amp;\iff 2x-3&lt;-5
+   \quad\text{ou}\quad
+   2x-3&gt;5\\
+&amp;\iff 2x&lt;-2
+   \quad\text{ou}\quad
+   2x&gt;8\\
+&amp;\iff x&lt;-1
+   \quad\text{ou}\quad
+   x&gt;4.
+\end{aligned}
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\boxed{S=(-\infty,-1)\cup(4,+\infty)}.
+\]</span></p>
+<p><strong>3.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+|x^2-1|&lt;3
+&amp;\iff -3&lt;x^2-1&lt;3\\
+&amp;\iff -2&lt;x^2&lt;4.
+\end{aligned}
+\]</span></p>
+<p>Como <span class="math inline">\(x^2\geq 0\)</span> para todo real <span class="math inline">\(x\)</span>, a desigualdade da esquerda é automaticamente satisfeita. Resta</p>
+<p><span class="math display">\[
+x^2&lt;4,
+\]</span></p>
+<p>ou seja,</p>
+<p><span class="math display">\[
+-2&lt;x&lt;2.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\boxed{S=(-2,2)}.
+\]</span></p>
+<p><strong>4.</strong></p>
+<p>Substituindo <span class="math inline">\(x=2\)</span> e <span class="math inline">\(y=-5\)</span>:</p>
+<p><span class="math display">\[
+|x+y|=|2-5|=|-3|=3.
+\]</span></p>
+<p>Por outro lado,</p>
+<p><span class="math display">\[
+|x|+|y|=|2|+|-5|=2+5=7.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+3\leq 7.
+\]</span></p>
+<p>A desigualdade triangular é satisfeita.</p>
 </div>
 </div>
 </div>
-<hr>
 <hr>
 <section id="quiz-valor-absoluto-e-inequações-modulares" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="quiz-valor-absoluto-e-inequações-modulares"><span class="header-section-number">6.1</span> 🧩 Quiz — Valor Absoluto e Inequações Modulares</h2>
@@ -722,7 +970,7 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 </div>
 </div>
 <div class="question">
-<p><strong>Q2.</strong> Para <span class="math inline">\(r\ge0\)</span>, a inequação <span class="math inline">\(|x-a|&lt;r\)</span> é equivalente a:</p>
+<p><strong>Q2.</strong> Para <span class="math inline">\(r\geq 0\)</span>, a inequação <span class="math inline">\(|x-a|&lt;r\)</span> é equivalente a:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -745,7 +993,7 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(|x+y|\le |x|+|y|\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(|x+y|\leq |x|+|y|\)</span>.</p><p></p>
 </div>
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(|x+y|=|x|-|y|\)</span> para todos os reais.</p><p></p>
@@ -766,7 +1014,7 @@ Assim, <span class="math inline">\(|x|=\max\{x,-x\}\)</span>. Como <span class="
 <p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html">1.4 Números Reais e Intervalos</a></p>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.18-AP-conjuntos.html">1.18-AP — Conjuntos Numéricos</a></p>
 <p>🔬 <strong>Próximo AP:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html">1.20-AP — Valor Absoluto, Distância e Vizinhanças</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">Topo</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

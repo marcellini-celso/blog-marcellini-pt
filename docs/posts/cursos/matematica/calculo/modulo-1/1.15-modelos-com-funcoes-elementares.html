@@ -28,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -267,28 +302,45 @@ window.Quarto = {
    
   <ul>
   <li><a href="#modelos-com-funções-elementares" id="toc-modelos-com-funções-elementares" class="nav-link active" data-scroll-target="#modelos-com-funções-elementares"><span class="header-section-number">1</span> 📘 Modelos com Funções Elementares</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#o-que-é-modelar" id="toc-o-que-é-modelar" class="nav-link" data-scroll-target="#o-que-é-modelar"><span class="header-section-number">1.1</span> 🛠️ O que é modelar?</a></li>
   <li><a href="#variáveis-e-parâmetros" id="toc-variáveis-e-parâmetros" class="nav-link" data-scroll-target="#variáveis-e-parâmetros"><span class="header-section-number">1.2</span> 🔣 Variáveis e parâmetros</a></li>
-  <li><a href="#modelos-lineares" id="toc-modelos-lineares" class="nav-link" data-scroll-target="#modelos-lineares"><span class="header-section-number">1.3</span> 🛠️ Modelos lineares</a></li>
-  <li><a href="#interpretação-dos-coeficientes" id="toc-interpretação-dos-coeficientes" class="nav-link" data-scroll-target="#interpretação-dos-coeficientes"><span class="header-section-number">1.4</span> 🔎 Interpretação dos coeficientes</a></li>
-  <li><a href="#modelos-quadráticos" id="toc-modelos-quadráticos" class="nav-link" data-scroll-target="#modelos-quadráticos"><span class="header-section-number">1.5</span> 🛠️ Modelos quadráticos</a></li>
-  <li><a href="#máximo-em-um-modelo-quadrático" id="toc-máximo-em-um-modelo-quadrático" class="nav-link" data-scroll-target="#máximo-em-um-modelo-quadrático"><span class="header-section-number">1.6</span> 🛠️ Máximo em um modelo quadrático</a></li>
-  <li><a href="#modelos-exponenciais" id="toc-modelos-exponenciais" class="nav-link" data-scroll-target="#modelos-exponenciais"><span class="header-section-number">1.7</span> 🛠️ Modelos exponenciais</a></li>
-  <li><a href="#decaimento-exponencial" id="toc-decaimento-exponencial" class="nav-link" data-scroll-target="#decaimento-exponencial"><span class="header-section-number">1.8</span> 📉 Decaimento exponencial</a></li>
-  <li><a href="#modelos-logarítmicos" id="toc-modelos-logarítmicos" class="nav-link" data-scroll-target="#modelos-logarítmicos"><span class="header-section-number">1.9</span> 🛠️ Modelos logarítmicos</a></li>
-  <li><a href="#modelos-racionais" id="toc-modelos-racionais" class="nav-link" data-scroll-target="#modelos-racionais"><span class="header-section-number">1.10</span> 🛠️ Modelos racionais</a></li>
-  <li><a href="#modelos-trigonométricos" id="toc-modelos-trigonométricos" class="nav-link" data-scroll-target="#modelos-trigonométricos"><span class="header-section-number">1.11</span> 🛠️ Modelos trigonométricos</a></li>
-  <li><a href="#escolhendo-o-tipo-de-função" id="toc-escolhendo-o-tipo-de-função" class="nav-link" data-scroll-target="#escolhendo-o-tipo-de-função"><span class="header-section-number">1.12</span> 🧩 Escolhendo o tipo de função</a></li>
-  <li><a href="#domínio-no-contexto" id="toc-domínio-no-contexto" class="nav-link" data-scroll-target="#domínio-no-contexto"><span class="header-section-number">1.13</span> 🧭 Domínio no contexto</a></li>
-  <li><a href="#limitações-dos-modelos" id="toc-limitações-dos-modelos" class="nav-link" data-scroll-target="#limitações-dos-modelos"><span class="header-section-number">1.14</span> ⚠️ Limitações dos modelos</a></li>
-  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.15</span> 🌉 Por que isso importa para o Cálculo?</a></li>
-  </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <li><a href="#modelos-lineares-e-afins" id="toc-modelos-lineares-e-afins" class="nav-link" data-scroll-target="#modelos-lineares-e-afins"><span class="header-section-number">1.3</span> 🛠️ Modelos lineares e afins</a>
   <ul class="collapse">
-  <li><a href="#quiz-modelos-com-funções-elementares" id="toc-quiz-modelos-com-funções-elementares" class="nav-link" data-scroll-target="#quiz-modelos-com-funções-elementares"><span class="header-section-number">3.6</span> 🧩 Quiz — Modelos com Funções Elementares</a></li>
+  <li><a href="#interpretação-dos-coeficientes" id="toc-interpretação-dos-coeficientes" class="nav-link" data-scroll-target="#interpretação-dos-coeficientes"><span class="header-section-number">1.3.1</span> 🔎 Interpretação dos coeficientes</a></li>
+  <li><a href="#visualização-modelo-afim-de-custo" id="toc-visualização-modelo-afim-de-custo" class="nav-link" data-scroll-target="#visualização-modelo-afim-de-custo"><span class="header-section-number">1.3.2</span> 📈 Visualização: modelo afim de custo</a></li>
   </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  <li><a href="#modelos-quadráticos" id="toc-modelos-quadráticos" class="nav-link" data-scroll-target="#modelos-quadráticos"><span class="header-section-number">1.4</span> 🛠️ Modelos quadráticos</a>
+  <ul class="collapse">
+  <li><a href="#máximo-em-um-modelo-quadrático" id="toc-máximo-em-um-modelo-quadrático" class="nav-link" data-scroll-target="#máximo-em-um-modelo-quadrático"><span class="header-section-number">1.4.1</span> 🛠️ Máximo em um modelo quadrático</a></li>
+  <li><a href="#visualização-trajetória-vertical" id="toc-visualização-trajetória-vertical" class="nav-link" data-scroll-target="#visualização-trajetória-vertical"><span class="header-section-number">1.4.2</span> 📈 Visualização: trajetória vertical</a></li>
+  </ul></li>
+  <li><a href="#modelos-exponenciais" id="toc-modelos-exponenciais" class="nav-link" data-scroll-target="#modelos-exponenciais"><span class="header-section-number">1.5</span> 🛠️ Modelos exponenciais</a>
+  <ul class="collapse">
+  <li><a href="#decaimento-exponencial" id="toc-decaimento-exponencial" class="nav-link" data-scroll-target="#decaimento-exponencial"><span class="header-section-number">1.5.1</span> 📉 Decaimento exponencial</a></li>
+  <li><a href="#visualização-crescimento-e-decaimento-exponencial" id="toc-visualização-crescimento-e-decaimento-exponencial" class="nav-link" data-scroll-target="#visualização-crescimento-e-decaimento-exponencial"><span class="header-section-number">1.5.2</span> 📈 Visualização: crescimento e decaimento exponencial</a></li>
+  <li><a href="#tempo-discreto-e-tempo-contínuo" id="toc-tempo-discreto-e-tempo-contínuo" class="nav-link" data-scroll-target="#tempo-discreto-e-tempo-contínuo"><span class="header-section-number">1.5.3</span> 🔎 Tempo discreto e tempo contínuo</a></li>
+  </ul></li>
+  <li><a href="#modelos-logarítmicos" id="toc-modelos-logarítmicos" class="nav-link" data-scroll-target="#modelos-logarítmicos"><span class="header-section-number">1.6</span> 🛠️ Modelos logarítmicos</a>
+  <ul class="collapse">
+  <li><a href="#visualização-modelo-logarítmico" id="toc-visualização-modelo-logarítmico" class="nav-link" data-scroll-target="#visualização-modelo-logarítmico"><span class="header-section-number">1.6.1</span> 📈 Visualização: modelo logarítmico</a></li>
+  </ul></li>
+  <li><a href="#modelos-racionais" id="toc-modelos-racionais" class="nav-link" data-scroll-target="#modelos-racionais"><span class="header-section-number">1.7</span> 🛠️ Modelos racionais</a>
+  <ul class="collapse">
+  <li><a href="#visualização-modelo-racional" id="toc-visualização-modelo-racional" class="nav-link" data-scroll-target="#visualização-modelo-racional"><span class="header-section-number">1.7.1</span> 📈 Visualização: modelo racional</a></li>
+  </ul></li>
+  <li><a href="#modelos-trigonométricos" id="toc-modelos-trigonométricos" class="nav-link" data-scroll-target="#modelos-trigonométricos"><span class="header-section-number">1.8</span> 🛠️ Modelos trigonométricos</a>
+  <ul class="collapse">
+  <li><a href="#visualização-modelo-trigonométrico" id="toc-visualização-modelo-trigonométrico" class="nav-link" data-scroll-target="#visualização-modelo-trigonométrico"><span class="header-section-number">1.8.1</span> 📈 Visualização: modelo trigonométrico</a></li>
+  </ul></li>
+  <li><a href="#escolhendo-o-tipo-de-função" id="toc-escolhendo-o-tipo-de-função" class="nav-link" data-scroll-target="#escolhendo-o-tipo-de-função"><span class="header-section-number">1.9</span> 🧩 Escolhendo o tipo de função</a></li>
+  <li><a href="#domínio-no-contexto" id="toc-domínio-no-contexto" class="nav-link" data-scroll-target="#domínio-no-contexto"><span class="header-section-number">1.10</span> 🧭 Domínio no contexto</a></li>
+  <li><a href="#limitações-dos-modelos" id="toc-limitações-dos-modelos" class="nav-link" data-scroll-target="#limitações-dos-modelos"><span class="header-section-number">1.11</span> ⚠️ Limitações dos modelos</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">3</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-modelos-com-funções-elementares" id="toc-quiz-modelos-com-funções-elementares" class="nav-link" data-scroll-target="#quiz-modelos-com-funções-elementares"><span class="header-section-number">4</span> 🧩 Quiz — Modelos com Funções Elementares</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -339,8 +391,43 @@ window.Quarto = {
 
 
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">1.14 Função Inversa</a></p>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">1.14 Função Inversa</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Como escolher uma função matemática para representar um fenômeno real? O que os parâmetros do modelo nos dizem sobre esse fenômeno?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos de Aprendizagem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos de Aprendizagem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>Compreender o processo de modelagem matemática e sua relação com situações reais.</li>
+<li>Identificar variáveis, parâmetros e unidades de medida em um modelo.</li>
+<li>Construir e interpretar modelos lineares e quadráticos.</li>
+<li>Reconhecer situações que podem ser representadas por modelos exponenciais, logarítmicos, racionais e trigonométricos.</li>
+<li>Escolher tipos de funções adequados à descrição de diferentes fenômenos.</li>
+<li>Analisar restrições de domínio, hipóteses e limitações dos modelos matemáticos.</li>
+</ul>
+</div>
+</div>
 <section id="modelos-com-funções-elementares" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 📘 Modelos com Funções Elementares</h1>
 <p>Uma das grandes razões para estudar funções é que elas nos permitem construir <strong>modelos matemáticos</strong>.</p>
@@ -354,7 +441,7 @@ window.Quarto = {
 <li>a altura de um objeto lançado pode ser função do tempo;</li>
 <li>a intensidade de uma onda pode ser função da posição.</li>
 </ul>
-<p>Neste post, vamos ver como funções elementares podem ser usadas para representar situações simples.</p>
+<p>Nesta aula, vamos ver como funções elementares podem ser usadas para representar situações simples.</p>
 <p>O objetivo não é transformar a realidade em fórmulas perfeitas. O objetivo é aprender a escolher uma função que capture o comportamento principal de um fenômeno.</p>
 <hr>
 <section id="o-que-é-modelar" class="level2" data-number="1.1">
@@ -370,8 +457,8 @@ window.Quarto = {
 <p><span class="math display">\[
 C(x)=5+3x
 \]</span></p>
-<p>pode representar uma tarifa fixa de <span class="math inline">\(5\)</span> reais mais <span class="math inline">\(3\)</span> reais por quilômetro.</p>
-<p>Esse é um modelo linear.</p>
+<p>pode representar uma tarifa fixa de R$ 5,00 mais R$ 3,00 por quilômetro.</p>
+<p>Esse é um modelo afim.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -400,27 +487,29 @@ C(x)=5+3x,
 <p>a variável independente é <span class="math inline">\(x\)</span>, a distância.</p>
 <p>A variável dependente é <span class="math inline">\(C(x)\)</span>, o custo.</p>
 <p>Os parâmetros são <span class="math inline">\(5\)</span> e <span class="math inline">\(3\)</span>.</p>
-<p>O número <span class="math inline">\(5\)</span> representa custo fixo. O número <span class="math inline">\(3\)</span> representa custo por unidade de distância.</p>
+<p>O número <span class="math inline">\(5\)</span> representa o custo fixo. O número <span class="math inline">\(3\)</span> representa o custo por unidade de distância.</p>
+<p>As unidades também são importantes. Se o custo é medido em reais e a distância em quilômetros, o coeficiente <span class="math inline">\(3\)</span> representa reais por quilômetro.</p>
 <hr>
 </section>
-<section id="modelos-lineares" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="modelos-lineares"><span class="header-section-number">1.3</span> 🛠️ Modelos lineares</h2>
-<p>Um modelo linear ou afim tem a forma</p>
+<section id="modelos-lineares-e-afins" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="modelos-lineares-e-afins"><span class="header-section-number">1.3</span> 🛠️ Modelos lineares e afins</h2>
+<p>Um modelo afim tem a forma</p>
 <p><span class="math display">\[
-f(x)=ax+b.
+f(x)=ax+b,
 \]</span></p>
-<p>Ele representa situações em que a taxa de variação é constante.</p>
+<p>em que <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span> são constantes reais.</p>
+<p>Quando <span class="math inline">\(b=0\)</span>, temos uma função linear no sentido matemático estrito. Quando <span class="math inline">\(b\neq 0\)</span>, temos uma função afim.</p>
+<p>Em aplicações, é comum utilizar a expressão modelo linear para ambos os casos.</p>
+<p>Esse modelo representa situações em que a taxa de variação é constante.</p>
 <p>Exemplo:</p>
 <p>Uma empresa cobra uma taxa fixa de R$ 20,00 mais R$ 8,00 por unidade vendida. Se <span class="math inline">\(x\)</span> é o número de unidades, o custo é</p>
 <p><span class="math display">\[
 C(x)=20+8x.
 \]</span></p>
 <p>Aqui, cada unidade a mais aumenta o custo em R$ 8,00.</p>
-<p>Essa taxa constante é a característica principal de um modelo linear.</p>
-<hr>
-</section>
-<section id="interpretação-dos-coeficientes" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="interpretação-dos-coeficientes"><span class="header-section-number">1.4</span> 🔎 Interpretação dos coeficientes</h2>
+<p>Essa taxa constante é a característica principal de um modelo afim.</p>
+<section id="interpretação-dos-coeficientes" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="interpretação-dos-coeficientes"><span class="header-section-number">1.3.1</span> 🔎 Interpretação dos coeficientes</h3>
 <p>No modelo</p>
 <p><span class="math display">\[
 f(x)=ax+b,
@@ -438,12 +527,67 @@ C(x)=20+8x,
 <p><span class="math display">\[
 C(0)=20.
 \]</span></p>
-<p>Isso significa que, mesmo com zero unidades, há um custo fixo de R$ 20,00.</p>
-<p>O coeficiente <span class="math inline">\(8\)</span> indica que cada unidade aumenta o custo em R$ 8,00.</p>
+<p>Isso significa que, mesmo com zero unidades produzidas, há um custo fixo de R$ 20,00.</p>
+<p>O coeficiente <span class="math inline">\(8\)</span> indica que cada unidade adicional aumenta o custo em R$ 8,00.</p>
+<p>Se o custo é medido em reais e a quantidade em unidades, a unidade do coeficiente <span class="math inline">\(8\)</span> é reais por unidade produzida.</p>
+</section>
+<section id="visualização-modelo-afim-de-custo" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="visualização-modelo-afim-de-custo"><span class="header-section-number">1.3.2</span> 📈 Visualização: modelo afim de custo</h3>
+<p>O gráfico representa o custo total em função da quantidade produzida.</p>
+<div id="fig-modelo-afim" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico do custo C(x)=20+8x, destacando o custo fixo e a taxa de crescimento constante.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modelo-afim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.15-modelo-afim.svg" class="img-fluid figure-img" style="width:85.0%" alt="Gráfico do custo C(x)=20+8x, destacando o custo fixo e a taxa de crescimento constante.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelo-afim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Modelo afim de custo: custo fixo e custo variável.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="635e3882" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">300</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="dv">20</span> <span class="op">+</span> <span class="dv">8</span><span class="op">*</span>x</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.plot(x, C, linewidth<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">C</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=20</span><span class="op">+</span><span class="vs">8x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">10</span>], [<span class="dv">20</span>, <span class="dv">60</span>, <span class="dv">100</span>], zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Modelo afim: custo de produção"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Quantidade produzida (unidades)"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Custo (R$)"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">110</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelo-afim.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
-<section id="modelos-quadráticos" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="modelos-quadráticos"><span class="header-section-number">1.5</span> 🛠️ Modelos quadráticos</h2>
+</section>
+<section id="modelos-quadráticos" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="modelos-quadráticos"><span class="header-section-number">1.4</span> 🛠️ Modelos quadráticos</h2>
 <p>Um modelo quadrático tem a forma</p>
 <p><span class="math display">\[
 f(x)=ax^2+bx+c,
@@ -457,13 +601,15 @@ a\neq 0.
 <p><span class="math display">\[
 h(t)=-5t^2+20t+1.
 \]</span></p>
-<p>Aqui, <span class="math inline">\(t\)</span> representa o tempo e <span class="math inline">\(h(t)\)</span> representa a altura.</p>
-<p>O termo <span class="math inline">\(-5t^2\)</span> está associado ao efeito da gravidade.</p>
+<p>Aqui:</p>
+<ul>
+<li><span class="math inline">\(t\)</span> representa o tempo, em segundos;</li>
+<li><span class="math inline">\(h(t)\)</span> representa a altura, em metros.</li>
+</ul>
+<p>O termo <span class="math inline">\(-5t^2\)</span> está associado ao efeito da gravidade, considerando uma aceleração gravitacional de módulo aproximado de <span class="math inline">\(10\,\text{m/s}^2\)</span> e desprezando a resistência do ar.</p>
 <p>O gráfico dessa função é uma parábola com concavidade voltada para baixo.</p>
-<hr>
-</section>
-<section id="máximo-em-um-modelo-quadrático" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="máximo-em-um-modelo-quadrático"><span class="header-section-number">1.6</span> 🛠️ Máximo em um modelo quadrático</h2>
+<section id="máximo-em-um-modelo-quadrático" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="máximo-em-um-modelo-quadrático"><span class="header-section-number">1.4.1</span> 🛠️ Máximo em um modelo quadrático</h3>
 <p>Em um modelo quadrático com concavidade para baixo, o vértice representa um valor máximo.</p>
 <p>Considere</p>
 <p><span class="math display">\[
@@ -497,11 +643,99 @@ t=2.
 <p><span class="math display">\[
 h(2)=-5(2)^2+20(2)+1=-20+40+1=21.
 \]</span></p>
-<p>A altura máxima é <span class="math inline">\(21\)</span>.</p>
+<p>A altura máxima é <span class="math inline">\(21\)</span> metros.</p>
+</section>
+<section id="visualização-trajetória-vertical" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="visualização-trajetória-vertical"><span class="header-section-number">1.4.2</span> 📈 Visualização: trajetória vertical</h3>
+<p>O gráfico apresenta o trecho da parábola correspondente ao movimento físico, desde o lançamento até o instante em que o objeto atinge o solo.</p>
+<div id="fig-modelo-quadratico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico da altura h(t)=-5t²+20t+1, com altura máxima de 21 metros no instante de 2 segundos.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modelo-quadratico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.15-modelo-quadratico.svg" class="img-fluid figure-img" style="width:85.0%" alt="Gráfico da altura h(t)=-5t²+20t+1, com altura máxima de 21 metros no instante de 2 segundos.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelo-quadratico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Trajetória vertical idealizada de um objeto.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="9daa3ad8" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>raiz <span class="op">=</span> (<span class="dv">20</span> <span class="op">+</span> np.sqrt(<span class="dv">420</span>)) <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, raiz, <span class="dv">300</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="op">-</span><span class="dv">5</span><span class="op">*</span>t<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">20</span><span class="op">*</span>t <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>ax.plot(t, h, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">h</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs">=-5t</span><span class="dv">^</span><span class="vs">2</span><span class="op">+</span><span class="vs">20t</span><span class="op">+</span><span class="vs">1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">2</span>], [<span class="dv">21</span>], zorder<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="st">"Altura máxima: 21 m"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">2</span>, color<span class="op">=</span><span class="st">"gray"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Modelo quadrático: movimento vertical"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Tempo (s)"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Altura (m)"</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, raiz <span class="op">+</span> <span class="fl">0.1</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">24</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelo-quadratico.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Interpretação física do modelo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Interpretação física do modelo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Embora a função quadrática esteja definida para todo número real, o movimento físico começa em <span class="math inline">\(t=0\)</span> e termina quando o objeto atinge o solo.</p>
+<p>Para determinar esse instante, resolvemos</p>
+<p><span class="math display">\[
+-5t^2+20t+1=0.
+\]</span></p>
+<p>A raiz positiva é</p>
+<p><span class="math display">\[
+t=\frac{20+\sqrt{420}}{10}\approx 4{,}05\text{ s}.
+\]</span></p>
+<p>Portanto, o intervalo de interesse físico é aproximadamente</p>
+<p><span class="math display">\[
+0\leq t\leq 4{,}05.
+\]</span></p>
+<p>O gráfico completo da parábola é matematicamente válido, mas somente esse trecho representa o movimento descrito pelo modelo.</p>
+</div>
+</div>
 <hr>
 </section>
-<section id="modelos-exponenciais" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="modelos-exponenciais"><span class="header-section-number">1.7</span> 🛠️ Modelos exponenciais</h2>
+</section>
+<section id="modelos-exponenciais" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="modelos-exponenciais"><span class="header-section-number">1.5</span> 🛠️ Modelos exponenciais</h2>
 <p>Um modelo exponencial aparece quando uma quantidade muda por um fator multiplicativo constante.</p>
 <p>A forma básica é</p>
 <p><span class="math display">\[
@@ -527,10 +761,9 @@ a&gt;1,
 <p><span class="math display">\[
 Q(t)=1000(1{,}10)^t.
 \]</span></p>
-<hr>
-</section>
-<section id="decaimento-exponencial" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="decaimento-exponencial"><span class="header-section-number">1.8</span> 📉 Decaimento exponencial</h2>
+<p>O fator <span class="math inline">\(1{,}10\)</span> significa que, a cada período, a população passa a corresponder a <span class="math inline">\(110\%\)</span> do valor anterior.</p>
+<section id="decaimento-exponencial" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="decaimento-exponencial"><span class="header-section-number">1.5.1</span> 📉 Decaimento exponencial</h3>
 <p>O decaimento exponencial aparece quando uma quantidade diminui por uma razão constante.</p>
 <p>Por exemplo, se uma substância perde metade de sua massa a cada unidade de tempo, podemos modelar por</p>
 <p><span class="math display">\[
@@ -555,16 +788,96 @@ M(1)=40,
 M(2)=20.
 \]</span></p>
 <p>A cada unidade de tempo, a quantidade é multiplicada por <span class="math inline">\(\frac{1}{2}\)</span>.</p>
+</section>
+<section id="visualização-crescimento-e-decaimento-exponencial" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="visualização-crescimento-e-decaimento-exponencial"><span class="header-section-number">1.5.2</span> 📈 Visualização: crescimento e decaimento exponencial</h3>
+<p>O gráfico compara dois comportamentos:</p>
+<ul>
+<li>crescimento de uma população por fator multiplicativo;</li>
+<li>redução da massa de uma substância por um fator constante.</li>
+</ul>
+<div id="fig-modelos-exponenciais" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico comparando Q(t)=1000 vezes 1,10 elevado a t e M(t)=80 vezes 0,5 elevado a t.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modelos-exponenciais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.15-modelos-exponenciais.svg" class="img-fluid figure-img" style="width:85.0%" alt="Gráfico comparando Q(t)=1000 vezes 1,10 elevado a t e M(t)=80 vezes 0,5 elevado a t.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelos-exponenciais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Comparação entre crescimento e decaimento exponencial.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="fde13774" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">300</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> <span class="dv">1000</span> <span class="op">*</span> (<span class="fl">1.10</span>)<span class="op">**</span>t</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> <span class="dv">80</span> <span class="op">*</span> (<span class="fl">0.5</span>)<span class="op">**</span>t</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ax.plot(t, Q, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"Crescimento: </span><span class="dv">$</span><span class="vs">Q</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs">=1000</span><span class="kw">(</span><span class="vs">1</span><span class="op">{,}</span><span class="vs">10</span><span class="kw">)</span><span class="dv">^</span><span class="vs">t</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax.plot(t, M, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"Decaimento: </span><span class="dv">$</span><span class="vs">M</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs">=80</span><span class="kw">(</span><span class="vs">0</span><span class="op">{,}</span><span class="vs">5</span><span class="kw">)</span><span class="dv">^</span><span class="vs">t</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Modelos exponenciais"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Tempo (períodos)"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Quantidade"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelos-exponenciais.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="tempo-discreto-e-tempo-contínuo" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="tempo-discreto-e-tempo-contínuo"><span class="header-section-number">1.5.3</span> 🔎 Tempo discreto e tempo contínuo</h3>
+<p>O modelo</p>
+<p><span class="math display">\[
+Q(t)=Q_0a^t
+\]</span></p>
+<p>é especialmente adequado quando <span class="math inline">\(t\)</span> representa períodos sucessivos e a quantidade é multiplicada pelo mesmo fator a cada período.</p>
+<p>Se o tempo for considerado contínuo, uma forma bastante utilizada é</p>
+<p><span class="math display">\[
+Q(t)=Q_0e^{kt},
+\]</span></p>
+<p>em que <span class="math inline">\(k\)</span> é uma constante real.</p>
+<p>Se <span class="math inline">\(k&gt;0\)</span>, temos crescimento exponencial. Se <span class="math inline">\(k&lt;0\)</span>, temos decaimento exponencial.</p>
+<p>Essa distinção será importante posteriormente, quando estudarmos derivadas e equações diferenciais.</p>
 <hr>
 </section>
-<section id="modelos-logarítmicos" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="modelos-logarítmicos"><span class="header-section-number">1.9</span> 🛠️ Modelos logarítmicos</h2>
-<p>Modelos logarítmicos aparecem quando o crescimento é rápido no início e depois desacelera.</p>
+</section>
+<section id="modelos-logarítmicos" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="modelos-logarítmicos"><span class="header-section-number">1.6</span> 🛠️ Modelos logarítmicos</h2>
+<p>Modelos logarítmicos aparecem em situações nas quais a variável dependente apresenta crescimento cada vez mais lento em relação à variável independente.</p>
 <p>Uma forma simples é</p>
 <p><span class="math display">\[
 f(x)=a\ln x+b,
 \]</span></p>
 <p>com</p>
+<p><span class="math display">\[
+a&gt;0
+\]</span></p>
+<p>e</p>
 <p><span class="math display">\[
 x&gt;0.
 \]</span></p>
@@ -574,41 +887,163 @@ x&gt;0.
 f(x)=2\ln x+1
 \]</span></p>
 <p>cresce, mas cada vez mais lentamente.</p>
-<p>O domínio é</p>
+<p>O domínio natural é</p>
 <p><span class="math display">\[
 (0,+\infty).
 \]</span></p>
+<p>É importante observar que nem todo fenômeno cujo crescimento desacelera é necessariamente logarítmico. A adequação desse modelo deve ser avaliada a partir do comportamento observado e dos dados disponíveis.</p>
+<section id="visualização-modelo-logarítmico" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="visualização-modelo-logarítmico"><span class="header-section-number">1.6.1</span> 📈 Visualização: modelo logarítmico</h3>
+<div id="fig-modelo-logaritmico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de f(x)=2 ln x+1, mostrando crescimento cada vez mais lento para x positivo.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modelo-logaritmico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.15-modelo-logaritmico.svg" class="img-fluid figure-img" style="width:85.0%" alt="Gráfico de f(x)=2 ln x+1, mostrando crescimento cada vez mais lento para x positivo.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelo-logaritmico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Comportamento crescente e desacelerado de uma função logarítmica.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="c1850c98" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.05</span>, <span class="dv">10</span>, <span class="dv">400</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.log(x) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=2</span><span class="er">\</span><span class="vs">ln</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="op">+</span><span class="vs">1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"gray"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Modelo logarítmico"</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"f(x)"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelo-logaritmico.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
-<section id="modelos-racionais" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="modelos-racionais"><span class="header-section-number">1.10</span> 🛠️ Modelos racionais</h2>
+</section>
+<section id="modelos-racionais" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="modelos-racionais"><span class="header-section-number">1.7</span> 🛠️ Modelos racionais</h2>
 <p>Modelos racionais têm a forma</p>
 <p><span class="math display">\[
 f(x)=\frac{p(x)}{q(x)},
 \]</span></p>
-<p>onde <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span> são polinômios.</p>
+<p>onde <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span> são polinômios e <span class="math inline">\(q(x)\neq 0\)</span>.</p>
 <p>Eles aparecem em situações com taxas, razões, eficiência, concentração e comportamentos com assíntotas.</p>
 <p>Por exemplo:</p>
 <p><span class="math display">\[
 f(x)=\frac{x}{x+1}.
 \]</span></p>
-<p>Essa função está definida para</p>
+<p>O domínio natural é</p>
 <p><span class="math display">\[
-x\neq -1.
+\mathbb{R}\setminus\{-1\}.
 \]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> cresce muito, temos</p>
+<p>Para valores positivos de <span class="math inline">\(x\)</span>, temos</p>
+<p><span class="math display">\[
+0\leq \frac{x}{x+1}&lt;1.
+\]</span></p>
+<p>Quando <span class="math inline">\(x\)</span> cresce muito,</p>
 <p><span class="math display">\[
 \frac{x}{x+1}\approx 1.
 \]</span></p>
-<p>Assim, o gráfico se aproxima da reta horizontal</p>
+<p>Além disso,</p>
 <p><span class="math display">\[
-y=1.
+\lim_{x\to+\infty}\frac{x}{x+1}=1.
 \]</span></p>
+<p>Portanto, a reta</p>
+<p><span class="math display">\[
+y=1
+\]</span></p>
+<p>é uma assíntota horizontal.</p>
+<p>O gráfico se aproxima dessa reta à medida que <span class="math inline">\(x\)</span> cresce, sem atingi-la para nenhum valor finito de <span class="math inline">\(x\)</span>.</p>
 <p>Esse tipo de comportamento será estudado com mais precisão no módulo de limites.</p>
+<section id="visualização-modelo-racional" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="visualização-modelo-racional"><span class="header-section-number">1.7.1</span> 📈 Visualização: modelo racional</h3>
+<div id="fig-modelo-racional" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de f(x)=x/(x+1), com assíntota vertical x=-1 e horizontal y=1.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modelo-racional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.15-modelo-racional.svg" class="img-fluid figure-img" style="width:85.0%" alt="Gráfico de f(x)=x/(x+1), com assíntota vertical x=-1 e horizontal y=1.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelo-racional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Gráfico de uma função racional com assíntotas.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="9b0d16b5" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="op">-</span><span class="fl">1.05</span>, <span class="dv">300</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">0.95</span>, <span class="dv">5</span>, <span class="dv">300</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>ax.plot(x1, x1<span class="op">/</span>(x1<span class="op">+</span><span class="dv">1</span>), linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>ax.plot(x2, x2<span class="op">/</span>(x2<span class="op">+</span><span class="dv">1</span>), linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\f</span><span class="vs">rac{x}{x</span><span class="op">+</span><span class="vs">1}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="op">-</span><span class="dv">1</span>, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="vs">r"Assíntota vertical: </span><span class="dv">$</span><span class="vs">x=-1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">"green"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="vs">r"Assíntota horizontal: </span><span class="dv">$</span><span class="vs">y=1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Modelo racional"</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"f(x)"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelo-racional.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
-<section id="modelos-trigonométricos" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="modelos-trigonométricos"><span class="header-section-number">1.11</span> 🛠️ Modelos trigonométricos</h2>
+</section>
+<section id="modelos-trigonométricos" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="modelos-trigonométricos"><span class="header-section-number">1.8</span> 🛠️ Modelos trigonométricos</h2>
 <p>Modelos trigonométricos são usados para representar fenômenos periódicos.</p>
 <p>Uma forma básica é</p>
 <p><span class="math display">\[
@@ -621,55 +1056,163 @@ f(t)=A\sin(Bt+C)+D.
 <li><span class="math inline">\(C\)</span> desloca o gráfico horizontalmente;</li>
 <li><span class="math inline">\(D\)</span> desloca o gráfico verticalmente.</li>
 </ul>
+<p>A amplitude é <span class="math inline">\(|A|\)</span> e, quando <span class="math inline">\(B\neq 0\)</span>, o período é</p>
+<p><span class="math display">\[
+P=\frac{2\pi}{|B|}.
+\]</span></p>
 <p>Por exemplo,</p>
 <p><span class="math display">\[
 T(t)=10\sin\left(\frac{2\pi}{24}t\right)+20
 \]</span></p>
-<p>pode representar uma temperatura diária oscilando em torno de <span class="math inline">\(20^\circ\)</span> com amplitude <span class="math inline">\(10^\circ\)</span> e período de <span class="math inline">\(24\)</span> horas.</p>
+<p>pode representar, de maneira idealizada, uma temperatura diária oscilando em torno de <span class="math inline">\(20^\circ\)</span>C.</p>
+<p>Nesse modelo:</p>
+<ul>
+<li>a amplitude é <span class="math inline">\(10^\circ\)</span>C;</li>
+<li>a temperatura média é <span class="math inline">\(20^\circ\)</span>C;</li>
+<li>o período é <span class="math inline">\(24\)</span> horas;</li>
+<li>a temperatura varia entre <span class="math inline">\(10^\circ\)</span>C e <span class="math inline">\(30^\circ\)</span>C.</li>
+</ul>
+<p>Como a função seno atinge seu máximo quando o argumento é <span class="math inline">\(\frac{\pi}{2}\)</span>, o modelo atinge a temperatura máxima quando</p>
+<p><span class="math display">\[
+\frac{2\pi}{24}t=\frac{\pi}{2}.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+t=6.
+\]</span></p>
+<p>Assim, o modelo prevê temperatura máxima de <span class="math inline">\(30^\circ\)</span>C às 6 horas, considerando que <span class="math inline">\(t=0\)</span> corresponde à meia-noite.</p>
+<p>A escolha da fase inicial deve ser ajustada quando desejamos representar dados reais de temperatura.</p>
+<section id="visualização-modelo-trigonométrico" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="visualização-modelo-trigonométrico"><span class="header-section-number">1.8.1</span> 📈 Visualização: modelo trigonométrico</h3>
+<div id="fig-modelo-trigonometrico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de T(t)=10 sen(2 pi t/24)+20, com amplitude de 10 graus e período de 24 horas.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modelo-trigonometrico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.15-modelo-trigonometrico.svg" class="img-fluid figure-img" style="width:85.0%" alt="Gráfico de T(t)=10 sen(2 pi t/24)+20, com amplitude de 10 graus e período de 24 horas.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelo-trigonometrico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Modelo trigonométrico de temperatura diária.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="a9694043" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">48</span>, <span class="dv">500</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">10</span><span class="op">*</span>np.sin((<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">/</span><span class="dv">24</span>)<span class="op">*</span>t) <span class="op">+</span> <span class="dv">20</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>ax.plot(t, T, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">"Temperatura"</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">20</span>, color<span class="op">=</span><span class="st">"gray"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="st">"Temperatura média"</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">30</span>, color<span class="op">=</span><span class="st">"red"</span>, linestyle<span class="op">=</span><span class="st">":"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="st">"Máximo: 30 °C"</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">10</span>, color<span class="op">=</span><span class="st">"blue"</span>, linestyle<span class="op">=</span><span class="st">":"</span>,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="st">"Mínimo: 10 °C"</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Modelo trigonométrico: temperatura diária"</span>)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Tempo (horas)"</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Temperatura (°C)"</span>)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(np.arange(<span class="dv">0</span>, <span class="dv">49</span>, <span class="dv">6</span>))</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelo-trigonometrico.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
-<section id="escolhendo-o-tipo-de-função" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="escolhendo-o-tipo-de-função"><span class="header-section-number">1.12</span> 🧩 Escolhendo o tipo de função</h2>
+</section>
+<section id="escolhendo-o-tipo-de-função" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="escolhendo-o-tipo-de-função"><span class="header-section-number">1.9</span> 🧩 Escolhendo o tipo de função</h2>
 <p>Uma parte importante da modelagem é escolher a família de funções adequada.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Comportamento observado</th>
 <th>Modelo possível</th>
+<th>Característica matemática</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Variação por soma constante</td>
-<td>Linear</td>
+<td>Linear ou afim</td>
+<td>Taxa de variação constante</td>
 </tr>
 <tr class="even">
 <td>Trajetória parabólica ou otimização simples</td>
 <td>Quadrático</td>
+<td>Variação da taxa de crescimento</td>
 </tr>
 <tr class="odd">
 <td>Crescimento por fator constante</td>
 <td>Exponencial</td>
+<td>Taxa relativa constante</td>
 </tr>
 <tr class="even">
-<td>Crescimento rápido e depois lento</td>
+<td>Crescimento cada vez mais lento</td>
 <td>Logarítmico</td>
+<td>Crescimento desacelerado</td>
 </tr>
 <tr class="odd">
-<td>Razões e assíntotas</td>
+<td>Relações entre razões e grandezas</td>
 <td>Racional</td>
+<td>Quociente de polinômios</td>
 </tr>
 <tr class="even">
 <td>Oscilações e ciclos</td>
 <td>Trigonométrico</td>
+<td>Periodicidade</td>
 </tr>
 </tbody>
 </table>
 <p>Essa escolha depende do contexto, dos dados e da pergunta que queremos responder.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Uma observação importante">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Uma observação importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A tabela apresenta possibilidades, não regras absolutas.</p>
+<p>Um mesmo fenômeno pode ser descrito por diferentes modelos, dependendo do intervalo analisado, da precisão desejada e das hipóteses adotadas.</p>
+<p>Na modelagem matemática, a escolha de uma função deve ser justificada pelo comportamento do fenômeno e, sempre que possível, pela comparação com dados reais.</p>
+</div>
+</div>
 <hr>
 </section>
-<section id="domínio-no-contexto" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="domínio-no-contexto"><span class="header-section-number">1.13</span> 🧭 Domínio no contexto</h2>
+<section id="domínio-no-contexto" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="domínio-no-contexto"><span class="header-section-number">1.10</span> 🧭 Domínio no contexto</h2>
 <p>Em modelagem, o domínio não depende apenas da fórmula. Ele também depende do significado das variáveis.</p>
 <p>Por exemplo, se</p>
 <p><span class="math display">\[
@@ -699,8 +1242,8 @@ x\geq 0.
 </div>
 <hr>
 </section>
-<section id="limitações-dos-modelos" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="limitações-dos-modelos"><span class="header-section-number">1.14</span> ⚠️ Limitações dos modelos</h2>
+<section id="limitações-dos-modelos" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="limitações-dos-modelos"><span class="header-section-number">1.11</span> ⚠️ Limitações dos modelos</h2>
 <p>Todo modelo é uma simplificação.</p>
 <p>Um modelo linear pode funcionar bem em certo intervalo, mas falhar fora dele.</p>
 <p>Um modelo exponencial pode descrever crescimento inicial, mas não considerar limitações de recursos.</p>
@@ -711,12 +1254,89 @@ x\geq 0.
 <li>em que intervalo o modelo é razoável?</li>
 <li>quais fatores foram ignorados?</li>
 <li>os resultados fazem sentido?</li>
+<li>os dados disponíveis sustentam a escolha da função?</li>
 </ul>
 <p>Modelar não é apenas calcular. É interpretar.</p>
 <hr>
-</section>
-<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.15</span> 🌉 Por que isso importa para o Cálculo?</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de modelo</th>
+<th>Característica principal</th>
+<th>Aplicação ilustrativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Linear ou afim</td>
+<td>Taxa de variação constante</td>
+<td>Custo com parcela fixa e variável</td>
+</tr>
+<tr class="even">
+<td>Quadrático</td>
+<td>Comportamento parabólico</td>
+<td>Trajetórias idealizadas</td>
+</tr>
+<tr class="odd">
+<td>Exponencial</td>
+<td>Variação multiplicativa</td>
+<td>Crescimento e decaimento</td>
+</tr>
+<tr class="even">
+<td>Logarítmico</td>
+<td>Crescimento desacelerado</td>
+<td>Fenômenos em escala logarítmica</td>
+</tr>
+<tr class="odd">
+<td>Racional</td>
+<td>Quociente de polinômios</td>
+<td>Relações entre grandezas e taxas</td>
+</tr>
+<tr class="even">
+<td>Trigonométrico</td>
+<td>Comportamento periódico</td>
+<td>Oscilações idealizadas</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo — interpretação de parâmetros</strong></p>
+<p>Considere o modelo de custo</p>
+<p><span class="math display">\[
+C(q)=C_0+cq,
+\qquad q\geq 0.
+\]</span></p>
+<p>Nesse modelo, <span class="math inline">\(C_0\)</span> representa o custo fixo, <span class="math inline">\(c\)</span> representa o custo por unidade produzida e <span class="math inline">\(q\)</span> representa a quantidade produzida.</p>
+<p>A interpretação depende das unidades e do contexto.</p>
+<p>Por exemplo, se <span class="math inline">\(q\)</span> representa unidades inteiras, o domínio contextual deve respeitar essa condição.</p>
+<p><strong>Atenção:</strong> um modelo matemático é uma representação simplificada de um fenômeno. Sua adequação depende das hipóteses adotadas, dos dados disponíveis e do intervalo em que se pretende utilizá-lo.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="🌉 Ponte para o Cálculo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🌉 Ponte para o Cálculo
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>O Cálculo nasceu de problemas de variação, movimento, área e acumulação.</p>
 <p>Modelos com funções elementares serão o ponto de partida para perguntas como:</p>
 <ul>
@@ -727,7 +1347,8 @@ x\geq 0.
 <li>como comparar crescimentos?</li>
 </ul>
 <p>Essas perguntas levarão naturalmente a limites, derivadas e integrais.</p>
-<hr>
+</div>
+</div>
 </section>
 </section>
 <section id="exercícios-propostos" class="level1" data-number="2">
@@ -746,11 +1367,9 @@ x\geq 0.
 <h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
 <p>Uma corrida de aplicativo cobra uma taxa fixa de R$ 6,00 mais R$ 2,50 por quilômetro.</p>
 <ol type="a">
-<li>Escreva uma função <span class="math inline">\(C(x)\)</span> para o custo em função da distância <span class="math inline">\(x\)</span>.<br>
-</li>
-<li>Calcule <span class="math inline">\(C(10)\)</span>.<br>
-</li>
-<li>Interprete o coeficiente de <span class="math inline">\(x\)</span>.</li>
+<li><p>Escreva uma função <span class="math inline">\(C(x)\)</span> para o custo em função da distância <span class="math inline">\(x\)</span>.</p></li>
+<li><p>Calcule <span class="math inline">\(C(10)\)</span>.</p></li>
+<li><p>Interprete o coeficiente de <span class="math inline">\(x\)</span>.</p></li>
 </ol>
 </section>
 <section id="exercício-2" class="level2" data-number="2.2">
@@ -759,65 +1378,61 @@ x\geq 0.
 <p><span class="math display">\[
 h(t)=-5t^2+30t+2.
 \]</span></p>
+<p>Considere que o tempo é medido em segundos e a altura em metros.</p>
 <ol type="a">
-<li>Qual é o tipo de função?<br>
-</li>
-<li>Em que instante ocorre a altura máxima?<br>
-</li>
-<li>Qual é a altura máxima?</li>
+<li><p>Qual é o tipo de função?</p></li>
+<li><p>Em que instante ocorre a altura máxima?</p></li>
+<li><p>Qual é a altura máxima?</p></li>
+<li><p>Determine aproximadamente o intervalo de tempo durante o qual o modelo representa o movimento até o objeto atingir o solo.</p></li>
 </ol>
 </section>
 <section id="exercício-3" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
 <p>Uma população inicial de <span class="math inline">\(500\)</span> indivíduos cresce <span class="math inline">\(20\%\)</span> por período.</p>
 <ol type="a">
-<li>Escreva um modelo exponencial para a população.<br>
-</li>
-<li>Calcule a população após <span class="math inline">\(3\)</span> períodos.</li>
+<li><p>Escreva um modelo exponencial para a população.</p></li>
+<li><p>Calcule a população após <span class="math inline">\(3\)</span> períodos.</p></li>
 </ol>
 </section>
 <section id="exercício-4" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Determine o domínio natural, no contexto indicado:</p>
+<p>Determine o domínio contextual indicado:</p>
 <ol type="a">
-<li><span class="math inline">\(C(x)=15+4x\)</span>, onde <span class="math inline">\(x\)</span> é quantidade produzida.<br>
-</li>
-<li><span class="math inline">\(A(r)=\pi r^2\)</span>, onde <span class="math inline">\(r\)</span> é o raio de um círculo.<br>
-</li>
-<li><span class="math inline">\(P(t)=1000(1{,}05)^t\)</span>, onde <span class="math inline">\(t\)</span> é tempo após o início da observação.</li>
+<li><p><span class="math inline">\(C(x)=15+4x\)</span>, onde <span class="math inline">\(x\)</span> é quantidade produzida.</p></li>
+<li><p><span class="math inline">\(A(r)=\pi r^2\)</span>, onde <span class="math inline">\(r\)</span> é o raio de um círculo.</p></li>
+<li><p><span class="math inline">\(P(t)=1000(1{,}05)^t\)</span>, onde <span class="math inline">\(t\)</span> é tempo após o início da observação.</p></li>
 </ol>
 </section>
 <section id="exercício-5" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
 <p>Associe cada situação a um tipo provável de modelo: linear, quadrático, exponencial, logarítmico, racional ou trigonométrico.</p>
 <ol type="a">
-<li>Temperatura diária variando de forma periódica.<br>
-</li>
-<li>Crescimento de uma aplicação com juros compostos.<br>
-</li>
-<li>Custo com taxa fixa mais valor por unidade.<br>
-</li>
-<li>Altura de um projétil em função do tempo.<br>
-</li>
-<li>Quantidade que se aproxima de um limite horizontal.</li>
+<li><p>Temperatura diária variando de forma periódica.</p></li>
+<li><p>Crescimento de uma aplicação com juros compostos.</p></li>
+<li><p>Custo com taxa fixa mais valor por unidade.</p></li>
+<li><p>Altura de um projétil em função do tempo.</p></li>
+<li><p>Quantidade que se aproxima de um limite horizontal.</p></li>
+<li><p>Uma substância radioativa perde uma porcentagem fixa de sua massa a cada período.</p></li>
 </ol>
 </section>
 </div>
 </div>
 <hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+</section>
+<section id="gabarito-comentado" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Clique para consultar o gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
+<span class="screen-reader-only">Importante</span>✅ Clique para consultar o gabarito
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
 <ol type="a">
@@ -862,14 +1477,40 @@ b=30.
 <p><span class="math display">\[
 t_v=-\frac{30}{2(-5)}=3.
 \]</span></p>
-<p>A altura máxima ocorre em <span class="math inline">\(t=3\)</span>.</p>
+<p>A altura máxima ocorre em <span class="math inline">\(t=3\)</span> segundos.</p>
 <ol start="3" type="a">
 <li></li>
 </ol>
 <p><span class="math display">\[
-h(3)=-5(3)^2+30(3)+2=-45+90+2=47.
+h(3)=-5(3)^2+30(3)+2.
 \]</span></p>
-<p>A altura máxima é <span class="math inline">\(47\)</span>.</p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+h(3)=-45+90+2=47.
+\]</span></p>
+<p>A altura máxima é <span class="math inline">\(47\)</span> metros.</p>
+<ol start="4" type="a">
+<li>O objeto atinge o solo quando</li>
+</ol>
+<p><span class="math display">\[
+-5t^2+30t+2=0.
+\]</span></p>
+<p>Pela fórmula de Bhaskara,</p>
+<p><span class="math display">\[
+t=\frac{-30\pm\sqrt{30^2-4(-5)(2)}}{2(-5)}.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+t=\frac{-30\pm\sqrt{940}}{-10}.
+\]</span></p>
+<p>A raiz positiva é</p>
+<p><span class="math display">\[
+t=\frac{30+\sqrt{940}}{10}\approx 6{,}07.
+\]</span></p>
+<p>Logo, o intervalo de tempo de interesse físico é aproximadamente</p>
+<p><span class="math display">\[
+0\leq t\leq 6{,}07.
+\]</span></p>
 </section>
 <section id="exercício-3-1" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
@@ -897,7 +1538,7 @@ P(3)=500(1{,}20)^3.
 <p><span class="math display">\[
 P(3)=500\cdot 1{,}728=864.
 \]</span></p>
-<p>A população após <span class="math inline">\(3\)</span> períodos é <span class="math inline">\(864\)</span> indivíduos, segundo o modelo.</p>
+<p>A população após <span class="math inline">\(3\)</span> períodos é de <span class="math inline">\(864\)</span> indivíduos, segundo o modelo.</p>
 </section>
 <section id="exercício-4-1" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
@@ -929,19 +1570,21 @@ t\geq 0.
 <ol type="a">
 <li><p>Temperatura diária variando de forma periódica: modelo trigonométrico.</p></li>
 <li><p>Crescimento com juros compostos: modelo exponencial.</p></li>
-<li><p>Custo com taxa fixa mais valor por unidade: modelo linear.</p></li>
+<li><p>Custo com taxa fixa mais valor por unidade: modelo afim.</p></li>
 <li><p>Altura de um projétil em função do tempo: modelo quadrático.</p></li>
 <li><p>Quantidade que se aproxima de um limite horizontal: modelo racional ou outro modelo com assíntota horizontal.</p></li>
+<li><p>Perda de uma porcentagem fixa da massa a cada período: modelo exponencial de decaimento.</p></li>
 </ol>
 </section>
-</section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-modelos-com-funções-elementares" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-modelos-com-funções-elementares"><span class="header-section-number">3.6</span> 🧩 Quiz — Modelos com Funções Elementares</h2>
+</section>
+<section id="quiz-modelos-com-funções-elementares" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Modelos com Funções Elementares</h1>
 <div class="question">
-<p><strong>Q1.</strong> Um modelo linear é adequado quando a situação apresenta:</p>
+<p><strong>Q1.</strong> Um modelo linear ou afim é adequado quando a situação apresenta:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -996,12 +1639,11 @@ t\geq 0.
 </div>
 <hr>
 </section>
-</section>
-<section id="navegação" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">1.14 Função Inversa</a></p>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">Topo</a></p>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">1.14 Função Inversa</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Definição formal de função, domínio, contradomínio, imagem, igualdade de funções e leitura de funções como relações especiais.">
+<meta name="description" content="Definição formal de função, domínio, contradomínio, imagem, gráficos, igualdade de funções e uma introdução às funções definidas por partes.">
 
 <title>📘 Módulo 1.10: Conceito Formal de Função – Blog do Marcellini</title>
 <style>
@@ -162,14 +162,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="📘 Módulo 1.10: Conceito Formal de Função – Blog do Marcellini">
-<meta property="og:description" content="Definição formal de função, domínio, contradomínio, imagem, igualdade de funções e leitura de funções como relações especiais.">
+<meta property="og:description" content="Definição formal de função, domínio, contradomínio, imagem, gráficos, igualdade de funções e uma introdução às funções definidas por partes.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="📘 Módulo 1.10: Conceito Formal de Função – Blog do Marcellini">
-<meta name="twitter:description" content="Definição formal de função, domínio, contradomínio, imagem, igualdade de funções e leitura de funções como relações especiais.">
+<meta name="twitter:description" content="Definição formal de função, domínio, contradomínio, imagem, gráficos, igualdade de funções e uma introdução às funções definidas por partes.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -301,8 +301,8 @@ window.Quarto = {
     <h2 id="toc-title">Neste Módulo</h2>
    
   <ul>
-  <li><a href="#conceito-formal-de-função" id="toc-conceito-formal-de-função" class="nav-link active" data-scroll-target="#conceito-formal-de-função"><span class="header-section-number">1</span> 📘 Conceito Formal de Função</a>
-  <ul class="collapse">
+  <li><a href="#conceito-formal-de-função" id="toc-conceito-formal-de-função" class="nav-link active" data-scroll-target="#conceito-formal-de-função"><span class="header-section-number">1</span> 📘 Conceito formal de função</a>
+  <ul>
   <li><a href="#a-ideia-intuitiva" id="toc-a-ideia-intuitiva" class="nav-link" data-scroll-target="#a-ideia-intuitiva"><span class="header-section-number">1.1</span> 💡 A ideia intuitiva</a></li>
   <li><a href="#definição-formal-de-função" id="toc-definição-formal-de-função" class="nav-link" data-scroll-target="#definição-formal-de-função"><span class="header-section-number">1.2</span> 📐 Definição formal de função</a></li>
   <li><a href="#domínio" id="toc-domínio" class="nav-link" data-scroll-target="#domínio"><span class="header-section-number">1.3</span> 🧭 Domínio</a></li>
@@ -313,16 +313,13 @@ window.Quarto = {
   <li><a href="#gráfico-de-uma-função" id="toc-gráfico-de-uma-função" class="nav-link" data-scroll-target="#gráfico-de-uma-função"><span class="header-section-number">1.8</span> 📊 Gráfico de uma função</a></li>
   <li><a href="#o-teste-da-reta-vertical" id="toc-o-teste-da-reta-vertical" class="nav-link" data-scroll-target="#o-teste-da-reta-vertical"><span class="header-section-number">1.9</span> 🔎 O teste da reta vertical</a></li>
   <li><a href="#igualdade-de-funções" id="toc-igualdade-de-funções" class="nav-link" data-scroll-target="#igualdade-de-funções"><span class="header-section-number">1.10</span> ⚖️ Igualdade de funções</a></li>
-  <li><a href="#uma-mesma-fórmula-pode-definir-funções-diferentes" id="toc-uma-mesma-fórmula-pode-definir-funções-diferentes" class="nav-link" data-scroll-target="#uma-mesma-fórmula-pode-definir-funções-diferentes"><span class="header-section-number">1.11</span> 🧮 Uma mesma fórmula pode definir funções diferentes</a></li>
+  <li><a href="#uma-mesma-expressão-pode-assumir-formas-diferentes" id="toc-uma-mesma-expressão-pode-assumir-formas-diferentes" class="nav-link" data-scroll-target="#uma-mesma-expressão-pode-assumir-formas-diferentes"><span class="header-section-number">1.11</span> 🧮 Uma mesma expressão pode assumir formas diferentes</a></li>
   <li><a href="#funções-reais-de-variável-real" id="toc-funções-reais-de-variável-real" class="nav-link" data-scroll-target="#funções-reais-de-variável-real"><span class="header-section-number">1.12</span> 🧩 Funções reais de variável real</a></li>
-  <li><a href="#funções-definidas-por-partes" id="toc-funções-definidas-por-partes" class="nav-link" data-scroll-target="#funções-definidas-por-partes"><span class="header-section-number">1.13</span> 🧩 Funções definidas por partes</a></li>
+  <li><a href="#uma-primeira-introdução-às-funções-definidas-por-partes" id="toc-uma-primeira-introdução-às-funções-definidas-por-partes" class="nav-link" data-scroll-target="#uma-primeira-introdução-às-funções-definidas-por-partes"><span class="header-section-number">1.13</span> 🧩 Uma primeira introdução às funções definidas por partes</a></li>
   <li><a href="#funções-e-modelagem" id="toc-funções-e-modelagem" class="nav-link" data-scroll-target="#funções-e-modelagem"><span class="header-section-number">1.14</span> 🛠️ Funções e modelagem</a></li>
-  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.15</span> 🌉 Por que isso importa para o Cálculo?</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
-  <ul class="collapse">
-  <li><a href="#quiz-conceito-formal-de-função" id="toc-quiz-conceito-formal-de-função" class="nav-link" data-scroll-target="#quiz-conceito-formal-de-função"><span class="header-section-number">3.6</span> 🧩 Quiz — Conceito Formal de Função</a></li>
-  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#quiz-conceito-formal-de-função" id="toc-quiz-conceito-formal-de-função" class="nav-link" data-scroll-target="#quiz-conceito-formal-de-função"><span class="header-section-number">3</span> 🧩 Quiz — Conceito Formal de Função</a></li>
   <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
@@ -344,7 +341,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Definição formal de função, domínio, contradomínio, imagem, igualdade de funções e leitura de funções como relações especiais.
+    Definição formal de função, domínio, contradomínio, imagem, gráficos, igualdade de funções e uma introdução às funções definidas por partes.
   </div>
 </div>
 
@@ -374,24 +371,61 @@ window.Quarto = {
 
 
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.9-trigonometria-essencial.html">1.9 Trigonometria Essencial</a></p>
+<p>🎯 <strong>Aula anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.9-trigonometria-essencial.html">1.9 Trigonometria Essencial</a></p>
+<p>🎯 <strong>Próxima aula:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">1.11 Revisão Gráfica e Algébrica</a></p>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Toda regra que associa entradas a saídas define uma função?</p>
+<p>O que precisamos especificar, além de uma fórmula, para definir uma função matematicamente?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="🎯 Objetivos de aprendizagem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🎯 Objetivos de aprendizagem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>Compreender a definição formal de função <span class="math inline">\(f:A\to B\)</span>.</li>
+<li>Distinguir domínio, contradomínio e imagem.</li>
+<li>Identificar quando uma relação entre conjuntos representa uma função.</li>
+<li>Interpretar gráficos utilizando o teste da reta vertical.</li>
+<li>Compreender as condições de igualdade entre funções.</li>
+<li>Reconhecer que uma mesma expressão algébrica pode definir funções diferentes quando os domínios são distintos.</li>
+<li>Interpretar funções definidas por partes em situações elementares.</li>
+</ul>
+</div>
+</div>
 <section id="conceito-formal-de-função" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 📘 Conceito Formal de Função</h1>
-<p>Até aqui, já usamos funções muitas vezes.</p>
-<p>Falamos de funções afins, quadráticas, polinomiais, racionais, exponenciais, logarítmicas e trigonométricas. Em vários momentos, escrevemos expressões como</p>
+<h1 data-number="1"><span class="header-section-number">1</span> 📘 Conceito formal de função</h1>
+<p>Até aqui, já utilizamos funções em diferentes contextos.</p>
+<p>Estudamos expressões como</p>
 <p><span class="math display">\[
 f(x)=x^2,
 \]</span></p>
 <p><span class="math display">\[
 g(x)=\frac{1}{x-2},
 \]</span></p>
-<p>ou</p>
+<p>e</p>
 <p><span class="math display">\[
 h(x)=\sin x.
 \]</span></p>
-<p>Mas agora precisamos dar um passo conceitual importante: entender o que é uma função <strong>formalmente</strong>.</p>
-<p>Essa formalização é necessária porque, no Cálculo, não estudaremos apenas fórmulas. Estudaremos objetos matemáticos com domínio, imagem, comportamento local, continuidade, limites, derivadas e integrais.</p>
+<p>Agora precisamos dar um passo conceitual importante: compreender o que é uma função <strong>formalmente</strong>.</p>
+<p>Essa formalização será necessária porque, no Cálculo, não estudaremos apenas fórmulas. Investigaremos objetos matemáticos caracterizados por seu domínio, contradomínio, imagem e comportamento.</p>
 <hr>
 <section id="a-ideia-intuitiva" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="a-ideia-intuitiva"><span class="header-section-number">1.1</span> 💡 A ideia intuitiva</h2>
@@ -401,15 +435,9 @@ h(x)=\sin x.
 f(x)=x^2
 \]</span></p>
 <p>associa a cada número real <span class="math inline">\(x\)</span> o número real <span class="math inline">\(x^2\)</span>.</p>
-<p>Assim:</p>
+<p>Assim,</p>
 <p><span class="math display">\[
-f(2)=4,
-\]</span></p>
-<p><span class="math display">\[
-f(-3)=9,
-\]</span></p>
-<p><span class="math display">\[
-f(0)=0.
+f(2)=4,\qquad f(-3)=9,\qquad f(0)=0.
 \]</span></p>
 <div id="fig-1-10-tabela-valores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tabela para f(x) igual a x ao quadrado, com entradas de menos três até três e saídas nove, quatro, um, zero, um, quatro, nove.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -423,43 +451,44 @@ Figura&nbsp;1: Tabela de valores de uma função quadrática.
 </div>
 <p>Podemos imaginar uma função como uma máquina:</p>
 <p><span class="math display">\[
-x \longmapsto f(x).
+x\longmapsto f(x).
 \]</span></p>
 <p>A entrada é <span class="math inline">\(x\)</span>; a saída é <span class="math inline">\(f(x)\)</span>.</p>
-<p>Mas essa imagem de máquina, embora útil, não é suficiente para a matemática formal. Precisamos dizer com clareza quais entradas são permitidas e em que conjunto vivem as saídas.</p>
+<p>Essa imagem é útil para começar, mas não é suficiente para a matemática formal. Precisamos especificar quais entradas são permitidas e em que conjunto estão as saídas.</p>
 <hr>
 </section>
 <section id="definição-formal-de-função" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="definição-formal-de-função"><span class="header-section-number">1.2</span> 📐 Definição formal de função</h2>
-<p>Uma função de um conjunto <span class="math inline">\(A\)</span> em um conjunto <span class="math inline">\(B\)</span> é uma regra que associa a cada elemento de <span class="math inline">\(A\)</span> exatamente um elemento de <span class="math inline">\(B\)</span>.</p>
+<p>Uma função de um conjunto <span class="math inline">\(A\)</span> em um conjunto <span class="math inline">\(B\)</span> é uma correspondência que associa a <strong>cada elemento de <span class="math inline">\(A\)</span> exatamente um elemento de <span class="math inline">\(B\)</span></strong>.</p>
 <p>Escrevemos:</p>
 <p><span class="math display">\[
 f:A\to B.
 \]</span></p>
-<p>O conjunto <span class="math inline">\(A\)</span> é chamado de <strong>domínio</strong> da função.</p>
-<p>O conjunto <span class="math inline">\(B\)</span> é chamado de <strong>contradomínio</strong> da função.</p>
-<p>Se <span class="math inline">\(x\in A\)</span>, então o valor associado a <span class="math inline">\(x\)</span> é denotado por</p>
-<p><span class="math display">\[
-f(x).
-\]</span></p>
-<p>A condição fundamental é:</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Definição essencial">
+<p>Nessa notação:</p>
+<ul>
+<li><span class="math inline">\(A\)</span> é o <strong>domínio</strong>;</li>
+<li><span class="math inline">\(B\)</span> é o <strong>contradomínio</strong>;</li>
+<li><span class="math inline">\(f\)</span> é a função;</li>
+<li><span class="math inline">\(f(x)\)</span> é o valor associado ao elemento <span class="math inline">\(x\in A\)</span>.</li>
+</ul>
+<p>A condição fundamental pode ser expressa assim:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Definição essencial">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Definição essencial
+<span class="screen-reader-only">Importante</span>Definição essencial
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Para cada <span class="math inline">\(x\in A\)</span>, deve existir exatamente um valor <span class="math inline">\(f(x)\in B\)</span>.</p>
+<p>Para cada <span class="math inline">\(x\in A\)</span>, existe um único elemento <span class="math inline">\(y\in B\)</span> tal que <span class="math inline">\(y=f(x)\)</span>.</p>
 </div>
 </div>
-<p>Isso significa duas coisas:</p>
+<p>Essa definição exige duas condições:</p>
 <ol type="1">
-<li>todo elemento do domínio deve ter imagem;</li>
-<li>nenhum elemento do domínio pode ter duas imagens diferentes.</li>
+<li>Todo elemento do domínio precisa estar associado a algum elemento do contradomínio.</li>
+<li>Nenhum elemento do domínio pode estar associado a dois valores diferentes.</li>
 </ol>
 <div id="fig-1-10-diagrama-funcao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Conjunto A com cinco entradas, conjunto B com quatro possíveis saídas e uma seta para cada elemento de A.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -481,97 +510,82 @@ Figura&nbsp;3: Duas relações que não são funções: imagem dupla e entrada s
 </figcaption>
 </figure>
 </div>
+<p>No primeiro diagrama de relação não funcional, uma entrada possui duas imagens. No segundo, existe uma entrada sem imagem.</p>
+<p>Ambas as situações violam a definição de função.</p>
 <hr>
 </section>
 <section id="domínio" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="domínio"><span class="header-section-number">1.3</span> 🧭 Domínio</h2>
-<p>O domínio é o conjunto de todas as entradas permitidas da função.</p>
+<p>O domínio é o conjunto de todas as entradas permitidas.</p>
 <p>Se escrevemos</p>
 <p><span class="math display">\[
 f:A\to B,
 \]</span></p>
-<p>então o domínio é</p>
+<p>o domínio é o conjunto <span class="math inline">\(A\)</span>.</p>
+<p>Por exemplo, considere</p>
 <p><span class="math display">\[
-A.
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2.
 \]</span></p>
-<p>Por exemplo, se</p>
+<p>Nesse caso, o domínio é</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R}
+D_f=\mathbb{R}.
 \]</span></p>
-<p>é dada por</p>
+<p>Qualquer número real pode ser utilizado como entrada.</p>
+<p>Considere agora</p>
 <p><span class="math display">\[
-f(x)=x^2,
+g(x)=\sqrt{x}.
 \]</span></p>
-<p>então o domínio é</p>
-<p><span class="math display">\[
-\mathbb{R}.
-\]</span></p>
-<p>Isso quer dizer que qualquer número real pode ser usado como entrada.</p>
-<p>Já para</p>
-<p><span class="math display">\[
-g(x)=\sqrt{x},
-\]</span></p>
-<p>se estamos trabalhando apenas com números reais, o domínio natural é</p>
-<p><span class="math display">\[
-[0,+\infty).
-\]</span></p>
-<p>Isso acontece porque <span class="math inline">\(\sqrt{x}\)</span> só é real quando</p>
+<p>Se trabalhamos apenas com números reais, precisamos exigir</p>
 <p><span class="math display">\[
 x\geq 0.
 \]</span></p>
+<p>Portanto, o domínio real natural dessa expressão é</p>
+<p><span class="math display">\[
+D_g=[0,+\infty).
+\]</span></p>
+<p>O domínio faz parte da definição da função: não basta conhecer a expressão algébrica.</p>
 <hr>
 </section>
 <section id="contradomínio" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="contradomínio"><span class="header-section-number">1.4</span> 🎯 Contradomínio</h2>
-<p>O contradomínio é o conjunto onde declaramos que os valores da função vivem.</p>
-<p>Se escrevemos</p>
+<p>O contradomínio é o conjunto no qual declaramos que os valores da função estão contidos.</p>
+<p>Na notação</p>
 <p><span class="math display">\[
 f:A\to B,
 \]</span></p>
-<p>então <span class="math inline">\(B\)</span> é o contradomínio.</p>
+<p>o conjunto <span class="math inline">\(B\)</span> é o contradomínio.</p>
 <p>Por exemplo,</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R}
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2.
 \]</span></p>
-<p>com</p>
-<p><span class="math display">\[
-f(x)=x^2
-\]</span></p>
-<p>tem contradomínio <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>Isso significa que os valores da função são considerados dentro do conjunto dos reais.</p>
-<p>Mas observe: embora o contradomínio seja <span class="math inline">\(\mathbb{R}\)</span>, a função <span class="math inline">\(f(x)=x^2\)</span> nunca assume valores negativos.</p>
-<p>Assim, contradomínio e imagem não são necessariamente a mesma coisa.</p>
+<p>O contradomínio é <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Entretanto, a função nunca assume valores negativos. Isso nos leva ao próximo conceito.</p>
 <hr>
 </section>
 <section id="imagem" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="imagem"><span class="header-section-number">1.5</span> 🖼️ Imagem</h2>
-<p>A imagem de uma função é o conjunto de todos os valores que ela realmente assume.</p>
+<p>A imagem é o conjunto de todos os valores que a função efetivamente assume.</p>
 <p>Para</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R}
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2,
 \]</span></p>
-<p>dada por</p>
-<p><span class="math display">\[
-f(x)=x^2,
-\]</span></p>
-<p>a imagem é</p>
-<p><span class="math display">\[
-[0,+\infty).
-\]</span></p>
-<p>De fato, <span class="math inline">\(x^2\)</span> nunca é negativo, e todo número real não negativo pode ser escrito como quadrado de algum real.</p>
-<p>Portanto:</p>
+<p>temos</p>
 <p><span class="math display">\[
 \operatorname{Im}(f)=[0,+\infty).
 \]</span></p>
-<p>A imagem sempre é subconjunto do contradomínio:</p>
+<p>De fato, <span class="math inline">\(x^2\)</span> nunca é negativo, e todo número real não negativo é quadrado de algum número real.</p>
+<p>Em geral,</p>
 <p><span class="math display">\[
 \operatorname{Im}(f)\subseteq B.
 \]</span></p>
+<p>A imagem está contida no contradomínio, mas não precisa coincidir com ele.</p>
 <hr>
 </section>
 <section id="domínio-contradomínio-e-imagem-comparação" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="domínio-contradomínio-e-imagem-comparação"><span class="header-section-number">1.6</span> 🎯 Domínio, contradomínio e imagem: comparação</h2>
-<p>É importante distinguir os três conceitos.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -582,38 +596,42 @@ f(x)=x^2,
 <tbody>
 <tr class="odd">
 <td>Domínio</td>
-<td>conjunto das entradas permitidas</td>
+<td>Conjunto das entradas permitidas.</td>
 </tr>
 <tr class="even">
 <td>Contradomínio</td>
-<td>conjunto declarado para as saídas</td>
+<td>Conjunto estabelecido para as saídas.</td>
 </tr>
 <tr class="odd">
 <td>Imagem</td>
-<td>conjunto dos valores realmente atingidos</td>
+<td>Conjunto dos valores efetivamente assumidos pela função.</td>
 </tr>
 </tbody>
 </table>
-<p>Por exemplo, considere</p>
+<p>Considere novamente</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R}
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2.
 \]</span></p>
-<p>dada por</p>
-<p><span class="math display">\[
-f(x)=x^2.
-\]</span></p>
-<p>Então:</p>
+<p>Temos:</p>
 <p><span class="math display">\[
 D_f=\mathbb{R},
 \]</span></p>
 <p><span class="math display">\[
-\text{contradomínio}=\mathbb{R},
+\text{Contradomínio}=\mathbb{R},
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
 \operatorname{Im}(f)=[0,+\infty).
 \]</span></p>
-<p>Para visualizar a distinção entre esses conjuntos, o diagrama seguinte usa <strong>um exemplo finito</strong>: <span class="math inline">\(A=\{-2,-1,0,1,2\}\)</span>, <span class="math inline">\(B=\{0,1,4,9\}\)</span> e <span class="math inline">\(f(x)=x^2\)</span>. Nesse caso, <span class="math inline">\(9\)</span> pertence ao contradomínio, mas não à imagem.</p>
+<p>Para visualizar a diferença entre esses conjuntos, considere o exemplo finito</p>
+<p><span class="math display">\[
+A=\{-2,-1,0,1,2\},
+\]</span></p>
+<p><span class="math display">\[
+B=\{0,1,4,9\},
+\]</span></p>
+<p>com a regra <span class="math inline">\(f(x)=x^2\)</span>.</p>
 <div id="fig-1-10-dominio-contradominio-imagem" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Domínio A com cinco números, contradomínio B com quatro números e imagem destacada igual a zero, um e quatro, excluindo nove.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1-10-dominio-contradominio-imagem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -624,50 +642,48 @@ Figura&nbsp;4: Um exemplo finito distingue domínio, contradomínio e imagem.
 </figcaption>
 </figure>
 </div>
+<p>Nesse exemplo,</p>
+<p><span class="math display">\[
+\operatorname{Im}(f)=\{0,1,4\}.
+\]</span></p>
+<p>Observe que <span class="math inline">\(9\in B\)</span>, mas <span class="math inline">\(9\notin\operatorname{Im}(f)\)</span>.</p>
+<p>O contradomínio contém um elemento que não é atingido pela função. É justamente essa possibilidade que distingue contradomínio de imagem.</p>
 <hr>
 </section>
 <section id="funções-como-relações-especiais" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="funções-como-relações-especiais"><span class="header-section-number">1.7</span> 🧩 Funções como relações especiais</h2>
-<p>Uma forma mais formal de entender funções é vê-las como relações.</p>
-<p>Uma relação de <span class="math inline">\(A\)</span> em <span class="math inline">\(B\)</span> é um subconjunto do produto cartesiano</p>
+<p>Uma relação de um conjunto <span class="math inline">\(A\)</span> em um conjunto <span class="math inline">\(B\)</span> é um subconjunto do produto cartesiano</p>
 <p><span class="math display">\[
 A\times B.
 \]</span></p>
-<p>Ou seja, é um conjunto de pares ordenados</p>
+<p>Seus elementos são pares ordenados</p>
 <p><span class="math display">\[
 (x,y),
 \]</span></p>
-<p>com <span class="math inline">\(x\in A\)</span> e <span class="math inline">\(y\in B\)</span>.</p>
-<p>Uma função é uma relação especial em que cada elemento <span class="math inline">\(x\in A\)</span> aparece em exatamente um par ordenado.</p>
-<p>Por exemplo, a função</p>
+<p>em que <span class="math inline">\(x\in A\)</span> e <span class="math inline">\(y\in B\)</span>.</p>
+<p>Uma função é uma relação especial: cada elemento <span class="math inline">\(x\in A\)</span> aparece como primeira coordenada de exatamente um par ordenado.</p>
+<p>Por exemplo, a função <span class="math inline">\(f(x)=x^2\)</span>, com domínio real, pode ser representada pelo conjunto</p>
 <p><span class="math display">\[
-f(x)=x^2
+G_f=\{(x,x^2)\mid x\in\mathbb{R}\}.
 \]</span></p>
-<p>pode ser vista como o conjunto de pares</p>
-<p><span class="math display">\[
-\{(x,x^2)\mid x\in\mathbb{R}\}.
-\]</span></p>
-<p>Essa visão será importante mais adiante quando pensarmos em gráficos.</p>
+<p>Essa representação será importante para compreender os gráficos de funções.</p>
 <hr>
 </section>
 <section id="gráfico-de-uma-função" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="gráfico-de-uma-função"><span class="header-section-number">1.8</span> 📊 Gráfico de uma função</h2>
-<p>O gráfico de uma função real de variável real é o conjunto de pontos</p>
+<p>O gráfico de uma função real de variável real é o conjunto dos pontos</p>
 <p><span class="math display">\[
 (x,f(x))
 \]</span></p>
 <p>no plano cartesiano.</p>
-<p>Formalmente, se</p>
+<p>Se</p>
 <p><span class="math display">\[
 f:A\to\mathbb{R},
+\qquad A\subseteq\mathbb{R},
 \]</span></p>
-<p>com</p>
+<p>então seu gráfico é</p>
 <p><span class="math display">\[
-A\subseteq\mathbb{R},
-\]</span></p>
-<p>então o gráfico de <span class="math inline">\(f\)</span> é</p>
-<p><span class="math display">\[
-G_f=\{(x,f(x))\in\mathbb{R}^2\mid x\in A\}.
+G_f=\{(x,f(x))\mid x\in A\}.
 \]</span></p>
 <p>Por exemplo, o gráfico de</p>
 <p><span class="math display">\[
@@ -684,44 +700,50 @@ G_f=\{(x,x^2)\mid x\in\mathbb{R}\}.
 <img src="images/1.10-grafico-parabola.svg" class="img-fluid figure-img" style="width:90.0%" alt="Parábola voltada para cima no plano cartesiano, com pontos marcados em x igual a menos dois, menos um, zero, um e dois.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-grafico-parabola-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;5: O gráfico de <span class="math inline">\(f(x)=x^2\)</span> representa os pares ordenados <span class="math inline">\((x,f(x))\)</span>.
+Figura&nbsp;5: O gráfico de f(x)=x² representa os pares ordenados (x,f(x)).
 </figcaption>
 </figure>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-note callout-titled" title="🐍 Código Python da ilustração">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Clique para ver o código
+<span class="screen-reader-only">Nota</span>🐍 Código Python da ilustração
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>O código abaixo gera a figura SVG na pasta <code>images/</code>. Execute-o no diretório <code>modulo-1</code> com <code>numpy</code> e <code>matplotlib</code> instalados.</p>
+<p>O código utiliza <strong>NumPy</strong> e <strong>Matplotlib</strong> para reproduzir a parábola.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">"font.family"</span>: <span class="st">"DejaVu Sans"</span>, <span class="st">"svg.fonttype"</span>: <span class="st">"path"</span>})</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">3.1</span>, <span class="fl">3.1</span>, <span class="dv">700</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.2</span>))</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x<span class="op">**</span><span class="dv">2</span>, lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#098899"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> xx <span class="kw">in</span> (<span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>):</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    ax.scatter(xx, xx<span class="op">**</span><span class="dv">2</span>, s<span class="op">=</span><span class="dv">40</span>, color<span class="op">=</span><span class="st">"#172F49"</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">3.2</span>, <span class="fl">3.2</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.7</span>, <span class="dv">10</span>), xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.22</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper center"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Gráfico de uma função: cada x determina um único y"</span>, pad<span class="op">=</span><span class="dv">16</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span><span class="st">"#172F49"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-grafico-parabola.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">3.1</span>, <span class="fl">3.1</span>, <span class="dv">700</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.2</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x<span class="op">**</span><span class="dv">2</span>, lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#098899"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> xx <span class="kw">in</span> (<span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>):</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    ax.scatter(xx, xx<span class="op">**</span><span class="dv">2</span>, s<span class="op">=</span><span class="dv">40</span>, color<span class="op">=</span><span class="st">"#172F49"</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">3.2</span>, <span class="fl">3.2</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.7</span>, <span class="dv">10</span>), xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.22</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper center"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Gráfico de uma função: cada x determina um único y"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>             pad<span class="op">=</span><span class="dv">16</span>, fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span><span class="st">"#172F49"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-grafico-parabola.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -729,9 +751,9 @@ Figura&nbsp;5: O gráfico de <span class="math inline">\(f(x)=x^2\)</span> repre
 </section>
 <section id="o-teste-da-reta-vertical" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="o-teste-da-reta-vertical"><span class="header-section-number">1.9</span> 🔎 O teste da reta vertical</h2>
-<p>Nem todo conjunto de pontos no plano representa o gráfico de uma função.</p>
-<p>Para ser gráfico de uma função, cada valor de <span class="math inline">\(x\)</span> deve corresponder a exatamente um valor de <span class="math inline">\(y\)</span>.</p>
-<p>Geometricamente, isso leva ao teste da reta vertical:</p>
+<p>Nem todo conjunto de pontos do plano cartesiano representa o gráfico de uma função de <span class="math inline">\(x\)</span>.</p>
+<p>Para que isso aconteça, cada valor de <span class="math inline">\(x\)</span> deve corresponder a exatamente um valor de <span class="math inline">\(y\)</span>.</p>
+<p>Geometricamente, essa condição conduz ao teste da reta vertical.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Teste da reta vertical">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -742,10 +764,10 @@ Figura&nbsp;5: O gráfico de <span class="math inline">\(f(x)=x^2\)</span> repre
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Um gráfico representa uma função de <span class="math inline">\(x\)</span> se toda reta vertical intercepta o gráfico em no máximo um ponto.</p>
+<p>Um gráfico representa uma função de <span class="math inline">\(x\)</span> se toda reta vertical o intercepta em, no máximo, um ponto.</p>
 </div>
 </div>
-<p>Por exemplo, a parábola</p>
+<p>A parábola</p>
 <p><span class="math display">\[
 y=x^2
 \]</span></p>
@@ -754,30 +776,29 @@ y=x^2
 <p><span class="math display">\[
 x^2+y^2=1
 \]</span></p>
-<p>não passa, pois uma mesma reta vertical pode cortar a circunferência em dois pontos.</p>
+<p>não passa, pois uma mesma reta vertical pode interceptá-la em dois pontos.</p>
 <div id="fig-1-10-relacao-circunferencia" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Circunferência unitária cortada por reta vertical x igual a um meio em dois pontos.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1-10-relacao-circunferencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/1.10-relacao-circunferencia.svg" class="img-fluid figure-img" style="width:90.0%" alt="Circunferência unitária cortada por reta vertical x igual a um meio em dois pontos.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-relacao-circunferencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;6: Na circunferência, a reta <span class="math inline">\(x=1/2\)</span> encontra dois pontos distintos.
+Figura&nbsp;6: Na circunferência, a reta x=1/2 encontra dois pontos distintos.
 </figcaption>
 </figure>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-note callout-titled" title="🐍 Código Python da ilustração">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Clique para ver o código
+<span class="screen-reader-only">Nota</span>🐍 Código Python da ilustração
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>O código abaixo gera a figura SVG na pasta <code>images/</code>. Execute-o no diretório <code>modulo-1</code> com <code>numpy</code> e <code>matplotlib</code> instalados.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
@@ -785,27 +806,31 @@ Figura&nbsp;6: Na circunferência, a reta <span class="math inline">\(x=1/2\)</s
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">800</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.sqrt(<span class="dv">1</span><span class="op">-</span>c<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">8.2</span>, <span class="fl">6.1</span>))</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>ax.plot(np.cos(a), np.sin(a), lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#4471B2"</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2</span><span class="op">+</span><span class="vs">y</span><span class="dv">^</span><span class="vs">2=1</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>ax.axvline(c, color<span class="op">=</span><span class="st">"#C84E4C"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x=1/2</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>ax.scatter([c, c], [b, <span class="op">-</span>b], color<span class="op">=</span><span class="st">"#C84E4C"</span>, s<span class="op">=</span><span class="dv">70</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1/2,</span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{3}</span><span class="vs">/2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (c, b),</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">12</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1/2,-</span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{3}</span><span class="vs">/2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (c, <span class="op">-</span>b),</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">13</span>, <span class="op">-</span><span class="dv">19</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.25</span>, <span class="fl">1.65</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>), xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper left"</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Circunferência: duas saídas para o mesmo x"</span>, pad<span class="op">=</span><span class="dv">16</span>,</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span><span class="st">"#172F49"</span>)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-relacao-circunferencia.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">8.2</span>, <span class="fl">6.1</span>))</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>ax.plot(np.cos(a), np.sin(a), lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#4471B2"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2</span><span class="op">+</span><span class="vs">y</span><span class="dv">^</span><span class="vs">2=1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>ax.axvline(c, color<span class="op">=</span><span class="st">"#C84E4C"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x=1/2</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax.scatter([c, c], [b, <span class="op">-</span>b], color<span class="op">=</span><span class="st">"#C84E4C"</span>, s<span class="op">=</span><span class="dv">70</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1/2,</span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{3}</span><span class="vs">/2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (c, b),</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">12</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1/2,-</span><span class="dv">\s</span><span class="vs">qrt</span><span class="op">{3}</span><span class="vs">/2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (c, <span class="op">-</span>b),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">13</span>, <span class="op">-</span><span class="dv">19</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.25</span>, <span class="fl">1.65</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>), xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper left"</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Circunferência: duas saídas para o mesmo x"</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>             pad<span class="op">=</span><span class="dv">16</span>, fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span><span class="st">"#172F49"</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-relacao-circunferencia.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -819,48 +844,53 @@ Figura&nbsp;7: Comparação do teste da reta vertical: parábola e circunferênc
 </figcaption>
 </figure>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-note callout-titled" title="🐍 Código Python da ilustração">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Clique para ver o código
+<span class="screen-reader-only">Nota</span>🐍 Código Python da ilustração
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>O código abaixo gera a figura SVG na pasta <code>images/</code>. Execute-o no diretório <code>modulo-1</code> com <code>numpy</code> e <code>matplotlib</code> instalados.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">11.6</span>, <span class="fl">4.7</span>))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.65</span>, <span class="fl">1.65</span>, <span class="dv">500</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x, x<span class="op">**</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">"#098899"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#E28C32"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].scatter([<span class="fl">0.5</span>], [<span class="fl">0.25</span>], color<span class="op">=</span><span class="st">"#21846C"</span>, s<span class="op">=</span><span class="dv">65</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.8</span>, <span class="fl">1.8</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">3.0</span>),</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"É função: um ponto"</span>, xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">600</span>)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(np.cos(t), np.sin(t), color<span class="op">=</span><span class="st">"#4471B2"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#E28C32"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].scatter([<span class="fl">0.5</span>, <span class="fl">0.5</span>], [q, <span class="op">-</span>q], color<span class="op">=</span><span class="st">"#C84E4C"</span>, s<span class="op">=</span><span class="dv">65</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.3</span>, <span class="fl">1.3</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.3</span>, <span class="fl">1.3</span>),</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"Não é função: dois pontos"</span>, xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    ax.axhline(<span class="dv">0</span>, lw<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span><span class="st">"#66788A"</span>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    ax.title.set_color(<span class="st">"#172F49"</span>)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">"Teste da reta vertical (x = 1/2)"</span>,</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span><span class="st">"#172F49"</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-teste-reta-vertical.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.65</span>, <span class="fl">1.65</span>, <span class="dv">500</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x, x<span class="op">**</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">"#098899"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#E28C32"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].scatter([<span class="fl">0.5</span>], [<span class="fl">0.25</span>], color<span class="op">=</span><span class="st">"#21846C"</span>, s<span class="op">=</span><span class="dv">65</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.8</span>, <span class="fl">1.8</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.3</span>, <span class="fl">3.0</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"É função: um ponto"</span>, xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">600</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(np.cos(t), np.sin(t), color<span class="op">=</span><span class="st">"#4471B2"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axvline(<span class="fl">0.5</span>, color<span class="op">=</span><span class="st">"#E28C32"</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.sqrt(<span class="dv">3</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].scatter([<span class="fl">0.5</span>, <span class="fl">0.5</span>], [q, <span class="op">-</span>q], color<span class="op">=</span><span class="st">"#C84E4C"</span>, s<span class="op">=</span><span class="dv">65</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.3</span>, <span class="fl">1.3</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.3</span>, <span class="fl">1.3</span>),</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            title<span class="op">=</span><span class="st">"Não é função: dois pontos"</span>, xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    ax.axhline(<span class="dv">0</span>, lw<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span><span class="st">"#66788A"</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    ax.title.set_color(<span class="st">"#172F49"</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">"Teste da reta vertical (x = 1/2)"</span>,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">14</span>, color<span class="op">=</span><span class="st">"#172F49"</span>, weight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-teste-reta-vertical.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -868,68 +898,66 @@ Figura&nbsp;7: Comparação do teste da reta vertical: parábola e circunferênc
 </section>
 <section id="igualdade-de-funções" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="igualdade-de-funções"><span class="header-section-number">1.10</span> ⚖️ Igualdade de funções</h2>
-<p>Duas funções são iguais quando têm o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.</p>
-<p>Por exemplo, considere</p>
+<p>Neste curso, consideraremos que uma função é especificada por seu domínio, contradomínio e regra de associação.</p>
+<p>Dessa forma, duas funções são iguais quando:</p>
+<ol type="1">
+<li>possuem o mesmo domínio;</li>
+<li>possuem o mesmo contradomínio;</li>
+<li>associam o mesmo valor a cada elemento do domínio.</li>
+</ol>
+<p>Considere:</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R}
-\]</span></p>
-<p>dada por</p>
-<p><span class="math display">\[
-f(x)=x^2
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2,
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-g:[0,+\infty)\to\mathbb{R}
+g:[0,+\infty)\to\mathbb{R},
+\qquad g(x)=x^2.
 \]</span></p>
-<p>dada por</p>
-<p><span class="math display">\[
-g(x)=x^2.
-\]</span></p>
-<p>Embora as expressões sejam iguais, as funções não são iguais, pois os domínios são diferentes.</p>
-<p>Isso é muito importante no Cálculo. Muitas propriedades dependem do domínio considerado.</p>
+<p>Embora as expressões algébricas sejam iguais, as funções não são iguais, pois seus domínios são diferentes.</p>
+<p>Por exemplo, <span class="math inline">\(f(-2)=4\)</span>, enquanto <span class="math inline">\(g(-2)\)</span> não está definido, pois <span class="math inline">\(-2\)</span> não pertence ao domínio de <span class="math inline">\(g\)</span>.</p>
+<p>Isso é importante no Cálculo: uma expressão algébrica, isoladamente, não determina todos os aspectos de uma função.</p>
 <hr>
 </section>
-<section id="uma-mesma-fórmula-pode-definir-funções-diferentes" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="uma-mesma-fórmula-pode-definir-funções-diferentes"><span class="header-section-number">1.11</span> 🧮 Uma mesma fórmula pode definir funções diferentes</h2>
-<p>A expressão</p>
+<section id="uma-mesma-expressão-pode-assumir-formas-diferentes" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="uma-mesma-expressão-pode-assumir-formas-diferentes"><span class="header-section-number">1.11</span> 🧮 Uma mesma expressão pode assumir formas diferentes</h2>
+<p>Considere</p>
 <p><span class="math display">\[
-f(x)=\sqrt{x^2}
+f(x)=\sqrt{x^2}.
 \]</span></p>
-<p>pode ser simplificada como</p>
+<p>Para todo número real <span class="math inline">\(x\)</span>,</p>
 <p><span class="math display">\[
-f(x)=|x|.
+\sqrt{x^2}=|x|.
 \]</span></p>
-<p>Mas se restringirmos o domínio a</p>
+<p>Portanto,</p>
 <p><span class="math display">\[
-[0,+\infty),
+f(x)=
+\begin{cases}
+x, &amp; x\geq 0,\\
+-x, &amp; x&lt;0.
+\end{cases}
 \]</span></p>
-<p>então</p>
+<p>Se restringirmos o domínio a <span class="math inline">\([0,+\infty)\)</span>, teremos</p>
 <p><span class="math display">\[
 \sqrt{x^2}=x.
 \]</span></p>
-<p>Por outro lado, se restringirmos o domínio a</p>
-<p><span class="math display">\[
-(-\infty,0],
-\]</span></p>
-<p>então</p>
+<p>Se restringirmos o domínio a <span class="math inline">\((-\infty,0]\)</span>, teremos</p>
 <p><span class="math display">\[
 \sqrt{x^2}=-x.
 \]</span></p>
-<p>Isso mostra que a fórmula sozinha não conta toda a história. O domínio faz parte da definição da função.</p>
+<p>A expressão e o domínio precisam ser considerados em conjunto.</p>
 <hr>
 </section>
 <section id="funções-reais-de-variável-real" class="level2" data-number="1.12">
 <h2 data-number="1.12" class="anchored" data-anchor-id="funções-reais-de-variável-real"><span class="header-section-number">1.12</span> 🧩 Funções reais de variável real</h2>
 <p>No Cálculo de uma variável, estudamos principalmente funções reais de variável real.</p>
-<p>Isso significa que trabalhamos com funções</p>
+<p>São funções da forma</p>
 <p><span class="math display">\[
 f:A\to\mathbb{R},
+\qquad A\subseteq\mathbb{R}.
 \]</span></p>
-<p>em que</p>
-<p><span class="math display">\[
-A\subseteq\mathbb{R}.
-\]</span></p>
-<p>A entrada é um número real e a saída também é um número real.</p>
+<p>A entrada é um número real, e a saída também é um número real.</p>
 <p>Exemplos:</p>
 <p><span class="math display">\[
 f(x)=x^2,
@@ -943,13 +971,13 @@ h(x)=\ln x,
 <p><span class="math display">\[
 p(x)=\sin x.
 \]</span></p>
-<p>Essas funções podem ter domínios diferentes, mas todas associam números reais a números reais.</p>
+<p>Essas funções possuem domínios diferentes, determinados pelas respectivas regras e condições de definição.</p>
 <hr>
 </section>
-<section id="funções-definidas-por-partes" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="funções-definidas-por-partes"><span class="header-section-number">1.13</span> 🧩 Funções definidas por partes</h2>
-<p>Algumas funções são definidas por regras diferentes em partes diferentes do domínio.</p>
-<p>Por exemplo:</p>
+<section id="uma-primeira-introdução-às-funções-definidas-por-partes" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="uma-primeira-introdução-às-funções-definidas-por-partes"><span class="header-section-number">1.13</span> 🧩 Uma primeira introdução às funções definidas por partes</h2>
+<p>Algumas funções são definidas por regras diferentes em regiões distintas do domínio.</p>
+<p>Por exemplo,</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
@@ -957,15 +985,88 @@ x^2, &amp; x&lt;0,\\
 x+1, &amp; x\geq 0.
 \end{cases}
 \]</span></p>
-<p>Para calcular <span class="math inline">\(f(-2)\)</span>, usamos a primeira regra:</p>
+<p>Para calcular <span class="math inline">\(f(-2)\)</span>, usamos a primeira regra, pois <span class="math inline">\(-2&lt;0\)</span>:</p>
 <p><span class="math display">\[
 f(-2)=(-2)^2=4.
 \]</span></p>
-<p>Para calcular <span class="math inline">\(f(3)\)</span>, usamos a segunda regra:</p>
+<p>Para calcular <span class="math inline">\(f(3)\)</span>, usamos a segunda regra, pois <span class="math inline">\(3\geq 0\)</span>:</p>
 <p><span class="math display">\[
 f(3)=3+1=4.
 \]</span></p>
-<p>Funções definidas por partes serão importantes no estudo de limites laterais e continuidade.</p>
+<p>Observe que o valor <span class="math inline">\(x=0\)</span> pertence à segunda condição. Portanto,</p>
+<p><span class="math display">\[
+f(0)=0+1=1.
+\]</span></p>
+<div id="fig-1-10-funcoes-por-partes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico da função definida por partes. A parábola y igual a x ao quadrado aparece para x menor que zero, com círculo aberto na origem. A reta y igual a x mais um aparece para x maior ou igual a zero, com ponto fechado em zero, um.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-10-funcoes-por-partes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.10-funcoes-por-partes.svg" class="img-fluid figure-img" style="width:90.0%" alt="Gráfico da função definida por partes. A parábola y igual a x ao quadrado aparece para x menor que zero, com círculo aberto na origem. A reta y igual a x mais um aparece para x maior ou igual a zero, com ponto fechado em zero, um.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-10-funcoes-por-partes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: Gráfico de uma função definida por partes: parábola para x menor que zero e reta para x maior ou igual a zero. O círculo aberto está em (0,0), e o ponto fechado está em (0,1).
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="🐍 Código Python da ilustração">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🐍 Código Python da ilustração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"font.family"</span>: <span class="st">"DejaVu Sans"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"svg.fonttype"</span>: <span class="st">"path"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>x_left <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">500</span>, endpoint<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>y_left <span class="op">=</span> x_left<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>x_right <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">500</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>y_right <span class="op">=</span> x_right <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.2</span>))</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>ax.plot(x_left, y_left, lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#098899"</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2,</span><span class="er">\</span><span class="vs">quad x&lt;0</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>ax.plot(x_right, y_right, lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"#4471B2"</span>,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="op">+</span><span class="vs">1,</span><span class="er">\</span><span class="vs">quad x</span><span class="er">\</span><span class="vs">geq 0</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">0</span>], [<span class="dv">0</span>], s<span class="op">=</span><span class="dv">85</span>, facecolors<span class="op">=</span><span class="st">"white"</span>,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>           edgecolors<span class="op">=</span><span class="st">"#098899"</span>, linewidths<span class="op">=</span><span class="fl">2.2</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">0</span>], [<span class="dv">1</span>], s<span class="op">=</span><span class="dv">65</span>, color<span class="op">=</span><span class="st">"#C84E4C"</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">0,0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (<span class="dv">0</span>, <span class="dv">0</span>), xytext<span class="op">=</span>(<span class="dv">10</span>, <span class="op">-</span><span class="dv">20</span>),</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>            textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">0,1</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (<span class="dv">0</span>, <span class="dv">1</span>), xytext<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>),</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>            textcoords<span class="op">=</span><span class="st">"offset points"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#66788A"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">3.2</span>, <span class="fl">3.2</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.7</span>, <span class="dv">10</span>), xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.22</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>ax.legend(frameon<span class="op">=</span><span class="va">False</span>, loc<span class="op">=</span><span class="st">"upper left"</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Função definida por partes"</span>, pad<span class="op">=</span><span class="dv">16</span>,</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">13</span>, color<span class="op">=</span><span class="st">"#172F49"</span>)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.10-funcoes-por-partes.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>O exemplo mostra que uma única função pode utilizar expressões diferentes em regiões distintas do domínio.</p>
+<p>Por enquanto, nosso objetivo é saber identificar a regra correta e calcular os valores da função. O estudo detalhado dos pontos de troca, dos limites laterais e da continuidade será desenvolvido no <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">Módulo 1.22-AP — Funções por Partes</a>.</p>
 <hr>
 </section>
 <section id="funções-e-modelagem" class="level2" data-number="1.14">
@@ -979,26 +1080,87 @@ f(3)=3+1=4.
 <li>a área pode ser função do raio;</li>
 <li>a população pode ser função do tempo.</li>
 </ul>
-<p>Nesses casos, o domínio não é apenas uma questão algébrica. Ele também depende do contexto.</p>
-<p>Por exemplo, se <span class="math inline">\(t\)</span> representa tempo medido após o início de um experimento, normalmente consideramos</p>
+<p>Nesses casos, o domínio também depende do contexto.</p>
+<p>Se <span class="math inline">\(t\)</span> representa o tempo transcorrido após o início de um experimento, por exemplo, normalmente consideramos</p>
 <p><span class="math display">\[
 t\geq 0.
 \]</span></p>
-<p>Mesmo que a fórmula faça sentido para valores negativos, o modelo físico pode não fazer.</p>
+<p>Mesmo que uma fórmula esteja definida para valores negativos, o modelo pode não ter significado físico nesses valores.</p>
 <hr>
-</section>
-<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.15</span> 🌉 Por que isso importa para o Cálculo?</h2>
-<p>Limites, derivadas e integrais dependem de funções.</p>
-<p>Antes de perguntar</p>
-<p><span class="math display">\[
-\lim_{x\to a}f(x),
-\]</span></p>
-<p>precisamos saber o que é <span class="math inline">\(f\)</span>, onde ela está definida e como ela se comporta perto de <span class="math inline">\(a\)</span>.</p>
-<p>Antes de derivar uma função, precisamos saber em quais pontos ela existe.</p>
-<p>Antes de integrar uma função, precisamos entender em que intervalo ela está sendo considerada.</p>
-<p>Por isso, o conceito formal de função não é apenas uma formalidade. Ele é a base sobre a qual o Cálculo será construído.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>Síntese matemática</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Função <span class="math inline">\(f:A\to B\)</span></td>
+<td>A cada <span class="math inline">\(x\in A\)</span> corresponde exatamente um <span class="math inline">\(f(x)\in B\)</span>.</td>
+</tr>
+<tr class="even">
+<td>Domínio</td>
+<td>Conjunto <span class="math inline">\(A\)</span> das entradas admissíveis.</td>
+</tr>
+<tr class="odd">
+<td>Contradomínio</td>
+<td>Conjunto <span class="math inline">\(B\)</span> declarado para as saídas.</td>
+</tr>
+<tr class="even">
+<td>Imagem</td>
+<td><span class="math inline">\(f(A)=\{f(x):x\in A\}\subseteq B\)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Gráfico</td>
+<td>Conjunto dos pares <span class="math inline">\((x,f(x))\)</span>, com <span class="math inline">\(x\in A\)</span>.</td>
+</tr>
+<tr class="even">
+<td>Teste da reta vertical</td>
+<td>Uma reta vertical não pode interceptar o gráfico em mais de um ponto.</td>
+</tr>
+<tr class="odd">
+<td>Igualdade de funções</td>
+<td>Exige mesmo domínio, mesmo contradomínio e mesmos valores associados.</td>
+</tr>
+<tr class="even">
+<td>Função por partes</td>
+<td>Diferentes expressões podem definir uma única função, desde que cada entrada tenha exatamente uma saída.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="🌉 Ponte para o Cálculo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>🌉 Ponte para o Cálculo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A definição formal de função será essencial para o estudo dos limites, das derivadas e das integrais.</p>
+<p>No Cálculo, não basta conhecer uma expressão algébrica. Precisamos compreender o domínio da função, os valores que ela assume e seu comportamento nas proximidades de cada ponto.</p>
+<p>Nas próximas aulas, essa compreensão será ampliada progressivamente.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="exercícios-propostos" class="level1" data-number="2">
@@ -1015,34 +1177,26 @@ t\geq 0.
 <div class="callout-body-container callout-body">
 <section id="exercício-1" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
-<p>Para cada função, determine o domínio real natural:</p>
+<p>Determine o domínio real natural de cada expressão:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=x^2+1\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\sqrt{x-4}\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=\dfrac{1}{x+2}\)</span><br>
-</li>
-<li><span class="math inline">\(p(x)=\ln(x-1)\)</span></li>
+<li><p><span class="math inline">\(f(x)=x^2+1\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=\sqrt{x-4}\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=\dfrac{1}{x+2}\)</span></p></li>
+<li><p><span class="math inline">\(p(x)=\ln(x-1)\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-2" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
 <p>Considere</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R}
-\]</span></p>
-<p>dada por</p>
-<p><span class="math display">\[
-f(x)=x^2.
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2.
 \]</span></p>
 <p>Determine:</p>
 <ol type="a">
-<li>o domínio;<br>
-</li>
-<li>o contradomínio;<br>
-</li>
-<li>a imagem.</li>
+<li><p>o domínio;</p></li>
+<li><p>o contradomínio;</p></li>
+<li><p>a imagem.</p></li>
 </ol>
 </section>
 <section id="exercício-3" class="level2" data-number="2.3">
@@ -1051,11 +1205,11 @@ f(x)=x^2.
 <p><span class="math display">\[
 x^2+y^2=1
 \]</span></p>
-<p>não é gráfico de uma função <span class="math inline">\(y=f(x)\)</span> em todo o intervalo <span class="math inline">\([-1,1]\)</span>.</p>
+<p>não é o gráfico de uma função <span class="math inline">\(y=f(x)\)</span> em todo o intervalo <span class="math inline">\([-1,1]\)</span>.</p>
 </section>
 <section id="exercício-4" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Considere a função</p>
+<p>Considere</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
@@ -1065,150 +1219,117 @@ x^2, &amp; x\geq 1.
 \]</span></p>
 <p>Calcule:</p>
 <ol type="a">
-<li><span class="math inline">\(f(0)\)</span><br>
-</li>
-<li><span class="math inline">\(f(1)\)</span><br>
-</li>
-<li><span class="math inline">\(f(3)\)</span></li>
+<li><p><span class="math inline">\(f(0)\)</span>;</p></li>
+<li><p><span class="math inline">\(f(1)\)</span>;</p></li>
+<li><p><span class="math inline">\(f(3)\)</span>.</p></li>
 </ol>
 </section>
 <section id="exercício-5" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
-<p>As funções abaixo são iguais?</p>
+<p>As funções abaixo são iguais? Justifique.</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R},\qquad f(x)=x^2
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2,
 \]</span></p>
-<p>e</p>
 <p><span class="math display">\[
-g:[0,+\infty)\to\mathbb{R},\qquad g(x)=x^2.
+g:[0,+\infty)\to\mathbb{R},
+\qquad g(x)=x^2.
 \]</span></p>
-<p>Justifique.</p>
 </section>
 </div>
 </div>
 <hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito comentado">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
+<span class="screen-reader-only">Importante</span>✅ Gabarito comentado
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
-<section id="exercício-1-1" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
-<ol type="a">
-<li>Para <span class="math inline">\(f(x)=x^2+1\)</span>, não há restrição real. Logo,</li>
-</ol>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="exercício-1-1" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">2.6</span> 🧪 Exercício 1</h2>
+<p><strong>a)</strong> Para <span class="math inline">\(f(x)=x^2+1\)</span>, não há restrição real. Logo,</p>
 <p><span class="math display">\[
 D_f=\mathbb{R}.
 \]</span></p>
-<ol start="2" type="a">
-<li>Para <span class="math inline">\(g(x)=\sqrt{x-4}\)</span>, precisamos de</li>
-</ol>
+<p><strong>b)</strong> Para <span class="math inline">\(g(x)=\sqrt{x-4}\)</span>, precisamos de</p>
 <p><span class="math display">\[
 x-4\geq 0.
 \]</span></p>
 <p>Assim,</p>
 <p><span class="math display">\[
-x\geq 4.
-\]</span></p>
-<p>Logo,</p>
-<p><span class="math display">\[
 D_g=[4,+\infty).
 \]</span></p>
-<ol start="3" type="a">
-<li>Para <span class="math inline">\(h(x)=\dfrac{1}{x+2}\)</span>, precisamos de</li>
-</ol>
+<p><strong>c)</strong> Para <span class="math inline">\(h(x)=\dfrac{1}{x+2}\)</span>, o denominador deve ser diferente de zero:</p>
 <p><span class="math display">\[
 x+2\neq 0.
 \]</span></p>
-<p>Assim,</p>
+<p>Portanto,</p>
 <p><span class="math display">\[
-x\neq -2.
+D_h=\mathbb{R}\setminus\{-2\}.
 \]</span></p>
-<p>Logo,</p>
-<p><span class="math display">\[
-D_h=(-\infty,-2)\cup(-2,+\infty).
-\]</span></p>
-<ol start="4" type="a">
-<li>Para <span class="math inline">\(p(x)=\ln(x-1)\)</span>, precisamos de</li>
-</ol>
+<p><strong>d)</strong> Para <span class="math inline">\(p(x)=\ln(x-1)\)</span>, o argumento do logaritmo deve ser positivo:</p>
 <p><span class="math display">\[
 x-1&gt;0.
-\]</span></p>
-<p>Assim,</p>
-<p><span class="math display">\[
-x&gt;1.
 \]</span></p>
 <p>Logo,</p>
 <p><span class="math display">\[
 D_p=(1,+\infty).
 \]</span></p>
 </section>
-<section id="exercício-2-1" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
-<p>A função é</p>
+<section id="exercício-2-1" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">2.7</span> 🧪 Exercício 2</h2>
+<p>Para</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R}
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2,
 \]</span></p>
-<p>dada por</p>
-<p><span class="math display">\[
-f(x)=x^2.
-\]</span></p>
+<p>temos:</p>
 <ol type="a">
-<li>O domínio é</li>
+<li>Domínio:</li>
 </ol>
 <p><span class="math display">\[
-\mathbb{R}.
+D_f=\mathbb{R}.
 \]</span></p>
 <ol start="2" type="a">
-<li>O contradomínio é</li>
+<li>Contradomínio:</li>
 </ol>
 <p><span class="math display">\[
-\mathbb{R}.
+B=\mathbb{R}.
 \]</span></p>
 <ol start="3" type="a">
-<li>A imagem é</li>
+<li>Imagem:</li>
 </ol>
 <p><span class="math display">\[
-[0,+\infty).
+\operatorname{Im}(f)=[0,+\infty).
 \]</span></p>
-<p>Isso ocorre porque <span class="math inline">\(x^2\geq 0\)</span> para todo <span class="math inline">\(x\in\mathbb{R}\)</span>, e todo número real não negativo é quadrado de algum real.</p>
+<p>Isso ocorre porque <span class="math inline">\(x^2\geq 0\)</span> para todo real <span class="math inline">\(x\)</span>, e todo número não negativo é quadrado de algum número real.</p>
 </section>
-<section id="exercício-3-1" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
+<section id="exercício-3-1" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">2.8</span> 🧪 Exercício 3</h2>
 <p>A circunferência</p>
 <p><span class="math display">\[
 x^2+y^2=1
 \]</span></p>
-<p>não é gráfico de uma função <span class="math inline">\(y=f(x)\)</span> em todo <span class="math inline">\([-1,1]\)</span>, porque alguns valores de <span class="math inline">\(x\)</span> correspondem a dois valores diferentes de <span class="math inline">\(y\)</span>.</p>
-<p>Por exemplo, se</p>
+<p>não representa o gráfico de uma função <span class="math inline">\(y=f(x)\)</span> em todo o intervalo <span class="math inline">\([-1,1]\)</span> porque alguns valores de <span class="math inline">\(x\)</span> correspondem a dois valores de <span class="math inline">\(y\)</span>.</p>
+<p>Por exemplo, para <span class="math inline">\(x=0\)</span>:</p>
 <p><span class="math display">\[
-x=0,
+y^2=1.
 \]</span></p>
-<p>então</p>
+<p>Logo,</p>
 <p><span class="math display">\[
-y^2=1,
+y=1\quad\text{ou}\quad y=-1.
 \]</span></p>
-<p>logo</p>
-<p><span class="math display">\[
-y=1
-\]</span></p>
-<p>ou</p>
-<p><span class="math display">\[
-y=-1.
-\]</span></p>
-<p>Assim, a mesma entrada <span class="math inline">\(x=0\)</span> teria duas saídas diferentes. Isso viola a definição de função.</p>
+<p>A mesma entrada teria duas saídas diferentes, contrariando a definição de função.</p>
 </section>
-<section id="exercício-4-1" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<p>A função é definida por partes:</p>
+<section id="exercício-4-1" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">2.9</span> 🧪 Exercício 4</h2>
+<p>A função é</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
@@ -1216,44 +1337,39 @@ f(x)=
 x^2, &amp; x\geq 1.
 \end{cases}
 \]</span></p>
-<ol type="a">
-<li>Como <span class="math inline">\(0&lt;1\)</span>, usamos <span class="math inline">\(f(x)=2x\)</span>:</li>
-</ol>
+<p><strong>a)</strong> Como <span class="math inline">\(0&lt;1\)</span>, usamos a primeira regra:</p>
 <p><span class="math display">\[
-f(0)=2\cdot 0=0.
+f(0)=2\cdot0=0.
 \]</span></p>
-<ol start="2" type="a">
-<li>Como <span class="math inline">\(1\geq 1\)</span>, usamos <span class="math inline">\(f(x)=x^2\)</span>:</li>
-</ol>
+<p><strong>b)</strong> Como <span class="math inline">\(1\geq1\)</span>, usamos a segunda regra:</p>
 <p><span class="math display">\[
 f(1)=1^2=1.
 \]</span></p>
-<ol start="3" type="a">
-<li>Como <span class="math inline">\(3\geq 1\)</span>, usamos <span class="math inline">\(f(x)=x^2\)</span>:</li>
-</ol>
+<p><strong>c)</strong> Como <span class="math inline">\(3\geq1\)</span>, usamos a segunda regra:</p>
 <p><span class="math display">\[
 f(3)=3^2=9.
 \]</span></p>
 </section>
-<section id="exercício-5-1" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
-<p>Não. As expressões são iguais, mas as funções não são iguais porque os domínios são diferentes.</p>
-<p>A função <span class="math inline">\(f\)</span> tem domínio</p>
+<section id="exercício-5-1" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">2.10</span> 🧪 Exercício 5</h2>
+<p>As funções não são iguais.</p>
+<p>Embora possuam a mesma expressão algébrica e o mesmo contradomínio, seus domínios são diferentes:</p>
 <p><span class="math display">\[
-\mathbb{R},
+D_f=\mathbb{R},
 \]</span></p>
-<p>enquanto a função <span class="math inline">\(g\)</span> tem domínio</p>
+<p>enquanto</p>
 <p><span class="math display">\[
-[0,+\infty).
+D_g=[0,+\infty).
 \]</span></p>
-<p>Para duas funções serem iguais, elas precisam ter o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.</p>
+<p>Para serem iguais, as funções precisam ter o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.</p>
 </section>
-</section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-conceito-formal-de-função" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-conceito-formal-de-função"><span class="header-section-number">3.6</span> 🧩 Quiz — Conceito Formal de Função</h2>
+</section>
+<section id="quiz-conceito-formal-de-função" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 🧩 Quiz — Conceito Formal de Função</h1>
 <div class="question">
 <p><strong>Q1.</strong> Uma função <span class="math inline">\(f:A\to B\)</span> associa:</p>
 <div class="choices">
@@ -1319,20 +1435,19 @@ f(3)=3^2=9.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Estes aprofundamentos são opcionais. Você pode explorá-los agora ou seguir as aulas principais e voltar quando quiser.</p>
+<p>O aprofundamento é opcional. Você pode explorá-lo agora ou seguir a sequência principal e retornar depois.</p>
 <ul>
 <li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html">1.21-AP — Domínio de Funções: Guia Completo</a> — Restrições de domínio em raízes, frações, logaritmos e composições.</li>
-<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">1.22-AP — Funções por Partes</a> — Leitura de funções por partes, pontos de troca e preparação para limites laterais.</li>
+<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">1.22-AP — Funções por Partes</a> — Leitura detalhada de funções por partes, pontos de troca, limites laterais e continuidade.</li>
 </ul>
 </div>
 </div>
 </section>
-</section>
 <section id="navegação" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.9-trigonometria-essencial.html">1.9 Trigonometria Essencial</a></p>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">1.11 Revisão Gráfica e Algébrica</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">Topo</a></p>
+<p>🎯 <strong>Aula anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.9-trigonometria-essencial.html">1.9 Trigonometria Essencial</a></p>
+<p>🎯 <strong>Próxima aula:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">1.11 Revisão Gráfica e Algébrica</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

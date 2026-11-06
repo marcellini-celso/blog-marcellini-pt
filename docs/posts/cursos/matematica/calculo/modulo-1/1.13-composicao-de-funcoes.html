@@ -89,6 +89,10 @@ ul.task-list li input[type="checkbox"] {
   }
 </script>
 
+<meta name="mermaid-theme" content="default">
+<script src="../../../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
 <link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
@@ -267,7 +271,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#composição-de-funções" id="toc-composição-de-funções" class="nav-link active" data-scroll-target="#composição-de-funções"><span class="header-section-number">1</span> 📘 Composição de Funções</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#a-ideia-de-composição" id="toc-a-ideia-de-composição" class="nav-link" data-scroll-target="#a-ideia-de-composição"><span class="header-section-number">1.1</span> 💡 A ideia de composição</a></li>
   <li><a href="#exemplo-básico" id="toc-exemplo-básico" class="nav-link" data-scroll-target="#exemplo-básico"><span class="header-section-number">1.2</span> ✅ Exemplo básico</a></li>
   <li><a href="#a-ordem-da-composição-importa" id="toc-a-ordem-da-composição-importa" class="nav-link" data-scroll-target="#a-ordem-da-composição-importa"><span class="header-section-number">1.3</span> 🔢 A ordem da composição importa</a></li>
@@ -277,15 +281,15 @@ window.Quarto = {
   <li><a href="#exemplo-com-logaritmo" id="toc-exemplo-com-logaritmo" class="nav-link" data-scroll-target="#exemplo-com-logaritmo"><span class="header-section-number">1.7</span> ✅ Exemplo com logaritmo</a></li>
   <li><a href="#exemplo-com-função-racional" id="toc-exemplo-com-função-racional" class="nav-link" data-scroll-target="#exemplo-com-função-racional"><span class="header-section-number">1.8</span> ✅ Exemplo com função racional</a></li>
   <li><a href="#decompor-uma-função-composta" id="toc-decompor-uma-função-composta" class="nav-link" data-scroll-target="#decompor-uma-função-composta"><span class="header-section-number">1.9</span> 🧩 Decompor uma função composta</a></li>
-  <li><a href="#composição-e-transformações-gráficas" id="toc-composição-e-transformações-gráficas" class="nav-link" data-scroll-target="#composição-e-transformações-gráficas"><span class="header-section-number">1.10</span> 🔗 Composição e transformações gráficas</a></li>
-  <li><a href="#composição-em-modelos" id="toc-composição-em-modelos" class="nav-link" data-scroll-target="#composição-em-modelos"><span class="header-section-number">1.11</span> 🔗 Composição em modelos</a></li>
-  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.12</span> 🌉 Por que isso importa para o Cálculo?</a></li>
+  <li><a href="#associatividade-da-composição" id="toc-associatividade-da-composição" class="nav-link" data-scroll-target="#associatividade-da-composição"><span class="header-section-number">1.10</span> 🔁 Associatividade da composição</a></li>
+  <li><a href="#função-identidade-e-composição" id="toc-função-identidade-e-composição" class="nav-link" data-scroll-target="#função-identidade-e-composição"><span class="header-section-number">1.11</span> 🎯 Função identidade e composição</a></li>
+  <li><a href="#composição-e-transformações-gráficas" id="toc-composição-e-transformações-gráficas" class="nav-link" data-scroll-target="#composição-e-transformações-gráficas"><span class="header-section-number">1.12</span> 🔗 Composição e transformações gráficas</a></li>
+  <li><a href="#composição-em-modelos" id="toc-composição-em-modelos" class="nav-link" data-scroll-target="#composição-em-modelos"><span class="header-section-number">1.13</span> 🔗 Composição em modelos</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
-  <ul class="collapse">
-  <li><a href="#quiz-composição-de-funções" id="toc-quiz-composição-de-funções" class="nav-link" data-scroll-target="#quiz-composição-de-funções"><span class="header-section-number">3.6</span> 🧩 Quiz — Composição de Funções</a></li>
-  </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">3</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-composição-de-funções" id="toc-quiz-composição-de-funções" class="nav-link" data-scroll-target="#quiz-composição-de-funções"><span class="header-section-number">4</span> 🧩 Quiz — Composição de Funções</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -336,8 +340,44 @@ window.Quarto = {
 
 
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.12-transformacoes-graficas.html">1.12 Transformações Gráficas</a></p>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.12-transformacoes-graficas.html">1.12 Transformações Gráficas</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">1.14 Função Inversa</a></p>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se uma função transforma uma entrada em uma saída, o que acontece quando utilizamos essa saída como entrada de outra função? A ordem dessas operações importa?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos de Aprendizagem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos de Aprendizagem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>Definir e calcular a composição de funções.</li>
+<li>Interpretar a ordem das operações e reconhecer que a composição, em geral, não é comutativa.</li>
+<li>Determinar o domínio de funções compostas, considerando as restrições de cada etapa.</li>
+<li>Compor funções elementares, incluindo funções polinomiais, racionais, exponenciais, logarítmicas e radicais.</li>
+<li>Decompor expressões em composições de funções mais simples.</li>
+<li>Reconhecer as propriedades de associatividade e identidade da composição.</li>
+<li>Relacionar a composição às transformações gráficas, à modelagem matemática e ao estudo posterior do Cálculo.</li>
+</ul>
+</div>
+</div>
 <section id="composição-de-funções" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 📘 Composição de Funções</h1>
 <p>Até agora, estudamos várias famílias de funções e também vimos como transformar gráficos a partir de funções conhecidas.</p>
@@ -405,6 +445,24 @@ f\circ g
 <p>Em <span class="math inline">\((f\circ g)(x)=f(g(x))\)</span>, a função que está mais perto de <span class="math inline">\(x\)</span> é aplicada primeiro.</p>
 </div>
 </div>
+<p><strong>Ilustração — O caminho percorrido pela entrada</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    X["Entrada: x"] --&gt; G["Aplicar g"]
+    G --&gt; GX["Resultado: g(x)"]
+    GX --&gt; F["Aplicar f"]
+    F --&gt; FGX["Resultado final: f(g(x))"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A composição pode ser entendida como uma sequência de etapas: a entrada passa primeiro por <span class="math inline">\(g\)</span> e, em seguida, o resultado passa por <span class="math inline">\(f\)</span>.</p>
 <hr>
 </section>
 <section id="exemplo-básico" class="level2" data-number="1.2">
@@ -500,6 +558,43 @@ g(x)=x+3,
 (g\circ f)(1)=1^2+3=4.
 \]</span></p>
 <p>Logo, as duas composições não são iguais.</p>
+<p><strong>Ilustração — Comparando as duas ordens</strong></p>
+<div class="cell" data-fig-width="5.5" data-fig-height="2.7" data-fig-responsive="false" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"theme": "default", "flowchart": {"nodeSpacing": 16, "rankSpacing": 18, "diagramPadding": 4, "minNodeWidth": 82}}}%%
+flowchart LR
+    subgraph A["Primeiro g, depois f"]
+        direction TB
+        X1["x = 1"] --&gt; G1["g(1) = 4"] --&gt; F1["f(4) = 16"]
+    end
+
+    subgraph B["Primeiro f, depois g"]
+        direction TB
+        X2["x = 1"] --&gt; F2["f(1) = 1"] --&gt; G2["g(1) = 4"]
+    end
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A ilustração mostra que a mesma entrada pode produzir resultados diferentes quando mudamos a ordem de aplicação das funções.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Atenção">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Atenção
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A composição não é, em geral, comutativa. Isso não significa que <span class="math inline">\(f\circ g\)</span> e <span class="math inline">\(g\circ f\)</span> sejam sempre diferentes, mas que não podemos trocar a ordem das funções sem verificar o resultado.</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="composição-com-funções-elementares" class="level2" data-number="1.4">
@@ -541,7 +636,32 @@ f(u)=\ln u.
 <p><span class="math display">\[
 p(x)=f(g(x))=\ln(3x-2).
 \]</span></p>
+<p>Para que essa expressão esteja definida nos reais, precisamos de</p>
+<p><span class="math display">\[
+3x-2&gt;0,
+\]</span></p>
+<p>isto é,</p>
+<p><span class="math display">\[
+x&gt;\frac{2}{3}.
+\]</span></p>
 <p>Essa forma de enxergar funções será essencial quando estudarmos a <strong>regra da cadeia</strong> em derivadas.</p>
+<p><strong>Ilustração — Uma função construída em duas etapas</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    X["Entrada: x"] --&gt; G["Elevar ao quadrado e somar 1"]
+    G --&gt; GX["x² + 1"]
+    GX --&gt; F["Extrair a raiz quadrada"]
+    F --&gt; H["√(x² + 1)"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="domínio-da-função-composta" class="level2" data-number="1.5">
@@ -564,6 +684,25 @@ x\in D_g
 <p><span class="math display">\[
 g(x)\in D_f.
 \]</span></p>
+<p><strong>Ilustração — Verificando o domínio em duas etapas</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["Escolher x"] --&gt; B{"x pertence ao domínio de g?"}
+    B -- "Não" --&gt; X["A composição não está definida"]
+    B -- "Sim" --&gt; C["Calcular g(x)"]
+    C --&gt; D{"g(x) pertence ao domínio de f?"}
+    D -- "Não" --&gt; X
+    D -- "Sim" --&gt; E["Calcular f(g(x))"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-warning callout-titled" title="Cuidado com o domínio">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -734,8 +873,109 @@ h=f\circ g.
 <p>Essa leitura será indispensável para derivar funções compostas.</p>
 <hr>
 </section>
-<section id="composição-e-transformações-gráficas" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="composição-e-transformações-gráficas"><span class="header-section-number">1.10</span> 🔗 Composição e transformações gráficas</h2>
+<section id="associatividade-da-composição" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="associatividade-da-composição"><span class="header-section-number">1.10</span> 🔁 Associatividade da composição</h2>
+<p>A composição de funções possui a propriedade da <strong>associatividade</strong>.</p>
+<p>Quando todas as composições estão bem definidas, temos:</p>
+<p><span class="math display">\[
+h\circ(g\circ f)=(h\circ g)\circ f.
+\]</span></p>
+<p>Isso significa que podemos mudar o agrupamento das funções sem alterar a ordem em que elas são aplicadas.</p>
+<p>Considere três funções:</p>
+<p><span class="math display">\[
+f(x)=x+1,
+\]</span></p>
+<p><span class="math display">\[
+g(x)=2x,
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+h(x)=x^2.
+\]</span></p>
+<p>Aplicando primeiro <span class="math inline">\(f\)</span>, depois <span class="math inline">\(g\)</span> e, por último, <span class="math inline">\(h\)</span>, obtemos:</p>
+<p><span class="math display">\[
+h(g(f(x)))=[2(x+1)]^2.
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+h(g(f(x)))=4(x+1)^2.
+\]</span></p>
+<p>O resultado é o mesmo independentemente de agruparmos a composição como <span class="math inline">\(h\circ(g\circ f)\)</span> ou como <span class="math inline">\((h\circ g)\circ f\)</span>.</p>
+<p><strong>Ilustração — Três funções em sequência</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    X["Entrada: x"] --&gt; F["Aplicar f"]
+    F --&gt; G["Aplicar g"]
+    G --&gt; H["Aplicar h"]
+    H --&gt; Y["Resultado final"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Não confunda">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Não confunda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A composição é associativa, mas, em geral, não é comutativa.</p>
+<ul>
+<li><strong>Associatividade:</strong> podemos mudar o agrupamento das funções.</li>
+<li><strong>Comutatividade:</strong> trocar a ordem das funções.</li>
+</ul>
+<p>A primeira propriedade vale para composições bem definidas; a segunda não vale em geral.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="função-identidade-e-composição" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="função-identidade-e-composição"><span class="header-section-number">1.11</span> 🎯 Função identidade e composição</h2>
+<p>A <strong>função identidade</strong> é aquela que devolve exatamente o valor que recebe.</p>
+<p>Sua expressão é:</p>
+<p><span class="math display">\[
+I(x)=x.
+\]</span></p>
+<p>Para uma função <span class="math inline">\(f:A\to B\)</span>, podemos considerar duas funções identidade:</p>
+<ul>
+<li><span class="math inline">\(I_A:A\to A\)</span>, identidade no conjunto de partida;</li>
+<li><span class="math inline">\(I_B:B\to B\)</span>, identidade no conjunto de chegada.</li>
+</ul>
+<p>A composição com a identidade adequada preserva a função:</p>
+<p><span class="math display">\[
+f\circ I_A=f
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+I_B\circ f=f.
+\]</span></p>
+<p>Isso acontece porque a identidade não modifica o valor recebido.</p>
+<p><strong>Exemplo:</strong> considere</p>
+<p><span class="math display">\[
+f(x)=x^2+3.
+\]</span></p>
+<p>Como <span class="math inline">\(I(x)=x\)</span>, temos:</p>
+<p><span class="math display">\[
+(f\circ I)(x)=f(I(x))=f(x)=x^2+3.
+\]</span></p>
+<p>Também:</p>
+<p><span class="math display">\[
+(I\circ f)(x)=I(f(x))=f(x)=x^2+3.
+\]</span></p>
+<p>Em ambos os casos, o resultado é a própria função <span class="math inline">\(f\)</span>.</p>
+<hr>
+</section>
+<section id="composição-e-transformações-gráficas" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="composição-e-transformações-gráficas"><span class="header-section-number">1.12</span> 🔗 Composição e transformações gráficas</h2>
 <p>Muitas transformações gráficas podem ser vistas como composições.</p>
 <p>Por exemplo,</p>
 <p><span class="math display">\[
@@ -744,6 +984,10 @@ h(x)=f(x-3)
 <p>é a composição de <span class="math inline">\(f\)</span> com</p>
 <p><span class="math display">\[
 g(x)=x-3.
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+h=f\circ g.
 \]</span></p>
 <p>Já</p>
 <p><span class="math display">\[
@@ -759,10 +1003,46 @@ g(x)=2x.
 2f(x)+1
 \]</span></p>
 <p>podem ser entendidas como aplicar <span class="math inline">\(f\)</span> e depois transformar o resultado.</p>
+<p>Para explicitar essa composição, podemos definir uma função externa:</p>
+<p><span class="math display">\[
+r(u)=2u+1.
+\]</span></p>
+<p>Então,</p>
+<p><span class="math display">\[
+2f(x)+1=r(f(x))=(r\circ f)(x).
+\]</span></p>
+<p><strong>Ilustração — Transformações na entrada e na saída</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    subgraph A["Transformação na entrada"]
+        direction TB
+        X1["Entrada: x"] --&gt; T["Transformação: x - 3"]
+        T --&gt; F1["Aplicar f"]
+        F1 --&gt; Y1["Resultado: f(x - 3)"]
+    end
+
+    subgraph B["Transformação na saída"]
+        direction TB
+        X2["Entrada: x"] --&gt; F2["Aplicar f"]
+        F2 --&gt; R["Transformação: 2u + 1"]
+        R --&gt; Y2["Resultado: 2f(x) + 1"]
+    end
+
+    Y1 ~~~ X2
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <hr>
 </section>
-<section id="composição-em-modelos" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="composição-em-modelos"><span class="header-section-number">1.11</span> 🔗 Composição em modelos</h2>
+<section id="composição-em-modelos" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="composição-em-modelos"><span class="header-section-number">1.13</span> 🔗 Composição em modelos</h2>
 <p>Em aplicações, composição aparece quando uma grandeza depende de outra, que por sua vez depende de uma terceira.</p>
 <p>Por exemplo:</p>
 <ul>
@@ -784,19 +1064,124 @@ T(A(t))
 \]</span></p>
 <p>é a temperatura em função do tempo.</p>
 <p>Esse é um exemplo de composição.</p>
+<p><strong>Ilustração — Da passagem do tempo à temperatura</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    T["Tempo: t"] --&gt; A["Altitude: A(t)"]
+    A --&gt; TEMP["Temperatura: T(A(t))"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A composição permite conectar modelos matemáticos diferentes e estudar como uma variável influencia outra por meio de etapas intermediárias.</p>
 <hr>
-</section>
-<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.12</span> 🌉 Por que isso importa para o Cálculo?</h2>
-<p>A composição de funções é uma das ideias mais importantes para derivadas.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>Expressão ou condição</th>
+<th>Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Composição</td>
+<td><span class="math inline">\((f\circ g)(x)=f(g(x))\)</span></td>
+<td>Aplicamos primeiro <span class="math inline">\(g\)</span> e depois <span class="math inline">\(f\)</span></td>
+</tr>
+<tr class="even">
+<td>Ordem</td>
+<td>Em geral, <span class="math inline">\(f\circ g\neq g\circ f\)</span></td>
+<td>A ordem das operações importa</td>
+</tr>
+<tr class="odd">
+<td>Domínio</td>
+<td><span class="math inline">\(x\in D_g\)</span> e <span class="math inline">\(g(x)\in D_f\)</span></td>
+<td>A entrada deve ser válida para <span class="math inline">\(g\)</span> e sua saída para <span class="math inline">\(f\)</span></td>
+</tr>
+<tr class="even">
+<td>Associatividade</td>
+<td><span class="math inline">\(h\circ(g\circ f)=(h\circ g)\circ f\)</span></td>
+<td>Podemos reagrupar composições bem definidas</td>
+</tr>
+<tr class="odd">
+<td>Identidade</td>
+<td><span class="math inline">\(I(x)=x\)</span></td>
+<td>Compor com a identidade adequada preserva a função</td>
+</tr>
+<tr class="even">
+<td>Decomposição</td>
+<td><span class="math inline">\(F=f\circ g\)</span></td>
+<td>Uma expressão pode ser interpretada como operações sucessivas</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Domínio da composição:</strong></p>
+<p><span class="math display">\[
+\operatorname{Dom}(f\circ g)
+=
+\left\{
+x\in\operatorname{Dom}(g)
+\;\middle|\;
+g(x)\in\operatorname{Dom}(f)
+\right\}.
+\]</span></p>
+<p><strong>Exemplo:</strong> considere</p>
+<p><span class="math display">\[
+g(x)=x^2+1,
+\qquad
+f(u)=\sqrt{u}.
+\]</span></p>
+<p>Então,</p>
+<p><span class="math display">\[
+(f\circ g)(x)=\sqrt{x^2+1}.
+\]</span></p>
+<p>Nesse caso, a função composta está definida para todo <span class="math inline">\(x\in\mathbb{R}\)</span>, pois <span class="math inline">\(x^2+1&gt;0\)</span>.</p>
+<p><strong>Atenção:</strong> não basta verificar separadamente os domínios de <span class="math inline">\(f\)</span> e de <span class="math inline">\(g\)</span>. É necessário garantir que <span class="math inline">\(g(x)\)</span> pertença ao domínio de <span class="math inline">\(f\)</span>.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="🌉 Ponte para o Cálculo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🌉 Ponte para o Cálculo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A composição de funções é uma das ideias mais importantes para o estudo das derivadas.</p>
 <p>Quando estudarmos a regra da cadeia, veremos que a derivada de</p>
 <p><span class="math display">\[
 f(g(x))
 \]</span></p>
 <p>depende da derivada da função externa <span class="math inline">\(f\)</span> e da derivada da função interna <span class="math inline">\(g\)</span>.</p>
 <p>A regra da cadeia é uma das ferramentas centrais do Cálculo Diferencial.</p>
-<p>Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição.</p>
-<hr>
+<p>Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição e identificar corretamente suas funções interna e externa.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="exercícios-propostos" class="level1" data-number="2">
@@ -855,7 +1240,7 @@ g(x)=x-5.
 </section>
 <section id="exercício-3" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
-<p>Determine o domínio real das funções compostas:</p>
+<p>Determine o domínio real das funções:</p>
 <ol type="a">
 <li><span class="math inline">\(h(x)=\ln(x-3)\)</span><br>
 </li>
@@ -887,8 +1272,11 @@ f\circ g\neq g\circ f.
 </div>
 </div>
 <hr>
+</section>
+<section id="gabarito-comentado" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -897,9 +1285,8 @@ f\circ g\neq g\circ f.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
 <p>Temos</p>
@@ -1125,12 +1512,13 @@ f\circ g\neq g\circ f.
 (g\circ f)(x)=x^2+1.
 \]</span></p>
 </section>
-</section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-composição-de-funções" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-composição-de-funções"><span class="header-section-number">3.6</span> 🧩 Quiz — Composição de Funções</h2>
+</section>
+<section id="quiz-composição-de-funções" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Composição de Funções</h1>
 <div class="question">
 <p><strong>Q1.</strong> Na composição <span class="math inline">\((f\circ g)(x)=f(g(x))\)</span>, qual função é aplicada primeiro?</p>
 <div class="choices">
@@ -1187,12 +1575,11 @@ f\circ g\neq g\circ f.
 </div>
 <hr>
 </section>
-</section>
-<section id="navegação" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.12-transformacoes-graficas.html">1.12 Transformações Gráficas</a></p>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">1.14 Função Inversa</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">Topo</a></p>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.12-transformacoes-graficas.html">1.12 Transformações Gráficas</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">1.14 Função Inversa</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

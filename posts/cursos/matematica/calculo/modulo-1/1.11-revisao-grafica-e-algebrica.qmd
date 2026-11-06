@@ -10,6 +10,7 @@ format:
   html:
     toc: true
     toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -20,9 +21,31 @@ page-layout: full
 
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+🎯 **Aula anterior:** 👉 [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+
+🎯 **Próxima aula:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
 
 ***
+
+::: {.callout-tip title="❓ Pergunta Disparadora"}
+
+O que podemos descobrir sobre uma função examinando sua expressão algébrica e seu gráfico? Como essas duas representações se complementam?
+
+:::
+
+::: {.callout-note title="📌 Objetivos de Aprendizagem"}
+
+Ao final desta aula, você deverá ser capaz de:
+
+- Relacionar a expressão algébrica de uma função à sua representação gráfica.
+- Identificar e interpretar domínio e imagem.
+- Determinar zeros e interseções com os eixos coordenados.
+- Analisar os intervalos em que a função é positiva ou negativa.
+- Reconhecer intervalos de crescimento e decrescimento, máximos e mínimos.
+- Investigar simetrias e reconhecer assíntotas.
+- Utilizar informações gráficas e algébricas para interpretar o comportamento de funções e preparar o estudo do Cálculo.
+
+:::
 
 # 📘 Revisão Gráfica e Algébrica
 
@@ -79,8 +102,6 @@ $$
 
 A mesma informação aparece em duas linguagens: a fatoração mostra os zeros na álgebra; o gráfico mostra os interceptos horizontais.
 
-A fatoração identifica os zeros; o gráfico mostra esses mesmos valores como interseções com o eixo horizontal.
-
 ![Parábola de f(x) igual a x ao quadrado menos quatro, com zeros em menos dois e dois e vértice em zero, menos quatro.](images/1.11-formula-grafico.svg){fig-alt="Parábola de f(x) igual a x ao quadrado menos quatro, com zeros em menos dois e dois e vértice em zero, menos quatro." width="94%"}
 
 ::: {.callout-note collapse="true" title="Clique para ver o código"}
@@ -131,6 +152,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.0, 5.0))
 x = np.linspace(-3.25, 3.25, 700)
 preparar(ax, (-3.5, 3.5), (-5.3, 7.0),
@@ -154,7 +176,6 @@ salvar(fig, "1.11-formula-grafico.svg")
 ```
 
 :::
-
 
 ***
 
@@ -193,7 +214,7 @@ $$
 D_f=(-\infty,3)\cup(3,+\infty).
 $$
 
-Graficamente, essa restrição aparece como uma interrupção no ponto $x=3$, normalmente associada a uma assíntota vertical.
+Neste exemplo, a restrição $x\neq 3$ corresponde a uma assíntota vertical em $x=3$. Quando $x$ se aproxima de $3$, pela esquerda ou pela direita, o módulo de $f(x)$ cresce sem limite.
 
 Os dois ramos do gráfico se aproximam da reta vertical tracejada, mas nenhum ponto da curva tem abscissa $x=3$.
 
@@ -247,6 +268,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.0, 5.0))
 esquerda = np.linspace(-1.0, 2.88, 450)
 direita = np.linspace(3.12, 7.0, 450)
@@ -267,7 +289,6 @@ salvar(fig, "1.11-dominio-assintota.svg")
 ```
 
 :::
-
 
 ***
 
@@ -355,6 +376,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.0, 5.0))
 x = np.linspace(-2.45, 2.45, 600)
 preparar(ax, (-3.1, 3.5), (-.8, 6.7),
@@ -373,7 +395,6 @@ salvar(fig, "1.11-imagem-parabola.svg")
 ```
 
 :::
-
 
 ***
 
@@ -505,7 +526,6 @@ salvar(fig, "1.11-zeros-quadratica.svg")
 
 :::
 
-
 ***
 
 ## 📍 Interseção com o eixo vertical
@@ -600,6 +620,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, (a, b) = plt.subplots(1, 2, figsize=(11, 4.9))
 fig.subplots_adjust(wspace=.3)
 x = np.linspace(-3.3, 2.5, 500)
@@ -628,7 +649,6 @@ salvar(fig, "1.11-intersecao-eixo-y.svg")
 ```
 
 :::
-
 
 ***
 
@@ -720,6 +740,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.0, 5.0))
 x = np.linspace(-3.15, 3.15, 900)
 y = x*x - 4
@@ -748,7 +769,6 @@ salvar(fig, "1.11-zeros-sinal.svg")
 ```
 
 :::
-
 
 ***
 
@@ -832,6 +852,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.0, 5.0))
 preparar(ax, (-3.0, 3.0), (-.8, 8.2),
          xticks=np.arange(-3, 4), yticks=np.arange(0, 9, 2))
@@ -856,7 +877,6 @@ salvar(fig, "1.11-crescimento-minimo.svg")
 ```
 
 :::
-
 
 ***
 
@@ -949,6 +969,7 @@ def salvar(fig, nome):
                 pad_inches=.24, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.2, 5.3))
 x = np.linspace(-2.06, 2.06, 850)
 y = x**3 - 3*x
@@ -974,14 +995,15 @@ salvar(fig, "1.11-maximos-minimos.svg")
 
 :::
 
-
 ***
 
 ## 🪞 Simetria
 
 Algumas funções apresentam simetrias importantes.
 
-Uma função é par quando
+Para classificar uma função como par ou ímpar, seu domínio deve ser simétrico em relação à origem: sempre que $x$ pertence ao domínio, $-x$ também deve pertencer.
+
+Uma função é par quando, para todo $x\in D_f$,
 
 $$
 f(-x)=f(x).
@@ -1001,7 +1023,7 @@ $$
 f(-x)=(-x)^2=x^2=f(x).
 $$
 
-Uma função é ímpar quando
+Uma função é ímpar quando, para todo $x\in D_f$,
 
 $$
 f(-x)=-f(x).
@@ -1073,6 +1095,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, (a, b) = plt.subplots(1, 2, figsize=(11, 5.0))
 fig.subplots_adjust(wspace=.3)
 x = np.linspace(-2.15, 2.15, 700)
@@ -1099,14 +1122,17 @@ salvar(fig, "1.11-simetria-par-impar.svg")
 
 :::
 
-
 ***
 
 ## 📏 Assíntotas
 
-Assíntotas são retas das quais o gráfico se aproxima.
+De maneira intuitiva, uma assíntota é uma reta à qual o gráfico de uma função se aproxima cada vez mais em determinado regime. A formalização dessa ideia será feita por meio de limites.
 
-Uma assíntota vertical pode aparecer quando a função cresce sem limite perto de algum valor proibido do domínio.
+Uma reta vertical $x=a$ é uma assíntota vertical quando, ao menos por um dos lados, os valores de $f(x)$ tendem a $+\infty$ ou a $-\infty$ quando $x$ se aproxima de $a$.
+
+Uma reta horizontal $y=L$ é uma assíntota horizontal quando a função se aproxima do valor constante $L$ à medida que $x$ tende a $+\infty$ ou a $-\infty$, em pelo menos uma dessas direções.
+
+É importante observar que a exclusão de um valor do domínio, por si só, não garante uma assíntota vertical. Em alguns casos, pode ocorrer apenas um buraco removível no gráfico, como veremos na seção sobre leitura algébrica.
 
 Por exemplo,
 
@@ -1120,7 +1146,7 @@ $$
 x=2.
 $$
 
-Uma assíntota horizontal pode aparecer quando a função se aproxima de um valor constante quando $x$ cresce sem limite.
+Uma assíntota horizontal pode ser observada quando a função se aproxima de um valor constante para valores de $x$ cada vez maiores em módulo.
 
 Por exemplo,
 
@@ -1138,7 +1164,7 @@ quando $x$ tende a $+\infty$ ou a $-\infty$.
 
 No módulo de limites, essas ideias serão formalizadas.
 
-Neste exemplo, as duas assíntotas aparecem simultaneamente: a reta vertical $x=3$ está associada à restrição do domínio, enquanto $y=2$ descreve o comportamento dos ramos para valores de $|x|$ cada vez maiores.
+Neste exemplo, as duas assíntotas aparecem simultaneamente: como o numerador vale $7$ em $x=3$, enquanto o denominador tende a zero, a reta vertical $x=3$ é uma assíntota vertical. Já a reta horizontal $y=2$ descreve o comportamento dos ramos para valores de $|x|$ cada vez maiores.
 
 ![Função racional dois x mais um sobre x menos três com assíntota vertical x igual a três e horizontal y igual a dois, ambas tracejadas.](images/1.11-assintotas-racional.svg){fig-alt="Função racional dois x mais um sobre x menos três com assíntota vertical x igual a três e horizontal y igual a dois, ambas tracejadas." width="94%"}
 
@@ -1193,6 +1219,7 @@ def salvar(fig, nome):
                 pad_inches=.24, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.4, 5.45))
 xe = np.linspace(-6, 2.79, 900)
 xd = np.linspace(3.25, 11, 900)
@@ -1219,14 +1246,13 @@ salvar(fig, "1.11-assintotas-racional.svg")
 
 :::
 
-
 ***
 
 ## 📊 Leitura de gráficos
 
 Ao observar um gráfico, podemos fazer várias perguntas:
 
-- Qual é o domínio visível?
+- Que parte do domínio está representada na janela do gráfico?
 - Qual parece ser a imagem?
 - Onde a curva cruza o eixo $x$?
 - Onde cruza o eixo $y$?
@@ -1297,6 +1323,7 @@ def salvar(fig, nome):
                 pad_inches=.24, facecolor="white")
     plt.close(fig)
 
+
 fig = plt.figure(figsize=(12.0, 6.15))
 gs = fig.add_gridspec(1, 2, width_ratios=[1.52, 1], wspace=.18)
 ax = fig.add_subplot(gs[0, 0])
@@ -1330,16 +1357,20 @@ painel.axis("off")
 painel.set_xlim(0, 1)
 painel.set_ylim(0, 1)
 painel.text(.04, .94, "Roteiro de observação", color=AZUL,
-           weight="bold", fontsize=13, va="top")
+            weight="bold", fontsize=13, va="top")
+
+
 def linha(y, titulo, detalhe, cor):
     box = FancyBboxPatch((.025, y-.10), .94, .12,
                          boxstyle="round,pad=0.013,rounding_size=.02",
                          facecolor="#f7fafd", edgecolor=GRADE, lw=.9)
     painel.add_patch(box)
     painel.text(.055, y-.005, titulo, color=cor,
-               fontsize=10.6, weight="bold", va="top")
+                fontsize=10.6, weight="bold", va="top")
     painel.text(.055, y-.053, detalhe, color=AZUL,
-               fontsize=9.3, va="top")
+                fontsize=9.3, va="top")
+
+
 linha(.82, "Domínio", "Todos os números reais", AZUL)
 linha(.65, "Três zeros", "x ≈ −1,88; 0,35; 1,53", LARANJA)
 linha(.48, "Extremos locais", "Máx. (−1, 3); mín. (1, −1)", VERMELHO)
@@ -1352,7 +1383,6 @@ salvar(fig, "1.11-leitura-grafico-guia.svg")
 ```
 
 :::
-
 
 ***
 
@@ -1448,6 +1478,7 @@ def salvar(fig, nome):
                 pad_inches=0.25, facecolor="white")
     plt.close(fig)
 
+
 fig, ax = plt.subplots(figsize=(9.0, 5.0))
 x = np.linspace(-3.15, 3.85, 750)
 preparar(ax, (-3.4, 4.1), (-2.4, 5.65),
@@ -1467,7 +1498,6 @@ salvar(fig, "1.11-buraco-removivel.svg")
 ```
 
 :::
-
 
 ***
 
@@ -1537,6 +1567,7 @@ def salvar(fig, nome):
                 pad_inches=.24, facecolor="white")
     plt.close(fig)
 
+
 fig, axs = plt.subplots(2, 2, figsize=(11.5, 8.0))
 xx = np.linspace(-.12, 2.0, 650)
 for ax in axs.flat:
@@ -1595,8 +1626,34 @@ salvar(fig, "1.11-graficos-e-calculo.svg")
 
 :::
 
+***
+
+::: {.callout-note title="📋 Quadro-resumo"}
+
+| Propriedade | Interpretação gráfica | Interpretação algébrica |
+|---|---|---|
+| Domínio | Valores de entrada para os quais há pontos no gráfico; a janela mostra apenas parte dele | Valores de $x$ para os quais a função está definida |
+| Imagem | Alturas efetivamente atingidas pelo gráfico | Valores que $f(x)$ assume |
+| Zeros | Interseções com o eixo horizontal | Soluções de $f(x)=0$ |
+| Interseção vertical | Ponto do gráfico sobre o eixo $y$, quando existente | Valor $f(0)$, se $0$ pertence ao domínio |
+| Sinal | Regiões acima ou abaixo do eixo horizontal | Estudo de $f(x)>0$ e $f(x)<0$ |
+| Crescimento | O gráfico sobe quando percorremos um intervalo da esquerda para a direita | Comparação dos valores de $f$ quando as entradas aumentam |
+| Decrescimento | O gráfico desce quando percorremos um intervalo da esquerda para a direita | Comparação dos valores de $f$ quando as entradas aumentam |
+| Extremos | Pontos de máximo ou mínimo, locais ou absolutos | Comparação de valores da função em uma região adequada |
+| Simetria | Simetria em relação ao eixo $y$ ou à origem | $f(-x)=f(x)$ ou $f(-x)=-f(x)$, respectivamente, para todo $x$ do domínio, que deve ser simétrico em relação à origem |
+| Assíntotas | Retas das quais o gráfico se aproxima em condições apropriadas | Estudo do comportamento da função perto de pontos ou no infinito |
+
+**Ideia central:** a expressão algébrica e o gráfico oferecem informações complementares sobre a mesma função.
+
+:::
 
 ***
+
+::: {.callout-note title="🌉 Ponte para o Cálculo"}
+
+A leitura gráfica e algébrica desenvolvida nesta aula fornece a base para as próximas etapas. A partir de agora, vamos transformar as observações intuitivas em definições, propriedades e resultados demonstrados, avançando da interpretação dos gráficos para o estudo rigoroso do comportamento das funções.
+
+:::
 
 # 🧪 Exercícios propostos
 
@@ -1662,9 +1719,9 @@ Explique, com suas palavras, por que a leitura gráfica e a leitura algébrica d
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
 # ✅ Gabarito comentado
+
+::: {.callout-important collapse=true title="✅ Gabarito"}
 
 ## 🧪 Exercício 1
 
@@ -1784,7 +1841,7 @@ $$
 \left(0,\frac{1}{4}\right).
 $$
 
-c) A assíntota vertical ocorre onde o denominador zera:
+c) A assíntota vertical ocorre em
 
 $$
 x=-4.
@@ -1900,9 +1957,10 @@ A leitura algébrica permite encontrar domínio, zeros, sinais, restrições e s
 
 ***
 
-## 🧩 Quiz — Revisão Gráfica e Algébrica
+# 🧩 Quiz — Revisão Gráfica e Algébrica
 
 :::::{.question}
+
 **Q1.** Os zeros de uma função são os valores de $x$ tais que:
 
 ::::{.choices}
@@ -1921,6 +1979,7 @@ $x=0$ necessariamente.
 :::::
 
 :::::{.question}
+
 **Q2.** A interseção com o eixo vertical ocorre, quando existe, em:
 
 ::::{.choices}
@@ -1939,7 +1998,8 @@ $f(x)=0$.
 :::::
 
 :::::{.question}
-**Q3.** Uma função par satisfaz:
+
+**Q3.** Considere uma função $f$ cujo domínio $D_f$ é simétrico em relação à origem. Uma função par satisfaz, para todo $x\in D_f$:
 
 ::::{.choices}
 :::{.choice .correct-choice}
@@ -1960,11 +2020,11 @@ $f(x)=0$ para todo $x$.
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+🎯 **Aula anterior:** 👉 [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
 
-🎯 **Próximo Post:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
+🎯 **Próxima aula:** 👉 [1.12 Transformações Gráficas](1.12-transformacoes-graficas.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.11-revisao-grafica-e-algebrica.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
@@ -1973,4 +2033,3 @@ $f(x)=0$ para todo $x$.
 :::{.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

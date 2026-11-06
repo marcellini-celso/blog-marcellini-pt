@@ -1,15 +1,16 @@
 ---
 title: "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças"
-description: "Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e a ponte conceitual para limites."
+description: "Aprofundamento sobre valor absoluto como distância na reta real, vizinhanças abertas e perfuradas, e a ponte conceitual para limites."
 author: "Blog do Marcellini"
 date: "2026-06-05"
 lang: pt-BR
 categories: [cálculo, matemática, curso, aprofundamento, valor absoluto, limites]
-tags: [cálculo, valor absoluto, distância, vizinhança, epsilon, limites, pré-cálculo]
+tags: [cálculo, valor absoluto, distância, vizinhança, epsilon, delta, limites, pré-cálculo]
 format:
   html:
     toc: true
     toc-title: "Neste Aprofundamento"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -22,11 +23,15 @@ page-layout: full
 
 ::: {.callout-note title="🧭 Aprofundamento opcional"}
 
-Este AP complementa a aula [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd). Ele amplia o estudo sem interromper a sequência principal.
+Este aprofundamento complementa a aula [1.4 — Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd).
 
-↩️ [Voltar à aula de origem](1.4-numeros-reais-e-intervalos.qmd) · ▶️ [Continuar com 1.5 Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
+Na aula principal, estudamos os números reais, os intervalos e uma primeira interpretação do valor absoluto como distância. Aqui, desenvolveremos essa ideia com mais profundidade, introduzindo vizinhanças abertas, vizinhanças furadas e a linguagem matemática que será utilizada na definição formal de limite.
 
-::: 
+O conteúdo amplia a sequência principal sem interromper seu desenvolvimento.
+
+↩️ [Voltar à aula de origem](1.4-numeros-reais-e-intervalos.qmd) · ▶️ [Continuar com 1.5 — Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
+
+:::
 
 🔬 **AP anterior:** [1.19-AP — Valor Absoluto e Inequações Modulares](1.19-AP-valor-absoluto.qmd)
 
@@ -34,7 +39,7 @@ Este AP complementa a aula [1.4 Números Reais e Intervalos](1.4-numeros-reais-e
 
 # 🔬 Valor Absoluto, Distância e Vizinhanças
 
-Este aprofundamento prepara uma das ideias mais importantes para o estudo de limites: **proximidade**.
+Este aprofundamento desenvolve uma das ideias mais importantes para o estudo de limites: **proximidade**.
 
 Quando escrevemos
 
@@ -42,17 +47,13 @@ $$
 |x-a|<\varepsilon,
 $$
 
-estamos dizendo que $x$ está perto de $a$.
+estamos afirmando que \(x\) está suficientemente próximo de \(a\), no sentido de que a distância entre esses dois números é menor que \(\varepsilon\).
 
-Mais precisamente: a distância entre $x$ e $a$ é menor que $\varepsilon$.
+Essa interpretação geométrica será essencial para compreender a definição formal de limite.
 
-Essa pequena expressão será essencial para entender a definição formal de limite.
+## 📦 1. Valor absoluto como distância até zero
 
-***
-
-## 📦 Valor absoluto como distância até zero
-
-O valor absoluto de um número real $x$ é definido por
+O valor absoluto de um número real \(x\) é definido por:
 
 $$
 |x|=
@@ -62,12 +63,12 @@ x, & x\geq 0,\\
 \end{cases}
 $$
 
-Geometricamente, $|x|$ mede a distância de $x$ até zero na reta real.
+Geometricamente, \(|x|\) representa a distância entre o número \(x\) e a origem da reta real.
 
 Por exemplo:
 
 $$
-|5|=5,
+|5|=5
 $$
 
 e
@@ -76,55 +77,75 @@ $$
 |-5|=5.
 $$
 
-Os números $5$ e $-5$ estão à mesma distância da origem.
+Os números \(5\) e \(-5\) estão à mesma distância do zero, embora estejam em lados opostos da reta.
 
-***
+::: {.callout-note title="💡 Interpretação geométrica"}
 
-## 📏 Distância entre dois pontos
+O valor absoluto não mede se um número é positivo ou negativo. Ele mede sua distância até zero.
 
-A distância entre dois números reais $x$ e $a$ é dada por
+Por isso, seu resultado nunca é negativo:
 
 $$
-|x-a|.
+|x|\geq 0.
 $$
 
-Por exemplo, a distância entre $7$ e $3$ é
+:::
+
+## 📏 2. Distância entre dois pontos reais
+
+A distância entre dois números reais \(x\) e \(a\) é dada por:
+
+$$
+d(x,a)=|x-a|.
+$$
+
+Essa expressão funciona independentemente da posição relativa dos dois números.
+
+Por exemplo, a distância entre \(7\) e \(3\) é:
 
 $$
 |7-3|=4.
 $$
 
-A distância entre $-1$ e $3$ também é
+A distância entre \(-1\) e \(3\) também é:
 
 $$
 |-1-3|=|-4|=4.
 $$
 
-Logo, a expressão
+Portanto, a expressão
 
 $$
 |x-a|
 $$
 
-mede quanto $x$ está afastado de $a$.
+mede quanto \(x\) está afastado de \(a\) na reta real.
 
-***
+É importante observar que a distância é simétrica:
 
-## 🎯 Vizinhança aberta
+$$
+|x-a|=|a-x|.
+$$
 
-Uma vizinhança aberta de centro $a$ e raio $\varepsilon>0$ é o intervalo
+Assim, a distância de \(x\) até \(a\) é igual à distância de \(a\) até \(x\).
+
+## 🎯 3. Vizinhança aberta
+
+Uma **vizinhança aberta** de centro \(a\) e raio \(\varepsilon>0\) é o intervalo:
 
 $$
 (a-\varepsilon,\;a+\varepsilon).
 $$
 
-Equivalentemente, é o conjunto dos reais $x$ tais que
+Equivalentemente, podemos representar essa vizinhança pelo conjunto:
 
 $$
-|x-a|<\varepsilon.
+V_\varepsilon(a)
+=
+\{x\in\mathbb{R}:|x-a|<\varepsilon\}.
 $$
 
-Portanto,
+Portanto:
 
 $$
 |x-a|<\varepsilon
@@ -136,17 +157,19 @@ $$
 a-\varepsilon<x<a+\varepsilon
 $$
 
-dizem a mesma coisa.
+expressam exatamente a mesma condição.
 
-::: {.callout-note title="Ideia central"}
-Uma vizinhança aberta reúne todos os pontos que estão a uma distância menor que $\varepsilon$ do centro $a$.
+::: {.callout-note title="📌 Ideia central"}
+
+Uma vizinhança aberta reúne todos os pontos da reta real que estão a uma distância menor que \(\varepsilon\) do centro \(a\).
+
+O centro pertence à vizinhança, mas suas extremidades não.
+
 :::
 
-***
+### Exemplo: vizinhança de centro 3
 
-## ✅ Exemplo com centro 3
-
-Se
+Considere:
 
 $$
 a=3
@@ -155,13 +178,19 @@ $$
 e
 
 $$
-\varepsilon=0{,}5,
+\varepsilon=0{,}5.
 $$
 
-então a vizinhança aberta é
+A vizinhança aberta será:
 
 $$
-(3-0{,}5,\;3+0{,}5)=(2{,}5,\;3{,}5).
+(3-0{,}5,\;3+0{,}5).
+$$
+
+Logo:
+
+$$
+V_{0{,}5}(3)=(2{,}5,\;3{,}5).
 $$
 
 Também podemos escrever:
@@ -170,120 +199,170 @@ $$
 |x-3|<0{,}5.
 $$
 
-Isso significa que $x$ está a uma distância menor que $0{,}5$ de $3$.
+Isso significa que \(x\) está a uma distância menor que \(0{,}5\) de \(3\).
 
-***
+## 🧭 4. Vizinhança furada
 
-## 🧭 Vizinhança furada
+No estudo de limites, frequentemente queremos analisar o comportamento de uma função perto de um ponto, mas sem considerar necessariamente o próprio ponto.
 
-Em limites, muitas vezes queremos estudar o que acontece **perto** de $a$, mas sem usar o próprio ponto $a$.
+Para isso, utilizamos uma **vizinhança furada**.
 
-Para isso, usamos uma vizinhança furada:
+Sua representação é:
 
 $$
 0<|x-a|<\varepsilon.
 $$
 
-Essa desigualdade diz duas coisas:
+Essa desigualdade reúne duas condições:
 
-1. $x$ está perto de $a$;
-2. $x\neq a$.
+1. \(x\) está a uma distância menor que \(\varepsilon\) de \(a\);
+2. \(x\) é diferente de \(a\).
 
-A condição
+A primeira condição garante a proximidade. A segunda exclui o centro.
 
-$$
-0<|x-a|
-$$
-
-exclui o centro.
-
-Isso será muito importante em limites, porque o limite de uma função em $a$ depende do comportamento perto de $a$, não necessariamente do valor da função em $a$.
-
-***
-
-## 🔁 Desigualdades equivalentes
-
-A desigualdade
+Podemos representar a vizinhança furada por:
 
 $$
-|x-a|<\varepsilon
+(a-\varepsilon,a)\cup(a,a+\varepsilon).
 $$
 
-é equivalente a
+Ou, em notação de conjuntos:
+
+$$
+V_\varepsilon^*(a)
+=
+\{x\in\mathbb{R}:0<|x-a|<\varepsilon\}.
+$$
+
+::: {.callout-important title="💡 Por que excluir o centro?"}
+
+O limite de uma função em \(a\) depende do comportamento de seus valores quando \(x\) se aproxima de \(a\), e não necessariamente do valor que a função assume exatamente em \(a\).
+
+Por isso, a definição de limite utiliza uma vizinhança furada.
+
+:::
+
+## 🔁 5. Desigualdades equivalentes
+
+Vamos desenvolver a equivalência que conecta valor absoluto e intervalos.
+
+Considere:
+
+$$
+|x-a|<\varepsilon,
+\qquad \varepsilon>0.
+$$
+
+Pela definição de valor absoluto, essa condição equivale a:
 
 $$
 -\varepsilon<x-a<\varepsilon.
 $$
 
-Somando $a$ nos três membros, obtemos
+Somando \(a\) aos três membros:
 
 $$
 a-\varepsilon<x<a+\varepsilon.
 $$
 
-Assim,
+Assim:
 
 $$
+\boxed{
 |x-a|<\varepsilon
-\quad\Longleftrightarrow\quad
+\iff
+a-\varepsilon<x<a+\varepsilon.
+}
+$$
+
+Em termos de intervalos:
+
+$$
+\boxed{
 x\in(a-\varepsilon,a+\varepsilon).
+}
 $$
 
-Essa equivalência é uma das ferramentas fundamentais para traduzir linguagem algébrica em linguagem geométrica.
+Essa equivalência é uma ferramenta importante para traduzir uma condição algébrica em uma região geométrica da reta real.
 
-***
+## ⚖️ 6. Desigualdades com valor absoluto: menor ou igual
 
-## ⚖️ Desigualdades com valor absoluto
-
-Também temos a forma fechada:
+Também podemos trabalhar com desigualdades não estritas:
 
 $$
-|x-a|\leq r
+|x-a|\leq r,
+\qquad r\geq 0.
 $$
 
-equivalente a
+Essa condição significa que a distância entre \(x\) e \(a\) é menor ou igual a \(r\).
+
+Ela equivale a:
+
+$$
+-r\leq x-a\leq r.
+$$
+
+Somando \(a\) aos três membros:
 
 $$
 a-r\leq x\leq a+r.
 $$
 
-Por exemplo:
+Portanto:
 
 $$
-|x-2|\leq 5
+\boxed{
+|x-a|\leq r
+\iff
+x\in[a-r,a+r].
+}
 $$
 
-equivale a
+### Exemplo
+
+Considere:
+
+$$
+|x-2|\leq 5.
+$$
+
+Temos:
 
 $$
 -5\leq x-2\leq 5.
 $$
 
-Somando $2$:
+Somando \(2\):
 
 $$
 -3\leq x\leq 7.
 $$
 
-Logo, a solução é
+Logo, a solução é:
 
 $$
-[-3,7].
+\boxed{x\in[-3,7].}
 $$
 
-***
+Observe a diferença entre as duas situações:
 
-## 🚪 Desigualdades do tipo maior que
+- \(|x-a|<r\): intervalo aberto;
+- \(|x-a|\leq r\): intervalo fechado.
+
+## 🚪 7. Desigualdades com valor absoluto: maior que
 
 A desigualdade
 
 $$
-|x-a|>r
+|x-a|>r,
+\qquad r\geq 0,
 $$
 
-significa que $x$ está a uma distância maior que $r$ de $a$.
+significa que \(x\) está a uma distância maior que \(r\) de \(a\).
 
-Isso corresponde a dois intervalos:
+Nesse caso, \(x\) precisa estar fora do intervalo centrado em \(a\).
+
+Isso corresponde a duas possibilidades:
 
 $$
 x<a-r
@@ -295,45 +374,91 @@ $$
 x>a+r.
 $$
 
-Por exemplo:
+Portanto:
 
 $$
-|x-3|>2
+\boxed{
+|x-a|>r
+\iff
+x\in(-\infty,a-r)\cup(a+r,+\infty).
+}
 $$
 
-equivale a
+### Exemplo
+
+Considere:
 
 $$
-x<1
+|x-3|>2.
+$$
+
+Temos duas possibilidades:
+
+$$
+x<3-2
 $$
 
 ou
 
 $$
+x>3+2.
+$$
+
+Logo:
+
+$$
+x<1
+\qquad\text{ou}\qquad
 x>5.
 $$
 
-Logo, a solução é
+A solução é:
 
 $$
+\boxed{
 (-\infty,1)\cup(5,+\infty).
+}
 $$
 
-***
+### E quando a desigualdade é maior ou igual?
 
-## 🌉 Ponte para limites
-
-A definição formal de limite usa exatamente a linguagem de distância e vizinhança.
-
-Dizer que
+Se:
 
 $$
-\lim_{x\to a}f(x)=L
+|x-a|\geq r,
 $$
 
-significa, informalmente, que podemos tornar $f(x)$ tão perto de $L$ quanto quisermos, desde que $x$ esteja suficientemente perto de $a$.
+então:
 
-A linguagem formal usa expressões como:
+$$
+x\leq a-r
+\qquad\text{ou}\qquad
+x\geq a+r.
+$$
+
+Assim:
+
+$$
+\boxed{
+|x-a|\geq r
+\iff
+x\in(-\infty,a-r]\cup[a+r,+\infty).
+}
+$$
+
+## 🌉 8. A ponte para os limites
+
+A definição formal de limite utiliza exatamente a linguagem de distância e vizinhança que desenvolvemos até aqui.
+
+Considere a afirmação:
+
+$$
+\lim_{x\to a}f(x)=L.
+$$
+
+Informalmente, ela significa que podemos tornar \(f(x)\) tão próximo de \(L\) quanto desejarmos, desde que escolhamos \(x\) suficientemente próximo de \(a\), sem exigir que \(x=a\).
+
+A linguagem matemática utiliza duas desigualdades:
 
 $$
 0<|x-a|<\delta
@@ -345,162 +470,266 @@ $$
 |f(x)-L|<\varepsilon.
 $$
 
-Por isso, compreender valor absoluto como distância é essencial antes de estudar limites com rigor.
+Cada uma desempenha um papel específico.
+
+**Na entrada da função:**
+
+$$
+0<|x-a|<\delta.
+$$
+
+Essa condição indica que \(x\) está em uma vizinhança furada de centro \(a\) e raio \(\delta\).
+
+**Na saída da função:**
+
+$$
+|f(x)-L|<\varepsilon.
+$$
+
+Essa condição indica que \(f(x)\) está a uma distância menor que \(\varepsilon\) de \(L\).
+
+Portanto:
+
+- \(\delta\) controla a proximidade de \(x\) em relação a \(a\);
+- \(\varepsilon\) controla a proximidade de \(f(x)\) em relação a \(L\).
+
+### A definição formal de limite
+
+Seja \(f:A\to\mathbb{R}\), e suponha que \(a\) seja um ponto de acumulação do domínio \(A\).
+
+Dizemos que:
+
+$$
+\lim_{x\to a}f(x)=L
+$$
+
+quando:
+
+$$
+\forall\varepsilon>0,\ \exists\delta>0
+$$
+
+tal que, para todo \(x\in A\),
+
+$$
+0<|x-a|<\delta
+\quad\Longrightarrow\quad
+|f(x)-L|<\varepsilon.
+$$
+
+Essa definição afirma que, para qualquer tolerância positiva \(\varepsilon\) escolhida para os valores da função, existe uma tolerância positiva \(\delta\) que garante o resultado desejado para as entradas suficientemente próximas de \(a\).
+
+::: {.callout-tip title="💡 Uma interpretação importante"}
+
+O número \(\varepsilon\) é escolhido primeiro. Depois, precisamos encontrar um \(\delta\) que garanta a aproximação desejada.
+
+Não precisamos que \(\delta\) seja igual a \(\varepsilon\). O valor de \(\delta\) depende da função, do ponto \(a\) e da tolerância \(\varepsilon\) escolhida.
+
+:::
+
+Não é necessário dominar todos os detalhes dessa definição neste momento. O objetivo deste aprofundamento é compreender de onde vêm as expressões de valor absoluto que aparecem nela.
 
 ***
 
-# 🧪 Exercícios propostos
+## 🧪 9. Exercícios propostos
 
 ::: {.callout-note title="📝 Exercícios"}
 
-## 🧪 Exercício 1
+### 🧪 Exercício 1 — Escrevendo intervalos
 
-Escreva na forma de intervalo:
+Escreva cada desigualdade na forma de intervalo:
 
-a) $|x-4|<2$  
-b) $|x+1|<3$  
-c) $|x-5|\leq 1$  
+a) \(|x-4|<2\)
 
-## 🧪 Exercício 2
+b) \(|x+1|<3\)
 
-Escreva usando valor absoluto:
+c) \(|x-5|\leq 1\)
 
-a) $x\in(2,8)$  
-b) $x\in(-3,3)$  
-c) $x\in[1,5]$
+### 🧪 Exercício 2 — Escrevendo com valor absoluto
 
-## 🧪 Exercício 3
+Escreva cada intervalo usando uma desigualdade com valor absoluto:
+
+a) \(x\in(2,8)\)
+
+b) \(x\in(-3,3)\)
+
+c) \(x\in[1,5]\)
+
+### 🧪 Exercício 3 — Desigualdades modulares
 
 Resolva:
 
-a) $|x-2|>4$  
-b) $|x+3|\geq 2$
+a) \(|x-2|>4\)
 
-## 🧪 Exercício 4
+b) \(|x+3|\geq 2\)
 
-Explique o significado geométrico de
+### 🧪 Exercício 4 — Interpretação geométrica
+
+Explique o significado geométrico da expressão:
 
 $$
 0<|x-a|<\varepsilon.
 $$
 
+### 🧪 Exercício 5 — Vizinhança aberta
+
+Determine a vizinhança aberta de centro \(a=4\) e raio \(\varepsilon=0{,}2\), escrevendo sua resposta:
+
+a) na forma de intervalo;
+
+b) por meio de uma desigualdade com valor absoluto.
+
 :::
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
+## ✅ Gabarito comentado
 
-# ✅ Gabarito comentado
+::: {.callout-important collapse=true title="🔎 Clique para consultar as resoluções"}
 
-## 🧪 Exercício 1
+### 🧪 Exercício 1 — Escrevendo intervalos
 
-a)
+**a)**
 
 $$
 |x-4|<2
 $$
 
-equivale a
+Equivale a:
 
 $$
 4-2<x<4+2.
 $$
 
-Logo,
+Logo:
 
 $$
-x\in(2,6).
+\boxed{x\in(2,6).}
 $$
 
-b)
+**b)**
+
+Podemos escrever:
 
 $$
-|x+1|<3
+|x+1|=|x-(-1)|.
 $$
 
-é o mesmo que
+Assim:
 
 $$
 |x-(-1)|<3.
 $$
 
-Logo,
+Logo:
 
 $$
-x\in(-4,2).
+\boxed{x\in(-4,2).}
 $$
 
-c)
+**c)**
 
 $$
 |x-5|\leq 1
 $$
 
-equivale a
+Equivale a:
 
 $$
 5-1\leq x\leq 5+1.
 $$
 
-Logo,
+Portanto:
 
 $$
-x\in[4,6].
+\boxed{x\in[4,6].}
 $$
 
-## 🧪 Exercício 2
+### 🧪 Exercício 2 — Escrevendo com valor absoluto
 
-a) O intervalo $(2,8)$ tem centro $5$ e raio $3$. Logo:
+**a)**
 
-$$
-|x-5|<3.
-$$
-
-b) O intervalo $(-3,3)$ tem centro $0$ e raio $3$. Logo:
+O intervalo \((2,8)\) tem centro:
 
 $$
-|x|<3.
+a=\frac{2+8}{2}=5
 $$
 
-c) O intervalo $[1,5]$ tem centro $3$ e raio $2$. Logo:
+e raio:
 
 $$
-|x-3|\leq 2.
+r=\frac{8-2}{2}=3.
 $$
 
-## 🧪 Exercício 3
+Logo:
 
-a)
+$$
+\boxed{|x-5|<3.}
+$$
+
+**b)**
+
+O intervalo \((-3,3)\) tem centro \(0\) e raio \(3\).
+
+Logo:
+
+$$
+\boxed{|x|<3.}
+$$
+
+**c)**
+
+O intervalo \([1,5]\) tem centro:
+
+$$
+a=\frac{1+5}{2}=3
+$$
+
+e raio:
+
+$$
+r=\frac{5-1}{2}=2.
+$$
+
+Como o intervalo é fechado, utilizamos a desigualdade não estrita:
+
+$$
+\boxed{|x-3|\leq 2.}
+$$
+
+### 🧪 Exercício 3 — Desigualdades modulares
+
+**a)**
 
 $$
 |x-2|>4
 $$
 
-significa:
+Isso significa:
 
 $$
 x<2-4
 $$
 
-ou
+ou:
 
 $$
 x>2+4.
 $$
 
-Logo,
+Logo:
 
 $$
-x\in(-\infty,-2)\cup(6,+\infty).
+\boxed{x\in(-\infty,-2)\cup(6,+\infty).}
 $$
 
-b)
+**b)**
 
 $$
 |x+3|\geq 2
 $$
 
-é o mesmo que
+Podemos escrever:
 
 $$
 |x-(-3)|\geq 2.
@@ -509,104 +738,178 @@ $$
 Logo:
 
 $$
-x\leq -5
+x\leq -3-2
 $$
 
-ou
+ou:
 
 $$
-x\geq -1.
+x\geq -3+2.
 $$
 
-Portanto,
+Portanto:
 
 $$
-x\in(-\infty,-5]\cup[-1,+\infty).
+\boxed{x\in(-\infty,-5]\cup[-1,+\infty).}
 $$
 
-## 🧪 Exercício 4
+### 🧪 Exercício 4 — Interpretação geométrica
 
-A expressão
+A expressão:
 
 $$
 0<|x-a|<\varepsilon
 $$
 
-significa que $x$ está dentro da vizinhança aberta de centro $a$ e raio $\varepsilon$, mas $x$ não pode ser igual a $a$. É uma vizinhança furada.
+indica que \(x\) pertence à vizinhança aberta de centro \(a\) e raio \(\varepsilon\), mas não pode ser igual ao próprio centro.
+
+É uma vizinhança furada, representada por:
+
+$$
+(a-\varepsilon,a)\cup(a,a+\varepsilon).
+$$
+
+### 🧪 Exercício 5 — Vizinhança aberta
+
+Temos:
+
+$$
+a=4
+\qquad\text{e}\qquad
+\varepsilon=0{,}2.
+$$
+
+**a) Na forma de intervalo:**
+
+$$
+(4-0{,}2,\;4+0{,}2).
+$$
+
+Logo:
+
+$$
+\boxed{(3{,}8,\;4{,}2).}
+$$
+
+**b) Com valor absoluto:**
+
+$$
+\boxed{|x-4|<0{,}2.}
+$$
 
 :::
 
 ***
 
-## 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças
+## 🧩 10. Quiz — Valor Absoluto, Distância e Vizinhanças
 
 :::::{.question}
-**Q1.** A expressão $|x-a|$ representa:
+
+**Q1.** A expressão \(|x-a|\) representa:
 
 ::::{.choices}
 :::{.choice .correct-choice}
-A distância entre $x$ e $a$ na reta real.
+A distância entre \(x\) e \(a\) na reta real.
 :::
 
 :::{.choice}
-A soma entre $x$ e $a$.
+A soma entre \(x\) e \(a\).
 :::
 
 :::{.choice}
-A multiplicação entre $x$ e $a$.
+A multiplicação entre \(x\) e \(a\).
 :::
 ::::
+
 :::::
 
 :::::{.question}
-**Q2.** A desigualdade $|x-3|<0{,}5$ representa:
+
+**Q2.** A desigualdade \(|x-3|<0{,}5\) representa:
 
 ::::{.choices}
 :::{.choice}
-$x$ está longe de $3$.
+\(x\) está longe de \(3\).
 :::
 
 :::{.choice .correct-choice}
-$x$ está a uma distância menor que $0{,}5$ de $3$.
+\(x\) está a uma distância menor que \(0{,}5\) de \(3\).
 :::
 
 :::{.choice}
-$x$ é necessariamente igual a $3$.
+\(x\) é necessariamente igual a \(3\).
 :::
 ::::
+
 :::::
 
 :::::{.question}
-**Q3.** A expressão $0<|x-a|<\varepsilon$ exclui:
+
+**Q3.** A expressão \(0<|x-a|<\varepsilon\) exclui:
 
 ::::{.choices}
 :::{.choice}
-Todos os pontos próximos de $a$.
+Todos os pontos próximos de \(a\).
 :::
 
 :::{.choice .correct-choice}
-O próprio ponto $a$.
+O próprio ponto \(a\).
 :::
 
 :::{.choice}
 Todos os números reais.
 :::
 ::::
+
+:::::
+
+:::::{.question}
+
+**Q4.** Na definição formal de limite, o número \(\delta\) controla:
+
+::::{.choices}
+:::{.choice}
+A distância entre \(f(x)\) e \(L\).
+:::
+
+:::{.choice .correct-choice}
+A distância entre \(x\) e \(a\).
+:::
+
+:::{.choice}
+O valor da função no ponto \(a\).
+:::
+::::
+
 :::::
 
 ***
 
-# 🔗 Navegação
+## 🌉 11. Conexão com o estudo de limites
 
-↩️ **Voltar à aula de origem:** [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
+Neste aprofundamento, partimos de uma interpretação geométrica simples — o valor absoluto como distância — e chegamos à linguagem utilizada na definição formal de limite.
 
-▶️ **Continuar a sequência principal:** [1.5 Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
+A sequência de ideias é:
+
+1. O valor absoluto representa uma distância na reta real.
+2. A distância permite definir vizinhanças abertas.
+3. A exclusão do centro produz uma vizinhança furada.
+4. As vizinhanças permitem descrever matematicamente a aproximação de uma variável a um ponto.
+5. A linguagem de \(\varepsilon\) e \(\delta\) formaliza a aproximação dos valores de uma função.
+
+Essa construção será retomada quando estudarmos limites com maior rigor matemático.
+
+## 🔗 12. Navegação
+
+↩️ **Voltar à aula de origem:** [1.4 — Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
+
+▶️ **Continuar a sequência principal:** [1.5 — Equações e Inequações](1.5-equacoes-e-inequacoes.qmd)
 
 🔬 **AP anterior:** [1.19-AP — Valor Absoluto e Inequações Modulares](1.19-AP-valor-absoluto.qmd)
 
 🔬 **Próximo AP:** [1.21-AP — Domínio de Funções: Guia Completo](1.21-AP-dominio-de-funcoes-guia-completo.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.20-AP-valor-absoluto-distancia-vizinhancas.qmd)
+🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](#)
 
 ***
 
@@ -615,4 +918,3 @@ Todos os números reais.
 :::{.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

@@ -10,6 +10,7 @@ format:
   html:
     toc: true
     toc-title: "Neste Módulo"
+    toc-depth: 4
     number-sections: true
     theme: cosmo
     fig-align: center
@@ -20,9 +21,32 @@ page-layout: full
 
 🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd)
 
-🎯 **Post Anterior:** 👉 [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+🎯 **Aula anterior:** 👉 [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+
+🎯 **Próxima aula:** 👉 [1.13 Composição de Funções](1.13-composicao-de-funcoes.qmd)
 
 ***
+
+::: {.callout-tip title="❓ Pergunta Disparadora"}
+
+Se conhecemos o gráfico de uma função, como podemos
+prever o efeito de uma translação, reflexão ou mudança
+de escala sem reconstruir o gráfico do zero?
+
+:::
+
+::: {.callout-note title="📌 Objetivos de Aprendizagem"}
+
+Ao final desta aula, você deverá ser capaz de:
+
+- Distinguir transformações que modificam a entrada daquelas que modificam a saída de uma função.
+- Identificar translações horizontais e verticais e determinar seus sentidos.
+- Reconhecer reflexões em relação aos eixos coordenados.
+- Interpretar alongamentos e compressões verticais e horizontais.
+- Determinar a correspondência entre pontos e analisar alterações no domínio.
+- Combinar transformações, interpretar amplitude e período de funções trigonométricas e relacionar os gráficos ao estudo do Cálculo.
+
+:::
 
 # 📘 Transformações Gráficas
 
@@ -1186,33 +1210,17 @@ $$
 
 Nesse caso:
 
-- $A$ controla a amplitude;
-- $B$ controla o período;
-- $C$ está relacionado ao deslocamento horizontal;
-- $D$ desloca o gráfico verticalmente.
+- $A$ determina a amplitude $|A|$. Se $A<0$, também ocorre reflexão em relação à linha média $y=D$;
+- $B$ determina o período $\dfrac{2\pi}{|B|}$, desde que $B\neq 0$;
+- $C$ determina o deslocamento horizontal, quando $B\neq 0$;
+- $D$ determina o deslocamento vertical e a linha média do gráfico, $y=D$.
 
 Quando $B\neq 0$, podemos reescrever o argumento como
 $Bx+C=B(x+C/B)$. Portanto, o deslocamento horizontal é $-C/B$:
 se $-C/B>0$, ocorre para a direita; se $-C/B<0$, para a esquerda.
-Se $B=0$, a expressão é constante e a regra de período não se aplica.
+O valor de $C$ altera a posição horizontal, mas não altera o período.
 
-Quando a função é
-
-$$
-g(x)=A\sin(Bx)+D,
-$$
-
-a amplitude é
-
-$$
-|A|,
-$$
-
-e o período é
-
-$$
-\frac{2\pi}{|B|}.
-$$
+Se $B=0$, a expressão $A\sin(C)+D$ é constante; nesse caso, não há período trigonométrico a determinar.
 
 Por exemplo,
 
@@ -1648,7 +1656,34 @@ salvar(fig,"1.12-ordem-transformacoes.svg")
 
 ***
 
-## 🌉 Por que isso importa para o Cálculo?
+::: {.callout-note title="📋 Quadro-resumo"}
+
+| Transformação | Expressão | Efeito principal |
+|---|---|---|
+| Translação vertical | $f(x)+k$ | Se $k>0$, sobe $k$ unidades; se $k<0$, desce $|k|$ unidades |
+| Translação horizontal | $f(x-h)$ | Se $h>0$, vai $h$ unidades para a direita; se $h<0$, vai $|h|$ unidades para a esquerda |
+| Reflexão no eixo $x$ | $-f(x)$ | Reflexão em relação ao eixo $x$ |
+| Reflexão no eixo $y$ | $f(-x)$ | Reflexão em relação ao eixo $y$ |
+| Escala vertical | $af(x)$ | Fator de escala $\lvert a\rvert$; se $a<0$, há reflexão em relação ao eixo $x$ |
+| Escala horizontal | $f(bx)$, $b\neq0$ | Fator de escala $1/\lvert b\rvert$; se $b<0$, há reflexão em relação ao eixo $y$ |
+| Transformações combinadas | $a f(b(x-h))+k$ | Combinação de modificações horizontais e verticais |
+
+**Atenção:** os parâmetros internos modificam as entradas
+da função; os externos modificam suas saídas.
+
+A correspondência geral entre pontos foi desenvolvida
+na seção **Ordem das transformações**. Utilize-a para
+acompanhar os efeitos sucessivos sobre o gráfico.
+
+Nas transformações trigonométricas, amplitude, período,
+linha média e deslocamentos devem ser interpretados
+considerando os parâmetros e as condições de definição.
+
+:::
+
+***
+
+::: {.callout-note title="🌉 Ponte para o Cálculo"}
 
 Transformações gráficas ajudam a reconhecer funções rapidamente.
 
@@ -1665,6 +1700,8 @@ Em resumo, transformações gráficas são uma ponte entre a álgebra da fórmul
 A função transladada $g(x)=(x-1)^2+1$ permite visualizar, em quatro painéis, aproximação, continuidade, tangência e área acumulada.
 
 ![Quatro painéis com uma parábola transladada (x menos um ao quadrado mais um): aproximação para limites, continuidade, reta tangente e área definida.](images/1.12-transformacoes-calculo.svg){fig-alt="Quatro painéis com uma parábola transladada (x menos um ao quadrado mais um): aproximação para limites, continuidade, reta tangente e área definida." width="94%"}
+
+:::
 
 ::: {.callout-note collapse="true" title="Clique para ver o código"}
 
@@ -1752,7 +1789,7 @@ a=axs[0,1]
 a.scatter([1],[1],s=94,color=VERDE,edgecolors="white",zorder=6)
 a.annotate(r"$g(1)=1$",(1,1),(1.2,2.5),color=VERDE,
            arrowprops=dict(arrowstyle="->",color=VERDE))
-# Painel 3: g'(2)=2, tangente = 3 + 2(x-2).
+# Painel 3: g'(2)=2, tangente = 2 + 2(x-2) = 2x - 2.
 a=axs[1,0]
 a.plot(x,2+2*(x-2),color=LARANJA,lw=2.1,ls="--")
 a.scatter([2],[2],s=78,color=VERMELHO,zorder=6)
@@ -1773,8 +1810,6 @@ salvar(fig,"1.12-transformacoes-calculo.svg")
 ```
 
 :::
-
-***
 
 # 🧪 Exercícios propostos
 
@@ -1845,9 +1880,9 @@ c) o deslocamento vertical.
 
 ***
 
-::: {.callout-important collapse=true title="✅ Gabarito"}
-
 # ✅ Gabarito comentado
+
+::: {.callout-important collapse="true" title="✅ Gabarito"}
 
 ## 🧪 Exercício 1
 
@@ -2007,7 +2042,7 @@ c) O deslocamento vertical é $1$ unidade para baixo, pois aparece o termo $-1$.
 
 ***
 
-## 🧩 Quiz — Transformações Gráficas
+# 🧩 Quiz — Transformações Gráficas
 
 :::::{.question}
 **Q1.** A função $g(x)=f(x)+3$ representa:
@@ -2067,11 +2102,11 @@ Compressão horizontal.
 
 # 🔗 Navegação
 
-🎯 **Post Anterior:** 👉 [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
+🎯 **Aula anterior:** 👉 [1.11 Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
 
-🎯 **Próximo Post:** 👉 [1.13 Composição de Funções](1.13-composicao-de-funcoes.qmd)
+🎯 **Próxima aula:** 👉 [1.13 Composição de Funções](1.13-composicao-de-funcoes.qmd)
 
-🏠 [Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · 🔝 [Topo](1.12-transformacoes-graficas.qmd)
+🏠 [← Sumário do Curso](../index.qmd) · [← Cursos de Matemática](../../index.qmd) · [← Seção de Matemática](/posts/matematica/index.qmd) · 🔝 [Voltar ao topo](#)
 
 ***
 
@@ -2080,4 +2115,3 @@ Compressão horizontal.
 :::{.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

@@ -387,7 +387,7 @@ window.Quarto = {
 </div>
 <section id="intervalos-e-inequações" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 📘 Intervalos e Inequações</h1>
-<p>Na aula anterior, começamos a organizar os números reais e a compreender a reta real como uma linha contínua de números.</p>
+<p>Na aula anterior, estudamos os conjuntos numéricos e começamos a compreender a organização dos números reais.</p>
 <p>Agora vamos dar um passo importante: aprender a descrever <strong>regiões da reta real</strong>.</p>
 <p>Essas regiões aparecem constantemente no Cálculo. Por exemplo:</p>
 <ul>
@@ -561,7 +561,7 @@ x\leq -1
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Nunca usamos colchete em <span class="math inline">\(-\infty\)</span> ou <span class="math inline">\(+\infty\)</span>, porque infinito não é um número real e não pode ser incluído como ponto final.</p>
+<p>Nunca usamos colchete em <span class="math inline">\(-\infty\)</span> ou <span class="math inline">\(+\infty\)</span>, porque infinito não é um número real e não pode ser incluído como ponto final de um intervalo.</p>
 </div>
 </div>
 <hr>
@@ -593,17 +593,21 @@ x\geq 2
 <h2 data-number="1.8" class="anchored" data-anchor-id="propriedades-da-ordem-em-mathbbr"><span class="header-section-number">1.8</span> 🧱 Propriedades da ordem em <span class="math inline">\(\mathbb{R}\)</span></h2>
 <p>Agora que a ideia geométrica já está clara, podemos formalizar algumas propriedades importantes da ordem nos números reais.</p>
 <p>Se <span class="math inline">\(a&lt;b\)</span>, então:</p>
-<p><strong>1. Podemos somar o mesmo número aos dois lados:</strong></p>
+<p><strong>1. Podemos somar o mesmo número aos dois lados sem alterar o sentido da desigualdade:</strong></p>
 <p><span class="math display">\[
 a+c&lt;b+c.
 \]</span></p>
 <p><strong>2. Podemos multiplicar por um número positivo sem mudar o sentido da desigualdade:</strong></p>
 <p><span class="math display">\[
-c&gt;0 \quad \Rightarrow \quad ac&lt;bc.
+c&gt;0
+\quad\Rightarrow\quad
+ac&lt;bc.
 \]</span></p>
 <p><strong>3. Ao multiplicar por um número negativo, o sentido da desigualdade se inverte:</strong></p>
 <p><span class="math display">\[
-c&lt;0 \quad \Rightarrow \quad ac&gt;bc.
+c&lt;0
+\quad\Rightarrow\quad
+ac&gt;bc.
 \]</span></p>
 <p>Essa última propriedade é uma das mais importantes no estudo das inequações.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Cuidado importante">
@@ -703,7 +707,8 @@ S=[-1,2).
 <h2 data-number="1.12" class="anchored" data-anchor-id="inequações-quadráticas-o-sinal-da-parábola"><span class="header-section-number">1.12</span> 📈 Inequações quadráticas: o sinal da parábola</h2>
 <p>Uma <strong>inequação quadrática</strong> é uma desigualdade que envolve um polinômio do segundo grau. Sua forma geral é</p>
 <p><span class="math display">\[
-ax^2+bx+c \;\square\; 0,\qquad a\neq 0,
+ax^2+bx+c\;\square\;0,
+\qquad a\neq 0,
 \]</span></p>
 <p>em que <span class="math inline">\(\square\)</span> representa um dos sinais <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(\leq\)</span>, <span class="math inline">\(&gt;\)</span> ou <span class="math inline">\(\geq\)</span>.</p>
 <p>Para resolver esse tipo de inequação, estudamos o sinal da função quadrática</p>
@@ -936,11 +941,6 @@ x^2+1\leq 0
 </div>
 </div>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Forma algébrica</th>
@@ -1032,7 +1032,22 @@ x^2+1\leq 0
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>No Cálculo, precisamos determinar onde uma função está definida e em quais regiões ela assume valores positivos ou negativos. <strong>Intervalos e inequações</strong> permitem descrever essas condições. Por exemplo, os domínios de <span class="math inline">\(f(x)=\frac{1}{x-2}\)</span> e <span class="math inline">\(g(x)=\sqrt{x-3}\)</span> são, respectivamente, <span class="math inline">\(\mathbb{R}\setminus\{2\}\)</span> e <span class="math inline">\([3,+\infty)\)</span>. Essa linguagem será fundamental no estudo de funções, limites e derivadas.</p>
+<p>No Cálculo, precisamos determinar onde uma função está definida e em quais regiões ela assume valores positivos ou negativos. <strong>Intervalos e inequações</strong> permitem descrever essas condições.</p>
+<p>Por exemplo, os domínios das funções</p>
+<p><span class="math display">\[
+f(x)=\frac{1}{x-2}
+\qquad\text{e}\qquad
+g(x)=\sqrt{x-3}
+\]</span></p>
+<p>são, respectivamente,</p>
+<p><span class="math display">\[
+D_f=\mathbb{R}\setminus\{2\}
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+D_g=[3,+\infty).
+\]</span></p>
+<p>Essa linguagem será fundamental no estudo de funções, limites e derivadas.</p>
 </div>
 </div>
 </section>
@@ -1119,54 +1134,38 @@ x^2+1\leq 0
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
-<ol type="a">
-<li><span class="math inline">\(x&gt;4\)</span>, logo</li>
-</ol>
+<p><strong>a)</strong> <span class="math inline">\(x&gt;4\)</span>, logo</p>
 <p><span class="math display">\[
 S=(4,+\infty).
 \]</span></p>
-<ol start="2" type="a">
-<li><span class="math inline">\(x\leq -2\)</span>, logo</li>
-</ol>
+<p><strong>b)</strong> <span class="math inline">\(x\leq -2\)</span>, logo</p>
 <p><span class="math display">\[
 S=(-\infty,-2].
 \]</span></p>
-<ol start="3" type="a">
-<li><span class="math inline">\(1&lt;x&lt;5\)</span>, logo</li>
-</ol>
+<p><strong>c)</strong> <span class="math inline">\(1&lt;x&lt;5\)</span>, logo</p>
 <p><span class="math display">\[
 S=(1,5).
 \]</span></p>
-<ol start="4" type="a">
-<li><span class="math inline">\(-3\leq x&lt;2\)</span>, logo</li>
-</ol>
+<p><strong>d)</strong> <span class="math inline">\(-3\leq x&lt;2\)</span>, logo</p>
 <p><span class="math display">\[
 S=[-3,2).
 \]</span></p>
 </section>
 <section id="exercício-2-1" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
-<ol type="a">
-<li><span class="math inline">\((2,+\infty)\)</span>, logo</li>
-</ol>
+<p><strong>a)</strong> <span class="math inline">\((2,+\infty)\)</span>, logo</p>
 <p><span class="math display">\[
 x&gt;2.
 \]</span></p>
-<ol start="2" type="a">
-<li><span class="math inline">\((-\infty,7]\)</span>, logo</li>
-</ol>
+<p><strong>b)</strong> <span class="math inline">\((-\infty,7]\)</span>, logo</p>
 <p><span class="math display">\[
 x\leq 7.
 \]</span></p>
-<ol start="3" type="a">
-<li><span class="math inline">\([1,4)\)</span>, logo</li>
-</ol>
+<p><strong>c)</strong> <span class="math inline">\([1,4)\)</span>, logo</p>
 <p><span class="math display">\[
 1\leq x&lt;4.
 \]</span></p>
-<ol start="4" type="a">
-<li><span class="math inline">\((-5,3]\)</span>, logo</li>
-</ol>
+<p><strong>d)</strong> <span class="math inline">\((-5,3]\)</span>, logo</p>
 <p><span class="math display">\[
 -5&lt;x\leq 3.
 \]</span></p>
@@ -1479,7 +1478,7 @@ S=\varnothing.
 <div class="callout-body-container callout-body">
 <p>Este aprofundamento é opcional. Você pode explorá-lo agora ou seguir as aulas principais e voltar quando quiser.</p>
 <ul>
-<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">1.19-AP — Valor Absoluto e Inequações Modulares</a> — Propriedades do módulo e resolução de inequações modulares.</li>
+<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">1.19-AP — Valor Absoluto e Inequações Modulares</a> — Definição, propriedades do módulo, desigualdade triangular e resolução de inequações modulares.</li>
 </ul>
 </div>
 </div>

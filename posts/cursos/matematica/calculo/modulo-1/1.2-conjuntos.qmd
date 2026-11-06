@@ -30,39 +30,69 @@ page-layout: full
 ***
 
 ::: {.callout-tip title="❓ Pergunta Disparadora"}
+
 Como podemos organizar objetos matemáticos em coleções e operar com essas coleções de forma precisa?
+
 :::
-
-
 
 ::: {.callout-note title="📌 Objetivos de Aprendizagem"}
-- Explorar os conjuntos numéricos fundamentais para o cálculo;
+
+- Explorar os conjuntos numéricos fundamentais para o Cálculo;
 - Conhecer suas principais propriedades;
+- Compreender as relações de inclusão entre os conjuntos;
+- Identificar números racionais e irracionais por suas representações decimais;
 - Apresentar exemplos e exercícios característicos.
+
 :::
 
-# 📘 O que são Conjuntos Numéricos?
+# 📘 O que são conjuntos numéricos?
 
-Os conjuntos numéricos são grupos de números que compartilham características comuns. Os principais que usaremos são:
+Os conjuntos numéricos são famílias de números que compartilham determinadas características matemáticas. Eles permitem organizar os números e compreender quais operações e propriedades são válidas em cada conjunto.
 
-- **Números Naturais \((\mathbb{N})\)**: \(\{0, 1, 2, 3, \ldots\}\)  
-  Usados para contar objetos; são os inteiros não negativos.
+Os principais conjuntos numéricos utilizados neste curso são os naturais, inteiros, racionais, irracionais e reais.
 
-- **Números Inteiros \((\mathbb{Z})\)**: \(\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}\)  
-  Incluem todos os naturais, seus opostos e o zero.
+- **Números Naturais ($\mathbb N$):** neste curso, adotaremos a convenção
 
-- **Números Racionais \((\mathbb{Q})\)**: números que podem ser escritos como fração  
-  \[
-  \mathbb{Q}=\left\{\frac{a}{b}\;\middle|\;a,b\in\mathbb{Z},\; b\neq 0\right\}.
-  \]
-  Exemplos: \(\frac{1}{2}\), \(-\frac{3}{4}\), \(5=\frac{5}{1}\).
+  $$
+  \mathbb N=\{0,1,2,3,\ldots\}.
+  $$
 
-- **Números Irracionais \((\mathbb{R}\setminus\mathbb{Q})\)**: **não** podem ser expressos como fração de inteiros; possuem decimal **infinito não periódico** (ex.: \(\sqrt{2}\), \(\pi\), \(e\)).
+  São utilizados, entre outras coisas, para contar objetos e representar quantidades inteiras não negativas.
 
-- **Números Reais \((\mathbb{R})\)**: todos os pontos da **reta real**; incluem racionais e irracionais.
+- **Números Inteiros ($\mathbb Z$):** incluem os naturais, seus opostos e o zero:
+
+  $$
+  \mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
+  $$
+
+- **Números Racionais ($\mathbb Q$):** são aqueles que podem ser escritos como uma fração de dois inteiros, com denominador diferente de zero:
+
+  $$
+  \mathbb Q=
+  \left\{
+  \frac ab\;\middle|\;
+  a,b\in\mathbb Z,\ b\neq0
+  \right\}.
+  $$
+
+  Exemplos:
+
+  $$
+  \frac12,\qquad -\frac34,\qquad 5=\frac51.
+  $$
+
+- **Números Irracionais ($\mathbb R\setminus\mathbb Q$):** são os números reais que não podem ser escritos como fração de dois inteiros. Sua representação decimal é infinita e não periódica.
+
+  Exemplos:
+
+  $$
+  \sqrt2,\qquad \pi,\qquad e.
+  $$
+
+- **Números Reais ($\mathbb R$):** correspondem a todos os pontos da reta real. Reúnem os números racionais e os irracionais.
 
 <div style="text-align: center;">
-  <img src="../images/Real_number_line.svg" alt="Reta Numérica Real" width="70%">
+  <img src="../images/Real_number_line.svg" alt="Reta numérica real" width="70%">
   <figcaption><strong>Reta Numérica Real</strong></figcaption>
   <p style="font-size: 0.8em; margin-top: 0.5em;">
     Crédito: Phrood (Domínio público).
@@ -71,217 +101,721 @@ Os conjuntos numéricos são grupos de números que compartilham característica
 
 ***
 
-# 🧠 Organização dos Conjuntos Numéricos
+# 🧠 Organização dos conjuntos numéricos
 
-Os conjuntos se organizam em **cadeia de inclusões**:
-\[
-\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}.
-\]
+Os conjuntos numéricos fundamentais estão organizados em uma cadeia de inclusões:
+
+$$
+\boxed{
+\mathbb N\subset\mathbb Z\subset\mathbb Q\subset\mathbb R.
+}
+$$
 
 <div style="text-align: center;">
-  <img src="../images/Number-systems.svg" alt="Hierarquia dos Conjuntos Numéricos" width="70%">
+  <img src="../images/Number-systems.svg" alt="Hierarquia dos conjuntos numéricos" width="70%">
   <figcaption><strong>Hierarquia dos Conjuntos Numéricos</strong></figcaption>
   <p style="font-size: 0.8em; margin-top: 0.5em;">
     Crédito: Mortalmoth (Domínio público).
   </p>
 </div>
 
-Isso significa, por exemplo, que **todo número natural é inteiro, racional e real** — mas o contrário **nem sempre** vale.
+Isso significa, por exemplo, que:
+
+- Todo número natural também é inteiro;
+- Todo número inteiro também é racional;
+- Todo número racional também é real.
+
+Entretanto, as inclusões não funcionam necessariamente no sentido contrário. Por exemplo, $\frac12$ é racional, mas não é inteiro.
+
+Os números irracionais também pertencem a $\mathbb R$, mas não pertencem a $\mathbb Q$.
 
 ***
 
-## 🔍 🧠 Saiba Mais: O que é um número irracional?
+## 🔍 🧠 Saiba Mais: o que é um número irracional?
 
-::: {.callout-tip collapse=false title="🧠 Saiba Mais: O que é um número irracional?"}
-🔢 Um irracional é um real **que não pode ser escrito** como \(\dfrac{a}{b}\) com \(a,b\in\mathbb{Z}\) e \(b\neq 0\).  
-Sua expansão decimal é **infinita não periódica** (ex.: \(\pi\), \(e\), \(\sqrt{2}\)).
+::: {.callout-tip collapse=false title="🧠 Saiba Mais: o que é um número irracional?"}
 
-Surgem naturalmente em: diagonal do quadrado (\(\sqrt{2}\)), circunferência (\(\pi\)), crescimento exponencial/logaritmos (\(e\)).  
-Historicamente, a irracionalidade de \(\sqrt{2}\) abalou a escola pitagórica.
+Um número irracional é um número real que **não pode ser escrito** na forma
+
+$$
+\frac ab,
+$$
+
+em que $a,b\in\mathbb Z$ e $b\neq0$.
+
+Sua representação decimal é infinita e não periódica.
+
+Exemplos:
+
+$$
+\pi,\qquad e,\qquad \sqrt2.
+$$
+
+Os irracionais surgem naturalmente em diferentes contextos matemáticos:
+
+- Na diagonal de um quadrado de lado 1, aparece $\sqrt2$;
+- No estudo das circunferências, aparece $\pi$;
+- Em fenômenos de crescimento exponencial e no estudo dos logaritmos naturais, aparece $e$.
+
+A existência de números irracionais mostra que nem todos os comprimentos e grandezas podem ser expressos como razões entre números inteiros.
+
 :::
 
-## 📐 A Escola Pitagórica e o “escândalo” dos irracionais
+## 📐 A Escola Pitagórica e o chamado escândalo dos irracionais
 
 ::: {.callout-note collapse=false title="📐 A Escola Pitagórica e os Irracionais"}
-**Quem eram?** Comunidade filósofo-matemática (séc. VI a.C.) que defendia “**tudo é número**” (racional).
 
-**A crise.** A hipotenusa de um triângulo isósceles de catetos 1 tem comprimento \(\sqrt{2}\), que **não** é racional.  
-Atribui-se a **Hipaso** a demonstração da irracionalidade de \(\sqrt{2}\).
+**Quem eram os pitagóricos?**
 
-**Impacto.** Primeiro abalo dessa visão; início da aceitação formal dos irracionais, essenciais para a **completude** de \(\mathbb{R}\).
+A escola pitagórica foi uma comunidade filosófica e matemática da Grécia Antiga, tradicionalmente associada a Pitágoras, no século VI a.C.
+
+Os pitagóricos atribuíam grande importância às relações numéricas e às proporções na compreensão do mundo.
+
+**A crise dos incomensuráveis.**
+
+Considere um triângulo retângulo isósceles cujos catetos medem 1. Pelo teorema de Pitágoras, a hipotenusa mede
+
+$$
+h=\sqrt{1^2+1^2}=\sqrt2.
+$$
+
+Entretanto, $\sqrt2$ não pode ser expresso como uma razão entre dois inteiros.
+
+Isso revelou que nem todas as grandezas geométricas podem ser representadas por razões entre números inteiros.
+
+**Impacto histórico.**
+
+A descoberta da incomensurabilidade representou um desafio profundo para a matemática grega antiga.
+
+A tradição histórica associa a demonstração da irracionalidade de $\sqrt2$ a Hipaso de Metaponto, embora os detalhes dessa atribuição não sejam historicamente seguros.
+
+A compreensão dos irracionais tornou-se essencial para o desenvolvimento posterior dos números reais e para a construção rigorosa do Cálculo.
+
 :::
 
-## 📘 🧠 Exercícios — Identificando Irracionais
+## 📘 🧠 Exercícios — Identificando irracionais
 
 ::: {.callout-note collapse=false title="📘 🧠 Exercícios — Identificando Números Irracionais"}
-1. Classifique como **racional** ou **irracional**:  
-   a) \(\sqrt{9}\) · b) \(\sqrt{5}\) · c) \(\tfrac{4}{7}\) · d) \(\pi\) · e) \(0{,}101001000100001\ldots\)
 
-2. Qual é **irracional**?  
-   A) \(\tfrac{7}{3}\) · B) \(1{,}333\ldots\) · C) \(\sqrt{2}\) · D) \(0{,}5\)
+**1.** Classifique cada número como racional ou irracional:
 
-3. V/F:  
-   a) Todo decimal infinito é irracional.  
-   b) \(\sqrt{25}\) é irracional.  
-   c) Existem mais irracionais do que racionais.
+a) $\sqrt9$
+
+b) $\sqrt5$
+
+c) $\frac47$
+
+d) $\pi$
+
+e) $0,101001000100001\ldots$
+
+**2.** Qual dos números abaixo é irracional?
+
+A) $\frac73$
+
+B) $1,333\ldots$
+
+C) $\sqrt2$
+
+D) $0,5$
+
+**3.** Classifique as afirmações como verdadeiras ou falsas:
+
+a) Todo decimal infinito é irracional.
+
+b) $\sqrt{25}$ é irracional.
+
+c) Existem mais números irracionais do que racionais, no sentido de cardinalidade dos conjuntos infinitos.
+
 :::
 
-## 📘 Gabarito — Identificação de Irracionais
+## 📘 Gabarito — Identificação de irracionais
 
 ::: {.callout-important collapse=true title="📘 Gabarito"}
-1. a) Racional (\(=3\)) · b) Irracional · c) Racional · d) Irracional · e) Irracional (infinito não periódico)  
-2. **C** (\(\sqrt{2}\))  
-3. a) **F** (apenas os infinitos **não periódicos** são irracionais) · b) **F** (\(\sqrt{25}=5\) é racional) · c) **V** (reais/irracionais são **não enumeráveis**, racionais são **enumeráveis** — Cantor).
+
+**1.**
+
+- a) Racional, pois $\sqrt9=3$;
+- b) Irracional;
+- c) Racional;
+- d) Irracional;
+- e) Irracional, considerando a expansão decimal infinita não periódica apresentada.
+
+**2.**
+
+Alternativa **C**: $\sqrt2$.
+
+**3.**
+
+- a) **Falsa.** Existem decimais infinitas periódicas, que representam números racionais. Por exemplo, $0,\overline3=\frac13$.
+- b) **Falsa.** $\sqrt{25}=5$, que é racional.
+- c) **Verdadeira.** Os racionais são enumeráveis, enquanto os reais e os irracionais são não enumeráveis. Portanto, os irracionais possuem cardinalidade maior que a dos racionais.
+
 :::
 
 ***
 
-## 📜 Um Pouco de História: Georg Cantor (1845–1918)
+## 📜 Um pouco de história: Georg Cantor (1845–1918)
 
 ::: {.callout-tip collapse=false title="📜 Um Pouco de História: Georg Cantor"}
-Criador da **teoria dos conjuntos** e do tratamento moderno do **infinito**.  
-Provou que \(\mathbb{R}\) (logo, os irracionais) é **não enumerável**, enquanto \(\mathbb{Q}\) é **enumerável** — há “mais” irracionais do que racionais.
+
+<text></text>
+
+Georg Cantor foi um matemático responsável por contribuições fundamentais para a teoria dos conjuntos e para o estudo matemático do infinito.
+
+Entre seus resultados mais importantes está a demonstração de que:
+
+- O conjunto dos números racionais $\mathbb Q$ é enumerável;
+- O conjunto dos números reais $\mathbb R$ é não enumerável.
+
+Assim, existem diferentes tamanhos de infinito. Embora $\mathbb Q$ e $\mathbb N$ sejam infinitos, os números reais não podem ser colocados em uma correspondência biunívoca com os naturais.
+
+A demonstração diagonal de Cantor é uma das ideias centrais para compreender esse resultado.
+
 :::
 
 ***
 
-# ✨ Representação Decimal dos Reais
+# ✨ Representação decimal dos reais
 
-- **Racionais**: decimal **finito** ou **infinito periódico**.  
-- **Irracionais**: decimal **infinito não periódico**.
+A representação decimal permite distinguir os números racionais dos irracionais.
 
-**Exemplos rápidos:**
+- **Racionais:** possuem representação decimal finita ou infinita periódica.
+- **Irracionais:** possuem representação decimal infinita não periódica.
 
-- \(\frac{3}{4}=0{,}75\) (finito)  
-- \(\frac{1}{3}=0{,}\overline{3}\) (infinito periódico)  
-- \(\sqrt{2}\approx 1{,}4142135\) (aproximação decimal; a expansão exata é infinita e não periódica)
+Exemplos:
+
+- $\frac34=0,75$ — decimal finita;
+- $\frac13=0,\overline3$ — decimal infinita periódica;
+- $\sqrt2\approx1,4142135$ — aproximação decimal de um número cuja expansão exata é infinita e não periódica.
+
+É importante observar que uma decimal infinita não é necessariamente irracional. O que caracteriza o irracional é a ausência de periodicidade.
 
 ***
 
 ## ✨ Dízimas periódicas e fração geratriz
 
-**Ex. 1 —** \(\tfrac{1}{3}\):  
-    \(1\div 3 = 0{,}333\ldots = 0{,}\overline{3}\) → **racional**.
+Uma dízima periódica é uma representação decimal infinita na qual um bloco de algarismos se repete indefinidamente.
 
-**Ex. 2 —** \(\tfrac{4}{11}\):  
-    \(4\div 11 = 0{,}363636\ldots = 0{,}\overline{36}\).
+**Exemplo 1 —**
 
-**Ex. 3 —** \(\tfrac{7}{8}\):  
-    \(7\div 8 = 0{,}875\) (finito).
+$$
+\frac13=0,333\ldots=0,\overline3.
+$$
 
-**Ex. 4 —** \(\tfrac{12}{90}\):  
-    \(12\div 90 = 0{,}1\overline{3}\) → **período** “3”.
+**Exemplo 2 —**
+
+$$
+\frac4{11}=0,363636\ldots=0,\overline{36}.
+$$
+
+**Exemplo 3 —**
+
+$$
+\frac78=0,875.
+$$
+
+**Exemplo 4 —**
+
+$$
+\frac{12}{90}=0,1333\ldots=0,1\overline3.
+$$
 
 ::: {.callout-note collapse=false title="🧠 Observação importante"}
-A fração **na forma irredutível** tem decimal **finito** **se e somente se** seu denominador possui **somente** fatores 2 e/ou 5.  
-Caso contrário, a expansão é uma **dízima periódica**.
+
+A representação decimal de uma fração irredutível é finita se, e somente se, seu denominador possui apenas fatores primos 2 e/ou 5.
+
+Caso contrário, sua representação decimal é infinita periódica.
+
+Exemplos:
+
+$$
+\frac38=0,375
+$$
+
+$$
+\frac4{15}=0,2\overline6
+$$
+
+O primeiro denominador possui apenas o fator primo 2. O segundo possui também o fator primo 3.
+
 :::
 
 ***
 
-## 📘 🧠 Exercícios Resolvidos — Fração Geratriz
+## 📘 🧠 Exercícios resolvidos — Fração geratriz
 
 ::: {.callout-note collapse=false title="📘 Exercícios Resolvidos: Dízimas → Fração"}
-**1.** \(0{,}\overline{3}\).  
-Seja \(x=0{,}\overline{3}\). \(10x=3{,}\overline{3}\) ⇒ \(9x=3\) ⇒ \(x=\tfrac{1}{3}\).
 
-**2.** \(0{,}\overline{72}\).  
-Seja \(x=0{,}\overline{72}\). \(100x=72{,}\overline{72}\) ⇒ \(99x=72\) ⇒ \(x=\tfrac{72}{99}=\tfrac{8}{11}\).
+**1.** Determine a fração geratriz de $0,\overline3$.
 
-**3.** \(2{,}\overline{1}\).  
-\(x=2{,}\overline{1}\). \(10x=21{,}\overline{1}\) ⇒ \(9x=19\) ⇒ \(x=\tfrac{19}{9}\).
+Seja
 
-**4.** \(0{,}4\overline{7}\).  
-\(x=0{,}4\overline{7}\). \(10x=4{,}\overline{7}\), \(100x=47{,}\overline{7}\) ⇒ \(90x=43\) ⇒ \(x=\tfrac{43}{90}\).
+$$
+x=0,\overline3.
+$$
 
-**5.** \(3{,}12\overline{5}\).  
-\(x=3{,}12555\ldots\). \(1000x=3125{,}555\ldots\), \(100x=312{,}555\ldots\) ⇒ \(900x=2813\) ⇒ \(x=\tfrac{2813}{900}\).
+Multiplicando por 10:
+
+$$
+10x=3,\overline3.
+$$
+
+Subtraindo:
+
+$$
+10x-x=3
+\quad\Longrightarrow\quad
+9x=3.
+$$
+
+Portanto,
+
+$$
+\boxed{x=\frac13}.
+$$
+
+**2.** Determine a fração geratriz de $0,\overline{72}$.
+
+Seja
+
+$$
+x=0,\overline{72}.
+$$
+
+Multiplicando por 100:
+
+$$
+100x=72,\overline{72}.
+$$
+
+Subtraindo:
+
+$$
+100x-x=72
+\quad\Longrightarrow\quad
+99x=72.
+$$
+
+Logo,
+
+$$
+\boxed{x=\frac{72}{99}=\frac8{11}}.
+$$
+
+**3.** Determine a fração geratriz de $2,\overline1$.
+
+Seja
+
+$$
+x=2,\overline1.
+$$
+
+Multiplicando por 10:
+
+$$
+10x=21,\overline1.
+$$
+
+Subtraindo:
+
+$$
+10x-x=19
+\quad\Longrightarrow\quad
+9x=19.
+$$
+
+Portanto,
+
+$$
+\boxed{x=\frac{19}{9}}.
+$$
+
+**4.** Determine a fração geratriz de $0,4\overline7$.
+
+Seja
+
+$$
+x=0,4777\ldots
+$$
+
+Multiplicando por 10:
+
+$$
+10x=4,7777\ldots
+$$
+
+Multiplicando por 100:
+
+$$
+100x=47,7777\ldots
+$$
+
+Subtraindo:
+
+$$
+100x-10x=47,7777\ldots-4,7777\ldots
+$$
+
+$$
+90x=43.
+$$
+
+Portanto,
+
+$$
+\boxed{x=\frac{43}{90}}.
+$$
+
+**5.** Determine a fração geratriz de $3,12\overline5$.
+
+Seja
+
+$$
+x=3,12555\ldots
+$$
+
+Multiplicando por 1000:
+
+$$
+1000x=3125,5555\ldots
+$$
+
+Multiplicando por 100:
+
+$$
+100x=312,5555\ldots
+$$
+
+Subtraindo:
+
+$$
+900x=2813.
+$$
+
+Logo,
+
+$$
+\boxed{x=\frac{2813}{900}}.
+$$
+
 :::
 
-## 🧩 Exercícios — Fração Geratriz
+## 🧩 Exercícios — Fração geratriz
 
 ::: {.callout-note collapse=false title="🧩 Exercícios: Dízimas → Fração"}
-1) \(0{,}\overline{3}\), \(0{,}\overline{7}\), \(0{,}\overline{2}\)  
-2) \(0{,}1\overline{3}\), \(0{,}72\overline{1}\), \(1{,}2\overline{45}\)  
-3) \(0{,}\overline{81}\), \(2{,}\overline{6}\), \(3{,}4\overline{3}\)  
-4) \(0{,}4\overline{5}\) (simplifique)
+
+Determine as frações geratrizes e simplifique quando possível.
+
+**1. Dízimas periódicas simples**
+
+a) $0,\overline3$
+
+b) $0,\overline7$
+
+c) $0,\overline2$
+
+**2. Dízimas periódicas compostas**
+
+a) $0,1\overline3$
+
+b) $0,72\overline1$
+
+c) $1,2\overline{45}$
+
+**3. Outras dízimas periódicas**
+
+a) $0,\overline{81}$
+
+b) $2,\overline6$
+
+c) $3,4\overline3$
+
+**4.** Determine e simplifique a fração geratriz:
+
+$$
+0,4\overline5.
+$$
+
 :::
 
-## ✅ Gabarito — Fração Geratriz
+## ✅ Gabarito — Fração geratriz
 
 ::: {.callout-important collapse=true title="✅ Gabarito — Fração Geratriz"}
-1) \(\tfrac{1}{3}\), \(\tfrac{7}{9}\), \(\tfrac{2}{9}\)
 
-2) \(\tfrac{2}{15}\), **\(\tfrac{649}{900}\)**, \(\tfrac{1233}{990}=\tfrac{137}{110}\)
+**1.**
 
-3) \(\tfrac{9}{11}\), \(\tfrac{8}{3}\), **\(\tfrac{103}{30}\)**
+a) $\frac13$
 
-4) \(\tfrac{41}{90}\)
+b) $\frac79$
+
+c) $\frac29$
+
+**2.**
+
+a) $\frac2{15}$
+
+b) $\frac{649}{900}$
+
+c)
+
+$$
+\frac{1233}{990}=\frac{137}{110}.
+$$
+
+**3.**
+
+a) $\frac9{11}$
+
+b) $\frac83$
+
+c)
+
+$$
+\frac{103}{30}.
+$$
+
+**4.**
+
+$$
+\boxed{\frac{41}{90}}.
+$$
+
 :::
 
 ***
 
-# 📚 Propriedades dos Conjuntos Numéricos
+# 📚 Propriedades dos conjuntos numéricos
 
-🔸 **Definições úteis**
+Antes de comparar as propriedades dos conjuntos, precisamos compreender duas ideias importantes: fechamento e densidade.
 
-- **Fechamento**: um conjunto é **fechado** para uma operação quando o resultado **permanece no conjunto**.  
-  Ex.: \(\mathbb{N}\) é fechado para adição; \(\mathbb{Z}\) é fechado para subtração.
+### 🔸 Definições úteis
 
-- **Densidade em \(\mathbb{R}\)**: um subconjunto \(A\subseteq\mathbb{R}\) é **denso em \(\mathbb{R}\)** quando todo intervalo aberto \((a,b)\), com \(a<b\), contém ao menos um elemento de \(A\).
-  Ex.: \(\mathbb{Q}\) é denso; também \(\mathbb{R}\setminus\mathbb{Q}\) é denso em \(\mathbb{R}\).
+**Fechamento:** um conjunto é fechado para determinada operação quando o resultado dessa operação permanece no próprio conjunto, desde que os operandos pertençam a ele e que a operação esteja definida.
 
-***
+Exemplos:
 
-🔹 **Naturais \((\mathbb{N}=\{0,1,2,\ldots\})\)**  
-Contagem; fechados para \(+\) e \(\cdot\); não fechados para \(-\) e \(/\).
+- $\mathbb N$ é fechado para adição;
+- $\mathbb Z$ é fechado para subtração;
+- $\mathbb Q$ é fechado para divisão por um racional diferente de zero.
 
-🔹 **Inteiros \((\mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\})\)**  
-Incluem \(\mathbb{N}\); fechados para \(+\), \(-\), \(\cdot\); não fechados para \(/\).
+**Densidade em $\mathbb R$:** um subconjunto $A\subseteq\mathbb R$ é denso em $\mathbb R$ quando todo intervalo aberto $(a,b)$, com $a<b$, contém pelo menos um elemento de $A$.
 
-🔹 **Racionais \((\mathbb{Q})\)**  
-Frações e decimais finitos/periódicos; fechados para as 4 operações (com \(b\neq 0\)); **densos**.
+Exemplos:
 
-🔹 **Irracionais \((\mathbb{R}\setminus\mathbb{Q})\)**  
-Decimais infinitos **não periódicos**; **densos**; não fechados para \(+\) ou \(\cdot\) (ex.: \(\sqrt{2}+(-\sqrt{2})=0\notin\) irracionais).
+- $\mathbb Q$ é denso em $\mathbb R$;
+- $\mathbb R\setminus\mathbb Q$ também é denso em $\mathbb R$.
 
-🔹 **Reais \((\mathbb{R})\)**  
-\(\mathbb{Q}\cup(\mathbb{R}\setminus\mathbb{Q})\); representam a reta real.  
-Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}\).
+Isso significa que, entre dois números reais distintos, sempre existe um racional e também um irracional.
 
-## 📌 Resumo — Propriedades
+### 🔹 Naturais ($\mathbb N=\{0,1,2,\ldots\}$)
+
+São utilizados principalmente para contagem.
+
+- Fechados para adição;
+- Fechados para multiplicação;
+- Não fechados para subtração;
+- Não fechados para divisão.
+
+Exemplos:
+
+$$
+2+3=5\in\mathbb N
+$$
+
+$$
+2-5=-3\notin\mathbb N.
+$$
+
+### 🔹 Inteiros ($\mathbb Z$)
+
+Incluem os naturais, os números negativos e o zero.
+
+- Fechados para adição;
+- Fechados para subtração;
+- Fechados para multiplicação;
+- Não fechados para divisão.
+
+Exemplo:
+
+$$
+3-7=-4\in\mathbb Z
+$$
+
+Entretanto,
+
+$$
+\frac12\notin\mathbb Z.
+$$
+
+### 🔹 Racionais ($\mathbb Q$)
+
+São os números que podem ser representados por frações de inteiros com denominador não nulo.
+
+- Fechados para adição;
+- Fechados para subtração;
+- Fechados para multiplicação;
+- Fechados para divisão por elementos não nulos;
+- Densos em $\mathbb R$.
+
+Exemplo:
+
+$$
+\frac12+\frac13=\frac56\in\mathbb Q.
+$$
+
+### 🔹 Irracionais ($\mathbb R\setminus\mathbb Q$)
+
+São os reais que não podem ser expressos como frações de inteiros.
+
+- Possuem representação decimal infinita não periódica;
+- São densos em $\mathbb R$;
+- Não são fechados para adição;
+- Não são fechados para multiplicação.
+
+Exemplos:
+
+$$
+\sqrt2+(-\sqrt2)=0\notin\mathbb R\setminus\mathbb Q
+$$
+
+e
+
+$$
+\sqrt2\cdot\sqrt2=2\notin\mathbb R\setminus\mathbb Q.
+$$
+
+Portanto, a soma ou o produto de dois irracionais pode ser racional. Também pode ser irracional, dependendo dos números escolhidos.
+
+### 🔹 Reais ($\mathbb R$)
+
+São formados pela união dos racionais com os irracionais:
+
+$$
+\mathbb R=\mathbb Q\cup(\mathbb R\setminus\mathbb Q).
+$$
+
+Representam todos os pontos da reta real.
+
+Para $a,b\in\mathbb R$, a divisão $\frac ab$ está definida em $\mathbb R$ sempre que $b\neq0$.
+
+## 📌 Resumo — Propriedades dos conjuntos
 
 ::: {.callout-tip collapse=false title="📌 Resumo: Propriedades dos Conjuntos"}
-| Conjunto        | Símbolo | Propriedades principais |
-|-----------------|---------|-------------------------|
-| Naturais        | \(\mathbb{N}\) | \(+\) e \(\cdot\) fechados; base da contagem. |
-| Inteiros        | \(\mathbb{Z}\) | \(+\), \(-\), \(\cdot\) fechados; inclui negativos. |
-| Racionais       | \(\mathbb{Q}\) | Frações; decimais finitos ou periódicos; **denso**. |
-| Irracionais     | \(\mathbb{R}\setminus\mathbb{Q}\) | Decimais não periódicos; **denso**. |
-| Reais           | \(\mathbb{R}\) | União de racionais e irracionais; divisão definida para \(b\neq 0\). |
+
+| Conjunto | Símbolo | Propriedades principais |
+|---|---|---|
+| Naturais | $\mathbb N$ | Fechados para adição e multiplicação; utilizados na contagem. |
+| Inteiros | $\mathbb Z$ | Fechados para adição, subtração e multiplicação. |
+| Racionais | $\mathbb Q$ | Frações; decimais finitas ou periódicas; densos em $\mathbb R$. |
+| Irracionais | $\mathbb R\setminus\mathbb Q$ | Decimais infinitas não periódicas; densos em $\mathbb R$. |
+| Reais | $\mathbb R$ | União dos racionais e irracionais; representam a reta real. |
+
 :::
 
-## 📚 Propriedades Algébricas Básicas em \(\mathbb{R}\)
+## 📚 Propriedades algébricas básicas em $\mathbb R$
 
 ::: {.callout-note collapse=false title="📚 Propriedades Algébricas Básicas em ℝ"}
-- \(0\cdot x=0\);\quad \((-x)\cdot y=-(x\cdot y)\);\quad \((-x)(-y)=x\cdot y\)  
-- \(x+y=x\Rightarrow y=0\);\quad \((x\neq 0\ \text{e}\ x\cdot y=x)\Rightarrow y=1\)
-- \(x+y=0\Rightarrow y=-x\);\quad \(x\cdot y=1\Rightarrow y=x^{-1}\,(x\neq 0)\)  
-- \(x+z=y+z\Rightarrow x=y\) (**cancelamento da adição**)  
-- \(z\neq 0\) e \(x\cdot z=y\cdot z\Rightarrow x=y\) (**cancelamento da multiplicação**)  
-- \(x\neq 0,\ y\neq 0\Rightarrow x\cdot y\neq 0\) (**não há divisores de zero em \(\mathbb{R}\)**)
+
+Para quaisquer $x,y,z\in\mathbb R$:
+
+**Propriedades do produto:**
+
+$$
+0\cdot x=0
+$$
+
+$$
+(-x)\cdot y=-(x\cdot y)
+$$
+
+$$
+(-x)(-y)=x\cdot y
+$$
+
+**Cancelamento e elementos neutros:**
+
+$$
+x+y=x\Longrightarrow y=0
+$$
+
+$$
+x+z=y+z\Longrightarrow x=y
+$$
+
+**Inversos:**
+
+$$
+x+y=0\Longrightarrow y=-x
+$$
+
+Se $x\neq0$ e $xy=1$, então
+
+$$
+y=x^{-1}.
+$$
+
+**Cancelamento da multiplicação:**
+
+$$
+z\neq0,\quad xz=yz
+\Longrightarrow x=y.
+$$
+
+**Ausência de divisores de zero:**
+
+$$
+x\neq0,\ y\neq0
+\Longrightarrow xy\neq0.
+$$
+
 :::
 
-## ✏️ Operações Auxiliares
+## ✏️ Operações auxiliares
 
 ::: {.callout-note collapse=false title="Operações Auxiliares"}
-**Subtração**: \(a-b=a+(-b)\).  
-**Divisão** (\(b\neq 0\)): \(\tfrac{a}{b}=a\cdot b^{-1}\).
 
-**Exemplos**  
-- Simétrico aditivo de \(5\): \(-5\) (pois \(5+(-5)=0\)).  
-- Inverso multiplicativo de \(3\): \(\tfrac{1}{3}\) (pois \(3\cdot\tfrac{1}{3}=1\)).  
-- \(7-2=7+(-2)=5\); \(\ 5\div2=5\cdot\tfrac{1}{2}=\tfrac{5}{2}=2{,}5\).
+**Subtração:** é definida por meio da adição do oposto:
+
+$$
+a-b=a+(-b).
+$$
+
+**Divisão:** é definida por meio da multiplicação pelo inverso, desde que o divisor seja diferente de zero:
+
+$$
+\frac ab=a\cdot b^{-1},\qquad b\neq0.
+$$
+
+**Exemplos**
+
+- Simétrico aditivo de 5:
+
+  $$
+  -5,\qquad 5+(-5)=0.
+  $$
+
+- Inverso multiplicativo de 3:
+
+  $$
+  \frac13,\qquad 3\cdot\frac13=1.
+  $$
+
+- Subtração:
+
+  $$
+  7-2=7+(-2)=5.
+  $$
+
+- Divisão:
+
+  $$
+  5\div2
+  =5\cdot\frac12
+  =\frac52
+  =2,5.
+  $$
+
 :::
 
 ***
@@ -291,51 +825,200 @@ Para \(a,b\in\mathbb{R}\), **se \(b\neq 0\)** então \(\tfrac{a}{b}\in\mathbb{R}
 | Ideia | Significado | Papel no Cálculo |
 |---|---|---|
 | Conjuntos numéricos | Famílias de números com propriedades em comum | Organizam os objetos com que o Cálculo trabalha |
-| \(\mathbb{N}\) | Números naturais | Contagem e sequências iniciais |
-| \(\mathbb{Z}\) | Números inteiros | Inclui negativos e zero |
-| \(\mathbb{Q}\) | Números racionais, escritos como frações | Representam razões, proporções e dízimas periódicas |
-| Irracionais | Números reais que não podem ser escritos como fração de inteiros | Incluem \(\sqrt{2}\), \(\pi\), \(e\) e muitos limites importantes |
-| \(\mathbb{R}\) | Conjunto dos números reais | Ambiente natural das funções reais de uma variável |
+| $\mathbb N$ | Números naturais | Contagem e sequências iniciais |
+| $\mathbb Z$ | Números inteiros | Inclui negativos e zero |
+| $\mathbb Q$ | Números racionais, escritos como frações | Representam razões, proporções e dízimas periódicas |
+| Irracionais | Reais que não podem ser escritos como fração de inteiros | Incluem $\sqrt2$, $\pi$, $e$ e muitos outros números importantes |
+| $\mathbb R$ | Conjunto dos números reais | Ambiente natural das funções reais de uma variável |
 | Dízima periódica | Decimal com repetição infinita de blocos | Sempre representa um número racional |
-| Completude dos reais | Ausência de “buracos” na reta real | Sustenta a ideia de limite no Cálculo |
+| Completude dos reais | Todo conjunto não vazio e limitado superiormente possui supremo em $\mathbb R$ | Sustenta resultados fundamentais do Cálculo |
 | Propriedades algébricas | Regras de soma, produto, distributividade, neutros e inversos | Permitem manipular expressões com segurança |
 
 ***
 
 ::: {.callout-tip title="🌉 Ponte para o Cálculo"}
 
-Os números reais formam o ambiente em que estudaremos funções, limites e derivadas. A **completude de \(\mathbb{R}\)** — a ideia de que a reta real não possui lacunas — sustenta resultados fundamentais do Cálculo, como o Teorema do Valor Intermediário.
+Os números reais formam o ambiente em que estudaremos funções, limites e derivadas.
+
+A **completude de $\mathbb R$** — a propriedade que garante a existência de supremos para conjuntos não vazios e limitados superiormente — é essencial para diversos resultados fundamentais do Cálculo, como o Teorema do Valor Intermediário.
 
 :::
 
-# 📝 Exercícios Propostos — Revisão
+# 📝 Exercícios propostos — Revisão
 
 ::: {.callout-note collapse=false title="🧠 Exercícios de Revisão — Módulo 1.2"}
-1) Classifique: \(\sqrt{2}\), \(0{,}333\ldots\), \(\pi\), \(7/2\), \(\sqrt{25}\).  
-2) Escreva os subconjuntos de \(\mathbb{R}\) em ordem de inclusão.  
-3) Dê **três** exemplos de irracionais e justifique.  
-4) Diferencie decimal **finito** e **infinito** com exemplos.  
-5) \(3{,}727272\ldots\) é racional? Encontre a fração geratriz.  
-6) Transforme \(0{,}1666\ldots\) em fração.  
-7) A expansão decimal exata de \(\sqrt{2}\) é periódica? Por quê?
-8) Se \(a+7=b+7\), conclua sobre \(a\) e \(b\).  
-9) Simplifique: \((-3)\cdot(-x)+(-2x)\).  
-10) Se \(x\cdot a=x\) e \(x\neq 0\), conclua sobre \(a\).
+
+**1.** Classifique os números como racionais ou irracionais:
+
+$$
+\sqrt2,\quad 0,333\ldots,\quad
+\pi,\quad \frac72,\quad \sqrt{25}.
+$$
+
+**2.** Escreva os principais conjuntos numéricos em ordem de inclusão.
+
+**3.** Dê três exemplos de números irracionais e justifique sua classificação.
+
+**4.** Diferencie decimal finita e decimal infinita, apresentando exemplos.
+
+**5.** O número $3,727272\ldots$ é racional? Encontre sua fração geratriz.
+
+**6.** Transforme $0,1666\ldots$ em fração.
+
+**7.** A expansão decimal exata de $\sqrt2$ é periódica? Por quê?
+
+**8.** Se $a+7=b+7$, o que podemos concluir sobre $a$ e $b$?
+
+**9.** Simplifique:
+
+$$
+(-3)\cdot(-x)+(-2x).
+$$
+
+**10.** Se $x\cdot a=x$ e $x\neq0$, o que podemos concluir sobre $a$?
+
 :::
 
 # 📝 Gabarito — Revisão
 
 ::: {.callout-important collapse=true title="📝 Gabarito — Revisão"}
-1) I, R, I, R, R.  
-2) \(\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\).  
-3) Ex.: \(\sqrt{3}\), \(\pi\), \(e\) (não são frações de inteiros; decimal não periódico).  
-4) \(1/4=0{,}25\) (finito) vs. \(1/3=0{,}\overline{3}\) (infinito periódico).  
-5) \(x=3{,}7272\ldots\). \(100x=372{,}72\ldots\); \(100x-x=369\) ⇒ \(x=\tfrac{369}{99}=\tfrac{41}{11}\).  
-6) \(x=0{,}1666\ldots\). \(10x=1{,}666\ldots\) ⇒ \(9x=1{,}5\) ⇒ \(x=\tfrac{1{,}5}{9}=\tfrac{3}{18}=\tfrac{1}{6}\).  
-7) Não. Como \(\sqrt{2}\) é irracional, sua expansão decimal é infinita e **não periódica**.
-8) **Cancelamento da adição**: \(a=b\).  
-9) \((-3)(-x)=3x\) ⇒ \(3x+(-2x)=x\).  
-10) **Unidade multiplicativa**: \(a=1\).
+
+**1.**
+
+- $\sqrt2$: irracional;
+- $0,333\ldots$: racional, pois é igual a $\frac13$;
+- $\pi$: irracional;
+- $\frac72$: racional;
+- $\sqrt{25}$: racional, pois é igual a 5.
+
+**2.**
+
+$$
+\mathbb N\subset\mathbb Z\subset\mathbb Q\subset\mathbb R.
+$$
+
+**3.**
+
+Exemplos:
+
+$$
+\sqrt3,\qquad \pi,\qquad e.
+$$
+
+São irracionais porque não podem ser escritos como frações de inteiros com denominador não nulo.
+
+**4.**
+
+Uma decimal finita possui quantidade limitada de casas decimais:
+
+$$
+\frac14=0,25.
+$$
+
+Uma decimal infinita periódica apresenta um bloco de algarismos que se repete indefinidamente:
+
+$$
+\frac13=0,\overline3.
+$$
+
+Também existem decimais infinitas não periódicas, que representam números irracionais.
+
+**5.**
+
+Seja
+
+$$
+x=3,727272\ldots
+$$
+
+Multiplicando por 100:
+
+$$
+100x=372,727272\ldots
+$$
+
+Subtraindo:
+
+$$
+100x-x=369.
+$$
+
+Logo,
+
+$$
+99x=369
+$$
+
+e
+
+$$
+\boxed{x=\frac{369}{99}=\frac{41}{11}}.
+$$
+
+**6.**
+
+Seja
+
+$$
+x=0,1666\ldots
+$$
+
+Multiplicando por 10:
+
+$$
+10x=1,6666\ldots
+$$
+
+Subtraindo:
+
+$$
+10x-x=1,5.
+$$
+
+Assim,
+
+$$
+9x=1,5
+$$
+
+e
+
+$$
+\boxed{x=\frac{1,5}{9}=\frac16}.
+$$
+
+**7.**
+
+Não. Como $\sqrt2$ é irracional, sua expansão decimal é infinita e não periódica.
+
+**8.**
+
+Pela propriedade do cancelamento da adição:
+
+$$
+a+7=b+7\Longrightarrow\boxed{a=b}.
+$$
+
+**9.**
+
+$$
+(-3)(-x)+(-2x)
+=3x-2x
+=\boxed{x}.
+$$
+
+**10.**
+
+Como $x\neq0$, podemos dividir os dois lados por $x$:
+
+$$
+xa=x
+\Longrightarrow
+a=1.
+$$
+
+Portanto, $a$ é o elemento neutro da multiplicação.
+
 :::
 
 ***
@@ -343,29 +1026,33 @@ Os números reais formam o ambiente em que estudaremos funções, limites e deri
 # 🧩 Quiz — Conjuntos Numéricos
 
 :::::{.question}
+
 **Q1.** A cadeia correta de inclusões entre os principais conjuntos numéricos é:
 
 ::::{.choices}
 
 :::{.choice}
-\(\mathbb{R}\subset\mathbb{Q}\subset\mathbb{Z}\subset\mathbb{N}\).
+$\mathbb R\subset\mathbb Q\subset\mathbb Z\subset\mathbb N$.
 :::
 
 :::{.choice .correct-choice}
-\(\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\).
+$\mathbb N\subset\mathbb Z\subset\mathbb Q\subset\mathbb R$.
 :::
 
 :::{.choice}
-\(\mathbb{Q}\subset\mathbb{N}\subset\mathbb{R}\subset\mathbb{Z}\).
+$\mathbb Q\subset\mathbb N\subset\mathbb R\subset\mathbb Z$.
 :::
 
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q2.** Um número irracional pode ser reconhecido, em sua representação decimal, por ser:
 
 ::::{.choices}
+
 :::{.choice .correct-choice}
 Infinito e não periódico.
 :::
@@ -379,12 +1066,15 @@ Infinito e necessariamente periódico.
 :::
 
 ::::
+
 :::::
 
 :::::{.question}
+
 **Q3.** Toda dízima periódica representa:
 
 ::::{.choices}
+
 :::{.choice .correct-choice}
 Um número racional.
 :::
@@ -398,6 +1088,7 @@ Um número que não pertence aos reais.
 :::
 
 ::::
+
 :::::
 
 ***
@@ -406,9 +1097,9 @@ Um número que não pertence aos reais.
 
 Este aprofundamento é opcional. Você pode explorá-lo agora ou seguir as aulas principais e voltar quando quiser.
 
-- [1.18-AP — Conjuntos Numéricos](1.18-AP-conjuntos.qmd) — Irracionalidade, enumerabilidade e completude dos reais.
+- [1.18-AP — Conjuntos Numéricos](1.18-AP-conjuntos.qmd) — Demonstração da irracionalidade de $\sqrt2$, enumerabilidade, método diagonal de Cantor, representação decimal e completude dos reais.
 
-::: 
+:::
 
 # 🔗 Navegação
 
@@ -422,7 +1113,6 @@ Este aprofundamento é opcional. Você pode explorá-lo agora ou seguir as aulas
 
 *Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.*
 
-:::{.callout-note}
+::: {.callout-note}
 Criado por Blog do Marcellini com ❤️ e código.
 :::
-

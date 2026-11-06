@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Revisão geral do Módulo 1 do Curso de Cálculo: pré-cálculo essencial, funções, gráficos, modelos, composição, inversas e comportamento assintótico.">
+<meta name="description" content="Revisão integradora dos fundamentos do pré-cálculo: números reais, intervalos, funções, gráficos, operações, modelagem, crescimento e comportamento assintótico.">
 
 <title>📘 Módulo 1.17: Revisão Geral do Módulo 1 – Blog do Marcellini</title>
 <style>
@@ -127,14 +127,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="📘 Módulo 1.17: Revisão Geral do Módulo 1 – Blog do Marcellini">
-<meta property="og:description" content="Revisão geral do Módulo 1 do Curso de Cálculo: pré-cálculo essencial, funções, gráficos, modelos, composição, inversas e comportamento assintótico.">
+<meta property="og:description" content="Revisão integradora dos fundamentos do pré-cálculo: números reais, intervalos, funções, gráficos, operações, modelagem, crescimento e comportamento assintótico.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="📘 Módulo 1.17: Revisão Geral do Módulo 1 – Blog do Marcellini">
-<meta name="twitter:description" content="Revisão geral do Módulo 1 do Curso de Cálculo: pré-cálculo essencial, funções, gráficos, modelos, composição, inversas e comportamento assintótico.">
+<meta name="twitter:description" content="Revisão integradora dos fundamentos do pré-cálculo: números reais, intervalos, funções, gráficos, operações, modelagem, crescimento e comportamento assintótico.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -267,33 +267,73 @@ window.Quarto = {
    
   <ul>
   <li><a href="#revisão-geral-do-módulo-1" id="toc-revisão-geral-do-módulo-1" class="nav-link active" data-scroll-target="#revisão-geral-do-módulo-1"><span class="header-section-number">1</span> 📘 Revisão Geral do Módulo 1</a>
+  <ul>
+  <li><a href="#o-papel-do-módulo-1-na-construção-do-cálculo" id="toc-o-papel-do-módulo-1-na-construção-do-cálculo" class="nav-link" data-scroll-target="#o-papel-do-módulo-1-na-construção-do-cálculo"><span class="header-section-number">1.1</span> 🧭 O papel do Módulo 1 na construção do Cálculo</a></li>
+  <li><a href="#conjuntos-e-números-reais" id="toc-conjuntos-e-números-reais" class="nav-link" data-scroll-target="#conjuntos-e-números-reais"><span class="header-section-number">1.2</span> 🔢 Conjuntos e números reais</a>
   <ul class="collapse">
-  <li><a href="#o-papel-do-módulo-1" id="toc-o-papel-do-módulo-1" class="nav-link" data-scroll-target="#o-papel-do-módulo-1"><span class="header-section-number">1.1</span> 🧭 O papel do Módulo 1</a></li>
-  <li><a href="#conjuntos-e-números-reais" id="toc-conjuntos-e-números-reais" class="nav-link" data-scroll-target="#conjuntos-e-números-reais"><span class="header-section-number">1.2</span> 🔢 Conjuntos e números reais</a></li>
-  <li><a href="#intervalos" id="toc-intervalos" class="nav-link" data-scroll-target="#intervalos"><span class="header-section-number">1.3</span> 📏 Intervalos</a></li>
-  <li><a href="#equações-e-inequações" id="toc-equações-e-inequações" class="nav-link" data-scroll-target="#equações-e-inequações"><span class="header-section-number">1.4</span> 🧮 Equações e inequações</a></li>
-  <li><a href="#valor-absoluto" id="toc-valor-absoluto" class="nav-link" data-scroll-target="#valor-absoluto"><span class="header-section-number">1.5</span> 📐 Valor absoluto</a></li>
+  <li><a href="#operações-com-conjuntos" id="toc-operações-com-conjuntos" class="nav-link" data-scroll-target="#operações-com-conjuntos"><span class="header-section-number">1.2.1</span> Operações com conjuntos</a></li>
+  </ul></li>
+  <li><a href="#intervalos-reais" id="toc-intervalos-reais" class="nav-link" data-scroll-target="#intervalos-reais"><span class="header-section-number">1.3</span> 📏 Intervalos reais</a>
+  <ul class="collapse">
+  <li><a href="#aplicações-dos-intervalos" id="toc-aplicações-dos-intervalos" class="nav-link" data-scroll-target="#aplicações-dos-intervalos"><span class="header-section-number">1.3.1</span> Aplicações dos intervalos</a></li>
+  </ul></li>
+  <li><a href="#equações-e-inequações" id="toc-equações-e-inequações" class="nav-link" data-scroll-target="#equações-e-inequações"><span class="header-section-number">1.4</span> 🧮 Equações e inequações</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-determinação-de-domínio" id="toc-exemplo-determinação-de-domínio" class="nav-link" data-scroll-target="#exemplo-determinação-de-domínio"><span class="header-section-number">1.4.1</span> Exemplo: determinação de domínio</a></li>
+  </ul></li>
+  <li><a href="#valor-absoluto-e-distância" id="toc-valor-absoluto-e-distância" class="nav-link" data-scroll-target="#valor-absoluto-e-distância"><span class="header-section-number">1.5</span> 📐 Valor absoluto e distância</a>
+  <ul class="collapse">
+  <li><a href="#valor-absoluto-e-vizinhanças" id="toc-valor-absoluto-e-vizinhanças" class="nav-link" data-scroll-target="#valor-absoluto-e-vizinhanças"><span class="header-section-number">1.5.1</span> Valor absoluto e vizinhanças</a></li>
+  </ul></li>
   <li><a href="#funções-elementares" id="toc-funções-elementares" class="nav-link" data-scroll-target="#funções-elementares"><span class="header-section-number">1.6</span> 🧩 Funções elementares</a></li>
-  <li><a href="#funções-polinomiais-e-racionais" id="toc-funções-polinomiais-e-racionais" class="nav-link" data-scroll-target="#funções-polinomiais-e-racionais"><span class="header-section-number">1.7</span> 🧩 Funções polinomiais e racionais</a></li>
-  <li><a href="#exponenciais-e-logaritmos" id="toc-exponenciais-e-logaritmos" class="nav-link" data-scroll-target="#exponenciais-e-logaritmos"><span class="header-section-number">1.8</span> 🚀 Exponenciais e logaritmos</a></li>
-  <li><a href="#trigonometria-essencial" id="toc-trigonometria-essencial" class="nav-link" data-scroll-target="#trigonometria-essencial"><span class="header-section-number">1.9</span> 🌊 Trigonometria essencial</a></li>
-  <li><a href="#definição-formal-de-função" id="toc-definição-formal-de-função" class="nav-link" data-scroll-target="#definição-formal-de-função"><span class="header-section-number">1.10</span> 📐 Definição formal de função</a></li>
-  <li><a href="#leitura-gráfica-e-algébrica" id="toc-leitura-gráfica-e-algébrica" class="nav-link" data-scroll-target="#leitura-gráfica-e-algébrica"><span class="header-section-number">1.11</span> 🔎 Leitura gráfica e algébrica</a></li>
-  <li><a href="#transformações-gráficas" id="toc-transformações-gráficas" class="nav-link" data-scroll-target="#transformações-gráficas"><span class="header-section-number">1.12</span> 🔄 Transformações gráficas</a></li>
-  <li><a href="#composição-de-funções" id="toc-composição-de-funções" class="nav-link" data-scroll-target="#composição-de-funções"><span class="header-section-number">1.13</span> 🔗 Composição de funções</a></li>
-  <li><a href="#função-inversa" id="toc-função-inversa" class="nav-link" data-scroll-target="#função-inversa"><span class="header-section-number">1.14</span> 🪞 Função inversa</a></li>
-  <li><a href="#modelagem-com-funções" id="toc-modelagem-com-funções" class="nav-link" data-scroll-target="#modelagem-com-funções"><span class="header-section-number">1.15</span> 🛠️ Modelagem com funções</a></li>
-  <li><a href="#crescimento-e-comportamento-assintótico" id="toc-crescimento-e-comportamento-assintótico" class="nav-link" data-scroll-target="#crescimento-e-comportamento-assintótico"><span class="header-section-number">1.16</span> 📈 Crescimento e comportamento assintótico</a></li>
-  <li><a href="#mapa-conceitual-do-módulo-1" id="toc-mapa-conceitual-do-módulo-1" class="nav-link" data-scroll-target="#mapa-conceitual-do-módulo-1"><span class="header-section-number">1.17</span> 🗺️ Mapa conceitual do Módulo 1</a></li>
-  <li><a href="#checklist-para-seguir-para-limites" id="toc-checklist-para-seguir-para-limites" class="nav-link" data-scroll-target="#checklist-para-seguir-para-limites"><span class="header-section-number">1.18</span> ✅ Checklist para seguir para limites</a></li>
-  <li><a href="#o-que-vem-agora" id="toc-o-que-vem-agora" class="nav-link" data-scroll-target="#o-que-vem-agora"><span class="header-section-number">1.19</span> 🚀 O que vem agora?</a></li>
-  </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <li><a href="#funções-polinomiais-e-racionais" id="toc-funções-polinomiais-e-racionais" class="nav-link" data-scroll-target="#funções-polinomiais-e-racionais"><span class="header-section-number">1.7</span> 🧩 Funções polinomiais e racionais</a>
   <ul class="collapse">
-  <li><a href="#quiz-revisão-geral-do-módulo-1" id="toc-quiz-revisão-geral-do-módulo-1" class="nav-link" data-scroll-target="#quiz-revisão-geral-do-módulo-1"><span class="header-section-number">3.6</span> 🧩 Quiz — Revisão Geral do Módulo 1</a></li>
+  <li><a href="#exemplo" id="toc-exemplo" class="nav-link" data-scroll-target="#exemplo"><span class="header-section-number">1.7.1</span> Exemplo</a></li>
   </ul></li>
-  <li><a href="#aprofundamentos-para-preparar-o-estudo-de-limites" id="toc-aprofundamentos-para-preparar-o-estudo-de-limites" class="nav-link" data-scroll-target="#aprofundamentos-para-preparar-o-estudo-de-limites"><span class="header-section-number">4</span> 🔬 Aprofundamentos para preparar o estudo de limites</a></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
+  <li><a href="#funções-exponenciais-e-logarítmicas" id="toc-funções-exponenciais-e-logarítmicas" class="nav-link" data-scroll-target="#funções-exponenciais-e-logarítmicas"><span class="header-section-number">1.8</span> 🚀 Funções exponenciais e logarítmicas</a></li>
+  <li><a href="#trigonometria-essencial" id="toc-trigonometria-essencial" class="nav-link" data-scroll-target="#trigonometria-essencial"><span class="header-section-number">1.9</span> 🌊 Trigonometria essencial</a>
+  <ul class="collapse">
+  <li><a href="#a-importância-dos-radianos" id="toc-a-importância-dos-radianos" class="nav-link" data-scroll-target="#a-importância-dos-radianos"><span class="header-section-number">1.9.1</span> A importância dos radianos</a></li>
+  </ul></li>
+  <li><a href="#definição-formal-de-função" id="toc-definição-formal-de-função" class="nav-link" data-scroll-target="#definição-formal-de-função"><span class="header-section-number">1.10</span> 📐 Definição formal de função</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-1" id="toc-exemplo-1" class="nav-link" data-scroll-target="#exemplo-1"><span class="header-section-number">1.10.1</span> Exemplo</a></li>
+  </ul></li>
+  <li><a href="#leitura-algébrica-e-gráfica-de-funções" id="toc-leitura-algébrica-e-gráfica-de-funções" class="nav-link" data-scroll-target="#leitura-algébrica-e-gráfica-de-funções"><span class="header-section-number">1.11</span> 🔎 Leitura algébrica e gráfica de funções</a>
+  <ul class="collapse">
+  <li><a href="#o-que-investigar-algebricamente" id="toc-o-que-investigar-algebricamente" class="nav-link" data-scroll-target="#o-que-investigar-algebricamente"><span class="header-section-number">1.11.1</span> O que investigar algebricamente?</a></li>
+  <li><a href="#o-que-investigar-graficamente" id="toc-o-que-investigar-graficamente" class="nav-link" data-scroll-target="#o-que-investigar-graficamente"><span class="header-section-number">1.11.2</span> O que investigar graficamente?</a></li>
+  </ul></li>
+  <li><a href="#transformações-gráficas" id="toc-transformações-gráficas" class="nav-link" data-scroll-target="#transformações-gráficas"><span class="header-section-number">1.12</span> 🔄 Transformações gráficas</a>
+  <ul class="collapse">
+  <li><a href="#escala-vertical" id="toc-escala-vertical" class="nav-link" data-scroll-target="#escala-vertical"><span class="header-section-number">1.12.1</span> Escala vertical</a></li>
+  <li><a href="#escala-horizontal" id="toc-escala-horizontal" class="nav-link" data-scroll-target="#escala-horizontal"><span class="header-section-number">1.12.2</span> Escala horizontal</a></li>
+  </ul></li>
+  <li><a href="#composição-de-funções" id="toc-composição-de-funções" class="nav-link" data-scroll-target="#composição-de-funções"><span class="header-section-number">1.13</span> 🔗 Composição de funções</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-2" id="toc-exemplo-2" class="nav-link" data-scroll-target="#exemplo-2"><span class="header-section-number">1.13.1</span> Exemplo</a></li>
+  <li><a href="#condição-de-existência" id="toc-condição-de-existência" class="nav-link" data-scroll-target="#condição-de-existência"><span class="header-section-number">1.13.2</span> Condição de existência</a></li>
+  </ul></li>
+  <li><a href="#função-inversa" id="toc-função-inversa" class="nav-link" data-scroll-target="#função-inversa"><span class="header-section-number">1.14</span> 🪞 Função inversa</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-uma-função-sem-inversa-em-todo-o-domínio" id="toc-exemplo-uma-função-sem-inversa-em-todo-o-domínio" class="nav-link" data-scroll-target="#exemplo-uma-função-sem-inversa-em-todo-o-domínio"><span class="header-section-number">1.14.1</span> Exemplo: uma função sem inversa em todo o domínio</a></li>
+  </ul></li>
+  <li><a href="#modelagem-matemática-com-funções" id="toc-modelagem-matemática-com-funções" class="nav-link" data-scroll-target="#modelagem-matemática-com-funções"><span class="header-section-number">1.15</span> 🛠️ Modelagem matemática com funções</a>
+  <ul class="collapse">
+  <li><a href="#o-domínio-no-contexto-de-um-modelo" id="toc-o-domínio-no-contexto-de-um-modelo" class="nav-link" data-scroll-target="#o-domínio-no-contexto-de-um-modelo"><span class="header-section-number">1.15.1</span> O domínio no contexto de um modelo</a></li>
+  </ul></li>
+  <li><a href="#crescimento-e-comportamento-assintótico" id="toc-crescimento-e-comportamento-assintótico" class="nav-link" data-scroll-target="#crescimento-e-comportamento-assintótico"><span class="header-section-number">1.16</span> 📈 Crescimento e comportamento assintótico</a>
+  <ul class="collapse">
+  <li><a href="#assíntotas" id="toc-assíntotas" class="nav-link" data-scroll-target="#assíntotas"><span class="header-section-number">1.16.1</span> Assíntotas</a></li>
+  </ul></li>
+  <li><a href="#mapa-conceitual-do-módulo-1" id="toc-mapa-conceitual-do-módulo-1" class="nav-link" data-scroll-target="#mapa-conceitual-do-módulo-1"><span class="header-section-number">1.17</span> 🗺️ Mapa conceitual do Módulo 1</a></li>
+  <li><a href="#quadro-resumo-síntese-do-módulo-1" id="toc-quadro-resumo-síntese-do-módulo-1" class="nav-link" data-scroll-target="#quadro-resumo-síntese-do-módulo-1"><span class="header-section-number">1.18</span> 📋 Quadro-resumo — Síntese do Módulo 1</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">3</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-revisão-geral-do-módulo-1" id="toc-quiz-revisão-geral-do-módulo-1" class="nav-link" data-scroll-target="#quiz-revisão-geral-do-módulo-1"><span class="header-section-number">4</span> 🧩 Quiz — Revisão Geral do Módulo 1</a></li>
+  <li><a href="#aprofundamentos-para-preparar-o-estudo-de-limites" id="toc-aprofundamentos-para-preparar-o-estudo-de-limites" class="nav-link" data-scroll-target="#aprofundamentos-para-preparar-o-estudo-de-limites"><span class="header-section-number">5</span> 🔬 Aprofundamentos para preparar o estudo de limites</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">6</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -315,7 +355,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Revisão geral do Módulo 1 do Curso de Cálculo: pré-cálculo essencial, funções, gráficos, modelos, composição, inversas e comportamento assintótico.
+    Revisão integradora dos fundamentos do pré-cálculo: números reais, intervalos, funções, gráficos, operações, modelagem, crescimento e comportamento assintótico.
   </div>
 </div>
 
@@ -345,164 +385,265 @@ window.Quarto = {
 
 
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
 <hr>
-<section id="revisão-geral-do-módulo-1" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 📘 Revisão Geral do Módulo 1</h1>
-<p>Chegamos ao fechamento do primeiro módulo do Curso de Cálculo.</p>
-<p>Este módulo teve uma função essencial: preparar o terreno para o estudo de limites, continuidade, derivadas e integrais.</p>
-<p>Antes de entrar no Cálculo propriamente dito, revisamos ideias fundamentais de pré-cálculo:</p>
-<ul>
-<li>conjuntos numéricos;</li>
-<li>números reais;</li>
-<li>intervalos;</li>
-<li>equações e inequações;</li>
-<li>valor absoluto;</li>
-<li>funções elementares;</li>
-<li>funções polinomiais e racionais;</li>
-<li>exponenciais e logaritmos;</li>
-<li>trigonometria;</li>
-<li>definição formal de função;</li>
-<li>leitura gráfica e algébrica;</li>
-<li>transformações gráficas;</li>
-<li>composição;</li>
-<li>inversas;</li>
-<li>modelagem;</li>
-<li>crescimento e comportamento assintótico.</li>
-</ul>
-<p>Este post organiza essas ideias e mostra como elas se conectam.</p>
-<hr>
-<section id="o-papel-do-módulo-1" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="o-papel-do-módulo-1"><span class="header-section-number">1.1</span> 🧭 O papel do Módulo 1</h2>
-<p>O Cálculo não começa com derivadas.</p>
-<p>Antes de falar em derivada, precisamos entender função.</p>
-<p>Antes de falar em limite, precisamos entender comportamento.</p>
-<p>Antes de falar em continuidade, precisamos entender domínio, gráfico e proximidade.</p>
-<p>Antes de falar em integral, precisamos entender área, variação e acumulação.</p>
-<p>Por isso, o Módulo 1 funciona como uma base.</p>
-<p>Ele não é uma revisão decorativa. Ele é a fundação conceitual do curso.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Ideia central
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O Cálculo estuda variação, aproximação e acumulação. Para isso, precisamos dominar a linguagem das funções.</p>
+<p>Como os conhecimentos sobre números reais, funções e gráficos se articulam para preparar o estudo do Cálculo?</p>
+<p>Por que precisamos compreender o domínio de uma função antes de investigar seu comportamento?</p>
+<p>Como podemos relacionar expressões algébricas, representações gráficas e situações concretas?</p>
+<p>O que já sabemos sobre o comportamento de uma função quando sua variável se aproxima de determinado valor ou cresce indefinidamente?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos de Aprendizagem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos de Aprendizagem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao final desta revisão, você deverá ser capaz de:</p>
+<ul>
+<li>Reconhecer os principais conjuntos numéricos e trabalhar com intervalos reais.</li>
+<li>Resolver equações e inequações utilizadas na análise de funções.</li>
+<li>Interpretar o valor absoluto como medida de distância.</li>
+<li>Identificar as principais famílias de funções elementares.</li>
+<li>Determinar e interpretar o domínio, o contradomínio e a imagem de uma função.</li>
+<li>Relacionar representações algébricas, tabulares e gráficas.</li>
+<li>Reconhecer transformações gráficas fundamentais.</li>
+<li>Calcular composições e compreender as condições de existência de funções inversas.</li>
+<li>Identificar modelos matemáticos em situações contextualizadas.</li>
+<li>Comparar taxas de crescimento e interpretar o comportamento assintótico.</li>
+<li>Reconhecer os conhecimentos necessários para iniciar o estudo de limites.</li>
+</ul>
+</div>
+</div>
+<section id="revisão-geral-do-módulo-1" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 📘 Revisão Geral do Módulo 1</h1>
+<p>Ao longo do Módulo 1, estudamos os fundamentos matemáticos necessários para compreender o comportamento das funções.</p>
+<p>Esse percurso não foi uma coleção isolada de definições e procedimentos. Cada conteúdo contribuiu para desenvolver uma linguagem matemática que será utilizada no estudo dos limites, da continuidade, das derivadas e, posteriormente, das integrais.</p>
+<p>Revisitamos diferentes assuntos:</p>
+<ul>
+<li>Conjuntos numéricos e números reais.</li>
+<li>Intervalos, equações e inequações.</li>
+<li>Valor absoluto e interpretação de distância.</li>
+<li>Funções elementares e suas propriedades.</li>
+<li>Funções polinomiais, racionais, exponenciais e logarítmicas.</li>
+<li>Trigonometria e funções periódicas.</li>
+<li>Definição formal de função.</li>
+<li>Domínio, contradomínio e imagem.</li>
+<li>Representações algébricas e gráficas.</li>
+<li>Transformações de gráficos.</li>
+<li>Composição e inversão de funções.</li>
+<li>Modelagem matemática.</li>
+<li>Crescimento e comportamento assintótico.</li>
+</ul>
+<p>Nesta aula, vamos integrar esses conhecimentos, destacando as relações entre eles e identificando o que precisamos dominar antes de avançar para o estudo dos limites.</p>
+<hr>
+<section id="o-papel-do-módulo-1-na-construção-do-cálculo" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="o-papel-do-módulo-1-na-construção-do-cálculo"><span class="header-section-number">1.1</span> 🧭 O papel do Módulo 1 na construção do Cálculo</h2>
+<p>O Cálculo não começa com a aplicação de fórmulas de derivação ou integração.</p>
+<p>Antes disso, precisamos compreender os objetos matemáticos sobre os quais essas operações serão realizadas.</p>
+<p>Uma função pode representar uma grande variedade de fenômenos:</p>
+<ul>
+<li>A posição de um objeto em movimento.</li>
+<li>O crescimento de uma população.</li>
+<li>A variação de uma temperatura.</li>
+<li>O custo de produção de uma empresa.</li>
+<li>A área de uma região.</li>
+<li>A concentração de uma substância ao longo do tempo.</li>
+</ul>
+<p>Em todos esses casos, queremos investigar como uma quantidade depende de outra.</p>
+<p>Para isso, precisamos saber interpretar expressões, reconhecer restrições, analisar gráficos e compreender o comportamento das funções em diferentes regiões de seus domínios.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="💡 Ideia central">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>💡 Ideia central
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O Cálculo estuda variação, aproximação e acumulação.</p>
+<p>Para desenvolver essas ideias, precisamos dominar a linguagem das funções e compreender como elas se comportam.</p>
 </div>
 </div>
 <hr>
 </section>
 <section id="conjuntos-e-números-reais" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="conjuntos-e-números-reais"><span class="header-section-number">1.2</span> 🔢 Conjuntos e números reais</h2>
-<p>O curso começou revisando conjuntos e números reais.</p>
-<p>A linguagem de conjuntos permite organizar objetos matemáticos e escrever afirmações com precisão.</p>
-<p>Vimos ideias como:</p>
+<p>Os conjuntos numéricos fornecem o universo no qual trabalhamos.</p>
+<p>Os principais conjuntos estudados são:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conjunto</th>
+<th>Símbolo</th>
+<th>Caracterização</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Naturais</td>
+<td><span class="math inline">\(\mathbb{N}\)</span></td>
+<td>Números naturais</td>
+</tr>
+<tr class="even">
+<td>Inteiros</td>
+<td><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td>Naturais, seus opostos e o zero</td>
+</tr>
+<tr class="odd">
+<td>Racionais</td>
+<td><span class="math inline">\(\mathbb{Q}\)</span></td>
+<td>Números que podem ser escritos como fração de inteiros</td>
+</tr>
+<tr class="even">
+<td>Reais</td>
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>Racionais e irracionais</td>
+</tr>
+</tbody>
+</table>
+<p>A relação de inclusão entre esses conjuntos pode ser representada por:</p>
 <p><span class="math display">\[
-x\in A,
+\mathbb{N}\subseteq\mathbb{Z}
+\subseteq\mathbb{Q}\subseteq\mathbb{R}.
 \]</span></p>
+<p>Os números irracionais pertencem a <span class="math inline">\(\mathbb{R}\)</span>, mas não a <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p>Entre eles estão números importantes como:</p>
 <p><span class="math display">\[
-A\subseteq B,
+\sqrt{2},\qquad \pi,\qquad e.
 \]</span></p>
-<p>união,</p>
-<p><span class="math display">\[
-A\cup B,
-\]</span></p>
-<p>interseção,</p>
-<p><span class="math display">\[
-A\cap B,
-\]</span></p>
-<p>e diferença,</p>
-<p><span class="math display">\[
-A\setminus B.
-\]</span></p>
-<p>Também revisamos os principais conjuntos numéricos:</p>
-<p><span class="math display">\[
-\mathbb{N},\quad \mathbb{Z},\quad \mathbb{Q},\quad \mathbb{R}.
-\]</span></p>
-<p>No Cálculo de uma variável real, trabalhamos principalmente com funções definidas em subconjuntos de <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<section id="operações-com-conjuntos" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="operações-com-conjuntos"><span class="header-section-number">1.2.1</span> Operações com conjuntos</h3>
+<p>Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> dois conjuntos.</p>
+<p>Podemos destacar:</p>
+<ul>
+<li>União: <span class="math inline">\(A\cup B\)</span>.</li>
+<li>Interseção: <span class="math inline">\(A\cap B\)</span>.</li>
+<li>Diferença: <span class="math inline">\(A\setminus B\)</span>.</li>
+<li>Inclusão: <span class="math inline">\(A\subseteq B\)</span>.</li>
+<li>Pertinência: <span class="math inline">\(x\in A\)</span>.</li>
+</ul>
+<p>Essas operações são importantes para descrever conjuntos de soluções, domínios e outras regiões do conjunto dos números reais.</p>
+<p>No Cálculo de uma variável real, trabalharemos frequentemente com funções definidas em subconjuntos de <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <hr>
 </section>
-<section id="intervalos" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="intervalos"><span class="header-section-number">1.3</span> 📏 Intervalos</h2>
-<p>Intervalos são subconjuntos especiais da reta real.</p>
-<p>Eles aparecem o tempo todo no Cálculo.</p>
-<p>Por exemplo:</p>
-<p><span class="math display">\[
-(a,b),
-\]</span></p>
-<p><span class="math display">\[
-[a,b],
-\]</span></p>
-<p><span class="math display">\[
-(a,b],
-\]</span></p>
-<p><span class="math display">\[
-[a,+\infty).
-\]</span></p>
-<p>Intervalos ajudam a descrever domínios, soluções de inequações, regiões de crescimento, intervalos de continuidade e intervalos de integração.</p>
-<p>Quando dizemos que uma função é contínua em</p>
-<p><span class="math display">\[
-[a,b],
-\]</span></p>
-<p>ou que uma integral é calculada de</p>
-<p><span class="math display">\[
-a
-\]</span></p>
-<p>até</p>
-<p><span class="math display">\[
-b,
-\]</span></p>
-<p>estamos usando a linguagem dos intervalos.</p>
+</section>
+<section id="intervalos-reais" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="intervalos-reais"><span class="header-section-number">1.3</span> 📏 Intervalos reais</h2>
+<p>Os intervalos permitem representar conjuntos de números reais que satisfazem determinadas condições.</p>
+<p>Os principais exemplos são:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Intervalo</th>
+<th>Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((a,b)\)</span></td>
+<td><span class="math inline">\(a&lt;x&lt;b\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([a,b]\)</span></td>
+<td><span class="math inline">\(a\leq x\leq b\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((a,b]\)</span></td>
+<td><span class="math inline">\(a&lt;x\leq b\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([a,b)\)</span></td>
+<td><span class="math inline">\(a\leq x&lt;b\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((a,+\infty)\)</span></td>
+<td><span class="math inline">\(x&gt;a\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([a,+\infty)\)</span></td>
+<td><span class="math inline">\(x\geq a\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Os símbolos <span class="math inline">\(+\infty\)</span> e <span class="math inline">\(-\infty\)</span> nunca são incluídos como extremidades de intervalos.</p>
+<section id="aplicações-dos-intervalos" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="aplicações-dos-intervalos"><span class="header-section-number">1.3.1</span> Aplicações dos intervalos</h3>
+<p>Os intervalos aparecem em diversas situações do Cálculo:</p>
+<ul>
+<li>Na determinação do domínio de uma função.</li>
+<li>Na representação de soluções de inequações.</li>
+<li>Na identificação de intervalos de crescimento e decrescimento.</li>
+<li>Na análise de continuidade.</li>
+<li>Na definição de intervalos de integração.</li>
+</ul>
+<p>Por exemplo, quando dizemos que uma função é contínua em <span class="math inline">\([a,b]\)</span>, estamos considerando seu comportamento em todo esse intervalo, incluindo as extremidades, com a interpretação apropriada de continuidade lateral nos extremos.</p>
 <hr>
+</section>
 </section>
 <section id="equações-e-inequações" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="equações-e-inequações"><span class="header-section-number">1.4</span> 🧮 Equações e inequações</h2>
-<p>Equações e inequações aparecem em praticamente todas as etapas do Cálculo.</p>
-<p>Usamos equações para encontrar:</p>
+<p>Equações e inequações são ferramentas fundamentais para determinar conjuntos de valores que satisfazem determinadas condições.</p>
+<p>As equações aparecem, por exemplo, na determinação de:</p>
 <ul>
-<li>zeros de funções;</li>
-<li>pontos críticos;</li>
-<li>interseções;</li>
-<li>soluções de problemas;</li>
-<li>pontos onde uma expressão muda de comportamento.</li>
+<li>Zeros de funções.</li>
+<li>Pontos de interseção entre gráficos.</li>
+<li>Valores desconhecidos em modelos matemáticos.</li>
+<li>Soluções de problemas algébricos.</li>
 </ul>
-<p>Usamos inequações para determinar:</p>
+<p>As inequações permitem identificar:</p>
 <ul>
-<li>domínios;</li>
-<li>sinais;</li>
-<li>intervalos de validade;</li>
-<li>regiões onde uma função é positiva ou negativa.</li>
+<li>Regiões nas quais uma função é positiva ou negativa.</li>
+<li>Intervalos de validade de determinadas expressões.</li>
+<li>Restrições de domínio.</li>
+<li>Conjuntos de soluções de problemas.</li>
 </ul>
-<p>Por exemplo, para determinar o domínio de</p>
+<section id="exemplo-determinação-de-domínio" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="exemplo-determinação-de-domínio"><span class="header-section-number">1.4.1</span> Exemplo: determinação de domínio</h3>
+<p>Considere a função:</p>
 <p><span class="math display">\[
-f(x)=\sqrt{x-3},
+f(x)=\sqrt{x-3}.
 \]</span></p>
-<p>resolvemos a inequação</p>
+<p>Para que a raiz quadrada esteja definida no conjunto dos reais, precisamos exigir:</p>
 <p><span class="math display">\[
 x-3\geq 0.
 \]</span></p>
-<p>Logo,</p>
+<p>Resolvendo a inequação:</p>
 <p><span class="math display">\[
 x\geq 3.
 \]</span></p>
-<p>Assim,</p>
+<p>Portanto, o domínio é:</p>
 <p><span class="math display">\[
-D_f=[3,+\infty).
+\boxed{D(f)=[3,+\infty).}
 \]</span></p>
+<p>Esse exemplo mostra como uma inequação pode determinar o domínio de uma função.</p>
 <hr>
 </section>
-<section id="valor-absoluto" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="valor-absoluto"><span class="header-section-number">1.5</span> 📐 Valor absoluto</h2>
-<p>O valor absoluto mede distância até zero.</p>
-<p>Para qualquer real <span class="math inline">\(x\)</span>,</p>
-<p><span class="math display">\[
-|x|\geq 0.
-\]</span></p>
-<p>Além disso,</p>
+</section>
+<section id="valor-absoluto-e-distância" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="valor-absoluto-e-distância"><span class="header-section-number">1.5</span> 📐 Valor absoluto e distância</h2>
+<p>O valor absoluto de um número real representa sua distância até zero na reta real.</p>
+<p>Sua definição é:</p>
 <p><span class="math display">\[
 |x|=
 \begin{cases}
@@ -510,123 +651,211 @@ x, &amp; x\geq 0,\\
 -x, &amp; x&lt;0.
 \end{cases}
 \]</span></p>
-<p>Essa definição por partes é importante porque muitas funções no Cálculo também serão definidas por partes.</p>
-<p>O valor absoluto também aparece em desigualdades de distância:</p>
+<p>Algumas propriedades importantes são:</p>
+<p><span class="math display">\[
+|x|\geq 0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+|-x|=|x|.
+\]</span></p>
+<p>Além disso, para quaisquer números reais <span class="math inline">\(a\)</span> e <span class="math inline">\(b\)</span>:</p>
+<p><span class="math display">\[
+|a-b|
+\]</span></p>
+<p>representa a distância entre eles na reta real.</p>
+<section id="valor-absoluto-e-vizinhanças" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="valor-absoluto-e-vizinhanças"><span class="header-section-number">1.5.1</span> Valor absoluto e vizinhanças</h3>
+<p>A desigualdade</p>
+<p><span class="math display">\[
+|x-a|&lt;\varepsilon,
+\qquad \varepsilon&gt;0,
+\]</span></p>
+<p>significa que a distância entre <span class="math inline">\(x\)</span> e <span class="math inline">\(a\)</span> é menor que <span class="math inline">\(\varepsilon\)</span>.</p>
+<p>Podemos reescrevê-la como:</p>
+<p><span class="math display">\[
+a-\varepsilon&lt;x&lt;a+\varepsilon.
+\]</span></p>
+<p>Portanto:</p>
 <p><span class="math display">\[
 |x-a|&lt;\varepsilon
+\iff
+x\in(a-\varepsilon,a+\varepsilon).
 \]</span></p>
-<p>significa que <span class="math inline">\(x\)</span> está a uma distância menor que <span class="math inline">\(\varepsilon\)</span> de <span class="math inline">\(a\)</span>.</p>
-<p>Essa ideia será essencial na definição formal de limite.</p>
+<p>Essa interpretação será fundamental para compreender a definição formal de limite, na qual estudaremos o comportamento de uma função quando sua variável se aproxima de determinado valor.</p>
 <hr>
+</section>
 </section>
 <section id="funções-elementares" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="funções-elementares"><span class="header-section-number">1.6</span> 🧩 Funções elementares</h2>
-<p>Revisamos várias famílias de funções elementares.</p>
-<p>Entre elas:</p>
-<ul>
-<li>funções afins;</li>
-<li>funções quadráticas;</li>
-<li>funções polinomiais;</li>
-<li>funções racionais;</li>
-<li>funções exponenciais;</li>
-<li>funções logarítmicas;</li>
-<li>funções trigonométricas.</li>
-</ul>
-<p>Essas funções são os blocos básicos do Cálculo.</p>
-<p>Muitas funções mais complexas são construídas a partir delas por soma, produto, quociente, composição e transformação.</p>
-<p>Por isso, reconhecer famílias de funções ajuda a prever comportamento.</p>
+<p>Durante o módulo, estudamos diferentes famílias de funções.</p>
+<p>Cada família possui características próprias, que podem ser identificadas por suas expressões algébricas e representações gráficas.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Família</th>
+<th>Exemplo</th>
+<th>Característica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Afim</td>
+<td><span class="math inline">\(f(x)=2x+1\)</span></td>
+<td>Gráfico em reta</td>
+</tr>
+<tr class="even">
+<td>Quadrática</td>
+<td><span class="math inline">\(f(x)=x^2-4\)</span></td>
+<td>Gráfico parabólico</td>
+</tr>
+<tr class="odd">
+<td>Polinomial</td>
+<td><span class="math inline">\(f(x)=x^3-2x+1\)</span></td>
+<td>Expressão formada por potências inteiras não negativas</td>
+</tr>
+<tr class="even">
+<td>Racional</td>
+<td><span class="math inline">\(f(x)=\frac{1}{x-1}\)</span></td>
+<td>Quociente de polinômios</td>
+</tr>
+<tr class="odd">
+<td>Exponencial</td>
+<td><span class="math inline">\(f(x)=2^x\)</span></td>
+<td>Variável no expoente</td>
+</tr>
+<tr class="even">
+<td>Logarítmica</td>
+<td><span class="math inline">\(f(x)=\ln x\)</span></td>
+<td>Inversa de uma exponencial</td>
+</tr>
+<tr class="odd">
+<td>Trigonométrica</td>
+<td><span class="math inline">\(f(x)=\sin x\)</span></td>
+<td>Comportamento periódico</td>
+</tr>
+</tbody>
+</table>
+<p>Essas funções também podem ser combinadas por operações algébricas, composições e transformações gráficas.</p>
 <hr>
 </section>
 <section id="funções-polinomiais-e-racionais" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="funções-polinomiais-e-racionais"><span class="header-section-number">1.7</span> 🧩 Funções polinomiais e racionais</h2>
-<p>Funções polinomiais têm a forma</p>
+<p>Uma função polinomial pode ser escrita na forma:</p>
 <p><span class="math display">\[
-p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0.
+p(x)=a_nx^n+a_{n-1}x^{n-1}
++\cdots+a_1x+a_0,
 \]</span></p>
-<p>Elas são definidas em todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>Funções racionais têm a forma</p>
+<p>em que <span class="math inline">\(a_n\neq 0\)</span> e os coeficientes são números reais.</p>
+<p>Seu domínio é todo o conjunto dos números reais:</p>
+<p><span class="math display">\[
+D(p)=\mathbb{R}.
+\]</span></p>
+<p>Uma função racional é definida pelo quociente de dois polinômios:</p>
 <p><span class="math display">\[
 r(x)=\frac{p(x)}{q(x)},
 \]</span></p>
-<p>com <span class="math inline">\(q(x)\neq 0\)</span>.</p>
-<p>As funções racionais exigem cuidado com o domínio, pois o denominador não pode ser zero.</p>
-<p>Por exemplo,</p>
+<p>com a restrição:</p>
 <p><span class="math display">\[
-f(x)=\frac{1}{x-2}
+q(x)\neq 0.
 \]</span></p>
-<p>tem domínio</p>
+<section id="exemplo" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="exemplo"><span class="header-section-number">1.7.1</span> Exemplo</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
-\mathbb{R}\setminus\{2\}.
+f(x)=\frac{1}{x-2}.
 \]</span></p>
-<p>Esse ponto excluído pode gerar uma assíntota vertical.</p>
+<p>O denominador não pode ser igual a zero. Assim:</p>
+<p><span class="math display">\[
+x-2\neq 0
+\implies x\neq 2.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{D(f)=\mathbb{R}\setminus\{2\}.}
+\]</span></p>
+<p>A exclusão de um ponto do domínio pode estar relacionada a comportamentos especiais do gráfico, como uma assíntota vertical ou uma descontinuidade removível.</p>
 <hr>
 </section>
-<section id="exponenciais-e-logaritmos" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="exponenciais-e-logaritmos"><span class="header-section-number">1.8</span> 🚀 Exponenciais e logaritmos</h2>
-<p>Funções exponenciais têm a forma</p>
+</section>
+<section id="funções-exponenciais-e-logarítmicas" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="funções-exponenciais-e-logarítmicas"><span class="header-section-number">1.8</span> 🚀 Funções exponenciais e logarítmicas</h2>
+<p>Uma função exponencial tem a forma:</p>
 <p><span class="math display">\[
 f(x)=a^x,
 \]</span></p>
-<p>com <span class="math inline">\(a&gt;0\)</span> e <span class="math inline">\(a\neq 1\)</span>.</p>
-<p>Quando <span class="math inline">\(a&gt;1\)</span>, a função cresce.</p>
-<p>Quando <span class="math inline">\(0&lt;a&lt;1\)</span>, a função decresce.</p>
-<p>Funções logarítmicas são inversas das exponenciais.</p>
-<p>Em especial,</p>
+<p>com:</p>
 <p><span class="math display">\[
-e^x
+a&gt;0,\qquad a\neq 1.
+\]</span></p>
+<p>Seu comportamento depende da base:</p>
+<ul>
+<li>Se <span class="math inline">\(a&gt;1\)</span>, a função é estritamente crescente.</li>
+<li>Se <span class="math inline">\(0&lt;a&lt;1\)</span>, a função é estritamente decrescente.</li>
+</ul>
+<p>A função logarítmica é a inversa da função exponencial correspondente.</p>
+<p>Em particular, as funções exponencial natural e logarítmica natural são inversas:</p>
+<p><span class="math display">\[
+f(x)=e^x
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-\ln x
+g(x)=\ln x.
 \]</span></p>
-<p>são funções inversas.</p>
-<p>Temos:</p>
+<p>Por isso:</p>
 <p><span class="math display">\[
 \ln(e^x)=x
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-e^{\ln x}=x,
+e^{\ln x}=x,\qquad x&gt;0.
 \]</span></p>
-<p>com <span class="math inline">\(x&gt;0\)</span> na segunda igualdade.</p>
-<p>Essas funções serão centrais no estudo de derivadas e integrais.</p>
+<p>Essas relações são importantes em equações, modelos de crescimento e problemas que envolvem taxas de variação.</p>
 <hr>
 </section>
 <section id="trigonometria-essencial" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="trigonometria-essencial"><span class="header-section-number">1.9</span> 🌊 Trigonometria essencial</h2>
-<p>A trigonometria entra no Cálculo por meio de funções como:</p>
+<p>As funções trigonométricas fundamentais incluem:</p>
 <p><span class="math display">\[
 \sin x,\qquad \cos x,\qquad \tan x.
 \]</span></p>
-<p>O uso de radianos é fundamental.</p>
-<p>No Cálculo, os ângulos devem ser medidos em radianos porque essa medida se conecta naturalmente ao comprimento de arco no círculo unitário.</p>
-<p>Alguns fatos importantes:</p>
+<p>Elas aparecem em fenômenos periódicos, como oscilações, movimentos circulares e ondas.</p>
+<p>Uma identidade fundamental é:</p>
 <p><span class="math display">\[
-\sin^2 x+\cos^2 x=1,
+\sin^2x+\cos^2x=1.
 \]</span></p>
+<p>Quando <span class="math inline">\(\cos x\neq 0\)</span>, também temos:</p>
 <p><span class="math display">\[
-\tan x=\frac{\sin x}{\cos x},
+\tan x=\frac{\sin x}{\cos x}.
 \]</span></p>
+<p>As funções seno e cosseno são periódicas, com período <span class="math inline">\(2\pi\)</span>:</p>
 <p><span class="math display">\[
-\sin(x+2\pi)=\sin x,
+\sin(x+2\pi)=\sin x
 \]</span></p>
+<p>e</p>
 <p><span class="math display">\[
 \cos(x+2\pi)=\cos x.
 \]</span></p>
-<p>As funções trigonométricas serão indispensáveis em limites, derivadas, integrais, equações diferenciais e modelos periódicos.</p>
+<section id="a-importância-dos-radianos" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="a-importância-dos-radianos"><span class="header-section-number">1.9.1</span> A importância dos radianos</h3>
+<p>No estudo do Cálculo, utilizamos frequentemente a medida de ângulos em radianos.</p>
+<p>Essa escolha não é apenas uma convenção. Ela permite estabelecer relações matemáticas especialmente simples entre funções trigonométricas e limites, que serão importantes no desenvolvimento posterior da teoria.</p>
 <hr>
+</section>
 </section>
 <section id="definição-formal-de-função" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="definição-formal-de-função"><span class="header-section-number">1.10</span> 📐 Definição formal de função</h2>
-<p>Uma função</p>
+<p>Uma função é uma relação que associa a cada elemento de um conjunto de partida exatamente um elemento de um conjunto de chegada.</p>
+<p>Representamos uma função por:</p>
 <p><span class="math display">\[
-f:A\to B
+f:A\to B.
 \]</span></p>
-<p>associa a cada elemento de <span class="math inline">\(A\)</span> exatamente um elemento de <span class="math inline">\(B\)</span>.</p>
-<p>O conjunto <span class="math inline">\(A\)</span> é o domínio.</p>
-<p>O conjunto <span class="math inline">\(B\)</span> é o contradomínio.</p>
-<p>A imagem é o conjunto dos valores realmente atingidos por <span class="math inline">\(f\)</span>.</p>
-<p>Esses três conceitos precisam ser distinguidos:</p>
+<p>Nessa notação:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -637,141 +866,236 @@ f:A\to B
 <tbody>
 <tr class="odd">
 <td>Domínio</td>
-<td>entradas permitidas</td>
+<td>Conjunto de partida <span class="math inline">\(A\)</span></td>
 </tr>
 <tr class="even">
 <td>Contradomínio</td>
-<td>conjunto declarado das saídas</td>
+<td>Conjunto de chegada <span class="math inline">\(B\)</span></td>
 </tr>
 <tr class="odd">
 <td>Imagem</td>
-<td>valores realmente assumidos</td>
+<td>Conjunto dos valores efetivamente assumidos pela função</td>
 </tr>
 </tbody>
 </table>
-<p>No Cálculo, o domínio é especialmente importante. Ele determina onde podemos falar de limite, continuidade, derivada e integral.</p>
+<p>A imagem é um subconjunto do contradomínio:</p>
+<p><span class="math display">\[
+\operatorname{Im}(f)\subseteq B.
+\]</span></p>
+<section id="exemplo-1" class="level3" data-number="1.10.1">
+<h3 data-number="1.10.1" class="anchored" data-anchor-id="exemplo-1"><span class="header-section-number">1.10.1</span> Exemplo</h3>
+<p>Considere:</p>
+<p><span class="math display">\[
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2.
+\]</span></p>
+<p>O domínio é:</p>
+<p><span class="math display">\[
+D(f)=\mathbb{R}.
+\]</span></p>
+<p>Entretanto, como o quadrado de um número real nunca é negativo, sua imagem é:</p>
+<p><span class="math display">\[
+\operatorname{Im}(f)=[0,+\infty).
+\]</span></p>
+<p>Observe que domínio, contradomínio e imagem são conceitos diferentes.</p>
+<p>O domínio merece atenção especial porque determina os valores para os quais podemos avaliar a função e investigar seu comportamento.</p>
 <hr>
 </section>
-<section id="leitura-gráfica-e-algébrica" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="leitura-gráfica-e-algébrica"><span class="header-section-number">1.11</span> 🔎 Leitura gráfica e algébrica</h2>
-<p>Uma função pode ser analisada por sua fórmula e por seu gráfico.</p>
-<p>A leitura algébrica ajuda a encontrar:</p>
+</section>
+<section id="leitura-algébrica-e-gráfica-de-funções" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="leitura-algébrica-e-gráfica-de-funções"><span class="header-section-number">1.11</span> 🔎 Leitura algébrica e gráfica de funções</h2>
+<p>Uma função pode ser estudada por diferentes representações.</p>
+<p>A representação algébrica apresenta a regra que associa cada entrada à sua saída.</p>
+<p>A representação gráfica permite visualizar o comportamento da função no plano cartesiano.</p>
+<p>Também podemos utilizar tabelas de valores para organizar informações.</p>
+<section id="o-que-investigar-algebricamente" class="level3" data-number="1.11.1">
+<h3 data-number="1.11.1" class="anchored" data-anchor-id="o-que-investigar-algebricamente"><span class="header-section-number">1.11.1</span> O que investigar algebricamente?</h3>
 <ul>
-<li>domínio;</li>
-<li>zeros;</li>
-<li>sinais;</li>
-<li>fatorações;</li>
-<li>simplificações;</li>
-<li>restrições.</li>
+<li>Domínio.</li>
+<li>Zeros da função.</li>
+<li>Sinal da função.</li>
+<li>Fatoração e simplificação.</li>
+<li>Restrições da expressão.</li>
+<li>Relações entre variáveis.</li>
 </ul>
-<p>A leitura gráfica ajuda a visualizar:</p>
+</section>
+<section id="o-que-investigar-graficamente" class="level3" data-number="1.11.2">
+<h3 data-number="1.11.2" class="anchored" data-anchor-id="o-que-investigar-graficamente"><span class="header-section-number">1.11.2</span> O que investigar graficamente?</h3>
 <ul>
-<li>crescimento;</li>
-<li>decrescimento;</li>
-<li>máximos;</li>
-<li>mínimos;</li>
-<li>buracos;</li>
-<li>saltos;</li>
-<li>assíntotas;</li>
-<li>simetrias.</li>
+<li>Intervalos de crescimento e decrescimento.</li>
+<li>Pontos de máximo e mínimo.</li>
+<li>Interseções com os eixos.</li>
+<li>Simetrias.</li>
+<li>Descontinuidades.</li>
+<li>Assíntotas.</li>
+<li>Comportamento global.</li>
 </ul>
-<p>As duas leituras devem ser usadas juntas.</p>
-<p>O Cálculo formaliza muitas percepções gráficas por meio de limites, derivadas e integrais.</p>
+<p>As duas perspectivas são complementares.</p>
+<p>O estudo do Cálculo permitirá transformar muitas observações gráficas em afirmações matemáticas rigorosas, utilizando limites, continuidade e derivadas.</p>
 <hr>
+</section>
 </section>
 <section id="transformações-gráficas" class="level2" data-number="1.12">
 <h2 data-number="1.12" class="anchored" data-anchor-id="transformações-gráficas"><span class="header-section-number">1.12</span> 🔄 Transformações gráficas</h2>
-<p>Transformações gráficas permitem construir gráficos novos a partir de gráficos conhecidos.</p>
-<p>Exemplos:</p>
+<p>A partir de uma função conhecida, podemos construir outras funções por meio de transformações de seu gráfico.</p>
+<p>Considere uma função <span class="math inline">\(f(x)\)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Expressão</th>
+<th>Transformação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f(x)+k\)</span></td>
+<td>Translação vertical</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(x-h)\)</span></td>
+<td>Translação horizontal</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(-f(x)\)</span></td>
+<td>Reflexão em relação ao eixo horizontal</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(-x)\)</span></td>
+<td>Reflexão em relação ao eixo vertical</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(af(x)\)</span></td>
+<td>Escala vertical</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(bx)\)</span></td>
+<td>Escala horizontal</td>
+</tr>
+</tbody>
+</table>
+<section id="escala-vertical" class="level3" data-number="1.12.1">
+<h3 data-number="1.12.1" class="anchored" data-anchor-id="escala-vertical"><span class="header-section-number">1.12.1</span> Escala vertical</h3>
+<p>Na transformação:</p>
 <p><span class="math display">\[
-f(x)+k
+g(x)=af(x),
 \]</span></p>
-<p>desloca o gráfico verticalmente.</p>
+<p>temos:</p>
+<ul>
+<li>Se <span class="math inline">\(|a|&gt;1\)</span>, ocorre alongamento vertical.</li>
+<li>Se <span class="math inline">\(0&lt;|a|&lt;1\)</span>, ocorre compressão vertical.</li>
+<li>Se <span class="math inline">\(a&lt;0\)</span>, também ocorre reflexão em relação ao eixo horizontal.</li>
+</ul>
+</section>
+<section id="escala-horizontal" class="level3" data-number="1.12.2">
+<h3 data-number="1.12.2" class="anchored" data-anchor-id="escala-horizontal"><span class="header-section-number">1.12.2</span> Escala horizontal</h3>
+<p>Na transformação:</p>
 <p><span class="math display">\[
-f(x-h)
+g(x)=f(bx),
 \]</span></p>
-<p>desloca o gráfico horizontalmente.</p>
-<p><span class="math display">\[
--f(x)
-\]</span></p>
-<p>reflete o gráfico em relação ao eixo horizontal.</p>
-<p><span class="math display">\[
-f(-x)
-\]</span></p>
-<p>reflete o gráfico em relação ao eixo vertical.</p>
-<p><span class="math display">\[
-af(x)
-\]</span></p>
-<p>alonga ou comprime verticalmente.</p>
-<p><span class="math display">\[
-f(bx)
-\]</span></p>
-<p>alonga ou comprime horizontalmente.</p>
-<p>Essas transformações ajudam a reconhecer rapidamente o comportamento de funções.</p>
+<p>temos:</p>
+<ul>
+<li>Se <span class="math inline">\(|b|&gt;1\)</span>, ocorre compressão horizontal.</li>
+<li>Se <span class="math inline">\(0&lt;|b|&lt;1\)</span>, ocorre alongamento horizontal.</li>
+<li>Se <span class="math inline">\(b&lt;0\)</span>, também ocorre reflexão em relação ao eixo vertical.</li>
+</ul>
+<p>Essas transformações são úteis para compreender como alterações na expressão algébrica modificam a representação gráfica.</p>
 <hr>
+</section>
 </section>
 <section id="composição-de-funções" class="level2" data-number="1.13">
 <h2 data-number="1.13" class="anchored" data-anchor-id="composição-de-funções"><span class="header-section-number">1.13</span> 🔗 Composição de funções</h2>
-<p>A composição de funções é dada por</p>
+<p>A composição permite aplicar uma função ao resultado produzido por outra.</p>
+<p>Sejam duas funções <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span>. A composição de <span class="math inline">\(f\)</span> com <span class="math inline">\(g\)</span> é definida por:</p>
 <p><span class="math display">\[
 (f\circ g)(x)=f(g(x)).
 \]</span></p>
-<p>A função mais próxima de <span class="math inline">\(x\)</span> é aplicada primeiro.</p>
-<p>Em geral,</p>
-<p><span class="math display">\[
-f\circ g\neq g\circ f.
-\]</span></p>
-<p>Por exemplo, se</p>
+<p>Primeiro aplicamos <span class="math inline">\(g\)</span> e, em seguida, aplicamos <span class="math inline">\(f\)</span> ao resultado.</p>
+<section id="exemplo-2" class="level3" data-number="1.13.1">
+<h3 data-number="1.13.1" class="anchored" data-anchor-id="exemplo-2"><span class="header-section-number">1.13.1</span> Exemplo</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=x^2
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-g(x)=x+1,
+g(x)=x+1.
 \]</span></p>
-<p>então</p>
+<p>A primeira composição é:</p>
 <p><span class="math display">\[
-(f\circ g)(x)=(x+1)^2,
+\begin{aligned}
+(f\circ g)(x)
+&amp;=f(g(x))\\
+&amp;=f(x+1)\\
+&amp;=(x+1)^2.
+\end{aligned}
 \]</span></p>
-<p>enquanto</p>
+<p>A segunda composição é:</p>
 <p><span class="math display">\[
-(g\circ f)(x)=x^2+1.
+\begin{aligned}
+(g\circ f)(x)
+&amp;=g(f(x))\\
+&amp;=g(x^2)\\
+&amp;=x^2+1.
+\end{aligned}
 \]</span></p>
-<p>A composição será essencial para a regra da cadeia no estudo de derivadas.</p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+\boxed{f\circ g\neq g\circ f.}
+\]</span></p>
+<p>Em geral, a composição não é comutativa.</p>
+</section>
+<section id="condição-de-existência" class="level3" data-number="1.13.2">
+<h3 data-number="1.13.2" class="anchored" data-anchor-id="condição-de-existência"><span class="header-section-number">1.13.2</span> Condição de existência</h3>
+<p>Para que <span class="math inline">\((f\circ g)(x)\)</span> esteja definida, precisamos que:</p>
+<ol type="1">
+<li><span class="math inline">\(x\)</span> pertença ao domínio de <span class="math inline">\(g\)</span>.</li>
+<li><span class="math inline">\(g(x)\)</span> pertença ao domínio de <span class="math inline">\(f\)</span>.</li>
+</ol>
+<p>Essa operação será essencial no estudo da regra da cadeia, uma das ferramentas fundamentais do cálculo diferencial.</p>
 <hr>
+</section>
 </section>
 <section id="função-inversa" class="level2" data-number="1.14">
 <h2 data-number="1.14" class="anchored" data-anchor-id="função-inversa"><span class="header-section-number">1.14</span> 🪞 Função inversa</h2>
-<p>Uma função inversa desfaz a ação da função original.</p>
-<p>Se <span class="math inline">\(f\)</span> tem inversa <span class="math inline">\(f^{-1}\)</span>, então:</p>
+<p>A função inversa desfaz a operação realizada pela função original.</p>
+<p>Uma função <span class="math inline">\(f:A\to B\)</span> possui inversa <span class="math inline">\(f^{-1}:B\to A\)</span> quando é bijetiva, isto é, injetiva e sobrejetiva.</p>
+<p>Nesse caso:</p>
 <p><span class="math display">\[
 f^{-1}(f(x))=x
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-f(f^{-1}(x))=x.
+f(f^{-1}(y))=y.
 \]</span></p>
-<p>Para uma função ter inversa, ela precisa ser bijetiva.</p>
-<p>Quando uma função não é injetiva em todo o seu domínio, podemos às vezes restringir o domínio para obter uma inversa.</p>
-<p>Por exemplo,</p>
+<p>Quando o contradomínio é escolhido como sendo a própria imagem da função, a injetividade é suficiente para garantir a existência da inversa.</p>
+<section id="exemplo-uma-função-sem-inversa-em-todo-o-domínio" class="level3" data-number="1.14.1">
+<h3 data-number="1.14.1" class="anchored" data-anchor-id="exemplo-uma-função-sem-inversa-em-todo-o-domínio"><span class="header-section-number">1.14.1</span> Exemplo: uma função sem inversa em todo o domínio</h3>
+<p>Considere:</p>
 <p><span class="math display">\[
-f(x)=x^2
+f(x)=x^2.
 \]</span></p>
-<p>não tem inversa em todo <span class="math inline">\(\mathbb{R}\)</span>, mas a função</p>
+<p>A função não é injetiva em <span class="math inline">\(\mathbb{R}\)</span>, pois:</p>
+<p><span class="math display">\[
+f(2)=f(-2)=4.
+\]</span></p>
+<p>Portanto, não possui inversa como função de <span class="math inline">\(\mathbb{R}\)</span> em <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Entretanto, podemos restringir seu domínio:</p>
 <p><span class="math display">\[
 f:[0,+\infty)\to[0,+\infty),
-\qquad f(x)=x^2
+\qquad f(x)=x^2.
 \]</span></p>
-<p>tem inversa</p>
+<p>Nessa restrição, a função é bijetiva e sua inversa é:</p>
 <p><span class="math display">\[
-f^{-1}(x)=\sqrt{x}.
+\boxed{f^{-1}(x)=\sqrt{x}.}
 \]</span></p>
+<p>Esse exemplo mostra que a existência de uma função inversa depende das propriedades da função e dos conjuntos considerados.</p>
 <hr>
 </section>
-<section id="modelagem-com-funções" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="modelagem-com-funções"><span class="header-section-number">1.15</span> 🛠️ Modelagem com funções</h2>
-<p>Funções elementares servem para construir modelos.</p>
-<p>Alguns padrões comuns são:</p>
+</section>
+<section id="modelagem-matemática-com-funções" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="modelagem-matemática-com-funções"><span class="header-section-number">1.15</span> 🛠️ Modelagem matemática com funções</h2>
+<p>Uma função pode representar matematicamente uma situação concreta.</p>
+<p>A escolha do modelo depende das características do fenômeno investigado.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -781,176 +1105,276 @@ f^{-1}(x)=\sqrt{x}.
 </thead>
 <tbody>
 <tr class="odd">
-<td>taxa constante</td>
-<td>função linear</td>
+<td>Variação a uma taxa constante</td>
+<td>Função afim</td>
 </tr>
 <tr class="even">
-<td>trajetória parabólica</td>
-<td>função quadrática</td>
+<td>Trajetória parabólica idealizada</td>
+<td>Função quadrática</td>
 </tr>
 <tr class="odd">
-<td>crescimento por fator</td>
-<td>função exponencial</td>
+<td>Crescimento multiplicativo</td>
+<td>Função exponencial</td>
 </tr>
 <tr class="even">
-<td>crescimento lento</td>
-<td>função logarítmica</td>
+<td>Crescimento logarítmico</td>
+<td>Função logarítmica</td>
 </tr>
 <tr class="odd">
-<td>comportamento com assíntotas</td>
-<td>função racional</td>
+<td>Comportamento representado por quocientes</td>
+<td>Função racional</td>
 </tr>
 <tr class="even">
-<td>fenômenos periódicos</td>
-<td>função trigonométrica</td>
+<td>Fenômenos periódicos</td>
+<td>Funções trigonométricas</td>
 </tr>
 </tbody>
 </table>
-<p>Ao modelar, devemos sempre considerar o contexto.</p>
-<p>Se <span class="math inline">\(x\)</span> representa quantidade, normalmente</p>
-<p><span class="math display">\[
-x\geq 0.
-\]</span></p>
-<p>Se <span class="math inline">\(t\)</span> representa tempo após o início de um experimento, normalmente</p>
+<section id="o-domínio-no-contexto-de-um-modelo" class="level3" data-number="1.15.1">
+<h3 data-number="1.15.1" class="anchored" data-anchor-id="o-domínio-no-contexto-de-um-modelo"><span class="header-section-number">1.15.1</span> O domínio no contexto de um modelo</h3>
+<p>É importante distinguir o domínio algébrico de uma expressão e o domínio que faz sentido em uma aplicação.</p>
+<p>Por exemplo, se <span class="math inline">\(t\)</span> representa o tempo transcorrido em um experimento, normalmente consideramos:</p>
 <p><span class="math display">\[
 t\geq 0.
 \]</span></p>
-<p>Nem todo valor permitido pela fórmula faz sentido no problema real.</p>
+<p>Se <span class="math inline">\(x\)</span> representa a quantidade de produtos fabricados, também podemos exigir:</p>
+<p><span class="math display">\[
+x\geq 0.
+\]</span></p>
+<p>Dependendo do contexto, ainda pode ser necessário restringir <span class="math inline">\(x\)</span> aos números inteiros não negativos.</p>
+<p>Assim, o modelo matemático precisa respeitar tanto as condições algébricas quanto o significado das variáveis.</p>
 <hr>
+</section>
 </section>
 <section id="crescimento-e-comportamento-assintótico" class="level2" data-number="1.16">
 <h2 data-number="1.16" class="anchored" data-anchor-id="crescimento-e-comportamento-assintótico"><span class="header-section-number">1.16</span> 📈 Crescimento e comportamento assintótico</h2>
-<p>No final do módulo, estudamos como comparar o crescimento de funções e como observar tendências extremas.</p>
-<p>Uma hierarquia intuitiva importante é:</p>
+<p>Na Aula 1.16, estudamos como comparar o crescimento de diferentes funções e reconhecer comportamentos assintóticos.</p>
+<p>Para <span class="math inline">\(x\to+\infty\)</span>, uma hierarquia importante é:</p>
 <p><span class="math display">\[
-\ln x
+\ln x \ll x^\alpha \ll a^x,
 \]</span></p>
-<p>cresce mais lentamente que</p>
+<p>com:</p>
 <p><span class="math display">\[
-x^\alpha
+\alpha&gt;0,\qquad a&gt;1.
 \]</span></p>
-<p>para <span class="math inline">\(\alpha&gt;0\)</span>,</p>
-<p>que cresce mais lentamente que</p>
+<p>Isso significa que:</p>
+<ul>
+<li>O logaritmo cresce mais lentamente que qualquer potência positiva de <span class="math inline">\(x\)</span>.</li>
+<li>Uma potência positiva de <span class="math inline">\(x\)</span> cresce mais lentamente que uma exponencial de base maior que <span class="math inline">\(1\)</span>.</li>
+</ul>
+<p>Essa comparação pode ser expressa por limites:</p>
 <p><span class="math display">\[
-a^x
+\lim_{x\to+\infty}\frac{\ln x}{x^\alpha}=0
 \]</span></p>
-<p>para <span class="math inline">\(a&gt;1\)</span>.</p>
-<p>Também vimos assíntotas.</p>
-<p>Uma assíntota vertical pode aparecer quando a função cresce sem limite perto de um ponto.</p>
-<p>Uma assíntota horizontal aparece quando a função se aproxima de um valor constante quando</p>
+<p>e</p>
 <p><span class="math display">\[
-x\to+\infty
+\lim_{x\to+\infty}\frac{x^\alpha}{a^x}=0.
 \]</span></p>
-<p>ou</p>
+<section id="assíntotas" class="level3" data-number="1.16.1">
+<h3 data-number="1.16.1" class="anchored" data-anchor-id="assíntotas"><span class="header-section-number">1.16.1</span> Assíntotas</h3>
+<p>Uma assíntota é uma reta que descreve uma aproximação do gráfico de uma função em determinada região.</p>
+<p>Os três tipos fundamentais são:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Característica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vertical</td>
+<td>Relacionada ao comportamento ilimitado nas proximidades de uma abscissa</td>
+</tr>
+<tr class="even">
+<td>Horizontal</td>
+<td>Aproximação de uma reta horizontal quando <span class="math inline">\(x\)</span> tende ao infinito</td>
+</tr>
+<tr class="odd">
+<td>Oblíqua</td>
+<td>Aproximação de uma reta inclinada quando <span class="math inline">\(x\)</span> tende ao infinito</td>
+</tr>
+</tbody>
+</table>
+<p>Por exemplo, a função:</p>
 <p><span class="math display">\[
-x\to-\infty.
+f(x)=\frac{1}{x-2}
 \]</span></p>
-<p>Essas ideias serão formalizadas no módulo de limites.</p>
+<p>apresenta uma assíntota vertical em:</p>
+<p><span class="math display">\[
+x=2.
+\]</span></p>
+<p>Já a função:</p>
+<p><span class="math display">\[
+g(x)=\frac{x}{x+1}
+\]</span></p>
+<p>apresenta uma assíntota horizontal em:</p>
+<p><span class="math display">\[
+y=1.
+\]</span></p>
+<p>Essas ideias serão formalizadas por meio dos limites no próximo módulo.</p>
 <hr>
+</section>
 </section>
 <section id="mapa-conceitual-do-módulo-1" class="level2" data-number="1.17">
 <h2 data-number="1.17" class="anchored" data-anchor-id="mapa-conceitual-do-módulo-1"><span class="header-section-number">1.17</span> 🗺️ Mapa conceitual do Módulo 1</h2>
-<p>Podemos resumir o módulo assim:</p>
+<p>O percurso desenvolvido neste módulo pode ser sintetizado da seguinte maneira:</p>
 <pre class="text"><code>Números reais
-   ↓
+     ↓
 Intervalos e inequações
-   ↓
+     ↓
 Domínios de funções
-   ↓
+     ↓
 Famílias de funções elementares
-   ↓
+     ↓
 Gráficos e transformações
-   ↓
+     ↓
 Composição e inversas
-   ↓
-Modelagem
-   ↓
+     ↓
+Modelagem matemática
+     ↓
 Crescimento e comportamento assintótico
-   ↓
+     ↓
 Limites</code></pre>
-<p>O próximo módulo começará exatamente no último ponto: <strong>limites</strong>.</p>
+<p>O mapa evidencia que o estudo dos limites não aparece isoladamente. Ele se apoia em conhecimentos algébricos, funcionais e gráficos desenvolvidos ao longo do módulo.</p>
 <hr>
 </section>
-<section id="checklist-para-seguir-para-limites" class="level2" data-number="1.18">
-<h2 data-number="1.18" class="anchored" data-anchor-id="checklist-para-seguir-para-limites"><span class="header-section-number">1.18</span> ✅ Checklist para seguir para limites</h2>
-<p>Antes de avançar, é importante que você consiga:</p>
-<ul>
-<li>identificar o domínio de funções simples;</li>
-<li>resolver inequações básicas;</li>
-<li>reconhecer funções polinomiais, racionais, exponenciais, logarítmicas e trigonométricas;</li>
-<li>interpretar gráficos;</li>
-<li>encontrar zeros de funções;</li>
-<li>analisar sinais;</li>
-<li>reconhecer transformações gráficas;</li>
-<li>calcular composições;</li>
-<li>entender quando uma função pode ter inversa;</li>
-<li>comparar crescimentos básicos;</li>
-<li>reconhecer assíntotas simples.</li>
-</ul>
-<p>Se algum desses pontos ainda parece frágil, vale revisar os posts anteriores antes de seguir.</p>
-<hr>
-</section>
-<section id="o-que-vem-agora" class="level2" data-number="1.19">
-<h2 data-number="1.19" class="anchored" data-anchor-id="o-que-vem-agora"><span class="header-section-number">1.19</span> 🚀 O que vem agora?</h2>
-<p>Com essa base, estamos prontos para começar o estudo de limites. O <strong>Módulo 2 está em preparação</strong>; enquanto ele não é publicado, você pode revisar os pontos em que encontrou dificuldade ou explorar a trilha opcional de aprofundamentos AP.</p>
-<p>O limite é a ideia que permite responder perguntas como:</p>
-<ul>
-<li>o que acontece com <span class="math inline">\(f(x)\)</span> quando <span class="math inline">\(x\)</span> se aproxima de um ponto?</li>
-<li>uma função se aproxima de algum valor?</li>
-<li>há buraco no gráfico?</li>
-<li>há salto?</li>
-<li>há assíntota?</li>
-<li>qual é a inclinação instantânea de uma curva?</li>
-</ul>
-<p>A partir dos limites, construiremos continuidade, derivadas e integrais.</p>
-<hr>
-</section>
-</section>
-<section id="exercícios-propostos" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 🧪 Exercícios propostos</h1>
-<div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios">
+<section id="quadro-resumo-síntese-do-módulo-1" class="level2" data-number="1.18">
+<h2 data-number="1.18" class="anchored" data-anchor-id="quadro-resumo-síntese-do-módulo-1"><span class="header-section-number">1.18</span> 📋 Quadro-resumo — Síntese do Módulo 1</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>📝 Exercícios
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<section id="exercício-1" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
-<p>Determine o domínio real das funções:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Eixo de estudo</th>
+<th>Conceitos fundamentais</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fundamentos algébricos</td>
+<td>Números reais, intervalos, equações, inequações e valor absoluto</td>
+</tr>
+<tr class="even">
+<td>Funções elementares</td>
+<td>Funções afins, quadráticas, polinomiais, racionais, exponenciais, logarítmicas e trigonométricas</td>
+</tr>
+<tr class="odd">
+<td>Definição de função</td>
+<td>Domínio, contradomínio e imagem</td>
+</tr>
+<tr class="even">
+<td>Representações</td>
+<td>Expressões algébricas, tabelas e gráficos</td>
+</tr>
+<tr class="odd">
+<td>Transformações</td>
+<td>Translações, reflexões, alongamentos e compressões</td>
+</tr>
+<tr class="even">
+<td>Operações</td>
+<td>Composição e função inversa</td>
+</tr>
+<tr class="odd">
+<td>Modelagem</td>
+<td>Variáveis, parâmetros e restrições de contexto</td>
+</tr>
+<tr class="even">
+<td>Comportamento</td>
+<td>Crescimento, decrescimento, termo dominante e assíntotas</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Integração dos conhecimentos</strong></p>
+<p>Os conteúdos estudados formam uma base articulada para compreender como as funções são definidas, representadas, transformadas e utilizadas na descrição de fenômenos.</p>
+<p><strong>Preparação para o Cálculo</strong></p>
+<p>O domínio das funções e de seus comportamentos permite avançar para questões mais profundas sobre aproximação, continuidade e variação.</p>
+<p>A meta não é memorizar isoladamente todas as fórmulas, mas compreender as relações entre os conceitos.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="🌉 Ponte para o Cálculo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🌉 Ponte para o Cálculo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O Módulo 1 desenvolveu a linguagem matemática necessária para estudar funções.</p>
+<p>Agora podemos formular perguntas mais profundas:</p>
+<ul>
+<li>O que acontece com <span class="math inline">\(f(x)\)</span> quando <span class="math inline">\(x\)</span> se aproxima de determinado valor?</li>
+<li>Uma função pode se aproximar de um número mesmo sem assumir esse valor?</li>
+<li>Como descrever matematicamente o comportamento de uma função nas proximidades de um ponto?</li>
+<li>Como investigar situações em que a função cresce sem limite?</li>
+<li>Como determinar a taxa de variação instantânea?</li>
+</ul>
+<p>Essas perguntas nos conduzem ao estudo dos <strong>limites</strong>.</p>
+<p>Os limites permitirão desenvolver formalmente as ideias de continuidade e derivada e, posteriormente, compreender a integral.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="exercícios-propostos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🧪 Exercícios propostos</h1>
+<div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios de revisão">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📝 Exercícios de revisão
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os exercícios a seguir retomam os principais conhecimentos do Módulo 1. Procure resolver cada questão antes de consultar o gabarito comentado.</p>
+<section id="exercício-1-domínio-de-funções" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1-domínio-de-funções"><span class="header-section-number">2.1</span> 🧪 Exercício 1 — Domínio de funções</h2>
+<p>Determine o domínio das funções:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=\sqrt{x-2}\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\dfrac{1}{x+5}\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=\ln(x-1)\)</span><br>
-</li>
-<li><span class="math inline">\(p(x)=\dfrac{x+1}{x^2-4}\)</span></li>
+<li><p><span class="math inline">\(f(x)=\sqrt{x-2}\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=\dfrac{1}{x+5}\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=\ln(x-1)\)</span></p></li>
+<li><p><span class="math inline">\(p(x)=\dfrac{x+1}{x^2-4}\)</span></p></li>
 </ol>
 </section>
-<section id="exercício-2" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
-<p>Considere</p>
+<section id="exercício-2-análise-de-uma-função-quadrática" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2-análise-de-uma-função-quadrática"><span class="header-section-number">2.2</span> 🧪 Exercício 2 — Análise de uma função quadrática</h2>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=x^2-4.
 \]</span></p>
 <p>Determine:</p>
 <ol type="a">
-<li>os zeros;<br>
-</li>
-<li>a interseção com o eixo vertical;<br>
-</li>
-<li>os intervalos em que <span class="math inline">\(f(x)&gt;0\)</span>;<br>
-</li>
-<li>os intervalos em que <span class="math inline">\(f(x)&lt;0\)</span>.</li>
+<li><p>Os zeros da função.</p></li>
+<li><p>A interseção do gráfico com o eixo vertical.</p></li>
+<li><p>Os intervalos nos quais a função é positiva.</p></li>
+<li><p>Os intervalos nos quais a função é negativa.</p></li>
 </ol>
 </section>
-<section id="exercício-3" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
-<p>Considere</p>
+<section id="exercício-3-composição-de-funções" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3-composição-de-funções"><span class="header-section-number">2.3</span> 🧪 Exercício 3 — Composição de funções</h2>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=x^2
 \]</span></p>
@@ -958,271 +1382,285 @@ f(x)=x^2
 <p><span class="math display">\[
 g(x)=x+3.
 \]</span></p>
-<p>Calcule:</p>
+<p>Determine:</p>
 <ol type="a">
-<li><span class="math inline">\((f\circ g)(x)\)</span><br>
-</li>
-<li><span class="math inline">\((g\circ f)(x)\)</span><br>
-</li>
-<li><span class="math inline">\((f\circ g)(1)\)</span><br>
-</li>
-<li><span class="math inline">\((g\circ f)(1)\)</span></li>
+<li><p><span class="math inline">\((f\circ g)(x)\)</span>.</p></li>
+<li><p><span class="math inline">\((g\circ f)(x)\)</span>.</p></li>
+<li><p><span class="math inline">\((f\circ g)(1)\)</span>.</p></li>
+<li><p><span class="math inline">\((g\circ f)(1)\)</span>.</p></li>
 </ol>
 </section>
-<section id="exercício-4" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Determine a inversa de</p>
+<section id="exercício-4-função-inversa" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4-função-inversa"><span class="header-section-number">2.4</span> 🧪 Exercício 4 — Função inversa</h2>
+<p>Determine a função inversa de:</p>
 <p><span class="math display">\[
 f(x)=3x-6.
 \]</span></p>
-<p>Verifique por composição.</p>
+<p>Em seguida, verifique o resultado calculando as composições:</p>
+<p><span class="math display">\[
+f^{-1}(f(x))
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f(f^{-1}(x)).
+\]</span></p>
 </section>
-<section id="exercício-5" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
-<p>Associe cada função ao tipo de comportamento dominante:</p>
+<section id="exercício-5-classificação-de-funções" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5-classificação-de-funções"><span class="header-section-number">2.5</span> 🧪 Exercício 5 — Classificação de funções</h2>
+<p>Classifique cada função de acordo com sua família:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=2^x\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\ln x\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=x^3\)</span><br>
-</li>
-<li><span class="math inline">\(p(x)=\dfrac{x}{x+1}\)</span><br>
-</li>
-<li><span class="math inline">\(q(x)=\sin x\)</span></li>
+<li><p><span class="math inline">\(f(x)=2^x\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=\ln x\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=x^3\)</span></p></li>
+<li><p><span class="math inline">\(p(x)=\dfrac{x}{x+1}\)</span></p></li>
+<li><p><span class="math inline">\(q(x)=\sin x\)</span></p></li>
 </ol>
-<p>Use as opções: exponencial, logarítmico, polinomial, racional com assíntota horizontal, periódico.</p>
+<p>Utilize as classificações:</p>
+<ul>
+<li>Exponencial.</li>
+<li>Logarítmica.</li>
+<li>Polinomial.</li>
+<li>Racional.</li>
+<li>Trigonométrica periódica.</li>
+</ul>
+<p>Identifique também a assíntota horizontal da função do item d), se existir.</p>
 </section>
 </div>
 </div>
 <hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+</section>
+<section id="gabarito-comentado" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Clique para consultar o gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
+<span class="screen-reader-only">Importante</span>✅ Clique para consultar o gabarito
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
-<section id="exercício-1-1" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
-<ol type="a">
-<li>Para</li>
-</ol>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="exercício-1-domínio-de-funções-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-domínio-de-funções-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1 — Domínio de funções</h2>
+<p><strong>a)</strong> Para:</p>
 <p><span class="math display">\[
 f(x)=\sqrt{x-2},
 \]</span></p>
-<p>precisamos de</p>
+<p>precisamos exigir:</p>
 <p><span class="math display">\[
 x-2\geq 0.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo:</p>
 <p><span class="math display">\[
-x\geq 2
+\boxed{D(f)=[2,+\infty).}
 \]</span></p>
-<p>e</p>
-<p><span class="math display">\[
-D_f=[2,+\infty).
-\]</span></p>
-<ol start="2" type="a">
-<li>Para</li>
-</ol>
+<p><strong>b)</strong> Para:</p>
 <p><span class="math display">\[
 g(x)=\frac{1}{x+5},
 \]</span></p>
-<p>precisamos de</p>
+<p>o denominador não pode ser zero:</p>
 <p><span class="math display">\[
-x+5\neq 0.
+x+5\neq 0
+\implies x\neq -5.
 \]</span></p>
-<p>Logo,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-x\neq -5
+\boxed{D(g)=\mathbb{R}\setminus\{-5\}.}
 \]</span></p>
-<p>e</p>
-<p><span class="math display">\[
-D_g=(-\infty,-5)\cup(-5,+\infty).
-\]</span></p>
-<ol start="3" type="a">
-<li>Para</li>
-</ol>
+<p><strong>c)</strong> Para:</p>
 <p><span class="math display">\[
 h(x)=\ln(x-1),
 \]</span></p>
-<p>precisamos de</p>
+<p>o argumento do logaritmo precisa ser positivo:</p>
 <p><span class="math display">\[
 x-1&gt;0.
 \]</span></p>
-<p>Logo,</p>
+<p>Assim:</p>
 <p><span class="math display">\[
-x&gt;1
+\boxed{D(h)=(1,+\infty).}
 \]</span></p>
-<p>e</p>
-<p><span class="math display">\[
-D_h=(1,+\infty).
-\]</span></p>
-<ol start="4" type="a">
-<li>Para</li>
-</ol>
+<p><strong>d)</strong> Para:</p>
 <p><span class="math display">\[
 p(x)=\frac{x+1}{x^2-4},
 \]</span></p>
-<p>precisamos de</p>
+<p>o denominador deve ser diferente de zero:</p>
 <p><span class="math display">\[
 x^2-4\neq 0.
 \]</span></p>
-<p>Como</p>
+<p>Fatorando:</p>
 <p><span class="math display">\[
-x^2-4=(x-2)(x+2),
+(x-2)(x+2)\neq 0.
 \]</span></p>
-<p>temos</p>
+<p>Logo:</p>
 <p><span class="math display">\[
-x\neq -2
+x\neq -2,\qquad x\neq 2.
 \]</span></p>
-<p>e</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-x\neq 2.
-\]</span></p>
-<p>Portanto,</p>
-<p><span class="math display">\[
-D_p=(-\infty,-2)\cup(-2,2)\cup(2,+\infty).
+\boxed{
+D(p)=
+(-\infty,-2)\cup(-2,2)\cup(2,+\infty).
+}
 \]</span></p>
 </section>
-<section id="exercício-2-1" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
-<p>Temos</p>
+<section id="exercício-2-análise-de-uma-função-quadrática-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-análise-de-uma-função-quadrática-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2 — Análise de uma função quadrática</h2>
+<p>Temos:</p>
 <p><span class="math display">\[
-f(x)=x^2-4=(x-2)(x+2).
+f(x)=x^2-4.
 \]</span></p>
-<ol type="a">
-<li>Os zeros são</li>
-</ol>
+<p>Fatorando:</p>
 <p><span class="math display">\[
-x=-2
+f(x)=(x-2)(x+2).
 \]</span></p>
-<p>e</p>
+<p><strong>a) Zeros da função</strong></p>
+<p>Resolvendo:</p>
 <p><span class="math display">\[
-x=2.
+(x-2)(x+2)=0,
 \]</span></p>
-<ol start="2" type="a">
-<li>A interseção com o eixo vertical ocorre em <span class="math inline">\(x=0\)</span>:</li>
-</ol>
+<p>obtemos:</p>
+<p><span class="math display">\[
+\boxed{x=-2\quad\text{ou}\quad x=2.}
+\]</span></p>
+<p><strong>b) Interseção com o eixo vertical</strong></p>
+<p>Calculamos:</p>
 <p><span class="math display">\[
 f(0)=0^2-4=-4.
 \]</span></p>
-<p>Logo, o ponto é</p>
+<p>Portanto, o gráfico intercepta o eixo vertical no ponto:</p>
 <p><span class="math display">\[
-(0,-4).
+\boxed{(0,-4).}
 \]</span></p>
-<ol start="3" type="a">
-<li>A função é positiva fora das raízes:</li>
-</ol>
+<p><strong>c) Onde a função é positiva</strong></p>
+<p>Como a parábola tem concavidade voltada para cima, seus valores são positivos fora das raízes:</p>
 <p><span class="math display">\[
-f(x)&gt;0
+\boxed{(-\infty,-2)\cup(2,+\infty).}
 \]</span></p>
-<p>em</p>
+<p><strong>d) Onde a função é negativa</strong></p>
+<p>Entre as raízes, a função assume valores negativos:</p>
 <p><span class="math display">\[
-(-\infty,-2)\cup(2,+\infty).
-\]</span></p>
-<ol start="4" type="a">
-<li>A função é negativa entre as raízes:</li>
-</ol>
-<p><span class="math display">\[
-f(x)&lt;0
-\]</span></p>
-<p>em</p>
-<p><span class="math display">\[
-(-2,2).
+\boxed{(-2,2).}
 \]</span></p>
 </section>
-<section id="exercício-3-1" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
-<p>Temos</p>
+<section id="exercício-3-composição-de-funções-1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-composição-de-funções-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3 — Composição de funções</h2>
+<p>Temos:</p>
 <p><span class="math display">\[
-f(x)=x^2
+f(x)=x^2,\qquad g(x)=x+3.
 \]</span></p>
-<p>e</p>
+<p><strong>a) Primeira composição</strong></p>
 <p><span class="math display">\[
-g(x)=x+3.
+\begin{aligned}
+(f\circ g)(x)
+&amp;=f(g(x))\\
+&amp;=f(x+3)\\
+&amp;=(x+3)^2.
+\end{aligned}
 \]</span></p>
-<ol type="a">
-<li></li>
-</ol>
+<p>Logo:</p>
 <p><span class="math display">\[
-(f\circ g)(x)=f(g(x))=f(x+3)=(x+3)^2.
+\boxed{(f\circ g)(x)=(x+3)^2.}
 \]</span></p>
-<ol start="2" type="a">
-<li></li>
-</ol>
+<p><strong>b) Segunda composição</strong></p>
 <p><span class="math display">\[
-(g\circ f)(x)=g(f(x))=g(x^2)=x^2+3.
+\begin{aligned}
+(g\circ f)(x)
+&amp;=g(f(x))\\
+&amp;=g(x^2)\\
+&amp;=x^2+3.
+\end{aligned}
 \]</span></p>
-<ol start="3" type="a">
-<li></li>
-</ol>
+<p>Logo:</p>
 <p><span class="math display">\[
-(f\circ g)(1)=(1+3)^2=16.
+\boxed{(g\circ f)(x)=x^2+3.}
 \]</span></p>
-<ol start="4" type="a">
-<li></li>
-</ol>
+<p><strong>c) Valor da primeira composição em <span class="math inline">\(x=1\)</span></strong></p>
 <p><span class="math display">\[
-(g\circ f)(1)=1^2+3=4.
+(f\circ g)(1)=(1+3)^2.
+\]</span></p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+\boxed{(f\circ g)(1)=16.}
+\]</span></p>
+<p><strong>d) Valor da segunda composição em <span class="math inline">\(x=1\)</span></strong></p>
+<p><span class="math display">\[
+(g\circ f)(1)=1^2+3.
+\]</span></p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+\boxed{(g\circ f)(1)=4.}
 \]</span></p>
 </section>
-<section id="exercício-4-1" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<p>Temos</p>
-<p><span class="math display">\[
-f(x)=3x-6.
-\]</span></p>
-<p>Escrevemos</p>
+<section id="exercício-4-função-inversa-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-função-inversa-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4 — Função inversa</h2>
+<p>Considere:</p>
 <p><span class="math display">\[
 y=3x-6.
 \]</span></p>
-<p>Então</p>
+<p>Isolando <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[
-y+6=3x,
+y+6=3x.
 \]</span></p>
-<p>logo</p>
+<p>Assim:</p>
 <p><span class="math display">\[
 x=\frac{y+6}{3}.
 \]</span></p>
-<p>Portanto,</p>
+<p>Trocando as variáveis, obtemos:</p>
 <p><span class="math display">\[
-f^{-1}(x)=\frac{x+6}{3}.
+\boxed{f^{-1}(x)=\frac{x+6}{3}.}
 \]</span></p>
-<p>Verificando:</p>
+<p><strong>Verificação da primeira composição</strong></p>
 <p><span class="math display">\[
-f^{-1}(f(x))=f^{-1}(3x-6)=\frac{(3x-6)+6}{3}=x.
+\begin{aligned}
+f^{-1}(f(x))
+&amp;=\frac{(3x-6)+6}{3}\\
+&amp;=\frac{3x}{3}\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
-<p>E:</p>
+<p><strong>Verificação da segunda composição</strong></p>
 <p><span class="math display">\[
-f(f^{-1}(x))=f\left(\frac{x+6}{3}\right)=3\cdot\frac{x+6}{3}-6=x+6-6=x.
+\begin{aligned}
+f(f^{-1}(x))
+&amp;=3\left(\frac{x+6}{3}\right)-6\\
+&amp;=x+6-6\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
+<p>As duas composições retornam o valor original. Portanto, a inversa está correta.</p>
 </section>
-<section id="exercício-5-1" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
-<ol type="a">
-<li><p><span class="math inline">\(f(x)=2^x\)</span>: exponencial.</p></li>
-<li><p><span class="math inline">\(g(x)=\ln x\)</span>: logarítmico.</p></li>
-<li><p><span class="math inline">\(h(x)=x^3\)</span>: polinomial.</p></li>
-<li><p><span class="math inline">\(p(x)=\dfrac{x}{x+1}\)</span>: racional com assíntota horizontal.</p></li>
-<li><p><span class="math inline">\(q(x)=\sin x\)</span>: periódico.</p></li>
-</ol>
+<section id="exercício-5-classificação-de-funções-1" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-classificação-de-funções-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5 — Classificação de funções</h2>
+<p><strong>a)</strong> <span class="math inline">\(2^x\)</span>: função exponencial.</p>
+<p><strong>b)</strong> <span class="math inline">\(\ln x\)</span>: função logarítmica.</p>
+<p><strong>c)</strong> <span class="math inline">\(x^3\)</span>: função polinomial.</p>
+<p><strong>d)</strong> <span class="math inline">\(\dfrac{x}{x+1}\)</span>: função racional.</p>
+<p>Para identificar sua assíntota horizontal, dividimos o numerador e o denominador por <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\frac{x}{x+1}
+=
+\frac{1}{1+\frac{1}{x}}.
+\]</span></p>
+<p>Quando <span class="math inline">\(x\)</span> tende ao infinito, a expressão se aproxima de <span class="math inline">\(1\)</span>.</p>
+<p>Portanto:</p>
+<p><span class="math display">\[
+\boxed{y=1}
+\]</span></p>
+<p>é sua assíntota horizontal.</p>
+<p><strong>e)</strong> <span class="math inline">\(\sin x\)</span>: função trigonométrica periódica.</p>
 </section>
-</section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-revisão-geral-do-módulo-1" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-revisão-geral-do-módulo-1"><span class="header-section-number">3.6</span> 🧩 Quiz — Revisão Geral do Módulo 1</h2>
+</section>
+<section id="quiz-revisão-geral-do-módulo-1" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Revisão Geral do Módulo 1</h1>
 <div class="question">
-<p><strong>Q1.</strong> O domínio de <span class="math inline">\(f(x)=\sqrt{x-4}\)</span> é:</p>
+<p><strong>Q1.</strong> Qual é o domínio da função <span class="math inline">\(f(x)=\sqrt{x-4}\)</span>?</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -1233,61 +1671,73 @@ f(f^{-1}(x))=f\left(\frac{x+6}{3}\right)=3\cdot\frac{x+6}{3}-6=x+6-6=x.
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\([4,+\infty)\)</span>.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(\mathbb{R}\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\((4,+\infty)\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(\mathbb{R}\)</span>.</p><p></p>
 </div>
 </div>
 
 </div>
 </div>
 <div class="question">
-<p><strong>Q2.</strong> Se <span class="math inline">\(f(x)=x^2\)</span> e <span class="math inline">\(g(x)=x+1\)</span>, então <span class="math inline">\((f\circ g)(x)\)</span> é:</p>
+<p><strong>Q2.</strong> Se <span class="math inline">\(f(x)=x^2\)</span> e <span class="math inline">\(g(x)=x+1\)</span>, qual é a expressão de <span class="math inline">\((f\circ g)(x)\)</span>?</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x^2+1\)</span>.</p><p></p>
+</div>
 <div class="choice correct-choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\((x+1)^2\)</span>.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x^2+1\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x^2+x\)</span>.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x+2\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(2x+1\)</span>.</p><p></p>
 </div>
 </div>
 
 </div>
 </div>
 <div class="question">
-<p><strong>Q3.</strong> A função <span class="math inline">\(e^x\)</span> tem como inversa:</p>
+<p><strong>Q3.</strong> Qual é a função inversa de <span class="math inline">\(f(x)=e^x\)</span>?</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x^2\)</span>.</p><p></p>
-</div>
-<div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(\ln x\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(f^{-1}(x)=e^{-x}\)</span>.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(\sin x\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(f^{-1}(x)=\log_{10}x\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(f^{-1}(x)=\ln x\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(f^{-1}(x)=x^2\)</span>.</p><p></p>
 </div>
 </div>
 
 </div>
 </div>
 <div class="question">
-<p><strong>Q4.</strong> Uma assíntota horizontal descreve o comportamento da função quando:</p>
+<p><strong>Q4.</strong> Uma função possui assíntota horizontal <span class="math inline">\(y=L\)</span> quando:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(x\)</span> é sempre igual a zero.</p><p></p>
-</div>
-<div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(x\)</span> tende a <span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Seu domínio é limitado.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>A função é necessariamente constante.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Seu gráfico intercepta o eixo horizontal.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Seus valores se aproximam de <span class="math inline">\(L\)</span> quando <span class="math inline">\(x\)</span> tende a <span class="math inline">\(+\infty\)</span> ou a <span class="math inline">\(-\infty\)</span>, em pelo menos uma dessas direções.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span>Ela é necessariamente uma função polinomial.</p><p></p>
 </div>
 </div>
 
@@ -1295,15 +1745,16 @@ f(f^{-1}(x))=f\left(\frac{x+6}{3}\right)=3\cdot\frac{x+6}{3}-6=x+6-6=x.
 </div>
 <hr>
 </section>
-</section>
-<section id="aprofundamentos-para-preparar-o-estudo-de-limites" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔬 Aprofundamentos para preparar o estudo de limites</h1>
-<p>Você concluiu a sequência principal do Módulo 1. Os seis AP abaixo são opcionais: escolha o tema de que precisa ou percorra a trilha de 1.18-AP a 1.23-AP. Em cada um, há links para voltar à aula de origem e retomar a sequência principal.</p>
+<section id="aprofundamentos-para-preparar-o-estudo-de-limites" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔬 Aprofundamentos para preparar o estudo de limites</h1>
+<p>Ao longo do Módulo 1, desenvolvemos os conhecimentos essenciais para compreender funções e seus comportamentos.</p>
+<p>Além da sequência principal, há seis aprofundamentos opcionais que permitem explorar alguns assuntos com maior rigor e detalhamento.</p>
+<p>Essas leituras não são obrigatórias para concluir a revisão. Você pode realizá-las agora ou retornar a elas quando desejar reforçar determinado conteúdo.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Aprofundamento</th>
-<th>Retomar a aula principal</th>
+<th>Aprofundamento opcional</th>
+<th>Aula principal relacionada</th>
 </tr>
 </thead>
 <tbody>
@@ -1333,25 +1784,42 @@ f(f^{-1}(x))=f\left(\frac{x+6}{3}\right)=3\cdot\frac{x+6}{3}-6=x+6-6=x.
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-note callout-titled" title="🚧 Módulo 2 — Limites: em preparação">
+<div class="callout callout-style-default callout-tip callout-titled" title="📌 Como utilizar os aprofundamentos">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🚧 Módulo 2 — Limites: em preparação
+<span class="screen-reader-only">Dica</span>📌 Como utilizar os aprofundamentos
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>As aulas do próximo módulo ainda não estão publicadas. Você pode <a href="../../../../../posts/cursos/matematica/calculo/index.html#módulo-2-limites">consultar os temas previstos no sumário</a>.</p>
+<p>Os aprofundamentos são materiais complementares. A sequência principal do curso permanece organizada em suas aulas regulares.</p>
+<p>Cada leitura opcional está relacionada a uma aula específica, permitindo que você retorne ao conteúdo principal sempre que necessário.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled" title="🚀 Módulo 2 — Limites">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🚀 Módulo 2 — Limites
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><badge color="info">Em preparação</badge></p>
+<p>O próximo módulo será dedicado ao estudo dos limites, começando pela compreensão intuitiva da aproximação e avançando gradualmente para sua definição matemática.</p>
+<p><a href="../../../../../posts/cursos/matematica/calculo/index.html#módulo-2-limites">← Voltar ao Sumário do Curso</a></p>
+</div>
+</div>
+<hr>
 </section>
-<section id="navegação" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
-<p>🔬 <strong>Próxima leitura opcional:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.18-AP-conjuntos.html">1.18-AP — Conjuntos Numéricos</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">Topo</a></p>
+<section id="navegação" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
+<p>🎯 <strong>Leitura complementar:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.18-AP-conjuntos.html">1.18-AP — Conjuntos Numéricos</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

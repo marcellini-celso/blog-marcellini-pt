@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Blog do Marcellini">
-<meta name="description" content="Comparação de crescimento de funções elementares e introdução ao comportamento assintótico, assíntotas e tendências no infinito.">
+<meta name="description" content="Estudo do crescimento e decrescimento de funções, comparação de taxas de crescimento, termo dominante e introdução ao comportamento assintótico e às assíntotas.">
 
 <title>📘 Módulo 1.16: Crescimento e Comportamento Assintótico – Blog do Marcellini</title>
 <style>
@@ -27,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -127,14 +162,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../../../../assets/css/cards.css">
 <link rel="stylesheet" href="../../../../../assets/css/chips.css">
 <meta property="og:title" content="📘 Módulo 1.16: Crescimento e Comportamento Assintótico – Blog do Marcellini">
-<meta property="og:description" content="Comparação de crescimento de funções elementares e introdução ao comportamento assintótico, assíntotas e tendências no infinito.">
+<meta property="og:description" content="Estudo do crescimento e decrescimento de funções, comparação de taxas de crescimento, termo dominante e introdução ao comportamento assintótico e às assíntotas.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
 <meta name="twitter:title" content="📘 Módulo 1.16: Crescimento e Comportamento Assintótico – Blog do Marcellini">
-<meta name="twitter:description" content="Comparação de crescimento de funções elementares e introdução ao comportamento assintótico, assíntotas e tendências no infinito.">
+<meta name="twitter:description" content="Estudo do crescimento e decrescimento de funções, comparação de taxas de crescimento, termo dominante e introdução ao comportamento assintótico e às assíntotas.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
 <meta name="twitter:image-width" content="1830">
@@ -267,28 +302,41 @@ window.Quarto = {
    
   <ul>
   <li><a href="#crescimento-e-comportamento-assintótico" id="toc-crescimento-e-comportamento-assintótico" class="nav-link active" data-scroll-target="#crescimento-e-comportamento-assintótico"><span class="header-section-number">1</span> 📘 Crescimento e Comportamento Assintótico</a>
+  <ul>
+  <li><a href="#crescimento-de-funções" id="toc-crescimento-de-funções" class="nav-link" data-scroll-target="#crescimento-de-funções"><span class="header-section-number">1.1</span> 📈 Crescimento de funções</a>
   <ul class="collapse">
-  <li><a href="#crescimento-de-funções" id="toc-crescimento-de-funções" class="nav-link" data-scroll-target="#crescimento-de-funções"><span class="header-section-number">1.1</span> 📈 Crescimento de funções</a></li>
+  <li><a href="#visualizando-o-crescimento" id="toc-visualizando-o-crescimento" class="nav-link" data-scroll-target="#visualizando-o-crescimento"><span class="header-section-number">1.1.1</span> Visualizando o crescimento</a></li>
+  </ul></li>
   <li><a href="#decrescimento-de-funções" id="toc-decrescimento-de-funções" class="nav-link" data-scroll-target="#decrescimento-de-funções"><span class="header-section-number">1.2</span> 📉 Decrescimento de funções</a></li>
-  <li><a href="#taxa-de-crescimento" id="toc-taxa-de-crescimento" class="nav-link" data-scroll-target="#taxa-de-crescimento"><span class="header-section-number">1.3</span> ⏱️ Taxa de crescimento</a></li>
-  <li><a href="#crescimento-linear" id="toc-crescimento-linear" class="nav-link" data-scroll-target="#crescimento-linear"><span class="header-section-number">1.4</span> 📈 Crescimento linear</a></li>
-  <li><a href="#crescimento-polinomial" id="toc-crescimento-polinomial" class="nav-link" data-scroll-target="#crescimento-polinomial"><span class="header-section-number">1.5</span> 📈 Crescimento polinomial</a></li>
+  <li><a href="#taxa-de-variação-média" id="toc-taxa-de-variação-média" class="nav-link" data-scroll-target="#taxa-de-variação-média"><span class="header-section-number">1.3</span> ⏱️ Taxa de variação média</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-função-quadrática" id="toc-exemplo-função-quadrática" class="nav-link" data-scroll-target="#exemplo-função-quadrática"><span class="header-section-number">1.3.1</span> Exemplo: função quadrática</a></li>
+  </ul></li>
+  <li><a href="#crescimento-linear-e-afim" id="toc-crescimento-linear-e-afim" class="nav-link" data-scroll-target="#crescimento-linear-e-afim"><span class="header-section-number">1.4</span> 📈 Crescimento linear e afim</a></li>
+  <li><a href="#crescimento-polinomial" id="toc-crescimento-polinomial" class="nav-link" data-scroll-target="#crescimento-polinomial"><span class="header-section-number">1.5</span> 📈 Crescimento polinomial</a>
+  <ul class="collapse">
+  <li><a href="#visualizando-o-termo-dominante" id="toc-visualizando-o-termo-dominante" class="nav-link" data-scroll-target="#visualizando-o-termo-dominante"><span class="header-section-number">1.5.1</span> Visualizando o termo dominante</a></li>
+  </ul></li>
   <li><a href="#crescimento-exponencial" id="toc-crescimento-exponencial" class="nav-link" data-scroll-target="#crescimento-exponencial"><span class="header-section-number">1.6</span> 📈 Crescimento exponencial</a></li>
   <li><a href="#crescimento-logarítmico" id="toc-crescimento-logarítmico" class="nav-link" data-scroll-target="#crescimento-logarítmico"><span class="header-section-number">1.7</span> 📈 Crescimento logarítmico</a></li>
-  <li><a href="#uma-hierarquia-intuitiva-de-crescimento" id="toc-uma-hierarquia-intuitiva-de-crescimento" class="nav-link" data-scroll-target="#uma-hierarquia-intuitiva-de-crescimento"><span class="header-section-number">1.8</span> 🪜 Uma hierarquia intuitiva de crescimento</a></li>
-  <li><a href="#comportamento-assintótico" id="toc-comportamento-assintótico" class="nav-link" data-scroll-target="#comportamento-assintótico"><span class="header-section-number">1.9</span> ♾️ Comportamento assintótico</a></li>
-  <li><a href="#assíntota-vertical" id="toc-assíntota-vertical" class="nav-link" data-scroll-target="#assíntota-vertical"><span class="header-section-number">1.10</span> 📏 Assíntota vertical</a></li>
-  <li><a href="#assíntota-horizontal" id="toc-assíntota-horizontal" class="nav-link" data-scroll-target="#assíntota-horizontal"><span class="header-section-number">1.11</span> 📏 Assíntota horizontal</a></li>
-  <li><a href="#assíntota-oblíqua" id="toc-assíntota-oblíqua" class="nav-link" data-scroll-target="#assíntota-oblíqua"><span class="header-section-number">1.12</span> 📏 Assíntota oblíqua</a></li>
-  <li><a href="#termo-dominante" id="toc-termo-dominante" class="nav-link" data-scroll-target="#termo-dominante"><span class="header-section-number">1.13</span> 🔍 Termo dominante</a></li>
-  <li><a href="#comparando-funções-no-infinito" id="toc-comparando-funções-no-infinito" class="nav-link" data-scroll-target="#comparando-funções-no-infinito"><span class="header-section-number">1.14</span> ⚖️ Comparando funções no infinito</a></li>
-  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.15</span> 🌉 Por que isso importa para o Cálculo?</a></li>
-  </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
+  <li><a href="#uma-hierarquia-intuitiva-de-crescimento" id="toc-uma-hierarquia-intuitiva-de-crescimento" class="nav-link" data-scroll-target="#uma-hierarquia-intuitiva-de-crescimento"><span class="header-section-number">1.8</span> 🪜 Uma hierarquia intuitiva de crescimento</a>
   <ul class="collapse">
-  <li><a href="#quiz-crescimento-e-comportamento-assintótico" id="toc-quiz-crescimento-e-comportamento-assintótico" class="nav-link" data-scroll-target="#quiz-crescimento-e-comportamento-assintótico"><span class="header-section-number">3.6</span> 🧩 Quiz — Crescimento e Comportamento Assintótico</a></li>
+  <li><a href="#comparação-visual-de-diferentes-crescimentos" id="toc-comparação-visual-de-diferentes-crescimentos" class="nav-link" data-scroll-target="#comparação-visual-de-diferentes-crescimentos"><span class="header-section-number">1.8.1</span> Comparação visual de diferentes crescimentos</a></li>
   </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  <li><a href="#comportamento-assintótico" id="toc-comportamento-assintótico" class="nav-link" data-scroll-target="#comportamento-assintótico"><span class="header-section-number">1.9</span> ♾️ Comportamento assintótico</a></li>
+  <li><a href="#três-tipos-de-assíntota" id="toc-três-tipos-de-assíntota" class="nav-link" data-scroll-target="#três-tipos-de-assíntota"><span class="header-section-number">1.10</span> 📏 Três tipos de assíntota</a>
+  <ul class="collapse">
+  <li><a href="#assíntota-vertical" id="toc-assíntota-vertical" class="nav-link" data-scroll-target="#assíntota-vertical"><span class="header-section-number">1.10.1</span> Assíntota vertical</a></li>
+  <li><a href="#assíntota-horizontal" id="toc-assíntota-horizontal" class="nav-link" data-scroll-target="#assíntota-horizontal"><span class="header-section-number">1.10.2</span> Assíntota horizontal</a></li>
+  <li><a href="#assíntota-oblíqua" id="toc-assíntota-oblíqua" class="nav-link" data-scroll-target="#assíntota-oblíqua"><span class="header-section-number">1.10.3</span> Assíntota oblíqua</a></li>
+  <li><a href="#visualizando-os-três-tipos-de-assíntota" id="toc-visualizando-os-três-tipos-de-assíntota" class="nav-link" data-scroll-target="#visualizando-os-três-tipos-de-assíntota"><span class="header-section-number">1.10.4</span> Visualizando os três tipos de assíntota</a></li>
+  </ul></li>
+  <li><a href="#comparando-funções-no-infinito" id="toc-comparando-funções-no-infinito" class="nav-link" data-scroll-target="#comparando-funções-no-infinito"><span class="header-section-number">1.11</span> ⚖️ Comparando funções no infinito</a></li>
+  </ul></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">3</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-crescimento-e-comportamento-assintótico" id="toc-quiz-crescimento-e-comportamento-assintótico" class="nav-link" data-scroll-target="#quiz-crescimento-e-comportamento-assintótico"><span class="header-section-number">4</span> 🧩 Quiz — Crescimento e Comportamento Assintótico</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -310,7 +358,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Comparação de crescimento de funções elementares e introdução ao comportamento assintótico, assíntotas e tendências no infinito.
+    Estudo do crescimento e decrescimento de funções, comparação de taxas de crescimento, termo dominante e introdução ao comportamento assintótico e às assíntotas.
   </div>
 </div>
 
@@ -340,198 +388,412 @@ window.Quarto = {
 
 
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">1.17 Revisão Geral do Módulo 1</a></p>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Como comparar o crescimento de duas funções quando seus argumentos se tornam muito grandes?</p>
+<p>O que significa dizer que o gráfico de uma função se aproxima de uma reta?</p>
+<p>Uma função pode crescer indefinidamente sem que seu crescimento continue acelerando?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos de Aprendizagem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos de Aprendizagem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>Identificar intervalos de crescimento e decrescimento de funções.</li>
+<li>Interpretar a taxa de variação média em intervalos.</li>
+<li>Comparar os comportamentos de funções lineares, polinomiais, exponenciais e logarítmicas.</li>
+<li>Reconhecer o papel do termo dominante no comportamento de polinômios.</li>
+<li>Compreender a ideia de comportamento assintótico.</li>
+<li>Reconhecer e interpretar assíntotas verticais, horizontais e oblíquas.</li>
+<li>Relacionar o comportamento assintótico ao estudo posterior de limites e derivadas.</li>
+</ul>
+</div>
+</div>
 <section id="crescimento-e-comportamento-assintótico" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 📘 Crescimento e Comportamento Assintótico</h1>
-<p>Quando estudamos funções, não queremos apenas calcular valores isolados. Queremos entender o comportamento geral da função.</p>
+<p>Quando estudamos funções, não queremos apenas calcular valores isolados. Queremos entender seu comportamento geral.</p>
 <p>Algumas perguntas naturais são:</p>
 <ul>
-<li>a função cresce ou decresce?</li>
-<li>cresce rapidamente ou lentamente?</li>
-<li>aproxima-se de algum valor?</li>
-<li>explode para <span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span>?</li>
-<li>possui assíntotas?</li>
-<li>como se comporta quando <span class="math inline">\(x\)</span> fica muito grande?</li>
+<li>A função cresce ou decresce?</li>
+<li>Cresce rapidamente ou lentamente?</li>
+<li>Sua taxa de crescimento permanece constante?</li>
+<li>Sua taxa de crescimento aumenta ou diminui?</li>
+<li>Aproxima-se de algum valor?</li>
+<li>Cresce indefinidamente?</li>
+<li>Como se comporta quando <span class="math inline">\(x\)</span> fica muito grande?</li>
 </ul>
 <p>Essas perguntas nos levam ao estudo do <strong>crescimento</strong> e do <strong>comportamento assintótico</strong>.</p>
-<p>A palavra “assintótico” está relacionada ao comportamento de uma função em uma região extrema: perto de um ponto problemático ou quando <span class="math inline">\(x\)</span> tende ao infinito.</p>
-<p>Este tema prepara diretamente o terreno para limites.</p>
+<p>A palavra <em>assintótico</em> está relacionada ao comportamento de uma função em regiões extremas: nas proximidades de determinados pontos ou quando a variável independente tende ao infinito.</p>
+<p>Esse estudo prepara diretamente o terreno para o cálculo de limites, pois muitas das perguntas que fazemos sobre o comportamento de uma função podem ser formuladas e respondidas por meio deles.</p>
 <hr>
 <section id="crescimento-de-funções" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="crescimento-de-funções"><span class="header-section-number">1.1</span> 📈 Crescimento de funções</h2>
-<p>Dizer que uma função cresce significa dizer que seus valores aumentam quando a variável aumenta.</p>
-<p>De modo intuitivo, uma função <span class="math inline">\(f\)</span> é crescente em um intervalo quando, ao tomarmos dois pontos <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> nesse intervalo, com</p>
+<p>Dizer que uma função cresce significa dizer que seus valores aumentam quando a variável independente aumenta.</p>
+<p>Seja <span class="math inline">\(f\)</span> uma função definida em um intervalo <span class="math inline">\(I\)</span>. Dizemos que <span class="math inline">\(f\)</span> é <strong>não decrescente</strong> em <span class="math inline">\(I\)</span> quando, para quaisquer <span class="math inline">\(x_1,x_2\in I\)</span>, temos:</p>
 <p><span class="math display">\[
-x_1&lt;x_2,
+x_1&lt;x_2 \implies f(x_1)\leq f(x_2).
 \]</span></p>
-<p>temos</p>
+<p>Se a desigualdade entre os valores da função for sempre estrita, isto é,</p>
 <p><span class="math display">\[
-f(x_1)\leq f(x_2).
+x_1&lt;x_2 \implies f(x_1)&lt;f(x_2),
 \]</span></p>
-<p>Se a desigualdade for estrita,</p>
-<p><span class="math display">\[
-f(x_1)&lt;f(x_2),
-\]</span></p>
-<p>dizemos que a função é estritamente crescente.</p>
+<p>dizemos que a função é <strong>estritamente crescente</strong>.</p>
 <p>Por exemplo,</p>
 <p><span class="math display">\[
 f(x)=x
 \]</span></p>
-<p>é crescente em todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>A função</p>
+<p>é estritamente crescente em todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Já a função</p>
 <p><span class="math display">\[
 g(x)=x^2
 \]</span></p>
-<p>não é crescente em todo <span class="math inline">\(\mathbb{R}\)</span>, mas é crescente em</p>
+<p>não é crescente em todo <span class="math inline">\(\mathbb{R}\)</span>. Ela é estritamente decrescente em</p>
 <p><span class="math display">\[
-[0,+\infty)
+(-\infty,0]
 \]</span></p>
-<p>e decrescente em</p>
+<p>e estritamente crescente em</p>
 <p><span class="math display">\[
-(-\infty,0].
+[0,+\infty).
 \]</span></p>
+<p>Observe que o comportamento de uma função pode mudar conforme o intervalo considerado.</p>
+<section id="visualizando-o-crescimento" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="visualizando-o-crescimento"><span class="header-section-number">1.1.1</span> Visualizando o crescimento</h3>
+<p>A comparação entre <span class="math inline">\(f(x)=x\)</span> e <span class="math inline">\(g(x)=x^2\)</span> permite visualizar dois comportamentos diferentes. A primeira função cresce com inclinação constante; a segunda apresenta uma inclinação cada vez maior quando <span class="math inline">\(x\)</span> aumenta.</p>
+<div id="fig-crescimento-linear-quadratico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Comparação dos gráficos das funções f(x)=x e g(x)=x².">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-crescimento-linear-quadratico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.16-crescimento-linear-quadratico.svg" class="img-fluid figure-img" style="width:90.0%" alt="Comparação dos gráficos das funções f(x)=x e g(x)=x².">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crescimento-linear-quadratico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Gráficos das funções x e x²
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="0e9a5e50" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">400</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.5</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">g</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Comparação de crescimento"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$y$"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-crescimento-linear-quadratico.svg"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
+</section>
 </section>
 <section id="decrescimento-de-funções" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="decrescimento-de-funções"><span class="header-section-number">1.2</span> 📉 Decrescimento de funções</h2>
-<p>Uma função é decrescente em um intervalo quando seus valores diminuem à medida que <span class="math inline">\(x\)</span> aumenta.</p>
-<p>Formalmente, se</p>
+<p>Uma função é <strong>não crescente</strong> em um intervalo quando seus valores não aumentam à medida que <span class="math inline">\(x\)</span> aumenta.</p>
+<p>Formalmente,</p>
 <p><span class="math display">\[
-x_1&lt;x_2,
+x_1&lt;x_2 \implies f(x_1)\geq f(x_2).
 \]</span></p>
-<p>então</p>
+<p>Se a desigualdade for sempre estrita,</p>
 <p><span class="math display">\[
-f(x_1)\geq f(x_2).
+x_1&lt;x_2 \implies f(x_1)&gt;f(x_2),
 \]</span></p>
+<p>a função é chamada de <strong>estritamente decrescente</strong>.</p>
 <p>Por exemplo,</p>
 <p><span class="math display">\[
 f(x)=-x
 \]</span></p>
-<p>é decrescente em todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>Já</p>
+<p>é estritamente decrescente em todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Já a função</p>
 <p><span class="math display">\[
 g(x)=\frac{1}{x}
 \]</span></p>
-<p>é decrescente nos intervalos</p>
+<p>é estritamente decrescente em cada um dos intervalos</p>
 <p><span class="math display">\[
 (-\infty,0)
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-(0,+\infty),
+(0,+\infty).
 \]</span></p>
-<p>mas é importante notar que ela não é decrescente em todo o seu domínio considerado como união desses dois intervalos, pois há uma interrupção em <span class="math inline">\(x=0\)</span>.</p>
+<p>Entretanto, não é decrescente em todo o seu domínio, que é a união desses intervalos.</p>
+<p>Isso ocorre porque, por exemplo,</p>
+<p><span class="math display">\[
+-1&lt;1,
+\]</span></p>
+<p>mas</p>
+<p><span class="math display">\[
+g(-1)=-1&lt;1=g(1).
+\]</span></p>
+<p>Portanto, a condição de monotonicidade precisa ser verificada considerando todos os pares de pontos do intervalo em questão.</p>
 <hr>
 </section>
-<section id="taxa-de-crescimento" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="taxa-de-crescimento"><span class="header-section-number">1.3</span> ⏱️ Taxa de crescimento</h2>
+<section id="taxa-de-variação-média" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="taxa-de-variação-média"><span class="header-section-number">1.3</span> ⏱️ Taxa de variação média</h2>
 <p>Duas funções podem crescer, mas em ritmos muito diferentes.</p>
-<p>Compare:</p>
+<p>Para comparar o quanto uma função varia em determinado intervalo, utilizamos a <strong>taxa de variação média</strong>.</p>
+<p>Se uma função <span class="math inline">\(f\)</span> está definida em um intervalo que contém <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span>, com <span class="math inline">\(x_1\neq x_2\)</span>, sua taxa de variação média entre esses pontos é:</p>
 <p><span class="math display">\[
-f(x)=x
+\boxed{
+\frac{f(x_2)-f(x_1)}{x_2-x_1}
+}
+\]</span></p>
+<p>O numerador representa a variação dos valores da função, enquanto o denominador representa a variação da variável independente.</p>
+<p>Geometricamente, essa razão corresponde à inclinação da reta secante que passa pelos pontos</p>
+<p><span class="math display">\[
+P_1=(x_1,f(x_1))
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-g(x)=x^2.
+P_2=(x_2,f(x_2)).
 \]</span></p>
-<p>Para valores pequenos, ambas podem parecer moderadas. Mas quando <span class="math inline">\(x\)</span> cresce, <span class="math inline">\(x^2\)</span> aumenta muito mais rápido do que <span class="math inline">\(x\)</span>.</p>
-<p>Por exemplo:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"><span class="math inline">\(10\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(10\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(100\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><span class="math inline">\(100\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(100\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(10000\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Essa comparação é o início da análise de crescimento.</p>
-<p>Mais adiante, com limites, poderemos formalizar frases como:</p>
-<blockquote class="blockquote">
-<p><span class="math inline">\(x^2\)</span> cresce mais rápido que <span class="math inline">\(x\)</span> quando <span class="math inline">\(x\to+\infty\)</span>.</p>
-</blockquote>
+<section id="exemplo-função-quadrática" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="exemplo-função-quadrática"><span class="header-section-number">1.3.1</span> Exemplo: função quadrática</h3>
+<p>Considere</p>
+<p><span class="math display">\[
+f(x)=x^2.
+\]</span></p>
+<p>Entre <span class="math inline">\(x=1\)</span> e <span class="math inline">\(x=3\)</span>, temos:</p>
+<p><span class="math display">\[
+f(1)=1
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f(3)=9.
+\]</span></p>
+<p>A taxa de variação média é:</p>
+<p><span class="math display">\[
+\frac{f(3)-f(1)}{3-1}
+=
+\frac{9-1}{2}
+=
+4.
+\]</span></p>
+<p>Portanto, nesse intervalo, a taxa de variação média é igual a <span class="math inline">\(4\)</span>.</p>
+<p><strong>Interpretação:</strong> para cada unidade de variação de <span class="math inline">\(x\)</span>, a função apresenta, em média, uma variação de quatro unidades nesse intervalo.</p>
+<p>A taxa de variação média não deve ser confundida com a taxa de variação instantânea. Esta última será estudada posteriormente, no cálculo diferencial.</p>
 <hr>
 </section>
-<section id="crescimento-linear" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="crescimento-linear"><span class="header-section-number">1.4</span> 📈 Crescimento linear</h2>
-<p>Funções lineares ou afins têm a forma</p>
+</section>
+<section id="crescimento-linear-e-afim" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="crescimento-linear-e-afim"><span class="header-section-number">1.4</span> 📈 Crescimento linear e afim</h2>
+<p>Uma função afim tem a forma:</p>
 <p><span class="math display">\[
 f(x)=ax+b.
 \]</span></p>
-<p>Quando</p>
-<p><span class="math display">\[
-a&gt;0,
-\]</span></p>
-<p>a função cresce com taxa constante.</p>
+<p>Quando <span class="math inline">\(a&gt;0\)</span>, ela é estritamente crescente em todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Quando <span class="math inline">\(a&lt;0\)</span>, é estritamente decrescente.</p>
+<p>Quando <span class="math inline">\(a=0\)</span>, é constante.</p>
 <p>Por exemplo,</p>
 <p><span class="math display">\[
 f(x)=3x+2
 \]</span></p>
-<p>aumenta <span class="math inline">\(3\)</span> unidades no valor de saída cada vez que <span class="math inline">\(x\)</span> aumenta <span class="math inline">\(1\)</span> unidade.</p>
-<p>Esse crescimento por adição constante é típico de modelos lineares.</p>
+<p>é crescente e apresenta taxa de variação constante igual a <span class="math inline">\(3\)</span>.</p>
+<p>Isso significa que, sempre que <span class="math inline">\(x\)</span> aumenta uma unidade, o valor de <span class="math inline">\(f(x)\)</span> aumenta três unidades.</p>
+<p><strong>Observação terminológica:</strong> no sentido matemático estrito, uma função linear tem a forma <span class="math inline">\(f(x)=ax\)</span>, enquanto uma função afim tem a forma <span class="math inline">\(f(x)=ax+b\)</span>. Em aplicações, é comum utilizar a expressão “modelo linear” também para modelos afins.</p>
 <hr>
 </section>
 <section id="crescimento-polinomial" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="crescimento-polinomial"><span class="header-section-number">1.5</span> 📈 Crescimento polinomial</h2>
-<p>Funções polinomiais têm a forma</p>
+<p>Uma função polinomial tem a forma:</p>
 <p><span class="math display">\[
-p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0.
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
 \]</span></p>
-<p>Para valores muito grandes de <span class="math inline">\(x\)</span>, o termo de maior grau tende a dominar o comportamento da função.</p>
-<p>Por exemplo, em</p>
+<p>em que <span class="math inline">\(a_n\neq 0\)</span>.</p>
+<p>Para valores muito grandes de <span class="math inline">\(|x|\)</span>, o termo de maior grau passa a dominar o comportamento do polinômio.</p>
+<p>Por exemplo, considere:</p>
 <p><span class="math display">\[
-p(x)=2x^3-5x^2+7x-1,
+p(x)=2x^3-5x^2+7x-1.
 \]</span></p>
-<p>o termo dominante é</p>
-<p><span class="math display">\[
-2x^3.
-\]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> é muito grande, os termos de grau menor têm importância relativa menor.</p>
-<p>Assim, o comportamento de <span class="math inline">\(p(x)\)</span> para <span class="math inline">\(x\to+\infty\)</span> é governado principalmente por</p>
+<p>Seu termo de maior grau é:</p>
 <p><span class="math display">\[
 2x^3.
 \]</span></p>
+<p>Quando <span class="math inline">\(x\)</span> cresce em direção a <span class="math inline">\(+\infty\)</span>, os termos de grau menor tornam-se relativamente menos importantes.</p>
+<p>Assim, o comportamento de <span class="math inline">\(p(x)\)</span> para valores muito grandes de <span class="math inline">\(x\)</span> é governado principalmente por <span class="math inline">\(2x^3\)</span>.</p>
+<p>Mais precisamente, a razão entre o polinômio e seu termo dominante tende a <span class="math inline">\(1\)</span>:</p>
+<p><span class="math display">\[
+\frac{2x^3-5x^2+7x-1}{2x^3}
+\longrightarrow 1
+\quad \text{quando }x\to+\infty.
+\]</span></p>
+<p>Isso explica por que o termo dominante é tão importante no estudo do comportamento assintótico.</p>
+<section id="visualizando-o-termo-dominante" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="visualizando-o-termo-dominante"><span class="header-section-number">1.5.1</span> Visualizando o termo dominante</h3>
+<p>Considere o polinômio:</p>
+<p><span class="math display">\[
+p(x)=2x^3-5x^2+7x-1.
+\]</span></p>
+<p>Vamos compará-lo com seu termo dominante:</p>
+<p><span class="math display">\[
+d(x)=2x^3.
+\]</span></p>
+<div id="fig-termo-dominante" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Comparação entre o polinômio 2x³ - 5x² + 7x - 1 e seu termo dominante 2x³.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-termo-dominante-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.16-termo-dominante.svg" class="img-fluid figure-img" style="width:90.0%" alt="Comparação entre o polinômio 2x³ - 5x² + 7x - 1 e seu termo dominante 2x³.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-termo-dominante-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Comparação entre polinômio e termo dominante
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="8d121dfd" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">500</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x<span class="op">**</span><span class="dv">3</span> <span class="op">-</span> <span class="dv">5</span><span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">7</span><span class="op">*</span>x <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.5</span>))</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>ax.plot(x, p, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">p</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=2x</span><span class="dv">^</span><span class="vs">3-5x</span><span class="dv">^</span><span class="vs">2</span><span class="op">+</span><span class="vs">7x-1</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>ax.plot(x, d, <span class="st">"--"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">d</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=2x</span><span class="dv">^</span><span class="vs">3</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"O papel do termo dominante"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$y$"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-termo-dominante.svg"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>O gráfico mostra que, à medida que <span class="math inline">\(x\)</span> aumenta, o polinômio e seu termo dominante apresentam comportamentos cada vez mais próximos em termos relativos.</p>
+<p>Para compreender melhor essa aproximação, consideremos a razão entre o polinômio e seu termo dominante:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{p(x)}{d(x)}
+&amp;=\frac{2x^3-5x^2+7x-1}{2x^3}\\[4pt]
+&amp;=1-\frac{5}{2x}+\frac{7}{2x^2}
+-\frac{1}{2x^3}.
+\end{aligned}
+\]</span></p>
+<p>Calculando o limite quando <span class="math inline">\(x\)</span> tende ao infinito, obtemos:</p>
+<p><span class="math display">\[
+\boxed{
+\lim_{x\to+\infty}\frac{p(x)}{d(x)}=1
+}
+\]</span></p>
+<p>Isso significa que, para valores suficientemente grandes de <span class="math inline">\(x\)</span>, o polinômio e seu termo dominante tornam-se praticamente equivalentes em termos relativos.</p>
+<p>É importante observar que a diferença absoluta entre eles não tende a zero:</p>
+<p><span class="math display">\[
+p(x)-d(x)=-5x^2+7x-1,
+\]</span></p>
+<p>cujo módulo cresce sem limite à medida que <span class="math inline">\(x\to+\infty\)</span>. O que tende a zero é a diferença relativa:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}
+\frac{p(x)-d(x)}{d(x)}=0.
+\]</span></p>
+<p>Portanto, embora os valores de <span class="math inline">\(p(x)\)</span> e <span class="math inline">\(d(x)\)</span> não se aproximem em distância absoluta, a diferença entre eles se torna desprezível quando comparada à magnitude do termo dominante.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Uma notação para a equivalência assintótica">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Uma notação para a equivalência assintótica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Em Matemática, quando duas funções satisfazem</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{f(x)}{g(x)}=1,
+\]</span></p>
+<p>dizemos que elas são <em>assintoticamente equivalentes</em> e escrevemos</p>
+<p><span class="math display">\[
+\boxed{f(x)\sim g(x)}
+\]</span></p>
+<p>No exemplo estudado, portanto,</p>
+<p><span class="math display">\[
+\boxed{p(x)\sim 2x^3,\qquad x\to+\infty.}
+\]</span></p>
+<p>Essa notação indica que, para valores suficientemente grandes de <span class="math inline">\(x\)</span>, as duas funções apresentam o mesmo comportamento em termos relativos. Não significa que seus valores sejam iguais ou que a diferença absoluta entre eles tenda a zero.</p>
+</div>
+</div>
+<p><strong>Atenção:</strong> quando <span class="math inline">\(x\to-\infty\)</span>, o termo dominante também determina o comportamento assintótico do polinômio. Entretanto, o sinal dos valores depende do sinal do coeficiente líder e da paridade do grau. Por isso, devemos distinguir o comportamento do polinômio em <span class="math inline">\(+\infty\)</span> daquele observado em <span class="math inline">\(-\infty\)</span>.</p>
 <hr>
+</section>
 </section>
 <section id="crescimento-exponencial" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="crescimento-exponencial"><span class="header-section-number">1.6</span> 📈 Crescimento exponencial</h2>
-<p>Funções exponenciais têm a forma</p>
+<p>Funções exponenciais têm a forma:</p>
 <p><span class="math display">\[
 f(x)=a^x,
 \]</span></p>
 <p>com</p>
 <p><span class="math display">\[
-a&gt;1.
+a&gt;0,\qquad a\neq 1.
 \]</span></p>
-<p>Elas crescem por multiplicação constante.</p>
-<p>Por exemplo,</p>
+<p>Quando <span class="math inline">\(a&gt;1\)</span>, a função é estritamente crescente.</p>
+<p>Quando <span class="math inline">\(0&lt;a&lt;1\)</span>, é estritamente decrescente.</p>
+<p>Considere, por exemplo,</p>
 <p><span class="math display">\[
-f(x)=2^x
+f(x)=2^x.
 \]</span></p>
-<p>assume os valores:</p>
+<p>Alguns de seus valores são:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -566,19 +828,29 @@ f(x)=2^x
 </tr>
 </tbody>
 </table>
-<p>O crescimento exponencial costuma superar o crescimento polinomial para valores suficientemente grandes de <span class="math inline">\(x\)</span>.</p>
-<p>Por exemplo, embora <span class="math inline">\(x^5\)</span> seja grande, a função <span class="math inline">\(2^x\)</span> acaba crescendo mais rapidamente quando <span class="math inline">\(x\)</span> se torna muito grande.</p>
+<p>O crescimento exponencial é caracterizado pela multiplicação por um fator constante quando a variável aumenta uma unidade.</p>
+<p>Por exemplo:</p>
+<p><span class="math display">\[
+2^{x+1}=2\cdot 2^x.
+\]</span></p>
+<p>Assim, cada aumento unitário de <span class="math inline">\(x\)</span> dobra o valor da função.</p>
+<p>O crescimento exponencial supera o crescimento de qualquer polinômio de grau fixo quando <span class="math inline">\(x\to+\infty\)</span>.</p>
+<p>Por exemplo, embora <span class="math inline">\(x^5\)</span> possa assumir valores muito grandes, a função <span class="math inline">\(2^x\)</span> acaba crescendo mais rapidamente.</p>
 <hr>
 </section>
 <section id="crescimento-logarítmico" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="crescimento-logarítmico"><span class="header-section-number">1.7</span> 📈 Crescimento logarítmico</h2>
-<p>Funções logarítmicas crescem muito lentamente.</p>
-<p>Por exemplo,</p>
+<p>Funções logarítmicas apresentam crescimento muito lento.</p>
+<p>Considere:</p>
 <p><span class="math display">\[
-f(x)=\ln x
+f(x)=\ln x,
 \]</span></p>
-<p>cresce quando <span class="math inline">\(x\)</span> aumenta, mas seu crescimento desacelera.</p>
-<p>Compare:</p>
+<p>definida para</p>
+<p><span class="math display">\[
+x&gt;0.
+\]</span></p>
+<p>Essa função é estritamente crescente, mas seu crescimento desacelera à medida que <span class="math inline">\(x\)</span> aumenta.</p>
+<p>Observe alguns valores:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -600,13 +872,18 @@ f(x)=\ln x
 <td style="text-align: right;"><span class="math inline">\(2\)</span></td>
 </tr>
 <tr class="even">
+<td style="text-align: right;"><span class="math inline">\(e^5\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="odd">
 <td style="text-align: right;"><span class="math inline">\(e^{10}\)</span></td>
 <td style="text-align: right;"><span class="math inline">\(10\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>Para que <span class="math inline">\(\ln x\)</span> aumente de <span class="math inline">\(1\)</span> para <span class="math inline">\(10\)</span>, a entrada precisa crescer de <span class="math inline">\(e\)</span> para <span class="math inline">\(e^{10}\)</span>.</p>
-<p>Por isso, em muitas comparações assintóticas, logaritmos crescem mais lentamente que potências positivas de <span class="math inline">\(x\)</span>.</p>
+<p>Para que <span class="math inline">\(\ln x\)</span> aumente de <span class="math inline">\(1\)</span> para <span class="math inline">\(10\)</span>, a entrada precisa aumentar de <span class="math inline">\(e\)</span> para <span class="math inline">\(e^{10}\)</span>.</p>
+<p>Isso evidencia o crescimento lento da função logarítmica.</p>
+<p>Em muitas comparações assintóticas, logaritmos crescem mais lentamente que qualquer potência positiva de <span class="math inline">\(x\)</span>.</p>
 <hr>
 </section>
 <section id="uma-hierarquia-intuitiva-de-crescimento" class="level2" data-number="1.8">
@@ -619,36 +896,92 @@ f(x)=\ln x
 <p><span class="math display">\[
 x^\alpha
 \]</span></p>
-<p>para <span class="math inline">\(\alpha&gt;0\)</span>,</p>
-<p>que cresce mais lentamente que</p>
+<p>para <span class="math inline">\(\alpha&gt;0\)</span>, que cresce mais lentamente que</p>
 <p><span class="math display">\[
 a^x
 \]</span></p>
 <p>para <span class="math inline">\(a&gt;1\)</span>.</p>
 <p>De modo intuitivo:</p>
 <p><span class="math display">\[
-\ln x \ll x^\alpha \ll a^x.
+\boxed{
+\ln x \ll x^\alpha \ll a^x
+}
 \]</span></p>
-<p>Essa notação ainda será formalizada em cursos mais avançados, mas a ideia é importante: diferentes famílias de funções crescem em velocidades muito diferentes.</p>
+<p>O símbolo <span class="math inline">\(\ll\)</span>, nesta aula, indica que a função à esquerda cresce mais lentamente que a função à direita, no sentido assintótico.</p>
+<p>Essa comparação vale para valores suficientemente grandes de <span class="math inline">\(x\)</span>. Não significa que as desigualdades entre os valores das funções sejam necessariamente verdadeiras para todo <span class="math inline">\(x\)</span> positivo.</p>
+<section id="comparação-visual-de-diferentes-crescimentos" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="comparação-visual-de-diferentes-crescimentos"><span class="header-section-number">1.8.1</span> Comparação visual de diferentes crescimentos</h3>
+<p>O gráfico abaixo apresenta quatro funções:</p>
+<p><span class="math display">\[
+\ln x,\qquad x,\qquad x^2,\qquad 2^x.
+\]</span></p>
+<div id="fig-hierarquia-crescimento" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Comparação dos gráficos de ln x, x, x² e 2 elevado a x.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hierarquia-crescimento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.16-hierarquia-crescimento.svg" class="img-fluid figure-img" style="width:90.0%" alt="Comparação dos gráficos de ln x, x, x² e 2 elevado a x.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hierarquia-crescimento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Comparação dos crescimentos logarítmico, linear, quadrático e exponencial
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="10edc68e" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">500</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.5</span>))</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ax.plot(x, np.log(x), label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">ln x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ax.plot(x, <span class="dv">2</span><span class="op">**</span>x, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">2</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Hierarquia de crescimento"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$f(x)$"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-hierarquia-crescimento.svg"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>Observe que o gráfico utiliza uma escala vertical comum. Por isso, a exponencial acaba dominando visualmente as demais curvas na região final.</p>
 <hr>
+</section>
 </section>
 <section id="comportamento-assintótico" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="comportamento-assintótico"><span class="header-section-number">1.9</span> ♾️ Comportamento assintótico</h2>
-<p>O comportamento assintótico descreve como uma função se comporta quando a variável se aproxima de uma região extrema.</p>
+<p>O comportamento assintótico descreve como uma função se comporta quando a variável independente se aproxima de uma região extrema.</p>
 <p>Isso pode acontecer de duas formas principais:</p>
 <ol type="1">
-<li>quando <span class="math inline">\(x\)</span> se aproxima de um ponto problemático;</li>
-<li>quando <span class="math inline">\(x\)</span> tende a <span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span>.</li>
+<li>Quando <span class="math inline">\(x\)</span> se aproxima de um ponto que pode apresentar comportamento especial.</li>
+<li>Quando <span class="math inline">\(x\)</span> tende a <span class="math inline">\(+\infty\)</span> ou a <span class="math inline">\(-\infty\)</span>.</li>
 </ol>
-<p>Por exemplo, a função</p>
+<p>Por exemplo, considere:</p>
 <p><span class="math display">\[
-f(x)=\frac{1}{x}
+f(x)=\frac{1}{x}.
 \]</span></p>
-<p>tem um comportamento especial perto de</p>
-<p><span class="math display">\[
-x=0.
-\]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(0\)</span> pela direita, os valores de <span class="math inline">\(f(x)\)</span> crescem sem limite:</p>
+<p>Essa função apresenta um comportamento especial nas proximidades de <span class="math inline">\(x=0\)</span>.</p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de zero pela direita, seus valores crescem sem limite:</p>
 <p><span class="math display">\[
 \frac{1}{0{,}1}=10,
 \]</span></p>
@@ -658,171 +991,323 @@ x=0.
 <p><span class="math display">\[
 \frac{1}{0{,}001}=1000.
 \]</span></p>
-<p>Isso sugere uma assíntota vertical em <span class="math inline">\(x=0\)</span>.</p>
+<p>Pela esquerda, entretanto, os valores decrescem sem limite:</p>
+<p><span class="math display">\[
+\frac{1}{-0{,}1}=-10,
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{-0{,}01}=-100.
+\]</span></p>
+<p>Esse comportamento indica uma assíntota vertical em <span class="math inline">\(x=0\)</span>.</p>
+<p>Uma assíntota é uma reta que descreve uma aproximação do gráfico em determinada região. No caso vertical, essa aproximação ocorre nas proximidades de uma abscissa; nos casos horizontal e oblíquo, ocorre quando <span class="math inline">\(x\)</span> tende ao infinito.</p>
 <hr>
 </section>
-<section id="assíntota-vertical" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="assíntota-vertical"><span class="header-section-number">1.10</span> 📏 Assíntota vertical</h2>
-<p>Uma assíntota vertical é uma reta vertical da qual o gráfico se aproxima quando a função cresce ou decresce sem limite perto de algum valor de <span class="math inline">\(x\)</span>.</p>
-<p>Por exemplo,</p>
+<section id="três-tipos-de-assíntota" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="três-tipos-de-assíntota"><span class="header-section-number">1.10</span> 📏 Três tipos de assíntota</h2>
+<p>Nesta introdução, vamos reconhecer os três tipos fundamentais de assíntota e compreender a ideia matemática por trás de cada um.</p>
+<p>O estudo detalhado dos procedimentos algébricos para determiná-las, especialmente em funções racionais, será desenvolvido no aprofundamento opcional 1.23-AP.</p>
+<section id="assíntota-vertical" class="level3" data-number="1.10.1">
+<h3 data-number="1.10.1" class="anchored" data-anchor-id="assíntota-vertical"><span class="header-section-number">1.10.1</span> Assíntota vertical</h3>
+<p>Uma reta vertical <span class="math inline">\(x=c\)</span> é uma <strong>assíntota vertical</strong> de uma função quando pelo menos um dos limites laterais da função, ao se aproximar de <span class="math inline">\(c\)</span>, é infinito positivo ou negativo.</p>
+<p>Considere:</p>
 <p><span class="math display">\[
-f(x)=\frac{1}{x-2}
+f(x)=\frac{1}{x-2}.
 \]</span></p>
-<p>tem assíntota vertical em</p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela direita, a função cresce sem limite:</p>
 <p><span class="math display">\[
-x=2.
+\lim_{x\to 2^+}\frac{1}{x-2}=+\infty.
 \]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span>, o denominador se aproxima de zero.</p>
-<p>Os valores da função podem se tornar muito grandes em módulo.</p>
-<p>No módulo de limites, escreveremos isso de forma precisa usando notações como:</p>
-<p><span class="math display">\[
-\lim_{x\to 2^+}\frac{1}{x-2}=+\infty
-\]</span></p>
-<p>e</p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(2\)</span> pela esquerda, a função decresce sem limite:</p>
 <p><span class="math display">\[
 \lim_{x\to 2^-}\frac{1}{x-2}=-\infty.
 \]</span></p>
-<hr>
+<p>Portanto, a reta</p>
+<p><span class="math display">\[
+\boxed{x=2}
+\]</span></p>
+<p>é uma assíntota vertical.</p>
+<p>Observe que a função não está definida em <span class="math inline">\(x=2\)</span>. A assíntota descreve o comportamento do gráfico nas proximidades desse valor.</p>
 </section>
-<section id="assíntota-horizontal" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="assíntota-horizontal"><span class="header-section-number">1.11</span> 📏 Assíntota horizontal</h2>
-<p>Uma assíntota horizontal é uma reta horizontal da qual o gráfico se aproxima quando</p>
+<section id="assíntota-horizontal" class="level3" data-number="1.10.2">
+<h3 data-number="1.10.2" class="anchored" data-anchor-id="assíntota-horizontal"><span class="header-section-number">1.10.2</span> Assíntota horizontal</h3>
+<p>Uma reta horizontal <span class="math inline">\(y=L\)</span> é uma <strong>assíntota horizontal</strong> quando a função se aproxima do valor <span class="math inline">\(L\)</span> em pelo menos uma das direções do infinito.</p>
+<p>Considere:</p>
 <p><span class="math display">\[
-x\to+\infty
+f(x)=\frac{x}{x+1}.
 \]</span></p>
-<p>ou</p>
+<p>Podemos reescrever a expressão dividindo o numerador e o denominador por <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[
-x\to-\infty.
+f(x)=\frac{1}{1+\frac{1}{x}}.
 \]</span></p>
-<p>Por exemplo,</p>
+<p>Quando <span class="math inline">\(x\)</span> tende a <span class="math inline">\(+\infty\)</span> ou a <span class="math inline">\(-\infty\)</span>, o termo <span class="math inline">\(1/x\)</span> se aproxima de zero.</p>
+<p>Consequentemente, a função se aproxima de:</p>
 <p><span class="math display">\[
-f(x)=\frac{x}{x+1}
+\frac{1}{1+0}=1.
 \]</span></p>
-<p>tem assíntota horizontal</p>
+<p>Assim, a reta</p>
 <p><span class="math display">\[
-y=1.
+\boxed{y=1}
 \]</span></p>
-<p>Para ver isso, escrevemos:</p>
-<p><span class="math display">\[
-\frac{x}{x+1}=\frac{x}{x\left(1+\frac{1}{x}\right)}.
-\]</span></p>
-<p>Para <span class="math inline">\(x\neq 0\)</span>,</p>
-<p><span class="math display">\[
-\frac{x}{x+1}=\frac{1}{1+\frac{1}{x}}.
-\]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> fica muito grande,</p>
-<p><span class="math display">\[
-\frac{1}{x}
-\]</span></p>
-<p>fica muito pequeno.</p>
-<p>Assim,</p>
-<p><span class="math display">\[
-\frac{1}{1+\frac{1}{x}}
-\]</span></p>
-<p>se aproxima de</p>
-<p><span class="math display">\[
-1.
-\]</span></p>
-<hr>
+<p>é uma assíntota horizontal nas duas direções do infinito.</p>
 </section>
-<section id="assíntota-oblíqua" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="assíntota-oblíqua"><span class="header-section-number">1.12</span> 📏 Assíntota oblíqua</h2>
-<p>Algumas funções racionais não se aproximam de uma reta horizontal, mas de uma reta inclinada.</p>
-<p>Por exemplo,</p>
+<section id="assíntota-oblíqua" class="level3" data-number="1.10.3">
+<h3 data-number="1.10.3" class="anchored" data-anchor-id="assíntota-oblíqua"><span class="header-section-number">1.10.3</span> Assíntota oblíqua</h3>
+<p>Algumas funções não se aproximam de uma reta horizontal, mas de uma reta inclinada.</p>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{x^2+1}{x}.
 \]</span></p>
-<p>Podemos dividir:</p>
+<p>Podemos reescrever:</p>
 <p><span class="math display">\[
 f(x)=x+\frac{1}{x}.
 \]</span></p>
-<p>Quando <span class="math inline">\(x\)</span> fica muito grande, o termo</p>
+<p>Quando <span class="math inline">\(x\to+\infty\)</span> ou <span class="math inline">\(x\to-\infty\)</span>, o termo <span class="math inline">\(1/x\)</span> se aproxima de zero.</p>
+<p>Portanto, a diferença entre a função e a reta <span class="math inline">\(y=x\)</span> se aproxima de zero:</p>
 <p><span class="math display">\[
-\frac{1}{x}
+f(x)-x=\frac{1}{x}.
 \]</span></p>
-<p>se aproxima de zero.</p>
-<p>Assim, o gráfico se aproxima da reta</p>
+<p>Assim, a reta</p>
 <p><span class="math display">\[
-y=x.
+\boxed{y=x}
 \]</span></p>
-<p>Essa reta é uma assíntota oblíqua.</p>
+<p>é uma assíntota oblíqua nas duas direções do infinito.</p>
+</section>
+<section id="visualizando-os-três-tipos-de-assíntota" class="level3" data-number="1.10.4">
+<h3 data-number="1.10.4" class="anchored" data-anchor-id="visualizando-os-três-tipos-de-assíntota"><span class="header-section-number">1.10.4</span> Visualizando os três tipos de assíntota</h3>
+<p>A figura apresenta três exemplos:</p>
+<ul>
+<li>Assíntota vertical: <span class="math inline">\(f(x)=1/(x-2)\)</span>.</li>
+<li>Assíntota horizontal: <span class="math inline">\(f(x)=x/(x+1)\)</span>.</li>
+<li>Assíntota oblíqua: <span class="math inline">\(f(x)=x+1/x\)</span>.</li>
+</ul>
+<div id="fig-tipos-assintotas" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Três gráficos ilustrando assíntotas vertical, horizontal e oblíqua.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tipos-assintotas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.16-tipos-assintotas.svg" class="img-fluid figure-img" style="width:100.0%" alt="Três gráficos ilustrando assíntotas vertical, horizontal e oblíqua.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tipos-assintotas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Exemplos de assíntotas verticais, horizontais e oblíquas
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="01ed4078" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="fl">4.8</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Assíntota vertical</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="fl">1.9</span>, <span class="dv">400</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="fl">2.1</span>, <span class="dv">6</span>, <span class="dv">400</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x1, <span class="dv">1</span><span class="op">/</span>(x1<span class="op">-</span><span class="dv">2</span>), linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x2, <span class="dv">1</span><span class="op">/</span>(x2<span class="op">-</span><span class="dv">2</span>), linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axvline(<span class="dv">2</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x=2</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"Assíntota vertical"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"$f(x)$"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylim(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Assíntota horizontal</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">500</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(x, x<span class="op">/</span>(x<span class="op">+</span><span class="dv">1</span>), linewidth<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\f</span><span class="vs">rac{x}{x</span><span class="op">+</span><span class="vs">1}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axhline(<span class="dv">1</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>                label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axvline(<span class="op">-</span><span class="dv">1</span>, linestyle<span class="op">=</span><span class="st">":"</span>, color<span class="op">=</span><span class="st">"gray"</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Assíntota horizontal"</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"$f(x)$"</span>)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Assíntota oblíqua</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">8</span>, <span class="op">-</span><span class="fl">0.25</span>, <span class="dv">400</span>)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="fl">0.25</span>, <span class="dv">8</span>, <span class="dv">400</span>)</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x1, x1 <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>x1, linewidth<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="op">+</span><span class="ch">\f</span><span class="vs">rac</span><span class="op">{1}</span><span class="vs">{x}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x2, x2 <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>x2, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x, x, <span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_title(<span class="st">"Assíntota oblíqua"</span>)</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_ylabel(<span class="st">"$f(x)$"</span>)</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_ylim(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].legend()</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-tipos-assintotas.svg"</span>,</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>Observe que cada tipo de assíntota descreve uma situação diferente:</p>
+<ul>
+<li>A vertical está relacionada ao comportamento da função nas proximidades de um valor de <span class="math inline">\(x\)</span>.</li>
+<li>A horizontal descreve a aproximação da função a um valor constante quando <span class="math inline">\(x\)</span> tende ao infinito.</li>
+<li>A oblíqua descreve a aproximação da função a uma reta inclinada quando <span class="math inline">\(x\)</span> tende ao infinito.</li>
+</ul>
+<p>É importante lembrar que os comportamentos em <span class="math inline">\(+\infty\)</span> e <span class="math inline">\(-\infty\)</span> podem ser diferentes. Uma função pode apresentar uma assíntota em uma direção e outra assíntota, ou nenhuma, na direção oposta.</p>
 <hr>
 </section>
-<section id="termo-dominante" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="termo-dominante"><span class="header-section-number">1.13</span> 🔍 Termo dominante</h2>
-<p>Em muitas expressões, o comportamento para valores grandes de <span class="math inline">\(x\)</span> é controlado pelo termo dominante.</p>
-<p>Por exemplo:</p>
-<p><span class="math display">\[
-p(x)=4x^5-3x^2+10.
-\]</span></p>
-<p>Quando <span class="math inline">\(x\to+\infty\)</span>, o termo</p>
-<p><span class="math display">\[
-4x^5
-\]</span></p>
-<p>domina o crescimento.</p>
-<p>Assim, o comportamento de <span class="math inline">\(p(x)\)</span> no infinito é parecido com o de</p>
-<p><span class="math display">\[
-4x^5.
-\]</span></p>
-<p>Para funções racionais, comparamos os graus do numerador e do denominador.</p>
-<p>Por exemplo:</p>
-<p><span class="math display">\[
-f(x)=\frac{3x^2+1}{x^2-5}.
-\]</span></p>
-<p>Os termos dominantes são</p>
-<p><span class="math display">\[
-3x^2
-\]</span></p>
-<p>e</p>
-<p><span class="math display">\[
-x^2.
-\]</span></p>
-<p>Logo, para valores grandes de <span class="math inline">\(x\)</span>, a função se aproxima de</p>
-<p><span class="math display">\[
-\frac{3x^2}{x^2}=3.
-\]</span></p>
-<p>A assíntota horizontal é</p>
-<p><span class="math display">\[
-y=3.
-\]</span></p>
-<hr>
 </section>
-<section id="comparando-funções-no-infinito" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="comparando-funções-no-infinito"><span class="header-section-number">1.14</span> ⚖️ Comparando funções no infinito</h2>
+<section id="comparando-funções-no-infinito" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="comparando-funções-no-infinito"><span class="header-section-number">1.11</span> ⚖️ Comparando funções no infinito</h2>
 <p>A comparação de funções no infinito será uma ferramenta importante no estudo de limites.</p>
-<p>Por exemplo:</p>
+<p>Considere:</p>
 <p><span class="math display">\[
 \frac{x}{x^2}=\frac{1}{x}.
 \]</span></p>
-<p>Quando <span class="math inline">\(x\to+\infty\)</span>, temos</p>
+<p>Quando <span class="math inline">\(x\to+\infty\)</span>,</p>
 <p><span class="math display">\[
 \frac{1}{x}\to 0.
 \]</span></p>
-<p>Isso indica que <span class="math inline">\(x^2\)</span> cresce mais rápido que <span class="math inline">\(x\)</span>.</p>
+<p>Isso indica que <span class="math inline">\(x^2\)</span> cresce mais rapidamente que <span class="math inline">\(x\)</span>.</p>
 <p>Outro exemplo:</p>
 <p><span class="math display">\[
-\frac{\ln x}{x}
+\frac{\ln x}{x}\to 0
+\qquad (x\to+\infty).
 \]</span></p>
-<p>tende a zero quando <span class="math inline">\(x\to+\infty\)</span>.</p>
-<p>Isso indica que <span class="math inline">\(x\)</span> cresce mais rápido que <span class="math inline">\(\ln x\)</span>.</p>
-<p>Ainda outro exemplo:</p>
+<p>Isso indica que <span class="math inline">\(x\)</span> cresce mais rapidamente que <span class="math inline">\(\ln x\)</span>.</p>
+<p>Considere ainda:</p>
 <p><span class="math display">\[
-\frac{x^3}{2^x}
+\frac{x^3}{2^x}\to 0
+\qquad (x\to+\infty).
 \]</span></p>
-<p>tende a zero quando <span class="math inline">\(x\to+\infty\)</span>.</p>
-<p>Isso indica que <span class="math inline">\(2^x\)</span> cresce mais rápido que <span class="math inline">\(x^3\)</span>.</p>
+<p>Isso indica que <span class="math inline">\(2^x\)</span> cresce mais rapidamente que <span class="math inline">\(x^3\)</span>.</p>
 <p>Esses resultados serão demonstrados com ferramentas de limites mais adiante.</p>
+<p><strong>Uma interpretação importante:</strong> quando o quociente entre duas funções positivas tende a zero, a função do numerador é desprezível em comparação com a função do denominador, no sentido assintótico.</p>
 <hr>
-</section>
-<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.15</span> 🌉 Por que isso importa para o Cálculo?</h2>
-<p>O comportamento assintótico é uma das portas de entrada para limites.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>Ideia principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crescimento</td>
+<td>A função aumenta quando a entrada aumenta em um intervalo</td>
+</tr>
+<tr class="even">
+<td>Decrescimento</td>
+<td>A função diminui quando a entrada aumenta em um intervalo</td>
+</tr>
+<tr class="odd">
+<td>Taxa de variação média</td>
+<td>Variação da saída dividida pela variação da entrada</td>
+</tr>
+<tr class="even">
+<td>Termo dominante</td>
+<td>Determina o comportamento principal de um polinômio no infinito</td>
+</tr>
+<tr class="odd">
+<td>Crescimento logarítmico</td>
+<td>Crescimento lento em comparação com potências positivas de <span class="math inline">\(x\)</span></td>
+</tr>
+<tr class="even">
+<td>Crescimento exponencial</td>
+<td>Crescimento mais rápido que qualquer polinômio de grau fixo</td>
+</tr>
+<tr class="odd">
+<td>Assíntota vertical</td>
+<td>Reta associada a um comportamento ilimitado nas proximidades de uma abscissa</td>
+</tr>
+<tr class="even">
+<td>Assíntota horizontal</td>
+<td>Reta horizontal à qual a função se aproxima no infinito</td>
+</tr>
+<tr class="odd">
+<td>Assíntota oblíqua</td>
+<td>Reta inclinada à qual a função se aproxima no infinito</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Comparação de crescimento</strong></p>
+<p>Para <span class="math inline">\(p&gt;0\)</span> e <span class="math inline">\(a&gt;1\)</span>, temos:</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}
+\frac{\ln x}{x^p}=0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}
+\frac{x^p}{a^x}=0.
+\]</span></p>
+<p>Portanto, o logaritmo cresce mais lentamente que qualquer potência positiva de <span class="math inline">\(x\)</span>, e esta cresce mais lentamente que uma exponencial de base maior que <span class="math inline">\(1\)</span>.</p>
+<p><strong>Assíntotas e limites</strong></p>
+<p>Uma reta vertical <span class="math inline">\(x=c\)</span> é assíntota vertical quando pelo menos um limite lateral de <span class="math inline">\(f(x)\)</span>, ao aproximar-se de <span class="math inline">\(c\)</span>, é infinito positivo ou negativo.</p>
+<p>Uma reta horizontal <span class="math inline">\(y=L\)</span> é assíntota horizontal quando <span class="math inline">\(f(x)\)</span> tende a <span class="math inline">\(L\)</span> em pelo menos uma das direções do infinito.</p>
+<p>Uma reta oblíqua <span class="math inline">\(y=mx+b\)</span>, com <span class="math inline">\(m\neq 0\)</span>, é assíntota oblíqua em uma direção do infinito quando, nessa direção,</p>
+<p><span class="math display">\[
+\lim_{x\to\pm\infty}
+\left[f(x)-(mx+b)\right]=0.
+\]</span></p>
+<p>O símbolo <span class="math inline">\(\pm\infty\)</span> indica que cada direção deve ser considerada separadamente.</p>
+<p><strong>Ideia central:</strong> o comportamento de uma função pode ser estudado localmente, em intervalos, e globalmente, quando o argumento tende ao infinito.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="🌉 Ponte para o Cálculo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🌉 Ponte para o Cálculo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O comportamento assintótico é uma das portas de entrada para o estudo dos limites.</p>
 <p>Quando perguntamos o que acontece com uma função quando <span class="math inline">\(x\)</span> se aproxima de um ponto ou cresce indefinidamente, estamos fazendo perguntas de limite.</p>
-<p>Assíntotas verticais estão ligadas a limites infinitos.</p>
-<p>Assíntotas horizontais estão ligadas a limites no infinito.</p>
-<p>Comparações de crescimento estão ligadas a limites de quocientes.</p>
-<p>Por isso, esta aula funciona como ponte entre o estudo de funções e o módulo de limites.</p>
-<hr>
+<ul>
+<li>Assíntotas verticais estão ligadas a limites laterais infinitos.</li>
+<li>Assíntotas horizontais estão ligadas a limites no infinito.</li>
+<li>Assíntotas oblíquas estão ligadas à aproximação de uma função por uma reta.</li>
+<li>Comparações de crescimento estão ligadas a limites de quocientes.</li>
+</ul>
+<p>A taxa de variação média também prepara o caminho para o estudo da derivada, que permitirá investigar a taxa de variação instantânea.</p>
+<p>Por isso, esta aula funciona como uma ponte entre o estudo de funções e o módulo de limites.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="exercícios-propostos" class="level1" data-number="2">
@@ -839,232 +1324,284 @@ y=3.
 <div class="callout-body-container callout-body">
 <section id="exercício-1" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
-<p>Classifique o crescimento das funções como linear, polinomial, exponencial ou logarítmico:</p>
+<p>Classifique o tipo de função e seu comportamento de crescimento para <span class="math inline">\(x\to+\infty\)</span>:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=5x+2\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=x^4-3x+1\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=2^x\)</span><br>
-</li>
-<li><span class="math inline">\(p(x)=\ln x\)</span></li>
+<li><p><span class="math inline">\(f(x)=5x+2\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=x^4-3x+1\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=2^x\)</span></p></li>
+<li><p><span class="math inline">\(p(x)=\ln x\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-2" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="exercício-2"><span class="header-section-number">2.2</span> 🧪 Exercício 2</h2>
-<p>Para cada função racional, determine a assíntota vertical:</p>
+<p>Calcule a taxa de variação média de</p>
+<p><span class="math display">\[
+f(x)=x^2+1
+\]</span></p>
+<p>nos intervalos:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=\dfrac{1}{x-4}\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\dfrac{2}{x+3}\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=\dfrac{x+1}{x^2-9}\)</span></li>
+<li><p><span class="math inline">\([1,3]\)</span></p></li>
+<li><p><span class="math inline">\([2,4]\)</span></p></li>
 </ol>
+<p>Interprete os resultados.</p>
 </section>
 <section id="exercício-3" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
-<p>Determine a assíntota horizontal:</p>
+<p>Para cada função racional, determine as assíntotas verticais:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=\dfrac{x}{x+1}\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\dfrac{3x^2+1}{x^2-5}\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=\dfrac{2x+7}{5x-1}\)</span></li>
+<li><p><span class="math inline">\(f(x)=\dfrac{1}{x-4}\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=\dfrac{2}{x+3}\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=\dfrac{x+1}{x^2-9}\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-4" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Identifique o termo dominante dos polinômios:</p>
+<p>Determine as assíntotas horizontais:</p>
 <ol type="a">
-<li><span class="math inline">\(p(x)=x^3-4x+9\)</span><br>
-</li>
-<li><span class="math inline">\(q(x)=7x^5-2x^2+1\)</span><br>
-</li>
-<li><span class="math inline">\(r(x)=-3x^4+x^3+10\)</span></li>
+<li><p><span class="math inline">\(f(x)=\dfrac{x}{x+1}\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=\dfrac{3x^2+1}{x^2-5}\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=\dfrac{2x+7}{5x-1}\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-5" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
+<p>Identifique o termo dominante dos polinômios:</p>
+<ol type="a">
+<li><p><span class="math inline">\(p(x)=x^3-4x+9\)</span></p></li>
+<li><p><span class="math inline">\(q(x)=7x^5-2x^2+1\)</span></p></li>
+<li><p><span class="math inline">\(r(x)=-3x^4+x^3+10\)</span></p></li>
+</ol>
+</section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
 <p>Coloque as funções abaixo em ordem crescente de crescimento para <span class="math inline">\(x\to+\infty\)</span>:</p>
 <p><span class="math display">\[
 \ln x,\qquad x^2,\qquad 2^x,\qquad x.
 \]</span></p>
 </section>
+<section id="exercício-7" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="exercício-7"><span class="header-section-number">2.7</span> 🧪 Exercício 7</h2>
+<p>Considere a função:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2+4}{x}.
+\]</span></p>
+<ol type="a">
+<li><p>Reescreva a função como soma de dois termos.</p></li>
+<li><p>Identifique uma possível assíntota oblíqua.</p></li>
+<li><p>Justifique sua resposta utilizando o comportamento de <span class="math inline">\(1/x\)</span> no infinito.</p></li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
-<div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+</section>
+<section id="gabarito-comentado" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div class="callout callout-style-default callout-important callout-titled" title="✅ Clique para consultar o gabarito">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>✅ Gabarito
+<span class="screen-reader-only">Importante</span>✅ Clique para consultar o gabarito
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
 <ol type="a">
-<li><p><span class="math inline">\(f(x)=5x+2\)</span> tem crescimento linear.</p></li>
-<li><p><span class="math inline">\(g(x)=x^4-3x+1\)</span> tem crescimento polinomial.</p></li>
-<li><p><span class="math inline">\(h(x)=2^x\)</span> tem crescimento exponencial.</p></li>
-<li><p><span class="math inline">\(p(x)=\ln x\)</span> tem crescimento logarítmico.</p></li>
+<li><p><span class="math inline">\(f(x)=5x+2\)</span> é uma função afim, com crescimento linear no sentido usual das aplicações. Seu coeficiente angular é positivo, portanto é estritamente crescente.</p></li>
+<li><p><span class="math inline">\(g(x)=x^4-3x+1\)</span> é uma função polinomial de grau quatro. Para <span class="math inline">\(x\to+\infty\)</span>, seu termo dominante é <span class="math inline">\(x^4\)</span>, e a função cresce indefinidamente.</p></li>
+<li><p><span class="math inline">\(h(x)=2^x\)</span> é uma função exponencial crescente.</p></li>
+<li><p><span class="math inline">\(p(x)=\ln x\)</span> é uma função logarítmica crescente em seu domínio <span class="math inline">\(x&gt;0\)</span>.</p></li>
 </ol>
 </section>
 <section id="exercício-2-1" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
-<ol type="a">
-<li>Para</li>
-</ol>
+<p>A taxa de variação média é:</p>
 <p><span class="math display">\[
-f(x)=\frac{1}{x-4},
+\frac{f(x_2)-f(x_1)}{x_2-x_1}.
 \]</span></p>
-<p>o denominador zera em</p>
+<p>Como</p>
 <p><span class="math display">\[
-x=4.
+f(x)=x^2+1,
 \]</span></p>
-<p>Logo, a assíntota vertical é</p>
+<p>temos:</p>
+<p><strong>a) Intervalo <span class="math inline">\([1,3]\)</span></strong></p>
 <p><span class="math display">\[
-x=4.
+f(1)=2,\qquad f(3)=10.
 \]</span></p>
-<ol start="2" type="a">
-<li>Para</li>
-</ol>
+<p>Logo,</p>
 <p><span class="math display">\[
-g(x)=\frac{2}{x+3},
+\frac{10-2}{3-1}
+=
+\frac{8}{2}=4.
 \]</span></p>
-<p>o denominador zera em</p>
+<p><strong>b) Intervalo <span class="math inline">\([2,4]\)</span></strong></p>
 <p><span class="math display">\[
-x=-3.
+f(2)=5,\qquad f(4)=17.
 \]</span></p>
-<p>Logo, a assíntota vertical é</p>
+<p>Logo,</p>
 <p><span class="math display">\[
-x=-3.
+\frac{17-5}{4-2}
+=
+\frac{12}{2}=6.
 \]</span></p>
-<ol start="3" type="a">
-<li>Para</li>
-</ol>
-<p><span class="math display">\[
-h(x)=\frac{x+1}{x^2-9},
-\]</span></p>
-<p>temos</p>
-<p><span class="math display">\[
-x^2-9=(x-3)(x+3).
-\]</span></p>
-<p>O denominador zera em</p>
-<p><span class="math display">\[
-x=-3
-\]</span></p>
-<p>e</p>
-<p><span class="math display">\[
-x=3.
-\]</span></p>
-<p>Logo, as possíveis assíntotas verticais são</p>
-<p><span class="math display">\[
-x=-3
-\]</span></p>
-<p>e</p>
-<p><span class="math display">\[
-x=3.
-\]</span></p>
-<p>Como o numerador não zera nesses dois pontos, ambas são assíntotas verticais.</p>
+<p><strong>Interpretação:</strong> a taxa de variação média é maior no segundo intervalo. Isso evidencia que a função quadrática apresenta taxas médias crescentes nesses intervalos.</p>
 </section>
 <section id="exercício-3-1" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
-<ol type="a">
-<li>Para</li>
-</ol>
+<p><strong>a)</strong> Para</p>
 <p><span class="math display">\[
-f(x)=\frac{x}{x+1},
+f(x)=\frac{1}{x-4},
 \]</span></p>
-<p>os termos dominantes são <span class="math inline">\(x\)</span> e <span class="math inline">\(x\)</span>. Logo, a razão dos coeficientes líderes é</p>
+<p>o denominador zera em <span class="math inline">\(x=4\)</span>. Portanto, a assíntota vertical é:</p>
 <p><span class="math display">\[
-\frac{1}{1}=1.
+\boxed{x=4}.
 \]</span></p>
-<p>A assíntota horizontal é</p>
+<p><strong>b)</strong> Para</p>
 <p><span class="math display">\[
-y=1.
+g(x)=\frac{2}{x+3},
 \]</span></p>
-<ol start="2" type="a">
-<li>Para</li>
-</ol>
+<p>o denominador zera em <span class="math inline">\(x=-3\)</span>. Portanto:</p>
 <p><span class="math display">\[
-g(x)=\frac{3x^2+1}{x^2-5},
+\boxed{x=-3}.
 \]</span></p>
-<p>os termos dominantes são <span class="math inline">\(3x^2\)</span> e <span class="math inline">\(x^2\)</span>. Logo, a razão dos coeficientes líderes é</p>
+<p><strong>c)</strong> Para</p>
 <p><span class="math display">\[
-\frac{3}{1}=3.
+h(x)=\frac{x+1}{x^2-9},
 \]</span></p>
-<p>A assíntota horizontal é</p>
+<p>fatoramos o denominador:</p>
 <p><span class="math display">\[
-y=3.
+x^2-9=(x-3)(x+3).
 \]</span></p>
-<ol start="3" type="a">
-<li>Para</li>
-</ol>
+<p>O denominador zera em:</p>
 <p><span class="math display">\[
-h(x)=\frac{2x+7}{5x-1},
+x=-3
 \]</span></p>
-<p>os termos dominantes são <span class="math inline">\(2x\)</span> e <span class="math inline">\(5x\)</span>. Logo, a razão dos coeficientes líderes é</p>
+<p>e</p>
 <p><span class="math display">\[
-\frac{2}{5}.
+x=3.
 \]</span></p>
-<p>A assíntota horizontal é</p>
+<p>Como o numerador não zera em nenhum desses pontos, ambas são assíntotas verticais:</p>
 <p><span class="math display">\[
-y=\frac{2}{5}.
+\boxed{x=-3\quad\text{e}\quad x=3}.
 \]</span></p>
 </section>
 <section id="exercício-4-1" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<ol type="a">
-<li>Em</li>
-</ol>
+<p><strong>a)</strong> Para</p>
 <p><span class="math display">\[
-p(x)=x^3-4x+9,
+f(x)=\frac{x}{x+1},
 \]</span></p>
-<p>o termo dominante é</p>
+<p>os graus do numerador e do denominador são iguais. A razão dos coeficientes líderes é:</p>
 <p><span class="math display">\[
-x^3.
+\frac{1}{1}=1.
 \]</span></p>
-<ol start="2" type="a">
-<li>Em</li>
-</ol>
+<p>Logo:</p>
 <p><span class="math display">\[
-q(x)=7x^5-2x^2+1,
+\boxed{y=1}.
 \]</span></p>
-<p>o termo dominante é</p>
+<p><strong>b)</strong> Para</p>
 <p><span class="math display">\[
-7x^5.
+g(x)=\frac{3x^2+1}{x^2-5},
 \]</span></p>
-<ol start="3" type="a">
-<li>Em</li>
-</ol>
+<p>a razão dos coeficientes líderes é:</p>
 <p><span class="math display">\[
-r(x)=-3x^4+x^3+10,
+\frac{3}{1}=3.
 \]</span></p>
-<p>o termo dominante é</p>
+<p>Logo:</p>
 <p><span class="math display">\[
--3x^4.
+\boxed{y=3}.
+\]</span></p>
+<p><strong>c)</strong> Para</p>
+<p><span class="math display">\[
+h(x)=\frac{2x+7}{5x-1},
+\]</span></p>
+<p>a razão dos coeficientes líderes é:</p>
+<p><span class="math display">\[
+\frac{2}{5}.
+\]</span></p>
+<p>Logo:</p>
+<p><span class="math display">\[
+\boxed{y=\frac{2}{5}}.
 \]</span></p>
 </section>
 <section id="exercício-5-1" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
+<p><strong>a)</strong> Em</p>
+<p><span class="math display">\[
+p(x)=x^3-4x+9,
+\]</span></p>
+<p>o termo dominante é:</p>
+<p><span class="math display">\[
+\boxed{x^3}.
+\]</span></p>
+<p><strong>b)</strong> Em</p>
+<p><span class="math display">\[
+q(x)=7x^5-2x^2+1,
+\]</span></p>
+<p>o termo dominante é:</p>
+<p><span class="math display">\[
+\boxed{7x^5}.
+\]</span></p>
+<p><strong>c)</strong> Em</p>
+<p><span class="math display">\[
+r(x)=-3x^4+x^3+10,
+\]</span></p>
+<p>o termo dominante é:</p>
+<p><span class="math display">\[
+\boxed{-3x^4}.
+\]</span></p>
+<p>Observe que o sinal do coeficiente líder é importante para determinar o comportamento do polinômio no infinito.</p>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
 <p>Para <span class="math inline">\(x\to+\infty\)</span>, a ordem crescente de crescimento é:</p>
 <p><span class="math display">\[
-\ln x,\qquad x,\qquad x^2,\qquad 2^x.
+\boxed{
+\ln x,\qquad x,\qquad x^2,\qquad 2^x
+}
 \]</span></p>
-<p>Intuitivamente, logaritmos crescem mais lentamente que potências positivas de <span class="math inline">\(x\)</span>, e exponenciais com base maior que <span class="math inline">\(1\)</span> crescem mais rapidamente que polinômios.</p>
+<p>Os logaritmos crescem mais lentamente que potências positivas de <span class="math inline">\(x\)</span>, enquanto exponenciais de base maior que <span class="math inline">\(1\)</span> crescem mais rapidamente que qualquer polinômio de grau fixo.</p>
 </section>
+<section id="exercício-7-1" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="exercício-7-1"><span class="header-section-number">3.7</span> 🧪 Exercício 7</h2>
+<p>Temos:</p>
+<p><span class="math display">\[
+f(x)=\frac{x^2+4}{x}.
+\]</span></p>
+<p><strong>a)</strong> Dividindo cada termo do numerador por <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+f(x)=x+\frac{4}{x}.
+\]</span></p>
+<p><strong>b)</strong> A reta candidata a assíntota oblíqua é:</p>
+<p><span class="math display">\[
+\boxed{y=x}.
+\]</span></p>
+<p><strong>c)</strong> Para verificar, observamos a diferença:</p>
+<p><span class="math display">\[
+f(x)-x=\frac{4}{x}.
+\]</span></p>
+<p>Como</p>
+<p><span class="math display">\[
+\lim_{x\to+\infty}\frac{4}{x}=0
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\lim_{x\to-\infty}\frac{4}{x}=0,
+\]</span></p>
+<p>a reta <span class="math inline">\(y=x\)</span> é uma assíntota oblíqua nas duas direções do infinito.</p>
 </section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-crescimento-e-comportamento-assintótico" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-crescimento-e-comportamento-assintótico"><span class="header-section-number">3.6</span> 🧩 Quiz — Crescimento e Comportamento Assintótico</h2>
+</section>
+<section id="quiz-crescimento-e-comportamento-assintótico" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Crescimento e Comportamento Assintótico</h1>
 <div class="question">
 <p><strong>Q1.</strong> Entre as funções abaixo, qual cresce mais rapidamente para <span class="math inline">\(x\to+\infty\)</span>?</p>
 <div class="choices">
@@ -1102,7 +1639,7 @@ r(x)=-3x^4+x^3+10,
 </div>
 </div>
 <div class="question">
-<p><strong>Q3.</strong> Em um polinômio, o comportamento para valores muito grandes de <span class="math inline">\(x\)</span> é geralmente dominado:</p>
+<p><strong>Q3.</strong> Em um polinômio, o comportamento para valores muito grandes de <span class="math inline">\(|x|\)</span> é geralmente dominado:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -1114,6 +1651,24 @@ r(x)=-3x^4+x^3+10,
 </div>
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Pelo menor coeficiente.</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="question">
+<p><strong>Q4.</strong> Qual é a taxa de variação média de <span class="math inline">\(f(x)=x^2\)</span> no intervalo <span class="math inline">\([1,3]\)</span>?</p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(2\)</span>.</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\(4\)</span>.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\(8\)</span>.</p><p></p>
 </div>
 </div>
 
@@ -1132,17 +1687,16 @@ r(x)=-3x^4+x^3+10,
 <div class="callout-body-container callout-body">
 <p>Este aprofundamento é opcional. Você pode explorá-lo agora ou seguir as aulas principais e voltar quando quiser.</p>
 <ul>
-<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html">1.23-AP — Assíntotas e Comportamento no Infinito</a> — Assíntotas verticais, horizontais e oblíquas e comportamento no infinito.</li>
+<li><a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html">1.23-AP — Assíntotas e Comportamento no Infinito</a> — Estudo mais detalhado das assíntotas verticais, horizontais e oblíquas, com aplicações, limites laterais, funções racionais e comportamento no infinito.</li>
 </ul>
 </div>
 </div>
 </section>
-</section>
-<section id="navegação" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">1.17 Revisão Geral do Módulo 1</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">Topo</a></p>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">1.17 Revisão Geral do Módulo 1</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">

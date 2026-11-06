@@ -28,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -89,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
   }
 </script>
 
+<meta name="mermaid-theme" content="default">
+<script src="../../../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link rel="alternate" hreflang="en" href="https://en.blogdomarcellini.com.br/">
 <link rel="alternate" hreflang="x-default" href="https://blogdomarcellini.com.br/">
 
@@ -267,29 +306,31 @@ window.Quarto = {
    
   <ul>
   <li><a href="#função-inversa" id="toc-função-inversa" class="nav-link active" data-scroll-target="#função-inversa"><span class="header-section-number">1</span> 📘 Função Inversa</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#a-ideia-de-desfazer-uma-operação" id="toc-a-ideia-de-desfazer-uma-operação" class="nav-link" data-scroll-target="#a-ideia-de-desfazer-uma-operação"><span class="header-section-number">1.1</span> 💡 A ideia de desfazer uma operação</a></li>
   <li><a href="#definição-de-função-inversa" id="toc-definição-de-função-inversa" class="nav-link" data-scroll-target="#definição-de-função-inversa"><span class="header-section-number">1.2</span> 📐 Definição de função inversa</a></li>
   <li><a href="#a-função-identidade" id="toc-a-função-identidade" class="nav-link" data-scroll-target="#a-função-identidade"><span class="header-section-number">1.3</span> 🆔 A função identidade</a></li>
   <li><a href="#nem-toda-função-tem-inversa" id="toc-nem-toda-função-tem-inversa" class="nav-link" data-scroll-target="#nem-toda-função-tem-inversa"><span class="header-section-number">1.4</span> ⚠️ Nem toda função tem inversa</a></li>
   <li><a href="#função-injetiva" id="toc-função-injetiva" class="nav-link" data-scroll-target="#função-injetiva"><span class="header-section-number">1.5</span> 🧩 Função injetiva</a></li>
-  <li><a href="#função-sobrejetiva" id="toc-função-sobrejetiva" class="nav-link" data-scroll-target="#função-sobrejetiva"><span class="header-section-number">1.6</span> 🧩 Função sobrejetiva</a></li>
+  <li><a href="#função-sobrejetiva" id="toc-função-sobrejetiva" class="nav-link" data-scroll-target="#função-sobrejetiva"><span class="header-section-number">1.6</span> 🧩 Função sobrejetiva</a>
+  <ul class="collapse">
+  <li><a href="#ilustração-todos-os-elementos-do-contradomínio-são-atingidos" id="toc-ilustração-todos-os-elementos-do-contradomínio-são-atingidos" class="nav-link" data-scroll-target="#ilustração-todos-os-elementos-do-contradomínio-são-atingidos"><span class="header-section-number">1.6.1</span> Ilustração — Todos os elementos do contradomínio são atingidos</a></li>
+  <li><a href="#exemplo-uma-função-sobrejetiva-de-mathbbr-em-mathbbr" id="toc-exemplo-uma-função-sobrejetiva-de-mathbbr-em-mathbbr" class="nav-link" data-scroll-target="#exemplo-uma-função-sobrejetiva-de-mathbbr-em-mathbbr"><span class="header-section-number">1.6.2</span> Exemplo — Uma função sobrejetiva de <span class="math inline">\(\mathbb{R}\)</span> em <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  </ul></li>
   <li><a href="#função-bijetiva" id="toc-função-bijetiva" class="nav-link" data-scroll-target="#função-bijetiva"><span class="header-section-number">1.7</span> 🧩 Função bijetiva</a></li>
   <li><a href="#exemplo-de-função-com-inversa" id="toc-exemplo-de-função-com-inversa" class="nav-link" data-scroll-target="#exemplo-de-função-com-inversa"><span class="header-section-number">1.8</span> ✅ Exemplo de função com inversa</a></li>
-  <li><a href="#exemplo-de-função-sem-inversa-em-todo-mathbbr" id="toc-exemplo-de-função-sem-inversa-em-todo-mathbbr" class="nav-link" data-scroll-target="#exemplo-de-função-sem-inversa-em-todo-mathbbr"><span class="header-section-number">1.9</span> ✅ Exemplo de função sem inversa em todo <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#exemplo-de-função-sem-inversa-em-todo-mathbbr" id="toc-exemplo-de-função-sem-inversa-em-todo-mathbbr" class="nav-link" data-scroll-target="#exemplo-de-função-sem-inversa-em-todo-mathbbr"><span class="header-section-number">1.9</span> ❌ Exemplo de função sem inversa em todo <span class="math inline">\(\mathbb{R}\)</span></a></li>
   <li><a href="#restringindo-o-domínio" id="toc-restringindo-o-domínio" class="nav-link" data-scroll-target="#restringindo-o-domínio"><span class="header-section-number">1.10</span> 🧭 Restringindo o domínio</a></li>
   <li><a href="#como-encontrar-a-inversa" id="toc-como-encontrar-a-inversa" class="nav-link" data-scroll-target="#como-encontrar-a-inversa"><span class="header-section-number">1.11</span> 🪞 Como encontrar a inversa</a></li>
   <li><a href="#gráfico-da-função-inversa" id="toc-gráfico-da-função-inversa" class="nav-link" data-scroll-target="#gráfico-da-função-inversa"><span class="header-section-number">1.12</span> 📊 Gráfico da função inversa</a></li>
   <li><a href="#teste-da-reta-horizontal" id="toc-teste-da-reta-horizontal" class="nav-link" data-scroll-target="#teste-da-reta-horizontal"><span class="header-section-number">1.13</span> 🔎 Teste da reta horizontal</a></li>
   <li><a href="#exponencial-e-logaritmo" id="toc-exponencial-e-logaritmo" class="nav-link" data-scroll-target="#exponencial-e-logaritmo"><span class="header-section-number">1.14</span> 🚀 Exponencial e logaritmo</a></li>
-  <li><a href="#seno-cosseno-e-inversas" id="toc-seno-cosseno-e-inversas" class="nav-link" data-scroll-target="#seno-cosseno-e-inversas"><span class="header-section-number">1.15</span> 🪞 Seno, cosseno e inversas</a></li>
-  <li><a href="#por-que-isso-importa-para-o-cálculo" id="toc-por-que-isso-importa-para-o-cálculo" class="nav-link" data-scroll-target="#por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.16</span> 🌉 Por que isso importa para o Cálculo?</a></li>
+  <li><a href="#seno-cosseno-e-funções-inversas" id="toc-seno-cosseno-e-funções-inversas" class="nav-link" data-scroll-target="#seno-cosseno-e-funções-inversas"><span class="header-section-number">1.15</span> 🪞 Seno, cosseno e funções inversas</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a>
-  <ul class="collapse">
-  <li><a href="#quiz-função-inversa" id="toc-quiz-função-inversa" class="nav-link" data-scroll-target="#quiz-função-inversa"><span class="header-section-number">3.6</span> 🧩 Quiz — Função Inversa</a></li>
-  </ul></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">4</span> 🔗 Navegação</a></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">2</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">3</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-função-inversa" id="toc-quiz-função-inversa" class="nav-link" data-scroll-target="#quiz-função-inversa"><span class="header-section-number">4</span> 🧩 Quiz — Função Inversa</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">5</span> 🔗 Navegação</a></li>
   </ul>
 </nav>
     </div>
@@ -340,30 +381,74 @@ window.Quarto = {
 
 
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">1.13 Composição de Funções</a></p>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">1.13 Composição de Funções</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="❓ Pergunta Disparadora">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>❓ Pergunta Disparadora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Em que condições podemos desfazer uma função e recuperar uma única entrada a partir de sua saída?</p>
+<p>Toda função possui inversa?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos de Aprendizagem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📌 Objetivos de Aprendizagem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>Compreender o significado de função inversa e sua relação com a composição de funções.</li>
+<li>Distinguir funções injetivas, sobrejetivas e bijetivas.</li>
+<li>Identificar as condições necessárias e suficientes para a existência de uma inversa.</li>
+<li>Determinar funções inversas algebricamente e verificar as identidades de composição.</li>
+<li>Interpretar restrições adequadas de domínio e contradomínio para obter funções invertíveis.</li>
+<li>Identificar a reflexão dos gráficos de <span class="math inline">\(f\)</span> e <span class="math inline">\(f^{-1}\)</span> na reta <span class="math inline">\(y=x\)</span>.</li>
+<li>Reconhecer pares importantes de funções inversas, como exponencial e logaritmo.</li>
+</ul>
+</div>
+</div>
 <section id="função-inversa" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 📘 Função Inversa</h1>
-<p>Na aula anterior, estudamos composição de funções. Agora vamos usar essa ideia para entender um conceito fundamental: a <strong>função inversa</strong>.</p>
+<p>Na aula anterior, estudamos a composição de funções. Agora vamos utilizar essa ideia para compreender um conceito fundamental: a <strong>função inversa</strong>.</p>
 <p>Intuitivamente, uma função inversa desfaz o que a função original fez.</p>
-<p>Por exemplo, a função</p>
+<p>Por exemplo, considere:</p>
 <p><span class="math display">\[
-f(x)=x+3
+f(x)=x+3.
 \]</span></p>
-<p>soma <span class="math inline">\(3\)</span> à entrada.</p>
-<p>A função que desfaz essa operação é</p>
+<p>Essa função soma <span class="math inline">\(3\)</span> à entrada.</p>
+<p>A função que desfaz essa operação é:</p>
 <p><span class="math display">\[
 f^{-1}(x)=x-3.
 \]</span></p>
-<p>De fato, se começamos com <span class="math inline">\(x\)</span>, aplicamos <span class="math inline">\(f\)</span> e depois aplicamos <span class="math inline">\(f^{-1}\)</span>, voltamos para <span class="math inline">\(x\)</span>:</p>
+<p>De fato, se começamos com <span class="math inline">\(x\)</span>, aplicamos <span class="math inline">\(f\)</span> e depois aplicamos <span class="math inline">\(f^{-1}\)</span>, voltamos ao valor inicial:</p>
 <p><span class="math display">\[
-f^{-1}(f(x))=f^{-1}(x+3)=x.
+\begin{aligned}
+f^{-1}(f(x))
+&amp;=f^{-1}(x+3)\\
+&amp;=(x+3)-3\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
-<p>A inversa é, portanto, uma função de retorno.</p>
+<p>A função inversa é, portanto, uma função de retorno.</p>
+<p>Entretanto, existe uma condição importante: para que a inversa seja uma função, cada saída da função original deve corresponder a uma única entrada.</p>
+<p>É por isso que nem toda função possui inversa.</p>
 <hr>
 <section id="a-ideia-de-desfazer-uma-operação" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="a-ideia-de-desfazer-uma-operação"><span class="header-section-number">1.1</span> 💡 A ideia de desfazer uma operação</h2>
-<p>Considere a função</p>
+<p>Considere a função:</p>
 <p><span class="math display">\[
 f(x)=2x.
 \]</span></p>
@@ -372,42 +457,83 @@ f(x)=2x.
 <p><span class="math display">\[
 f^{-1}(x)=\frac{x}{2}.
 \]</span></p>
-<p>Assim,</p>
+<p>Assim:</p>
 <p><span class="math display">\[
-f^{-1}(f(x))=f^{-1}(2x)=\frac{2x}{2}=x.
+\begin{aligned}
+f^{-1}(f(x))
+&amp;=f^{-1}(2x)\\
+&amp;=\frac{2x}{2}\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
 <p>Também temos:</p>
 <p><span class="math display">\[
-f(f^{-1}(x))=f\left(\frac{x}{2}\right)=2\cdot\frac{x}{2}=x.
+\begin{aligned}
+f(f^{-1}(x))
+&amp;=f\left(\frac{x}{2}\right)\\
+&amp;=2\cdot\frac{x}{2}\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
+<p>As duas composições recuperam o valor inicial.</p>
+<p><strong>Ilustração — Ida e volta entre uma função e sua inversa</strong></p>
+<p>Primeiro, aplicamos <span class="math inline">\(f\)</span> e, em seguida, sua inversa <span class="math inline">\(f^{-1}\)</span>.</p>
+<div class="cell" data-fig-width="7" data-fig-height="2.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    X["Entrada: x"] --&gt; F["Aplicar f"]
+    F --&gt; Y["Saída: f(x)"]
+    Y --&gt; FI["Aplicar f⁻¹"]
+    FI --&gt; X2["Retorno: x"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Agora, fazemos o percurso contrário: aplicamos <span class="math inline">\(f^{-1}\)</span> e depois <span class="math inline">\(f\)</span>.</p>
+<div class="cell" data-fig-width="7" data-fig-height="2.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    Y2["Entrada: y"] --&gt; FI2["Aplicar f⁻¹"]
+    FI2 --&gt; X3["Saída: f⁻¹(y)"]
+    X3 --&gt; F2["Aplicar f"]
+    F2 --&gt; Y3["Retorno: y"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>Quando as duas composições devolvem a entrada original, uma função é inversa da outra.</p>
 <hr>
 </section>
 <section id="definição-de-função-inversa" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="definição-de-função-inversa"><span class="header-section-number">1.2</span> 📐 Definição de função inversa</h2>
-<p>Se</p>
+<p>Seja:</p>
 <p><span class="math display">\[
 f:A\to B
 \]</span></p>
-<p>é uma função, uma função</p>
+<p>uma função.</p>
+<p>Uma função:</p>
 <p><span class="math display">\[
 f^{-1}:B\to A
 \]</span></p>
-<p>é chamada de inversa de <span class="math inline">\(f\)</span> quando:</p>
+<p>é chamada de <strong>função inversa de <span class="math inline">\(f\)</span></strong> quando satisfaz as duas condições:</p>
 <p><span class="math display">\[
-f^{-1}(f(x))=x
-\]</span></p>
-<p>para todo</p>
-<p><span class="math display">\[
-x\in A,
+f^{-1}(f(x))=x,
+\qquad x\in A,
 \]</span></p>
 <p>e</p>
 <p><span class="math display">\[
-f(f^{-1}(y))=y
-\]</span></p>
-<p>para todo</p>
-<p><span class="math display">\[
-y\in B.
+f(f^{-1}(y))=y,
+\qquad y\in B.
 \]</span></p>
 <p>Em termos de composição:</p>
 <p><span class="math display">\[
@@ -418,6 +544,7 @@ f^{-1}\circ f=\operatorname{id}_A
 f\circ f^{-1}=\operatorname{id}_B,
 \]</span></p>
 <p>onde <span class="math inline">\(\operatorname{id}\)</span> representa a função identidade.</p>
+<p>Essas duas relações expressam a ideia de que uma função desfaz a ação da outra, tanto no sentido de ida quanto no sentido de volta.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Ideia central">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -429,74 +556,131 @@ f\circ f^{-1}=\operatorname{id}_B,
 </div>
 <div class="callout-body-container callout-body">
 <p>A inversa de uma função é a função que desfaz a ação da função original.</p>
+<p>Para uma função <span class="math inline">\(f:A\to B\)</span>, sua inversa, quando existe, associa elementos de <span class="math inline">\(B\)</span> a elementos de <span class="math inline">\(A\)</span>.</p>
 </div>
 </div>
 <hr>
 </section>
 <section id="a-função-identidade" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="a-função-identidade"><span class="header-section-number">1.3</span> 🆔 A função identidade</h2>
-<p>A função identidade em um conjunto <span class="math inline">\(A\)</span> é dada por</p>
+<p>A função identidade em um conjunto <span class="math inline">\(A\)</span> é definida por:</p>
 <p><span class="math display">\[
 \operatorname{id}_A(x)=x.
 \]</span></p>
 <p>Ela não altera a entrada.</p>
-<p>Por exemplo, em <span class="math inline">\(\mathbb{R}\)</span>,</p>
+<p>Por exemplo, em <span class="math inline">\(\mathbb{R}\)</span>:</p>
 <p><span class="math display">\[
 \operatorname{id}_{\mathbb{R}}(x)=x.
 \]</span></p>
-<p>Dizer que</p>
+<p>Dizer que:</p>
 <p><span class="math display">\[
 f^{-1}\circ f=\operatorname{id}_A
 \]</span></p>
 <p>significa que aplicar <span class="math inline">\(f\)</span> e depois aplicar <span class="math inline">\(f^{-1}\)</span> devolve o ponto inicial.</p>
-<p>Dizer que</p>
+<p>Dizer que:</p>
 <p><span class="math display">\[
 f\circ f^{-1}=\operatorname{id}_B
 \]</span></p>
 <p>significa que aplicar <span class="math inline">\(f^{-1}\)</span> e depois aplicar <span class="math inline">\(f\)</span> também devolve o ponto inicial.</p>
+<p>A função identidade é, portanto, o elemento neutro da composição de funções compatíveis.</p>
 <hr>
 </section>
 <section id="nem-toda-função-tem-inversa" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="nem-toda-função-tem-inversa"><span class="header-section-number">1.4</span> ⚠️ Nem toda função tem inversa</h2>
 <p>Nem toda função possui inversa.</p>
-<p>Para uma função ter inversa, ela precisa associar entradas diferentes a saídas diferentes e precisa atingir todos os valores do contradomínio considerado.</p>
-<p>Em outras palavras, ela precisa ser <strong>bijetiva</strong>.</p>
+<p>Para uma função <span class="math inline">\(f:A\to B\)</span> ter uma inversa definida em todo o contradomínio <span class="math inline">\(B\)</span>, ela precisa satisfazer duas condições:</p>
+<ol type="1">
+<li>Entradas diferentes devem produzir saídas diferentes.</li>
+<li>Todos os elementos do contradomínio devem ser atingidos.</li>
+</ol>
+<p>Em outras palavras, a função precisa ser <strong>bijetiva</strong>.</p>
 <p>Uma função bijetiva é, ao mesmo tempo:</p>
 <ul>
 <li>injetiva;</li>
 <li>sobrejetiva.</li>
 </ul>
-<p>Esses conceitos são importantes para entender quando a inversa existe.</p>
+<p>Esses conceitos são fundamentais para entender quando a inversa existe.</p>
 <hr>
 </section>
 <section id="função-injetiva" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="função-injetiva"><span class="header-section-number">1.5</span> 🧩 Função injetiva</h2>
-<p>Uma função é injetiva quando entradas diferentes produzem saídas diferentes.</p>
-<p>Formalmente, <span class="math inline">\(f\)</span> é injetiva quando:</p>
+<p>Uma função é <strong>injetiva</strong> quando entradas diferentes produzem saídas diferentes.</p>
+<p>Formalmente, uma função <span class="math inline">\(f:A\to B\)</span> é injetiva quando:</p>
 <p><span class="math display">\[
-x_1\neq x_2 \quad\Rightarrow\quad f(x_1)\neq f(x_2).
+x_1\neq x_2
+\quad\Rightarrow\quad
+f(x_1)\neq f(x_2).
 \]</span></p>
 <p>Equivalentemente:</p>
 <p><span class="math display">\[
-f(x_1)=f(x_2)\quad\Rightarrow\quad x_1=x_2.
+f(x_1)=f(x_2)
+\quad\Rightarrow\quad
+x_1=x_2.
 \]</span></p>
-<p>Exemplo:</p>
+<p>Isso significa que nenhum elemento da imagem pode ser obtido a partir de duas entradas diferentes.</p>
+<p><strong>Exemplo:</strong></p>
+<p>Considere:</p>
 <p><span class="math display">\[
-f(x)=2x+1
+f(x)=2x+1.
 \]</span></p>
-<p>é injetiva em <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>Se</p>
+<p>Se:</p>
 <p><span class="math display">\[
-2x_1+1=2x_2+1,
+f(x_1)=f(x_2),
 \]</span></p>
-<p>então</p>
+<p>então:</p>
 <p><span class="math display">\[
-2x_1=2x_2,
+2x_1+1=2x_2+1.
 \]</span></p>
-<p>logo</p>
+<p>Subtraindo <span class="math inline">\(1\)</span> dos dois lados:</p>
+<p><span class="math display">\[
+2x_1=2x_2.
+\]</span></p>
+<p>Dividindo por <span class="math inline">\(2\)</span>:</p>
 <p><span class="math display">\[
 x_1=x_2.
 \]</span></p>
+<p>Portanto, <span class="math inline">\(f(x)=2x+1\)</span> é injetiva em <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><strong>Exemplo de função que não é injetiva:</strong></p>
+<p>Considere:</p>
+<p><span class="math display">\[
+f(x)=x^2.
+\]</span></p>
+<p>Temos:</p>
+<p><span class="math display">\[
+f(2)=4
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+f(-2)=4.
+\]</span></p>
+<p>Duas entradas diferentes produzem a mesma saída.</p>
+<p><strong>Ilustração — Duas entradas chegam à mesma saída</strong></p>
+<div class="cell" data-fig-width="6" data-fig-height="3" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph A["Entradas"]
+        direction TB
+        X1["−2"]
+        X2["2"]
+    end
+
+    subgraph B["Saída"]
+        direction TB
+        Y["4"]
+    end
+
+    X1 --&gt; Y
+    X2 --&gt; Y
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Assim, <span class="math inline">\(f(x)=x^2\)</span> não é injetiva em todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <hr>
 </section>
 <section id="função-sobrejetiva" class="level2" data-number="1.6">
@@ -505,47 +689,150 @@ x_1=x_2.
 <p><span class="math display">\[
 f:A\to B
 \]</span></p>
-<p>é sobrejetiva quando todo elemento de <span class="math inline">\(B\)</span> é atingido por algum elemento de <span class="math inline">\(A\)</span>.</p>
-<p>Isto é, para todo</p>
-<p><span class="math display">\[
-y\in B,
-\]</span></p>
-<p>existe</p>
-<p><span class="math display">\[
-x\in A
-\]</span></p>
-<p>tal que</p>
+<p>é <strong>sobrejetiva</strong> quando todo elemento do contradomínio <span class="math inline">\(B\)</span> é imagem de pelo menos um elemento do domínio <span class="math inline">\(A\)</span>.</p>
+<p>Formalmente, para todo <span class="math inline">\(y\in B\)</span>, existe pelo menos um <span class="math inline">\(x\in A\)</span> tal que:</p>
 <p><span class="math display">\[
 f(x)=y.
 \]</span></p>
-<p>Isso significa que a imagem da função é igual ao contradomínio:</p>
+<p>Em símbolos:</p>
 <p><span class="math display">\[
-\operatorname{Im}(f)=B.
+\boxed{
+\forall y\in B,\ \exists x\in A:\ f(x)=y
+}
 \]</span></p>
-<p>Por exemplo,</p>
+<p>Isso significa que nenhum elemento do contradomínio fica sem ser atingido. Equivalentemente, a imagem da função coincide com o contradomínio:</p>
+<p><span class="math display">\[
+\boxed{\operatorname{Im}(f)=B}
+\]</span></p>
+<section id="ilustração-todos-os-elementos-do-contradomínio-são-atingidos" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="ilustração-todos-os-elementos-do-contradomínio-são-atingidos"><span class="header-section-number">1.6.1</span> Ilustração — Todos os elementos do contradomínio são atingidos</h3>
+<div class="cell" data-fig-width="7" data-fig-height="4.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph A["Domínio A"]
+        direction TB
+        a["a"]
+        b["b"]
+        c["c"]
+        d["d"]
+    end
+
+    subgraph B["Contradomínio B"]
+        direction TB
+        y1["1"]
+        y2["2"]
+        y3["3"]
+    end
+
+    a --&gt;|f| y1
+    b --&gt;|f| y2
+    c --&gt;|f| y3
+    d --&gt;|f| y2
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Observe que todos os elementos do contradomínio <span class="math inline">\(B=\{1,2,3\}\)</span> recebem pelo menos uma seta. Portanto, a função é sobrejetiva.</p>
+<p>Note também que os elementos <span class="math inline">\(b\)</span> e <span class="math inline">\(d\)</span> possuem a mesma imagem:</p>
+<p><span class="math display">\[
+f(b)=f(d)=2.
+\]</span></p>
+<p>Isso mostra que uma função pode ser sobrejetiva sem ser injetiva: diferentes elementos do domínio podem ser enviados ao mesmo elemento do contradomínio.</p>
+</section>
+<section id="exemplo-uma-função-sobrejetiva-de-mathbbr-em-mathbbr" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="exemplo-uma-função-sobrejetiva-de-mathbbr-em-mathbbr"><span class="header-section-number">1.6.2</span> Exemplo — Uma função sobrejetiva de <span class="math inline">\(\mathbb{R}\)</span> em <span class="math inline">\(\mathbb{R}\)</span></h3>
+<p>Considere a função:</p>
 <p><span class="math display">\[
 f:\mathbb{R}\to\mathbb{R}
 \]</span></p>
-<p>dada por</p>
+<p>definida por:</p>
 <p><span class="math display">\[
-f(x)=2x+1
+f(x)=2x+1.
 \]</span></p>
-<p>é sobrejetiva, pois qualquer real <span class="math inline">\(y\)</span> pode ser escrito como</p>
+<p>Para verificar se <span class="math inline">\(f\)</span> é sobrejetiva, devemos mostrar que todo número real <span class="math inline">\(y\)</span> pode ser escrito como <span class="math inline">\(f(x)\)</span> para algum <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
+<p>Seja, então, <span class="math inline">\(y\in\mathbb{R}\)</span> arbitrário. Procuramos um <span class="math inline">\(x\in\mathbb{R}\)</span> que satisfaça:</p>
 <p><span class="math display">\[
-y=2x+1
+f(x)=y.
 \]</span></p>
-<p>para</p>
+<p>Substituindo a expressão da função:</p>
 <p><span class="math display">\[
-x=\frac{y-1}{2}.
+2x+1=y.
 \]</span></p>
+<p>Isolando <span class="math inline">\(x\)</span>, obtemos:</p>
+<p><span class="math display">\[
+2x=y-1,
+\]</span></p>
+<p>e, portanto:</p>
+<p><span class="math display">\[
+\boxed{x=\frac{y-1}{2}}.
+\]</span></p>
+<p>Como <span class="math inline">\(y\in\mathbb{R}\)</span>, temos:</p>
+<p><span class="math display">\[
+\frac{y-1}{2}\in\mathbb{R}.
+\]</span></p>
+<p>Assim, para qualquer número real <span class="math inline">\(y\)</span>, encontramos um número real <span class="math inline">\(x\)</span> tal que:</p>
+<p><span class="math display">\[
+\begin{aligned}
+f\left(\frac{y-1}{2}\right)
+&amp;=2\left(\frac{y-1}{2}\right)+1\\
+&amp;=y-1+1\\
+&amp;=y.
+\end{aligned}
+\]</span></p>
+<p>Logo, todo elemento do contradomínio é atingido.</p>
+<p>Concluímos que:</p>
+<p><span class="math display">\[
+\boxed{f\text{ é sobrejetiva}.}
+\]</span></p>
+<p><strong>Ideia fundamental:</strong> para demonstrar que uma função é sobrejetiva, partimos de um elemento arbitrário do contradomínio e mostramos que existe um elemento do domínio cuja imagem é exatamente esse elemento.</p>
 <hr>
+</section>
 </section>
 <section id="função-bijetiva" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="função-bijetiva"><span class="header-section-number">1.7</span> 🧩 Função bijetiva</h2>
-<p>Uma função é bijetiva quando é injetiva e sobrejetiva.</p>
-<p>Funções bijetivas têm inversa.</p>
-<p>A ideia é que cada elemento do domínio corresponde a exatamente um elemento do contradomínio, e cada elemento do contradomínio é atingido exatamente uma vez.</p>
-<p>Assim, é possível inverter as setas sem ambiguidade.</p>
+<p>Uma função é <strong>bijetiva</strong> quando é simultaneamente injetiva e sobrejetiva.</p>
+<p>Isso significa que:</p>
+<ul>
+<li>entradas diferentes produzem saídas diferentes;</li>
+<li>todos os elementos do contradomínio são atingidos.</li>
+</ul>
+<p>Cada elemento do contradomínio corresponde, portanto, a exatamente uma entrada do domínio.</p>
+<p><strong>Ilustração — Correspondência bijetiva</strong></p>
+<div class="cell" data-fig-width="6" data-fig-height="3.4" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph A["Domínio A"]
+        direction TB
+        A1["a₁"]
+        A2["a₂"]
+        A3["a₃"]
+    end
+
+    subgraph B["Contradomínio B"]
+        direction TB
+        B1["b₁"]
+        B2["b₂"]
+        B3["b₃"]
+    end
+
+    A1 --&gt; B2
+    A2 --&gt; B3
+    A3 --&gt; B1
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Nesse exemplo, cada elemento do domínio está associado a um único elemento do contradomínio, e cada elemento do contradomínio é atingido exatamente uma vez.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Critério prático">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -556,22 +843,22 @@ x=\frac{y-1}{2}.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Uma função tem inversa quando cada valor de saída corresponde a uma única entrada.</p>
+<p>Uma função <span class="math inline">\(f:A\to B\)</span> possui inversa <span class="math inline">\(f^{-1}:B\to A\)</span> quando cada valor de saída corresponde a uma única entrada e todos os valores do contradomínio são atingidos.</p>
 </div>
 </div>
 <hr>
 </section>
 <section id="exemplo-de-função-com-inversa" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="exemplo-de-função-com-inversa"><span class="header-section-number">1.8</span> ✅ Exemplo de função com inversa</h2>
-<p>Considere</p>
+<p>Considere:</p>
 <p><span class="math display">\[
 f:\mathbb{R}\to\mathbb{R}
 \]</span></p>
-<p>dada por</p>
+<p>dada por:</p>
 <p><span class="math display">\[
 f(x)=2x+3.
 \]</span></p>
-<p>Para encontrar a inversa, escrevemos</p>
+<p>Para encontrar a inversa, escrevemos:</p>
 <p><span class="math display">\[
 y=2x+3.
 \]</span></p>
@@ -579,35 +866,115 @@ y=2x+3.
 <p><span class="math display">\[
 y-3=2x,
 \]</span></p>
-<p>logo</p>
+<p>logo:</p>
 <p><span class="math display">\[
 x=\frac{y-3}{2}.
 \]</span></p>
-<p>Trocando <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span>, obtemos</p>
+<p>Trocando <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span>, obtemos:</p>
 <p><span class="math display">\[
-f^{-1}(x)=\frac{x-3}{2}.
+\boxed{f^{-1}(x)=\frac{x-3}{2}}.
 \]</span></p>
-<p>Vamos verificar:</p>
+<p>Vamos verificar a primeira composição:</p>
 <p><span class="math display">\[
-f^{-1}(f(x))=f^{-1}(2x+3)=\frac{(2x+3)-3}{2}=x.
+\begin{aligned}
+f^{-1}(f(x))
+&amp;=f^{-1}(2x+3)\\
+&amp;=\frac{(2x+3)-3}{2}\\
+&amp;=\frac{2x}{2}\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
-<p>E também:</p>
+<p>Agora verificamos a segunda:</p>
 <p><span class="math display">\[
-f(f^{-1}(x))=f\left(\frac{x-3}{2}\right)=2\cdot\frac{x-3}{2}+3=x.
+\begin{aligned}
+f(f^{-1}(x))
+&amp;=f\left(\frac{x-3}{2}\right)\\
+&amp;=2\cdot\frac{x-3}{2}+3\\
+&amp;=x-3+3\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
+<p>As duas composições resultam na identidade. Portanto, as funções são inversas.</p>
+<div id="fig-1-14-inversa" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano cartesiano com os gráficos de f(x)=2x+3 e de sua inversa f⁻¹(x)=(x−3)/2. As duas retas são simétricas em relação à reta y=x.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-inversa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-funcao-inversa.svg" class="img-fluid figure-img" style="width:90.0%" alt="Plano cartesiano com os gráficos de f(x)=2x+3 e de sua inversa f⁻¹(x)=(x−3)/2. As duas retas são simétricas em relação à reta y=x.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-inversa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Gráficos de uma função e de sua inversa, simétricos em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="59223b12" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">8</span>, <span class="dv">14</span>, <span class="dv">600</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.plot(x, <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">3</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=2x</span><span class="op">+</span><span class="vs">3</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax.plot(x, (x <span class="op">-</span> <span class="dv">3</span>)<span class="op">/</span><span class="dv">2</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\f</span><span class="vs">rac{x-3}</span><span class="op">{2}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">8</span>, <span class="dv">14</span>),</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">8</span>, <span class="dv">14</span>),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Função e sua inversa'</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">'images'</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-funcao-inversa.svg'</span>,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="exemplo-de-função-sem-inversa-em-todo-mathbbr" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="exemplo-de-função-sem-inversa-em-todo-mathbbr"><span class="header-section-number">1.9</span> ✅ Exemplo de função sem inversa em todo <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>Considere</p>
+<h2 data-number="1.9" class="anchored" data-anchor-id="exemplo-de-função-sem-inversa-em-todo-mathbbr"><span class="header-section-number">1.9</span> ❌ Exemplo de função sem inversa em todo <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>Considere:</p>
 <p><span class="math display">\[
 f:\mathbb{R}\to\mathbb{R}
 \]</span></p>
-<p>dada por</p>
+<p>dada por:</p>
 <p><span class="math display">\[
 f(x)=x^2.
 \]</span></p>
-<p>Essa função não é injetiva em <span class="math inline">\(\mathbb{R}\)</span>, pois</p>
+<p>Essa função não é injetiva em <span class="math inline">\(\mathbb{R}\)</span>, pois:</p>
 <p><span class="math display">\[
 f(2)=4
 \]</span></p>
@@ -616,51 +983,184 @@ f(2)=4
 f(-2)=4.
 \]</span></p>
 <p>Duas entradas diferentes produzem a mesma saída.</p>
+<p>Além disso, a função não é sobrejetiva em <span class="math inline">\(\mathbb{R}\)</span>, pois não assume valores negativos.</p>
 <p>Portanto, <span class="math inline">\(f(x)=x^2\)</span> não possui inversa como função de <span class="math inline">\(\mathbb{R}\)</span> em <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <hr>
 </section>
 <section id="restringindo-o-domínio" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="restringindo-o-domínio"><span class="header-section-number">1.10</span> 🧭 Restringindo o domínio</h2>
-<p>Embora</p>
+<p>Embora:</p>
 <p><span class="math display">\[
 f(x)=x^2
 \]</span></p>
 <p>não tenha inversa em todo <span class="math inline">\(\mathbb{R}\)</span>, podemos restringir seu domínio.</p>
-<p>Considere</p>
+<p>Considere:</p>
 <p><span class="math display">\[
 f:[0,+\infty)\to[0,+\infty)
 \]</span></p>
-<p>dada por</p>
+<p>dada por:</p>
 <p><span class="math display">\[
 f(x)=x^2.
 \]</span></p>
 <p>Agora a função é injetiva e sobrejetiva.</p>
-<p>A inversa é</p>
+<p>A inversa é:</p>
 <p><span class="math display">\[
 f^{-1}(x)=\sqrt{x}.
 \]</span></p>
-<p>De fato,</p>
+<p>De fato:</p>
 <p><span class="math display">\[
 \sqrt{x^2}=x
 \]</span></p>
-<p>para</p>
+<p>para:</p>
 <p><span class="math display">\[
 x\geq 0.
 \]</span></p>
-<p>Esse exemplo mostra que a existência da inversa depende fortemente do domínio e do contradomínio.</p>
+<p><strong>Ilustração — Restrição do domínio e recuperação da entrada</strong></p>
+<div class="cell" data-fig-width="6" data-fig-height="4" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    A["Domínio: x ≥ 0"] --&gt; F["Aplicar f(x) = x²"]
+    F --&gt; B["Imagem: y ≥ 0"]
+    B --&gt; G["Aplicar f⁻¹(y) = √y"]
+    G --&gt; C["Recuperar x ≥ 0"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Esse exemplo mostra que a existência da inversa depende fortemente do domínio e do contradomínio escolhidos.</p>
+<p>Também poderíamos restringir o domínio a:</p>
+<p><span class="math display">\[
+(-\infty,0].
+\]</span></p>
+<p>Nesse caso, a função também seria bijetiva sobre <span class="math inline">\([0,+\infty)\)</span>, e sua inversa seria:</p>
+<p><span class="math display">\[
+f^{-1}(x)=-\sqrt{x}.
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Atenção ao domínio">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Atenção ao domínio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A função <span class="math inline">\(x^2\)</span> possui duas restrições naturais que permitem construir inversas diferentes:</p>
+<ul>
+<li>Se o domínio for <span class="math inline">\([0,+\infty)\)</span>, a inversa será <span class="math inline">\(\sqrt{x}\)</span>.</li>
+<li>Se o domínio for <span class="math inline">\((-\infty,0]\)</span>, a inversa será <span class="math inline">\(-\sqrt{x}\)</span>.</li>
+</ul>
+<p>A escolha do domínio determina qual ramo da função será invertido.</p>
+</div>
+</div>
+<div id="fig-1-14-restricoes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano cartesiano com os dois ramos da parábola y=x²: o ramo para x maior ou igual a zero e o ramo para x menor ou igual a zero. Também aparecem as inversas y=√x e y=−√x, simétricas aos respectivos ramos em relação à reta y=x.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-restricoes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-restricoes-dominio.svg" class="img-fluid figure-img" style="width:90.0%" alt="Plano cartesiano com os dois ramos da parábola y=x²: o ramo para x maior ou igual a zero e o ramo para x menor ou igual a zero. Também aparecem as inversas y=√x e y=−√x, simétricas aos respectivos ramos em relação à reta y=x.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-restricoes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Gráficos de f(x)=x² com domínio restrito a x≥0 e x≤0, juntamente com suas inversas √x e −√x. As curvas são simétricas em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="bbb6f3cb" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Domínio da restrição x &gt;= 0</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>x_pos <span class="op">=</span> np.linspace(<span class="dv">0</span>, np.sqrt(<span class="dv">5</span>), <span class="dv">400</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>y_pos <span class="op">=</span> x_pos<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Domínio da restrição x &lt;= 0</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>x_neg <span class="op">=</span> np.linspace(<span class="op">-</span>np.sqrt(<span class="dv">5</span>), <span class="dv">0</span>, <span class="dv">400</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>y_neg <span class="op">=</span> x_neg<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Domínio das funções inversas: x &gt;= 0</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">400</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>y_inv_pos <span class="op">=</span> np.sqrt(u)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>y_inv_neg <span class="op">=</span> <span class="op">-</span>np.sqrt(u)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Funções com domínio restrito</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.plot(x_pos, y_pos, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f_</span><span class="op">+</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2,</span><span class="ch">\ </span><span class="vs">x</span><span class="er">\</span><span class="vs">geq 0</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>ax.plot(x_neg, y_neg, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f_-</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2,</span><span class="ch">\ </span><span class="vs">x</span><span class="er">\</span><span class="vs">leq 0</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Funções inversas</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>ax.plot(u, y_inv_pos, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f_</span><span class="op">+</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\s</span><span class="vs">qrt{x}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>ax.plot(u, y_inv_neg, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f_-</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=-</span><span class="dv">\s</span><span class="vs">qrt{x}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Reta de simetria</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>], [<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>],</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Eixos cartesianos</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Restringindo o domínio de f(x) = x²'</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">'images'</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-restricoes-dominio.svg'</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="como-encontrar-a-inversa" class="level2" data-number="1.11">
 <h2 data-number="1.11" class="anchored" data-anchor-id="como-encontrar-a-inversa"><span class="header-section-number">1.11</span> 🪞 Como encontrar a inversa</h2>
 <p>Para encontrar a inversa de uma função dada por uma fórmula, podemos seguir estes passos:</p>
 <ol type="1">
-<li>escreva <span class="math inline">\(y=f(x)\)</span>;</li>
-<li>resolva a equação para <span class="math inline">\(x\)</span> em função de <span class="math inline">\(y\)</span>;</li>
-<li>troque o nome da variável <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span>;</li>
-<li>verifique domínio e imagem;</li>
-<li>se necessário, restrinja o domínio para garantir que a função seja injetiva.</li>
+<li>Escreva <span class="math inline">\(y=f(x)\)</span>.</li>
+<li>Resolva a equação para <span class="math inline">\(x\)</span> em função de <span class="math inline">\(y\)</span>.</li>
+<li>Troque o nome da variável <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span>, obtendo a expressão da inversa.</li>
+<li>Identifique o domínio e a imagem da inversa.</li>
+<li>Verifique as duas composições, quando necessário.</li>
 </ol>
-<p>Por exemplo:</p>
+<p><strong>Exemplo:</strong></p>
+<p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{x-1}{2}.
 \]</span></p>
@@ -678,27 +1178,130 @@ x=2y+1.
 \]</span></p>
 <p>Portanto:</p>
 <p><span class="math display">\[
-f^{-1}(x)=2x+1.
+\boxed{f^{-1}(x)=2x+1}.
 \]</span></p>
+<p>Observe que o procedimento algébrico precisa ser acompanhado da verificação dos domínios. A expressão obtida deve representar uma função com o domínio e o contradomínio adequados.</p>
+<div id="fig-1-14-como-encontrar-inversa" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano cartesiano com os gráficos das retas f(x)=(x−1)/2 e f inversa de x igual a 2x+1. As duas retas são simétricas em relação à reta y=x.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-como-encontrar-inversa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-como-encontrar-inversa.svg" class="img-fluid figure-img" style="width:90.0%" alt="Plano cartesiano com os gráficos das retas f(x)=(x−1)/2 e f inversa de x igual a 2x+1. As duas retas são simétricas em relação à reta y=x.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-como-encontrar-inversa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Gráficos de f(x)=(x−1)/2 e de sua inversa f⁻¹(x)=2x+1, simétricos em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="27429344" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">600</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Função original</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>y_f <span class="op">=</span> (x <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Função inversa</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>y_inv <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Reta de simetria</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>y_identidade <span class="op">=</span> x</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y_f, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\f</span><span class="vs">rac{x-1}</span><span class="op">{2}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y_inv, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=2x</span><span class="op">+</span><span class="vs">1</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y_identidade,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Eixos cartesianos</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Função e sua inversa'</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">'images'</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-como-encontrar-inversa.svg'</span>,</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="gráfico-da-função-inversa" class="level2" data-number="1.12">
 <h2 data-number="1.12" class="anchored" data-anchor-id="gráfico-da-função-inversa"><span class="header-section-number">1.12</span> 📊 Gráfico da função inversa</h2>
-<p>O gráfico da função inversa tem uma relação geométrica especial com o gráfico da função original.</p>
-<p>Se</p>
+<p>O gráfico de uma função inversa possui uma relação geométrica especial com o gráfico da função original.</p>
+<p>Se o ponto:</p>
 <p><span class="math display">\[
 (a,b)
 \]</span></p>
-<p>pertence ao gráfico de <span class="math inline">\(f\)</span>, então</p>
+<p>pertence ao gráfico de <span class="math inline">\(f\)</span>, então:</p>
+<p><span class="math display">\[
+f(a)=b.
+\]</span></p>
+<p>Como a inversa desfaz a ação de <span class="math inline">\(f\)</span>, temos:</p>
+<p><span class="math display">\[
+f^{-1}(b)=a.
+\]</span></p>
+<p>Portanto, o ponto:</p>
 <p><span class="math display">\[
 (b,a)
 \]</span></p>
 <p>pertence ao gráfico de <span class="math inline">\(f^{-1}\)</span>.</p>
-<p>Isso significa que os gráficos de <span class="math inline">\(f\)</span> e <span class="math inline">\(f^{-1}\)</span> são simétricos em relação à reta</p>
+<p>Isso significa que os gráficos de <span class="math inline">\(f\)</span> e <span class="math inline">\(f^{-1}\)</span> são simétricos em relação à reta:</p>
 <p><span class="math display">\[
 y=x.
 \]</span></p>
-<p>Por exemplo, as funções</p>
+<p><strong>Ilustração — Troca das coordenadas</strong></p>
+<div class="cell" data-fig-width="6" data-fig-height="3.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    A["Ponto (a, b) no gráfico de f"] --&gt; B["Trocar as coordenadas"]
+    B --&gt; C["Ponto (b, a) no gráfico de f⁻¹"]
+    C --&gt; D["Simetria em relação à reta y = x"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>A simetria ocorre porque a inversa troca os papéis da entrada e da saída.</p>
+<p>Por exemplo, as funções:</p>
 <p><span class="math display">\[
 f(x)=e^x
 \]</span></p>
@@ -707,11 +1310,166 @@ f(x)=e^x
 f^{-1}(x)=\ln x
 \]</span></p>
 <p>têm gráficos simétricos em relação à reta <span class="math inline">\(y=x\)</span>.</p>
+<div id="fig-1-14-inversa-generica" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano cartesiano com uma curva estritamente crescente representando uma função invertível e sua curva inversa. A reta y=x é a bissetriz dos quadrantes ímpares. Os pontos (a,b) e (b,a) são simétricos em relação a essa reta.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-inversa-generica-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-grafico-generico-inversa.svg" class="img-fluid figure-img" style="width:90.0%" alt="Plano cartesiano com uma curva estritamente crescente representando uma função invertível e sua curva inversa. A reta y=x é a bissetriz dos quadrantes ímpares. Os pontos (a,b) e (b,a) são simétricos em relação a essa reta.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-inversa-generica-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Gráfico esquemático de uma função invertível e sua inversa, simétricas em relação à reta y=x. Os pontos (a,b) e (b,a) ilustram a troca das coordenadas.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1-14-exponencial-logaritmo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano cartesiano com os gráficos de y=e elevado a x e y=logaritmo natural de x, além da reta y=x. Os gráficos da exponencial e do logaritmo natural são simétricos em relação à reta y=x.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-exponencial-logaritmo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-exponencial-logaritmo.svg" class="img-fluid figure-img" style="width:90.0%" alt="Plano cartesiano com os gráficos de y=e elevado a x e y=logaritmo natural de x, além da reta y=x. Os gráficos da exponencial e do logaritmo natural são simétricos em relação à reta y=x.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-exponencial-logaritmo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Gráficos da função exponencial f(x)=eˣ e de sua inversa f⁻¹(x)=ln x, simétricos em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="959e351b" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">'images'</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Gráfico esquemático de uma função invertível</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Função estritamente crescente usada como exemplo visual</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">2.3</span>, <span class="fl">2.3</span>, <span class="dv">600</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">+</span> <span class="fl">0.12</span><span class="op">*</span>x<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Ponto (a,b) e seu correspondente (b,a)</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">2.2</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a <span class="op">+</span> <span class="fl">0.12</span><span class="op">*</span>a<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Função original</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="op">+</span><span class="vs">0</span><span class="dv">.</span><span class="vs">12x</span><span class="dv">^</span><span class="vs">3</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Inversa: troca das coordenadas dos pontos do gráfico</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>ax.plot(y, x, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="dv">^</span><span class="vs">{-1}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Bissetriz dos quadrantes ímpares</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>], [<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>],</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Pontos simétricos</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>ax.scatter([a, b], [b, a], s<span class="op">=</span><span class="dv">50</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">a,b</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, (a, b),</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>), textcoords<span class="op">=</span><span class="st">'offset points'</span>)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">b,a</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, (b, a),</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">8</span>, <span class="op">-</span><span class="dv">16</span>), textcoords<span class="op">=</span><span class="st">'offset points'</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>),</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>),</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Função invertível e sua inversa'</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-grafico-generico-inversa.svg'</span>,</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Função exponencial e logaritmo natural</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a><span class="co"># f(x) = e^x</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>x_exp <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, np.log(<span class="dv">8</span>), <span class="dv">600</span>)</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>y_exp <span class="op">=</span> np.exp(x_exp)</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="co"># f^(-1)(x) = ln(x), com domínio x &gt; 0</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>x_log <span class="op">=</span> np.linspace(np.exp(<span class="op">-</span><span class="dv">3</span>), <span class="dv">8</span>, <span class="dv">600</span>)</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>y_log <span class="op">=</span> np.log(x_log)</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>ax.plot(x_exp, y_exp, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=e</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>ax.plot(x_log, y_log, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="er">\</span><span class="vs">ln x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Bissetriz dos quadrantes ímpares</span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>], [<span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>],</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Pontos correspondentes: (0,1) e (1,0)</span></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>], s<span class="op">=</span><span class="dv">50</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">0,1</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, (<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>), textcoords<span class="op">=</span><span class="st">'offset points'</span>)</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1,0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, (<span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">8</span>, <span class="op">-</span><span class="dv">16</span>), textcoords<span class="op">=</span><span class="st">'offset points'</span>)</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>),</span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>),</span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Exponencial e logaritmo natural'</span></span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-exponencial-logaritmo.svg'</span>,</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="teste-da-reta-horizontal" class="level2" data-number="1.13">
 <h2 data-number="1.13" class="anchored" data-anchor-id="teste-da-reta-horizontal"><span class="header-section-number">1.13</span> 🔎 Teste da reta horizontal</h2>
-<p>Para saber se uma função possui inversa, podemos usar o teste da reta horizontal.</p>
+<p>Para saber se uma função é injetiva, podemos utilizar o <strong>teste da reta horizontal</strong>.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Teste da reta horizontal">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -722,20 +1480,188 @@ f^{-1}(x)=\ln x
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Uma função é injetiva se toda reta horizontal intercepta seu gráfico em no máximo um ponto.</p>
+<p>Uma função é injetiva se toda reta horizontal intercepta seu gráfico em, no máximo, um ponto.</p>
 </div>
 </div>
-<p>Se alguma reta horizontal corta o gráfico em dois ou mais pontos, então há dois valores diferentes de <span class="math inline">\(x\)</span> produzindo a mesma saída. Nesse caso, a função não é injetiva e não possui inversa no domínio considerado.</p>
-<p>Por exemplo, o gráfico de</p>
+<p>Se alguma reta horizontal corta o gráfico em dois ou mais pontos, existem dois valores diferentes de <span class="math inline">\(x\)</span> produzindo a mesma saída. Nesse caso, a função não é injetiva e não possui inversa como função no domínio considerado.</p>
+<p><strong>Ilustração — Como interpretar o teste</strong></p>
+<div class="cell" data-fig-width="6" data-fig-height="3.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    A["Escolha uma reta horizontal"] --&gt; B["Observe as interseções com o gráfico"]
+    B --&gt; C{"Quantos pontos de interseção?"}
+    C --&gt;|"No máximo um"| D["A condição de injetividade é satisfeita"]
+    C --&gt;|"Dois ou mais"| E["A função não é injetiva"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Por exemplo, o gráfico de:</p>
 <p><span class="math display">\[
 f(x)=x^2
 \]</span></p>
 <p>em <span class="math inline">\(\mathbb{R}\)</span> falha no teste da reta horizontal.</p>
-<p>Já o gráfico de</p>
+<p>Já o gráfico de:</p>
 <p><span class="math display">\[
 f(x)=x^3
 \]</span></p>
-<p>passa no teste e possui inversa em <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>passa no teste e possui inversa em <span class="math inline">\(\mathbb{R}\)</span>, dada por:</p>
+<p><span class="math display">\[
+f^{-1}(x)=\sqrt[3]{x}.
+\]</span></p>
+<div id="fig-1-14-teste-horizontal-x2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico da parábola y=x² e da reta horizontal y=4. A reta intercepta a parábola em dois pontos distintos, correspondentes a x igual a menos dois e x igual a dois.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-teste-horizontal-x2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-teste-reta-horizontal-x2.svg" class="img-fluid figure-img" style="width:90.0%" alt="Gráfico da parábola y=x² e da reta horizontal y=4. A reta intercepta a parábola em dois pontos distintos, correspondentes a x igual a menos dois e x igual a dois.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-teste-horizontal-x2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Teste da reta horizontal para f(x)=x². A reta y=4 intercepta a parábola nos pontos (−2,4) e (2,4), mostrando que a função não é injetiva em R.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1-14-teste-horizontal-x3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico da função y=x³ e da reta horizontal y=4. A reta intercepta o gráfico em um único ponto, com coordenadas (raiz cúbica de quatro, 4).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-teste-horizontal-x3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-teste-reta-horizontal-x3.svg" class="img-fluid figure-img" style="width:90.0%" alt="Gráfico da função y=x³ e da reta horizontal y=4. A reta intercepta o gráfico em um único ponto, com coordenadas (raiz cúbica de quatro, 4).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-teste-horizontal-x3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7: Teste da reta horizontal para f(x)=x³. A reta y=4 intercepta o gráfico em um único ponto, mostrando que a função é injetiva em R.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="99ae05f9" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">'images'</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Função f(x) = x²: não é injetiva em R</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">600</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Reta horizontal y = 4</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>y_horizontal <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Pontos de interseção: (-2, 4) e (2, 4)</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>x_intersecoes <span class="op">=</span> [<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>]</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>y_intersecoes <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">4</span>]</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">5.2</span>))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>ax.axhline(y_horizontal, color<span class="op">=</span><span class="st">'tab:red'</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>           linestyle<span class="op">=</span><span class="st">'--'</span>, lw<span class="op">=</span><span class="fl">1.8</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="vs">r'Reta horizontal </span><span class="dv">$</span><span class="vs">y=4</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>ax.scatter(x_intersecoes, y_intersecoes,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>           color<span class="op">=</span><span class="st">'tab:red'</span>, s<span class="op">=</span><span class="dv">55</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">-2,4</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, (<span class="op">-</span><span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="op">-</span><span class="dv">38</span>, <span class="dv">12</span>),</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>            textcoords<span class="op">=</span><span class="st">'offset points'</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">2,4</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, (<span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">12</span>),</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>            textcoords<span class="op">=</span><span class="st">'offset points'</span>)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>),</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">9</span>),</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Teste da reta horizontal: f(x) = x²'</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper center'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-teste-reta-horizontal-x2.svg'</span>,</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Função f(x) = x³: é injetiva em R</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">2.2</span>, <span class="fl">2.2</span>, <span class="dv">600</span>)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Reta horizontal y = 4</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>y_horizontal <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Única interseção: x = raiz cúbica de 4</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>x_intersecao <span class="op">=</span> np.cbrt(<span class="dv">4</span>)</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">5.2</span>))</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="dv">^</span><span class="vs">3</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>ax.axhline(y_horizontal, color<span class="op">=</span><span class="st">'tab:red'</span>,</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>           linestyle<span class="op">=</span><span class="st">'--'</span>, lw<span class="op">=</span><span class="fl">1.8</span>,</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>           label<span class="op">=</span><span class="vs">r'Reta horizontal </span><span class="dv">$</span><span class="vs">y=4</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>ax.scatter([x_intersecao], [<span class="dv">4</span>],</span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>           color<span class="op">=</span><span class="st">'tab:red'</span>, s<span class="op">=</span><span class="dv">55</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="dv">\s</span><span class="vs">qrt</span><span class="pp">[3]</span><span class="op">{4}</span><span class="vs">,4</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>,</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>            (x_intersecao, <span class="dv">4</span>),</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">12</span>),</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>            textcoords<span class="op">=</span><span class="st">'offset points'</span>)</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">2.2</span>, <span class="fl">2.2</span>),</span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">9</span>, <span class="dv">9</span>),</span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Teste da reta horizontal: f(x) = x³'</span></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-teste-reta-horizontal-x3.svg'</span>,</span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Uma observação importante:</strong> o teste da reta horizontal verifica a injetividade, mas não garante, sozinho, a sobrejetividade em relação a um contradomínio previamente escolhido.</p>
 <hr>
 </section>
 <section id="exponencial-e-logaritmo" class="level2" data-number="1.14">
@@ -752,52 +1678,440 @@ f^{-1}(x)=\ln x.
 <p><span class="math display">\[
 \ln(e^x)=x
 \]</span></p>
-<p>para todo</p>
+<p>para todo:</p>
 <p><span class="math display">\[
 x\in\mathbb{R},
 \]</span></p>
-<p>e</p>
+<p>e:</p>
 <p><span class="math display">\[
 e^{\ln x}=x
 \]</span></p>
-<p>para todo</p>
+<p>para todo:</p>
 <p><span class="math display">\[
 x&gt;0.
 \]</span></p>
-<p>Note a troca de domínio e imagem:</p>
+<p>Observe a troca entre domínio e imagem:</p>
 <ul>
-<li><span class="math inline">\(e^x\)</span> tem domínio <span class="math inline">\(\mathbb{R}\)</span> e imagem <span class="math inline">\((0,+\infty)\)</span>;</li>
+<li><span class="math inline">\(e^x\)</span> tem domínio <span class="math inline">\(\mathbb{R}\)</span> e imagem <span class="math inline">\((0,+\infty)\)</span>.</li>
 <li><span class="math inline">\(\ln x\)</span> tem domínio <span class="math inline">\((0,+\infty)\)</span> e imagem <span class="math inline">\(\mathbb{R}\)</span>.</li>
 </ul>
+<p><strong>Ilustração — Exponencial e logaritmo como operações inversas</strong></p>
+<p>Primeiro, aplicamos a exponencial:</p>
+<div class="cell" data-fig-width="6" data-fig-height="2.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["x ∈ ℝ"] --&gt; B["Aplicar eˣ"]
+    B --&gt; C["y &gt; 0"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Em seguida, aplicamos o logaritmo para recuperar a entrada:</p>
+<div class="cell" data-fig-width="6" data-fig-height="2.5" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["y &gt; 0"] --&gt; B["Aplicar ln"]
+    B --&gt; C["Recuperar x ∈ ℝ"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div id="fig-1-14-exponencial-logaritmo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano cartesiano com os gráficos de y=e elevado a x e y=logaritmo natural de x, além da reta y=x. Os gráficos da exponencial e do logaritmo natural são simétricos em relação à reta y=x.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-exponencial-logaritmo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-exponencial-logaritmo.svg" class="img-fluid figure-img" style="width:90.0%" alt="Plano cartesiano com os gráficos de y=e elevado a x e y=logaritmo natural de x, além da reta y=x. Os gráficos da exponencial e do logaritmo natural são simétricos em relação à reta y=x.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-exponencial-logaritmo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: Gráficos da função exponencial f(x)=eˣ e de sua inversa f⁻¹(x)=ln x, simétricos em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<p>A relação entre exponencial e logaritmo será especialmente importante no estudo de limites, derivadas e integrais.</p>
 <hr>
 </section>
-<section id="seno-cosseno-e-inversas" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="seno-cosseno-e-inversas"><span class="header-section-number">1.15</span> 🪞 Seno, cosseno e inversas</h2>
-<p>As funções trigonométricas também podem ter inversas, mas apenas após restrições adequadas de domínio.</p>
-<p>Por exemplo, a função</p>
+<section id="seno-cosseno-e-funções-inversas" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="seno-cosseno-e-funções-inversas"><span class="header-section-number">1.15</span> 🪞 Seno, cosseno e funções inversas</h2>
+<p>As funções trigonométricas também podem ter inversas, mas precisam de restrições adequadas de domínio.</p>
+<p>Por exemplo, a função:</p>
 <p><span class="math display">\[
-\sin x
+f(x)=\sin x
 \]</span></p>
 <p>não é injetiva em todo <span class="math inline">\(\mathbb{R}\)</span>, pois é periódica.</p>
-<p>Mas se restringirmos o domínio a</p>
+<p>Entretanto, se restringirmos seu domínio a:</p>
 <p><span class="math display">\[
 \left[-\frac{\pi}{2},\frac{\pi}{2}\right],
 \]</span></p>
-<p>então o seno se torna injetivo e admite inversa, chamada arco-seno:</p>
+<p>o seno se torna injetivo e admite uma inversa chamada arco-seno:</p>
 <p><span class="math display">\[
-\arcsin x.
+f^{-1}(x)=\arcsin x.
 \]</span></p>
-<p>Esse fenômeno mostra novamente que a inversa depende do domínio escolhido.</p>
+<p>Nesse caso, a função inversa é:</p>
+<p><span class="math display">\[
+\arcsin:[-1,1]\to
+\left[-\frac{\pi}{2},\frac{\pi}{2}\right].
+\]</span></p>
+<p>O mesmo raciocínio vale para outras funções trigonométricas.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Função original</th>
+<th>Domínio escolhido</th>
+<th>Função inversa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\sin x\)</span></td>
+<td><span class="math inline">\(\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\)</span></td>
+<td><span class="math inline">\(\arcsin x\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\cos x\)</span></td>
+<td><span class="math inline">\([0,\pi]\)</span></td>
+<td><span class="math inline">\(\arccos x\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\tan x\)</span></td>
+<td><span class="math inline">\(\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\)</span></td>
+<td><span class="math inline">\(\arctan x\)</span></td>
+</tr>
+</tbody>
+</table>
+<div id="fig-1-14-seno-arcoseno" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráficos de y=sen x para x entre menos pi sobre dois e pi sobre dois, e y=arcsen x para x entre menos um e um. A reta y=x mostra a simetria entre as curvas.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-seno-arcoseno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-seno-arcoseno.svg" class="img-fluid figure-img" style="width:90.0%" alt="Gráficos de y=sen x para x entre menos pi sobre dois e pi sobre dois, e y=arcsen x para x entre menos um e um. A reta y=x mostra a simetria entre as curvas.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-seno-arcoseno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9: Gráficos do seno restrito a [−π/2,π/2] e de sua inversa arco-seno, simétricos em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1-14-cosseno-arcocosseno" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráficos de y=cos x para x entre zero e pi, e y=arccos x para x entre menos um e um. A reta y=x mostra a simetria entre as curvas.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-cosseno-arcocosseno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-cosseno-arcocosseno.svg" class="img-fluid figure-img" style="width:90.0%" alt="Gráficos de y=cos x para x entre zero e pi, e y=arccos x para x entre menos um e um. A reta y=x mostra a simetria entre as curvas.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-cosseno-arcocosseno-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;10: Gráficos do cosseno restrito a [0,π] e de sua inversa arco-cosseno, simétricos em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1-14-tangente-arcotangente" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráficos de y=tan x para x entre menos pi sobre dois e pi sobre dois, sem incluir os extremos, e y=arctan x. A reta y=x mostra a simetria entre as curvas.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-14-tangente-arcotangente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.14-tangente-arcotangente.svg" class="img-fluid figure-img" style="width:90.0%" alt="Gráficos de y=tan x para x entre menos pi sobre dois e pi sobre dois, sem incluir os extremos, e y=arctan x. A reta y=x mostra a simetria entre as curvas.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-14-tangente-arcotangente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;11: Gráficos da tangente restrita a (−π/2,π/2) e de sua inversa arco-tangente, simétricos em relação à reta y=x.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Clique para ver o código
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="5cd1906e" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">'images'</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Seno e arco-seno</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Seno: domínio restrito [-pi/2, pi/2]</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>x_sin <span class="op">=</span> np.linspace(<span class="op">-</span>np.pi<span class="op">/</span><span class="dv">2</span>, np.pi<span class="op">/</span><span class="dv">2</span>, <span class="dv">600</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>y_sin <span class="op">=</span> np.sin(x_sin)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Arco-seno: domínio [-1, 1]</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>x_asin <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">600</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>y_asin <span class="op">=</span> np.arcsin(x_asin)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>ax.plot(x_sin, y_sin, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\s</span><span class="vs">in x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>ax.plot(x_asin, y_asin, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\a</span><span class="vs">rcsin x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span>np.pi<span class="op">/</span><span class="dv">2</span>, np.pi<span class="op">/</span><span class="dv">2</span>],</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>        [<span class="op">-</span>np.pi<span class="op">/</span><span class="dv">2</span>, np.pi<span class="op">/</span><span class="dv">2</span>],</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span>np.pi<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> <span class="fl">0.15</span>, np.pi<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="fl">0.15</span>),</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span>np.pi<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> <span class="fl">0.15</span>, np.pi<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="fl">0.15</span>),</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Seno e arco-seno'</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-seno-arcoseno.svg'</span>,</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Cosseno e arco-cosseno</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Cosseno: domínio restrito [0, pi]</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>x_cos <span class="op">=</span> np.linspace(<span class="dv">0</span>, np.pi, <span class="dv">600</span>)</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>y_cos <span class="op">=</span> np.cos(x_cos)</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Arco-cosseno: domínio [-1, 1]</span></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>x_acos <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">600</span>)</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>y_acos <span class="op">=</span> np.arccos(x_acos)</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>ax.plot(x_cos, y_cos, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="er">\</span><span class="vs">cos x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>ax.plot(x_acos, y_acos, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\a</span><span class="vs">rccos x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span><span class="dv">1</span>, np.pi], [<span class="op">-</span><span class="dv">1</span>, np.pi],</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.2</span>, np.pi <span class="op">+</span> <span class="fl">0.2</span>),</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.2</span>, np.pi <span class="op">+</span> <span class="fl">0.2</span>),</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Cosseno e arco-cosseno'</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-cosseno-arcocosseno.svg'</span>,</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Tangente e arco-tangente</span></span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================================================</span></span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="co"># Tangente: domínio aberto (-pi/2, pi/2)</span></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> <span class="fl">0.025</span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>x_tan <span class="op">=</span> np.linspace(</span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span>np.pi<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> epsilon,</span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>    np.pi<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> epsilon,</span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1200</span></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>y_tan <span class="op">=</span> np.tan(x_tan)</span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a><span class="co"># Arco-tangente: domínio R</span></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>x_atan <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">800</span>)</span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>y_atan <span class="op">=</span> np.arctan(x_atan)</span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.2</span>, <span class="fl">7.2</span>))</span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>ax.plot(x_tan, y_tan, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\t</span><span class="vs">an x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>ax.plot(x_atan, y_atan, lw<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">f</span><span class="dv">^</span><span class="vs">{-1}</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\a</span><span class="vs">rctan x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>], [<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>],</span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>        linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="fl">1.5</span>,</span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="co"># Assíntotas verticais da tangente</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="op">-</span>np.pi<span class="op">/</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">'0.5'</span>,</span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>           linestyle<span class="op">=</span><span class="st">':'</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>ax.axvline(np.pi<span class="op">/</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">'0.5'</span>,</span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>           linestyle<span class="op">=</span><span class="st">':'</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.7'</span>, lw<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(</span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>    xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>),</span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>    ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>),</span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">'$x$'</span>,</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">'$y$'</span>,</span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">'Tangente e arco-tangente'</span></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/1.14-tangente-arcotangente.svg'</span>,</span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a>            bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>As restrições escolhidas tornam cada função original injetiva e permitem definir suas inversas nos respectivos intervalos de imagem.</p>
+<p>Esse fenômeno mostra novamente que a existência da inversa depende do domínio escolhido.</p>
 <hr>
-</section>
-<section id="por-que-isso-importa-para-o-cálculo" class="level2" data-number="1.16">
-<h2 data-number="1.16" class="anchored" data-anchor-id="por-que-isso-importa-para-o-cálculo"><span class="header-section-number">1.16</span> 🌉 Por que isso importa para o Cálculo?</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>📋 Quadro-resumo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>Caracterização</th>
+<th>Consequência</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Injetividade</td>
+<td>Entradas distintas têm imagens distintas</td>
+<td>Cada valor da imagem tem uma única pré-imagem</td>
+</tr>
+<tr class="even">
+<td>Sobrejetividade</td>
+<td><span class="math inline">\(\operatorname{Im}(f)=B\)</span></td>
+<td>Todo elemento de <span class="math inline">\(B\)</span> é atingido</td>
+</tr>
+<tr class="odd">
+<td>Bijetividade</td>
+<td>Injetividade e sobrejetividade</td>
+<td>Existe inversa de <span class="math inline">\(B\)</span> em <span class="math inline">\(A\)</span></td>
+</tr>
+<tr class="even">
+<td>Função inversa</td>
+<td><span class="math inline">\(f^{-1}:B\to A\)</span></td>
+<td>Desfaz a correspondência estabelecida por <span class="math inline">\(f\)</span></td>
+</tr>
+<tr class="odd">
+<td>Composição</td>
+<td>Duas identidades fundamentais</td>
+<td>A função e sua inversa desfazem mutuamente suas ações</td>
+</tr>
+<tr class="even">
+<td>Gráfico da inversa</td>
+<td><span class="math inline">\((a,b)\mapsto(b,a)\)</span></td>
+<td>Reflexão em relação à reta <span class="math inline">\(y=x\)</span></td>
+</tr>
+<tr class="odd">
+<td>Teste da reta horizontal</td>
+<td>Cada reta horizontal corta o gráfico em, no máximo, um ponto</td>
+<td>Caracteriza a injetividade</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critério algébrico de injetividade:</strong></p>
+<p>Para <span class="math inline">\(f:A\to B\)</span>, a injetividade equivale a:</p>
+<p><span class="math display">\[
+f(x_1)=f(x_2)
+\Longrightarrow
+x_1=x_2,
+\qquad x_1,x_2\in A.
+\]</span></p>
+<p><strong>Identidades fundamentais da função inversa:</strong></p>
+<p>Para uma bijeção <span class="math inline">\(f:A\to B\)</span>, temos:</p>
+<p><span class="math display">\[
+f^{-1}\circ f=I_A
+\qquad\text{e}\qquad
+f\circ f^{-1}=I_B.
+\]</span></p>
+<p>Aqui, <span class="math inline">\(I_A\)</span> e <span class="math inline">\(I_B\)</span> representam as funções identidade nos conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, respectivamente.</p>
+<p><strong>Condição fundamental:</strong> uma função <span class="math inline">\(f:A\to B\)</span> possui inversa <span class="math inline">\(f^{-1}:B\to A\)</span> se, e somente se, for bijetiva.</p>
+<p>Se <span class="math inline">\(f:A\to B\)</span> for apenas injetiva, podemos considerá-la como uma função:</p>
+<p><span class="math display">\[
+f:A\longrightarrow f(A),
+\]</span></p>
+<p>que será bijetiva e terá inversa:</p>
+<p><span class="math display">\[
+f^{-1}:f(A)\longrightarrow A.
+\]</span></p>
+<p><strong>Exemplo:</strong> a função:</p>
+<p><span class="math display">\[
+f:[0,+\infty)\longrightarrow[0,+\infty),
+\qquad f(x)=x^2
+\]</span></p>
+<p>é bijetiva, e sua inversa é:</p>
+<p><span class="math display">\[
+f^{-1}(x)=\sqrt{x}.
+\]</span></p>
+<p><strong>Atenção:</strong> <span class="math inline">\(f^{-1}(x)\)</span> representa a função inversa, não o recíproco <span class="math inline">\(1/f(x)\)</span>.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="🌉 Ponte para o Cálculo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>🌉 Ponte para o Cálculo
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Funções inversas aparecem em muitos pontos do Cálculo.</p>
-<p>A função logarítmica aparece como inversa da exponencial.</p>
-<p>As funções trigonométricas inversas aparecem em integrais, substituições e equações.</p>
-<p>A derivada da função inversa será estudada mais adiante.</p>
+<p>A função logarítmica aparece como inversa da exponencial. As funções trigonométricas inversas aparecem em integrais, substituições e equações.</p>
+<p>A derivada da função inversa será estudada mais adiante. Sua compreensão depende da relação entre a função original e sua inversa.</p>
 <p>Além disso, compreender inversas ajuda a entender melhor domínio, imagem, composição e transformação de funções.</p>
-<hr>
+</div>
+</div>
 </section>
 </section>
 <section id="exercícios-propostos" class="level1" data-number="2">
@@ -814,15 +2128,12 @@ x&gt;0.
 <div class="callout-body-container callout-body">
 <section id="exercício-1" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="exercício-1"><span class="header-section-number">2.1</span> 🧪 Exercício 1</h2>
-<p>Determine a inversa das funções:</p>
+<p>Determine a inversa das funções, considerando domínio e contradomínio iguais a <span class="math inline">\(\mathbb{R}\)</span>:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=x+5\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=3x-2\)</span><br>
-</li>
-<li><span class="math inline">\(h(x)=\dfrac{x}{4}\)</span><br>
-</li>
-<li><span class="math inline">\(p(x)=\dfrac{x-1}{2}\)</span></li>
+<li><p><span class="math inline">\(f(x)=x+5\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=3x-2\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=\dfrac{x}{4}\)</span></p></li>
+<li><p><span class="math inline">\(p(x)=\dfrac{x-1}{2}\)</span></p></li>
 </ol>
 </section>
 <section id="exercício-2" class="level2" data-number="2.2">
@@ -838,15 +2149,16 @@ g(x)=\frac{x-1}{2}.
 </section>
 <section id="exercício-3" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="exercício-3"><span class="header-section-number">2.3</span> 🧪 Exercício 3</h2>
-<p>Explique por que</p>
+<p>Explique por que:</p>
 <p><span class="math display">\[
-f:\mathbb{R}\to\mathbb{R},\qquad f(x)=x^2
+f:\mathbb{R}\to\mathbb{R},
+\qquad f(x)=x^2
 \]</span></p>
 <p>não possui inversa.</p>
 </section>
 <section id="exercício-4" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="exercício-4"><span class="header-section-number">2.4</span> 🧪 Exercício 4</h2>
-<p>Restrinja o domínio da função</p>
+<p>Restrinja o domínio da função:</p>
 <p><span class="math display">\[
 f(x)=x^2
 \]</span></p>
@@ -856,16 +2168,18 @@ f(x)=x^2
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
 <p>Determine domínio e imagem das funções:</p>
 <ol type="a">
-<li><span class="math inline">\(f(x)=e^x\)</span><br>
-</li>
-<li><span class="math inline">\(g(x)=\ln x\)</span></li>
+<li><p><span class="math inline">\(f(x)=e^x\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=\ln x\)</span></p></li>
 </ol>
 </section>
 </div>
 </div>
 <hr>
+</section>
+<section id="gabarito-comentado" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -874,95 +2188,86 @@ f(x)=x^2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<section id="gabarito-comentado" class="level1 callout-body-container callout-body" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
-<ol type="a">
-<li>Para</li>
-</ol>
+<p><strong>a)</strong> Para:</p>
 <p><span class="math display">\[
 f(x)=x+5,
 \]</span></p>
-<p>escrevemos</p>
+<p>escrevemos:</p>
 <p><span class="math display">\[
 y=x+5.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo:</p>
 <p><span class="math display">\[
 x=y-5.
 \]</span></p>
-<p>Portanto,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-f^{-1}(x)=x-5.
+\boxed{f^{-1}(x)=x-5}.
 \]</span></p>
-<ol start="2" type="a">
-<li>Para</li>
-</ol>
+<p><strong>b)</strong> Para:</p>
 <p><span class="math display">\[
 g(x)=3x-2,
 \]</span></p>
-<p>temos</p>
+<p>temos:</p>
 <p><span class="math display">\[
 y=3x-2.
 \]</span></p>
-<p>Então</p>
+<p>Então:</p>
 <p><span class="math display">\[
 y+2=3x,
 \]</span></p>
-<p>logo</p>
+<p>logo:</p>
 <p><span class="math display">\[
 x=\frac{y+2}{3}.
 \]</span></p>
-<p>Portanto,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-g^{-1}(x)=\frac{x+2}{3}.
+\boxed{g^{-1}(x)=\frac{x+2}{3}}.
 \]</span></p>
-<ol start="3" type="a">
-<li>Para</li>
-</ol>
+<p><strong>c)</strong> Para:</p>
 <p><span class="math display">\[
 h(x)=\frac{x}{4},
 \]</span></p>
-<p>temos</p>
+<p>temos:</p>
 <p><span class="math display">\[
 y=\frac{x}{4}.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo:</p>
 <p><span class="math display">\[
 x=4y.
 \]</span></p>
-<p>Portanto,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-h^{-1}(x)=4x.
+\boxed{h^{-1}(x)=4x}.
 \]</span></p>
-<ol start="4" type="a">
-<li>Para</li>
-</ol>
+<p><strong>d)</strong> Para:</p>
 <p><span class="math display">\[
 p(x)=\frac{x-1}{2},
 \]</span></p>
-<p>temos</p>
+<p>temos:</p>
 <p><span class="math display">\[
 y=\frac{x-1}{2}.
 \]</span></p>
-<p>Então</p>
+<p>Então:</p>
 <p><span class="math display">\[
 2y=x-1.
 \]</span></p>
-<p>Logo,</p>
+<p>Logo:</p>
 <p><span class="math display">\[
 x=2y+1.
 \]</span></p>
-<p>Portanto,</p>
+<p>Portanto:</p>
 <p><span class="math display">\[
-p^{-1}(x)=2x+1.
+\boxed{p^{-1}(x)=2x+1}.
 \]</span></p>
 </section>
 <section id="exercício-2-1" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="exercício-2-1"><span class="header-section-number">3.2</span> 🧪 Exercício 2</h2>
-<p>Temos</p>
+<p>Temos:</p>
 <p><span class="math display">\[
 f(x)=2x+1
 \]</span></p>
@@ -972,17 +2277,29 @@ g(x)=\frac{x-1}{2}.
 \]</span></p>
 <p>Calculando <span class="math inline">\(g(f(x))\)</span>:</p>
 <p><span class="math display">\[
-g(f(x))=g(2x+1)=\frac{(2x+1)-1}{2}=\frac{2x}{2}=x.
+\begin{aligned}
+g(f(x))
+&amp;=g(2x+1)\\
+&amp;=\frac{(2x+1)-1}{2}\\
+&amp;=\frac{2x}{2}\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
 <p>Calculando <span class="math inline">\(f(g(x))\)</span>:</p>
 <p><span class="math display">\[
-f(g(x))=f\left(\frac{x-1}{2}\right)=2\cdot\frac{x-1}{2}+1=x-1+1=x.
+\begin{aligned}
+f(g(x))
+&amp;=f\left(\frac{x-1}{2}\right)\\
+&amp;=2\cdot\frac{x-1}{2}+1\\
+&amp;=x-1+1\\
+&amp;=x.
+\end{aligned}
 \]</span></p>
 <p>Como as duas composições resultam na identidade, <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> são inversas.</p>
 </section>
 <section id="exercício-3-1" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="exercício-3-1"><span class="header-section-number">3.3</span> 🧪 Exercício 3</h2>
-<p>A função</p>
+<p>A função:</p>
 <p><span class="math display">\[
 f(x)=x^2
 \]</span></p>
@@ -995,70 +2312,72 @@ f(2)=4
 <p><span class="math display">\[
 f(-2)=4.
 \]</span></p>
-<p>Como uma mesma saída corresponde a duas entradas diferentes, não é possível definir uma inversa que seja função.</p>
+<p>Como uma mesma saída corresponde a duas entradas diferentes, não é possível definir uma inversa que seja função de <span class="math inline">\(\mathbb{R}\)</span> em <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>Além disso, a função não é sobrejetiva em <span class="math inline">\(\mathbb{R}\)</span>, pois não assume valores negativos.</p>
 </section>
 <section id="exercício-4-1" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="exercício-4-1"><span class="header-section-number">3.4</span> 🧪 Exercício 4</h2>
-<p>Podemos restringir o domínio a</p>
+<p>Podemos restringir o domínio a:</p>
 <p><span class="math display">\[
 [0,+\infty).
 \]</span></p>
-<p>Assim,</p>
+<p>Assim:</p>
 <p><span class="math display">\[
 f:[0,+\infty)\to[0,+\infty)
 \]</span></p>
-<p>dada por</p>
+<p>dada por:</p>
 <p><span class="math display">\[
 f(x)=x^2
 \]</span></p>
 <p>é bijetiva.</p>
-<p>Sua inversa é</p>
+<p>Sua inversa é:</p>
 <p><span class="math display">\[
-f^{-1}(x)=\sqrt{x}.
+\boxed{f^{-1}(x)=\sqrt{x}}.
 \]</span></p>
-<p>Também poderíamos restringir o domínio a <span class="math inline">\((-\infty,0]\)</span>. Nesse caso, a inversa seria</p>
+<p>Também poderíamos restringir o domínio a:</p>
 <p><span class="math display">\[
-f^{-1}(x)=-\sqrt{x}.
+(-\infty,0].
+\]</span></p>
+<p>Nesse caso, a inversa seria:</p>
+<p><span class="math display">\[
+\boxed{f^{-1}(x)=-\sqrt{x}}.
 \]</span></p>
 </section>
 <section id="exercício-5-1" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">3.5</span> 🧪 Exercício 5</h2>
-<ol type="a">
-<li>Para</li>
-</ol>
+<p><strong>a)</strong> Para:</p>
 <p><span class="math display">\[
 f(x)=e^x,
 \]</span></p>
-<p>o domínio é</p>
+<p>o domínio é:</p>
 <p><span class="math display">\[
-\mathbb{R}
+\boxed{\operatorname{Dom}(f)=\mathbb{R}}
 \]</span></p>
-<p>e a imagem é</p>
+<p>e a imagem é:</p>
 <p><span class="math display">\[
-(0,+\infty).
+\boxed{\operatorname{Im}(f)=(0,+\infty)}.
 \]</span></p>
-<ol start="2" type="a">
-<li>Para</li>
-</ol>
+<p><strong>b)</strong> Para:</p>
 <p><span class="math display">\[
 g(x)=\ln x,
 \]</span></p>
-<p>o domínio é</p>
+<p>o domínio é:</p>
 <p><span class="math display">\[
-(0,+\infty)
+\boxed{\operatorname{Dom}(g)=(0,+\infty)}
 \]</span></p>
-<p>e a imagem é</p>
+<p>e a imagem é:</p>
 <p><span class="math display">\[
-\mathbb{R}.
+\boxed{\operatorname{Im}(g)=\mathbb{R}}.
 \]</span></p>
 <p>Essas funções são inversas uma da outra.</p>
 </section>
-</section>
+</div>
 </div>
 </div>
 <hr>
-<section id="quiz-função-inversa" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="quiz-função-inversa"><span class="header-section-number">3.6</span> 🧩 Quiz — Função Inversa</h2>
+</section>
+<section id="quiz-função-inversa" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Função Inversa</h1>
 <div class="question">
 <p><strong>Q1.</strong> A função inversa de <span class="math inline">\(f\)</span> é aquela que:</p>
 <div class="choices">
@@ -1068,28 +2387,28 @@ g(x)=\ln x,
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Desfaz a ação de <span class="math inline">\(f\)</span>.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Multiplica <span class="math inline">\(f\)</span> por zero.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Repete a mesma ação de <span class="math inline">\(f\)</span>.</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Sempre troca <span class="math inline">\(x\)</span> por <span class="math inline">\(-x\)</span>.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Calcula o recíproco de <span class="math inline">\(f(x)\)</span>.</p><p></p>
 </div>
 </div>
 
 </div>
 </div>
 <div class="question">
-<p><strong>Q2.</strong> Para uma função ter inversa, ela deve ser:</p>
+<p><strong>Q2.</strong> Considerando domínio e contradomínio fixos, uma função <span class="math inline">\(f:A\to B\)</span> possui inversa <span class="math inline">\(f^{-1}:B\to A\)</span> se, e somente se, for:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Apenas constante.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Apenas injetiva.</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>Apenas sobrejetiva.</p><p></p>
 </div>
 <div class="choice correct-choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>Bijetiva.</p><p></p>
-</div>
-<div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Sempre quadrática.</p><p></p>
 </div>
 </div>
 
@@ -1115,12 +2434,11 @@ g(x)=\ln x,
 </div>
 <hr>
 </section>
-</section>
-<section id="navegação" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 🔗 Navegação</h1>
-<p>🎯 <strong>Post Anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">1.13 Composição de Funções</a></p>
-<p>🎯 <strong>Próximo Post:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
-<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.14-funcao-inversa.html">Topo</a></p>
+<section id="navegação" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔗 Navegação</h1>
+<p>🎯 <strong>Aula anterior:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html">1.13 Composição de Funções</a></p>
+<p>🎯 <strong>Próxima aula:</strong> 👉 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.15-modelos-com-funcoes-elementares.html">1.15 Modelos com Funções Elementares</a></p>
+<p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · <a href="../../../../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#">Voltar ao topo</a></p>
 <hr>
 <p><em>Blog do Marcellini — Explorando a Matemática com Rigor e Beleza.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
