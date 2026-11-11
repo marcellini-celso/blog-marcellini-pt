@@ -55,7 +55,7 @@ Ao final desta aula, você deverá ser capaz de:
 
 ***
 
-# 🔢 1. Por que voltar aos números reais?
+# 🔢 Por que voltar aos números reais?
 
 À primeira vista, pode parecer estranho dedicar uma aula aos números reais depois de já termos estudado conjuntos numéricos, intervalos, inequações e valor absoluto.
 
@@ -85,7 +85,7 @@ Esta aula organiza essas ideias e prepara o terreno para os próximos tópicos.
 
 ***
 
-# 📘 2. A cadeia dos conjuntos numéricos
+# 📘 A cadeia dos conjuntos numéricos
 
 O conjunto dos números reais é denotado por \(\mathbb{R}\). Ele contém os números naturais, inteiros e racionais, além dos números irracionais.
 
@@ -209,7 +209,7 @@ $$
 
 ***
 
-# 🧩 3. A completude dos números reais
+# 🧩 A completude dos números reais
 
 A diferença entre os números racionais e os reais não está apenas na existência de números irracionais. Há uma propriedade estrutural muito importante que caracteriza os números reais: a **completude**.
 
@@ -266,7 +266,7 @@ Os números racionais permitem representar frações e aproximações decimais p
 
 ***
 
-# 🔢 4. A reta real
+# 🔢 A reta real
 
 A interpretação geométrica dos números reais é feita por meio da **reta real**.
 
@@ -304,7 +304,7 @@ descreve todos os pontos da reta real que estão à direita de \(2\).
 
 ***
 
-# 📏 5. Intervalos como subconjuntos da reta real
+# 📏 Intervalos como subconjuntos da reta real
 
 Um **intervalo** é um subconjunto \(I\) de \(\mathbb{R}\) que contém todos os números reais situados entre quaisquer dois de seus elementos.
 
@@ -351,7 +351,7 @@ contém todos os números reais entre \(1\) e \(4\), incluindo as duas extremida
 
 ***
 
-# 📏 6. Intervalos infinitos
+# 📏 Intervalos infinitos
 
 Também utilizamos intervalos que se estendem indefinidamente para a direita ou para a esquerda.
 
@@ -413,7 +413,7 @@ $$
 
 ***
 
-# 📏 7. Intervalos e domínios de funções
+# 📏 Intervalos e domínios de funções
 
 Em Cálculo, os intervalos aparecem continuamente.
 
@@ -497,7 +497,7 @@ Esse exemplo mostra como desigualdades e intervalos aparecem naturalmente quando
 
 ***
 
-# 📏 8. Intervalos e valor absoluto
+# 📏 Intervalos e valor absoluto
 
 O valor absoluto permite representar a distância entre dois números reais.
 
@@ -559,7 +559,7 @@ Esse intervalo contém todos os números reais que estão a uma distância menor
 
 ***
 
-# 🎯 9. Por que vizinhanças importam para limites?
+# 🎯 Por que vizinhanças importam para limites?
 
 A ideia de intervalo não é apenas uma notação conveniente. Ela é uma linguagem fundamental para descrever aproximações.
 
@@ -628,7 +628,7 @@ Não é necessário dominar agora todos os detalhes dessa definição. O objetiv
 
 ***
 
-# 📦 10. Síntese da aula
+# 📦 Síntese da aula
 
 Nesta aula, revisamos o conjunto dos números reais \(\mathbb{R}\) e sua relação com os conjuntos \(\mathbb{N}\), \(\mathbb{Z}\) e \(\mathbb{Q}\).
 
@@ -642,7 +642,7 @@ Por fim, conectamos intervalos com valor absoluto e introduzimos a ideia de vizi
 
 ***
 
-# 🧾 11. Quadro-resumo — Números Reais e Intervalos
+# 🧾 Quadro-resumo — Números Reais e Intervalos
 
 | Ideia | Significado | Papel no Cálculo |
 |---|---|---|
@@ -669,7 +669,7 @@ Na definição de limite, controlamos a proximidade de \(x\) a \(a\) por meio de
 
 :::
 
-# 🧪 12. Exercícios propostos
+# 🧪 Exercícios propostos
 
 ::: {.callout-note title="📝 Exercícios"}
 
@@ -737,7 +737,7 @@ na forma de intervalo.
 
 ***
 
-# ✅ 13. Gabarito comentado
+# ✅ Gabarito comentado
 
 ::: {.callout-important collapse=true title="🔎 Clique para consultar as resoluções"}
 
@@ -941,7 +941,7 @@ $$
 
 ***
 
-# 🧩 14. Quiz — Números Reais e Intervalos
+# 🧩 Quiz — Números Reais e Intervalos
 
 :::::{.question}
 
@@ -1095,7 +1095,7 @@ Este aprofundamento é opcional. Você pode explorá-lo agora ou seguir as aulas
 
 ***
 
-# 🔗 15. Navegação
+# 🔗 Navegação
 
 🎯 **Aula anterior:** 👉 [1.3 — Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
 

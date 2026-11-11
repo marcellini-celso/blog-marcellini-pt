@@ -2692,126 +2692,28 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html",
     "title": "📘 Módulo 1.4: Números Reais e Intervalos",
     "section": "",
-    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Post Anterior: 👉 1.3 Intervalos e Inequações"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#intervalo-aberto",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#intervalo-aberto",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "5.1 🚪 Intervalo aberto",
-    "text": "5.1 🚪 Intervalo aberto\nO intervalo aberto entre \\(a\\) e \\(b\\) é escrito como:\n\\[\n(a,b) =\n\\{x \\in \\mathbb{R} \\mid a &lt; x &lt; b\\}.\n\\]\nNesse caso, os extremos \\(a\\) e \\(b\\) não pertencem ao intervalo.\nPor exemplo:\n\\[\n(1,4) =\n\\{x \\in \\mathbb{R} \\mid 1 &lt; x &lt; 4\\}.\n\\]\nEsse intervalo contém números como \\(2\\), \\(3\\), \\(1{,}5\\) e \\(\\sqrt{2}\\), mas não contém os números \\(1\\) e \\(4\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#intervalo-fechado",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#intervalo-fechado",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "5.2 🔒 Intervalo fechado",
-    "text": "5.2 🔒 Intervalo fechado\nO intervalo fechado entre \\(a\\) e \\(b\\) é escrito como:\n\\[\n[a,b] =\n\\{x \\in \\mathbb{R} \\mid a \\leq x \\leq b\\}.\n\\]\nNesse caso, os extremos pertencem ao intervalo.\nPor exemplo:\n\\[\n[1,4] =\n\\{x \\in \\mathbb{R} \\mid 1 \\leq x \\leq 4\\}.\n\\]\nEsse intervalo contém todos os números reais entre \\(1\\) e \\(4\\), incluindo \\(1\\) e \\(4\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#intervalos-semiabertos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#intervalos-semiabertos",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "5.3 📏 Intervalos semiabertos",
-    "text": "5.3 📏 Intervalos semiabertos\nTambém existem intervalos semiabertos, ou semifechados, nos quais apenas um dos extremos pertence ao intervalo.\nTemos:\n\\[\n[a,b) =\n\\{x \\in \\mathbb{R} \\mid a \\leq x &lt; b\\},\n\\]\ne\n\\[\n(a,b] =\n\\{x \\in \\mathbb{R} \\mid a &lt; x \\leq b\\}.\n\\]\nNo intervalo \\([a,b)\\), o extremo esquerdo pertence ao intervalo, mas o extremo direito não pertence. No intervalo \\((a,b]\\), ocorre o contrário: o extremo esquerdo não pertence, mas o extremo direito pertence."
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Aula anterior: 👉 1.3 — Intervalos e Inequações\n🎯 Próxima aula: 👉 1.5 — Equações e Inequações"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exemplo-1-raiz-quadrada",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exemplo-1-raiz-quadrada",
     "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "7.1 ✅ Exemplo 1: raiz quadrada",
-    "text": "7.1 ✅ Exemplo 1: raiz quadrada\nConsidere:\n\\[\nf(x) = \\sqrt{x}.\n\\]\nEssa função está definida, no contexto dos números reais, para todos os valores de \\(x\\) tais que:\n\\[\nx \\geq 0.\n\\]\nPortanto, seu domínio real é:\n\\[\n[0,+\\infty).\n\\]"
+    "section": "8.1 ✅ Exemplo 1: raiz quadrada",
+    "text": "8.1 ✅ Exemplo 1: raiz quadrada\nConsidere:\n\\[\nf(x)=\\sqrt{x}.\n\\]\nNo conjunto dos números reais, essa função está definida para todos os valores de \\(x\\) que satisfaçam:\n\\[\nx\\geq 0.\n\\]\nPortanto, seu domínio real é:\n\\[\nD(f)=[0,+\\infty).\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exemplo-2-função-racional",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exemplo-2-função-racional",
     "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "7.2 ✅ Exemplo 2: função racional",
-    "text": "7.2 ✅ Exemplo 2: função racional\nConsidere:\n\\[\ng(x) = \\frac{1}{x-2}.\n\\]\nEssa função não está definida em \\(x=2\\), pois teríamos divisão por zero. Assim, seu domínio é:\n\\[\n(-\\infty,2) \\cup (2,+\\infty).\n\\]\nObserve que, nesse caso, o domínio não é um único intervalo, mas a união de dois intervalos."
+    "section": "8.2 ✅ Exemplo 2: função racional",
+    "text": "8.2 ✅ Exemplo 2: função racional\nConsidere:\n\\[\ng(x)=\\frac{1}{x-2}.\n\\]\nEssa função não está definida em \\(x=2\\), pois o denominador seria igual a zero.\nAssim, seu domínio é:\n\\[\nD(g)=(-\\infty,2)\\cup(2,+\\infty).\n\\]\nObserve que, nesse caso, o domínio não é um único intervalo, mas a união de dois intervalos."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exemplo-3-raiz-com-expressão-quadrática",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exemplo-3-raiz-com-expressão-quadrática",
     "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "7.3 ✅ Exemplo 3: raiz com expressão quadrática",
-    "text": "7.3 ✅ Exemplo 3: raiz com expressão quadrática\nConsidere:\n\\[\nh(x) = \\sqrt{4-x^2}.\n\\]\nPara que essa função esteja definida nos reais, precisamos ter:\n\\[\n4 - x^2 \\geq 0.\n\\]\nIsso equivale a:\n\\[\nx^2 \\leq 4.\n\\]\nLogo:\n\\[\n-2 \\leq x \\leq 2.\n\\]\nPortanto, o domínio da função é:\n\\[\n[-2,2].\n\\]\nEsse exemplo mostra como desigualdades e intervalos aparecem naturalmente quando estudamos funções reais."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#quadro-resumo",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#quadro-resumo",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "10.1 🧾 Quadro-resumo",
-    "text": "10.1 🧾 Quadro-resumo\n\n\n\n\n\n\n\n\nIdeia\nSignificado\nPapel no Cálculo\n\n\n\n\n\\(\\mathbb{R}\\)\nConjunto dos números reais\nAmbiente natural das funções reais de uma variável\n\n\nReta real\nRepresentação geométrica dos números reais\nPermite visualizar ordem, distância e aproximação\n\n\nIntervalo aberto\nIntervalo que não inclui as extremidades\nUsado para descrever proximidades sem incluir os pontos finais\n\n\nIntervalo fechado\nIntervalo que inclui as extremidades\nAparece em domínios, restrições e problemas com extremos incluídos\n\n\nIntervalo semiaberto\nIntervalo que inclui apenas uma das extremidades\nRepresenta situações com uma condição inclusiva e outra exclusiva\n\n\nIntervalo infinito\nIntervalo que se estende indefinidamente para um lado\nDescreve regiões como \\(x&gt;a\\), \\(x\\geq a\\), \\(x&lt;a\\) ou \\(x\\leq a\\)\n\n\nDomínio de função\nConjunto dos valores permitidos para \\(x\\)\nMuitas vezes é descrito por intervalos\n\n\nValor absoluto\nMede distância na reta real\nPermite escrever proximidades como \\(|x-a|&lt;\\varepsilon\\)\n\n\nVizinhança\nIntervalo aberto ao redor de um ponto\nPrepara a linguagem formal dos limites"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-1",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "11.1 🧪 Exercício 1",
-    "text": "11.1 🧪 Exercício 1\nClassifique cada número como natural, inteiro, racional, irracional ou real:\n\n\\(7\\)\n\n\\(-4\\)\n\n\\(\\dfrac{3}{5}\\)\n\n\\(\\sqrt{2}\\)\n\n\\(\\pi\\)\n\n\\(0\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-2",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-2",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "11.2 🧪 Exercício 2",
-    "text": "11.2 🧪 Exercício 2\nEscreva em notação de intervalo:\n\n\\(\\{x \\in \\mathbb{R} \\mid -2 &lt; x &lt; 5\\}\\)\n\n\\(\\{x \\in \\mathbb{R} \\mid x \\geq 3\\}\\)\n\n\\(\\{x \\in \\mathbb{R} \\mid x \\leq 1\\}\\)\n\n\\(\\{x \\in \\mathbb{R} \\mid -1 \\leq x &lt; 4\\}\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-3",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-3",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "11.3 🧪 Exercício 3",
-    "text": "11.3 🧪 Exercício 3\nEscreva em forma de desigualdade:\n\n\\((0,7)\\)\n\n\\([-3,2]\\)\n\n\\((-\\infty,5]\\)\n\n\\((4,+\\infty)\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-4",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-4",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "11.4 🧪 Exercício 4",
-    "text": "11.4 🧪 Exercício 4\nDetermine o domínio real das funções:\n\n\\(f(x)=\\sqrt{x-1}\\)\n\n\\(g(x)=\\dfrac{1}{x+3}\\)\n\n\\(h(x)=\\sqrt{9-x^2}\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-5",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-5",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "11.5 🧪 Exercício 5",
-    "text": "11.5 🧪 Exercício 5\nEscreva a desigualdade \\(|x-2|&lt;0{,}1\\) como intervalo."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-1-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-1-1",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "12.1 🧪 Exercício 1",
-    "text": "12.1 🧪 Exercício 1\n\n\\(7\\) é natural, inteiro, racional e real.\n\n\\(-4\\) é inteiro, racional e real.\n\n\\(\\dfrac{3}{5}\\) é racional e real.\n\n\\(\\sqrt{2}\\) é irracional e real.\n\n\\(\\pi\\) é irracional e real.\n\n\\(0\\) é natural, inteiro, racional e real, segundo a convenção adotada neste curso."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-2-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-2-1",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "12.2 🧪 Exercício 2",
-    "text": "12.2 🧪 Exercício 2\n\n\\((-2,5)\\)\n\n\\([3,+\\infty)\\)\n\n\\((-\\infty,1]\\)\n\n\\([-1,4)\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-3-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-3-1",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "12.3 🧪 Exercício 3",
-    "text": "12.3 🧪 Exercício 3\n\n\\(0 &lt; x &lt; 7\\)\n\n\\(-3 \\leq x \\leq 2\\)\n\n\\(x \\leq 5\\)\n\n\\(x &gt; 4\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-4-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-4-1",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "12.4 🧪 Exercício 4",
-    "text": "12.4 🧪 Exercício 4\n\nPara \\(f(x)=\\sqrt{x-1}\\), precisamos de \\(x-1 \\geq 0\\), isto é, \\(x \\geq 1\\). Logo, o domínio é \\([1,+\\infty)\\).\nPara \\(g(x)=\\dfrac{1}{x+3}\\), precisamos de \\(x+3 \\neq 0\\), isto é, \\(x \\neq -3\\). Logo, o domínio é \\((-\\infty,-3)\\cup(-3,+\\infty)\\).\nPara \\(h(x)=\\sqrt{9-x^2}\\), precisamos de \\(9-x^2 \\geq 0\\), isto é, \\(x^2 \\leq 9\\). Logo, \\(-3 \\leq x \\leq 3\\), e o domínio é \\([-3,3]\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-5-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html#exercício-5-1",
-    "title": "📘 Módulo 1.4: Números Reais e Intervalos",
-    "section": "12.5 🧪 Exercício 5",
-    "text": "12.5 🧪 Exercício 5\nTemos:\n\\[\n|x-2|&lt;0{,}1\n\\]\nse, e somente se,\n\\[\n2-0{,}1 &lt; x &lt; 2+0{,}1.\n\\]\nLogo:\n\\[\n1{,}9 &lt; x &lt; 2{,}1.\n\\]\nEm notação de intervalo:\n\\[\n(1{,}9,2{,}1).\n\\]"
+    "section": "8.3 ✅ Exemplo 3: raiz com expressão quadrática",
+    "text": "8.3 ✅ Exemplo 3: raiz com expressão quadrática\nConsidere:\n\\[\nh(x)=\\sqrt{4-x^2}.\n\\]\nPara que essa função esteja definida nos reais, precisamos ter:\n\\[\n4-x^2\\geq 0.\n\\]\nIsso equivale a:\n\\[\nx^2\\leq 4.\n\\]\nLogo:\n\\[\n-2\\leq x\\leq 2.\n\\]\nPortanto, o domínio da função é:\n\\[\nD(h)=[-2,2].\n\\]\nEsse exemplo mostra como desigualdades e intervalos aparecem naturalmente quando determinamos o domínio de funções reais.\n\n\n\n\n\n\nFigura 5: Comparação dos domínios reais das funções raiz de x, um sobre x menos dois e raiz de quatro menos x ao quadrado."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html",
