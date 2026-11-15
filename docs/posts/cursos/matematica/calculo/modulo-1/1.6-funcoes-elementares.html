@@ -457,7 +457,7 @@ f(0)=1,\qquad f(3)=7,\qquad f(-1)=-1.
 <p>O diagrama de flechas abaixo ilustra essa ideia. Observe que duas entradas podem apontar para o mesmo elemento do contradomínio, enquanto outro elemento pode não ser atingido.</p>
 <div id="cell-fig-diagrama-flechas-funcao" class="cell" data-message="false" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div id="fig-diagrama-flechas-funcao" class="quarto-float quarto-figure quarto-figure-center anchored" width="466" data-fig-align="center" height="330">
+<div id="fig-diagrama-flechas-funcao" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="466" height="330">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-diagrama-flechas-funcao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-diagrama-flechas-funcao-output-1.png" id="fig-diagrama-flechas-funcao" class="quarto-figure quarto-figure-center anchored figure-img" width="466" height="330">
@@ -481,7 +481,7 @@ Figura&nbsp;1
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="40c0a5f2" class="cell" data-message="false" data-execution_count="2">
+<div id="202dfa17" class="cell" data-message="false" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Ellipse</span>
@@ -576,7 +576,7 @@ f(x)=ax+b,
 <li>Se <span class="math inline">\(a&lt;0\)</span>, a função é decrescente.</li>
 <li>Se <span class="math inline">\(a=0\)</span>, a função é constante.</li>
 </ul>
-<p>O número <span class="math inline">\(b\)</span> é o <strong>coeficiente linear</strong>. Ele indica o valor da função quando <span class="math inline">\(x=0\)</span>, ou seja, o ponto em que o gráfico intercepta o eixo vertical.</p>
+<p>O número <span class="math inline">\(b\)</span> é o <strong>coeficiente linear</strong>. Como <span class="math inline">\(f(0)=b\)</span>, o gráfico intercepta o eixo vertical no ponto <span class="math inline">\((0,b)\)</span>.</p>
 <p>Exemplos:</p>
 <p><span class="math display">\[
 f(x)=2x+1,\qquad
@@ -588,7 +588,7 @@ h(x)=5.
 <p>No gráfico abaixo, comparamos uma função crescente e outra decrescente.</p>
 <div id="cell-fig-funcoes-afins" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-afins" class="quarto-float quarto-figure quarto-figure-center anchored" width="524" data-fig-align="center" height="391">
+<div id="fig-funcoes-afins" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="524" height="391">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcoes-afins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-afins-output-1.png" id="fig-funcoes-afins" class="quarto-figure quarto-figure-center anchored figure-img" width="524" height="391">
@@ -612,7 +612,7 @@ Figura&nbsp;2
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="befc6fa7" class="cell" data-execution_count="4">
+<div id="4f83179c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -671,7 +671,7 @@ h(x)=2x^2-3x+1.
 <p>Toda função quadrática tem domínio igual a <span class="math inline">\(\mathbb{R}\)</span>. Sua imagem depende da posição do vértice e do sentido da concavidade.</p>
 <div id="cell-fig-funcoes-quadraticas" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-quadraticas" class="quarto-float quarto-figure quarto-figure-center anchored" width="538" data-fig-align="center" height="392">
+<div id="fig-funcoes-quadraticas" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="538" height="392">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcoes-quadraticas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-quadraticas-output-1.png" id="fig-funcoes-quadraticas" class="quarto-figure quarto-figure-center anchored figure-img" width="538" height="392">
@@ -695,7 +695,7 @@ Figura&nbsp;3
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="b917d89b" class="cell" data-execution_count="6">
+<div id="50900c95" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -728,6 +728,20 @@ Figura&nbsp;3
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/dominio-e-imagem-da-parabola.mp4">Assista ao vídeo sobre domínio e imagem de uma parábola</a></strong> (duração: 60 s)</p>
+<p>Veja como o gráfico de <span class="math inline">\(f(x)=x^2\)</span> permite identificar as entradas possíveis e as saídas atingidas.</p>
 </div>
 </div>
 <hr>
@@ -783,7 +797,7 @@ D_f=\mathbb{R}\setminus\{0\}.
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcoes-potencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-potencia-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="535" data-fig-align="center" height="394">
+<div id="fig-funcoes-potencia-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="535" height="394">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-funcoes-potencia-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-1.png" id="fig-funcoes-potencia-1" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
@@ -795,7 +809,7 @@ D_f=\mathbb{R}\setminus\{0\}.
 </div>
 </div>
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-potencia-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="535" data-fig-align="center" height="394">
+<div id="fig-funcoes-potencia-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="535" height="394">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-funcoes-potencia-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-2.png" id="fig-funcoes-potencia-2" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
@@ -807,7 +821,7 @@ D_f=\mathbb{R}\setminus\{0\}.
 </div>
 </div>
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-potencia-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="535" data-fig-align="center" height="394">
+<div id="fig-funcoes-potencia-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="535" height="394">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-funcoes-potencia-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-3.png" id="fig-funcoes-potencia-3" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
@@ -819,7 +833,7 @@ D_f=\mathbb{R}\setminus\{0\}.
 </div>
 </div>
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-potencia-4" class="quarto-float quarto-figure quarto-figure-center anchored" width="535" data-fig-align="center" height="394">
+<div id="fig-funcoes-potencia-4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="535" height="394">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-funcoes-potencia-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-potencia-output-4.png" id="fig-funcoes-potencia-4" class="quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-funcoes-potencia" width="535" height="394">
@@ -838,7 +852,7 @@ Figura&nbsp;4
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -847,9 +861,9 @@ Figura&nbsp;4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="617c06fc" class="cell" data-execution_count="8">
+<div id="ddc0469b" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -935,7 +949,7 @@ D_h=[-3,3].
 <p>O gráfico abaixo mostra esses exemplos e destaca visualmente as restrições de domínio.</p>
 <div id="cell-fig-funcoes-raiz" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-raiz" class="quarto-float quarto-figure quarto-figure-center anchored" width="515" data-fig-align="center" height="392">
+<div id="fig-funcoes-raiz" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="515" height="392">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcoes-raiz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-raiz-output-1.png" id="fig-funcoes-raiz" class="quarto-figure quarto-figure-center anchored figure-img" width="515" height="392">
@@ -948,7 +962,7 @@ Figura&nbsp;5
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -957,9 +971,9 @@ Figura&nbsp;5
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="e0fba66c" class="cell" data-execution_count="10">
+<div id="930cf610" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1040,7 +1054,7 @@ e^x
 <p>Esse resultado será estudado mais adiante.</p>
 <div id="cell-fig-funcoes-exponenciais" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-exponenciais" class="quarto-float quarto-figure quarto-figure-center anchored" width="524" data-fig-align="center" height="391">
+<div id="fig-funcoes-exponenciais" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="524" height="391">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcoes-exponenciais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-exponenciais-output-1.png" id="fig-funcoes-exponenciais" class="quarto-figure quarto-figure-center anchored figure-img" width="524" height="391">
@@ -1053,7 +1067,7 @@ Figura&nbsp;6
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1062,9 +1076,9 @@ Figura&nbsp;6
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="d4930854" class="cell" data-execution_count="12">
+<div id="6a36372d" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1150,7 +1164,7 @@ a\neq 1.
 <p>O gráfico abaixo compara <span class="math inline">\(\log_2 x\)</span>, <span class="math inline">\(\log_{1/2}x\)</span> e <span class="math inline">\(\ln x\)</span>.</p>
 <div id="cell-fig-funcoes-logaritmicas" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-logaritmicas" class="quarto-float quarto-figure quarto-figure-center anchored" width="514" data-fig-align="center" height="392">
+<div id="fig-funcoes-logaritmicas" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="514" height="392">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcoes-logaritmicas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-logaritmicas-output-1.png" id="fig-funcoes-logaritmicas" class="quarto-figure quarto-figure-center anchored figure-img" width="514" height="392">
@@ -1163,7 +1177,7 @@ Figura&nbsp;7
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1172,9 +1186,9 @@ Figura&nbsp;7
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="4f527400" class="cell" data-execution_count="14">
+<div id="7e3f8f74" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1258,7 +1272,7 @@ k\in\mathbb{Z}
 </ul>
 <div id="cell-fig-funcoes-trigonometricas" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
-<div id="fig-funcoes-trigonometricas" class="quarto-float quarto-figure quarto-figure-center anchored" width="514" data-fig-align="center" height="392">
+<div id="fig-funcoes-trigonometricas" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="514" height="392">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcoes-trigonometricas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.6-funcoes-elementares_files/figure-html/fig-funcoes-trigonometricas-output-1.png" id="fig-funcoes-trigonometricas" class="quarto-figure quarto-figure-center anchored figure-img" width="514" height="392">
@@ -1271,7 +1285,7 @@ Figura&nbsp;8
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1280,9 +1294,9 @@ Figura&nbsp;8
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="199aa920" class="cell" data-execution_count="16">
+<div id="40b19296" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1520,6 +1534,14 @@ Nota
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
 <p>Explique, com suas palavras, por que o domínio é uma informação essencial no estudo de funções.</p>
 </section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
+<p>Um reservatório contém inicialmente <span class="math inline">\(120\)</span> litros e perde <span class="math inline">\(8\)</span> litros por minuto até esvaziar. O volume, em litros, é dado por <span class="math inline">\(V(t)=120-8t\)</span>, em que <span class="math inline">\(t\)</span> é medido em minutos a partir do início do esvaziamento.</p>
+<ol type="a">
+<li><p>Para quais valores de <span class="math inline">\(t\)</span> esse modelo descreve o esvaziamento, incluindo os instantes inicial e final?</p></li>
+<li><p>Quais volumes são atingidos nesse intervalo? Escreva a imagem de <span class="math inline">\(V\)</span> no domínio encontrado.</p></li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
@@ -1527,7 +1549,7 @@ Nota
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1536,7 +1558,7 @@ Nota
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -1632,6 +1654,13 @@ p(3)=2^3=8.
 <p>O domínio é essencial porque determina quais valores podem ser utilizados como entradas da função.</p>
 <p>Sem conhecer o domínio, podemos tentar calcular valores que não fazem sentido no conjunto dos reais, como <span class="math inline">\(\sqrt{-1}\)</span> ou <span class="math inline">\(\ln 0\)</span>, no contexto deste curso.</p>
 <p>Conhecer o domínio também permite compreender onde o gráfico da função existe e quais valores podem ser estudados em problemas matemáticos.</p>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<ol type="a">
+<li><p>O esvaziamento começa em <span class="math inline">\(t=0\)</span>. O reservatório fica vazio quando <span class="math inline">\(120-8t=0\)</span>, ou seja, em <span class="math inline">\(t=15\)</span>. O domínio do modelo é <span class="math inline">\([0,15]\)</span>, em minutos.</p></li>
+<li><p>A função afim é contínua e decrescente. Como <span class="math inline">\(V(0)=120\)</span> e <span class="math inline">\(V(15)=0\)</span>, ela assume todos os valores entre <span class="math inline">\(0\)</span> e <span class="math inline">\(120\)</span>, inclusive os extremos. A imagem é <span class="math inline">\([0,120]\)</span>, em litros.</p></li>
+</ol>
 </section>
 </div>
 </div>

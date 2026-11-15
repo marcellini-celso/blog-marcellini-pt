@@ -1,4 +1,3 @@
-
 ---
 title: "📘 Módulo 1.6: Funções Elementares"
 description: "Introdução às principais famílias de funções reais usadas no Cálculo: afins, quadráticas, potências, raízes, exponenciais, logarítmicas e trigonométricas."
@@ -292,7 +291,7 @@ O número $a$ é o **coeficiente angular**. Ele determina a inclinação da reta
 - Se $a<0$, a função é decrescente.
 - Se $a=0$, a função é constante.
 
-O número $b$ é o **coeficiente linear**. Ele indica o valor da função quando $x=0$, ou seja, o ponto em que o gráfico intercepta o eixo vertical.
+O número $b$ é o **coeficiente linear**. Como $f(0)=b$, o gráfico intercepta o eixo vertical no ponto $(0,b)$.
 
 Exemplos:
 
@@ -492,6 +491,14 @@ plt.savefig(
 
 plt.show()
 ```
+
+:::
+
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo sobre domínio e imagem de uma parábola](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/dominio-e-imagem-da-parabola.mp4)** (duração: 60 s)
+
+Veja como o gráfico de $f(x)=x^2$ permite identificar as entradas possíveis e as saídas atingidas.
 
 :::
 
@@ -1358,6 +1365,14 @@ d) A função $f(x)=\sin x$ está definida para todo $x\in\mathbb{R}$.
 
 Explique, com suas palavras, por que o domínio é uma informação essencial no estudo de funções.
 
+## 🧪 Exercício 6
+
+Um reservatório contém inicialmente $120$ litros e perde $8$ litros por minuto até esvaziar. O volume, em litros, é dado por $V(t)=120-8t$, em que $t$ é medido em minutos a partir do início do esvaziamento.
+
+a) Para quais valores de $t$ esse modelo descreve o esvaziamento, incluindo os instantes inicial e final?
+
+b) Quais volumes são atingidos nesse intervalo? Escreva a imagem de $V$ no domínio encontrado.
+
 :::
 
 ***
@@ -1499,6 +1514,12 @@ O domínio é essencial porque determina quais valores podem ser utilizados como
 Sem conhecer o domínio, podemos tentar calcular valores que não fazem sentido no conjunto dos reais, como $\sqrt{-1}$ ou $\ln 0$, no contexto deste curso.
 
 Conhecer o domínio também permite compreender onde o gráfico da função existe e quais valores podem ser estudados em problemas matemáticos.
+
+## 🧪 Exercício 6
+
+a) O esvaziamento começa em $t=0$. O reservatório fica vazio quando $120-8t=0$, ou seja, em $t=15$. O domínio do modelo é $[0,15]$, em minutos.
+
+b) A função afim é contínua e decrescente. Como $V(0)=120$ e $V(15)=0$, ela assume todos os valores entre $0$ e $120$, inclusive os extremos. A imagem é $[0,120]$, em litros.
 
 :::
 
