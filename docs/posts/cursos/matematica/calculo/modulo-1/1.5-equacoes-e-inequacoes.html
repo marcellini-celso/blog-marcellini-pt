@@ -401,7 +401,7 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Para quais valores de <span class="math inline">\(x\)</span> uma expressão é maior, menor, maior ou igual, ou menor ou igual a outra?</p>
 </blockquote>
-<p>Em ambos os casos, a resposta não é apenas um número isolado. Muitas vezes a resposta é um <strong>conjunto de números reais</strong>, que pode ser descrito por intervalos, uniões de intervalos ou pontos isolados.</p>
+<p>Em ambos os casos, reunimos em um <strong>conjunto-solução</strong> todos os valores que tornam a afirmação verdadeira. Esse conjunto pode ser vazio ou conter pontos isolados, intervalos ou uniões de intervalos.</p>
 <hr>
 <section id="a-ideia-de-solução" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="a-ideia-de-solução"><span class="header-section-number">1.1</span> 💡 A ideia de solução</h2>
@@ -421,7 +421,7 @@ x=4.
 <p><span class="math display">\[
 S=\{4\}.
 \]</span></p>
-<p>Nesse caso, a solução é formada por um único número.</p>
+<p>Nesse caso, a solução é formada por um único número. Subtrair <span class="math inline">\(3\)</span> dos dois membros e dividir ambos por <span class="math inline">\(2\)</span> são operações reversíveis. Por isso, cada etapa preserva o conjunto-solução.</p>
 <p>A reta real abaixo representa esse conjunto-solução com um único ponto:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -497,7 +497,7 @@ ax+b&gt;0,\qquad ax+b&lt;0,\qquad ax+b\geq 0,\qquad ax+b\leq 0.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ao multiplicar ou dividir uma inequação por um número negativo, o sentido da desigualdade se inverte.</p>
+<p>Ao multiplicar ou dividir os dois membros de uma inequação pelo mesmo número negativo, o sentido da desigualdade se inverte.</p>
 </div>
 </div>
 <p>Por exemplo:</p>
@@ -826,6 +826,20 @@ y=(x-2)(x-3)=x^2-5x+6.
 S=(-\infty,-2)\cup[1,+\infty).
 \]</span></p>
 <p>Esse procedimento mostra que a tabela de sinais é um resumo do estudo gráfico do sinal de cada fator.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/inequacao-racional-tabela-de-sinais.mp4">Assista ao vídeo sobre a tabela de sinais de um quociente</a></strong> (duração: 75 s)</p>
+<p>Veja por que <span class="math inline">\(1\)</span> pertence à solução e <span class="math inline">\(-2\)</span> fica de fora.</p>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -833,7 +847,7 @@ S=(-\infty,-2)\cup[1,+\infty).
 <h2 data-number="1.9" class="anchored" data-anchor-id="inequações-racionais"><span class="header-section-number">1.9</span> ⚖️ Inequações racionais</h2>
 <section id="método-geral-para-resolver-inequações-racionais" class="level3" data-number="1.9.1">
 <h3 data-number="1.9.1" class="anchored" data-anchor-id="método-geral-para-resolver-inequações-racionais"><span class="header-section-number">1.9.1</span> 🧭 Método geral para resolver inequações racionais</h3>
-<p>Uma inequação racional é uma desigualdade que envolve o quociente de duas expressões algébricas. Seu estudo exige atenção especial ao domínio da expressão e ao sinal do quociente.</p>
+<p>Uma inequação racional envolve expressões que são quocientes de polinômios. Seu estudo exige atenção especial ao domínio da expressão e ao sinal do quociente.</p>
 <p>Depois de reunir os termos em um dos lados da desigualdade, procuramos determinar em quais regiões da reta real a expressão racional é positiva, negativa ou nula.</p>
 <p>Podemos organizar a resolução em seis etapas.</p>
 <section id="determinar-o-domínio" class="level4" data-number="1.9.1.1">
@@ -854,7 +868,7 @@ S=(-\infty,-2)\cup[1,+\infty).
 <h4 data-number="1.9.1.4" class="anchored" data-anchor-id="identificar-os-pontos-críticos"><span class="header-section-number">1.9.1.4</span> <em>Identificar os pontos críticos</em></h4>
 <p>Os pontos críticos são:</p>
 <ul>
-<li>os zeros do numerador, nos quais o quociente pode ser igual a zero;</li>
+<li>os zeros do numerador que pertencem ao domínio, nos quais o quociente é igual a zero;</li>
 <li>os zeros do denominador, que não pertencem ao domínio.</li>
 </ul>
 <p>Esses valores dividem a reta real em intervalos nos quais o sinal do quociente permanece constante.</p>
@@ -875,7 +889,7 @@ S=(-\infty,-2)\cup[1,+\infty).
 <p>A inclusão dos pontos críticos depende do tipo de desigualdade:</p>
 <ul>
 <li>em desigualdades estritas, como <span class="math inline">\(&gt;\)</span> ou <span class="math inline">\(&lt;\)</span>, os zeros do numerador não são incluídos;</li>
-<li>em desigualdades não estritas, como <span class="math inline">\(\geq\)</span> ou <span class="math inline">\(\leq\)</span>, os zeros do numerador podem ser incluídos, desde que pertençam ao domínio;</li>
+<li>em desigualdades não estritas, como <span class="math inline">\(\geq\)</span> ou <span class="math inline">\(\leq\)</span>, os zeros do numerador são incluídos quando pertencem ao domínio;</li>
 <li>os zeros do denominador são sempre excluídos.</li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled" title="Atenção ao domínio">
@@ -966,7 +980,7 @@ D_g=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
 <tr class="even">
 <td>Conjunto-solução</td>
 <td>Conjunto de todos os valores que resolvem uma equação ou inequação</td>
-<td>Pode ser ponto, intervalo ou união de intervalos</td>
+<td>Pode ser vazio ou conter pontos isolados, intervalos ou uniões de intervalos</td>
 </tr>
 <tr class="odd">
 <td>Equação linear</td>
@@ -1095,6 +1109,13 @@ D_g=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
 <li><span class="math inline">\(p(x)=\sqrt{4-x}\)</span></li>
 </ol>
 </section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
+<p>Resolva a inequação e escreva o conjunto-solução em notação de intervalos. Explique por que <span class="math inline">\(x=2\)</span> precisa ser tratado separadamente.</p>
+<p><span class="math display">\[
+\frac{(x-2)(x-1)}{(x-2)(x+2)}\geq 0.
+\]</span></p>
+</section>
 </div>
 </div>
 <hr>
@@ -1102,7 +1123,7 @@ D_g=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1111,7 +1132,7 @@ D_g=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -1153,6 +1174,14 @@ D_g=(-\infty,-3)\cup(-3,3)\cup(3,+\infty).
 <li><p>Para <span class="math inline">\(h(x)=\dfrac{1}{x^2-4}\)</span>, precisamos de <span class="math inline">\(x^2-4\neq 0\)</span>. Como <span class="math inline">\(x^2-4=(x-2)(x+2)\)</span>, temos <span class="math inline">\(x\neq -2\)</span> e <span class="math inline">\(x\neq 2\)</span>. Logo, <span class="math inline">\(D_h=(-\infty,-2)\cup(-2,2)\cup(2,+\infty)\)</span>.</p></li>
 <li><p>Para <span class="math inline">\(p(x)=\sqrt{4-x}\)</span>, precisamos de <span class="math inline">\(4-x\geq 0\)</span>, isto é, <span class="math inline">\(x\leq 4\)</span>. Logo, <span class="math inline">\(D_p=(-\infty,4]\)</span>.</p></li>
 </ol>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<p>O domínio da expressão original exclui <span class="math inline">\(-2\)</span> e <span class="math inline">\(2\)</span>. Nesse domínio, cancelamos o fator <span class="math inline">\(x-2\)</span> e obtemos <span class="math inline">\(\dfrac{x-1}{x+2}\)</span>. Pelo quadro de sinais, o quociente é positivo para <span class="math inline">\(x&lt;-2\)</span> ou <span class="math inline">\(x&gt;1\)</span>, e é zero em <span class="math inline">\(x=1\)</span>.</p>
+<p>O valor <span class="math inline">\(x=2\)</span> satisfaz a desigualdade simplificada, mas permanece excluído porque anula o denominador original. Logo,</p>
+<p><span class="math display">\[
+S=(-\infty,-2)\cup[1,2)\cup(2,+\infty).
+\]</span></p>
 </section>
 </div>
 </div>

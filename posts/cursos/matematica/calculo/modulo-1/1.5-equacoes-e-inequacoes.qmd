@@ -51,7 +51,7 @@ Uma inequação pergunta:
 
 > Para quais valores de $x$ uma expressão é maior, menor, maior ou igual, ou menor ou igual a outra?
 
-Em ambos os casos, a resposta não é apenas um número isolado. Muitas vezes a resposta é um **conjunto de números reais**, que pode ser descrito por intervalos, uniões de intervalos ou pontos isolados.
+Em ambos os casos, reunimos em um **conjunto-solução** todos os valores que tornam a afirmação verdadeira. Esse conjunto pode ser vazio ou conter pontos isolados, intervalos ou uniões de intervalos.
 
 ***
 
@@ -81,7 +81,7 @@ $$
 S=\{4\}.
 $$
 
-Nesse caso, a solução é formada por um único número.
+Nesse caso, a solução é formada por um único número. Subtrair $3$ dos dois membros e dividir ambos por $2$ são operações reversíveis. Por isso, cada etapa preserva o conjunto-solução.
 
 A reta real abaixo representa esse conjunto-solução com um único ponto:
 
@@ -172,7 +172,7 @@ $$
 A resolução é parecida com a de uma equação, mas há um cuidado essencial:
 
 ::: {.callout-warning title="Cuidado com o sinal da desigualdade"}
-Ao multiplicar ou dividir uma inequação por um número negativo, o sentido da desigualdade se inverte.
+Ao multiplicar ou dividir os dois membros de uma inequação pelo mesmo número negativo, o sentido da desigualdade se inverte.
 :::
 
 Por exemplo:
@@ -487,14 +487,21 @@ $$
 
 Esse procedimento mostra que a tabela de sinais é um resumo do estudo gráfico do sinal de cada fator.
 
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo sobre a tabela de sinais de um quociente](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/inequacao-racional-tabela-de-sinais.mp4)** (duração: 75 s)
+
+Veja por que $1$ pertence à solução e $-2$ fica de fora.
+
+:::
+
 ***
 
 ## ⚖️ Inequações racionais
 
 ### 🧭 Método geral para resolver inequações racionais
 
-Uma inequação racional é uma desigualdade que envolve o quociente de duas
-expressões algébricas. Seu estudo exige atenção especial ao domínio da
+Uma inequação racional envolve expressões que são quocientes de polinômios. Seu estudo exige atenção especial ao domínio da
 expressão e ao sinal do quociente.
 
 Depois de reunir os termos em um dos lados da desigualdade, procuramos
@@ -528,7 +535,7 @@ seus zeros e facilitar o estudo dos sinais.
 
 Os pontos críticos são:
 
-- os zeros do numerador, nos quais o quociente pode ser igual a zero;
+- os zeros do numerador que pertencem ao domínio, nos quais o quociente é igual a zero;
 - os zeros do denominador, que não pertencem ao domínio.
 
 Esses valores dividem a reta real em intervalos nos quais o sinal
@@ -558,7 +565,7 @@ A inclusão dos pontos críticos depende do tipo de desigualdade:
 - em desigualdades estritas, como $>$ ou $<$, os zeros do numerador
   não são incluídos;
 - em desigualdades não estritas, como $\geq$ ou $\leq$, os zeros do
-  numerador podem ser incluídos, desde que pertençam ao domínio;
+  numerador são incluídos quando pertencem ao domínio;
 - os zeros do denominador são sempre excluídos.
 
 ::: {.callout-warning title="Atenção ao domínio"}
@@ -650,15 +657,15 @@ $$
 | Ideia | Significado | Papel no Cálculo |
 |---|---|---|
 | Equação | Igualdade com incógnita | Usada para encontrar valores específicos que satisfazem uma condição |
-| Conjunto-solução | Conjunto de todos os valores que resolvem uma equação ou inequação | Pode ser ponto, intervalo ou união de intervalos |
-| Equação linear | Equação do tipo \(ax+b=0\), com \(a\neq 0\) | Possui exatamente uma solução real |
+| Conjunto-solução | Conjunto de todos os valores que resolvem uma equação ou inequação | Pode ser vazio ou conter pontos isolados, intervalos ou uniões de intervalos |
+| Equação linear | Equação do tipo $ax+b=0$, com $a\neq 0$ | Possui exatamente uma solução real |
 | Inequação linear | Desigualdade envolvendo uma expressão de primeiro grau | Produz intervalos ou semirretas na reta real |
 | Multiplicação por número negativo | Operação que inverte o sentido da desigualdade | É um cuidado essencial na resolução de inequações |
-| Equação quadrática | Equação do tipo \(ax^2+bx+c=0\), com \(a\neq 0\) | Suas soluções são os zeros de uma parábola |
+| Equação quadrática | Equação do tipo $ax^2+bx+c=0$, com $a\neq 0$ | Suas soluções são os zeros de uma parábola |
 | Inequação quadrática | Desigualdade envolvendo uma expressão de segundo grau | Pode ser resolvida por fatoração, gráfico ou tabela de sinais |
 | Tabela de sinais | Organização dos sinais dos fatores em cada intervalo | Ajuda a resolver inequações produto e quociente |
 | Inequação racional | Inequação envolvendo quociente de expressões algébricas | Exige atenção ao domínio e aos pontos excluídos |
-| Domínio | Conjunto dos valores permitidos para \(x\) | Muitas vezes é determinado por equações e inequações |
+| Domínio | Conjunto dos valores permitidos para $x$ | Muitas vezes é determinado por equações e inequações |
 
 ***
 
@@ -713,6 +720,14 @@ b) $g(x)=\dfrac{1}{x-5}$
 c) $h(x)=\dfrac{1}{x^2-4}$  
 d) $p(x)=\sqrt{4-x}$
 
+## 🧪 Exercício 6
+
+Resolva a inequação e escreva o conjunto-solução em notação de intervalos. Explique por que $x=2$ precisa ser tratado separadamente.
+
+$$
+\frac{(x-2)(x-1)}{(x-2)(x+2)}\geq 0.
+$$
+
 :::
 
 ***
@@ -762,6 +777,16 @@ b) Para $g(x)=\dfrac{1}{x-5}$, precisamos de $x-5\neq 0$, isto é, $x\neq 5$. Lo
 c) Para $h(x)=\dfrac{1}{x^2-4}$, precisamos de $x^2-4\neq 0$. Como $x^2-4=(x-2)(x+2)$, temos $x\neq -2$ e $x\neq 2$. Logo, $D_h=(-\infty,-2)\cup(-2,2)\cup(2,+\infty)$.  
 
 d) Para $p(x)=\sqrt{4-x}$, precisamos de $4-x\geq 0$, isto é, $x\leq 4$. Logo, $D_p=(-\infty,4]$.
+
+## 🧪 Exercício 6
+
+O domínio da expressão original exclui $-2$ e $2$. Nesse domínio, cancelamos o fator $x-2$ e obtemos $\dfrac{x-1}{x+2}$. Pelo quadro de sinais, o quociente é positivo para $x<-2$ ou $x>1$, e é zero em $x=1$.
+
+O valor $x=2$ satisfaz a desigualdade simplificada, mas permanece excluído porque anula o denominador original. Logo,
+
+$$
+S=(-\infty,-2)\cup[1,2)\cup(2,+\infty).
+$$
 
 :::
 
