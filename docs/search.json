@@ -2720,7 +2720,7 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html",
     "title": "🧠 Módulo 1.1: O que é Cálculo? História e aplicações",
     "section": "",
-    "text": "🏠 Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática"
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\nPróxima aula: 1.2 — Conjuntos Numéricos"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.1-introducao.html#intuição-inicial",
@@ -3287,7 +3287,7 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html",
     "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
     "section": "",
-    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Post Anterior: 👉 1.1 O que é Cálculo? História e aplicações"
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\nAula anterior: 1.1 — Introdução ao Cálculo\nPróxima aula: 1.3 — Intervalos e Inequações"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#quadro-resumo",
@@ -3295,6 +3295,90 @@
     "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
     "section": "16.1 🧾 Quadro-resumo",
     "text": "16.1 🧾 Quadro-resumo\n\n\n\n\n\n\n\n\nIdeia\nSignificado\nPapel no Cálculo\n\n\n\n\nConjuntos numéricos\nFamílias de números com propriedades em comum\nOrganizam os objetos com que o Cálculo trabalha\n\n\n\\(\\mathbb{N}\\)\nNúmeros naturais\nContagem e sequências iniciais\n\n\n\\(\\mathbb{Z}\\)\nNúmeros inteiros\nInclui negativos e zero\n\n\n\\(\\mathbb{Q}\\)\nNúmeros racionais, escritos como frações\nRepresentam razões, proporções e dízimas periódicas\n\n\nIrracionais\nNúmeros reais que não podem ser escritos como fração de inteiros\nIncluem \\(\\sqrt{2}\\), \\(\\pi\\), \\(e\\) e muitos limites importantes\n\n\n\\(\\mathbb{R}\\)\nConjunto dos números reais\nAmbiente natural das funções reais de uma variável\n\n\nDízima periódica\nDecimal com repetição infinita de blocos\nSempre representa um número racional\n\n\nCompletude dos reais\nAusência de “buracos” na reta real\nSustenta a ideia de limite no Cálculo\n\n\nPropriedades algébricas\nRegras de soma, produto, distributividade, neutros e inversos\nPermitem manipular expressões com segurança"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#saiba-mais-o-que-é-um-número-irracional",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#saiba-mais-o-que-é-um-número-irracional",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "2.1 🔍 🧠 Saiba Mais: o que é um número irracional?",
+    "text": "2.1 🔍 🧠 Saiba Mais: o que é um número irracional?\n\n\n\n\n\n\nDica🧠 Saiba Mais: o que é um número irracional?\n\n\n\n\n\nUm número irracional é um número real que não pode ser escrito na forma\n\\[\n\\frac ab,\n\\]\nem que \\(a,b\\in\\mathbb Z\\) e \\(b\\neq0\\).\nSua representação decimal é infinita e não periódica.\nExemplos:\n\\[\n\\pi,\\qquad e,\\qquad \\sqrt2.\n\\]\nOs irracionais surgem naturalmente em diferentes contextos matemáticos:\n\nNa diagonal de um quadrado de lado 1, aparece \\(\\sqrt2\\);\nNo estudo das circunferências, aparece \\(\\pi\\);\nEm fenômenos de crescimento exponencial e no estudo dos logaritmos naturais, aparece \\(e\\).\n\nA existência de números irracionais mostra que nem todos os comprimentos e grandezas podem ser expressos como razões entre números inteiros."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#a-escola-pitagórica-e-o-chamado-escândalo-dos-irracionais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#a-escola-pitagórica-e-o-chamado-escândalo-dos-irracionais",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "2.2 📐 A Escola Pitagórica e o chamado escândalo dos irracionais",
+    "text": "2.2 📐 A Escola Pitagórica e o chamado escândalo dos irracionais\n\n\n\n\n\n\nNota📐 A Escola Pitagórica e os Irracionais\n\n\n\n\n\nQuem eram os pitagóricos?\nA escola pitagórica foi uma comunidade filosófica e matemática da Grécia Antiga, tradicionalmente associada a Pitágoras, no século VI a.C.\nOs pitagóricos atribuíam grande importância às relações numéricas e às proporções na compreensão do mundo.\nA crise dos incomensuráveis.\nConsidere um triângulo retângulo isósceles cujos catetos medem 1. Pelo teorema de Pitágoras, a hipotenusa mede\n\\[\nh=\\sqrt{1^2+1^2}=\\sqrt2.\n\\]\nEntretanto, \\(\\sqrt2\\) não pode ser expresso como uma razão entre dois inteiros.\nIsso revelou que nem todas as grandezas geométricas podem ser representadas por razões entre números inteiros.\nImpacto histórico.\nA descoberta da incomensurabilidade representou um desafio profundo para a matemática grega antiga.\nA tradição histórica associa a demonstração da irracionalidade de \\(\\sqrt2\\) a Hipaso de Metaponto, embora os detalhes dessa atribuição não sejam historicamente seguros.\nA compreensão dos irracionais tornou-se essencial para o desenvolvimento posterior dos números reais e para a construção rigorosa do Cálculo."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#exercícios-identificando-irracionais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#exercícios-identificando-irracionais",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "2.3 📘 🧠 Exercícios — Identificando irracionais",
+    "text": "2.3 📘 🧠 Exercícios — Identificando irracionais\n\n\n\n\n\n\nNota📘 🧠 Exercícios — Identificando Números Irracionais\n\n\n\n\n\n1. Classifique cada número como racional ou irracional:\n\n\\(\\sqrt9\\)\n\\(\\sqrt5\\)\n\\(\\frac47\\)\n\\(\\pi\\)\n\\(0,101001000100001\\ldots\\)\n\n2. Qual dos números abaixo é irracional?\n\n\\(\\frac73\\)\n\\(1,333\\ldots\\)\n\\(\\sqrt2\\)\n\\(0,5\\)\n\n3. Classifique as afirmações como verdadeiras ou falsas:\n\nTodo decimal infinito é irracional.\n\\(\\sqrt{25}\\) é irracional.\nExistem mais números irracionais do que racionais, no sentido de cardinalidade dos conjuntos infinitos."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#gabarito-identificação-de-irracionais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#gabarito-identificação-de-irracionais",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "2.4 📘 Gabarito — Identificação de irracionais",
+    "text": "2.4 📘 Gabarito — Identificação de irracionais\n\n\n\n\n\n\nImportante📘 Gabarito\n\n\n\n\n\n1.\n\n\nRacional, pois \\(\\sqrt9=3\\);\n\n\nIrracional;\n\n\nRacional;\n\n\nIrracional;\n\n\nIrracional, considerando a expansão decimal infinita não periódica apresentada.\n\n\n2.\nAlternativa C: \\(\\sqrt2\\).\n3.\n\n\nFalsa. Existem decimais infinitas periódicas, que representam números racionais. Por exemplo, \\(0,\\overline3=\\frac13\\).\n\n\nFalsa. \\(\\sqrt{25}=5\\), que é racional.\n\n\nVerdadeira. Os racionais são enumeráveis, enquanto os reais e os irracionais são não enumeráveis. Portanto, os irracionais possuem cardinalidade maior que a dos racionais."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#um-pouco-de-história-georg-cantor-18451918",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#um-pouco-de-história-georg-cantor-18451918",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "2.5 📜 Um pouco de história: Georg Cantor (1845–1918)",
+    "text": "2.5 📜 Um pouco de história: Georg Cantor (1845–1918)\n\n\n\n\n\n\nDica📜 Um Pouco de História: Georg Cantor\n\n\n\n\n\n\nGeorg Cantor foi um matemático responsável por contribuições fundamentais para a teoria dos conjuntos e para o estudo matemático do infinito.\nEntre seus resultados mais importantes está a demonstração de que:\n\nO conjunto dos números racionais \\(\\mathbb Q\\) é enumerável;\nO conjunto dos números reais \\(\\mathbb R\\) é não enumerável.\n\nAssim, existem diferentes tamanhos de infinito. Embora \\(\\mathbb Q\\) e \\(\\mathbb N\\) sejam infinitos, os números reais não podem ser colocados em uma correspondência biunívoca com os naturais.\nA demonstração diagonal de Cantor é uma das ideias centrais para compreender esse resultado."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#dízimas-periódicas-e-fração-geratriz",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#dízimas-periódicas-e-fração-geratriz",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "3.1 ✨ Dízimas periódicas e fração geratriz",
+    "text": "3.1 ✨ Dízimas periódicas e fração geratriz\nUma dízima periódica é uma representação decimal infinita na qual, a partir de certa casa decimal, um bloco de algarismos se repete indefinidamente.\nExemplo 1 —\n\\[\n\\frac13=0,333\\ldots=0,\\overline3.\n\\]\nExemplo 2 —\n\\[\n\\frac4{11}=0,363636\\ldots=0,\\overline{36}.\n\\]\nExemplo 3 —\n\\[\n\\frac78=0,875.\n\\]\nExemplo 4 —\n\\[\n\\frac{12}{90}=0,1333\\ldots=0,1\\overline3.\n\\]\n\n\n\n\n\n\nNota🧠 Observação importante\n\n\n\n\n\nUma fração irredutível com denominador positivo admite representação decimal finita se, e somente se, o denominador é da forma \\(2^m5^n\\), com \\(m,n\\) inteiros não negativos. Isso inclui o denominador \\(1\\), quando \\(m=n=0\\).\nCaso contrário, sua representação decimal é infinita periódica.\nExemplos:\n\\[\n\\frac38=0,375\n\\]\n\\[\n\\frac4{15}=0,2\\overline6\n\\]\nO primeiro denominador possui apenas o fator primo 2. O segundo possui também o fator primo 3."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#exercícios-resolvidos-fração-geratriz",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#exercícios-resolvidos-fração-geratriz",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "3.2 📘 🧠 Exercícios resolvidos — Fração geratriz",
+    "text": "3.2 📘 🧠 Exercícios resolvidos — Fração geratriz\n\n\n\n\n\n\nNota📘 Exercícios Resolvidos: Dízimas → Fração\n\n\n\n\n\n1. Determine a fração geratriz de \\(0,\\overline3\\).\nSeja\n\\[\nx=0,\\overline3.\n\\]\nMultiplicando por 10:\n\\[\n10x=3,\\overline3.\n\\]\nSubtraindo:\n\\[\n10x-x=3\n\\quad\\Longrightarrow\\quad\n9x=3.\n\\]\nPortanto,\n\\[\n\\boxed{x=\\frac13}.\n\\]\n2. Determine a fração geratriz de \\(0,\\overline{72}\\).\nSeja\n\\[\nx=0,\\overline{72}.\n\\]\nMultiplicando por 100:\n\\[\n100x=72,\\overline{72}.\n\\]\nSubtraindo:\n\\[\n100x-x=72\n\\quad\\Longrightarrow\\quad\n99x=72.\n\\]\nLogo,\n\\[\n\\boxed{x=\\frac{72}{99}=\\frac8{11}}.\n\\]\n3. Determine a fração geratriz de \\(2,\\overline1\\).\nSeja\n\\[\nx=2,\\overline1.\n\\]\nMultiplicando por 10:\n\\[\n10x=21,\\overline1.\n\\]\nSubtraindo:\n\\[\n10x-x=19\n\\quad\\Longrightarrow\\quad\n9x=19.\n\\]\nPortanto,\n\\[\n\\boxed{x=\\frac{19}{9}}.\n\\]\n4. Determine a fração geratriz de \\(0,4\\overline7\\).\nSeja\n\\[\nx=0,4777\\ldots\n\\]\nMultiplicando por 10:\n\\[\n10x=4,7777\\ldots\n\\]\nMultiplicando por 100:\n\\[\n100x=47,7777\\ldots\n\\]\nSubtraindo:\n\\[\n100x-10x=47,7777\\ldots-4,7777\\ldots\n\\]\n\\[\n90x=43.\n\\]\nPortanto,\n\\[\n\\boxed{x=\\frac{43}{90}}.\n\\]\n\n\n\n\n\n\nDicaVídeo comentado\n\n\n\nAssista à resolução: fração geratriz de \\(0{,}4\\overline{7}\\) (duração: 51 s)\n\n\n5. Determine a fração geratriz de \\(3,12\\overline5\\).\nSeja\n\\[\nx=3,12555\\ldots\n\\]\nMultiplicando por 1000:\n\\[\n1000x=3125,5555\\ldots\n\\]\nMultiplicando por 100:\n\\[\n100x=312,5555\\ldots\n\\]\nSubtraindo:\n\\[\n900x=2813.\n\\]\nLogo,\n\\[\n\\boxed{x=\\frac{2813}{900}}.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#exercícios-fração-geratriz",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#exercícios-fração-geratriz",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "3.3 🧩 Exercícios — Fração geratriz",
+    "text": "3.3 🧩 Exercícios — Fração geratriz\n\n\n\n\n\n\nNota🧩 Exercícios: Dízimas → Fração\n\n\n\n\n\nDetermine as frações geratrizes e simplifique quando possível.\n1. Dízimas periódicas simples\n\n\\(0,\\overline3\\)\n\\(0,\\overline7\\)\n\\(0,\\overline2\\)\n\n2. Dízimas periódicas compostas\n\n\\(0,1\\overline3\\)\n\\(0,72\\overline1\\)\n\\(1,2\\overline{45}\\)\n\n3. Outras dízimas periódicas\n\n\\(0,\\overline{81}\\)\n\\(2,\\overline6\\)\n\\(3,4\\overline3\\)\n\n4. Determine e simplifique a fração geratriz:\n\\[\n0,4\\overline5.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#gabarito-fração-geratriz",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#gabarito-fração-geratriz",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "3.4 ✅ Gabarito — Fração geratriz",
+    "text": "3.4 ✅ Gabarito — Fração geratriz\n\n\n\n\n\n\nImportante✅ Gabarito — Fração Geratriz\n\n\n\n\n\n1.\n\n\\(\\frac13\\)\n\\(\\frac79\\)\n\\(\\frac29\\)\n\n2.\n\n\\(\\frac2{15}\\)\n\\(\\frac{649}{900}\\)\n\n\n\\[\n\\frac{1233}{990}=\\frac{137}{110}.\n\\]\n3.\n\n\\(\\frac9{11}\\)\n\\(\\frac83\\)\n\n\n\\[\n\\frac{103}{30}.\n\\]\n4.\n\\[\n\\boxed{\\frac{41}{90}}.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#resumo-propriedades-dos-conjuntos",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#resumo-propriedades-dos-conjuntos",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "4.1 📌 Resumo — Propriedades dos conjuntos",
+    "text": "4.1 📌 Resumo — Propriedades dos conjuntos\n\n\n\n\n\n\nDica📌 Resumo: Propriedades dos Conjuntos\n\n\n\n\n\n\n\n\n\n\n\n\n\nConjunto\nSímbolo\nPropriedades principais\n\n\n\n\nNaturais\n\\(\\mathbb N\\)\nFechados para adição e multiplicação; utilizados na contagem.\n\n\nInteiros\n\\(\\mathbb Z\\)\nFechados para adição, subtração e multiplicação.\n\n\nRacionais\n\\(\\mathbb Q\\)\nFrações; decimais finitas ou periódicas; densos em \\(\\mathbb R\\).\n\n\nIrracionais\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nDecimais infinitas não periódicas; densos em \\(\\mathbb R\\).\n\n\nReais\n\\(\\mathbb R\\)\nUnião dos racionais e irracionais; representam a reta real."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#propriedades-algébricas-básicas-em-mathbb-r",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#propriedades-algébricas-básicas-em-mathbb-r",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "4.2 📚 Propriedades algébricas básicas em \\(\\mathbb R\\)",
+    "text": "4.2 📚 Propriedades algébricas básicas em \\(\\mathbb R\\)\n\n\n\n\n\n\nNota📚 Propriedades Algébricas Básicas em ℝ\n\n\n\n\n\nPara quaisquer \\(x,y,z\\in\\mathbb R\\):\nPropriedades do produto:\n\\[\n0\\cdot x=0\n\\]\n\\[\n(-x)\\cdot y=-(x\\cdot y)\n\\]\n\\[\n(-x)(-y)=x\\cdot y\n\\]\nCancelamento e elementos neutros:\n\\[\nx+y=x\\Longrightarrow y=0\n\\]\n\\[\nx+z=y+z\\Longrightarrow x=y\n\\]\nInversos:\n\\[\nx+y=0\\Longrightarrow y=-x\n\\]\nSe \\(x\\neq0\\) e \\(xy=1\\), então\n\\[\ny=x^{-1}.\n\\]\nCancelamento da multiplicação:\n\\[\nz\\neq0,\\quad xz=yz\n\\Longrightarrow x=y.\n\\]\nAusência de divisores de zero:\n\\[\nx\\neq0,\\ y\\neq0\n\\Longrightarrow xy\\neq0.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#operações-auxiliares",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html#operações-auxiliares",
+    "title": "🔢 Módulo 1.2: Conjuntos Numéricos",
+    "section": "4.3 ✏️ Operações auxiliares",
+    "text": "4.3 ✏️ Operações auxiliares\n\n\n\n\n\n\nNotaOperações Auxiliares\n\n\n\n\n\nSubtração: é definida por meio da adição do oposto:\n\\[\na-b=a+(-b).\n\\]\nDivisão: é definida por meio da multiplicação pelo inverso, desde que o divisor seja diferente de zero:\n\\[\n\\frac ab=a\\cdot b^{-1},\\qquad b\\neq0.\n\\]\nExemplos\n\nSimétrico aditivo de 5:\n\\[\n-5,\\qquad 5+(-5)=0.\n\\]\nInverso multiplicativo de 3:\n\\[\n\\frac13,\\qquad 3\\cdot\\frac13=1.\n\\]\nSubtração:\n\\[\n7-2=7+(-2)=5.\n\\]\nDivisão:\n\\[\n5\\div2\n=5\\cdot\\frac12\n=\\frac52\n=2,5.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html",
@@ -3651,14 +3735,14 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "",
-    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Post Anterior: 👉 1.2 Conjuntos Numéricos\n🎯 Próximo Post: 👉 1.4 Números Reais e Intervalos"
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Aula anterior: 👉 1.2 Conjuntos Numéricos\n🎯 Próxima aula: 👉 1.4 Números Reais e Intervalos"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#a-ideia-intuitiva-comparar-números",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#a-ideia-intuitiva-comparar-números",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "1.1 🌱 A ideia intuitiva: comparar números",
-    "text": "1.1 🌱 A ideia intuitiva: comparar números\nComparar dois números significa perguntar qual deles aparece mais à esquerda ou mais à direita na reta real.\nSe escrevemos\n\\[\n2&lt;5,\n\\]\nestamos dizendo que \\(2\\) está à esquerda de \\(5\\) na reta real.\nSe escrevemos\n\\[\n7&gt;3,\n\\]\nestamos dizendo que \\(7\\) está à direita de \\(3\\).\nPortanto, desigualdades são uma forma simbólica de falar sobre posição na reta real.\n\n\n\n\n\n\nNotaIdeia central\n\n\n\nNa reta real, números menores ficam mais à esquerda e números maiores ficam mais à direita."
+    "text": "1.1 🌱 A ideia intuitiva: comparar números\nComparar dois números significa perguntar qual deles aparece mais à esquerda ou mais à direita na reta real.\nSe escrevemos\n\\[\n2&lt;5,\n\\]\nestamos dizendo que \\(2\\) está à esquerda de \\(5\\) na reta real.\nSe escrevemos\n\\[\n7&gt;3,\n\\]\nestamos dizendo que \\(7\\) está à direita de \\(3\\).\nPortanto, desigualdades são uma forma simbólica de falar sobre a posição dos números na reta real.\n\n\n\n\n\n\nNotaIdeia central\n\n\n\nNa reta real, números menores ficam mais à esquerda e números maiores ficam mais à direita."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#a-reta-real-como-régua-infinita",
@@ -3679,35 +3763,35 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#intervalos-pedaços-da-reta-real",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "1.4 📦 Intervalos: pedaços da reta real",
-    "text": "1.4 📦 Intervalos: pedaços da reta real\nUm intervalo é um pedaço contínuo da reta real.\nA palavra “contínuo” aqui é importante: se dois pontos pertencem ao intervalo, todos os pontos entre eles também pertencem.\nPor exemplo, o intervalo\n\\[\n[1,4]\n\\]\ncontém todos os números reais de \\(1\\) até \\(4\\), incluindo \\(1\\) e \\(4\\).\nJá o intervalo\n\\[\n(1,4)\n\\]\ncontém todos os números reais entre \\(1\\) e \\(4\\), mas não inclui as extremidades."
+    "text": "1.4 📦 Intervalos: pedaços da reta real\nUm intervalo é um subconjunto da reta real que contém todos os números situados entre quaisquer dois de seus elementos.\nEssa propriedade permite reconhecer um intervalo: se dois pontos pertencem a ele, todos os pontos entre eles também pertencem.\nPor exemplo, o intervalo\n\\[\n[1,4]\n\\]\ncontém todos os números reais de \\(1\\) até \\(4\\), incluindo \\(1\\) e \\(4\\).\nJá o intervalo\n\\[\n(1,4)\n\\]\ncontém todos os números reais entre \\(1\\) e \\(4\\), mas não inclui as extremidades."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#intervalos-abertos-fechados-e-semiabertos",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#intervalos-abertos-fechados-e-semiabertos",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "1.5 🚪 Intervalos abertos, fechados e semiabertos",
-    "text": "1.5 🚪 Intervalos abertos, fechados e semiabertos\nA diferença entre parênteses e colchetes indica se as extremidades entram ou não no intervalo.\n\n\n\nNotação\nDescrição\nDesigualdade correspondente\n\n\n\n\n\\((a,b)\\)\naberto nas duas extremidades\n\\(a&lt;x&lt;b\\)\n\n\n\\([a,b]\\)\nfechado nas duas extremidades\n\\(a\\leq x\\leq b\\)\n\n\n\\([a,b)\\)\nfechado em \\(a\\), aberto em \\(b\\)\n\\(a\\leq x&lt;b\\)\n\n\n\\((a,b]\\)\naberto em \\(a\\), fechado em \\(b\\)\n\\(a&lt;x\\leq b\\)\n\n\n\nA intuição é:\n\nparêntese significa que o ponto não entra;\ncolchete significa que o ponto entra."
+    "text": "1.5 🚪 Intervalos abertos, fechados e semiabertos\nA diferença entre parênteses e colchetes indica se as extremidades pertencem ou não ao intervalo.\n\n\n\nNotação\nDescrição\nDesigualdade correspondente\n\n\n\n\n\\((a,b)\\)\nAberto nas duas extremidades\n\\(a&lt;x&lt;b\\)\n\n\n\\([a,b]\\)\nFechado nas duas extremidades\n\\(a\\leq x\\leq b\\)\n\n\n\\([a,b)\\)\nFechado em \\(a\\), aberto em \\(b\\)\n\\(a\\leq x&lt;b\\)\n\n\n\\((a,b]\\)\nAberto em \\(a\\), fechado em \\(b\\)\n\\(a&lt;x\\leq b\\)\n\n\n\nA intuição é:\n\nparêntese significa que o ponto não entra;\ncolchete significa que o ponto entra."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#intervalos-infinitos",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#intervalos-infinitos",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "1.6 ♾️ Intervalos infinitos",
-    "text": "1.6 ♾️ Intervalos infinitos\nTambém podemos descrever regiões que se estendem indefinidamente.\nPor exemplo:\n\\[\nx&gt;3\n\\]\nrepresenta todos os números maiores que \\(3\\). Em notação de intervalo:\n\\[\n(3,+\\infty).\n\\]\nJá\n\\[\nx\\leq -1\n\\]\nrepresenta todos os números menores ou iguais a \\(-1\\). Em notação de intervalo:\n\\[\n(-\\infty,-1].\n\\]\n\n\n\n\n\n\nAvisoAtenção\n\n\n\nNunca usamos colchete em \\(-\\infty\\) ou \\(+\\infty\\), porque infinito não é um número real e não pode ser incluído como ponto final."
+    "text": "1.6 ♾️ Intervalos infinitos\nTambém podemos descrever regiões que se estendem indefinidamente.\nPor exemplo:\n\\[\nx&gt;3\n\\]\nrepresenta todos os números maiores que \\(3\\). Em notação de intervalo:\n\\[\n(3,+\\infty).\n\\]\nJá\n\\[\nx\\leq -1\n\\]\nrepresenta todos os números menores ou iguais a \\(-1\\). Em notação de intervalo:\n\\[\n(-\\infty,-1].\n\\]\n\n\n\n\n\n\nAvisoAtenção\n\n\n\nNunca usamos colchete em \\(-\\infty\\) ou \\(+\\infty\\), porque infinito não é um número real e não pode ser incluído como ponto final de um intervalo."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#desigualdades-como-linguagem-de-intervalos",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#desigualdades-como-linguagem-de-intervalos",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "1.7 ⚖️ Desigualdades como linguagem de intervalos",
-    "text": "1.7 ⚖️ Desigualdades como linguagem de intervalos\nUma desigualdade pode ser lida como uma descrição de uma região da reta.\nPor exemplo:\n\\[\nx\\geq 2\n\\]\nsignifica que \\(x\\) pode ser \\(2\\) ou qualquer número maior que \\(2\\). Em notação de intervalo:\n\\[\n[2,+\\infty).\n\\]\nOutro exemplo:\n\\[\n-3&lt;x\\leq 5\n\\]\nsignifica que \\(x\\) está entre \\(-3\\) e \\(5\\), sem incluir \\(-3\\), mas incluindo \\(5\\). Em notação de intervalo:\n\\[\n(-3,5].\n\\]\nEssa tradução entre desigualdades e intervalos será usada constantemente."
+    "text": "1.7 ⚖️ Desigualdades como linguagem de intervalos\nUma desigualdade pode ser lida como uma descrição de uma região da reta real.\nPor exemplo:\n\\[\nx\\geq 2\n\\]\nsignifica que \\(x\\) pode ser \\(2\\) ou qualquer número maior que \\(2\\). Em notação de intervalo:\n\\[\n[2,+\\infty).\n\\]\nOutro exemplo:\n\\[\n-3&lt;x\\leq 5\n\\]\nsignifica que \\(x\\) está entre \\(-3\\) e \\(5\\), sem incluir \\(-3\\), mas incluindo \\(5\\).\nEm notação de intervalo:\n\\[\n(-3,5].\n\\]\nEssa tradução entre desigualdades e intervalos será utilizada constantemente no estudo das funções."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#propriedades-da-ordem-em-mathbbr",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#propriedades-da-ordem-em-mathbbr",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "1.8 🧱 Propriedades da ordem em \\(\\mathbb{R}\\)",
-    "text": "1.8 🧱 Propriedades da ordem em \\(\\mathbb{R}\\)\nAgora que a ideia geométrica já está clara, podemos formalizar algumas propriedades importantes da ordem nos números reais.\nSe \\(a&lt;b\\), então:\n\npodemos somar o mesmo número aos dois lados:\n\n\\[\na+c&lt;b+c;\n\\]\n\npodemos multiplicar por um número positivo sem mudar o sentido da desigualdade:\n\n\\[\nc&gt;0 \\quad \\Rightarrow \\quad ac&lt;bc;\n\\]\n\nao multiplicar por um número negativo, o sentido da desigualdade se inverte:\n\n\\[\nc&lt;0 \\quad \\Rightarrow \\quad ac&gt;bc.\n\\]\nEssa última propriedade é uma das mais importantes no estudo das inequações.\n\n\n\n\n\n\nAvisoCuidado importante\n\n\n\nAo multiplicar ou dividir uma desigualdade por um número negativo, o sinal da desigualdade inverte.\n\n\nPor exemplo, se\n\\[\n-2x&lt;6,\n\\]\nao dividir por \\(-2\\), obtemos\n\\[\nx&gt;-3.\n\\]\nO sinal mudou de \\(&lt;\\) para \\(&gt;\\)."
+    "text": "1.8 🧱 Propriedades da ordem em \\(\\mathbb{R}\\)\nAgora que a ideia geométrica já está clara, podemos formalizar algumas propriedades importantes da ordem nos números reais.\nSe \\(a&lt;b\\), então:\n1. Podemos somar o mesmo número aos dois lados sem alterar o sentido da desigualdade:\n\\[\na+c&lt;b+c.\n\\]\n2. Podemos multiplicar por um número positivo sem mudar o sentido da desigualdade:\n\\[\nc&gt;0\n\\quad\\Rightarrow\\quad\nac&lt;bc.\n\\]\n3. Ao multiplicar por um número negativo, o sentido da desigualdade se inverte:\n\\[\nc&lt;0\n\\quad\\Rightarrow\\quad\nac&gt;bc.\n\\]\nEssa última propriedade é uma das mais importantes no estudo das inequações.\n\n\n\n\n\n\nAvisoCuidado importante\n\n\n\nAo multiplicar ou dividir uma desigualdade por um número negativo, o sinal da desigualdade se inverte.\n\n\nPor exemplo, se\n\\[\n-2x&lt;6,\n\\]\nao dividir os dois lados por \\(-2\\), obtemos\n\\[\nx&gt;-3.\n\\]\nO sinal mudou de \\(&lt;\\) para \\(&gt;\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#inequações-procurando-regiões-da-reta",
@@ -3721,7 +3805,7 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#inequações-com-multiplicação-por-número-negativo",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "1.10 🔄 Inequações com multiplicação por número negativo",
-    "text": "1.10 🔄 Inequações com multiplicação por número negativo\nConsidere a inequação\n\\[\n-3x+6\\leq 0.\n\\]\nSubtraindo \\(6\\) dos dois lados:\n\\[\n-3x\\leq -6.\n\\]\nAgora dividimos por \\(-3\\). Como \\(-3\\) é negativo, o sentido da desigualdade se inverte:\n\\[\nx\\geq 2.\n\\]\nLogo,\n\\[\nS=[2,+\\infty).\n\\]"
+    "text": "1.10 🔄 Inequações com multiplicação por número negativo\nConsidere a inequação\n\\[\n-3x+6\\leq 0.\n\\]\nSubtraindo \\(6\\) dos dois lados:\n\\[\n-3x\\leq -6.\n\\]\nAgora dividimos por \\(-3\\). Como \\(-3\\) é negativo, o sentido da desigualdade se inverte:\n\\[\nx\\geq 2.\n\\]\nLogo, o conjunto solução é\n\\[\nS=[2,+\\infty).\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#inequações-duplas",
@@ -3731,67 +3815,102 @@
     "text": "1.11 🔎 Inequações duplas\nÀs vezes, uma condição aparece com duas desigualdades ao mesmo tempo.\nPor exemplo:\n\\[\n1\\leq 2x+3&lt;7.\n\\]\nIsso significa que \\(2x+3\\) deve ser maior ou igual a \\(1\\) e menor que \\(7\\).\nSubtraindo \\(3\\) em todos os lados:\n\\[\n-2\\leq 2x&lt;4.\n\\]\nDividindo por \\(2\\):\n\\[\n-1\\leq x&lt;2.\n\\]\nPortanto,\n\\[\nS=[-1,2).\n\\]"
   },
   {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#quadro-resumo",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#quadro-resumo",
-    "title": "📘 Módulo 1.3: Intervalos e Inequações",
-    "section": "1.12 🧾 Quadro-resumo",
-    "text": "1.12 🧾 Quadro-resumo\nAntes dos exercícios finais, vale organizar as ideias principais deste post.\nA lógica geral é sempre a mesma: interpretar desigualdades como regiões da reta real e descrever essas regiões usando intervalos.\n\n\n\n\n\n\nNota🧭 Ideia central do post\n\n\n\nResolver uma inequação significa encontrar um conjunto de valores reais que satisfazem uma desigualdade.\nEsse conjunto costuma ser representado por:\n\nintervalos;\nuniões de intervalos;\npontos incluídos ou excluídos;\nrestrições de domínio, no caso de quocientes.\n\n\n\n\n\n\n\n\n\n\n\nForma algébrica\nLeitura\nIntervalo\n\n\n\n\n\\(x&gt;a\\)\n\\(x\\) maior que \\(a\\)\n\\((a,+\\infty)\\)\n\n\n\\(x\\geq a\\)\n\\(x\\) maior ou igual a \\(a\\)\n\\([a,+\\infty)\\)\n\n\n\\(x&lt;a\\)\n\\(x\\) menor que \\(a\\)\n\\((-\\infty,a)\\)\n\n\n\\(x\\leq a\\)\n\\(x\\) menor ou igual a \\(a\\)\n\\((-\\infty,a]\\)\n\n\n\\(a&lt;x&lt;b\\)\n\\(x\\) entre \\(a\\) e \\(b\\), sem extremos\n\\((a,b)\\)\n\n\n\\(a\\leq x\\leq b\\)\n\\(x\\) entre \\(a\\) e \\(b\\), com extremos\n\\([a,b]\\)"
-  },
-  {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-1",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nEscreva cada desigualdade em notação de intervalo:\n\n\\(x&gt;4\\)\n\n\\(x\\leq -2\\)\n\n\\(1&lt;x&lt;5\\)\n\n\\(-3\\leq x&lt;2\\)"
+    "text": "2.1 🧪 Exercício 1\nEscreva cada desigualdade em notação de intervalo:\n\n\\(x&gt;4\\)\n\\(x\\leq -2\\)\n\\(1&lt;x&lt;5\\)\n\\(-3\\leq x&lt;2\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-2",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-2",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nEscreva cada intervalo usando desigualdades:\n\n\\((2,+\\infty)\\)\n\n\\((-\\infty,7]\\)\n\n\\([1,4)\\)\n\n\\((-5,3]\\)"
+    "text": "2.2 🧪 Exercício 2\nEscreva cada intervalo usando desigualdades:\n\n\\((2,+\\infty)\\)\n\\((-\\infty,7]\\)\n\\([1,4)\\)\n\\((-5,3]\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-3",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-3",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nResolva as inequações:\n\n\\(2x+1&gt;7\\)\n\n\\(5-x\\leq 2\\)\n\n\\(-3x+6&lt;0\\)\n\n\\(4x-8\\geq 0\\)"
+    "text": "2.3 🧪 Exercício 3\nResolva as inequações:\n\n\\(2x+1&gt;7\\)\n\\(5-x\\leq 2\\)\n\\(-3x+6&lt;0\\)\n\\(4x-8\\geq 0\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-4",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-4",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nResolva as inequações duplas:\n\n\\(1&lt;x+2&lt;6\\)\n\n\\(-2\\leq 3x+1&lt;7\\)\n\n\\(0&lt;2x-4\\leq 8\\)"
+    "text": "2.4 🧪 Exercício 4\nResolva as inequações duplas:\n\n\\(1&lt;x+2&lt;6\\)\n\\(-2\\leq 3x+1&lt;7\\)\n\\(0&lt;2x-4\\leq 8\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-1-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-1-1",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "3.1 🧪 Exercício 1",
-    "text": "3.1 🧪 Exercício 1\n\n\\(x&gt;4\\), logo \\(S=(4,+\\infty)\\).\n\\(x\\leq -2\\), logo \\(S=(-\\infty,-2]\\).\n\\(1&lt;x&lt;5\\), logo \\(S=(1,5)\\).\n\\(-3\\leq x&lt;2\\), logo \\(S=[-3,2)\\)."
+    "text": "3.1 🧪 Exercício 1\na) \\(x&gt;4\\), logo\n\\[\nS=(4,+\\infty).\n\\]\nb) \\(x\\leq -2\\), logo\n\\[\nS=(-\\infty,-2].\n\\]\nc) \\(1&lt;x&lt;5\\), logo\n\\[\nS=(1,5).\n\\]\nd) \\(-3\\leq x&lt;2\\), logo\n\\[\nS=[-3,2).\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-2-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-2-1",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "3.2 🧪 Exercício 2",
-    "text": "3.2 🧪 Exercício 2\n\n\\((2,+\\infty)\\), logo \\(x&gt;2\\).\n\\((-\\infty,7]\\), logo \\(x\\leq 7\\).\n\\([1,4)\\), logo \\(1\\leq x&lt;4\\).\n\\((-5,3]\\), logo \\(-5&lt;x\\leq 3\\)."
+    "text": "3.2 🧪 Exercício 2\na) \\((2,+\\infty)\\), logo\n\\[\nx&gt;2.\n\\]\nb) \\((-\\infty,7]\\), logo\n\\[\nx\\leq 7.\n\\]\nc) \\([1,4)\\), logo\n\\[\n1\\leq x&lt;4.\n\\]\nd) \\((-5,3]\\), logo\n\\[\n-5&lt;x\\leq 3.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-3-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-3-1",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\n\n\\(2x+1&gt;7\\). Então \\(2x&gt;6\\), logo \\(x&gt;3\\). Portanto, \\(S=(3,+\\infty)\\).\n\\(5-x\\leq 2\\). Então \\(-x\\leq -3\\). Dividindo por \\(-1\\), invertemos o sinal: \\(x\\geq 3\\). Portanto, \\(S=[3,+\\infty)\\).\n\\(-3x+6&lt;0\\). Então \\(-3x&lt;-6\\). Dividindo por \\(-3\\), invertemos o sinal: \\(x&gt;2\\). Portanto, \\(S=(2,+\\infty)\\).\n\\(4x-8\\geq 0\\). Então \\(4x\\geq 8\\), logo \\(x\\geq 2\\). Portanto, \\(S=[2,+\\infty)\\)."
+    "text": "3.3 🧪 Exercício 3\na)\n\\[\n2x+1&gt;7.\n\\]\nEntão,\n\\[\n2x&gt;6.\n\\]\nLogo,\n\\[\nx&gt;3.\n\\]\nPortanto,\n\\[\nS=(3,+\\infty).\n\\]\nb)\n\\[\n5-x\\leq 2.\n\\]\nEntão,\n\\[\n-x\\leq -3.\n\\]\nDividindo por \\(-1\\), invertemos o sinal:\n\\[\nx\\geq 3.\n\\]\nPortanto,\n\\[\nS=[3,+\\infty).\n\\]\nc)\n\\[\n-3x+6&lt;0.\n\\]\nEntão,\n\\[\n-3x&lt;-6.\n\\]\nDividindo por \\(-3\\), invertemos o sinal:\n\\[\nx&gt;2.\n\\]\nPortanto,\n\\[\nS=(2,+\\infty).\n\\]\nd)\n\\[\n4x-8\\geq 0.\n\\]\nEntão,\n\\[\n4x\\geq 8.\n\\]\nLogo,\n\\[\nx\\geq 2.\n\\]\nPortanto,\n\\[\nS=[2,+\\infty).\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-4-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-4-1",
     "title": "📘 Módulo 1.3: Intervalos e Inequações",
     "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\n\n\\(1&lt;x+2&lt;6\\). Subtraindo \\(2\\): \\(-1&lt;x&lt;4\\). Portanto, \\(S=(-1,4)\\).\n\\(-2\\leq 3x+1&lt;7\\). Subtraindo \\(1\\): \\(-3\\leq 3x&lt;6\\). Dividindo por \\(3\\): \\(-1\\leq x&lt;2\\). Portanto, \\(S=[-1,2)\\).\n\\(0&lt;2x-4\\leq 8\\). Somando \\(4\\): \\(4&lt;2x\\leq 12\\). Dividindo por \\(2\\): \\(2&lt;x\\leq 6\\). Portanto, \\(S=(2,6]\\)."
+    "text": "3.4 🧪 Exercício 4\na)\n\\[\n1&lt;x+2&lt;6.\n\\]\nSubtraindo \\(2\\) em todos os lados:\n\\[\n-1&lt;x&lt;4.\n\\]\nPortanto,\n\\[\nS=(-1,4).\n\\]\nb)\n\\[\n-2\\leq 3x+1&lt;7.\n\\]\nSubtraindo \\(1\\):\n\\[\n-3\\leq 3x&lt;6.\n\\]\nDividindo por \\(3\\):\n\\[\n-1\\leq x&lt;2.\n\\]\nPortanto,\n\\[\nS=[-1,2).\n\\]\nc)\n\\[\n0&lt;2x-4\\leq 8.\n\\]\nSomando \\(4\\):\n\\[\n4&lt;2x\\leq 12.\n\\]\nDividindo por \\(2\\):\n\\[\n2&lt;x\\leq 6.\n\\]\nPortanto,\n\\[\nS=(2,6].\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#inequações-quadráticas-o-sinal-da-parábola",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#inequações-quadráticas-o-sinal-da-parábola",
+    "title": "📘 Módulo 1.3: Intervalos e Inequações",
+    "section": "1.12 📈 Inequações quadráticas: o sinal da parábola",
+    "text": "1.12 📈 Inequações quadráticas: o sinal da parábola\nUma inequação quadrática é uma desigualdade que envolve um polinômio do segundo grau. Sua forma geral é\n\\[\nax^2+bx+c\\;\\square\\;0,\n\\qquad a\\neq 0,\n\\]\nem que \\(\\square\\) representa um dos sinais \\(&lt;\\), \\(\\leq\\), \\(&gt;\\) ou \\(\\geq\\).\nPara resolver esse tipo de inequação, estudamos o sinal da função quadrática\n\\[\nf(x)=ax^2+bx+c.\n\\]\nO gráfico dessa função é uma parábola. A posição da parábola em relação ao eixo \\(x\\) permite identificar onde \\(f(x)\\) é positiva, negativa ou igual a zero.\n\n1.12.1 1. Encontre as raízes da função\nComeçamos resolvendo a equação associada:\n\\[\nax^2+bx+c=0.\n\\]\nO discriminante é\n\\[\n\\Delta=b^2-4ac.\n\\]\nQuando \\(\\Delta&gt;0\\), existem duas raízes reais distintas, dadas por\n\\[\nx=\\frac{-b\\pm\\sqrt{\\Delta}}{2a}.\n\\]\nVamos chamá-las de \\(x_1\\) e \\(x_2\\), ordenadas de modo que\n\\[\nx_1&lt;x_2.\n\\]\n\n\n1.12.2 2. Determine o sinal em cada intervalo\nAs raízes \\(x_1\\) e \\(x_2\\) são os pontos onde o polinômio vale zero. Elas determinam três intervalos abertos na reta real. Em cada um desses intervalos, o sinal do polinômio depende da posição em relação às raízes e do sinal de \\(a\\):\n\n\n\n\n\n\n\n\n\n\n\nRegião da reta\n\\((-\\infty,x_1)\\)\n\\(x_1\\)\n\\((x_1,x_2)\\)\n\\(x_2\\)\n\\((x_2,+\\infty)\\)\n\n\n\n\n\\(a&gt;0\\)\n\\(+\\)\n\\(0\\)\n\\(-\\)\n\\(0\\)\n\\(+\\)\n\n\n\\(a&lt;0\\)\n\\(-\\)\n\\(0\\)\n\\(+\\)\n\\(0\\)\n\\(-\\)\n\n\n\nEm outras palavras:\n\nSe \\(a&gt;0\\), a parábola tem concavidade voltada para cima: o polinômio é positivo fora das raízes e negativo entre elas.\nSe \\(a&lt;0\\), a parábola tem concavidade voltada para baixo: o polinômio é negativo fora das raízes e positivo entre elas.\n\n\n\n1.12.3 Exemplo 1 — Uma inequação com sinal negativo entre as raízes\nResolva:\n\\[\nx^2-5x+6\\leq 0.\n\\]\nPrimeiro, encontramos as raízes:\n\\[\nx^2-5x+6=(x-2)(x-3)=0.\n\\]\nLogo,\n\\[\nx_1=2,\\qquad x_2=3.\n\\]\nComo \\(a=1&gt;0\\), a parábola tem concavidade para cima. Portanto, a expressão é negativa entre as raízes e igual a zero nos dois extremos.\nComo a inequação é \\(\\leq 0\\), incluímos também as raízes:\n\\[\n\\boxed{S=[2,3]}.\n\\]\nO diagrama mostra a parábola, seus pontos de interseção com o eixo \\(x\\) e o intervalo solução na reta real.\n\n\n\nParábola da função x ao quadrado menos cinco x mais seis\n\nParábola com concavidade para cima e raízes dois e três. A reta real destaca o intervalo fechado de dois a três.      2 3 x y f(x) = (x − 2)(x − 3) Conjunto solução na reta real     2 3 [2, 3]\n\n\nFigura 1 — A expressão é não positiva entre as raízes; por isso, os extremos pertencem à solução.\n\n\n\n\n\n\n\n\nDicaVídeo comentado\n\n\n\nAssista à resolução: o sinal da parábola e o intervalo solução (duração: 45 s)\n\n\n\n\n1.12.4 Exemplo 2 — Uma inequação com sinal positivo entre as raízes\nResolva:\n\\[\n-x^2+4&gt;0.\n\\]\nEncontramos as raízes:\n\\[\n-x^2+4=0\n\\quad\\Longleftrightarrow\\quad\nx^2=4\n\\quad\\Longleftrightarrow\\quad\nx=-2\\ \\text{ou}\\ x=2.\n\\]\nComo \\(a=-1&lt;0\\), a parábola tem concavidade para baixo. Assim, a expressão é positiva entre as raízes.\nA desigualdade é estrita (\\(&gt;0\\)); portanto, as raízes não pertencem ao conjunto solução:\n\\[\n\\boxed{S=(-2,2)}.\n\\]\n\n\n\nParábola da função menos x ao quadrado mais quatro\n\nParábola com concavidade para baixo e raízes menos dois e dois. A reta real destaca o intervalo aberto entre as raízes.      −2 2 x y f(x) = −x² + 4 Conjunto solução na reta real     −2 2 (−2, 2)\n\n\nFigura 2 — A expressão é positiva entre as raízes, mas os extremos são excluídos porque a desigualdade é estrita.\n\n\n\n\n1.12.5 Exemplo 3 — Uma solução formada pela união de intervalos\nResolva:\n\\[\nx^2-5x+6&gt;0.\n\\]\nA expressão pode ser fatorada:\n\\[\n(x-2)(x-3)&gt;0.\n\\]\nAs raízes são\n\\[\nx_1=2,\\qquad x_2=3.\n\\]\nComo \\(a=1&gt;0\\), a parábola tem concavidade para cima. A expressão é positiva fora das raízes.\nComo a desigualdade é estrita, os pontos \\(2\\) e \\(3\\) não pertencem à solução.\nAssim, temos duas regiões da reta real:\n\\[\nx&lt;2\n\\qquad\\text{ou}\\qquad\nx&gt;3.\n\\]\nO conjunto solução é a união de dois intervalos:\n\\[\n\\boxed{S=(-\\infty,2)\\cup(3,+\\infty)}.\n\\]\nEsse exemplo mostra que o conjunto solução de uma inequação não precisa ser um único intervalo: ele também pode ser uma união de intervalos separados.\n\n\n1.12.6 3. E quando o discriminante não é positivo?\nOs outros valores do discriminante também permitem determinar o sinal da função.\nSe \\(\\Delta=0\\): existe uma raiz real dupla \\(r\\), e podemos escrever\n\\[\nf(x)=a(x-r)^2.\n\\]\nA expressão tem o mesmo sinal de \\(a\\) em todos os pontos, exceto em \\(x=r\\), onde vale zero.\nPor exemplo,\n\\[\n(x-4)^2\\leq 0\n\\]\ntem como solução apenas\n\\[\nS=\\{4\\}.\n\\]\nSe \\(\\Delta&lt;0\\): não existem raízes reais. A parábola não corta o eixo \\(x\\), e a expressão mantém, em toda a reta real, o sinal de \\(a\\):\n\nse \\(a&gt;0\\), então \\(f(x)&gt;0\\) para todo \\(x\\in\\mathbb{R}\\);\nse \\(a&lt;0\\), então \\(f(x)&lt;0\\) para todo \\(x\\in\\mathbb{R}\\).\n\nPor exemplo,\n\\[\nx^2+1\\leq 0\n\\]\nnão possui solução real, pois \\(x^2+1\\) é sempre positivo.\n\n\n\n\n\n\nDica🧭 Estratégia para resolver inequações quadráticas\n\n\n\n\nEscreva a expressão na forma \\(ax^2+bx+c\\).\nCalcule o discriminante e encontre as raízes reais, quando existirem.\nObserve o sinal de \\(a\\), que determina a concavidade da parábola.\nMonte o quadro de sinais nos intervalos determinados pelas raízes.\nSelecione as regiões que satisfazem a desigualdade.\nInclua as raízes nas respostas com \\(\\leq\\) ou \\(\\geq\\); exclua-as nas respostas com \\(&lt;\\) ou \\(&gt;\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#quadro-resumo-intervalos-e-inequações",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#quadro-resumo-intervalos-e-inequações",
+    "title": "📘 Módulo 1.3: Intervalos e Inequações",
+    "section": "1.13 🧾 Quadro-resumo — Intervalos e Inequações",
+    "text": "1.13 🧾 Quadro-resumo — Intervalos e Inequações\nA ideia central é interpretar cada desigualdade como uma condição sobre os números reais e descrever o conjunto que a satisfaz.\nEsse conjunto pode ser um intervalo, uma união de intervalos, um conjunto com um único ponto ou até mesmo o conjunto vazio.\n\n\n\n\n\n\nNota🧭 Ideia central da aula\n\n\n\nResolver uma inequação significa encontrar todos os valores reais que tornam a desigualdade verdadeira.\nA notação de intervalo informa quais pontos pertencem à solução e quais ficam de fora.\n\n\n\n\n\nForma algébrica\nLeitura\nIntervalo\n\n\n\n\n\\(x&gt;a\\)\n\\(x\\) maior que \\(a\\)\n\\((a,+\\infty)\\)\n\n\n\\(x\\geq a\\)\n\\(x\\) maior ou igual a \\(a\\)\n\\([a,+\\infty)\\)\n\n\n\\(x&lt;a\\)\n\\(x\\) menor que \\(a\\)\n\\((-\\infty,a)\\)\n\n\n\\(x\\leq a\\)\n\\(x\\) menor ou igual a \\(a\\)\n\\((-\\infty,a]\\)\n\n\n\\(a&lt;x&lt;b\\)\n\\(x\\) entre \\(a\\) e \\(b\\), sem extremos\n\\((a,b)\\)\n\n\n\\(a\\leq x\\leq b\\)\n\\(x\\) entre \\(a\\) e \\(b\\), com extremos\n\\([a,b]\\)\n\n\n\n\n1.13.1 Resumo do sinal de uma função quadrática\nPara \\(f(x)=ax^2+bx+c\\), com \\(a\\neq 0\\):\n\n\n\n\n\n\n\nSituação\nComportamento do sinal\n\n\n\n\n\\(\\Delta&gt;0\\) e \\(a&gt;0\\)\nPositivo fora das raízes e negativo entre elas.\n\n\n\\(\\Delta&gt;0\\) e \\(a&lt;0\\)\nNegativo fora das raízes e positivo entre elas.\n\n\n\\(\\Delta=0\\)\nA expressão tem o sinal de \\(a\\), exceto na raiz dupla, onde vale zero.\n\n\n\\(\\Delta&lt;0\\)\nA expressão tem, em toda a reta real, o sinal de \\(a\\).\n\n\n\nLembre-se:\n\nEm uma inequação estrita (\\(&lt;\\) ou \\(&gt;\\)), os pontos em que a expressão vale zero não entram na solução.\nEm uma inequação não estrita (\\(\\leq\\) ou \\(\\geq\\)), esses pontos entram na solução quando satisfazem o sentido da desigualdade.\nO sinal de \\(a\\) indica a concavidade: para cima se \\(a&gt;0\\) e para baixo se \\(a&lt;0\\).\nUma solução pode ser um intervalo, uma união de intervalos, um conjunto unitário ou o conjunto vazio.\n\n\n\n\n\n\n\n\nDica🌉 Ponte para o Cálculo\n\n\n\nNo Cálculo, precisamos determinar onde uma função está definida e em quais regiões ela assume valores positivos ou negativos. Intervalos e inequações permitem descrever essas condições.\nPor exemplo, os domínios das funções\n\\[\nf(x)=\\frac{1}{x-2}\n\\qquad\\text{e}\\qquad\ng(x)=\\sqrt{x-3}\n\\]\nsão, respectivamente,\n\\[\nD_f=\\mathbb{R}\\setminus\\{2\\}\n\\]\ne\n\\[\nD_g=[3,+\\infty).\n\\]\nEssa linguagem será fundamental no estudo de funções, limites e derivadas."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-5",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-5",
+    "title": "📘 Módulo 1.3: Intervalos e Inequações",
+    "section": "2.5 🧪 Exercício 5",
+    "text": "2.5 🧪 Exercício 5\nResolva as inequações quadráticas e escreva cada conjunto solução em notação de intervalo ou de conjunto:\n\n\\(x^2+x-6&lt;0\\)\n\\(-x^2+4\\geq 0\\)\n\\(x^2+4x+4\\leq 0\\)\n\\(x^2+1\\leq 0\\)"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-6-altura-de-uma-peça",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-6-altura-de-uma-peça",
+    "title": "📘 Módulo 1.3: Intervalos e Inequações",
+    "section": "2.6 Exercício 6 — Altura de uma peça",
+    "text": "2.6 Exercício 6 — Altura de uma peça\nEm um modelo simplificado, a altura de uma peça durante um movimento é \\(h(t)=-t^2+6t\\), em metros, para \\(0\\leq t\\leq6\\), com \\(t\\) medido em segundos. Em quais instantes a altura é de pelo menos \\(5\\) metros? Justifique a inclusão ou exclusão dos extremos do intervalo encontrado."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-5-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-5-1",
+    "title": "📘 Módulo 1.3: Intervalos e Inequações",
+    "section": "3.5 🧪 Exercício 5",
+    "text": "3.5 🧪 Exercício 5\na)\n\\[\nx^2+x-6&lt;0.\n\\]\nFatorando:\n\\[\n(x+3)(x-2)&lt;0.\n\\]\nAs raízes são \\(-3\\) e \\(2\\). Como a concavidade é para cima, a expressão é negativa entre as raízes.\nPortanto,\n\\[\nS=(-3,2).\n\\]\nb)\n\\[\n-x^2+4\\geq 0.\n\\]\nAs raízes são \\(-2\\) e \\(2\\), e a concavidade é para baixo.\nA expressão é positiva entre as raízes e vale zero nos extremos.\nPortanto,\n\\[\nS=[-2,2].\n\\]\nc)\n\\[\nx^2+4x+4\\leq 0.\n\\]\nTemos\n\\[\n(x+2)^2\\leq 0.\n\\]\nUm quadrado nunca é negativo e vale zero somente quando \\(x=-2\\).\nPortanto,\n\\[\nS=\\{-2\\}.\n\\]\nd)\n\\[\nx^2+1\\leq 0.\n\\]\nComo \\(x^2\\geq 0\\) para todo número real, \\(x^2+1\\) é sempre positivo.\nPortanto, não há solução real:\n\\[\nS=\\varnothing.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-6-altura-de-uma-peça-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html#exercício-6-altura-de-uma-peça-1",
+    "title": "📘 Módulo 1.3: Intervalos e Inequações",
+    "section": "3.6 Exercício 6 — Altura de uma peça",
+    "text": "3.6 Exercício 6 — Altura de uma peça\nA condição é \\(h(t)\\geq5\\). Podemos escrevê-la como\n\\[\n-t^2+6t-5\\geq0\n\\quad\\Longleftrightarrow\\quad\n(t-1)(t-5)\\leq0.\n\\]\nO produto é negativo entre as raízes \\(1\\) e \\(5\\) e vale zero nas duas. Como a condição admite a igualdade, obtemos \\(t\\in[1,5]\\), em segundos. Esse intervalo está contido no domínio do modelo. Nos dois extremos, a altura é exatamente \\(5\\) metros."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.7-funcoes-polinomiais-e-racionais.html",

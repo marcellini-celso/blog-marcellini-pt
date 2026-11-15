@@ -162,7 +162,7 @@ $$
 
 Um **intervalo** é um subconjunto da reta real que contém todos os números situados entre quaisquer dois de seus elementos.
 
-A palavra “contínuo” aqui é importante: se dois pontos pertencem ao intervalo, todos os pontos entre eles também pertencem.
+Essa propriedade permite reconhecer um intervalo: se dois pontos pertencem a ele, todos os pontos entre eles também pertencem.
 
 Por exemplo, o intervalo
 
@@ -469,7 +469,7 @@ $$
 
 ### 2. Determine o sinal em cada intervalo
 
-Quando existem duas raízes reais distintas, elas dividem a reta real em três regiões. O sinal do polinômio depende do sinal de $a$:
+As raízes $x_1$ e $x_2$ são os pontos onde o polinômio vale zero. Elas determinam três intervalos abertos na reta real. Em cada um desses intervalos, o sinal do polinômio depende da posição em relação às raízes e do sinal de $a$:
 
 | Região da reta | $(-\infty,x_1)$ | $x_1$ | $(x_1,x_2)$ | $x_2$ | $(x_2,+\infty)$ |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -537,6 +537,12 @@ O diagrama mostra a parábola, seus pontos de interseção com o eixo $x$ e o in
 <figcaption>Figura 1 — A expressão é não positiva entre as raízes; por isso, os extremos pertencem à solução.</figcaption>
 </figure>
 
+::: {.callout-tip title="Vídeo comentado"}
+
+**[Assista à resolução: o sinal da parábola e o intervalo solução](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/inequacao-quadratica.mp4)** (duração: 45 s)
+
+:::
+
 ### Exemplo 2 — Uma inequação com sinal positivo entre as raízes
 
 Resolva:
@@ -569,7 +575,7 @@ $$
   <desc id="quadratica2-desc">Parábola com concavidade para baixo e raízes menos dois e dois. A reta real destaca o intervalo aberto entre as raízes.</desc>
   <line x1="80" y1="180" x2="455" y2="180" stroke="currentColor" stroke-width="1.5"/>
   <line x1="260" y1="35" x2="260" y2="210" stroke="currentColor" stroke-width="1.5"/>
-  <path d="M 80 305 Q 260 -145 440 305" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <path d="M 123.2 209.96 Q 260 -49.96 396.8 209.96" fill="none" stroke="#2563eb" stroke-width="3"/>
   <circle cx="140" cy="180" r="5" fill="#2563eb"/>
   <circle cx="380" cy="180" r="5" fill="#2563eb"/>
   <text x="140" y="163" text-anchor="middle" font-size="14" fill="currentColor">−2</text>
@@ -811,6 +817,13 @@ b) $-x^2+4\geq 0$
 c) $x^2+4x+4\leq 0$
 
 d) $x^2+1\leq 0$
+
+## Exercício 6 — Altura de uma peça
+
+Em um modelo simplificado, a altura de uma peça durante um movimento é
+$h(t)=-t^2+6t$, em metros, para $0\leq t\leq6$, com $t$ medido em segundos.
+Em quais instantes a altura é de pelo menos $5$ metros? Justifique a
+inclusão ou exclusão dos extremos do intervalo encontrado.
 
 :::
 
@@ -1109,6 +1122,21 @@ Portanto, não há solução real:
 $$
 S=\varnothing.
 $$
+
+## Exercício 6 — Altura de uma peça
+
+A condição é $h(t)\geq5$. Podemos escrevê-la como
+
+$$
+-t^2+6t-5\geq0
+\quad\Longleftrightarrow\quad
+(t-1)(t-5)\leq0.
+$$
+
+O produto é negativo entre as raízes $1$ e $5$ e vale zero nas duas.
+Como a condição admite a igualdade, obtemos $t\in[1,5]$, em segundos.
+Esse intervalo está contido no domínio do modelo. Nos dois extremos,
+a altura é exatamente $5$ metros.
 
 :::
 

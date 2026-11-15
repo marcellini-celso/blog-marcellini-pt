@@ -295,7 +295,7 @@ Exemplos:
 
 ## ✨ Dízimas periódicas e fração geratriz
 
-Uma dízima periódica é uma representação decimal infinita na qual um bloco de algarismos se repete indefinidamente.
+Uma dízima periódica é uma representação decimal infinita na qual, a partir de certa casa decimal, um bloco de algarismos se repete indefinidamente.
 
 **Exemplo 1 —**
 
@@ -323,7 +323,7 @@ $$
 
 ::: {.callout-note collapse=false title="🧠 Observação importante"}
 
-A representação decimal de uma fração irredutível é finita se, e somente se, seu denominador possui apenas fatores primos 2 e/ou 5.
+Uma fração irredutível com denominador positivo admite representação decimal finita se, e somente se, o denominador é da forma $2^m5^n$, com $m,n$ inteiros não negativos. Isso inclui o denominador $1$, quando $m=n=0$.
 
 Caso contrário, sua representação decimal é infinita periódica.
 
@@ -345,7 +345,7 @@ O primeiro denominador possui apenas o fator primo 2. O segundo possui também o
 
 ## 📘 🧠 Exercícios resolvidos — Fração geratriz
 
-::: {.callout-note collapse=false title="📘 Exercícios Resolvidos: Dízimas → Fração"}
+:::: {.callout-note collapse=false title="📘 Exercícios Resolvidos: Dízimas → Fração"}
 
 **1.** Determine a fração geratriz de $0,\overline3$.
 
@@ -467,6 +467,12 @@ $$
 \boxed{x=\frac{43}{90}}.
 $$
 
+::: {.callout-tip title="Vídeo comentado"}
+
+**[Assista à resolução: fração geratriz de $0{,}4\overline{7}$](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/fracao-geratriz.mp4)** (duração: 51 s)
+
+:::
+
 **5.** Determine a fração geratriz de $3,12\overline5$.
 
 Seja
@@ -499,7 +505,7 @@ $$
 \boxed{x=\frac{2813}{900}}.
 $$
 
-:::
+::::
 
 ## 🧩 Exercícios — Fração geratriz
 
@@ -629,7 +635,7 @@ $$
 
 ### 🔹 Inteiros ($\mathbb Z$)
 
-Incluem os naturais, os números negativos e o zero.
+Incluem os naturais (entre eles, o zero) e os inteiros negativos.
 
 - Fechados para adição;
 - Fechados para subtração;
@@ -831,7 +837,7 @@ $$
 | Irracionais | Reais que não podem ser escritos como fração de inteiros | Incluem $\sqrt2$, $\pi$, $e$ e muitos outros números importantes |
 | $\mathbb R$ | Conjunto dos números reais | Ambiente natural das funções reais de uma variável |
 | Dízima periódica | Decimal com repetição infinita de blocos | Sempre representa um número racional |
-| Completude dos reais | Todo conjunto não vazio e limitado superiormente possui supremo em $\mathbb R$ | Sustenta resultados fundamentais do Cálculo |
+| Completude dos reais | Todo subconjunto não vazio de $\mathbb R$ que seja limitado superiormente possui supremo em $\mathbb R$ | Sustenta resultados fundamentais do Cálculo |
 | Propriedades algébricas | Regras de soma, produto, distributividade, neutros e inversos | Permitem manipular expressões com segurança |
 
 ***
@@ -840,7 +846,7 @@ $$
 
 Os números reais formam o ambiente em que estudaremos funções, limites e derivadas.
 
-A **completude de $\mathbb R$** — a propriedade que garante a existência de supremos para conjuntos não vazios e limitados superiormente — é essencial para diversos resultados fundamentais do Cálculo, como o Teorema do Valor Intermediário.
+A **completude de $\mathbb R$** — a propriedade que garante a existência de supremo para todo subconjunto não vazio de $\mathbb R$ que seja limitado superiormente — é essencial para diversos resultados fundamentais do Cálculo, como o Teorema do Valor Intermediário.
 
 :::
 
@@ -876,6 +882,10 @@ $$
 $$
 
 **10.** Se $x\cdot a=x$ e $x\neq0$, o que podemos concluir sobre $a$?
+
+**11.** Em um desenho técnico, dois comprimentos são dados por $\frac{7}{40}\,\mathrm{m}$ e $\frac{7}{30}\,\mathrm{m}$. Antes de efetuar as divisões, determine qual deles admite uma representação decimal finita. Justifique pela fatoração dos denominadores.
+
+**12.** Considere os irracionais $\sqrt2+1$ e $\sqrt2-1$. Calcule a soma e o produto desses números e classifique cada resultado como racional ou irracional. Qual dos dois resultados serve como contraexemplo ao fechamento da operação correspondente no conjunto dos irracionais?
 
 :::
 
@@ -1019,6 +1029,10 @@ $$
 
 Portanto, $a$ é o elemento neutro da multiplicação.
 
+**11.** As duas frações são irredutíveis. Como $40=2^3\cdot5$, a fração $\frac{7}{40}$ admite representação decimal finita. Já $30=2\cdot3\cdot5$ tem o fator primo $3$. Assim, a expansão decimal de $\frac{7}{30}$ é infinita e periódica.
+
+**12.** A soma é $2\sqrt2$. Se fosse racional, sua divisão por $2$ daria um racional, mas o resultado é $\sqrt2$. Portanto, a soma é irracional. O produto é $(\sqrt2+1)(\sqrt2-1)=2-1=1$, que é racional. Esse produto é um contraexemplo ao fechamento dos irracionais pela multiplicação.
+
 :::
 
 ***
@@ -1049,20 +1063,20 @@ $\mathbb Q\subset\mathbb N\subset\mathbb R\subset\mathbb Z$.
 
 :::::{.question}
 
-**Q2.** Um número irracional pode ser reconhecido, em sua representação decimal, por ser:
+**Q2.** A expansão decimal de um número irracional é:
 
 ::::{.choices}
 
 :::{.choice .correct-choice}
-Infinito e não periódico.
+Infinita e não periódica.
 :::
 
 :::{.choice}
-Finito e sempre negativo.
+Finita e sempre associada a um número negativo.
 :::
 
 :::{.choice}
-Infinito e necessariamente periódico.
+Infinita e necessariamente periódica.
 :::
 
 ::::

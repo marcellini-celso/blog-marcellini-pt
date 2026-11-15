@@ -31,10 +31,15 @@ resources:
 
 **Próxima aula:** [1.2 — Conjuntos Numéricos](1.2-conjuntos.qmd)
 
-::: {.callout-tip title="📚 Pré-requisitos (leves)"}
-- Noções básicas de **álgebra** (operações com expressões, equações simples).  
-- Familiaridade com **funções elementares** (reta, parábola, exponencial, logaritmo).  
-- Capacidade de interpretar **gráficos cartesianos**.  
+::: {.callout-tip title="Conhecimentos úteis para a leitura"}
+Para acompanhar os exemplos iniciais, ajudam algumas noções de
+**álgebra escolar**, como lidar com expressões e equações simples,
+e saber localizar pontos num **gráfico cartesiano**.
+
+O curso retoma esses assuntos e desenvolve as **funções elementares**,
+como a função afim, a quadrática, a exponencial e a logarítmica. Você
+pode acompanhar a introdução pelas figuras e tabelas antes de estudar
+essas funções em detalhe.
 
 > As fórmulas deste curso são preparadas em **LaTeX**, o padrão acadêmico para escrita matemática, o que garante **clareza** e **qualidade tipográfica** na apresentação.  
 > 👉 Você verá apenas o resultado final, sem precisar conhecer LaTeX.
@@ -248,6 +253,22 @@ Substituir toda geometria por tabelas sem interpretação visual.
 
 ::::
 :::::
+
+***
+
+# Questões abertas
+
+**Q4.** Durante o enchimento de um reservatório, um medidor indica quantos litros de água entram por minuto. Ao fim de uma hora, queremos saber quantos litros entraram ao todo. Qual dessas grandezas é uma taxa de variação e qual representa uma acumulação? Justifique pela unidade de medida de cada uma.
+
+**Q5.** Na tabela dos polígonos inscritos no círculo, o que a coluna $\pi-A_n$ mede? O que os valores da tabela sugerem sobre o erro de aproximação? Por que esses valores, por si sós, não demonstram que o erro tende a zero?
+
+::: {.callout-note collapse="true" title="Gabarito das questões abertas"}
+
+**Q4.** A vazão de entrada é uma taxa de variação, pois indica o volume que entra por unidade de tempo e é medida em litros por minuto. O volume total que entrou ao longo da hora é a acumulação, medida em litros.
+
+**Q5.** A diferença $\pi-A_n$ é a área do círculo unitário que fica fora do polígono inscrito. Nos casos da tabela, essa diferença diminui à medida que o número de lados aumenta. Os dados sugerem que ela tende a zero, mas mostram apenas alguns casos. Para demonstrar a convergência, é preciso justificar que, para qualquer erro positivo escolhido, a diferença fica abaixo desse valor sempre que o número de lados é suficientemente grande.
+
+:::
 
 ***
 
