@@ -385,7 +385,7 @@ window.Quarto = {
 </section>
 <section id="por-que-voltar-aos-números-reais" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> 🔢 Por que voltar aos números reais?</h1>
-<p>À primeira vista, pode parecer estranho dedicar uma aula aos números reais depois de já termos estudado conjuntos numéricos, intervalos, inequações e valor absoluto.</p>
+<p>À primeira vista, pode parecer estranho voltar aos números reais depois de estudar conjuntos numéricos, intervalos e inequações.</p>
 <p>Mas há uma razão importante para essa retomada: precisamos compreender como essas ideias se articulam no Cálculo.</p>
 <p>O Cálculo Diferencial e Integral de uma variável real estuda, em sua forma clássica, <strong>funções reais de variável real</strong>. Podemos representar uma dessas funções por:</p>
 <p><span class="math display">\[
@@ -541,7 +541,7 @@ Figura&nbsp;1: Inclusões entre os conjuntos numéricos: naturais, inteiros, rac
 <h1 data-number="4"><span class="header-section-number">4</span> 🧩 A completude dos números reais</h1>
 <p>A diferença entre os números racionais e os reais não está apenas na existência de números irracionais. Há uma propriedade estrutural muito importante que caracteriza os números reais: a <strong>completude</strong>.</p>
 <p>Em termos intuitivos, dizemos que a reta real não apresenta lacunas.</p>
-<p>Os números racionais são densos na reta: entre dois números racionais distintos sempre existe outro número racional. Entretanto, essa propriedade de densidade não é suficiente para garantir que todos os pontos da reta possam ser representados por números racionais.</p>
+<p>Os números racionais são densos na reta. Entre dois números reais distintos sempre existe um racional. Ainda assim, nem todo ponto da reta corresponde a um número racional.</p>
 <p>Os irracionais completam essa estrutura.</p>
 <p>Uma maneira matemática de expressar essa propriedade é por meio do <strong>supremo</strong>.</p>
 <p>Um número <span class="math inline">\(M\)</span> é uma cota superior de um conjunto <span class="math inline">\(S\)</span> quando todos os elementos de <span class="math inline">\(S\)</span> são menores ou iguais a <span class="math inline">\(M\)</span>.</p>
@@ -573,7 +573,8 @@ A=
 <p><span class="math display">\[
 \sup A=\sqrt{2}.
 \]</span></p>
-<p>Como <span class="math inline">\(\sqrt{2}\)</span> é irracional, esse supremo não pertence a <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p>O número <span class="math inline">\(\sqrt{2}\)</span> é uma cota superior de <span class="math inline">\(A\)</span>. Para qualquer <span class="math inline">\(b&lt;\sqrt{2}\)</span>, a densidade dos racionais fornece um racional <span class="math inline">\(q\)</span> entre <span class="math inline">\(\max\{0,b\}\)</span> e <span class="math inline">\(\sqrt{2}\)</span>. Esse <span class="math inline">\(q\)</span> pertence a <span class="math inline">\(A\)</span> e é maior que <span class="math inline">\(b\)</span>. Logo, nenhuma cota superior pode ser menor que <span class="math inline">\(\sqrt{2}\)</span>.</p>
+<p>Como <span class="math inline">\(\sqrt{2}\)</span> é irracional, qualquer cota superior racional de <span class="math inline">\(A\)</span> é maior que <span class="math inline">\(\sqrt{2}\)</span>. Entre ela e <span class="math inline">\(\sqrt{2}\)</span> existe outra cota superior racional, menor que a primeira. Portanto, <span class="math inline">\(A\)</span> não tem supremo em <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <p>É justamente essa espécie de situação que mostra por que os racionais, isoladamente, não possuem a propriedade de completude dos reais.</p>
 <p>Não vamos desenvolver a demonstração formal dessa propriedade agora. O objetivo é reconhecer que a completude será essencial para a fundamentação do Cálculo, especialmente no estudo de limites, continuidade e convergência.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="💡 Ideia fundamental">
@@ -662,12 +663,12 @@ x&lt;z&lt;y
 <td><span class="math inline">\(a\leq x\leq b\)</span></td>
 </tr>
 <tr class="odd">
-<td>Semifechado à direita</td>
+<td>Fechado à esquerda e aberto à direita</td>
 <td><span class="math inline">\([a,b)\)</span></td>
 <td><span class="math inline">\(a\leq x&lt;b\)</span></td>
 </tr>
 <tr class="even">
-<td>Semifechado à esquerda</td>
+<td>Aberto à esquerda e fechado à direita</td>
 <td><span class="math inline">\((a,b]\)</span></td>
 <td><span class="math inline">\(a&lt;x\leq b\)</span></td>
 </tr>
@@ -875,9 +876,9 @@ x\in(a-\varepsilon,a+\varepsilon).
 </div>
 <p>Por exemplo, se <span class="math inline">\(a=3\)</span> e <span class="math inline">\(\varepsilon=0{,}5\)</span>, a vizinhança aberta de centro <span class="math inline">\(3\)</span> e raio <span class="math inline">\(0{,}5\)</span> é:</p>
 <p><span class="math display">\[
-(3-0{,}5,3+0{,}5)
+(3-0{,}5\,;\,3+0{,}5)
 =
-(2{,}5,3{,}5).
+(2{,}5\,;\,3{,}5).
 \]</span></p>
 <p>Esse intervalo contém todos os números reais que estão a uma distância menor que <span class="math inline">\(0{,}5\)</span> de <span class="math inline">\(3\)</span>.</p>
 <div id="fig-vizinhanca" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -907,6 +908,19 @@ x\to a,
 0&lt;|x-a|&lt;\delta.
 \]</span></p>
 <p>Ela indica que <span class="math inline">\(x\)</span> está a uma distância positiva de <span class="math inline">\(a\)</span>, mas menor que <span class="math inline">\(\delta\)</span>. Em outras palavras, <span class="math inline">\(x\)</span> pertence a uma vizinhança perfurada de centro <span class="math inline">\(a\)</span> e raio <span class="math inline">\(\delta\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/vizinhanca-na-reta-real.mp4">Assista: vizinhanças na reta real</a></strong> (duração: 34 s)</p>
+</div>
+</div>
 <p>No estudo de limites, procuramos garantir que, quando <span class="math inline">\(x\)</span> estiver suficientemente próximo de <span class="math inline">\(a\)</span>, o valor de <span class="math inline">\(f(x)\)</span> também estará próximo de um número <span class="math inline">\(L\)</span>.</p>
 <p>A estrutura central dessa ideia é:</p>
 <p><span class="math display">\[
@@ -921,7 +935,7 @@ x\to a,
 <li>a primeira desigualdade descreve uma vizinhança perfurada de <span class="math inline">\(a\)</span>;</li>
 <li>a segunda descreve uma vizinhança de <span class="math inline">\(L\)</span>.</li>
 </ul>
-<p>A definição formal de limite utiliza essa ideia de maneira precisa.</p>
+<p>A definição formal de limite utiliza essa ideia de maneira precisa. Dizemos que <span class="math inline">\(a\)</span> é um ponto de acumulação de um conjunto <span class="math inline">\(A\)</span> quando toda vizinhança perfurada de <span class="math inline">\(a\)</span> contém pelo menos um ponto de <span class="math inline">\(A\)</span>. Quando <span class="math inline">\(A\)</span> é o domínio da função, essa condição garante que há entradas distintas de <span class="math inline">\(a\)</span> arbitrariamente próximas dele.</p>
 <p>Para uma função <span class="math inline">\(f:A\to\mathbb{R}\)</span>, com <span class="math inline">\(a\)</span> sendo um ponto de acumulação do domínio <span class="math inline">\(A\)</span>, a afirmação:</p>
 <p><span class="math display">\[
 \lim_{x\to a}f(x)=L
@@ -1113,6 +1127,10 @@ Figura&nbsp;7: Aproximação na entrada por uma vizinhança perfurada de a com r
 \]</span></p>
 <p>na forma de intervalo.</p>
 </section>
+<section id="exercício-6-da-entrada-à-saída" class="level3" data-number="13.0.6">
+<h3 data-number="13.0.6" class="anchored" data-anchor-id="exercício-6-da-entrada-à-saída"><span class="header-section-number">13.0.6</span> Exercício 6 — Da entrada à saída</h3>
+<p>Considere <span class="math inline">\(g(x)=2x+1\)</span>. Qual é o maior raio <span class="math inline">\(\delta&gt;0\)</span> para o qual <span class="math inline">\(0&lt;|x-3|&lt;\delta\)</span> garante <span class="math inline">\(|g(x)-7|&lt;0{,}02\)</span>? Explique por que um raio maior não funciona.</p>
+</section>
 </div>
 </div>
 <hr>
@@ -1120,7 +1138,7 @@ Figura&nbsp;7: Aproximação na entrada por uma vizinhança perfurada de a com r
 <section id="gabarito-comentado" class="level1" data-number="14">
 <h1 data-number="14"><span class="header-section-number">14</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="🔎 Clique para consultar as resoluções">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1129,21 +1147,21 @@ Figura&nbsp;7: Aproximação na entrada por uma vizinhança perfurada de a com r
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-conjuntos-numéricos-1" class="level3" data-number="14.0.1">
 <h3 data-number="14.0.1" class="anchored" data-anchor-id="exercício-1-conjuntos-numéricos-1"><span class="header-section-number">14.0.1</span> 🧪 Exercício 1 — Conjuntos numéricos</h3>
 <p><strong>a)</strong> <span class="math inline">\(7\)</span> é natural, inteiro, racional e real:</p>
 <p><span class="math display">\[
-7\in\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R}.
+7\in\mathbb{N}\cap\mathbb{Z}\cap\mathbb{Q}\cap\mathbb{R}.
 \]</span></p>
 <p><strong>b)</strong> <span class="math inline">\(-4\)</span> é inteiro, racional e real:</p>
 <p><span class="math display">\[
--4\in\mathbb{Z},\mathbb{Q},\mathbb{R}.
+-4\in\mathbb{Z}\cap\mathbb{Q}\cap\mathbb{R}.
 \]</span></p>
 <p><strong>c)</strong> <span class="math inline">\(\dfrac{3}{5}\)</span> é racional e real:</p>
 <p><span class="math display">\[
-\frac{3}{5}\in\mathbb{Q},\mathbb{R}.
+\frac{3}{5}\in\mathbb{Q}\cap\mathbb{R}.
 \]</span></p>
 <p><strong>d)</strong> <span class="math inline">\(\sqrt{2}\)</span> é irracional e real:</p>
 <p><span class="math display">\[
@@ -1155,7 +1173,7 @@ Figura&nbsp;7: Aproximação na entrada por uma vizinhança perfurada de a com r
 \]</span></p>
 <p><strong>f)</strong> <span class="math inline">\(0\)</span> é natural, inteiro, racional e real, segundo a convenção adotada neste curso:</p>
 <p><span class="math display">\[
-0\in\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R}.
+0\in\mathbb{N}\cap\mathbb{Z}\cap\mathbb{Q}\cap\mathbb{R}.
 \]</span></p>
 </section>
 <section id="exercício-2-notação-de-intervalos-1" class="level3" data-number="14.0.2">
@@ -1267,8 +1285,13 @@ x^2\leq 9.
 \]</span></p>
 <p>Em notação de intervalo:</p>
 <p><span class="math display">\[
-\boxed{(1{,}9,2{,}1).}
+\boxed{(1{,}9\,;\,2{,}1)}.
 \]</span></p>
+</section>
+<section id="exercício-6-da-entrada-à-saída-1" class="level3" data-number="14.0.6">
+<h3 data-number="14.0.6" class="anchored" data-anchor-id="exercício-6-da-entrada-à-saída-1"><span class="header-section-number">14.0.6</span> Exercício 6 — Da entrada à saída</h3>
+<p>Como <span class="math inline">\(g(x)-7=2(x-3)\)</span>, temos <span class="math inline">\(|g(x)-7|=2|x-3|\)</span>. Portanto, a condição <span class="math inline">\(|g(x)-7|&lt;0{,}02\)</span> equivale a <span class="math inline">\(|x-3|&lt;0{,}01\)</span>. O maior raio é <span class="math inline">\(\delta=0{,}01\)</span>.</p>
+<p>Se <span class="math inline">\(\delta&gt;0{,}01\)</span>, tome <span class="math inline">\(x=3{,}01\)</span>. Nesse caso, <span class="math inline">\(0&lt;|x-3|=0{,}01&lt;\delta\)</span>, mas <span class="math inline">\(|g(x)-7|=0{,}02\)</span>. Assim, a desigualdade exigida para a saída não é satisfeita.</p>
 </section>
 </div>
 </div>
@@ -1373,13 +1396,13 @@ x^2\leq 9.
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\([1{,}9,2{,}1]\)</span></p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\([1{,}9\,;\,2{,}1]\)</span></p><p></p>
 </div>
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\((1{,}9,2{,}1)\)</span></p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><span class="math inline">\((1{,}9\,;\,2{,}1)\)</span></p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\((1{,}8,2{,}2)\)</span></p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><span class="math inline">\((1{,}8\,;\,2{,}2)\)</span></p><p></p>
 </div>
 </div>
 

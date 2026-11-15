@@ -57,7 +57,7 @@ Ao final desta aula, você deverá ser capaz de:
 
 # 🔢 Por que voltar aos números reais?
 
-À primeira vista, pode parecer estranho dedicar uma aula aos números reais depois de já termos estudado conjuntos numéricos, intervalos, inequações e valor absoluto.
+À primeira vista, pode parecer estranho voltar aos números reais depois de estudar conjuntos numéricos, intervalos e inequações.
 
 Mas há uma razão importante para essa retomada: precisamos compreender como essas ideias se articulam no Cálculo.
 
@@ -215,7 +215,7 @@ A diferença entre os números racionais e os reais não está apenas na existê
 
 Em termos intuitivos, dizemos que a reta real não apresenta lacunas.
 
-Os números racionais são densos na reta: entre dois números racionais distintos sempre existe outro número racional. Entretanto, essa propriedade de densidade não é suficiente para garantir que todos os pontos da reta possam ser representados por números racionais.
+Os números racionais são densos na reta. Entre dois números reais distintos sempre existe um racional. Ainda assim, nem todo ponto da reta corresponde a um número racional.
 
 Os irracionais completam essa estrutura.
 
@@ -252,7 +252,9 @@ $$
 \sup A=\sqrt{2}.
 $$
 
-Como \(\sqrt{2}\) é irracional, esse supremo não pertence a \(\mathbb{Q}\).
+O número \(\sqrt{2}\) é uma cota superior de \(A\). Para qualquer \(b<\sqrt{2}\), a densidade dos racionais fornece um racional \(q\) entre \(\max\{0,b\}\) e \(\sqrt{2}\). Esse \(q\) pertence a \(A\) e é maior que \(b\). Logo, nenhuma cota superior pode ser menor que \(\sqrt{2}\).
+
+Como \(\sqrt{2}\) é irracional, qualquer cota superior racional de \(A\) é maior que \(\sqrt{2}\). Entre ela e \(\sqrt{2}\) existe outra cota superior racional, menor que a primeira. Portanto, \(A\) não tem supremo em \(\mathbb{Q}\).
 
 É justamente essa espécie de situação que mostra por que os racionais, isoladamente, não possuem a propriedade de completude dos reais.
 
@@ -322,8 +324,8 @@ Os intervalos podem ser classificados de acordo com a inclusão ou exclusão de 
 |---|---|---|
 | Aberto | \((a,b)\) | \(a<x<b\) |
 | Fechado | \([a,b]\) | \(a\leq x\leq b\) |
-| Semifechado à direita | \([a,b)\) | \(a\leq x<b\) |
-| Semifechado à esquerda | \((a,b]\) | \(a<x\leq b\) |
+| Fechado à esquerda e aberto à direita | \([a,b)\) | \(a\leq x<b\) |
+| Aberto à esquerda e fechado à direita | \((a,b]\) | \(a<x\leq b\) |
 
 No intervalo aberto, os extremos não pertencem ao conjunto. No intervalo fechado, ambos pertencem. Nos intervalos semiabertos, apenas um dos extremos está incluído.
 
@@ -548,9 +550,9 @@ O número \(a\) é o centro da vizinhança, e \(\varepsilon\) determina seu raio
 Por exemplo, se \(a=3\) e \(\varepsilon=0{,}5\), a vizinhança aberta de centro \(3\) e raio \(0{,}5\) é:
 
 $$
-(3-0{,}5,3+0{,}5)
+(3-0{,}5\,;\,3+0{,}5)
 =
-(2{,}5,3{,}5).
+(2{,}5\,;\,3{,}5).
 $$
 
 Esse intervalo contém todos os números reais que estão a uma distância menor que \(0{,}5\) de \(3\).
@@ -583,6 +585,12 @@ $$
 
 Ela indica que \(x\) está a uma distância positiva de \(a\), mas menor que \(\delta\). Em outras palavras, \(x\) pertence a uma vizinhança perfurada de centro \(a\) e raio \(\delta\).
 
+::: {.callout-tip title="Vídeo comentado"}
+
+**[Assista: vizinhanças na reta real](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/vizinhanca-na-reta-real.mp4)** (duração: 34 s)
+
+:::
+
 No estudo de limites, procuramos garantir que, quando \(x\) estiver suficientemente próximo de \(a\), o valor de \(f(x)\) também estará próximo de um número \(L\).
 
 A estrutura central dessa ideia é:
@@ -600,7 +608,7 @@ Nessa expressão:
 - a primeira desigualdade descreve uma vizinhança perfurada de \(a\);
 - a segunda descreve uma vizinhança de \(L\).
 
-A definição formal de limite utiliza essa ideia de maneira precisa.
+A definição formal de limite utiliza essa ideia de maneira precisa. Dizemos que \(a\) é um ponto de acumulação de um conjunto \(A\) quando toda vizinhança perfurada de \(a\) contém pelo menos um ponto de \(A\). Quando \(A\) é o domínio da função, essa condição garante que há entradas distintas de \(a\) arbitrariamente próximas dele.
 
 Para uma função \(f:A\to\mathbb{R}\), com \(a\) sendo um ponto de acumulação do domínio \(A\), a afirmação:
 
@@ -733,6 +741,10 @@ $$
 
 na forma de intervalo.
 
+### Exercício 6 — Da entrada à saída
+
+Considere \(g(x)=2x+1\). Qual é o maior raio \(\delta>0\) para o qual \(0<|x-3|<\delta\) garante \(|g(x)-7|<0{,}02\)? Explique por que um raio maior não funciona.
+
 :::
 
 ***
@@ -746,19 +758,19 @@ na forma de intervalo.
 **a)** \(7\) é natural, inteiro, racional e real:
 
 $$
-7\in\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R}.
+7\in\mathbb{N}\cap\mathbb{Z}\cap\mathbb{Q}\cap\mathbb{R}.
 $$
 
 **b)** \(-4\) é inteiro, racional e real:
 
 $$
--4\in\mathbb{Z},\mathbb{Q},\mathbb{R}.
+-4\in\mathbb{Z}\cap\mathbb{Q}\cap\mathbb{R}.
 $$
 
 **c)** \(\dfrac{3}{5}\) é racional e real:
 
 $$
-\frac{3}{5}\in\mathbb{Q},\mathbb{R}.
+\frac{3}{5}\in\mathbb{Q}\cap\mathbb{R}.
 $$
 
 **d)** \(\sqrt{2}\) é irracional e real:
@@ -776,7 +788,7 @@ $$
 **f)** \(0\) é natural, inteiro, racional e real, segundo a convenção adotada neste curso:
 
 $$
-0\in\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R}.
+0\in\mathbb{N}\cap\mathbb{Z}\cap\mathbb{Q}\cap\mathbb{R}.
 $$
 
 ### 🧪 Exercício 2 — Notação de intervalos
@@ -934,8 +946,14 @@ $$
 Em notação de intervalo:
 
 $$
-\boxed{(1{,}9,2{,}1).}
+\boxed{(1{,}9\,;\,2{,}1)}.
 $$
+
+### Exercício 6 — Da entrada à saída
+
+Como \(g(x)-7=2(x-3)\), temos \(|g(x)-7|=2|x-3|\). Portanto, a condição \(|g(x)-7|<0{,}02\) equivale a \(|x-3|<0{,}01\). O maior raio é \(\delta=0{,}01\).
+
+Se \(\delta>0{,}01\), tome \(x=3{,}01\). Nesse caso, \(0<|x-3|=0{,}01<\delta\), mas \(|g(x)-7|=0{,}02\). Assim, a desigualdade exigida para a saída não é satisfeita.
 
 :::
 
@@ -1049,15 +1067,15 @@ Apenas os números inteiros entre \(2\) e \(5\).
 
 ::::{.choices}
 :::{.choice}
-\([1{,}9,2{,}1]\)
+\([1{,}9\,;\,2{,}1]\)
 :::
 
 :::{.choice .correct-choice}
-\((1{,}9,2{,}1)\)
+\((1{,}9\,;\,2{,}1)\)
 :::
 
 :::{.choice}
-\((1{,}8,2{,}2)\)
+\((1{,}8\,;\,2{,}2)\)
 :::
 ::::
 
