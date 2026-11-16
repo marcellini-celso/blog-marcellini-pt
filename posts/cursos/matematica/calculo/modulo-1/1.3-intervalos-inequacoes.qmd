@@ -467,6 +467,16 @@ $$
 x_1<x_2.
 $$
 
+::: {.callout-note title="💡 Dica de fatoração"}
+Se $x_1$ e $x_2$ são as raízes reais de $ax^2+bx+c$, com $a\neq 0$, podemos escrever
+
+$$
+ax^2+bx+c=a(x-x_1)(x-x_2).
+$$
+
+Cada raiz fornece um fator linear. O $a$ na frente dos fatores mantém o coeficiente de $x^2$.
+:::
+
 ### 2. Determine o sinal em cada intervalo
 
 As raízes $x_1$ e $x_2$ são os pontos onde o polinômio vale zero. Elas determinam três intervalos abertos na reta real. Em cada um desses intervalos, o sinal do polinômio depende da posição em relação às raízes e do sinal de $a$:
@@ -489,16 +499,18 @@ $$
 x^2-5x+6\leq 0.
 $$
 
-Primeiro, encontramos as raízes:
+Pela fórmula quadrática, o discriminante é $\Delta=(-5)^2-4\cdot 1\cdot 6=1$. Assim,
 
 $$
-x^2-5x+6=(x-2)(x-3)=0.
+x_1=\frac{5-1}{2}=2,
+\qquad
+x_2=\frac{5+1}{2}=3.
 $$
 
-Logo,
+Aplicando a dica de fatoração com $a=1$, obtemos
 
 $$
-x_1=2,\qquad x_2=3.
+x^2-5x+6=(x-2)(x-3).
 $$
 
 Como $a=1>0$, a parábola tem concavidade para cima. Portanto, a expressão é negativa entre as raízes e igual a zero nos dois extremos.
@@ -603,16 +615,10 @@ $$
 x^2-5x+6>0.
 $$
 
-A expressão pode ser fatorada:
+O polinômio é o mesmo do Exemplo 1. Usando as raízes $2$ e $3$ e $a=1$, escrevemos a inequação como
 
 $$
 (x-2)(x-3)>0.
-$$
-
-As raízes são
-
-$$
-x_1=2,\qquad x_2=3.
 $$
 
 Como $a=1>0$, a parábola tem concavidade para cima. A expressão é positiva fora das raízes.

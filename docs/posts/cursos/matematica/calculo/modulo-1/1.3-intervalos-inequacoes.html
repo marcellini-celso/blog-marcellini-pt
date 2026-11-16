@@ -734,6 +734,23 @@ x=\frac{-b\pm\sqrt{\Delta}}{2a}.
 <p><span class="math display">\[
 x_1&lt;x_2.
 \]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="💡 Dica de fatoração">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>💡 Dica de fatoração
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> são as raízes reais de <span class="math inline">\(ax^2+bx+c\)</span>, com <span class="math inline">\(a\neq 0\)</span>, podemos escrever</p>
+<p><span class="math display">\[
+ax^2+bx+c=a(x-x_1)(x-x_2).
+\]</span></p>
+<p>Cada raiz fornece um fator linear. O <span class="math inline">\(a\)</span> na frente dos fatores mantém o coeficiente de <span class="math inline">\(x^2\)</span>.</p>
+</div>
+</div>
 </section>
 <section id="determine-o-sinal-em-cada-intervalo" class="level3" data-number="1.12.2">
 <h3 data-number="1.12.2" class="anchored" data-anchor-id="determine-o-sinal-em-cada-intervalo"><span class="header-section-number">1.12.2</span> 2. Determine o sinal em cada intervalo</h3>
@@ -788,13 +805,15 @@ x_1&lt;x_2.
 <p><span class="math display">\[
 x^2-5x+6\leq 0.
 \]</span></p>
-<p>Primeiro, encontramos as raízes:</p>
+<p>Pela fórmula quadrática, o discriminante é <span class="math inline">\(\Delta=(-5)^2-4\cdot 1\cdot 6=1\)</span>. Assim,</p>
 <p><span class="math display">\[
-x^2-5x+6=(x-2)(x-3)=0.
+x_1=\frac{5-1}{2}=2,
+\qquad
+x_2=\frac{5+1}{2}=3.
 \]</span></p>
-<p>Logo,</p>
+<p>Aplicando a dica de fatoração com <span class="math inline">\(a=1\)</span>, obtemos</p>
 <p><span class="math display">\[
-x_1=2,\qquad x_2=3.
+x^2-5x+6=(x-2)(x-3).
 \]</span></p>
 <p>Como <span class="math inline">\(a=1&gt;0\)</span>, a parábola tem concavidade para cima. Portanto, a expressão é negativa entre as raízes e igual a zero nos dois extremos.</p>
 <p>Como a inequação é <span class="math inline">\(\leq 0\)</span>, incluímos também as raízes:</p>
@@ -864,13 +883,9 @@ Figura 2 — A expressão é positiva entre as raízes, mas os extremos são exc
 <p><span class="math display">\[
 x^2-5x+6&gt;0.
 \]</span></p>
-<p>A expressão pode ser fatorada:</p>
+<p>O polinômio é o mesmo do Exemplo 1. Usando as raízes <span class="math inline">\(2\)</span> e <span class="math inline">\(3\)</span> e <span class="math inline">\(a=1\)</span>, escrevemos a inequação como</p>
 <p><span class="math display">\[
 (x-2)(x-3)&gt;0.
-\]</span></p>
-<p>As raízes são</p>
-<p><span class="math display">\[
-x_1=2,\qquad x_2=3.
 \]</span></p>
 <p>Como <span class="math inline">\(a=1&gt;0\)</span>, a parábola tem concavidade para cima. A expressão é positiva fora das raízes.</p>
 <p>Como a desigualdade é estrita, os pontos <span class="math inline">\(2\)</span> e <span class="math inline">\(3\)</span> não pertencem à solução.</p>
@@ -1138,7 +1153,7 @@ D_g=[3,+\infty).
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito comentado">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1147,7 +1162,7 @@ D_g=[3,+\infty).
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
