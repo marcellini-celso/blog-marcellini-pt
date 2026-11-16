@@ -915,6 +915,21 @@ Figura&nbsp;3: Gráfico da função seno, com período 2π e valores entre −1 
 </div>
 </div>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/do-circulo-ao-grafico-do-seno.mp4">Assista ao vídeo do círculo unitário ao gráfico do seno</a></strong> (duração: 73 s)</p>
+<p>Acompanhe como a altura do ponto no círculo traça o gráfico durante uma volta completa.</p>
+</div>
+</div>
+<hr>
 </section>
 <section id="gráfico-do-cosseno" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="gráfico-do-cosseno"><span class="header-section-number">1.10</span> 📊 Gráfico do cosseno</h2>
@@ -962,7 +977,7 @@ Figura&nbsp;4: Gráfico da função cosseno, com período 2π e valores entre �
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -971,7 +986,7 @@ Figura&nbsp;4: Gráfico da função cosseno, com período 2π e valores entre �
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Execute o código a partir do diretório <code>modulo-1</code>, com <code>numpy</code> e <code>matplotlib</code> instalados. A figura SVG será salva na pasta <code>images/</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1037,11 +1052,7 @@ D_{\tan}=
 <p><span class="math display">\[
 x=\frac{\pi}{2}+k\pi.
 \]</span></p>
-<p>Essas assíntotas aparecem porque, nesses pontos, o cosseno é zero e a expressão</p>
-<p><span class="math display">\[
-\tan x=\frac{\sin x}{\cos x}
-\]</span></p>
-<p>não está definida.</p>
+<p>Ao nos aproximarmos desses pontos, o denominador <span class="math inline">\(\cos x\)</span> se aproxima de zero e o numerador <span class="math inline">\(\sin x\)</span> se aproxima de <span class="math inline">\(1\)</span> ou de <span class="math inline">\(-1\)</span>. Por isso, <span class="math inline">\(|\tan x|\)</span> cresce sem limite.</p>
 <div id="fig-1-9-tangente" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Curva tangente com ramos separados por assíntotas verticais em pi sobre dois mais múltiplos inteiros de pi.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1-9-tangente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1053,7 +1064,7 @@ Figura&nbsp;5: Gráfico da função tangente, com assíntotas verticais e perío
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1062,7 +1073,7 @@ Figura&nbsp;5: Gráfico da função tangente, com assíntotas verticais e perío
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Execute o código a partir do diretório <code>modulo-1</code>, com <code>numpy</code> e <code>matplotlib</code> instalados. A figura SVG será salva na pasta <code>images/</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1165,6 +1176,19 @@ A\sin x
 \]</span></p>
 <p>quando <span class="math inline">\(B\neq 0\)</span>.</p>
 <p>Essa expressão representa o <strong>período fundamental</strong> de <span class="math inline">\(A\sin(Bx+C)+D\)</span> quando <span class="math inline">\(A\neq 0\)</span> e <span class="math inline">\(B\neq 0\)</span>. Se <span class="math inline">\(A=0\)</span> ou <span class="math inline">\(B=0\)</span>, a função é constante e não possui período fundamental positivo.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Dica de leitura do gráfico">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>💡 Dica de leitura do gráfico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Em <span class="math inline">\(f(x)=A\sin(Bx+C)+D\)</span>, a <strong>amplitude</strong> <span class="math inline">\(|A|\)</span> é a distância vertical entre a linha média e um extremo. O <strong>período fundamental</strong> <span class="math inline">\(2\pi/|B|\)</span> é a distância horizontal entre repetições consecutivas. A <strong>linha média</strong> é a reta <span class="math inline">\(y=D\)</span>. Essas três leituras se aplicam à função não constante, com <span class="math inline">\(A\neq 0\)</span> e <span class="math inline">\(B\neq 0\)</span>.</p>
+</div>
+</div>
 <p>Essas transformações são muito usadas na modelagem de ondas.</p>
 <div id="fig-1-9-transformacoes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Quatro gráficos comparando seno com dois seno, seno de dois x, seno de x menos meio pi e seno mais um.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1177,7 +1201,7 @@ Figura&nbsp;6: Transformações do seno: amplitude, período, fase e translaçã
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1186,7 +1210,7 @@ Figura&nbsp;6: Transformações do seno: amplitude, período, fase e translaçã
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Execute o código a partir do diretório <code>modulo-1</code>, com <code>numpy</code> e <code>matplotlib</code> instalados. A figura SVG será salva na pasta <code>images/</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1276,8 +1300,8 @@ Figura&nbsp;6: Transformações do seno: amplitude, período, fase e translaçã
 <td><span class="math inline">\(\sin^2x+\cos^2x=1\)</span>.</td>
 </tr>
 <tr class="even">
-<td>Seno transformado</td>
-<td><span class="math inline">\(A\sin(Bx+C)+D\)</span>: amplitude <span class="math inline">\(|A|\)</span>; período <span class="math inline">\(\dfrac{2\pi}{|B|}\)</span>; fase <span class="math inline">\(-\dfrac{C}{B}\)</span>; deslocamento vertical <span class="math inline">\(D\)</span>.</td>
+<td>Seno transformado (<span class="math inline">\(A,B\neq 0\)</span>)</td>
+<td><span class="math inline">\(A\sin(Bx+C)+D\)</span>: amplitude <span class="math inline">\(|A|\)</span>; período <span class="math inline">\(2\pi/|B|\)</span>; deslocamento horizontal <span class="math inline">\(-C/B\)</span>; linha média <span class="math inline">\(y=D\)</span>.</td>
 </tr>
 <tr class="odd">
 <td>Limite fundamental</td>
@@ -1297,20 +1321,16 @@ Figura&nbsp;6: Transformações do seno: amplitude, período, fase e translaçã
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A trigonometria é essencial para o Cálculo por várias razões. As funções seno e cosseno têm derivadas muito especiais:</p>
-<p><span class="math display">\[
-\frac{d}{dx}\sin x=\cos x,
-\]</span></p>
-<p>e</p>
-<p><span class="math display">\[
-\frac{d}{dx}\cos x=-\sin x.
-\]</span></p>
-<p>Esses resultados serão estudados mais adiante.</p>
-<p>Além disso, funções trigonométricas aparecem em limites fundamentais, como</p>
+<p><strong>Por que medir <span class="math inline">\(x\)</span> em radianos importa neste limite?</strong></p>
 <p><span class="math display">\[
 \lim_{x\to 0}\frac{\sin x}{x}=1.
 \]</span></p>
-<p>Esse limite é uma das portas de entrada para as derivadas trigonométricas.</p>
+<p>No círculo unitário, um ângulo positivo de <span class="math inline">\(x\)</span> radianos corresponde a um arco de comprimento <span class="math inline">\(x\)</span>. Essa relação permite comparar o arco com os segmentos que representam seno e tangente. O gráfico ilustra a aproximação a <span class="math inline">\(1\)</span>. A demonstração fica para o Volume 2.</p>
+<p>O limite é um passo para obter as derivadas trigonométricas. Em radianos,</p>
+<p><span class="math display">\[
+\frac{d}{dx}\sin x=\cos x,\qquad
+\frac{d}{dx}\cos x=-\sin x.
+\]</span></p>
 <div id="fig-1-9-limite-fundamental" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de seno de x sobre x, com um círculo aberto em x igual a zero e reta horizontal pontilhada em y igual a um.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1-9-limite-fundamental-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1322,7 +1342,7 @@ Figura&nbsp;7: Limite fundamental: sen(x)/x tende a 1 quando x tende a zero
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1331,7 +1351,7 @@ Figura&nbsp;7: Limite fundamental: sen(x)/x tende a 1 quando x tende a zero
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Execute o código a partir do diretório <code>modulo-1</code>, com <code>numpy</code> e <code>matplotlib</code> instalados. A figura SVG será salva na pasta <code>images/</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1377,7 +1397,7 @@ Figura&nbsp;7: Limite fundamental: sen(x)/x tende a 1 quando x tende a zero
 </div>
 </div>
 </div>
-<p><strong>Atenção:</strong> as fórmulas usuais de derivadas e limites trigonométricos apresentadas nesta aula pressupõem que os ângulos estejam medidos em radianos. Quando a variável angular é expressa em graus, aparecem fatores de conversão.</p>
+<p><strong>Atenção:</strong> se <span class="math inline">\(d\)</span> representa o ângulo em graus, então <span class="math inline">\(x=\pi d/180\)</span>. O quociente <span class="math inline">\(\sin(\pi d/180)/d\)</span> se aproxima de <span class="math inline">\(\pi/180\)</span> quando <span class="math inline">\(d\to 0\)</span>. A mesma conversão introduz o fator <span class="math inline">\(\pi/180\)</span> ao derivar seno e cosseno em relação a <span class="math inline">\(d\)</span>.</p>
 </div>
 </div>
 </section>
@@ -1458,6 +1478,18 @@ Figura&nbsp;7: Limite fundamental: sen(x)/x tende a 1 quando x tende a zero
 \]</span></p>
 <p>para determinar <span class="math inline">\(\cos^2 x\)</span> quando <span class="math inline">\(\sin x=\dfrac{3}{5}\)</span>.</p>
 </section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
+<p>Um sensor registra o sinal de tensão</p>
+<p><span class="math display">\[
+v(t)=2+3\sin(100\pi t),
+\]</span></p>
+<p>em que <span class="math inline">\(v\)</span> é medido em volts e <span class="math inline">\(t\)</span> em segundos.</p>
+<ol type="a">
+<li>Determine a amplitude e o período fundamental e interprete cada um com sua unidade.</li>
+<li>Indique a linha média e os valores mínimo e máximo do sinal.</li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
@@ -1465,7 +1497,7 @@ Figura&nbsp;7: Limite fundamental: sen(x)/x tende a 1 quando x tende a zero
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1474,7 +1506,7 @@ Figura&nbsp;7: Limite fundamental: sen(x)/x tende a 1 quando x tende a zero
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -1569,6 +1601,19 @@ D_h=
 <p><span class="math display">\[
 \boxed{\cos^2 x=\frac{16}{25}}.
 \]</span></p>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<ol type="a">
+<li>A amplitude é <span class="math inline">\(3\)</span> V. A tensão se afasta até <span class="math inline">\(3\)</span> V da linha média. Como <span class="math inline">\(|B|=100\pi\)</span>, o período fundamental é</li>
+</ol>
+<p><span class="math display">\[
+T=\frac{2\pi}{100\pi}=0{,}02\ \text{s}.
+\]</span></p>
+<p>O sinal completa um ciclo a cada <span class="math inline">\(0{,}02\)</span> s.</p>
+<ol start="2" type="a">
+<li>A linha média é <span class="math inline">\(v=2\)</span> V. O mínimo é <span class="math inline">\(2-3=-1\)</span> V e o máximo é <span class="math inline">\(2+3=5\)</span> V.</li>
+</ol>
 </section>
 </div>
 </div>

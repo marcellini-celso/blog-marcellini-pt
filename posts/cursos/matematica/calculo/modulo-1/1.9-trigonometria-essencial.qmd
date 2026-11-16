@@ -522,6 +522,16 @@ plt.close(fig)
 
 ***
 
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo do círculo unitário ao gráfico do seno](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/do-circulo-ao-grafico-do-seno.mp4)** (duração: 73 s)
+
+Acompanhe como a altura do ponto no círculo traça o gráfico durante uma volta completa.
+
+:::
+
+***
+
 ## 📊 Gráfico do cosseno
 
 A função
@@ -653,13 +663,7 @@ $$
 x=\frac{\pi}{2}+k\pi.
 $$
 
-Essas assíntotas aparecem porque, nesses pontos, o cosseno é zero e a expressão
-
-$$
-\tan x=\frac{\sin x}{\cos x}
-$$
-
-não está definida.
+Ao nos aproximarmos desses pontos, o denominador $\cos x$ se aproxima de zero e o numerador $\sin x$ se aproxima de $1$ ou de $-1$. Por isso, $|\tan x|$ cresce sem limite.
 
 ![Gráfico da função tangente, com assíntotas verticais e período π](images/1.9-tangente.svg){#fig-1-9-tangente fig-alt="Curva tangente com ramos separados por assíntotas verticais em pi sobre dois mais múltiplos inteiros de pi." width="90%"}
 
@@ -795,6 +799,12 @@ quando $B\neq 0$.
 
 Essa expressão representa o **período fundamental** de $A\sin(Bx+C)+D$ quando $A\neq 0$ e $B\neq 0$. Se $A=0$ ou $B=0$, a função é constante e não possui período fundamental positivo.
 
+::: {.callout-tip title="💡 Dica de leitura do gráfico"}
+
+Em $f(x)=A\sin(Bx+C)+D$, a **amplitude** $|A|$ é a distância vertical entre a linha média e um extremo. O **período fundamental** $2\pi/|B|$ é a distância horizontal entre repetições consecutivas. A **linha média** é a reta $y=D$. Essas três leituras se aplicam à função não constante, com $A\neq 0$ e $B\neq 0$.
+
+:::
+
 Essas transformações são muito usadas na modelagem de ondas.
 
 ![Transformações do seno: amplitude, período, fase e translação vertical](images/1.9-transformacoes.svg){#fig-1-9-transformacoes fig-alt="Quatro gráficos comparando seno com dois seno, seno de dois x, seno de x menos meio pi e seno mais um." width="90%"}
@@ -860,7 +870,7 @@ plt.close(fig)
 | Cosseno | $D=\mathbb{R}$; imagem $[-1,1]$; período $2\pi$; par. |
 | Tangente | $\tan x=\dfrac{\sin x}{\cos x}$; $D=\mathbb{R}\setminus\{\frac{\pi}{2}+k\pi\}$; imagem $\mathbb{R}$; período $\pi$. |
 | Identidade fundamental | $\sin^2x+\cos^2x=1$. |
-| Seno transformado | $A\sin(Bx+C)+D$: amplitude $|A|$; período $\dfrac{2\pi}{|B|}$; fase $-\dfrac{C}{B}$; deslocamento vertical $D$. |
+| Seno transformado ($A,B\neq 0$) | $A\sin(Bx+C)+D$: amplitude $|A|$; período $2\pi/|B|$; deslocamento horizontal $-C/B$; linha média $y=D$. |
 | Limite fundamental | $\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$ (radianos). |
 
 **Para conferir a compreensão:** identifique o domínio, a imagem, as simetrias e o período de cada função. Nas funções transformadas, diferencie amplitude, deslocamento horizontal e linha média.
@@ -869,27 +879,20 @@ plt.close(fig)
 
 :::: {.callout-tip title="🌉 Ponte para o Cálculo"}
 
-A trigonometria é essencial para o Cálculo por várias razões. As funções seno e cosseno têm derivadas muito especiais:
-
-$$
-\frac{d}{dx}\sin x=\cos x,
-$$
-
-e
-
-$$
-\frac{d}{dx}\cos x=-\sin x.
-$$
-
-Esses resultados serão estudados mais adiante.
-
-Além disso, funções trigonométricas aparecem em limites fundamentais, como
+**Por que medir $x$ em radianos importa neste limite?**
 
 $$
 \lim_{x\to 0}\frac{\sin x}{x}=1.
 $$
 
-Esse limite é uma das portas de entrada para as derivadas trigonométricas.
+No círculo unitário, um ângulo positivo de $x$ radianos corresponde a um arco de comprimento $x$. Essa relação permite comparar o arco com os segmentos que representam seno e tangente. O gráfico ilustra a aproximação a $1$. A demonstração fica para o Volume 2.
+
+O limite é um passo para obter as derivadas trigonométricas. Em radianos,
+
+$$
+\frac{d}{dx}\sin x=\cos x,\qquad
+\frac{d}{dx}\cos x=-\sin x.
+$$
 
 ![Limite fundamental: sen(x)/x tende a 1 quando x tende a zero](images/1.9-limite-fundamental.svg){#fig-1-9-limite-fundamental fig-alt="Gráfico de seno de x sobre x, com um círculo aberto em x igual a zero e reta horizontal pontilhada em y igual a um." width="90%"}
 
@@ -942,7 +945,7 @@ plt.close(fig)
 
 :::
 
-**Atenção:** as fórmulas usuais de derivadas e limites trigonométricos apresentadas nesta aula pressupõem que os ângulos estejam medidos em radianos. Quando a variável angular é expressa em graus, aparecem fatores de conversão.
+**Atenção:** se $d$ representa o ângulo em graus, então $x=\pi d/180$. O quociente $\sin(\pi d/180)/d$ se aproxima de $\pi/180$ quando $d\to 0$. A mesma conversão introduz o fator $\pi/180$ ao derivar seno e cosseno em relação a $d$.
 
 ::::
 
@@ -997,6 +1000,19 @@ $$
 $$
 
 para determinar $\cos^2 x$ quando $\sin x=\dfrac{3}{5}$.
+
+## 🧪 Exercício 6
+
+Um sensor registra o sinal de tensão
+
+$$
+v(t)=2+3\sin(100\pi t),
+$$
+
+em que $v$ é medido em volts e $t$ em segundos.
+
+a) Determine a amplitude e o período fundamental e interprete cada um com sua unidade.
+b) Indique a linha média e os valores mínimo e máximo do sinal.
 
 :::
 
@@ -1121,6 +1137,18 @@ Portanto,
 $$
 \boxed{\cos^2 x=\frac{16}{25}}.
 $$
+
+## 🧪 Exercício 6
+
+a) A amplitude é $3$ V. A tensão se afasta até $3$ V da linha média. Como $|B|=100\pi$, o período fundamental é
+
+$$
+T=\frac{2\pi}{100\pi}=0{,}02\ \text{s}.
+$$
+
+O sinal completa um ciclo a cada $0{,}02$ s.
+
+b) A linha média é $v=2$ V. O mínimo é $2-3=-1$ V e o máximo é $2+3=5$ V.
 
 :::
 
