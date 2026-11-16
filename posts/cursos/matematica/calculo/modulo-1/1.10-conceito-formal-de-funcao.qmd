@@ -420,9 +420,9 @@ Para que isso aconteça, cada valor de $x$ deve corresponder a exatamente um val
 
 Geometricamente, essa condição conduz ao teste da reta vertical.
 
-::: {.callout-tip title="Teste da reta vertical"}
+::: {.callout-tip title="💡 Dica: teste da reta vertical"}
 
-Um gráfico representa uma função de $x$ se toda reta vertical o intercepta em, no máximo, um ponto.
+Um conjunto de pontos representa o gráfico de uma função de $x$ quando toda reta vertical o intercepta em, no máximo, um ponto. Se o domínio já foi declarado, para cada $x$ desse domínio deve haver exatamente uma interseção.
 
 :::
 
@@ -524,6 +524,16 @@ Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.10-teste-reta-vertical.svg", bbox_inches="tight")
 plt.close(fig)
 ```
+
+:::
+
+***
+
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo sobre o teste da reta vertical](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/teste-da-reta-vertical.mp4)** (duração: 67 s)
+
+Compare as interseções da reta $x=\tfrac12$ com a parábola e com a circunferência.
 
 :::
 
@@ -769,11 +779,9 @@ Mesmo que uma fórmula esteja definida para valores negativos, o modelo pode nã
 
 ::: {.callout-tip title="🌉 Ponte para o Cálculo"}
 
-A definição formal de função será essencial para o estudo dos limites, das derivadas e das integrais.
+Na função por partes desta aula, $f(0)=1$. Para $x<0$, vale $f(x)=x^2$, então os valores da função se aproximam de $0$ quando nos aproximamos de $0$ pela esquerda.
 
-No Cálculo, não basta conhecer uma expressão algébrica. Precisamos compreender o domínio da função, os valores que ela assume e seu comportamento nas proximidades de cada ponto.
-
-Nas próximas aulas, essa compreensão será ampliada progressivamente.
+**O que vemos ao nos aproximar de $0$ pela direita, onde vale $f(x)=x+1$?** Comparar os dois lados ajuda a decidir se há um limite no ponto de troca. Essa comparação será retomada no Volume 2, no estudo de limites laterais e continuidade.
 
 :::
 
@@ -842,7 +850,7 @@ c) $f(3)$.
 
 ## 🧪 Exercício 5
 
-As funções abaixo são iguais? Justifique.
+a) As funções abaixo são iguais? Justifique.
 
 $$
 f:\mathbb{R}\to\mathbb{R},
@@ -853,6 +861,15 @@ $$
 g:[0,+\infty)\to\mathbb{R},
 \qquad g(x)=x^2.
 $$
+
+b) Agora compare $f$ com
+
+$$
+h:\mathbb{R}\to[0,+\infty),
+\qquad h(x)=x^2.
+$$
+
+As duas funções são iguais segundo a convenção desta aula? Justifique.
 
 :::
 
@@ -991,7 +1008,7 @@ $$
 
 ## 🧪 Exercício 5
 
-As funções não são iguais.
+a) As funções não são iguais.
 
 Embora possuam a mesma expressão algébrica e o mesmo contradomínio, seus domínios são diferentes:
 
@@ -1006,6 +1023,8 @@ D_g=[0,+\infty).
 $$
 
 Para serem iguais, as funções precisam ter o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.
+
+b) $f$ e $h$ têm o mesmo domínio, a mesma regra e a mesma imagem, $[0,+\infty)$. Como os contradomínios são $\mathbb{R}$ e $[0,+\infty)$, respectivamente, elas são diferentes pela convenção adotada nesta aula.
 
 :::
 

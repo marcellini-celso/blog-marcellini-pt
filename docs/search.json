@@ -8943,182 +8943,161 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "",
-    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Post Anterior: 👉 1.9 Trigonometria Essencial"
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Aula anterior: 1.9 Trigonometria Essencial\n🎯 Próxima aula: 1.11 Revisão Gráfica e Algébrica"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#a-ideia-intuitiva",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#a-ideia-intuitiva",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.1 💡 A ideia intuitiva",
-    "text": "1.1 💡 A ideia intuitiva\nIntuitivamente, uma função é uma regra que associa entradas a saídas.\nPor exemplo, a regra\n\\[\nf(x)=x^2\n\\]\nassocia a cada número real \\(x\\) o número real \\(x^2\\).\nAssim:\n\\[\nf(2)=4,\n\\]\n\\[\nf(-3)=9,\n\\]\n\\[\nf(0)=0.\n\\]\nPodemos imaginar uma função como uma máquina:\n\\[\nx \\longmapsto f(x).\n\\]\nA entrada é \\(x\\); a saída é \\(f(x)\\).\nMas essa imagem de máquina, embora útil, não é suficiente para a matemática formal. Precisamos dizer com clareza quais entradas são permitidas e em que conjunto vivem as saídas."
+    "text": "1.1 💡 A ideia intuitiva\nIntuitivamente, uma função é uma regra que associa entradas a saídas.\nPor exemplo, a regra\n\\[\nf(x)=x^2\n\\]\nassocia a cada número real \\(x\\) o número real \\(x^2\\).\nAssim,\n\\[\nf(2)=4,\\qquad f(-3)=9,\\qquad f(0)=0.\n\\]\n\n\n\n\n\n\nFigura 1: Tabela de valores de uma função quadrática.\n\n\n\nPodemos imaginar uma função como uma máquina:\n\\[\nx\\longmapsto f(x).\n\\]\nA entrada é \\(x\\); a saída é \\(f(x)\\).\nEssa imagem é útil para começar, mas não é suficiente para a matemática formal. Precisamos especificar quais entradas são permitidas e em que conjunto estão as saídas."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#definição-formal-de-função",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#definição-formal-de-função",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.2 📐 Definição formal de função",
-    "text": "1.2 📐 Definição formal de função\nUma função de um conjunto \\(A\\) em um conjunto \\(B\\) é uma regra que associa a cada elemento de \\(A\\) exatamente um elemento de \\(B\\).\nEscrevemos:\n\\[\nf:A\\to B.\n\\]\nO conjunto \\(A\\) é chamado de domínio da função.\nO conjunto \\(B\\) é chamado de contradomínio da função.\nSe \\(x\\in A\\), então o valor associado a \\(x\\) é denotado por\n\\[\nf(x).\n\\]\nA condição fundamental é:\n\n\n\n\n\n\nNotaDefinição essencial\n\n\n\nPara cada \\(x\\in A\\), deve existir exatamente um valor \\(f(x)\\in B\\).\n\n\nIsso significa duas coisas:\n\ntodo elemento do domínio deve ter imagem;\nnenhum elemento do domínio pode ter duas imagens diferentes."
+    "text": "1.2 📐 Definição formal de função\nUma função de um conjunto \\(A\\) em um conjunto \\(B\\) é uma correspondência que associa a cada elemento de \\(A\\) exatamente um elemento de \\(B\\).\nEscrevemos:\n\\[\nf:A\\to B.\n\\]\nNessa notação:\n\n\\(A\\) é o domínio;\n\\(B\\) é o contradomínio;\n\\(f\\) é a função;\n\\(f(x)\\) é o valor associado ao elemento \\(x\\in A\\).\n\nA condição fundamental pode ser expressa assim:\n\n\n\n\n\n\nImportanteDefinição essencial\n\n\n\nPara cada \\(x\\in A\\), existe um único elemento \\(y\\in B\\) tal que \\(y=f(x)\\).\n\n\nEssa definição exige duas condições:\n\nTodo elemento do domínio precisa estar associado a algum elemento do contradomínio.\nNenhum elemento do domínio pode estar associado a dois valores diferentes.\n\n\n\n\n\n\n\nFigura 2: Diagrama de setas de uma função: cada entrada do domínio possui uma única imagem.\n\n\n\n\n\n\n\n\n\nFigura 3: Duas relações que não são funções: imagem dupla e entrada sem imagem.\n\n\n\nNo primeiro diagrama de relação não funcional, uma entrada possui duas imagens. No segundo, existe uma entrada sem imagem.\nAmbas as situações violam a definição de função."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#domínio",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#domínio",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.3 🧭 Domínio",
-    "text": "1.3 🧭 Domínio\nO domínio é o conjunto de todas as entradas permitidas da função.\nSe escrevemos\n\\[\nf:A\\to B,\n\\]\nentão o domínio é\n\\[\nA.\n\\]\nPor exemplo, se\n\\[\nf:\\mathbb{R}\\to\\mathbb{R}\n\\]\né dada por\n\\[\nf(x)=x^2,\n\\]\nentão o domínio é\n\\[\n\\mathbb{R}.\n\\]\nIsso quer dizer que qualquer número real pode ser usado como entrada.\nJá para\n\\[\ng(x)=\\sqrt{x},\n\\]\nse estamos trabalhando apenas com números reais, o domínio natural é\n\\[\n[0,+\\infty).\n\\]\nIsso acontece porque \\(\\sqrt{x}\\) só é real quando\n\\[\nx\\geq 0.\n\\]"
+    "text": "1.3 🧭 Domínio\nO domínio é o conjunto de todas as entradas permitidas.\nSe escrevemos\n\\[\nf:A\\to B,\n\\]\no domínio é o conjunto \\(A\\).\nPor exemplo, considere\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2.\n\\]\nNesse caso, o domínio é\n\\[\nD_f=\\mathbb{R}.\n\\]\nQualquer número real pode ser utilizado como entrada.\nConsidere agora\n\\[\ng(x)=\\sqrt{x}.\n\\]\nSe trabalhamos apenas com números reais, precisamos exigir\n\\[\nx\\geq 0.\n\\]\nPortanto, o domínio real natural dessa expressão é\n\\[\nD_g=[0,+\\infty).\n\\]\nO domínio faz parte da definição da função: não basta conhecer a expressão algébrica."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#contradomínio",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#contradomínio",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.4 🎯 Contradomínio",
-    "text": "1.4 🎯 Contradomínio\nO contradomínio é o conjunto onde declaramos que os valores da função vivem.\nSe escrevemos\n\\[\nf:A\\to B,\n\\]\nentão \\(B\\) é o contradomínio.\nPor exemplo,\n\\[\nf:\\mathbb{R}\\to\\mathbb{R}\n\\]\ncom\n\\[\nf(x)=x^2\n\\]\ntem contradomínio \\(\\mathbb{R}\\).\nIsso significa que os valores da função são considerados dentro do conjunto dos reais.\nMas observe: embora o contradomínio seja \\(\\mathbb{R}\\), a função \\(f(x)=x^2\\) nunca assume valores negativos.\nAssim, contradomínio e imagem não são necessariamente a mesma coisa."
+    "text": "1.4 🎯 Contradomínio\nO contradomínio é o conjunto no qual declaramos que os valores da função estão contidos.\nNa notação\n\\[\nf:A\\to B,\n\\]\no conjunto \\(B\\) é o contradomínio.\nPor exemplo,\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2.\n\\]\nO contradomínio é \\(\\mathbb{R}\\).\nEntretanto, a função nunca assume valores negativos. Isso nos leva ao próximo conceito."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#imagem",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#imagem",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.5 🖼️ Imagem",
-    "text": "1.5 🖼️ Imagem\nA imagem de uma função é o conjunto de todos os valores que ela realmente assume.\nPara\n\\[\nf:\\mathbb{R}\\to\\mathbb{R}\n\\]\ndada por\n\\[\nf(x)=x^2,\n\\]\na imagem é\n\\[\n[0,+\\infty).\n\\]\nDe fato, \\(x^2\\) nunca é negativo, e todo número real não negativo pode ser escrito como quadrado de algum real.\nPortanto:\n\\[\n\\operatorname{Im}(f)=[0,+\\infty).\n\\]\nA imagem sempre é subconjunto do contradomínio:\n\\[\n\\operatorname{Im}(f)\\subseteq B.\n\\]"
+    "text": "1.5 🖼️ Imagem\nA imagem é o conjunto de todos os valores que a função efetivamente assume.\nPara\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2,\n\\]\ntemos\n\\[\n\\operatorname{Im}(f)=[0,+\\infty).\n\\]\nDe fato, \\(x^2\\) nunca é negativo, e todo número real não negativo é quadrado de algum número real.\nEm geral,\n\\[\n\\operatorname{Im}(f)\\subseteq B.\n\\]\nA imagem está contida no contradomínio, mas não precisa coincidir com ele."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#domínio-contradomínio-e-imagem-comparação",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#domínio-contradomínio-e-imagem-comparação",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.6 🎯 Domínio, contradomínio e imagem: comparação",
-    "text": "1.6 🎯 Domínio, contradomínio e imagem: comparação\nÉ importante distinguir os três conceitos.\n\n\n\nConceito\nSignificado\n\n\n\n\nDomínio\nconjunto das entradas permitidas\n\n\nContradomínio\nconjunto declarado para as saídas\n\n\nImagem\nconjunto dos valores realmente atingidos\n\n\n\nPor exemplo, considere\n\\[\nf:\\mathbb{R}\\to\\mathbb{R}\n\\]\ndada por\n\\[\nf(x)=x^2.\n\\]\nEntão:\n\\[\nD_f=\\mathbb{R},\n\\]\n\\[\n\\text{contradomínio}=\\mathbb{R},\n\\]\ne\n\\[\n\\operatorname{Im}(f)=[0,+\\infty).\n\\]"
+    "text": "1.6 🎯 Domínio, contradomínio e imagem: comparação\n\n\n\nConceito\nSignificado\n\n\n\n\nDomínio\nConjunto das entradas permitidas.\n\n\nContradomínio\nConjunto estabelecido para as saídas.\n\n\nImagem\nConjunto dos valores efetivamente assumidos pela função.\n\n\n\nConsidere novamente\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2.\n\\]\nTemos:\n\\[\nD_f=\\mathbb{R},\n\\]\n\\[\n\\text{Contradomínio}=\\mathbb{R},\n\\]\ne\n\\[\n\\operatorname{Im}(f)=[0,+\\infty).\n\\]\nPara visualizar a diferença entre esses conjuntos, considere o exemplo finito\n\\[\nA=\\{-2,-1,0,1,2\\},\n\\]\n\\[\nB=\\{0,1,4,9\\},\n\\]\ncom a regra \\(f(x)=x^2\\).\n\n\n\n\n\n\nFigura 4: Um exemplo finito distingue domínio, contradomínio e imagem.\n\n\n\nNesse exemplo,\n\\[\n\\operatorname{Im}(f)=\\{0,1,4\\}.\n\\]\nObserve que \\(9\\in B\\), mas \\(9\\notin\\operatorname{Im}(f)\\).\nO contradomínio contém um elemento que não é atingido pela função. É justamente essa possibilidade que distingue contradomínio de imagem."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-como-relações-especiais",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-como-relações-especiais",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.7 🧩 Funções como relações especiais",
-    "text": "1.7 🧩 Funções como relações especiais\nUma forma mais formal de entender funções é vê-las como relações.\nUma relação de \\(A\\) em \\(B\\) é um subconjunto do produto cartesiano\n\\[\nA\\times B.\n\\]\nOu seja, é um conjunto de pares ordenados\n\\[\n(x,y),\n\\]\ncom \\(x\\in A\\) e \\(y\\in B\\).\nUma função é uma relação especial em que cada elemento \\(x\\in A\\) aparece em exatamente um par ordenado.\nPor exemplo, a função\n\\[\nf(x)=x^2\n\\]\npode ser vista como o conjunto de pares\n\\[\n\\{(x,x^2)\\mid x\\in\\mathbb{R}\\}.\n\\]\nEssa visão será importante mais adiante quando pensarmos em gráficos."
+    "text": "1.7 🧩 Funções como relações especiais\nUma relação de um conjunto \\(A\\) em um conjunto \\(B\\) é um subconjunto do produto cartesiano\n\\[\nA\\times B.\n\\]\nSeus elementos são pares ordenados\n\\[\n(x,y),\n\\]\nem que \\(x\\in A\\) e \\(y\\in B\\).\nUma função é uma relação especial: cada elemento \\(x\\in A\\) aparece como primeira coordenada de exatamente um par ordenado.\nPor exemplo, a função \\(f(x)=x^2\\), com domínio real, pode ser representada pelo conjunto\n\\[\nG_f=\\{(x,x^2)\\mid x\\in\\mathbb{R}\\}.\n\\]\nEssa representação será importante para compreender os gráficos de funções."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#gráfico-de-uma-função",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#gráfico-de-uma-função",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.8 📊 Gráfico de uma função",
-    "text": "1.8 📊 Gráfico de uma função\nO gráfico de uma função real de variável real é o conjunto de pontos\n\\[\n(x,f(x))\n\\]\nno plano cartesiano.\nFormalmente, se\n\\[\nf:A\\to\\mathbb{R},\n\\]\ncom\n\\[\nA\\subseteq\\mathbb{R},\n\\]\nentão o gráfico de \\(f\\) é\n\\[\nG_f=\\{(x,f(x))\\in\\mathbb{R}^2\\mid x\\in A\\}.\n\\]\nPor exemplo, o gráfico de\n\\[\nf(x)=x^2\n\\]\né\n\\[\nG_f=\\{(x,x^2)\\mid x\\in\\mathbb{R}\\}.\n\\]\nEsse conjunto de pontos forma uma parábola."
+    "text": "1.8 📊 Gráfico de uma função\nO gráfico de uma função real de variável real é o conjunto dos pontos\n\\[\n(x,f(x))\n\\]\nno plano cartesiano.\nSe\n\\[\nf:A\\to\\mathbb{R},\n\\qquad A\\subseteq\\mathbb{R},\n\\]\nentão seu gráfico é\n\\[\nG_f=\\{(x,f(x))\\mid x\\in A\\}.\n\\]\nPor exemplo, o gráfico de\n\\[\nf(x)=x^2\n\\]\né\n\\[\nG_f=\\{(x,x^2)\\mid x\\in\\mathbb{R}\\}.\n\\]\nEsse conjunto de pontos forma uma parábola.\n\n\n\n\n\n\nFigura 5: O gráfico de f(x)=x² representa os pares ordenados (x,f(x)).\n\n\n\n\n\n\n\n\n\nNota🐍 Código Python da ilustração\n\n\n\n\n\nO código utiliza NumPy e Matplotlib para reproduzir a parábola.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n\nplt.rcParams.update({\"font.family\": \"DejaVu Sans\", \"svg.fonttype\": \"path\"})\n\nx = np.linspace(-3.1, 3.1, 700)\n\nfig, ax = plt.subplots(figsize=(9, 5.2))\nax.plot(x, x**2, lw=3, color=\"#098899\", label=r\"$f(x)=x^2$\")\n\nfor xx in (-2, -1, 0, 1, 2):\n    ax.scatter(xx, xx**2, s=40, color=\"#172F49\", zorder=4)\n\nax.axhline(0, color=\"#66788A\", lw=1)\nax.axvline(0, color=\"#66788A\", lw=1)\n\nax.set(xlim=(-3.2, 3.2), ylim=(-0.7, 10), xlabel=\"x\", ylabel=\"y\")\nax.grid(alpha=0.22)\nax.legend(frameon=False, loc=\"upper center\", fontsize=12)\nax.set_title(\"Gráfico de uma função: cada x determina um único y\",\n             pad=16, fontsize=13, color=\"#172F49\")\n\nfig.tight_layout()\nPath(\"images\").mkdir(exist_ok=True)\nfig.savefig(\"images/1.10-grafico-parabola.svg\", bbox_inches=\"tight\")\nplt.close(fig)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#o-teste-da-reta-vertical",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#o-teste-da-reta-vertical",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.9 🔎 O teste da reta vertical",
-    "text": "1.9 🔎 O teste da reta vertical\nNem todo conjunto de pontos no plano representa o gráfico de uma função.\nPara ser gráfico de uma função, cada valor de \\(x\\) deve corresponder a exatamente um valor de \\(y\\).\nGeometricamente, isso leva ao teste da reta vertical:\n\n\n\n\n\n\nDicaTeste da reta vertical\n\n\n\nUm gráfico representa uma função de \\(x\\) se toda reta vertical intercepta o gráfico em no máximo um ponto.\n\n\nPor exemplo, a parábola\n\\[\ny=x^2\n\\]\npassa no teste da reta vertical.\nJá a circunferência\n\\[\nx^2+y^2=1\n\\]\nnão passa, pois uma mesma reta vertical pode cortar a circunferência em dois pontos."
+    "text": "1.9 🔎 O teste da reta vertical\nNem todo conjunto de pontos do plano cartesiano representa o gráfico de uma função de \\(x\\).\nPara que isso aconteça, cada valor de \\(x\\) deve corresponder a exatamente um valor de \\(y\\).\nGeometricamente, essa condição conduz ao teste da reta vertical.\n\n\n\n\n\n\nDica💡 Dica: teste da reta vertical\n\n\n\nUm conjunto de pontos representa o gráfico de uma função de \\(x\\) quando toda reta vertical o intercepta em, no máximo, um ponto. Se o domínio já foi declarado, para cada \\(x\\) desse domínio deve haver exatamente uma interseção.\n\n\nA parábola\n\\[\ny=x^2\n\\]\npassa no teste da reta vertical.\nJá a circunferência\n\\[\nx^2+y^2=1\n\\]\nnão passa, pois uma mesma reta vertical pode interceptá-la em dois pontos.\n\n\n\n\n\n\nFigura 6: Na circunferência, a reta x=1/2 encontra dois pontos distintos.\n\n\n\n\n\n\n\n\n\nNota🐍 Código Python da ilustração\n\n\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n\na = np.linspace(0, 2*np.pi, 800)\nc = 0.5\nb = np.sqrt(1-c**2)\n\nfig, ax = plt.subplots(figsize=(8.2, 6.1))\nax.plot(np.cos(a), np.sin(a), lw=3, color=\"#4471B2\",\n        label=r\"$x^2+y^2=1$\")\nax.axvline(c, color=\"#C84E4C\", lw=2, ls=\"--\", label=r\"$x=1/2$\")\nax.scatter([c, c], [b, -b], color=\"#C84E4C\", s=70, zorder=5)\n\nax.annotate(r\"$(1/2,\\sqrt{3}/2)$\", (c, b),\n            xytext=(13, 12), textcoords=\"offset points\", fontsize=10)\nax.annotate(r\"$(1/2,-\\sqrt{3}/2)$\", (c, -b),\n            xytext=(13, -19), textcoords=\"offset points\", fontsize=10)\n\nax.axhline(0, color=\"#66788A\", lw=1)\nax.axvline(0, color=\"#66788A\", lw=1)\nax.set_aspect(\"equal\", adjustable=\"box\")\nax.set(xlim=(-1.25, 1.65), ylim=(-1.25, 1.25), xlabel=\"x\", ylabel=\"y\")\nax.grid(alpha=0.2)\nax.legend(frameon=False, loc=\"upper left\", fontsize=11)\nax.set_title(\"Circunferência: duas saídas para o mesmo x\",\n             pad=16, fontsize=13, color=\"#172F49\")\n\nfig.tight_layout()\nPath(\"images\").mkdir(exist_ok=True)\nfig.savefig(\"images/1.10-relacao-circunferencia.svg\", bbox_inches=\"tight\")\nplt.close(fig)\n\n\n\n\n\n\n\n\n\nFigura 7: Comparação do teste da reta vertical: parábola e circunferência.\n\n\n\n\n\n\n\n\n\nNota🐍 Código Python da ilustração\n\n\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n\nfig, axes = plt.subplots(1, 2, figsize=(11.6, 4.7))\n\nx = np.linspace(-1.65, 1.65, 500)\naxes[0].plot(x, x**2, color=\"#098899\", lw=3)\naxes[0].axvline(0.5, color=\"#E28C32\", lw=2, ls=\"--\")\naxes[0].scatter([0.5], [0.25], color=\"#21846C\", s=65, zorder=5)\naxes[0].set(xlim=(-1.8, 1.8), ylim=(-0.3, 3.0),\n            title=\"É função: um ponto\", xlabel=\"x\", ylabel=\"y\")\n\nt = np.linspace(0, 2*np.pi, 600)\naxes[1].plot(np.cos(t), np.sin(t), color=\"#4471B2\", lw=3)\naxes[1].axvline(0.5, color=\"#E28C32\", lw=2, ls=\"--\")\n\nq = np.sqrt(3)/2\naxes[1].scatter([0.5, 0.5], [q, -q], color=\"#C84E4C\", s=65, zorder=5)\naxes[1].set(xlim=(-1.3, 1.3), ylim=(-1.3, 1.3),\n            title=\"Não é função: dois pontos\", xlabel=\"x\", ylabel=\"y\")\naxes[1].set_aspect(\"equal\", adjustable=\"box\")\n\nfor ax in axes:\n    ax.axhline(0, lw=0.8, color=\"#66788A\")\n    ax.grid(alpha=0.2)\n    ax.title.set_color(\"#172F49\")\n\nfig.suptitle(\"Teste da reta vertical (x = 1/2)\",\n             fontsize=14, color=\"#172F49\", weight=\"bold\")\nfig.tight_layout()\n\nPath(\"images\").mkdir(exist_ok=True)\nfig.savefig(\"images/1.10-teste-reta-vertical.svg\", bbox_inches=\"tight\")\nplt.close(fig)\n\n\n\n\n\n\n\n\n\n\nDica▶ Vídeo comentado\n\n\n\nAssista ao vídeo sobre o teste da reta vertical (duração: 67 s)\nCompare as interseções da reta \\(x=\\tfrac12\\) com a parábola e com a circunferência."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#igualdade-de-funções",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#igualdade-de-funções",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.10 ⚖️ Igualdade de funções",
-    "text": "1.10 ⚖️ Igualdade de funções\nDuas funções são iguais quando têm o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.\nPor exemplo, considere\n\\[\nf:\\mathbb{R}\\to\\mathbb{R}\n\\]\ndada por\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng:[0,+\\infty)\\to\\mathbb{R}\n\\]\ndada por\n\\[\ng(x)=x^2.\n\\]\nEmbora as expressões sejam iguais, as funções não são iguais, pois os domínios são diferentes.\nIsso é muito importante no Cálculo. Muitas propriedades dependem do domínio considerado."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#uma-mesma-fórmula-pode-definir-funções-diferentes",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#uma-mesma-fórmula-pode-definir-funções-diferentes",
-    "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "1.11 🧮 Uma mesma fórmula pode definir funções diferentes",
-    "text": "1.11 🧮 Uma mesma fórmula pode definir funções diferentes\nA expressão\n\\[\nf(x)=\\sqrt{x^2}\n\\]\npode ser simplificada como\n\\[\nf(x)=|x|.\n\\]\nMas se restringirmos o domínio a\n\\[\n[0,+\\infty),\n\\]\nentão\n\\[\n\\sqrt{x^2}=x.\n\\]\nPor outro lado, se restringirmos o domínio a\n\\[\n(-\\infty,0],\n\\]\nentão\n\\[\n\\sqrt{x^2}=-x.\n\\]\nIsso mostra que a fórmula sozinha não conta toda a história. O domínio faz parte da definição da função."
+    "text": "1.10 ⚖️ Igualdade de funções\nNeste curso, consideraremos que uma função é especificada por seu domínio, contradomínio e regra de associação.\nDessa forma, duas funções são iguais quando:\n\npossuem o mesmo domínio;\npossuem o mesmo contradomínio;\nassociam o mesmo valor a cada elemento do domínio.\n\nConsidere:\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2,\n\\]\ne\n\\[\ng:[0,+\\infty)\\to\\mathbb{R},\n\\qquad g(x)=x^2.\n\\]\nEmbora as expressões algébricas sejam iguais, as funções não são iguais, pois seus domínios são diferentes.\nPor exemplo, \\(f(-2)=4\\), enquanto \\(g(-2)\\) não está definido, pois \\(-2\\) não pertence ao domínio de \\(g\\).\nIsso é importante no Cálculo: uma expressão algébrica, isoladamente, não determina todos os aspectos de uma função."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-reais-de-variável-real",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-reais-de-variável-real",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.12 🧩 Funções reais de variável real",
-    "text": "1.12 🧩 Funções reais de variável real\nNo Cálculo de uma variável, estudamos principalmente funções reais de variável real.\nIsso significa que trabalhamos com funções\n\\[\nf:A\\to\\mathbb{R},\n\\]\nem que\n\\[\nA\\subseteq\\mathbb{R}.\n\\]\nA entrada é um número real e a saída também é um número real.\nExemplos:\n\\[\nf(x)=x^2,\n\\]\n\\[\ng(x)=\\frac{1}{x-1},\n\\]\n\\[\nh(x)=\\ln x,\n\\]\n\\[\np(x)=\\sin x.\n\\]\nEssas funções podem ter domínios diferentes, mas todas associam números reais a números reais."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-definidas-por-partes",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-definidas-por-partes",
-    "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "1.13 🧩 Funções definidas por partes",
-    "text": "1.13 🧩 Funções definidas por partes\nAlgumas funções são definidas por regras diferentes em partes diferentes do domínio.\nPor exemplo:\n\\[\nf(x)=\n\\begin{cases}\nx^2, & x&lt;0,\\\\\nx+1, & x\\geq 0.\n\\end{cases}\n\\]\nPara calcular \\(f(-2)\\), usamos a primeira regra:\n\\[\nf(-2)=(-2)^2=4.\n\\]\nPara calcular \\(f(3)\\), usamos a segunda regra:\n\\[\nf(3)=3+1=4.\n\\]\nFunções definidas por partes serão importantes no estudo de limites laterais e continuidade."
+    "text": "1.12 🧩 Funções reais de variável real\nNo Cálculo de uma variável, estudamos principalmente funções reais de variável real.\nSão funções da forma\n\\[\nf:A\\to\\mathbb{R},\n\\qquad A\\subseteq\\mathbb{R}.\n\\]\nA entrada é um número real, e a saída também é um número real.\nExemplos:\n\\[\nf(x)=x^2,\n\\]\n\\[\ng(x)=\\frac{1}{x-1},\n\\]\n\\[\nh(x)=\\ln x,\n\\]\n\\[\np(x)=\\sin x.\n\\]\nEssas funções possuem domínios diferentes, determinados pelas respectivas regras e condições de definição."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-e-modelagem",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#funções-e-modelagem",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "1.14 🛠️ Funções e modelagem",
-    "text": "1.14 🛠️ Funções e modelagem\nEm aplicações, uma função costuma representar uma dependência entre grandezas.\nPor exemplo:\n\na posição pode ser função do tempo;\na temperatura pode ser função da altitude;\no custo pode ser função da quantidade produzida;\na área pode ser função do raio;\na população pode ser função do tempo.\n\nNesses casos, o domínio não é apenas uma questão algébrica. Ele também depende do contexto.\nPor exemplo, se \\(t\\) representa tempo medido após o início de um experimento, normalmente consideramos\n\\[\nt\\geq 0.\n\\]\nMesmo que a fórmula faça sentido para valores negativos, o modelo físico pode não fazer."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#por-que-isso-importa-para-o-cálculo",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#por-que-isso-importa-para-o-cálculo",
-    "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "1.15 🌉 Por que isso importa para o Cálculo?",
-    "text": "1.15 🌉 Por que isso importa para o Cálculo?\nLimites, derivadas e integrais dependem de funções.\nAntes de perguntar\n\\[\n\\lim_{x\\to a}f(x),\n\\]\nprecisamos saber o que é \\(f\\), onde ela está definida e como ela se comporta perto de \\(a\\).\nAntes de derivar uma função, precisamos saber em quais pontos ela existe.\nAntes de integrar uma função, precisamos entender em que intervalo ela está sendo considerada.\nPor isso, o conceito formal de função não é apenas uma formalidade. Ele é a base sobre a qual o Cálculo será construído."
+    "text": "1.14 🛠️ Funções e modelagem\nEm aplicações, uma função costuma representar uma dependência entre grandezas.\nPor exemplo:\n\na posição pode ser função do tempo;\na temperatura pode ser função da altitude;\no custo pode ser função da quantidade produzida;\na área pode ser função do raio;\na população pode ser função do tempo.\n\nNesses casos, o domínio também depende do contexto.\nSe \\(t\\) representa o tempo transcorrido após o início de um experimento, por exemplo, normalmente consideramos\n\\[\nt\\geq 0.\n\\]\nMesmo que uma fórmula esteja definida para valores negativos, o modelo pode não ter significado físico nesses valores.\n\n\n\n\n\n\n\nNota📋 Quadro-resumo\n\n\n\n\n\n\n\n\n\n\nConceito\nSíntese matemática\n\n\n\n\nFunção \\(f:A\\to B\\)\nA cada \\(x\\in A\\) corresponde exatamente um \\(f(x)\\in B\\).\n\n\nDomínio\nConjunto \\(A\\) das entradas admissíveis.\n\n\nContradomínio\nConjunto \\(B\\) declarado para as saídas.\n\n\nImagem\n\\(f(A)=\\{f(x):x\\in A\\}\\subseteq B\\).\n\n\nGráfico\nConjunto dos pares \\((x,f(x))\\), com \\(x\\in A\\).\n\n\nTeste da reta vertical\nUma reta vertical não pode interceptar o gráfico em mais de um ponto.\n\n\nIgualdade de funções\nExige mesmo domínio, mesmo contradomínio e mesmos valores associados.\n\n\nFunção por partes\nDiferentes expressões podem definir uma única função, desde que cada entrada tenha exatamente uma saída.\n\n\n\n\n\n\n\n\n\n\n\n\nDica🌉 Ponte para o Cálculo\n\n\n\nNa função por partes desta aula, \\(f(0)=1\\). Para \\(x&lt;0\\), vale \\(f(x)=x^2\\), então os valores da função se aproximam de \\(0\\) quando nos aproximamos de \\(0\\) pela esquerda.\nO que vemos ao nos aproximar de \\(0\\) pela direita, onde vale \\(f(x)=x+1\\)? Comparar os dois lados ajuda a decidir se há um limite no ponto de troca. Essa comparação será retomada no Volume 2, no estudo de limites laterais e continuidade."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-1",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nPara cada função, determine o domínio real natural:\n\n\\(f(x)=x^2+1\\)\n\n\\(g(x)=\\sqrt{x-4}\\)\n\n\\(h(x)=\\dfrac{1}{x+2}\\)\n\n\\(p(x)=\\ln(x-1)\\)"
+    "text": "2.1 🧪 Exercício 1\nDetermine o domínio real natural de cada expressão:\n\n\\(f(x)=x^2+1\\)\n\\(g(x)=\\sqrt{x-4}\\)\n\\(h(x)=\\dfrac{1}{x+2}\\)\n\\(p(x)=\\ln(x-1)\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-2",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-2",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nConsidere\n\\[\nf:\\mathbb{R}\\to\\mathbb{R}\n\\]\ndada por\n\\[\nf(x)=x^2.\n\\]\nDetermine:\n\no domínio;\n\no contradomínio;\n\na imagem."
+    "text": "2.2 🧪 Exercício 2\nConsidere\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2.\n\\]\nDetermine:\n\no domínio;\no contradomínio;\na imagem."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-3",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-3",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nExplique por que a circunferência\n\\[\nx^2+y^2=1\n\\]\nnão é gráfico de uma função \\(y=f(x)\\) em todo o intervalo \\([-1,1]\\)."
+    "text": "2.3 🧪 Exercício 3\nExplique por que a circunferência\n\\[\nx^2+y^2=1\n\\]\nnão é o gráfico de uma função \\(y=f(x)\\) em todo o intervalo \\([-1,1]\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-4",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-4",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nConsidere a função\n\\[\nf(x)=\n\\begin{cases}\n2x, & x&lt;1,\\\\\nx^2, & x\\geq 1.\n\\end{cases}\n\\]\nCalcule:\n\n\\(f(0)\\)\n\n\\(f(1)\\)\n\n\\(f(3)\\)"
+    "text": "2.4 🧪 Exercício 4\nConsidere\n\\[\nf(x)=\n\\begin{cases}\n2x, & x&lt;1,\\\\\nx^2, & x\\geq 1.\n\\end{cases}\n\\]\nCalcule:\n\n\\(f(0)\\);\n\\(f(1)\\);\n\\(f(3)\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-5",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-5",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "2.5 🧪 Exercício 5",
-    "text": "2.5 🧪 Exercício 5\nAs funções abaixo são iguais?\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\\qquad f(x)=x^2\n\\]\ne\n\\[\ng:[0,+\\infty)\\to\\mathbb{R},\\qquad g(x)=x^2.\n\\]\nJustifique."
+    "text": "2.5 🧪 Exercício 5\n\nAs funções abaixo são iguais? Justifique.\n\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2,\n\\]\n\\[\ng:[0,+\\infty)\\to\\mathbb{R},\n\\qquad g(x)=x^2.\n\\]\n\nAgora compare \\(f\\) com\n\n\\[\nh:\\mathbb{R}\\to[0,+\\infty),\n\\qquad h(x)=x^2.\n\\]\nAs duas funções são iguais segundo a convenção desta aula? Justifique."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-1-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-1-1",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "3.1 🧪 Exercício 1",
-    "text": "3.1 🧪 Exercício 1\n\nPara \\(f(x)=x^2+1\\), não há restrição real. Logo,\n\n\\[\nD_f=\\mathbb{R}.\n\\]\n\nPara \\(g(x)=\\sqrt{x-4}\\), precisamos de\n\n\\[\nx-4\\geq 0.\n\\]\nAssim,\n\\[\nx\\geq 4.\n\\]\nLogo,\n\\[\nD_g=[4,+\\infty).\n\\]\n\nPara \\(h(x)=\\dfrac{1}{x+2}\\), precisamos de\n\n\\[\nx+2\\neq 0.\n\\]\nAssim,\n\\[\nx\\neq -2.\n\\]\nLogo,\n\\[\nD_h=(-\\infty,-2)\\cup(-2,+\\infty).\n\\]\n\nPara \\(p(x)=\\ln(x-1)\\), precisamos de\n\n\\[\nx-1&gt;0.\n\\]\nAssim,\n\\[\nx&gt;1.\n\\]\nLogo,\n\\[\nD_p=(1,+\\infty).\n\\]"
+    "section": "2.6 🧪 Exercício 1",
+    "text": "2.6 🧪 Exercício 1\na) Para \\(f(x)=x^2+1\\), não há restrição real. Logo,\n\\[\nD_f=\\mathbb{R}.\n\\]\nb) Para \\(g(x)=\\sqrt{x-4}\\), precisamos de\n\\[\nx-4\\geq 0.\n\\]\nAssim,\n\\[\nD_g=[4,+\\infty).\n\\]\nc) Para \\(h(x)=\\dfrac{1}{x+2}\\), o denominador deve ser diferente de zero:\n\\[\nx+2\\neq 0.\n\\]\nPortanto,\n\\[\nD_h=\\mathbb{R}\\setminus\\{-2\\}.\n\\]\nd) Para \\(p(x)=\\ln(x-1)\\), o argumento do logaritmo deve ser positivo:\n\\[\nx-1&gt;0.\n\\]\nLogo,\n\\[\nD_p=(1,+\\infty).\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-2-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-2-1",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "3.2 🧪 Exercício 2",
-    "text": "3.2 🧪 Exercício 2\nA função é\n\\[\nf:\\mathbb{R}\\to\\mathbb{R}\n\\]\ndada por\n\\[\nf(x)=x^2.\n\\]\n\nO domínio é\n\n\\[\n\\mathbb{R}.\n\\]\n\nO contradomínio é\n\n\\[\n\\mathbb{R}.\n\\]\n\nA imagem é\n\n\\[\n[0,+\\infty).\n\\]\nIsso ocorre porque \\(x^2\\geq 0\\) para todo \\(x\\in\\mathbb{R}\\), e todo número real não negativo é quadrado de algum real."
+    "section": "2.7 🧪 Exercício 2",
+    "text": "2.7 🧪 Exercício 2\nPara\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2,\n\\]\ntemos:\n\nDomínio:\n\n\\[\nD_f=\\mathbb{R}.\n\\]\n\nContradomínio:\n\n\\[\nB=\\mathbb{R}.\n\\]\n\nImagem:\n\n\\[\n\\operatorname{Im}(f)=[0,+\\infty).\n\\]\nIsso ocorre porque \\(x^2\\geq 0\\) para todo real \\(x\\), e todo número não negativo é quadrado de algum número real."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-3-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-3-1",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\nA circunferência\n\\[\nx^2+y^2=1\n\\]\nnão é gráfico de uma função \\(y=f(x)\\) em todo \\([-1,1]\\), porque alguns valores de \\(x\\) correspondem a dois valores diferentes de \\(y\\).\nPor exemplo, se\n\\[\nx=0,\n\\]\nentão\n\\[\ny^2=1,\n\\]\nlogo\n\\[\ny=1\n\\]\nou\n\\[\ny=-1.\n\\]\nAssim, a mesma entrada \\(x=0\\) teria duas saídas diferentes. Isso viola a definição de função."
+    "section": "2.8 🧪 Exercício 3",
+    "text": "2.8 🧪 Exercício 3\nA circunferência\n\\[\nx^2+y^2=1\n\\]\nnão representa o gráfico de uma função \\(y=f(x)\\) em todo o intervalo \\([-1,1]\\) porque alguns valores de \\(x\\) correspondem a dois valores de \\(y\\).\nPor exemplo, para \\(x=0\\):\n\\[\ny^2=1.\n\\]\nLogo,\n\\[\ny=1\\quad\\text{ou}\\quad y=-1.\n\\]\nA mesma entrada teria duas saídas diferentes, contrariando a definição de função."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-4-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-4-1",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\nA função é definida por partes:\n\\[\nf(x)=\n\\begin{cases}\n2x, & x&lt;1,\\\\\nx^2, & x\\geq 1.\n\\end{cases}\n\\]\n\nComo \\(0&lt;1\\), usamos \\(f(x)=2x\\):\n\n\\[\nf(0)=2\\cdot 0=0.\n\\]\n\nComo \\(1\\geq 1\\), usamos \\(f(x)=x^2\\):\n\n\\[\nf(1)=1^2=1.\n\\]\n\nComo \\(3\\geq 1\\), usamos \\(f(x)=x^2\\):\n\n\\[\nf(3)=3^2=9.\n\\]"
+    "section": "2.9 🧪 Exercício 4",
+    "text": "2.9 🧪 Exercício 4\nA função é\n\\[\nf(x)=\n\\begin{cases}\n2x, & x&lt;1,\\\\\nx^2, & x\\geq 1.\n\\end{cases}\n\\]\na) Como \\(0&lt;1\\), usamos a primeira regra:\n\\[\nf(0)=2\\cdot0=0.\n\\]\nb) Como \\(1\\geq1\\), usamos a segunda regra:\n\\[\nf(1)=1^2=1.\n\\]\nc) Como \\(3\\geq1\\), usamos a segunda regra:\n\\[\nf(3)=3^2=9.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-5-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#exercício-5-1",
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
-    "section": "3.5 🧪 Exercício 5",
-    "text": "3.5 🧪 Exercício 5\nNão. As expressões são iguais, mas as funções não são iguais porque os domínios são diferentes.\nA função \\(f\\) tem domínio\n\\[\n\\mathbb{R},\n\\]\nenquanto a função \\(g\\) tem domínio\n\\[\n[0,+\\infty).\n\\]\nPara duas funções serem iguais, elas precisam ter o mesmo domínio, o mesmo contradomínio e a mesma regra de associação."
+    "section": "2.10 🧪 Exercício 5",
+    "text": "2.10 🧪 Exercício 5\n\nAs funções não são iguais.\n\nEmbora possuam a mesma expressão algébrica e o mesmo contradomínio, seus domínios são diferentes:\n\\[\nD_f=\\mathbb{R},\n\\]\nenquanto\n\\[\nD_g=[0,+\\infty).\n\\]\nPara serem iguais, as funções precisam ter o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.\n\n\\(f\\) e \\(h\\) têm o mesmo domínio, a mesma regra e a mesma imagem, \\([0,+\\infty)\\). Como os contradomínios são \\(\\mathbb{R}\\) e \\([0,+\\infty)\\), respectivamente, elas são diferentes pela convenção adotada nesta aula."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#quiz-conceito-formal-de-função",
@@ -9126,6 +9105,20 @@
     "title": "📘 Módulo 1.10: Conceito Formal de Função",
     "section": "3.6 🧩 Quiz — Conceito Formal de Função",
     "text": "3.6 🧩 Quiz — Conceito Formal de Função\n\nQ1. Uma função \\(f:A\\to B\\) associa:\n\n\n\n\n ✓A cada elemento de \\(A\\) exatamente um elemento de \\(B\\).\n\n\n ✗A cada elemento de \\(A\\) pelo menos dois elementos de \\(B\\).\n\n\n ✗Apenas alguns elementos de \\(A\\) a elementos de \\(B\\).\n\n\n\n\n\n\nQ2. Na notação \\(f:A\\to B\\), o conjunto \\(A\\) é chamado de:\n\n\n\n\n ✗Imagem.\n\n\n ✓Domínio.\n\n\n ✗Gráfico.\n\n\n\n\n\n\nQ3. A imagem de uma função é:\n\n\n\n\n ✗Sempre igual ao domínio.\n\n\n ✗Sempre igual ao contradomínio.\n\n\n ✓O conjunto dos valores que a função realmente assume.\n\n\n\n\n\n\n\n\n\n\n\n\nDica🔬 Quer aprofundar?\n\n\n\nEstes aprofundamentos são opcionais. Você pode explorá-los agora ou seguir as aulas principais e voltar quando quiser.\n\n1.21-AP — Domínio de Funções: Guia Completo — Restrições de domínio em raízes, frações, logaritmos e composições.\n1.22-AP — Funções por Partes — Leitura de funções por partes, pontos de troca e preparação para limites laterais."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#uma-mesma-expressão-pode-assumir-formas-diferentes",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#uma-mesma-expressão-pode-assumir-formas-diferentes",
+    "title": "📘 Módulo 1.10: Conceito Formal de Função",
+    "section": "1.11 🧮 Uma mesma expressão pode assumir formas diferentes",
+    "text": "1.11 🧮 Uma mesma expressão pode assumir formas diferentes\nConsidere\n\\[\nf(x)=\\sqrt{x^2}.\n\\]\nPara todo número real \\(x\\),\n\\[\n\\sqrt{x^2}=|x|.\n\\]\nPortanto,\n\\[\nf(x)=\n\\begin{cases}\nx, & x\\geq 0,\\\\\n-x, & x&lt;0.\n\\end{cases}\n\\]\nSe restringirmos o domínio a \\([0,+\\infty)\\), teremos\n\\[\n\\sqrt{x^2}=x.\n\\]\nSe restringirmos o domínio a \\((-\\infty,0]\\), teremos\n\\[\n\\sqrt{x^2}=-x.\n\\]\nA expressão e o domínio precisam ser considerados em conjunto."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#uma-primeira-introdução-às-funções-definidas-por-partes",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html#uma-primeira-introdução-às-funções-definidas-por-partes",
+    "title": "📘 Módulo 1.10: Conceito Formal de Função",
+    "section": "1.13 🧩 Uma primeira introdução às funções definidas por partes",
+    "text": "1.13 🧩 Uma primeira introdução às funções definidas por partes\nAlgumas funções são definidas por regras diferentes em regiões distintas do domínio.\nPor exemplo,\n\\[\nf(x)=\n\\begin{cases}\nx^2, & x&lt;0,\\\\\nx+1, & x\\geq 0.\n\\end{cases}\n\\]\nPara calcular \\(f(-2)\\), usamos a primeira regra, pois \\(-2&lt;0\\):\n\\[\nf(-2)=(-2)^2=4.\n\\]\nPara calcular \\(f(3)\\), usamos a segunda regra, pois \\(3\\geq 0\\):\n\\[\nf(3)=3+1=4.\n\\]\nObserve que o valor \\(x=0\\) pertence à segunda condição. Portanto,\n\\[\nf(0)=0+1=1.\n\\]\n\n\n\n\n\n\nFigura 8: Gráfico de uma função definida por partes: parábola para x menor que zero e reta para x maior ou igual a zero. O círculo aberto está em (0,0), e o ponto fechado está em (0,1).\n\n\n\n\n\n\n\n\n\nNota🐍 Código Python da ilustração\n\n\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\n\nplt.rcParams.update({\n    \"font.family\": \"DejaVu Sans\",\n    \"svg.fonttype\": \"path\"\n})\n\nx_left = np.linspace(-3, 0, 500, endpoint=False)\ny_left = x_left**2\n\nx_right = np.linspace(0, 3, 500)\ny_right = x_right + 1\n\nfig, ax = plt.subplots(figsize=(9, 5.2))\n\nax.plot(x_left, y_left, lw=3, color=\"#098899\",\n        label=r\"$f(x)=x^2,\\quad x&lt;0$\")\nax.plot(x_right, y_right, lw=3, color=\"#4471B2\",\n        label=r\"$f(x)=x+1,\\quad x\\geq 0$\")\n\nax.scatter([0], [0], s=85, facecolors=\"white\",\n           edgecolors=\"#098899\", linewidths=2.2, zorder=5)\nax.scatter([0], [1], s=65, color=\"#C84E4C\", zorder=5)\n\nax.annotate(r\"$(0,0)$\", (0, 0), xytext=(10, -20),\n            textcoords=\"offset points\", fontsize=10)\nax.annotate(r\"$(0,1)$\", (0, 1), xytext=(10, 10),\n            textcoords=\"offset points\", fontsize=10)\n\nax.axhline(0, color=\"#66788A\", lw=1)\nax.axvline(0, color=\"#66788A\", lw=1)\nax.set(xlim=(-3.2, 3.2), ylim=(-0.7, 10), xlabel=\"x\", ylabel=\"y\")\nax.grid(alpha=0.22)\nax.legend(frameon=False, loc=\"upper left\", fontsize=11)\nax.set_title(\"Função definida por partes\", pad=16,\n             fontsize=13, color=\"#172F49\")\n\nfig.tight_layout()\nPath(\"images\").mkdir(exist_ok=True)\nfig.savefig(\"images/1.10-funcoes-por-partes.svg\", bbox_inches=\"tight\")\nplt.close(fig)\n\n\n\nO exemplo mostra que uma única função pode utilizar expressões diferentes em regiões distintas do domínio.\nPor enquanto, nosso objetivo é saber identificar a regra correta e calcular os valores da função. O estudo detalhado dos pontos de troca, dos limites laterais e da continuidade será desenvolvido no Módulo 1.22-AP — Funções por Partes."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html",

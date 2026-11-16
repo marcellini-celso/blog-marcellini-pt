@@ -754,17 +754,17 @@ Figura&nbsp;5: O gráfico de f(x)=x² representa os pares ordenados (x,f(x)).
 <p>Nem todo conjunto de pontos do plano cartesiano representa o gráfico de uma função de <span class="math inline">\(x\)</span>.</p>
 <p>Para que isso aconteça, cada valor de <span class="math inline">\(x\)</span> deve corresponder a exatamente um valor de <span class="math inline">\(y\)</span>.</p>
 <p>Geometricamente, essa condição conduz ao teste da reta vertical.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Teste da reta vertical">
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Dica: teste da reta vertical">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Dica</span>Teste da reta vertical
+<span class="screen-reader-only">Dica</span>💡 Dica: teste da reta vertical
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Um gráfico representa uma função de <span class="math inline">\(x\)</span> se toda reta vertical o intercepta em, no máximo, um ponto.</p>
+<p>Um conjunto de pontos representa o gráfico de uma função de <span class="math inline">\(x\)</span> quando toda reta vertical o intercepta em, no máximo, um ponto. Se o domínio já foi declarado, para cada <span class="math inline">\(x\)</span> desse domínio deve haver exatamente uma interseção.</p>
 </div>
 </div>
 <p>A parábola</p>
@@ -895,6 +895,21 @@ Figura&nbsp;7: Comparação do teste da reta vertical: parábola e circunferênc
 </div>
 </div>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/teste-da-reta-vertical.mp4">Assista ao vídeo sobre o teste da reta vertical</a></strong> (duração: 67 s)</p>
+<p>Compare as interseções da reta <span class="math inline">\(x=\tfrac12\)</span> com a parábola e com a circunferência.</p>
+</div>
+</div>
+<hr>
 </section>
 <section id="igualdade-de-funções" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="igualdade-de-funções"><span class="header-section-number">1.10</span> ⚖️ Igualdade de funções</h2>
@@ -1008,7 +1023,7 @@ Figura&nbsp;8: Gráfico de uma função definida por partes: parábola para x me
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="🐍 Código Python da ilustração">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1017,7 +1032,7 @@ Figura&nbsp;8: Gráfico de uma função definida por partes: parábola para x me
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1156,9 +1171,8 @@ t\geq 0.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A definição formal de função será essencial para o estudo dos limites, das derivadas e das integrais.</p>
-<p>No Cálculo, não basta conhecer uma expressão algébrica. Precisamos compreender o domínio da função, os valores que ela assume e seu comportamento nas proximidades de cada ponto.</p>
-<p>Nas próximas aulas, essa compreensão será ampliada progressivamente.</p>
+<p>Na função por partes desta aula, <span class="math inline">\(f(0)=1\)</span>. Para <span class="math inline">\(x&lt;0\)</span>, vale <span class="math inline">\(f(x)=x^2\)</span>, então os valores da função se aproximam de <span class="math inline">\(0\)</span> quando nos aproximamos de <span class="math inline">\(0\)</span> pela esquerda.</p>
+<p><strong>O que vemos ao nos aproximar de <span class="math inline">\(0\)</span> pela direita, onde vale <span class="math inline">\(f(x)=x+1\)</span>?</strong> Comparar os dois lados ajuda a decidir se há um limite no ponto de troca. Essa comparação será retomada no Volume 2, no estudo de limites laterais e continuidade.</p>
 </div>
 </div>
 </section>
@@ -1226,7 +1240,9 @@ x^2, &amp; x\geq 1.
 </section>
 <section id="exercício-5" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
-<p>As funções abaixo são iguais? Justifique.</p>
+<ol type="a">
+<li>As funções abaixo são iguais? Justifique.</li>
+</ol>
 <p><span class="math display">\[
 f:\mathbb{R}\to\mathbb{R},
 \qquad f(x)=x^2,
@@ -1235,12 +1251,20 @@ f:\mathbb{R}\to\mathbb{R},
 g:[0,+\infty)\to\mathbb{R},
 \qquad g(x)=x^2.
 \]</span></p>
+<ol start="2" type="a">
+<li>Agora compare <span class="math inline">\(f\)</span> com</li>
+</ol>
+<p><span class="math display">\[
+h:\mathbb{R}\to[0,+\infty),
+\qquad h(x)=x^2.
+\]</span></p>
+<p>As duas funções são iguais segundo a convenção desta aula? Justifique.</p>
 </section>
 </div>
 </div>
 <hr>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito comentado">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1249,7 +1273,7 @@ g:[0,+\infty)\to\mathbb{R},
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">2.6</span> 🧪 Exercício 1</h2>
@@ -1352,7 +1376,9 @@ f(3)=3^2=9.
 </section>
 <section id="exercício-5-1" class="level2" data-number="2.10">
 <h2 data-number="2.10" class="anchored" data-anchor-id="exercício-5-1"><span class="header-section-number">2.10</span> 🧪 Exercício 5</h2>
-<p>As funções não são iguais.</p>
+<ol type="a">
+<li>As funções não são iguais.</li>
+</ol>
 <p>Embora possuam a mesma expressão algébrica e o mesmo contradomínio, seus domínios são diferentes:</p>
 <p><span class="math display">\[
 D_f=\mathbb{R},
@@ -1362,6 +1388,9 @@ D_f=\mathbb{R},
 D_g=[0,+\infty).
 \]</span></p>
 <p>Para serem iguais, as funções precisam ter o mesmo domínio, o mesmo contradomínio e a mesma regra de associação.</p>
+<ol start="2" type="a">
+<li><span class="math inline">\(f\)</span> e <span class="math inline">\(h\)</span> têm o mesmo domínio, a mesma regra e a mesma imagem, <span class="math inline">\([0,+\infty)\)</span>. Como os contradomínios são <span class="math inline">\(\mathbb{R}\)</span> e <span class="math inline">\([0,+\infty)\)</span>, respectivamente, elas são diferentes pela convenção adotada nesta aula.</li>
+</ol>
 </section>
 </div>
 </div>
