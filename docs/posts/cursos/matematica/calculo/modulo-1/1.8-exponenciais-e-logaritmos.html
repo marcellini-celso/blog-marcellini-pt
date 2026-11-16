@@ -543,7 +543,7 @@ D_f=\mathbb{R}.
 </ul>
 <div id="cell-fig-exponenciais-crescimento-decaimento" class="cell" data-message="false" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div id="fig-exponenciais-crescimento-decaimento" class="quarto-float quarto-figure quarto-figure-center anchored" width="511" height="391" data-fig-align="center">
+<div id="fig-exponenciais-crescimento-decaimento" class="quarto-float quarto-figure quarto-figure-center anchored" width="511" data-fig-align="center" height="391">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-exponenciais-crescimento-decaimento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="1.8-exponenciais-e-logaritmos_files/figure-html/fig-exponenciais-crescimento-decaimento-output-1.png" id="fig-exponenciais-crescimento-decaimento" class="quarto-figure quarto-figure-center anchored figure-img" width="511" height="391">
@@ -567,7 +567,7 @@ Figura&nbsp;1
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="1e5768c8" class="cell" data-message="false" data-execution_count="2">
+<div id="7ffc06f3" class="cell" data-message="false" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -697,16 +697,17 @@ a^x
 <li>se <span class="math inline">\(0&lt;a&lt;1\)</span>, a função logarítmica é decrescente.</li>
 </ul>
 <p>Essa propriedade decorre da relação de inversão entre a função logarítmica e a exponencial correspondente.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="⚠️ Cuidado">
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Dica de domínio">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Aviso</span>⚠️ Cuidado
+<span class="screen-reader-only">Dica</span>💡 Dica de domínio
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Para encontrar o domínio de um logaritmo, exija que seu argumento seja positivo. Em <span class="math inline">\(\ln(x-2)\)</span>, resolva <span class="math inline">\(x-2&gt;0\)</span>, o que dá <span class="math inline">\(x&gt;2\)</span>.</p>
 <p>Nos números reais, expressões como <span class="math inline">\(\log_a 0\)</span> e <span class="math inline">\(\log_a(-3)\)</span> não estão definidas.</p>
 </div>
 </div>
@@ -839,10 +840,10 @@ y=x.
 <p>Como <span class="math inline">\(a^x\)</span> e <span class="math inline">\(\log_a x\)</span> são funções inversas, seus gráficos são reflexos um do outro em relação à reta <span class="math inline">\(y=x\)</span>.</p>
 <div id="cell-fig-exponencial-logaritmo-inversas" class="cell" data-message="false" data-execution_count="3">
 <div class="cell-output cell-output-display">
-<div id="fig-exponencial-logaritmo-inversas" class="quarto-float quarto-figure quarto-figure-center anchored" width="518" height="391" data-fig-align="center">
+<div id="fig-exponencial-logaritmo-inversas" class="quarto-float quarto-figure quarto-figure-center anchored" width="526" data-fig-align="center" height="539">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-exponencial-logaritmo-inversas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="1.8-exponenciais-e-logaritmos_files/figure-html/fig-exponencial-logaritmo-inversas-output-1.png" id="fig-exponencial-logaritmo-inversas" class="quarto-figure quarto-figure-center anchored figure-img" width="518" height="391">
+<img src="1.8-exponenciais-e-logaritmos_files/figure-html/fig-exponencial-logaritmo-inversas-output-1.png" id="fig-exponencial-logaritmo-inversas" class="quarto-figure quarto-figure-center anchored figure-img" width="526" height="539">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-exponencial-logaritmo-inversas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2
@@ -863,35 +864,58 @@ Figura&nbsp;2
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="0e05abb6" class="cell" data-message="false" data-execution_count="4">
+<div id="d3ffd7a6" class="cell" data-message="false" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"images"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>x_exp <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">400</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>x_log <span class="op">=</span> np.linspace(<span class="fl">0.05</span>, <span class="dv">8</span>, <span class="dv">400</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>x_diag <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>, <span class="dv">400</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>x_exp <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">3.2</span>, np.log2(<span class="fl">9.2</span>), <span class="dv">400</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>x_log <span class="op">=</span> np.geomspace(<span class="dv">2</span><span class="op">**</span>(<span class="op">-</span><span class="fl">3.2</span>), <span class="fl">9.2</span>, <span class="dv">400</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>x_diag <span class="op">=</span> np.array([<span class="op">-</span><span class="fl">3.2</span>, <span class="fl">9.2</span>])</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">4.2</span>))</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.plot(x_exp, <span class="dv">2</span><span class="op">**</span>x_exp, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=2</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.plot(x_log, np.log2(x_log), label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=</span><span class="er">\</span><span class="vs">log_2 x</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>plt.plot(x_diag, x_diag, linestyle<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Exponencial e logaritmo como funções inversas"</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"images/1-8-exponencial-logaritmo-inversas.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="fl">6.2</span>, <span class="fl">6.2</span>))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.plot(x_exp, <span class="dv">2</span><span class="op">**</span>x_exp, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=2</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, color<span class="op">=</span><span class="st">"C0"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.plot(x_log, np.log2(x_log), label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=</span><span class="er">\</span><span class="vs">log_2 x</span><span class="dv">$</span><span class="vs">"</span>, color<span class="op">=</span><span class="st">"C1"</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>plt.plot(x_diag, x_diag, <span class="st">"--"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">"</span>, color<span class="op">=</span><span class="st">"0.45"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span><span class="st">"0.55"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, color<span class="op">=</span><span class="st">"0.55"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="op">-</span><span class="fl">3.2</span>, <span class="fl">9.2</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">3.2</span>, <span class="fl">9.2</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.gca().set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>plt.scatter([<span class="dv">3</span>, <span class="dv">8</span>], [<span class="dv">8</span>, <span class="dv">3</span>], color<span class="op">=</span>[<span class="st">"C0"</span>, <span class="st">"C1"</span>], zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="st">"(3, 8)"</span>, (<span class="dv">3</span>, <span class="dv">8</span>), xytext<span class="op">=</span>(<span class="dv">7</span>, <span class="op">-</span><span class="dv">1</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="st">"(8, 3)"</span>, (<span class="dv">8</span>, <span class="dv">3</span>), xytext<span class="op">=</span>(<span class="op">-</span><span class="dv">41</span>, <span class="dv">8</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"x"</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"y"</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Exponencial e logaritmo como funções inversas"</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">"upper left"</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>plt.savefig(</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"images/1-8-exponencial-logaritmo-inversas.png"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    dpi<span class="op">=</span><span class="dv">300</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    bbox_inches<span class="op">=</span><span class="st">"tight"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/exponencial-e-logaritmo-funcoes-inversas.mp4">Assista ao vídeo sobre exponencial e logaritmo como funções inversas</a></strong> (duração: 67 s)</p>
+<p>Veja como o ponto <span class="math inline">\((3,8)\)</span> da exponencial corresponde ao ponto <span class="math inline">\((8,3)\)</span> do logaritmo.</p>
 </div>
 </div>
 <hr>
@@ -905,7 +929,7 @@ Q(t)=Q_0a^t,
 <p>em que:</p>
 <ul>
 <li><span class="math inline">\(Q_0\)</span> é a quantidade inicial;</li>
-<li><span class="math inline">\(a\)</span> é o fator multiplicativo de crescimento;</li>
+<li><span class="math inline">\(a\)</span> é o fator pelo qual a quantidade é multiplicada a cada unidade de tempo;</li>
 <li><span class="math inline">\(t\)</span> representa o tempo.</li>
 </ul>
 <p>Consideramos <span class="math inline">\(Q_0&gt;0\)</span>, <span class="math inline">\(a&gt;0\)</span> e <span class="math inline">\(t\geq 0\)</span>.</p>
@@ -1061,18 +1085,9 @@ f(x)=a^x,\qquad a&gt;0,\quad a\neq 1.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>As funções exponenciais e logarítmicas são essenciais porque aparecem em muitos fenômenos naturais e matemáticos. No Cálculo, serão importantes no estudo de:</p>
-<ul>
-<li>derivadas de funções exponenciais;</li>
-<li>derivadas de funções logarítmicas;</li>
-<li>integrais envolvendo <span class="math inline">\(\dfrac{1}{x}\)</span>;</li>
-<li>crescimento e decaimento contínuos;</li>
-<li>equações diferenciais;</li>
-<li>modelos acumulativos;</li>
-<li>séries e aproximações.</li>
-</ul>
-<p>A função <span class="math inline">\(e^x\)</span> tem uma propriedade especial: sua derivada é igual à própria função. Já a função <span class="math inline">\(\ln x\)</span>, para <span class="math inline">\(x&gt;0\)</span>, tem derivada igual a <span class="math inline">\(1/x\)</span> e está diretamente relacionada à integral dessa expressão.</p>
-<p>Além disso, as funções exponenciais e logarítmicas permitem comparar diferentes ritmos de crescimento, tema que será retomado no estudo de limites envolvendo infinito. Essas relações também serão fundamentais para compreender modelos matemáticos de crescimento e decaimento contínuos.</p>
+<p>No exemplo de meia-vida, <span class="math inline">\(Q(t)=80(1/2)^t\)</span> informa quanto resta depois de <span class="math inline">\(t\)</span> horas. Como determinar a velocidade de decaimento em um instante? No Volume 2, a derivada da exponencial permitirá responder a essa pergunta. Sua magnitude é proporcional à quantidade que ainda resta, uma relação que também aparece em equações diferenciais.</p>
+<p>Duas relações serão retomadas nesse estudo. A derivada de <span class="math inline">\(e^x\)</span> é <span class="math inline">\(e^x\)</span>. Para <span class="math inline">\(x&gt;0\)</span>, a derivada de <span class="math inline">\(\ln x\)</span> é <span class="math inline">\(1/x\)</span>, o que ajuda a calcular integrais de <span class="math inline">\(1/x\)</span>.</p>
+<p>Exponenciais e logaritmos também reaparecem nos limites no infinito e nas séries que permitem aproximar seus valores.</p>
 </div>
 </div>
 </section>
@@ -1132,13 +1147,17 @@ f(x)=a^x,\qquad a&gt;0,\quad a\neq 1.
 </section>
 <section id="exercício-5" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
-<p>Use as propriedades dos logaritmos para simplificar:</p>
+<p>Para <span class="math inline">\(x&gt;0\)</span> e <span class="math inline">\(y&gt;0\)</span>, use as propriedades dos logaritmos para simplificar:</p>
 <ol type="a">
 <li><p><span class="math inline">\(\ln(xy)\)</span></p></li>
 <li><p><span class="math inline">\(\ln\left(\dfrac{x}{y}\right)\)</span></p></li>
 <li><p><span class="math inline">\(\ln(x^3)\)</span></p></li>
 <li><p><span class="math inline">\(\log_2(8x)\)</span></p></li>
 </ol>
+</section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
+<p>Uma amostra contém inicialmente <span class="math inline">\(80\)</span> g de uma substância cuja massa se reduz à metade a cada hora. Use o modelo <span class="math inline">\(Q(t)=80(1/2)^t\)</span>, em que <span class="math inline">\(t\)</span> é medido em horas. Quanto tempo leva para restarem <span class="math inline">\(30\)</span> g? Dê uma expressão exata e uma aproximação com duas casas decimais.</p>
 </section>
 </div>
 </div>
@@ -1147,7 +1166,7 @@ f(x)=a^x,\qquad a&gt;0,\quad a\neq 1.
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1156,7 +1175,7 @@ f(x)=a^x,\qquad a&gt;0,\quad a\neq 1.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -1247,6 +1266,23 @@ D_p=\mathbb{R}.
 \log_2(8x)=3+\log_2 x,
 \]</span></p>
 <p>com <span class="math inline">\(x&gt;0\)</span>.</p>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<p>Igualamos a massa a <span class="math inline">\(30\)</span> g:</p>
+<p><span class="math display">\[
+80\left(\frac12\right)^t=30
+\quad\Longleftrightarrow\quad
+\left(\frac12\right)^t=\frac38.
+\]</span></p>
+<p>Pela definição de logaritmo e pela mudança de base,</p>
+<p><span class="math display">\[
+t=\log_{1/2}\left(\frac38\right)
+=\frac{\ln(3/8)}{\ln(1/2)}
+=\frac{\ln(8/3)}{\ln 2}
+\approx 1{,}42\ \text{h}.
+\]</span></p>
+<p>O resultado está entre <span class="math inline">\(1\)</span> e <span class="math inline">\(2\)</span> horas, como esperamos, pois <span class="math inline">\(Q(1)=40\)</span> g e <span class="math inline">\(Q(2)=20\)</span> g.</p>
 </section>
 </div>
 </div>

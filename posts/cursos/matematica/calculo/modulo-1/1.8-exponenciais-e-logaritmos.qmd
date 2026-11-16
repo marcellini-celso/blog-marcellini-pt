@@ -40,7 +40,7 @@ Ao final desta aula, você deverá ser capaz de:
 - identificar domínio e imagem dessas funções;
 - usar propriedades básicas dos logaritmos;
 - compreender modelos simples de crescimento e decaimento exponencial;
-- perceber por que \(e^x\) e \(\ln x\) são funções centrais no Cálculo.
+- perceber por que $e^x$ e $\ln x$ são funções centrais no Cálculo.
 :::
 
 # 📘 Exponenciais e Logaritmos
@@ -92,7 +92,7 @@ $$
 a^n,
 $$
 
-o número \(a\) é a **base** e \(n\) é o **expoente**.
+o número $a$ é a **base** e $n$ é o **expoente**.
 
 As potências aparecem naturalmente em processos multiplicativos. Por **exemplo**, se uma quantidade dobra a cada etapa, temos:
 
@@ -120,7 +120,7 @@ f(x)=a^x,\qquad a>0,\quad a\neq 1
 }
 $$
 
-A condição \(a>0\) garante que a função esteja bem definida para todos os valores reais de \(x\). A condição \(a\neq 1\) evita o caso constante
+A condição $a>0$ garante que a função esteja bem definida para todos os valores reais de $x$. A condição $a\neq 1$ evita o caso constante
 
 $$
 1^x=1.
@@ -140,7 +140,7 @@ $$
 h(x)=\left(\frac{1}{2}\right)^x.
 $$
 
-Se \(a>1\), a função é crescente. Se \(0<a<1\), a função é decrescente.
+Se $a>1$, a função é crescente. Se $0<a<1$, a função é decrescente.
 
 ***
 
@@ -180,7 +180,7 @@ $$
 f(-2)=2^{-2}=\frac{1}{4}.
 $$
 
-Isso mostra que a função \(2^x\) cresce rapidamente quando \(x\) aumenta e se aproxima de zero quando \(x\) vai para \(-\infty\).
+Isso mostra que a função $2^x$ cresce rapidamente quando $x$ aumenta e se aproxima de zero quando $x$ vai para $-\infty$.
 
 ***
 
@@ -192,7 +192,7 @@ $$
 f(x)=a^x,
 $$
 
-com \(a>0\) e \(a\neq 1\), o domínio é
+com $a>0$ e $a\neq 1$, o domínio é
 
 $$
 D_f=\mathbb{R}.
@@ -206,7 +206,7 @@ $$
 
 Isso significa que a exponencial nunca assume valor zero nem valores negativos.
 
-Mesmo quando \(x\) é muito negativo, \(a^x\) continua positivo. Por **exemplo**,
+Mesmo quando $x$ é muito negativo, $a^x$ continua positivo. Por **exemplo**,
 
 $$
 2^{-10}=\frac{1}{1024}.
@@ -220,8 +220,8 @@ $$
 
 O gráfico ajuda a comparar dois comportamentos importantes:
 
-- **se \(a>1\), a função \(a^x\) é crescente;**
-- **se \(0<a<1\), a função \(a^x\) é decrescente.**
+- **se $a>1$, a função $a^x$ é crescente;**
+- **se $0<a<1$, a função $a^x$ é decrescente.**
 
 ```{python}
 #| label: fig-exponenciais-crescimento-decaimento
@@ -288,7 +288,7 @@ plt.show()
 
 ***
 
-## 🌿 A base natural \(e\)
+## 🌿 A base natural $e$
 
 Entre todas as funções exponenciais, uma delas é especialmente importante:
 
@@ -296,24 +296,24 @@ $$
 \boxed{f(x)=e^x}
 $$
 
-O número \(e\) é aproximadamente
+O número $e$ é aproximadamente
 
 $$
 e\approx 2{,}71828.
 $$
 
-Ele aparece naturalmente em processos de crescimento contínuo. No Cálculo, a função \(e^x\) tem uma propriedade extraordinária:
+Ele aparece naturalmente em processos de crescimento contínuo. No Cálculo, a função $e^x$ tem uma propriedade extraordinária:
 
 $$
 \frac{d}{dx}e^x=e^x.
 $$
 
-Isto é, a derivada de \(e^x\) é a própria função \(e^x\).
+Isto é, a derivada de $e^x$ é a própria função $e^x$.
 
-Ainda não vamos demonstrar esse fato. Por enquanto, o importante é reconhecer que \(e^x\) será uma das protagonistas do curso.
+Ainda não vamos demonstrar esse fato. Por enquanto, o importante é reconhecer que $e^x$ será uma das protagonistas do curso.
 
 ::: {.callout-note title="💡 Ideia importante"}
-A base \(e\) surge naturalmente em modelos de crescimento contínuo e simplifica muitas expressões do Cálculo.
+A base $e$ surge naturalmente em modelos de crescimento contínuo e simplifica muitas expressões do Cálculo.
 :::
 
 ***
@@ -336,7 +336,7 @@ $$
 
 Lemos:
 
-> O logaritmo de \(x\) na base \(a\) é o expoente ao qual devemos elevar \(a\) para obter \(x\).
+> O logaritmo de $x$ na base $a$ é o expoente ao qual devemos elevar $a$ para obter $x$.
 
 Por **exemplo**:
 
@@ -412,20 +412,22 @@ produz apenas valores positivos. Como o logaritmo é sua inversa, ele só pode r
 
 O comportamento da função também depende da base:
 
-- se \(a>1\), a função logarítmica é crescente;
-- se \(0<a<1\), a função logarítmica é decrescente.
+- se $a>1$, a função logarítmica é crescente;
+- se $0<a<1$, a função logarítmica é decrescente.
 
 Essa propriedade decorre da relação de inversão entre a função logarítmica e a exponencial correspondente.
 
-::: {.callout-warning title="⚠️ Cuidado"}
-Nos números reais, expressões como \(\log_a 0\) e \(\log_a(-3)\) não estão definidas.
+::: {.callout-tip title="💡 Dica de domínio"}
+Para encontrar o domínio de um logaritmo, exija que seu argumento seja positivo. Em $\ln(x-2)$, resolva $x-2>0$, o que dá $x>2$.
+
+Nos números reais, expressões como $\log_a 0$ e $\log_a(-3)$ não estão definidas.
 :::
 
 ***
 
 ## 🌿 Logaritmo natural
 
-O logaritmo de base \(e\) é chamado de **logaritmo natural** e é escrito como
+O logaritmo de base $e$ é chamado de **logaritmo natural** e é escrito como
 
 $$
 \ln x.
@@ -437,13 +439,13 @@ $$
 \boxed{\ln x=\log_e x}
 $$
 
-Como todo logaritmo real, \(\ln x\) está definido apenas para
+Como todo logaritmo real, $\ln x$ está definido apenas para
 
 $$
 x>0.
 $$
 
-A função \(\ln x\) é inversa da função \(e^x\).
+A função $\ln x$ é inversa da função $e^x$.
 
 Isso significa que:
 
@@ -451,13 +453,13 @@ $$
 \ln(e^x)=x
 $$
 
-para todo \(x\in\mathbb{R}\), e
+para todo $x\in\mathbb{R}$, e
 
 $$
 e^{\ln x}=x
 $$
 
-para todo \(x>0\).
+para todo $x>0$.
 
 Essas duas identidades serão usadas muitas vezes no Cálculo.
 
@@ -491,9 +493,9 @@ $$
 a>0,\qquad a\neq 1,\qquad x>0,\qquad y>0,
 $$
 
-quando \(x\) e \(y\) aparecem nas expressões.
+quando $x$ e $y$ aparecem nas expressões.
 
-Na propriedade da potência, \(x>0\), e \(r\) pode ser um número real.
+Na propriedade da potência, $x>0$, e $r$ pode ser um número real.
 
 Por **exemplo**:
 
@@ -581,7 +583,7 @@ $$
 g(x)=\log_a x
 $$
 
-são inversas uma da outra, desde que \(a>0\) e \(a\neq 1\).
+são inversas uma da outra, desde que $a>0$ e $a\neq 1$.
 
 Isso significa que:
 
@@ -589,9 +591,9 @@ $$
 \boxed{\log_a(a^x)=x,\qquad a^{\log_a x}=x}.
 $$
 
-A primeira identidade vale para todo \(x\in\mathbb{R}\).
+A primeira identidade vale para todo $x\in\mathbb{R}$.
 
-A segunda vale para todo \(x>0\), pois o logaritmo só recebe entradas positivas.
+A segunda vale para todo $x>0$, pois o logaritmo só recebe entradas positivas.
 
 Graficamente, funções inversas têm gráficos simétricos em relação à reta
 
@@ -599,13 +601,13 @@ $$
 y=x.
 $$
 
-Assim, o gráfico de \(y=\log_a x\) pode ser visto como o reflexo do gráfico de \(y=a^x\) em relação à reta \(y=x\).
+Assim, o gráfico de $y=\log_a x$ pode ser visto como o reflexo do gráfico de $y=a^x$ em relação à reta $y=x$.
 
 ***
 
 ## 📊 Visualizando a relação inversa
 
-Como \(a^x\) e \(\log_a x\) são funções inversas, seus gráficos são reflexos um do outro em relação à reta \(y=x\).
+Como $a^x$ e $\log_a x$ são funções inversas, seus gráficos são reflexos um do outro em relação à reta $y=x$.
 
 ```{python}
 #| label: fig-exponencial-logaritmo-inversas
@@ -621,25 +623,33 @@ import matplotlib.pyplot as plt
 
 os.makedirs("images", exist_ok=True)
 
-x_exp = np.linspace(-3, 3, 400)
-x_log = np.linspace(0.05, 8, 400)
-x_diag = np.linspace(-3, 8, 400)
+x_exp = np.linspace(-3.2, np.log2(9.2), 400)
+x_log = np.geomspace(2**(-3.2), 9.2, 400)
+x_diag = np.array([-3.2, 9.2])
 
-plt.figure(figsize=(6, 4.2))
-plt.plot(x_exp, 2**x_exp, label=r"$y=2^x$")
-plt.plot(x_log, np.log2(x_log), label=r"$y=\log_2 x$")
-plt.plot(x_diag, x_diag, linestyle="--", label=r"$y=x$")
-plt.axhline(0, linewidth=0.8)
-plt.axvline(0, linewidth=0.8)
-plt.xlim(-3, 8)
-plt.ylim(-3, 8)
+plt.figure(figsize=(6.2, 6.2))
+plt.plot(x_exp, 2**x_exp, label=r"$y=2^x$", color="C0")
+plt.plot(x_log, np.log2(x_log), label=r"$y=\log_2 x$", color="C1")
+plt.plot(x_diag, x_diag, "--", label=r"$y=x$", color="0.45")
+plt.axhline(0, linewidth=0.8, color="0.55")
+plt.axvline(0, linewidth=0.8, color="0.55")
+plt.xlim(-3.2, 9.2)
+plt.ylim(-3.2, 9.2)
+plt.gca().set_aspect("equal", adjustable="box")
+plt.scatter([3, 8], [8, 3], color=["C0", "C1"], zorder=4)
+plt.annotate("(3, 8)", (3, 8), xytext=(7, -1), textcoords="offset points")
+plt.annotate("(8, 3)", (8, 3), xytext=(-41, 8), textcoords="offset points")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Exponencial e logaritmo como funções inversas")
-plt.legend()
+plt.legend(loc="upper left")
 plt.grid(True, alpha=0.3)
 
-plt.savefig("images/1-8-exponencial-logaritmo-inversas.png", dpi=300, bbox_inches="tight")
+plt.savefig(
+    "images/1-8-exponencial-logaritmo-inversas.png",
+    dpi=300,
+    bbox_inches="tight",
+)
 plt.show()
 ```
 
@@ -655,27 +665,45 @@ import matplotlib.pyplot as plt
 
 os.makedirs("images", exist_ok=True)
 
-x_exp = np.linspace(-3, 3, 400)
-x_log = np.linspace(0.05, 8, 400)
-x_diag = np.linspace(-3, 8, 400)
+x_exp = np.linspace(-3.2, np.log2(9.2), 400)
+x_log = np.geomspace(2**(-3.2), 9.2, 400)
+x_diag = np.array([-3.2, 9.2])
 
-plt.figure(figsize=(6, 4.2))
-plt.plot(x_exp, 2**x_exp, label=r"$y=2^x$")
-plt.plot(x_log, np.log2(x_log), label=r"$y=\log_2 x$")
-plt.plot(x_diag, x_diag, linestyle="--", label=r"$y=x$")
-plt.axhline(0, linewidth=0.8)
-plt.axvline(0, linewidth=0.8)
-plt.xlim(-3, 8)
-plt.ylim(-3, 8)
+plt.figure(figsize=(6.2, 6.2))
+plt.plot(x_exp, 2**x_exp, label=r"$y=2^x$", color="C0")
+plt.plot(x_log, np.log2(x_log), label=r"$y=\log_2 x$", color="C1")
+plt.plot(x_diag, x_diag, "--", label=r"$y=x$", color="0.45")
+plt.axhline(0, linewidth=0.8, color="0.55")
+plt.axvline(0, linewidth=0.8, color="0.55")
+plt.xlim(-3.2, 9.2)
+plt.ylim(-3.2, 9.2)
+plt.gca().set_aspect("equal", adjustable="box")
+plt.scatter([3, 8], [8, 3], color=["C0", "C1"], zorder=4)
+plt.annotate("(3, 8)", (3, 8), xytext=(7, -1), textcoords="offset points")
+plt.annotate("(8, 3)", (8, 3), xytext=(-41, 8), textcoords="offset points")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Exponencial e logaritmo como funções inversas")
-plt.legend()
+plt.legend(loc="upper left")
 plt.grid(True, alpha=0.3)
 
-plt.savefig("images/1-8-exponencial-logaritmo-inversas.png", dpi=300, bbox_inches="tight")
+plt.savefig(
+    "images/1-8-exponencial-logaritmo-inversas.png",
+    dpi=300,
+    bbox_inches="tight",
+)
 plt.show()
 ```
+:::
+
+***
+
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo sobre exponencial e logaritmo como funções inversas](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/exponencial-e-logaritmo-funcoes-inversas.mp4)** (duração: 67 s)
+
+Veja como o ponto $(3,8)$ da exponencial corresponde ao ponto $(8,3)$ do logaritmo.
+
 :::
 
 ***
@@ -690,15 +718,15 @@ $$
 
 em que:
 
-- \(Q_0\) é a quantidade inicial;
-- \(a\) é o fator multiplicativo de crescimento;
-- \(t\) representa o tempo.
+- $Q_0$ é a quantidade inicial;
+- $a$ é o fator pelo qual a quantidade é multiplicada a cada unidade de tempo;
+- $t$ representa o tempo.
 
-Consideramos \(Q_0>0\), \(a>0\) e \(t\geq 0\).
+Consideramos $Q_0>0$, $a>0$ e $t\geq 0$.
 
-Se \(a>1\), há crescimento. Se \(0<a<1\), há decaimento.
+Se $a>1$, há crescimento. Se $0<a<1$, há decaimento.
 
-Por **exemplo**, se uma população dobra a cada unidade de tempo e começa com \(100\) indivíduos, podemos escrever:
+Por **exemplo**, se uma população dobra a cada unidade de tempo e começa com $100$ indivíduos, podemos escrever:
 
 $$
 Q(t)=100\cdot 2^t.
@@ -722,7 +750,7 @@ $$
 
 ## 📉 Decaimento exponencial
 
-O decaimento exponencial aparece quando a quantidade é multiplicada por um fator positivo menor que \(1\) a cada etapa.
+O decaimento exponencial aparece quando a quantidade é multiplicada por um fator positivo menor que $1$ a cada etapa.
 
 Por **exemplo**:
 
@@ -757,15 +785,15 @@ Esse tipo de modelo aparece em meia-vida, resfriamento, amortecimento e processo
 | Ideia | Significado | Papel no Cálculo |
 |---|---|---|
 | Função exponencial | Variável no expoente | Crescimento ou decaimento multiplicativo |
-| Base \(a>1\) | Exponencial crescente | Representa crescimento por fator constante |
-| Base \(0<a<1\) | Exponencial decrescente | Representa decaimento por fator constante |
-| Domínio de \(a^x\) | \(\mathbb{R}\) | A exponencial aceita qualquer expoente real |
-| Imagem de \(a^x\) | \((0,+\infty)\) | A exponencial real é sempre positiva |
+| Base $a>1$ | Exponencial crescente | Representa crescimento por fator constante |
+| Base $0<a<1$ | Exponencial decrescente | Representa decaimento por fator constante |
+| Domínio de $a^x$ | $\mathbb{R}$ | A exponencial aceita qualquer expoente real |
+| Imagem de $a^x$ | $(0,+\infty)$ | A exponencial real é sempre positiva |
 | Logaritmo | Expoente necessário para obter um número | É a operação inversa da exponenciação |
-| Domínio de \(\log_a x\) | \((0,+\infty)\) | O argumento do logaritmo precisa ser positivo |
-| Imagem de \(\log_a x\) | \(\mathbb{R}\) | O logaritmo pode assumir qualquer valor real |
-| \(e^x\) | Exponencial natural | Função central em crescimento contínuo e derivadas |
-| \(\ln x\) | Logaritmo natural | Inversa de \(e^x\), essencial em derivadas e integrais |
+| Domínio de $\log_a x$ | $(0,+\infty)$ | O argumento do logaritmo precisa ser positivo |
+| Imagem de $\log_a x$ | $\mathbb{R}$ | O logaritmo pode assumir qualquer valor real |
+| $e^x$ | Exponencial natural | Função central em crescimento contínuo e derivadas |
+| $\ln x$ | Logaritmo natural | Inversa de $e^x$, essencial em derivadas e integrais |
 | Propriedades dos logaritmos | Produto, quociente e potência | Permitem transformar produtos em somas e potências em fatores |
 | Mudança de base | Conversão entre bases logarítmicas | Cálculo de logaritmos em outra base |
 
@@ -792,19 +820,11 @@ Logaritmos fazem o caminho inverso: eles descobrem o **expoente** necessário pa
 
 ::: {.callout-tip title="🌉 Ponte para o Cálculo"}
 
-As funções exponenciais e logarítmicas são essenciais porque aparecem em muitos fenômenos naturais e matemáticos. No Cálculo, serão importantes no estudo de:
+No exemplo de meia-vida, $Q(t)=80(1/2)^t$ informa quanto resta depois de $t$ horas. Como determinar a velocidade de decaimento em um instante? No Volume 2, a derivada da exponencial permitirá responder a essa pergunta. Sua magnitude é proporcional à quantidade que ainda resta, uma relação que também aparece em equações diferenciais.
 
-- derivadas de funções exponenciais;
-- derivadas de funções logarítmicas;
-- integrais envolvendo \(\dfrac{1}{x}\);
-- crescimento e decaimento contínuos;
-- equações diferenciais;
-- modelos acumulativos;
-- séries e aproximações.
+Duas relações serão retomadas nesse estudo. A derivada de $e^x$ é $e^x$. Para $x>0$, a derivada de $\ln x$ é $1/x$, o que ajuda a calcular integrais de $1/x$.
 
-A função \(e^x\) tem uma propriedade especial: sua derivada é igual à própria função. Já a função \(\ln x\), para \(x>0\), tem derivada igual a \(1/x\) e está diretamente relacionada à integral dessa expressão.
-
-Além disso, as funções exponenciais e logarítmicas permitem comparar diferentes ritmos de crescimento, tema que será retomado no estudo de limites envolvendo infinito. Essas relações também serão fundamentais para compreender modelos matemáticos de crescimento e decaimento contínuos.
+Exponenciais e logaritmos também reaparecem nos limites no infinito e nas séries que permitem aproximar seus valores.
 
 :::
 
@@ -816,63 +836,67 @@ Além disso, as funções exponenciais e logarítmicas permitem comparar diferen
 
 Calcule:
 
-a) \(2^5\)
+a) $2^5$
 
-b) \(3^3\)
+b) $3^3$
 
-c) \(10^0\)
+c) $10^0$
 
-d) \(2^{-3}\)
+d) $2^{-3}$
 
-e) \(\left(\dfrac{1}{2}\right)^2\)
+e) $\left(\dfrac{1}{2}\right)^2$
 
 ## 🧪 Exercício 2
 
 Escreva em forma logarítmica:
 
-a) \(2^4=16\)
+a) $2^4=16$
 
-b) \(3^2=9\)
+b) $3^2=9$
 
-c) \(10^3=1000\)
+c) $10^3=1000$
 
-d) \(5^0=1\)
+d) $5^0=1$
 
 ## 🧪 Exercício 3
 
 Escreva em forma exponencial:
 
-a) \(\log_2 32=5\)
+a) $\log_2 32=5$
 
-b) \(\log_3 81=4\)
+b) $\log_3 81=4$
 
-c) \(\log_{10}100=2\)
+c) $\log_{10}100=2$
 
-d) \(\ln 7=x\)
+d) $\ln 7=x$
 
 ## 🧪 Exercício 4
 
 Determine o domínio real das funções:
 
-a) \(f(x)=\ln(x-2)\)
+a) $f(x)=\ln(x-2)$
 
-b) \(g(x)=\log_2(x+5)\)
+b) $g(x)=\log_2(x+5)$
 
-c) \(h(x)=\ln(4-x)\)
+c) $h(x)=\ln(4-x)$
 
-d) \(p(x)=e^x\)
+d) $p(x)=e^x$
 
 ## 🧪 Exercício 5
 
-Use as propriedades dos logaritmos para simplificar:
+Para $x>0$ e $y>0$, use as propriedades dos logaritmos para simplificar:
 
-a) \(\ln(xy)\)
+a) $\ln(xy)$
 
-b) \(\ln\left(\dfrac{x}{y}\right)\)
+b) $\ln\left(\dfrac{x}{y}\right)$
 
-c) \(\ln(x^3)\)
+c) $\ln(x^3)$
 
-d) \(\log_2(8x)\)
+d) $\log_2(8x)$
+
+## 🧪 Exercício 6
+
+Uma amostra contém inicialmente $80$ g de uma substância cuja massa se reduz à metade a cada hora. Use o modelo $Q(t)=80(1/2)^t$, em que $t$ é medido em horas. Quanto tempo leva para restarem $30$ g? Dê uma expressão exata e uma aproximação com duas casas decimais.
 
 :::
 
@@ -884,57 +908,57 @@ d) \(\log_2(8x)\)
 
 ## 🧪 Exercício 1
 
-a) \(2^5=32\).
+a) $2^5=32$.
 
-b) \(3^3=27\).
+b) $3^3=27$.
 
-c) \(10^0=1\).
+c) $10^0=1$.
 
-d) \(2^{-3}=\dfrac{1}{2^3}=\dfrac{1}{8}\).
+d) $2^{-3}=\dfrac{1}{2^3}=\dfrac{1}{8}$.
 
-e) \(\left(\dfrac{1}{2}\right)^2=\dfrac{1}{4}\).
+e) $\left(\dfrac{1}{2}\right)^2=\dfrac{1}{4}$.
 
 ## 🧪 Exercício 2
 
-a) \(2^4=16\) equivale a \(\log_2 16=4\).
+a) $2^4=16$ equivale a $\log_2 16=4$.
 
-b) \(3^2=9\) equivale a \(\log_3 9=2\).
+b) $3^2=9$ equivale a $\log_3 9=2$.
 
-c) \(10^3=1000\) equivale a \(\log_{10}1000=3\).
+c) $10^3=1000$ equivale a $\log_{10}1000=3$.
 
-d) \(5^0=1\) equivale a \(\log_5 1=0\).
+d) $5^0=1$ equivale a $\log_5 1=0$.
 
 ## 🧪 Exercício 3
 
-a) \(\log_2 32=5\) equivale a \(2^5=32\).
+a) $\log_2 32=5$ equivale a $2^5=32$.
 
-b) \(\log_3 81=4\) equivale a \(3^4=81\).
+b) $\log_3 81=4$ equivale a $3^4=81$.
 
-c) \(\log_{10}100=2\) equivale a \(10^2=100\).
+c) $\log_{10}100=2$ equivale a $10^2=100$.
 
-d) \(\ln 7=x\) equivale a \(e^x=7\), pela definição de logaritmo natural.
+d) $\ln 7=x$ equivale a $e^x=7$, pela definição de logaritmo natural.
 
 ## 🧪 Exercício 4
 
-a) Para \(f(x)=\ln(x-2)\), precisamos de \(x-2>0\), isto é, \(x>2\). Logo,
+a) Para $f(x)=\ln(x-2)$, precisamos de $x-2>0$, isto é, $x>2$. Logo,
 
 $$
 D_f=(2,+\infty).
 $$
 
-b) Para \(g(x)=\log_2(x+5)\), precisamos de \(x+5>0\), isto é, \(x>-5\). Logo,
+b) Para $g(x)=\log_2(x+5)$, precisamos de $x+5>0$, isto é, $x>-5$. Logo,
 
 $$
 D_g=(-5,+\infty).
 $$
 
-c) Para \(h(x)=\ln(4-x)\), precisamos de \(4-x>0\), isto é, \(x<4\). Logo,
+c) Para $h(x)=\ln(4-x)$, precisamos de $4-x>0$, isto é, $x<4$. Logo,
 
 $$
 D_h=(-\infty,4).
 $$
 
-d) Para \(p(x)=e^x\), não há restrição real sobre \(x\). Logo,
+d) Para $p(x)=e^x$, não há restrição real sobre $x$. Logo,
 
 $$
 D_p=\mathbb{R}.
@@ -948,7 +972,7 @@ $$
 \ln(xy)=\ln x+\ln y,
 $$
 
-com \(x>0\) e \(y>0\).
+com $x>0$ e $y>0$.
 
 b) Pela propriedade do quociente,
 
@@ -956,7 +980,7 @@ $$
 \ln\left(\frac{x}{y}\right)=\ln x-\ln y,
 $$
 
-com \(x>0\) e \(y>0\).
+com $x>0$ e $y>0$.
 
 c) Pela propriedade da potência,
 
@@ -964,7 +988,7 @@ $$
 \ln(x^3)=3\ln x,
 $$
 
-com \(x>0\).
+com $x>0$.
 
 d) Usando a propriedade do produto,
 
@@ -972,13 +996,34 @@ $$
 \log_2(8x)=\log_2 8+\log_2 x.
 $$
 
-Como \(\log_2 8=3\), temos
+Como $\log_2 8=3$, temos
 
 $$
 \log_2(8x)=3+\log_2 x,
 $$
 
-com \(x>0\).
+com $x>0$.
+
+## 🧪 Exercício 6
+
+Igualamos a massa a $30$ g:
+
+$$
+80\left(\frac12\right)^t=30
+\quad\Longleftrightarrow\quad
+\left(\frac12\right)^t=\frac38.
+$$
+
+Pela definição de logaritmo e pela mudança de base,
+
+$$
+t=\log_{1/2}\left(\frac38\right)
+=\frac{\ln(3/8)}{\ln(1/2)}
+=\frac{\ln(8/3)}{\ln 2}
+\approx 1{,}42\ \text{h}.
+$$
+
+O resultado está entre $1$ e $2$ horas, como esperamos, pois $Q(1)=40$ g e $Q(2)=20$ g.
 
 :::
 
@@ -991,51 +1036,51 @@ com \(x>0\).
 
 ::::{.choices}
 :::{.choice .correct-choice}
-\(f(x)=a^x\), com \(a>0\) e \(a\neq 1\).
+$f(x)=a^x$, com $a>0$ e $a\neq 1$.
 :::
 
 :::{.choice}
-\(f(x)=x+a\), com \(a\neq 0\).
+$f(x)=x+a$, com $a\neq 0$.
 :::
 
 :::{.choice}
-\(f(x)=\log_x a\), com \(x<0\).
+$f(x)=\log_x a$, com $x<0$.
 :::
 ::::
 :::::
 
 :::::{.question}
-**Q2.** O logaritmo \(\log_a x\) representa:
+**Q2.** O logaritmo $\log_a x$ representa:
 
 ::::{.choices}
 :::{.choice}
-O produto entre \(a\) e \(x\).
+O produto entre $a$ e $x$.
 :::
 
 :::{.choice .correct-choice}
-O expoente ao qual devemos elevar \(a\) para obter \(x\).
+O expoente ao qual devemos elevar $a$ para obter $x$.
 :::
 
 :::{.choice}
-A raiz quadrada de \(x\) na base \(a\).
+A raiz quadrada de $x$ na base $a$.
 :::
 ::::
 :::::
 
 :::::{.question}
-**Q3.** O domínio real de \(\ln(x-2)\) é:
+**Q3.** O domínio real de $\ln(x-2)$ é:
 
 ::::{.choices}
 :::{.choice}
-\((-\infty,2)\).
+$(-\infty,2)$.
 :::
 
 :::{.choice .correct-choice}
-\((2,+\infty)\).
+$(2,+\infty)$.
 :::
 
 :::{.choice}
-\(\mathbb{R}\).
+$\mathbb{R}$.
 :::
 ::::
 :::::

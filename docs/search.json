@@ -7788,7 +7788,7 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "",
-    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Post Anterior: 👉 1.7 Funções Polinomiais e Racionais"
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Aula anterior: 👉 1.7 Funções Polinomiais e Racionais\n🎯 Próxima aula: 👉 1.9 Trigonometria Essencial"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#potências-e-crescimento-multiplicativo",
@@ -7823,28 +7823,28 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#visualizando-funções-exponenciais",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.5 📊 Visualizando funções exponenciais",
-    "text": "1.5 📊 Visualizando funções exponenciais\nO gráfico ajuda a comparar dois comportamentos importantes:\n\nse \\(a&gt;1\\), a função \\(a^x\\) é crescente;\nse \\(0&lt;a&lt;1\\), a função \\(a^x\\) é decrescente.\n\n\n\n\n\n\n\n\n\nFigura 1\n\n\n\n\n\n\n\n\n\n\n\nDicaClique para ver o código\n\n\n\n\n\n\nimport os\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nos.makedirs(\"images\", exist_ok=True)\n\nx = np.linspace(-4, 4, 400)\n\nplt.figure(figsize=(6, 4.2))\nplt.plot(x, 2**x, label=r\"$2^x$\")\nplt.plot(x, (1/2)**x, label=r\"$\\left(\\frac{1}{2}\\right)^x$\")\nplt.axhline(0, linewidth=0.8)\nplt.axvline(0, linewidth=0.8)\nplt.ylim(-0.5, 10)\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.title(\"Funções exponenciais: crescimento e decaimento\")\nplt.legend()\nplt.grid(True, alpha=0.3)\n\nplt.savefig(\"images/1-8-exponenciais-crescimento-decaimento.png\", dpi=300, bbox_inches=\"tight\")\nplt.show()"
+    "text": "1.5 📊 Visualizando funções exponenciais\nO gráfico ajuda a comparar dois comportamentos importantes:\n\nse \\(a&gt;1\\), a função \\(a^x\\) é crescente;\nse \\(0&lt;a&lt;1\\), a função \\(a^x\\) é decrescente.\n\n\n\n\n\n\n\n\n\nFigura 1\n\n\n\n\n\n\n\n\n\n\n\nDicaClique para ver o código\n\n\n\n\n\n\nimport os\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nos.makedirs(\"images\", exist_ok=True)\n\nx = np.linspace(-4, 4, 400)\n\nplt.figure(figsize=(6, 4.2))\nplt.plot(x, 2**x, label=r\"$2^x$\")\nplt.plot(x, (1/2)**x, label=r\"$\\left(\\frac{1}{2}\\right)^x$\")\nplt.axhline(0, linewidth=0.8)\nplt.axvline(0, linewidth=0.8)\nplt.ylim(0, 17)\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.title(\"Funções exponenciais: crescimento e decaimento\")\nplt.legend()\nplt.grid(True, alpha=0.3)\n\nplt.savefig(\"images/1-8-exponenciais-crescimento-decaimento.png\", dpi=300, bbox_inches=\"tight\")\nplt.show()"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#a-base-natural-e",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#a-base-natural-e",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.6 🌿 A base natural \\(e\\)",
-    "text": "1.6 🌿 A base natural \\(e\\)\nEntre todas as funções exponenciais, uma delas é especialmente importante:\n\\[\n\\boxed{f(x)=e^x}\n\\]\nO número \\(e\\) é aproximadamente\n\\[\ne\\approx 2{,}71828.\n\\]\nEle aparece naturalmente em processos de crescimento contínuo. No Cálculo, a função \\(e^x\\) tem uma propriedade extraordinária:\n\\[\n\\frac{d}{dx}e^x=e^x.\n\\]\nIsto é, a derivada de \\(e^x\\) é a própria função \\(e^x\\).\nAinda não vamos demonstrar esse fato. Por enquanto, o importante é reconhecer que \\(e^x\\) será uma das protagonistas do curso.\n\n\n\n\n\n\nNota💡 Ideia importante\n\n\n\nA função exponencial natural \\(e^x\\) é a exponencial mais adequada para descrever crescimento contínuo."
+    "text": "1.6 🌿 A base natural \\(e\\)\nEntre todas as funções exponenciais, uma delas é especialmente importante:\n\\[\n\\boxed{f(x)=e^x}\n\\]\nO número \\(e\\) é aproximadamente\n\\[\ne\\approx 2{,}71828.\n\\]\nEle aparece naturalmente em processos de crescimento contínuo. No Cálculo, a função \\(e^x\\) tem uma propriedade extraordinária:\n\\[\n\\frac{d}{dx}e^x=e^x.\n\\]\nIsto é, a derivada de \\(e^x\\) é a própria função \\(e^x\\).\nAinda não vamos demonstrar esse fato. Por enquanto, o importante é reconhecer que \\(e^x\\) será uma das protagonistas do curso.\n\n\n\n\n\n\nNota💡 Ideia importante\n\n\n\nA base \\(e\\) surge naturalmente em modelos de crescimento contínuo e simplifica muitas expressões do Cálculo."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#logaritmos",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#logaritmos",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.7 🔁 Logaritmos",
-    "text": "1.7 🔁 Logaritmos\nO logaritmo é a operação inversa da exponenciação.\nA definição pode ser escrita de forma compacta como\n\\[\n\\boxed{\\log_a x=y \\quad \\Longleftrightarrow \\quad a^y=x}\n\\]\nLemos:\n\no logaritmo de \\(x\\) na base \\(a\\) é o expoente ao qual devemos elevar \\(a\\) para obter \\(x\\).\n\nPor exemplo:\n\\[\n2^3=8\n\\]\nequivale a\n\\[\n\\log_2 8=3.\n\\]\nOutro exemplo:\n\\[\n10^2=100\n\\]\nequivale a\n\\[\n\\log_{10}100=2.\n\\]"
+    "text": "1.7 🔁 Logaritmos\nO logaritmo é a operação inversa da exponenciação.\nA definição pode ser escrita de forma compacta como\n\\[\n\\boxed{\\log_a x=y \\quad \\Longleftrightarrow \\quad a^y=x}\n\\]\ncom as condições\n\\[\na&gt;0,\\qquad a\\neq 1,\\qquad x&gt;0.\n\\]\nLemos:\n\nO logaritmo de \\(x\\) na base \\(a\\) é o expoente ao qual devemos elevar \\(a\\) para obter \\(x\\).\n\nPor exemplo:\n\\[\n2^3=8\n\\]\nequivale a\n\\[\n\\log_2 8=3.\n\\]\nOutro exemplo:\n\\[\n10^2=100\n\\]\nequivale a\n\\[\n\\log_{10}100=2.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#domínio-da-função-logarítmica",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#domínio-da-função-logarítmica",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.8 🧭 Domínio da função logarítmica",
-    "text": "1.8 🧭 Domínio da função logarítmica\nA função logarítmica\n\\[\nf(x)=\\log_a x\n\\]\né definida para\n\\[\nx&gt;0,\n\\]\ncom\n\\[\na&gt;0\n\\]\ne\n\\[\na\\neq 1.\n\\]\nPortanto, seu domínio é\n\\[\nD_f=(0,+\\infty).\n\\]\nA imagem é\n\\[\n\\operatorname{Im}(f)=\\mathbb{R}.\n\\]\nIsso faz sentido porque a exponencial\n\\[\na^x\n\\]\nproduz apenas valores positivos. Como o logaritmo é sua inversa, ele só pode receber entradas positivas.\n\n\n\n\n\n\nAviso⚠️ Cuidado\n\n\n\nNos números reais, expressões como \\(\\log_a 0\\) e \\(\\log_a(-3)\\) não estão definidas."
+    "text": "1.8 🧭 Domínio da função logarítmica\nA função logarítmica\n\\[\nf(x)=\\log_a x\n\\]\né definida para\n\\[\nx&gt;0,\n\\]\ncom\n\\[\na&gt;0\n\\]\ne\n\\[\na\\neq 1.\n\\]\nPortanto, seu domínio é\n\\[\nD_f=(0,+\\infty).\n\\]\nA imagem é\n\\[\n\\operatorname{Im}(f)=\\mathbb{R}.\n\\]\nIsso faz sentido porque a exponencial\n\\[\na^x\n\\]\nproduz apenas valores positivos. Como o logaritmo é sua inversa, ele só pode receber entradas positivas.\nO comportamento da função também depende da base:\n\nse \\(a&gt;1\\), a função logarítmica é crescente;\nse \\(0&lt;a&lt;1\\), a função logarítmica é decrescente.\n\nEssa propriedade decorre da relação de inversão entre a função logarítmica e a exponencial correspondente.\n\n\n\n\n\n\nDica💡 Dica de domínio\n\n\n\nPara encontrar o domínio de um logaritmo, exija que seu argumento seja positivo. Em \\(\\ln(x-2)\\), resolva \\(x-2&gt;0\\), o que dá \\(x&gt;2\\).\nNos números reais, expressões como \\(\\log_a 0\\) e \\(\\log_a(-3)\\) não estão definidas."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#logaritmo-natural",
@@ -7858,91 +7858,84 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#propriedades-dos-logaritmos",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.10 🧰 Propriedades dos logaritmos",
-    "text": "1.10 🧰 Propriedades dos logaritmos\nAs principais propriedades dos logaritmos são:\n\\[\n\\log_a(xy)=\\log_a x+\\log_a y,\n\\]\n\\[\n\\log_a\\left(\\frac{x}{y}\\right)=\\log_a x-\\log_a y,\n\\]\n\\[\n\\log_a(x^r)=r\\log_a x.\n\\]\nEssas propriedades valem quando as expressões envolvidas fazem sentido, isto é, quando os argumentos dos logaritmos são positivos.\nPor exemplo:\n\\[\n\\log_2(8\\cdot 4)=\\log_2 8+\\log_2 4.\n\\]\nComo\n\\[\n\\log_2 8=3\n\\]\ne\n\\[\n\\log_2 4=2,\n\\]\nobtemos\n\\[\n\\log_2(32)=5.\n\\]\nDe fato,\n\\[\n2^5=32.\n\\]"
+    "text": "1.10 🧰 Propriedades dos logaritmos\nAs principais propriedades dos logaritmos são:\nProduto:\n\\[\n\\log_a(xy)=\\log_a x+\\log_a y.\n\\]\nQuociente:\n\\[\n\\log_a\\left(\\frac{x}{y}\\right)=\\log_a x-\\log_a y.\n\\]\nPotência:\n\\[\n\\log_a(x^r)=r\\log_a x.\n\\]\nEssas propriedades valem quando as expressões envolvidas fazem sentido. Em particular, devemos ter\n\\[\na&gt;0,\\qquad a\\neq 1,\\qquad x&gt;0,\\qquad y&gt;0,\n\\]\nquando \\(x\\) e \\(y\\) aparecem nas expressões.\nNa propriedade da potência, \\(x&gt;0\\), e \\(r\\) pode ser um número real.\nPor exemplo:\n\\[\n\\log_2(8\\cdot 4)=\\log_2 8+\\log_2 4.\n\\]\nComo\n\\[\n\\log_2 8=3\n\\]\ne\n\\[\n\\log_2 4=2,\n\\]\nobtemos\n\\[\n\\log_2(32)=5.\n\\]\nDe fato,\n\\[\n2^5=32.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#mudança-de-base",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#mudança-de-base",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.11 🔄 Mudança de base",
-    "text": "1.11 🔄 Mudança de base\nÀs vezes precisamos calcular logaritmos em uma base diferente da disponível na calculadora.\nA fórmula de mudança de base é\n\\[\n\\log_a x=\\frac{\\log_b x}{\\log_b a}.\n\\]\nEm particular, podemos usar o logaritmo natural:\n\\[\n\\log_a x=\\frac{\\ln x}{\\ln a}.\n\\]\nPor exemplo:\n\\[\n\\log_2 10=\\frac{\\ln 10}{\\ln 2}.\n\\]\nEssa fórmula é importante em aplicações e também em demonstrações envolvendo funções logarítmicas."
+    "text": "1.11 🔄 Mudança de base\nÀs vezes precisamos calcular logaritmos em uma base diferente da disponível na calculadora.\nA fórmula de mudança de base é\n\\[\n\\log_a x=\\frac{\\log_b x}{\\log_b a},\n\\]\nem que\n\\[\nx&gt;0,\\qquad a&gt;0,\\qquad a\\neq 1,\n\\]\ne\n\\[\nb&gt;0,\\qquad b\\neq 1.\n\\]\nEm particular, podemos usar o logaritmo natural:\n\\[\n\\boxed{\n\\log_a x=\\frac{\\ln x}{\\ln a}\n}\n\\]\nPor exemplo:\n\\[\n\\log_2 10=\\frac{\\ln 10}{\\ln 2}.\n\\]\nEssa fórmula é importante em aplicações e também em demonstrações envolvendo funções logarítmicas."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exponenciais-e-logaritmos-como-funções-inversas",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exponenciais-e-logaritmos-como-funções-inversas",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.12 🪞 Exponenciais e logaritmos como funções inversas",
-    "text": "1.12 🪞 Exponenciais e logaritmos como funções inversas\nAs funções\n\\[\nf(x)=a^x\n\\]\ne\n\\[\ng(x)=\\log_a x\n\\]\nsão inversas uma da outra.\nIsso significa que:\n\\[\n\\boxed{\\log_a(a^x)=x,\\qquad a^{\\log_a x}=x}.\n\\]\nA primeira identidade vale para todo \\(x\\in\\mathbb{R}\\).\nA segunda vale para todo \\(x&gt;0\\), pois o logaritmo só recebe entradas positivas.\nGraficamente, funções inversas têm gráficos simétricos em relação à reta\n\\[\ny=x.\n\\]\nAssim, o gráfico de \\(y=\\log_a x\\) pode ser visto como o reflexo do gráfico de \\(y=a^x\\) em relação à reta \\(y=x\\)."
+    "text": "1.12 🪞 Exponenciais e logaritmos como funções inversas\nAs funções\n\\[\nf(x)=a^x\n\\]\ne\n\\[\ng(x)=\\log_a x\n\\]\nsão inversas uma da outra, desde que \\(a&gt;0\\) e \\(a\\neq 1\\).\nIsso significa que:\n\\[\n\\boxed{\\log_a(a^x)=x,\\qquad a^{\\log_a x}=x}.\n\\]\nA primeira identidade vale para todo \\(x\\in\\mathbb{R}\\).\nA segunda vale para todo \\(x&gt;0\\), pois o logaritmo só recebe entradas positivas.\nGraficamente, funções inversas têm gráficos simétricos em relação à reta\n\\[\ny=x.\n\\]\nAssim, o gráfico de \\(y=\\log_a x\\) pode ser visto como o reflexo do gráfico de \\(y=a^x\\) em relação à reta \\(y=x\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#visualizando-a-relação-inversa",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#visualizando-a-relação-inversa",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.13 📊 Visualizando a relação inversa",
-    "text": "1.13 📊 Visualizando a relação inversa\nComo \\(a^x\\) e \\(\\log_a x\\) são funções inversas, seus gráficos são reflexos um do outro em relação à reta \\(y=x\\).\n\n\n\n\n\n\n\n\nFigura 2\n\n\n\n\n\n\n\n\n\n\n\nDicaClique para ver o código\n\n\n\n\n\n\nimport os\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nos.makedirs(\"images\", exist_ok=True)\n\nx_exp = np.linspace(-3, 3, 400)\nx_log = np.linspace(0.05, 8, 400)\nx_diag = np.linspace(-3, 8, 400)\n\nplt.figure(figsize=(6, 4.2))\nplt.plot(x_exp, 2**x_exp, label=r\"$y=2^x$\")\nplt.plot(x_log, np.log2(x_log), label=r\"$y=\\log_2 x$\")\nplt.plot(x_diag, x_diag, linestyle=\"--\", label=r\"$y=x$\")\nplt.axhline(0, linewidth=0.8)\nplt.axvline(0, linewidth=0.8)\nplt.xlim(-3, 8)\nplt.ylim(-3, 8)\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.title(\"Exponencial e logaritmo como funções inversas\")\nplt.legend()\nplt.grid(True, alpha=0.3)\n\nplt.savefig(\"images/1-8-exponencial-logaritmo-inversas.png\", dpi=300, bbox_inches=\"tight\")\nplt.show()"
+    "text": "1.13 📊 Visualizando a relação inversa\nComo \\(a^x\\) e \\(\\log_a x\\) são funções inversas, seus gráficos são reflexos um do outro em relação à reta \\(y=x\\).\n\n\n\n\n\n\n\n\nFigura 2\n\n\n\n\n\n\n\n\n\n\n\nDicaClique para ver o código\n\n\n\n\n\n\nimport os\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nos.makedirs(\"images\", exist_ok=True)\n\nx_exp = np.linspace(-3.2, np.log2(9.2), 400)\nx_log = np.geomspace(2**(-3.2), 9.2, 400)\nx_diag = np.array([-3.2, 9.2])\n\nplt.figure(figsize=(6.2, 6.2))\nplt.plot(x_exp, 2**x_exp, label=r\"$y=2^x$\", color=\"C0\")\nplt.plot(x_log, np.log2(x_log), label=r\"$y=\\log_2 x$\", color=\"C1\")\nplt.plot(x_diag, x_diag, \"--\", label=r\"$y=x$\", color=\"0.45\")\nplt.axhline(0, linewidth=0.8, color=\"0.55\")\nplt.axvline(0, linewidth=0.8, color=\"0.55\")\nplt.xlim(-3.2, 9.2)\nplt.ylim(-3.2, 9.2)\nplt.gca().set_aspect(\"equal\", adjustable=\"box\")\nplt.scatter([3, 8], [8, 3], color=[\"C0\", \"C1\"], zorder=4)\nplt.annotate(\"(3, 8)\", (3, 8), xytext=(7, -1), textcoords=\"offset points\")\nplt.annotate(\"(8, 3)\", (8, 3), xytext=(-41, 8), textcoords=\"offset points\")\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.title(\"Exponencial e logaritmo como funções inversas\")\nplt.legend(loc=\"upper left\")\nplt.grid(True, alpha=0.3)\n\nplt.savefig(\n    \"images/1-8-exponencial-logaritmo-inversas.png\",\n    dpi=300,\n    bbox_inches=\"tight\",\n)\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\nDica▶ Vídeo comentado\n\n\n\nAssista ao vídeo sobre exponencial e logaritmo como funções inversas (duração: 67 s)\nVeja como o ponto \\((3,8)\\) da exponencial corresponde ao ponto \\((8,3)\\) do logaritmo."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#crescimento-exponencial",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#crescimento-exponencial",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.14 🚀 Crescimento exponencial",
-    "text": "1.14 🚀 Crescimento exponencial\nUm modelo simples de crescimento exponencial tem a forma\n\\[\nQ(t)=Q_0a^t,\n\\]\nem que:\n\n\\(Q_0\\) é a quantidade inicial;\n\\(a\\) é o fator de crescimento;\n\\(t\\) representa o tempo.\n\nSe \\(a&gt;1\\), há crescimento. Se \\(0&lt;a&lt;1\\), há decaimento.\nPor exemplo, se uma população dobra a cada unidade de tempo e começa com \\(100\\) indivíduos, podemos escrever:\n\\[\nQ(t)=100\\cdot 2^t.\n\\]\nEntão:\n\\[\nQ(0)=100,\n\\]\n\\[\nQ(1)=200,\n\\]\n\\[\nQ(2)=400.\n\\]"
+    "text": "1.14 🚀 Crescimento exponencial\nUm modelo simples de crescimento exponencial tem a forma\n\\[\nQ(t)=Q_0a^t,\n\\]\nem que:\n\n\\(Q_0\\) é a quantidade inicial;\n\\(a\\) é o fator pelo qual a quantidade é multiplicada a cada unidade de tempo;\n\\(t\\) representa o tempo.\n\nConsideramos \\(Q_0&gt;0\\), \\(a&gt;0\\) e \\(t\\geq 0\\).\nSe \\(a&gt;1\\), há crescimento. Se \\(0&lt;a&lt;1\\), há decaimento.\nPor exemplo, se uma população dobra a cada unidade de tempo e começa com \\(100\\) indivíduos, podemos escrever:\n\\[\nQ(t)=100\\cdot 2^t.\n\\]\nEntão:\n\\[\nQ(0)=100,\n\\]\n\\[\nQ(1)=200,\n\\]\n\\[\nQ(2)=400.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#decaimento-exponencial",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#decaimento-exponencial",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "1.15 📉 Decaimento exponencial",
-    "text": "1.15 📉 Decaimento exponencial\nO decaimento exponencial aparece quando a quantidade é multiplicada por um fator menor que \\(1\\) a cada etapa.\nPor exemplo:\n\\[\nQ(t)=80\\left(\\frac{1}{2}\\right)^t.\n\\]\nEntão:\n\\[\nQ(0)=80,\n\\]\n\\[\nQ(1)=40,\n\\]\n\\[\nQ(2)=20,\n\\]\n\\[\nQ(3)=10.\n\\]\nEsse tipo de modelo aparece em meia-vida, resfriamento, amortecimento e processos de perda proporcional."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#por-que-isso-importa-para-o-cálculo",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#por-que-isso-importa-para-o-cálculo",
-    "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
-    "section": "1.16 🌉 Por que isso importa para o Cálculo?",
-    "text": "1.16 🌉 Por que isso importa para o Cálculo?\nExponenciais e logaritmos são essenciais porque aparecem em muitos fenômenos naturais e matemáticos.\nNo Cálculo, eles serão importantes em:\n\nderivadas de funções exponenciais;\nderivadas de funções logarítmicas;\nintegrais envolvendo \\(\\dfrac{1}{x}\\);\ncrescimento e decaimento contínuos;\nequações diferenciais;\nmodelos acumulativos;\nséries e aproximações.\n\nAlém disso, funções exponenciais e logarítmicas ajudam a comparar ritmos de crescimento, tema que será retomado quando estudarmos limites envolvendo infinito."
+    "text": "1.15 📉 Decaimento exponencial\nO decaimento exponencial aparece quando a quantidade é multiplicada por um fator positivo menor que \\(1\\) a cada etapa.\nPor exemplo:\n\\[\nQ(t)=80\\left(\\frac{1}{2}\\right)^t.\n\\]\nEntão:\n\\[\nQ(0)=80,\n\\]\n\\[\nQ(1)=40,\n\\]\n\\[\nQ(2)=20,\n\\]\n\\[\nQ(3)=10.\n\\]\nEsse tipo de modelo aparece em meia-vida, resfriamento, amortecimento e processos de perda proporcional."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#quadro-resumo",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#quadro-resumo",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
-    "section": "1.17 🧾 Quadro-resumo",
-    "text": "1.17 🧾 Quadro-resumo\n\n\n\n\n\n\n\n\nIdeia\nSignificado\nPapel no Cálculo\n\n\n\n\nFunção exponencial\nFunção da forma \\(f(x)=a^x\\), com \\(a&gt;0\\) e \\(a\\neq 1\\)\nModela crescimento ou decaimento multiplicativo\n\n\nBase \\(a&gt;1\\)\nExponencial crescente\nRepresenta crescimento por fator constante\n\n\nBase \\(0&lt;a&lt;1\\)\nExponencial decrescente\nRepresenta decaimento por fator constante\n\n\nDomínio de \\(a^x\\)\n\\(\\mathbb{R}\\)\nA exponencial aceita qualquer expoente real\n\n\nImagem de \\(a^x\\)\n\\((0,+\\infty)\\)\nA exponencial real é sempre positiva\n\n\nLogaritmo\nExpoente necessário para obter um número\nÉ a operação inversa da exponenciação\n\n\nDomínio de \\(\\log_a x\\)\n\\((0,+\\infty)\\)\nO argumento do logaritmo precisa ser positivo\n\n\nImagem de \\(\\log_a x\\)\n\\(\\mathbb{R}\\)\nO logaritmo pode assumir qualquer valor real\n\n\n\\(e^x\\)\nExponencial natural\nFunção central em crescimento contínuo e derivadas\n\n\n\\(\\ln x\\)\nLogaritmo natural\nInversa de \\(e^x\\), essencial em derivadas e integrais\n\n\nPropriedades dos logaritmos\nProduto, quociente e potência\nPermitem transformar produtos em somas e potências em fatores\n\n\nMudança de base\n\\(\\log_a x=\\dfrac{\\ln x}{\\ln a}\\)\nPermite calcular logaritmos em qualquer base\n\n\n\n\n\n\n\n\n\nNota🧭 Ideia central do post\n\n\n\nExponenciais descrevem processos em que a mudança acontece por multiplicação constante.\nLogaritmos fazem o caminho inverso: eles descobrem o expoente necessário para produzir determinado valor."
+    "section": "1.16 🧾 Quadro-resumo",
+    "text": "1.16 🧾 Quadro-resumo\n\n\n\n\n\n\n\n\nIdeia\nSignificado\nPapel no Cálculo\n\n\n\n\nFunção exponencial\nVariável no expoente\nCrescimento ou decaimento multiplicativo\n\n\nBase \\(a&gt;1\\)\nExponencial crescente\nRepresenta crescimento por fator constante\n\n\nBase \\(0&lt;a&lt;1\\)\nExponencial decrescente\nRepresenta decaimento por fator constante\n\n\nDomínio de \\(a^x\\)\n\\(\\mathbb{R}\\)\nA exponencial aceita qualquer expoente real\n\n\nImagem de \\(a^x\\)\n\\((0,+\\infty)\\)\nA exponencial real é sempre positiva\n\n\nLogaritmo\nExpoente necessário para obter um número\nÉ a operação inversa da exponenciação\n\n\nDomínio de \\(\\log_a x\\)\n\\((0,+\\infty)\\)\nO argumento do logaritmo precisa ser positivo\n\n\nImagem de \\(\\log_a x\\)\n\\(\\mathbb{R}\\)\nO logaritmo pode assumir qualquer valor real\n\n\n\\(e^x\\)\nExponencial natural\nFunção central em crescimento contínuo e derivadas\n\n\n\\(\\ln x\\)\nLogaritmo natural\nInversa de \\(e^x\\), essencial em derivadas e integrais\n\n\nPropriedades dos logaritmos\nProduto, quociente e potência\nPermitem transformar produtos em somas e potências em fatores\n\n\nMudança de base\nConversão entre bases logarítmicas\nCálculo de logaritmos em outra base\n\n\n\nFórmulas e condições de validade\nUma função exponencial básica tem a forma\n\\[\nf(x)=a^x,\\qquad a&gt;0,\\quad a\\neq 1.\n\\]\nA fórmula de mudança de base é\n\\[\n\\log_a x=\\frac{\\ln x}{\\ln a},\n\\qquad x&gt;0,\\quad a&gt;0,\\quad a\\neq 1.\n\\]\n\n\n\n\n\n\nNota🧭 Ideia central do post\n\n\n\nExponenciais descrevem processos em que a mudança acontece por multiplicação constante.\nLogaritmos fazem o caminho inverso: eles descobrem o expoente necessário para produzir determinado valor.\n\n\n\n\n\n\n\n\nDica🌉 Ponte para o Cálculo\n\n\n\nNo exemplo de meia-vida, \\(Q(t)=80(1/2)^t\\) informa quanto resta depois de \\(t\\) horas. Como determinar a velocidade de decaimento em um instante? No Volume 2, a derivada da exponencial permitirá responder a essa pergunta. Sua magnitude é proporcional à quantidade que ainda resta, uma relação que também aparece em equações diferenciais.\nDuas relações serão retomadas nesse estudo. A derivada de \\(e^x\\) é \\(e^x\\). Para \\(x&gt;0\\), a derivada de \\(\\ln x\\) é \\(1/x\\), o que ajuda a calcular integrais de \\(1/x\\).\nExponenciais e logaritmos também reaparecem nos limites no infinito e nas séries que permitem aproximar seus valores."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-1",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nCalcule:\n\n\\(2^5\\)\n\n\\(3^3\\)\n\n\\(10^0\\)\n\n\\(2^{-3}\\)\n\n\\(\\left(\\dfrac{1}{2}\\right)^2\\)"
+    "text": "2.1 🧪 Exercício 1\nCalcule:\n\n\\(2^5\\)\n\\(3^3\\)\n\\(10^0\\)\n\\(2^{-3}\\)\n\\(\\left(\\dfrac{1}{2}\\right)^2\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-2",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-2",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nEscreva em forma logarítmica:\n\n\\(2^4=16\\)\n\n\\(3^2=9\\)\n\n\\(10^3=1000\\)\n\n\\(5^0=1\\)"
+    "text": "2.2 🧪 Exercício 2\nEscreva em forma logarítmica:\n\n\\(2^4=16\\)\n\\(3^2=9\\)\n\\(10^3=1000\\)\n\\(5^0=1\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-3",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-3",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nEscreva em forma exponencial:\n\n\\(\\log_2 32=5\\)\n\n\\(\\log_3 81=4\\)\n\n\\(\\log_{10}100=2\\)\n\n\\(\\ln e^7=7\\)"
+    "text": "2.3 🧪 Exercício 3\nEscreva em forma exponencial:\n\n\\(\\log_2 32=5\\)\n\\(\\log_3 81=4\\)\n\\(\\log_{10}100=2\\)\n\\(\\ln 7=x\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-4",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-4",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nDetermine o domínio real das funções:\n\n\\(f(x)=\\ln(x-2)\\)\n\n\\(g(x)=\\log_2(x+5)\\)\n\n\\(h(x)=\\ln(4-x)\\)\n\n\\(p(x)=e^x\\)"
+    "text": "2.4 🧪 Exercício 4\nDetermine o domínio real das funções:\n\n\\(f(x)=\\ln(x-2)\\)\n\\(g(x)=\\log_2(x+5)\\)\n\\(h(x)=\\ln(4-x)\\)\n\\(p(x)=e^x\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-5",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-5",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "2.5 🧪 Exercício 5",
-    "text": "2.5 🧪 Exercício 5\nUse as propriedades dos logaritmos para simplificar:\n\n\\(\\ln(xy)\\)\n\n\\(\\ln\\left(\\dfrac{x}{y}\\right)\\)\n\n\\(\\ln(x^3)\\)\n\n\\(\\log_2(8x)\\)"
+    "text": "2.5 🧪 Exercício 5\nPara \\(x&gt;0\\) e \\(y&gt;0\\), use as propriedades dos logaritmos para simplificar:\n\n\\(\\ln(xy)\\)\n\\(\\ln\\left(\\dfrac{x}{y}\\right)\\)\n\\(\\ln(x^3)\\)\n\\(\\log_2(8x)\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-1-1",
@@ -7963,14 +7956,14 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-3-1",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\n\n\\(\\log_2 32=5\\) equivale a \\(2^5=32\\).\n\\(\\log_3 81=4\\) equivale a \\(3^4=81\\).\n\\(\\log_{10}100=2\\) equivale a \\(10^2=100\\).\n\\(\\ln e^7=7\\) equivale a \\(e^7=e^7\\). Mais diretamente, usamos a identidade \\(\\ln(e^x)=x\\)."
+    "text": "3.3 🧪 Exercício 3\n\n\\(\\log_2 32=5\\) equivale a \\(2^5=32\\).\n\\(\\log_3 81=4\\) equivale a \\(3^4=81\\).\n\\(\\log_{10}100=2\\) equivale a \\(10^2=100\\).\n\\(\\ln 7=x\\) equivale a \\(e^x=7\\), pela definição de logaritmo natural."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-4-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-4-1",
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\n\nPara \\(f(x)=\\ln(x-2)\\), precisamos de \\(x-2&gt;0\\), isto é, \\(x&gt;2\\). Logo, \\(D_f=(2,+\\infty)\\).\nPara \\(g(x)=\\log_2(x+5)\\), precisamos de \\(x+5&gt;0\\), isto é, \\(x&gt;-5\\). Logo, \\(D_g=(-5,+\\infty)\\).\nPara \\(h(x)=\\ln(4-x)\\), precisamos de \\(4-x&gt;0\\), isto é, \\(x&lt;4\\). Logo, \\(D_h=(-\\infty,4)\\).\nPara \\(p(x)=e^x\\), não há restrição real sobre \\(x\\). Logo, \\(D_p=\\mathbb{R}\\)."
+    "text": "3.4 🧪 Exercício 4\n\nPara \\(f(x)=\\ln(x-2)\\), precisamos de \\(x-2&gt;0\\), isto é, \\(x&gt;2\\). Logo,\n\n\\[\nD_f=(2,+\\infty).\n\\]\n\nPara \\(g(x)=\\log_2(x+5)\\), precisamos de \\(x+5&gt;0\\), isto é, \\(x&gt;-5\\). Logo,\n\n\\[\nD_g=(-5,+\\infty).\n\\]\n\nPara \\(h(x)=\\ln(4-x)\\), precisamos de \\(4-x&gt;0\\), isto é, \\(x&lt;4\\). Logo,\n\n\\[\nD_h=(-\\infty,4).\n\\]\n\nPara \\(p(x)=e^x\\), não há restrição real sobre \\(x\\). Logo,\n\n\\[\nD_p=\\mathbb{R}.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-5-1",
@@ -7978,6 +7971,20 @@
     "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
     "section": "3.5 🧪 Exercício 5",
     "text": "3.5 🧪 Exercício 5\n\nPela propriedade do produto,\n\n\\[\n\\ln(xy)=\\ln x+\\ln y,\n\\]\ncom \\(x&gt;0\\) e \\(y&gt;0\\).\n\nPela propriedade do quociente,\n\n\\[\n\\ln\\left(\\frac{x}{y}\\right)=\\ln x-\\ln y,\n\\]\ncom \\(x&gt;0\\) e \\(y&gt;0\\).\n\nPela propriedade da potência,\n\n\\[\n\\ln(x^3)=3\\ln x,\n\\]\ncom \\(x&gt;0\\).\n\nUsando a propriedade do produto,\n\n\\[\n\\log_2(8x)=\\log_2 8+\\log_2 x.\n\\]\nComo \\(\\log_2 8=3\\), temos\n\\[\n\\log_2(8x)=3+\\log_2 x,\n\\]\ncom \\(x&gt;0\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-6",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-6",
+    "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
+    "section": "2.6 🧪 Exercício 6",
+    "text": "2.6 🧪 Exercício 6\nUma amostra contém inicialmente \\(80\\) g de uma substância cuja massa se reduz à metade a cada hora. Use o modelo \\(Q(t)=80(1/2)^t\\), em que \\(t\\) é medido em horas. Quanto tempo leva para restarem \\(30\\) g? Dê uma expressão exata e uma aproximação com duas casas decimais."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-6-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.8-exponenciais-e-logaritmos.html#exercício-6-1",
+    "title": "📘 Módulo 1.8: Exponenciais e Logaritmos",
+    "section": "3.6 🧪 Exercício 6",
+    "text": "3.6 🧪 Exercício 6\nIgualamos a massa a \\(30\\) g:\n\\[\n80\\left(\\frac12\\right)^t=30\n\\quad\\Longleftrightarrow\\quad\n\\left(\\frac12\\right)^t=\\frac38.\n\\]\nPela definição de logaritmo e pela mudança de base,\n\\[\nt=\\log_{1/2}\\left(\\frac38\\right)\n=\\frac{\\ln(3/8)}{\\ln(1/2)}\n=\\frac{\\ln(8/3)}{\\ln 2}\n\\approx 1{,}42\\ \\text{h}.\n\\]\nO resultado está entre \\(1\\) e \\(2\\) horas, como esperamos, pois \\(Q(1)=40\\) g e \\(Q(2)=20\\) g."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html",
