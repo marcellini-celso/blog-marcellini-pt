@@ -445,6 +445,20 @@ window.Quarto = {
 <p>A palavra <em>assintótico</em> está relacionada ao comportamento de uma função em regiões extremas: nas proximidades de determinados pontos ou quando a variável independente tende ao infinito.</p>
 <p>Esse estudo prepara diretamente o terreno para o cálculo de limites, pois muitas das perguntas que fazemos sobre o comportamento de uma função podem ser formuladas e respondidas por meio deles.</p>
 <hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Explorando com Python e R">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Explorando com Python e R
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os códigos Python dos quatro gráficos estão nas caixas recolhíveis junto às figuras.</p>
+</div>
+</div>
+<hr>
 <section id="crescimento-de-funções" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="crescimento-de-funções"><span class="header-section-number">1.1</span> 📈 Crescimento de funções</h2>
 <p>Dizer que uma função cresce significa dizer que seus valores aumentam quando a variável independente aumenta.</p>
@@ -489,7 +503,7 @@ Figura&nbsp;1: Gráficos das funções x e x²
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -498,9 +512,9 @@ Figura&nbsp;1: Gráficos das funções x e x²
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="0e9a5e50" class="cell" data-execution_count="1">
+<div id="b3810f6b" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -682,7 +696,7 @@ Figura&nbsp;2: Comparação entre polinômio e termo dominante
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -691,9 +705,9 @@ Figura&nbsp;2: Comparação entre polinômio e termo dominante
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="8d121dfd" class="cell" data-execution_count="2">
+<div id="02fa0ac7" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -773,7 +787,19 @@ p(x)-d(x)=-5x^2+7x-1,
 <p>Essa notação indica que, para valores suficientemente grandes de <span class="math inline">\(x\)</span>, as duas funções apresentam o mesmo comportamento em termos relativos. Não significa que seus valores sejam iguais ou que a diferença absoluta entre eles tenda a zero.</p>
 </div>
 </div>
-<p><strong>Atenção:</strong> quando <span class="math inline">\(x\to-\infty\)</span>, o termo dominante também determina o comportamento assintótico do polinômio. Entretanto, o sinal dos valores depende do sinal do coeficiente líder e da paridade do grau. Por isso, devemos distinguir o comportamento do polinômio em <span class="math inline">\(+\infty\)</span> daquele observado em <span class="math inline">\(-\infty\)</span>.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="O sinal no infinito">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Aviso</span>O sinal no infinito
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quando <span class="math inline">\(x\to-\infty\)</span>, o termo dominante também determina o comportamento assintótico do polinômio. O sinal dos valores depende do coeficiente líder e da paridade do grau. Por isso, analisamos separadamente <span class="math inline">\(+\infty\)</span> e <span class="math inline">\(-\infty\)</span>.</p>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -915,18 +941,18 @@ a^x
 <p><span class="math display">\[
 \ln x,\qquad x,\qquad x^2,\qquad 2^x.
 \]</span></p>
-<div id="fig-hierarquia-crescimento" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Comparação dos gráficos de ln x, x, x² e 2 elevado a x.">
+<div id="fig-hierarquia-crescimento" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dois painéis com ln x, x, x ao quadrado e 2 elevado a x, de x igual a 2 a x igual a 10. Na escala linear a exponencial domina o gráfico. Na escala logarítmica as quatro curvas ficam distinguíveis.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hierarquia-crescimento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/1.16-hierarquia-crescimento.svg" class="img-fluid figure-img" style="width:90.0%" alt="Comparação dos gráficos de ln x, x, x² e 2 elevado a x.">
+<img src="images/1.16-hierarquia-crescimento.svg" class="img-fluid figure-img" style="width:100.0%" alt="Dois painéis com ln x, x, x ao quadrado e 2 elevado a x, de x igual a 2 a x igual a 10. Na escala linear a exponencial domina o gráfico. Na escala logarítmica as quatro curvas ficam distinguíveis.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hierarquia-crescimento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3: Comparação dos crescimentos logarítmico, linear, quadrático e exponencial
+Figura&nbsp;3: Hierarquia de crescimento em escalas verticais linear e logarítmica.
 </figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -935,36 +961,63 @@ Figura&nbsp;3: Comparação dos crescimentos logarítmico, linear, quadrático e
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="10edc68e" class="cell" data-execution_count="3">
+<div id="8bf52d90" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">500</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">5.5</span>))</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ax.plot(x, np.log(x), label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">ln x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>ax.plot(x, x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ax.plot(x, <span class="dv">2</span><span class="op">**</span>x, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">2</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Hierarquia de crescimento"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$x$"</span>)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$f(x)$"</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-hierarquia-crescimento.svg"</span>,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> LogLocator, NullFormatter</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Começamos em x=2 para que ln(x) também seja positivo.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">600</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>curvas <span class="op">=</span> [</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    (np.log(x), <span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">ln x</span><span class="dv">$</span><span class="vs">"</span>, <span class="st">"#A9561F"</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    (x, <span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, <span class="st">"#7461A6"</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    (x<span class="op">**</span><span class="dv">2</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">^</span><span class="vs">2</span><span class="dv">$</span><span class="vs">"</span>, <span class="st">"#196399"</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">2</span><span class="op">**</span>x, <span class="vs">r"</span><span class="dv">$</span><span class="vs">2</span><span class="dv">^</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, <span class="st">"#08756D"</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>fig, (ax_linear, ax_log) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">9.4</span>, <span class="fl">4.35</span>),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                                        sharex<span class="op">=</span><span class="va">True</span>, layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, titulo <span class="kw">in</span> [(ax_linear, <span class="st">"Escala vertical linear"</span>),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                   (ax_log, <span class="st">"Escala vertical logarítmica"</span>)]:</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y, rotulo, cor <span class="kw">in</span> curvas:</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        ax.plot(x, y, label<span class="op">=</span>rotulo, color<span class="op">=</span>cor, linewidth<span class="op">=</span><span class="fl">2.2</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    ax.<span class="bu">set</span>(title<span class="op">=</span>titulo, xlabel<span class="op">=</span><span class="st">"$x$"</span>, ylabel<span class="op">=</span><span class="st">"Valor da função"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>           xlim<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">10</span>), xticks<span class="op">=</span>np.arange(<span class="dv">2</span>, <span class="dv">11</span>, <span class="dv">2</span>))</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    ax.set_axisbelow(<span class="va">True</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.24</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ax_linear.set_ylim(<span class="dv">0</span>, <span class="dv">1120</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>ax_log.set_yscale(<span class="st">"log"</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>ax_log.set_ylim(<span class="fl">0.55</span>, <span class="dv">1650</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>ax_log.yaxis.set_major_locator(LogLocator(base<span class="op">=</span><span class="dv">10</span>))</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>ax_log.yaxis.set_minor_formatter(NullFormatter())</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>ax_linear.legend(loc<span class="op">=</span><span class="st">"upper left"</span>, ncol<span class="op">=</span><span class="dv">2</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ax_log.legend(loc<span class="op">=</span><span class="st">"upper left"</span>, ncol<span class="op">=</span><span class="dv">2</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-hierarquia-crescimento.svg"</span>,</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 </div>
-<p>Observe que o gráfico utiliza uma escala vertical comum. Por isso, a exponencial acaba dominando visualmente as demais curvas na região final.</p>
+<p>Os dois painéis mostram as mesmas funções para <span class="math inline">\(2\leq x\leq 10\)</span>. Na escala linear, a exponencial ocupa grande parte da altura do gráfico. Na escala logarítmica, marcas igualmente espaçadas no eixo vertical representam multiplicações pelo mesmo fator. Essa escala permite distinguir também as curvas de menor valor. Começamos em <span class="math inline">\(x=2\)</span> para que os quatro valores sejam positivos.</p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/quando-dois-elevado-a-x-ultrapassa-x-ao-quadrado.mp4">Assista ao vídeo Quando <span class="math inline">\(2^x\)</span> ultrapassa <span class="math inline">\(x^2\)</span>?</a></strong> (duração: 83 s)</p>
+<p>Compare os valores perto do encontro em <span class="math inline">\(x=4\)</span> e observe o quociente <span class="math inline">\(x^2/2^x\)</span> para entradas maiores.</p>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -1091,7 +1144,7 @@ Figura&nbsp;4: Exemplos de assíntotas verticais, horizontais e oblíquas
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1100,9 +1153,9 @@ Figura&nbsp;4: Exemplos de assíntotas verticais, horizontais e oblíquas
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="01ed4078" class="cell" data-execution_count="4">
+<div id="98e130db" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1112,8 +1165,8 @@ Figura&nbsp;4: Exemplos de assíntotas verticais, horizontais e oblíquas
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="fl">1.9</span>, <span class="dv">400</span>)</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="fl">2.1</span>, <span class="dv">6</span>, <span class="dv">400</span>)</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x1, <span class="dv">1</span><span class="op">/</span>(x1<span class="op">-</span><span class="dv">2</span>), linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x2, <span class="dv">1</span><span class="op">/</span>(x2<span class="op">-</span><span class="dv">2</span>), linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x1, <span class="dv">1</span><span class="op">/</span>(x1<span class="op">-</span><span class="dv">2</span>), color<span class="op">=</span><span class="st">"#196399"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(x2, <span class="dv">1</span><span class="op">/</span>(x2<span class="op">-</span><span class="dv">2</span>), color<span class="op">=</span><span class="st">"#196399"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].axvline(<span class="dv">2</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x=2</span><span class="dv">$</span><span class="vs">"</span>)</span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
@@ -1126,40 +1179,42 @@ Figura&nbsp;4: Exemplos de assíntotas verticais, horizontais e oblíquas
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Assíntota horizontal</span></span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">500</span>)</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(x, x<span class="op">/</span>(x<span class="op">+</span><span class="dv">1</span>), linewidth<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\f</span><span class="vs">rac{x}{x</span><span class="op">+</span><span class="vs">1}</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axhline(<span class="dv">1</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>                label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=1</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axvline(<span class="op">-</span><span class="dv">1</span>, linestyle<span class="op">=</span><span class="st">":"</span>, color<span class="op">=</span><span class="st">"gray"</span>)</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Assíntota horizontal"</span>)</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"$x$"</span>)</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"$f(x)$"</span>)</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Assíntota oblíqua</span></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">8</span>, <span class="op">-</span><span class="fl">0.25</span>, <span class="dv">400</span>)</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="fl">0.25</span>, <span class="dv">8</span>, <span class="dv">400</span>)</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x1, x1 <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>x1, linewidth<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="op">+</span><span class="ch">\f</span><span class="vs">rac</span><span class="op">{1}</span><span class="vs">{x}</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x2, x2 <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>x2, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x, x, <span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_title(<span class="st">"Assíntota oblíqua"</span>)</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_xlabel(<span class="st">"$x$"</span>)</span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_ylabel(<span class="st">"$f(x)$"</span>)</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_ylim(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].legend()</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-tipos-assintotas.svg"</span>,</span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># A função tem dois ramos separados por x=-1.</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ramo <span class="kw">in</span> <span class="bu">enumerate</span>((x[x <span class="op">&lt;</span> <span class="op">-</span><span class="dv">1</span>], x[x <span class="op">&gt;</span> <span class="op">-</span><span class="dv">1</span>])):</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].plot(ramo, ramo<span class="op">/</span>(ramo<span class="op">+</span><span class="dv">1</span>), color<span class="op">=</span><span class="st">"#196399"</span>, linewidth<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>                 label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="ch">\f</span><span class="vs">rac{x}{x</span><span class="op">+</span><span class="vs">1}</span><span class="dv">$</span><span class="vs">"</span> <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="va">None</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axhline(<span class="dv">1</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>                label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=1</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].axvline(<span class="op">-</span><span class="dv">1</span>, linestyle<span class="op">=</span><span class="st">":"</span>, color<span class="op">=</span><span class="st">"gray"</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Assíntota horizontal"</span>)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"$f(x)$"</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Assíntota oblíqua</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">8</span>, <span class="op">-</span><span class="fl">0.02</span>, <span class="dv">600</span>)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.linspace(<span class="fl">0.02</span>, <span class="dv">8</span>, <span class="dv">600</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x1, x1 <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>x1, color<span class="op">=</span><span class="st">"#196399"</span>, linewidth<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="op">+</span><span class="ch">\f</span><span class="vs">rac</span><span class="op">{1}</span><span class="vs">{x}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x2, x2 <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>x2, color<span class="op">=</span><span class="st">"#196399"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].plot(x, x, <span class="st">"--"</span>, color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_title(<span class="st">"Assíntota oblíqua"</span>)</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_ylabel(<span class="st">"$f(x)$"</span>)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].set_ylim(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">2</span>].legend()</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.16-tipos-assintotas.svg"</span>,</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>            <span class="bu">format</span><span class="op">=</span><span class="st">"svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1171,6 +1226,23 @@ Figura&nbsp;4: Exemplos de assíntotas verticais, horizontais e oblíquas
 <li>A oblíqua descreve a aproximação da função a uma reta inclinada quando <span class="math inline">\(x\)</span> tende ao infinito.</li>
 </ul>
 <p>É importante lembrar que os comportamentos em <span class="math inline">\(+\infty\)</span> e <span class="math inline">\(-\infty\)</span> podem ser diferentes. Uma função pode apresentar uma assíntota em uma direção e outra assíntota, ou nenhuma, na direção oposta.</p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Dica — Quociente ou diferença?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>💡 Dica — Quociente ou diferença?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use o <strong>quociente</strong> <span class="math inline">\(f(x)/g(x)\)</span> para comparar os valores de duas funções em termos relativos. Se ele tende a <span class="math inline">\(1\)</span>, as funções são assintoticamente equivalentes nessa direção.</li>
+<li>Use a <strong>diferença</strong> <span class="math inline">\(f(x)-(mx+b)\)</span> para verificar se a separação vertical entre o gráfico e a reta tende a zero. Quando isso acontece, a reta <span class="math inline">\(y=mx+b\)</span>, com <span class="math inline">\(m\neq0\)</span>, é assíntota oblíqua nessa direção.</li>
+</ul>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -1305,7 +1377,11 @@ Figura&nbsp;4: Exemplos de assíntotas verticais, horizontais e oblíquas
 <li>Comparações de crescimento estão ligadas a limites de quocientes.</li>
 </ul>
 <p>A taxa de variação média também prepara o caminho para o estudo da derivada, que permitirá investigar a taxa de variação instantânea.</p>
-<p>Por isso, esta aula funciona como uma ponte entre o estudo de funções e o módulo de limites.</p>
+<p>Considere <span class="math inline">\(F(x)=x/\sqrt{1+x^2}\)</span>. Por que seus valores se aproximam de <span class="math inline">\(1\)</span> à direita e de <span class="math inline">\(-1\)</span> à esquerda? Para <span class="math inline">\(x\neq0\)</span>, podemos escrever</p>
+<p><span class="math display">\[
+F(x)=\frac{x}{|x|}\cdot\frac{1}{\sqrt{1+1/x^2}}.
+\]</span></p>
+<p>O segundo fator se aproxima de <span class="math inline">\(1\)</span> nas duas direções. O primeiro vale <span class="math inline">\(1\)</span> para <span class="math inline">\(x&gt;0\)</span> e <span class="math inline">\(-1\)</span> para <span class="math inline">\(x&lt;0\)</span>. No estudo dos limites, vamos formalizar como a mesma função pode ter comportamentos distintos nas duas direções do infinito.</p>
 </div>
 </div>
 </section>
@@ -1391,6 +1467,15 @@ f(x)=\frac{x^2+4}{x}.
 <li><p>Justifique sua resposta utilizando o comportamento de <span class="math inline">\(1/x\)</span> no infinito.</p></li>
 </ol>
 </section>
+<section id="exercício-8" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="exercício-8"><span class="header-section-number">2.8</span> 🧪 Exercício 8</h2>
+<p>Considere <span class="math inline">\(f(x)=x+4+\dfrac{1}{x}\)</span>, para <span class="math inline">\(x\neq0\)</span>.</p>
+<ol type="a">
+<li>Determine o limite de <span class="math inline">\(f(x)/x\)</span> quando <span class="math inline">\(x\to+\infty\)</span>. O que esse resultado indica?</li>
+<li>Determine o limite de <span class="math inline">\(f(x)-x\)</span> na mesma direção.</li>
+<li>Encontre a assíntota oblíqua para <span class="math inline">\(x\to+\infty\)</span> e justifique.</li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
@@ -1398,7 +1483,7 @@ f(x)=\frac{x^2+4}{x}.
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Clique para consultar o gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1407,7 +1492,7 @@ f(x)=\frac{x^2+4}{x}.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -1594,6 +1679,14 @@ f(x)-x=\frac{4}{x}.
 \lim_{x\to-\infty}\frac{4}{x}=0,
 \]</span></p>
 <p>a reta <span class="math inline">\(y=x\)</span> é uma assíntota oblíqua nas duas direções do infinito.</p>
+</section>
+<section id="exercício-8-1" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="exercício-8-1"><span class="header-section-number">3.8</span> 🧪 Exercício 8</h2>
+<ol type="a">
+<li>Temos <span class="math inline">\(f(x)/x=1+4/x+1/x^2\to1\)</span>. Portanto, <span class="math inline">\(f(x)\sim x\)</span> quando <span class="math inline">\(x\to+\infty\)</span>.</li>
+<li>A diferença <span class="math inline">\(f(x)-x=4+1/x\)</span> tende a <span class="math inline">\(4\)</span>.</li>
+<li>A reta <span class="math inline">\(y=x+4\)</span> é assíntota oblíqua, pois <span class="math inline">\(f(x)-(x+4)=1/x\to0\)</span> quando <span class="math inline">\(x\to+\infty\)</span>.</li>
+</ol>
 </section>
 </div>
 </div>
