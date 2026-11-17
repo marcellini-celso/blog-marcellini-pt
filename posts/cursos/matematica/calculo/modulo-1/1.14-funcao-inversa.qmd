@@ -773,6 +773,12 @@ $$
 f^{-1}(x)=-\sqrt{x}.
 $$
 
+::: {.callout-tip title="💡 Dica — Domínio e imagem da inversa"}
+
+Antes de isolar a variável, determine o domínio e a imagem da função. Para uma função injetiva $f$ com domínio $A$, considere $f:A\to f(A)$. A inversa tem domínio $f(A)$ e imagem $A$. Isso indica quais valores podem entrar na inversa e qual ramo devemos usar ao resolver $y=f(x)$.
+
+:::
+
 ::: {.callout-note title="Atenção ao domínio"}
 
 A função \(x^2\) possui duas restrições naturais que permitem construir inversas diferentes:
@@ -851,6 +857,16 @@ fig.savefig('images/1.14-restricoes-dominio.svg',
 
 plt.close(fig)
 ```
+
+:::
+
+***
+
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo sobre os dois ramos da parábola](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/qual-entrada-gerou-o-quatro.mp4)** (duração: 84 s)
+
+Veja como a escolha do ramo determina se a saída $4$ recupera a entrada $2$ ou $-2$.
 
 :::
 
@@ -1171,10 +1187,11 @@ Se alguma reta horizontal corta o gráfico em dois ou mais pontos, existem dois 
 %%| fig-width: 6
 %%| fig-height: 3.5
 flowchart TB
-    A["Escolha uma reta horizontal"] --> B["Observe as interseções com o gráfico"]
-    B --> C{"Quantos pontos de interseção?"}
-    C -->|"No máximo um"| D["A condição de injetividade é satisfeita"]
-    C -->|"Dois ou mais"| E["A função não é injetiva"]
+    A["Compare as interseções das retas horizontais com o gráfico"]
+    A --> B["Toda reta encontra no máximo um ponto"]
+    A --> C["Alguma reta encontra dois ou mais pontos"]
+    B --> D["A função é injetiva"]
+    C --> E["A função não é injetiva"]
 ```
 
 Por exemplo, o gráfico de:
@@ -1386,7 +1403,7 @@ flowchart LR
     B --> C["Recuperar x ∈ ℝ"]
 ```
 
-![Gráficos da função exponencial f(x)=eˣ e de sua inversa f⁻¹(x)=ln x, simétricos em relação à reta y=x.](images/1.14-exponencial-logaritmo.svg){#fig-1-14-exponencial-logaritmo fig-alt="Plano cartesiano com os gráficos de y=e elevado a x e y=logaritmo natural de x, além da reta y=x. Os gráficos da exponencial e do logaritmo natural são simétricos em relação à reta y=x." width="90%"}
+A simetria entre os dois gráficos aparece na @fig-1-14-exponencial-logaritmo.
 
 A relação entre exponencial e logaritmo será especialmente importante no estudo de limites, derivadas e integrais.
 
@@ -1679,7 +1696,9 @@ Funções inversas aparecem em muitos pontos do Cálculo.
 
 A função logarítmica aparece como inversa da exponencial. As funções trigonométricas inversas aparecem em integrais, substituições e equações.
 
-A derivada da função inversa será estudada mais adiante. Sua compreensão depende da relação entre a função original e sua inversa.
+Considere dois pontos do gráfico de uma função inversível. A diferença horizontal é $\Delta x$ e a vertical é $\Delta y$. Ao refletir os pontos na reta $y=x$, as diferenças trocam de papel. Quando ambas são diferentes de zero, a inclinação da secante passa de $\Delta y/\Delta x$ a $\Delta x/\Delta y$.
+
+O que acontece quando os dois pontos se aproximam? Essa troca prepara o estudo da inclinação da tangente ao gráfico da inversa.
 
 Além disso, compreender inversas ajuda a entender melhor domínio, imagem, composição e transformação de funções.
 
@@ -1743,6 +1762,13 @@ Determine domínio e imagem das funções:
 a) \(f(x)=e^x\)
 
 b) \(g(x)=\ln x\)
+
+## 🧪 Exercício 6
+
+Considere $f(x)=\dfrac{x}{1+x}$ para $x\geq0$.
+
+a) Determine a imagem de $f$.
+b) Encontre $f^{-1}$ e indique seu domínio.
 
 :::
 
@@ -2007,6 +2033,22 @@ $$
 $$
 
 Essas funções são inversas uma da outra.
+
+## 🧪 Exercício 6
+
+a) Para $x\geq0$, o denominador $1+x$ é positivo e $0\leq x/(1+x)<1$. Para verificar que todo $y\in[0,1)$ é atingido, resolvemos
+
+$$
+y=\frac{x}{1+x}
+\quad\Longleftrightarrow\quad
+x(1-y)=y
+\quad\Longleftrightarrow\quad
+x=\frac{y}{1-y}.
+$$
+
+Esse valor de $x$ é não negativo e é único para cada $y\in[0,1)$. Logo, a imagem é $[0,1)$, e $f$ é injetiva.
+
+b) A equação anterior fornece $f^{-1}(y)=\dfrac{y}{1-y}$. O domínio da inversa é a imagem de $f$, isto é, $[0,1)$.
 
 :::
 
