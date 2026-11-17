@@ -1549,10 +1549,17 @@ Uma leitura possível é:
 
 Essa leitura ajuda a construir o gráfico passo a passo.
 
-Uma forma compacta de registrar as mudanças é acompanhar um ponto do
-gráfico original. Para $b\neq 0$, na transformação geral
-$g(x)=a\,f\bigl(b(x-h)\bigr)+k$, cada ponto $(u,v)$ do gráfico de $f$
-corresponde ao ponto $(h+u/b,\,av+k)$ do gráfico de $g$.
+::: {.callout-tip title="💡 Dica de transformação: acompanhe um ponto"}
+
+Na transformação $g(x)=a\,f\bigl(b(x-h)\bigr)+k$, com $b\neq0$, acompanhe um ponto $(u,v)$ do gráfico de $f$. Para usar a entrada original $u$, resolva $b(x-h)=u$. A saída $v$ é então multiplicada por $a$ e somada a $k$. Assim,
+
+$$
+(u,v)\longmapsto\left(h+\frac{u}{b},\,av+k\right).
+$$
+
+Por exemplo, em $g(x)=f(2x)$, a abscissa é dividida por $2$, o que comprime o gráfico na horizontal.
+
+:::
 
 | Transformação | Correspondência de pontos |
 |---|---|
@@ -1654,6 +1661,14 @@ salvar(fig,"1.12-ordem-transformacoes.svg")
 
 :::
 
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo sobre as transformações da parábola](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/transformacoes-da-parabola.mp4)** (duração: 73 s)
+
+Acompanhe o vértice e o ponto $(1,1)$ durante as translações, o alongamento e a reflexão.
+
+:::
+
 ***
 
 ::: {.callout-note title="📋 Quadro-resumo"}
@@ -1696,6 +1711,10 @@ No estudo de derivadas, ajudam a prever inclinações e crescimento.
 No estudo de integrais, ajudam a interpretar áreas e simetrias.
 
 Em resumo, transformações gráficas são uma ponte entre a álgebra da fórmula e a geometria do gráfico.
+
+**Por que a tangente a $f(x)=x^2$ em $x=1$ tem a mesma inclinação que a tangente a $g(x)=(x-1)^2+1$ em $x=2$?**
+
+A translação de uma unidade para a direita e uma para cima leva $(1,1)$ a $(2,2)$. Ao transladar dois pontos juntos, suas diferenças horizontal e vertical permanecem iguais. Por isso, as secantes correspondentes têm a mesma inclinação. Quando os dois pontos se aproximam, essa igualdade se conserva. O painel da tangente mostra a inclinação $2$ na parábola transladada.
 
 A função transladada $g(x)=(x-1)^2+1$ permite visualizar, em quatro painéis, aproximação, continuidade, tangência e área acumulada.
 
@@ -1876,6 +1895,17 @@ a) a amplitude;
 b) o período;  
 c) o deslocamento vertical.
 
+## 🧪 Exercício 6
+
+Considere $f(x)=\sqrt{x}$ e
+
+$$
+g(x)=-2\sqrt{2(x-3)}+4.
+$$
+
+a) Determine o domínio real de $g$.
+b) Use a correspondência entre pontos para encontrar onde $(0,0)$ e $(4,2)$, do gráfico de $f$, aparecem no gráfico de $g$.
+
 :::
 
 ***
@@ -2037,6 +2067,12 @@ $$
 $$
 
 c) O deslocamento vertical é $1$ unidade para baixo, pois aparece o termo $-1$.
+
+## 🧪 Exercício 6
+
+a) A raiz exige $2(x-3)\geq0$. Portanto, $x\geq3$ e o domínio é $D_g=[3,+\infty)$.
+
+b) Os parâmetros são $a=-2$, $b=2$, $h=3$ e $k=4$. Logo, $(u,v)$ passa para $(3+u/2,\,4-2v)$. O extremo $(0,0)$ passa para $(3,4)$, e $(4,2)$ passa para $(5,0)$.
 
 :::
 

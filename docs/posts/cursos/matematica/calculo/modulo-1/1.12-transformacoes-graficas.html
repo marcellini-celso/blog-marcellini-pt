@@ -1858,7 +1858,23 @@ g(x)=-2f(x-3)+4.
 <li><span class="math inline">\(+4\)</span>: deslocamento vertical para cima.</li>
 </ol>
 <p>Essa leitura ajuda a construir o gráfico passo a passo.</p>
-<p>Uma forma compacta de registrar as mudanças é acompanhar um ponto do gráfico original. Para <span class="math inline">\(b\neq 0\)</span>, na transformação geral <span class="math inline">\(g(x)=a\,f\bigl(b(x-h)\bigr)+k\)</span>, cada ponto <span class="math inline">\((u,v)\)</span> do gráfico de <span class="math inline">\(f\)</span> corresponde ao ponto <span class="math inline">\((h+u/b,\,av+k)\)</span> do gráfico de <span class="math inline">\(g\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Dica de transformação: acompanhe um ponto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>💡 Dica de transformação: acompanhe um ponto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Na transformação <span class="math inline">\(g(x)=a\,f\bigl(b(x-h)\bigr)+k\)</span>, com <span class="math inline">\(b\neq0\)</span>, acompanhe um ponto <span class="math inline">\((u,v)\)</span> do gráfico de <span class="math inline">\(f\)</span>. Para usar a entrada original <span class="math inline">\(u\)</span>, resolva <span class="math inline">\(b(x-h)=u\)</span>. A saída <span class="math inline">\(v\)</span> é então multiplicada por <span class="math inline">\(a\)</span> e somada a <span class="math inline">\(k\)</span>. Assim,</p>
+<p><span class="math display">\[
+(u,v)\longmapsto\left(h+\frac{u}{b},\,av+k\right).
+\]</span></p>
+<p>Por exemplo, em <span class="math inline">\(g(x)=f(2x)\)</span>, a abscissa é dividida por <span class="math inline">\(2\)</span>, o que comprime o gráfico na horizontal.</p>
+</div>
+</div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1894,7 +1910,7 @@ g(x)=-2f(x-3)+4.
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1903,7 +1919,7 @@ g(x)=-2f(x-3)+4.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1985,6 +2001,20 @@ g(x)=-2f(x-3)+4.
 <span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(hspace<span class="op">=</span><span class="fl">.36</span>,wspace<span class="op">=</span><span class="fl">.25</span>)</span>
 <span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a>salvar(fig,<span class="st">"1.12-ordem-transformacoes.svg"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/transformacoes-da-parabola.mp4">Assista ao vídeo sobre as transformações da parábola</a></strong> (duração: 73 s)</p>
+<p>Acompanhe o vértice e o ponto <span class="math inline">\((1,1)\)</span> durante as translações, o alongamento e a reflexão.</p>
 </div>
 </div>
 <hr>
@@ -2071,6 +2101,8 @@ g(x)=-2f(x-3)+4.
 <p>No estudo de derivadas, ajudam a prever inclinações e crescimento.</p>
 <p>No estudo de integrais, ajudam a interpretar áreas e simetrias.</p>
 <p>Em resumo, transformações gráficas são uma ponte entre a álgebra da fórmula e a geometria do gráfico.</p>
+<p><strong>Por que a tangente a <span class="math inline">\(f(x)=x^2\)</span> em <span class="math inline">\(x=1\)</span> tem a mesma inclinação que a tangente a <span class="math inline">\(g(x)=(x-1)^2+1\)</span> em <span class="math inline">\(x=2\)</span>?</strong></p>
+<p>A translação de uma unidade para a direita e uma para cima leva <span class="math inline">\((1,1)\)</span> a <span class="math inline">\((2,2)\)</span>. Ao transladar dois pontos juntos, suas diferenças horizontal e vertical permanecem iguais. Por isso, as secantes correspondentes têm a mesma inclinação. Quando os dois pontos se aproximam, essa igualdade se conserva. O painel da tangente mostra a inclinação <span class="math inline">\(2\)</span> na parábola transladada.</p>
 <p>A função transladada <span class="math inline">\(g(x)=(x-1)^2+1\)</span> permite visualizar, em quatro painéis, aproximação, continuidade, tangência e área acumulada.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2081,7 +2113,7 @@ g(x)=-2f(x-3)+4.
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2090,7 +2122,7 @@ g(x)=-2f(x-3)+4.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2283,6 +2315,17 @@ g(x)=3\sin(2x)-1,
 <li>o deslocamento vertical.</li>
 </ol>
 </section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
+<p>Considere <span class="math inline">\(f(x)=\sqrt{x}\)</span> e</p>
+<p><span class="math display">\[
+g(x)=-2\sqrt{2(x-3)}+4.
+\]</span></p>
+<ol type="a">
+<li>Determine o domínio real de <span class="math inline">\(g\)</span>.</li>
+<li>Use a correspondência entre pontos para encontrar onde <span class="math inline">\((0,0)\)</span> e <span class="math inline">\((4,2)\)</span>, do gráfico de <span class="math inline">\(f\)</span>, aparecem no gráfico de <span class="math inline">\(g\)</span>.</li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
@@ -2290,7 +2333,7 @@ g(x)=3\sin(2x)-1,
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2299,7 +2342,7 @@ g(x)=3\sin(2x)-1,
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -2431,6 +2474,13 @@ g(x)=3\sin(2x)-1.
 \]</span></p>
 <ol start="3" type="a">
 <li>O deslocamento vertical é <span class="math inline">\(1\)</span> unidade para baixo, pois aparece o termo <span class="math inline">\(-1\)</span>.</li>
+</ol>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<ol type="a">
+<li><p>A raiz exige <span class="math inline">\(2(x-3)\geq0\)</span>. Portanto, <span class="math inline">\(x\geq3\)</span> e o domínio é <span class="math inline">\(D_g=[3,+\infty)\)</span>.</p></li>
+<li><p>Os parâmetros são <span class="math inline">\(a=-2\)</span>, <span class="math inline">\(b=2\)</span>, <span class="math inline">\(h=3\)</span> e <span class="math inline">\(k=4\)</span>. Logo, <span class="math inline">\((u,v)\)</span> passa para <span class="math inline">\((3+u/2,\,4-2v)\)</span>. O extremo <span class="math inline">\((0,0)\)</span> passa para <span class="math inline">\((3,4)\)</span>, e <span class="math inline">\((4,2)\)</span> passa para <span class="math inline">\((5,0)\)</span>.</p></li>
 </ol>
 </section>
 </div>
