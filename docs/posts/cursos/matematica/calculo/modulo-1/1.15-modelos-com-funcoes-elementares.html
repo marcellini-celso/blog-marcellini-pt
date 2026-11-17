@@ -444,6 +444,20 @@ window.Quarto = {
 <p>Nesta aula, vamos ver como funções elementares podem ser usadas para representar situações simples.</p>
 <p>O objetivo não é transformar a realidade em fórmulas perfeitas. O objetivo é aprender a escolher uma função que capture o comportamento principal de um fenômeno.</p>
 <hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Explorando com Python e R">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Explorando com Python e R
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os códigos Python para reproduzir os seis gráficos estão nas caixas recolhíveis junto às figuras.</p>
+</div>
+</div>
+<hr>
 <section id="o-que-é-modelar" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="o-que-é-modelar"><span class="header-section-number">1.1</span> 🛠️ O que é modelar?</h2>
 <p>Modelar é construir uma ponte entre uma situação e uma estrutura matemática.</p>
@@ -545,7 +559,7 @@ Figura&nbsp;1: Modelo afim de custo: custo fixo e custo variável.
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -554,9 +568,9 @@ Figura&nbsp;1: Modelo afim de custo: custo fixo e custo variável.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="635e3882" class="cell" data-execution_count="1">
+<div id="2320c526" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -659,7 +673,7 @@ Figura&nbsp;2: Trajetória vertical idealizada de um objeto.
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -668,9 +682,9 @@ Figura&nbsp;2: Trajetória vertical idealizada de um objeto.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="9daa3ad8" class="cell" data-execution_count="2">
+<div id="ebb84513" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -743,7 +757,7 @@ Q(t)=Q_0a^t,
 \]</span></p>
 <p>em que:</p>
 <ul>
-<li><span class="math inline">\(Q_0\)</span> é o valor inicial;</li>
+<li><span class="math inline">\(Q_0&gt;0\)</span> é o valor inicial;</li>
 <li><span class="math inline">\(a\)</span> é o fator de crescimento ou decaimento;</li>
 <li><span class="math inline">\(t\)</span> é o tempo.</li>
 </ul>
@@ -791,23 +805,19 @@ M(2)=20.
 </section>
 <section id="visualização-crescimento-e-decaimento-exponencial" class="level3" data-number="1.5.2">
 <h3 data-number="1.5.2" class="anchored" data-anchor-id="visualização-crescimento-e-decaimento-exponencial"><span class="header-section-number">1.5.2</span> 📈 Visualização: crescimento e decaimento exponencial</h3>
-<p>O gráfico compara dois comportamentos:</p>
-<ul>
-<li>crescimento de uma população por fator multiplicativo;</li>
-<li>redução da massa de uma substância por um fator constante.</li>
-</ul>
-<div id="fig-modelos-exponenciais" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico comparando Q(t)=1000 vezes 1,10 elevado a t e M(t)=80 vezes 0,5 elevado a t.">
+<p>Os dois painéis usam o mesmo eixo do tempo. Cada um tem escala vertical e unidade próprias. Os pontos marcam os valores ao fim de cada período inteiro, incluindo o valor inicial em <span class="math inline">\(t=0\)</span>.</p>
+<div id="fig-modelos-exponenciais" class="quarto-float quarto-figure quarto-figure-center anchored" alt="À esquerda, a população cresce de 1000 para cerca de 2594 indivíduos em 10 períodos. À direita, a massa cai de 80 para 40 no primeiro período e se aproxima de zero.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-modelos-exponenciais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/1.15-modelos-exponenciais.svg" class="img-fluid figure-img" style="width:85.0%" alt="Gráfico comparando Q(t)=1000 vezes 1,10 elevado a t e M(t)=80 vezes 0,5 elevado a t.">
+<img src="images/1.15-modelos-exponenciais.svg" class="img-fluid figure-img" style="width:95.0%" alt="À esquerda, a população cresce de 1000 para cerca de 2594 indivíduos em 10 períodos. À direita, a massa cai de 80 para 40 no primeiro período e se aproxima de zero.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modelos-exponenciais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3: Comparação entre crescimento e decaimento exponencial.
+Figura&nbsp;3: Crescimento da população e decaimento da massa em painéis com escalas verticais próprias.
 </figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -816,34 +826,40 @@ Figura&nbsp;3: Comparação entre crescimento e decaimento exponencial.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="fde13774" class="cell" data-execution_count="3">
+<div id="ca418e11" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">300</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> <span class="dv">1000</span> <span class="op">*</span> (<span class="fl">1.10</span>)<span class="op">**</span>t</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> <span class="dv">80</span> <span class="op">*</span> (<span class="fl">0.5</span>)<span class="op">**</span>t</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> np.arange(<span class="dv">11</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>fig, (ax_q, ax_m) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">9.6</span>, <span class="fl">4.2</span>), sharex<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ax.plot(t, Q, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"Crescimento: </span><span class="dv">$</span><span class="vs">Q</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs">=1000</span><span class="kw">(</span><span class="vs">1</span><span class="op">{,}</span><span class="vs">10</span><span class="kw">)</span><span class="dv">^</span><span class="vs">t</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax.plot(t, M, linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="vs">r"Decaimento: </span><span class="dv">$</span><span class="vs">M</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs">=80</span><span class="kw">(</span><span class="vs">0</span><span class="op">{,}</span><span class="vs">5</span><span class="kw">)</span><span class="dv">^</span><span class="vs">t</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Modelos exponenciais"</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Tempo (períodos)"</span>)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Quantidade"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ax_q.plot(t, <span class="dv">1000</span> <span class="op">*</span> <span class="fl">1.10</span><span class="op">**</span>t, color<span class="op">=</span><span class="st">"#196399"</span>, linewidth<span class="op">=</span><span class="fl">2.4</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>ax_q.scatter(periodos, <span class="dv">1000</span> <span class="op">*</span> <span class="fl">1.10</span><span class="op">**</span>periodos,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>             color<span class="op">=</span><span class="st">"#196399"</span>, s<span class="op">=</span><span class="dv">19</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>ax_q.set_title(<span class="vs">r"Crescimento: </span><span class="dv">$</span><span class="vs">Q</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs">=1000</span><span class="kw">(</span><span class="vs">1</span><span class="op">{,}</span><span class="vs">10</span><span class="kw">)</span><span class="dv">^</span><span class="vs">t</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>ax_q.set_ylabel(<span class="st">"População (indivíduos)"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax_q.set_ylim(<span class="dv">0</span>, <span class="dv">2800</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax_m.plot(t, <span class="dv">80</span> <span class="op">*</span> <span class="fl">0.5</span><span class="op">**</span>t, color<span class="op">=</span><span class="st">"#11745F"</span>, linewidth<span class="op">=</span><span class="fl">2.4</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax_m.scatter(periodos, <span class="dv">80</span> <span class="op">*</span> <span class="fl">0.5</span><span class="op">**</span>periodos,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>             color<span class="op">=</span><span class="st">"#11745F"</span>, s<span class="op">=</span><span class="dv">19</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ax_m.set_title(<span class="vs">r"Decaimento: </span><span class="dv">$</span><span class="vs">M</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs">=80</span><span class="kw">(</span><span class="vs">0</span><span class="op">{,}</span><span class="vs">5</span><span class="kw">)</span><span class="dv">^</span><span class="vs">t</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax_m.set_ylabel(<span class="st">"Massa (unidades de massa)"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax_m.set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">86</span>)</span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelos-exponenciais.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> (ax_q, ax_m):</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">"Tempo (períodos)"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks(np.arange(<span class="dv">0</span>, <span class="dv">11</span>, <span class="dv">2</span>))</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    ax.set_axisbelow(<span class="va">True</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    ax.grid(alpha<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>fig.tight_layout(pad<span class="op">=</span><span class="fl">1.4</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.15-modelos-exponenciais.svg"</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -863,6 +879,21 @@ Q(t)=Q_0e^{kt},
 <p>em que <span class="math inline">\(k\)</span> é uma constante real.</p>
 <p>Se <span class="math inline">\(k&gt;0\)</span>, temos crescimento exponencial. Se <span class="math inline">\(k&lt;0\)</span>, temos decaimento exponencial.</p>
 <p>Essa distinção será importante posteriormente, quando estudarmos derivadas e equações diferenciais.</p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/somar-dez-ou-crescer-dez-por-cento.mp4">Assista ao vídeo Somar 10 ou crescer 10%?</a></strong> (duração: 86 s)</p>
+<p>As duas regras levam de 100 a 110 no primeiro período. Compare o que acontece nos períodos seguintes.</p>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -905,7 +936,7 @@ Figura&nbsp;4: Comportamento crescente e desacelerado de uma função logarítmi
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -914,9 +945,9 @@ Figura&nbsp;4: Comportamento crescente e desacelerado de uma função logarítmi
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="c1850c98" class="cell" data-execution_count="4">
+<div id="281f8102" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -962,7 +993,7 @@ f(x)=\frac{x}{x+1}.
 <p><span class="math display">\[
 \mathbb{R}\setminus\{-1\}.
 \]</span></p>
-<p>Para valores positivos de <span class="math inline">\(x\)</span>, temos</p>
+<p>Para <span class="math inline">\(x\geq0\)</span>, temos</p>
 <p><span class="math display">\[
 0\leq \frac{x}{x+1}&lt;1.
 \]</span></p>
@@ -994,7 +1025,7 @@ Figura&nbsp;5: Gráfico de uma função racional com assíntotas.
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1003,9 +1034,9 @@ Figura&nbsp;5: Gráfico de uma função racional com assíntotas.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="9b0d16b5" class="cell" data-execution_count="5">
+<div id="d23af752" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1053,7 +1084,7 @@ f(t)=A\sin(Bt+C)+D.
 <ul>
 <li><span class="math inline">\(A\)</span> controla a amplitude;</li>
 <li><span class="math inline">\(B\)</span> controla o período;</li>
-<li><span class="math inline">\(C\)</span> desloca o gráfico horizontalmente;</li>
+<li><span class="math inline">\(C\)</span> determina, com <span class="math inline">\(B\)</span>, o deslocamento horizontal de <span class="math inline">\(-C/B\)</span>, quando <span class="math inline">\(B\neq0\)</span>;</li>
 <li><span class="math inline">\(D\)</span> desloca o gráfico verticalmente.</li>
 </ul>
 <p>A amplitude é <span class="math inline">\(|A|\)</span> e, quando <span class="math inline">\(B\neq 0\)</span>, o período é</p>
@@ -1095,7 +1126,7 @@ Figura&nbsp;6: Modelo trigonométrico de temperatura diária.
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Clique para ver o código Python">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1104,9 +1135,9 @@ Figura&nbsp;6: Modelo trigonométrico de temperatura diária.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="a9694043" class="cell" data-execution_count="6">
+<div id="2e43ec57" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1227,17 +1258,17 @@ x\geq 0.
 \{0,1,2,3,\ldots\}.
 \]</span></p>
 <p>Mesmo que a fórmula faça sentido para <span class="math inline">\(x=-2\)</span>, esse valor não tem interpretação no problema.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Cuidado">
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Dica — Antes de usar o modelo">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Aviso</span>Cuidado
+<span class="screen-reader-only">Dica</span>💡 Dica — Antes de usar o modelo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Em modelos, sempre pergunte se o valor da variável faz sentido no contexto.</p>
+<p>Identifique a grandeza que o modelo representa, as unidades, o domínio no contexto e as hipóteses adotadas. No lançamento vertical, por exemplo, o tempo é medido em segundos e a altura em metros. O modelo despreza a resistência do ar e vale do lançamento até o instante em que o objeto toca o solo.</p>
 </div>
 </div>
 <hr>
@@ -1346,7 +1377,8 @@ C(q)=C_0+cq,
 <li>qual é o valor acumulado em certo intervalo?</li>
 <li>como comparar crescimentos?</li>
 </ul>
-<p>Essas perguntas levarão naturalmente a limites, derivadas e integrais.</p>
+<p>Na trajetória <span class="math inline">\(h(t)=-5t^2+20t+1\)</span>, as alturas nos instantes <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span> e <span class="math inline">\(3\)</span> segundos são <span class="math inline">\(16\)</span>, <span class="math inline">\(21\)</span> e <span class="math inline">\(16\)</span> metros. Entre <span class="math inline">\(1\)</span> e <span class="math inline">\(2\)</span> segundos, a velocidade média é <span class="math inline">\((21-16)/(2-1)=5\,\mathrm{m/s}\)</span>. Entre <span class="math inline">\(2\)</span> e <span class="math inline">\(3\)</span> segundos, ela é <span class="math inline">\((16-21)/(3-2)=-5\,\mathrm{m/s}\)</span>.</p>
+<p><strong>Qual é a velocidade instantânea em <span class="math inline">\(t=2\,\mathrm{s}\)</span>, quando o objeto atinge o ponto mais alto?</strong> Podemos investigar a resposta calculando velocidades médias em intervalos cada vez menores próximos desse instante. Essa é uma das ideias que levam à derivada. As perguntas sobre área e acumulação levam ao estudo das integrais.</p>
 </div>
 </div>
 </section>
@@ -1415,6 +1447,14 @@ h(t)=-5t^2+30t+2.
 <li><p>Uma substância radioativa perde uma porcentagem fixa de sua massa a cada período.</p></li>
 </ol>
 </section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
+<p>Modele a temperatura ao longo de um dia com uma função cosseno de período <span class="math inline">\(24\)</span> horas, temperatura média de <span class="math inline">\(20\,^\circ\mathrm{C}\)</span> e amplitude de <span class="math inline">\(10\,^\circ\mathrm{C}\)</span>. Considere que <span class="math inline">\(t=0\)</span> corresponde à meia-noite.</p>
+<ol type="a">
+<li>Escreva uma função que atinja a temperatura máxima às <span class="math inline">\(15\)</span> h.</li>
+<li>Em que horário ocorre a temperatura mínima? Qual é seu valor?</li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
@@ -1422,7 +1462,7 @@ h(t)=-5t^2+30t+2.
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Clique para consultar o gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1431,7 +1471,7 @@ h(t)=-5t^2+30t+2.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -1574,6 +1614,18 @@ t\geq 0.
 <li><p>Altura de um projétil em função do tempo: modelo quadrático.</p></li>
 <li><p>Quantidade que se aproxima de um limite horizontal: modelo racional ou outro modelo com assíntota horizontal.</p></li>
 <li><p>Perda de uma porcentagem fixa da massa a cada período: modelo exponencial de decaimento.</p></li>
+</ol>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<ol type="a">
+<li>O cosseno vale <span class="math inline">\(1\)</span> quando seu argumento é zero. Para que isso aconteça em <span class="math inline">\(t=15\)</span>, usamos <span class="math inline">\(t-15\)</span> no argumento. Com período <span class="math inline">\(24\)</span> horas, o modelo é</li>
+</ol>
+<p><span class="math display">\[
+T(t)=20+10\cos\!\left(\frac{2\pi}{24}(t-15)\right).
+\]</span></p>
+<ol start="2" type="a">
+<li>O mínimo ocorre meio período antes ou depois do máximo. No mesmo dia, ele ocorre às <span class="math inline">\(3\)</span> h, doze horas antes das <span class="math inline">\(15\)</span> h. Nesse instante, o cosseno vale <span class="math inline">\(-1\)</span> e a temperatura é <span class="math inline">\(20-10=10\,^\circ\mathrm{C}\)</span>.</li>
 </ol>
 </section>
 </div>
