@@ -703,17 +703,17 @@ g(x)\in D_f.
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled" title="Cuidado com o domínio">
+<div class="callout callout-style-default callout-tip callout-titled" title="💡 Dica: domínio em duas etapas">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Aviso</span>Cuidado com o domínio
+<span class="screen-reader-only">Dica</span>💡 Dica: domínio em duas etapas
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Não basta olhar apenas para a fórmula final simplificada. O domínio da composição depende das restrições de cada função envolvida.</p>
+<p>Em <span class="math inline">\((f\circ g)(x)=f(g(x))\)</span>, verifique primeiro se <span class="math inline">\(x\)</span> pertence ao domínio de <span class="math inline">\(g\)</span>. Em seguida, imponha que <span class="math inline">\(g(x)\)</span> pertença ao domínio de <span class="math inline">\(f\)</span>. Registre as duas restrições antes de simplificar a expressão da composta.</p>
 </div>
 </div>
 <hr>
@@ -758,6 +758,21 @@ D_{g\circ f}=[0,+\infty).
 \]</span></p>
 <p>Além das fórmulas serem diferentes, os domínios também são diferentes.</p>
 <hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>▶ Vídeo comentado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><a href="https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/ordem-e-dominio-da-composicao.mp4">Assista ao vídeo sobre a ordem e o domínio da composição</a></strong> (duração: 76 s)</p>
+<p>Compare <span class="math inline">\(\sqrt{x-5}\)</span> e <span class="math inline">\(\sqrt{x}-5\)</span> e observe em que etapa surge a restrição de domínio.</p>
+</div>
+</div>
+<hr>
 </section>
 <section id="exemplo-com-logaritmo" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="exemplo-com-logaritmo"><span class="header-section-number">1.7</span> ✅ Exemplo com logaritmo</h2>
@@ -797,6 +812,11 @@ x&gt;2.
 <p><span class="math display">\[
 D_{f\circ g}=(-\infty,-2)\cup(2,+\infty).
 \]</span></p>
+<p>Na ordem contrária, aplicamos o logaritmo primeiro.</p>
+<p><span class="math display">\[
+(g\circ f)(x)=g(f(x))=g(\ln x)=(\ln x)^2-4.
+\]</span></p>
+<p>O logaritmo exige <span class="math inline">\(x&gt;0\)</span>. Como <span class="math inline">\(g\)</span> é um polinômio, qualquer valor de <span class="math inline">\(\ln x\)</span> pode entrar em <span class="math inline">\(g\)</span>. Assim, <span class="math inline">\(D_{g\circ f}=(0,+\infty)\)</span>.</p>
 <hr>
 </section>
 <section id="exemplo-com-função-racional" class="level2" data-number="1.8">
@@ -833,6 +853,12 @@ x\neq 1.
 <p><span class="math display">\[
 D_{f\circ g}=(-\infty,-1)\cup(-1,1)\cup(1,+\infty).
 \]</span></p>
+<p>Na ordem contrária, calculamos primeiro o recíproco de <span class="math inline">\(x\)</span>.</p>
+<p><span class="math display">\[
+(g\circ f)(x)=g(f(x))=g\!\left(\frac{1}{x}\right)
+=\frac{1}{x^2}-1.
+\]</span></p>
+<p>O recíproco exige <span class="math inline">\(x\neq0\)</span>. A função <span class="math inline">\(g\)</span> aceita qualquer valor real, portanto <span class="math inline">\(D_{g\circ f}=(-\infty,0)\cup(0,+\infty)\)</span>.</p>
 <hr>
 </section>
 <section id="decompor-uma-função-composta" class="level2" data-number="1.9">
@@ -870,6 +896,7 @@ f(u)=\sin u.
 <p><span class="math display">\[
 h=f\circ g.
 \]</span></p>
+<p>Em <span class="math inline">\(h(x)=\sqrt{1-x^2}\)</span>, podemos tomar <span class="math inline">\(g(x)=1-x^2\)</span> como função interna e <span class="math inline">\(f(u)=\sqrt{u}\)</span> como função externa. Assim, <span class="math inline">\(h(x)=f(g(x))\)</span>. A raiz exige <span class="math inline">\(1-x^2\geq0\)</span>, o que dá o domínio <span class="math inline">\([-1,1]\)</span>.</p>
 <p>Essa leitura será indispensável para derivar funções compostas.</p>
 <hr>
 </section>
@@ -1172,14 +1199,9 @@ f(u)=\sqrt{u}.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A composição de funções é uma das ideias mais importantes para o estudo das derivadas.</p>
-<p>Quando estudarmos a regra da cadeia, veremos que a derivada de</p>
-<p><span class="math display">\[
-f(g(x))
-\]</span></p>
-<p>depende da derivada da função externa <span class="math inline">\(f\)</span> e da derivada da função interna <span class="math inline">\(g\)</span>.</p>
-<p>A regra da cadeia é uma das ferramentas centrais do Cálculo Diferencial.</p>
-<p>Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição e identificar corretamente suas funções interna e externa.</p>
+<p>No modelo da altitude e da temperatura, <span class="math inline">\(A(t)\)</span> dá a altitude no instante <span class="math inline">\(t\)</span>, e <span class="math inline">\(T(A)\)</span> dá a temperatura em função da altitude.</p>
+<p><strong>Se a altitude varia com o tempo e a temperatura varia com a altitude, como essas duas taxas determinam a variação da temperatura ao longo do tempo?</strong></p>
+<p>A composição <span class="math inline">\(T(A(t))\)</span> reúne as duas dependências. No Cálculo Diferencial, a <strong>regra da cadeia</strong> permite combinar a taxa de variação da altitude em relação ao tempo com a taxa de variação da temperatura em relação à altitude. Para aplicá-la, precisamos identificar a função interna <span class="math inline">\(A\)</span> e a função externa <span class="math inline">\(T\)</span>.</p>
 </div>
 </div>
 </section>
@@ -1269,6 +1291,14 @@ g(x)=x-5.
 f\circ g\neq g\circ f.
 \]</span></p>
 </section>
+<section id="exercício-6" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="exercício-6"><span class="header-section-number">2.6</span> 🧪 Exercício 6</h2>
+<p>Considere <span class="math inline">\(F(x)=\bigl(\sqrt{2x-6}\bigr)^2\)</span> e <span class="math inline">\(P(x)=2x-6\)</span>.</p>
+<ol type="a">
+<li>Determine os domínios reais de <span class="math inline">\(F\)</span> e <span class="math inline">\(P\)</span>.</li>
+<li>Simplifique a expressão de <span class="math inline">\(F\)</span> no seu domínio. As duas funções têm o mesmo domínio? Justifique.</li>
+</ol>
+</section>
 </div>
 </div>
 <hr>
@@ -1276,7 +1306,7 @@ f\circ g\neq g\circ f.
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1285,7 +1315,7 @@ f\circ g\neq g\circ f.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1</h2>
@@ -1511,6 +1541,13 @@ f\circ g\neq g\circ f.
 <p><span class="math display">\[
 (g\circ f)(x)=x^2+1.
 \]</span></p>
+</section>
+<section id="exercício-6-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exercício-6-1"><span class="header-section-number">3.6</span> 🧪 Exercício 6</h2>
+<ol type="a">
+<li><p>A raiz exige <span class="math inline">\(2x-6\geq0\)</span>, isto é, <span class="math inline">\(x\geq3\)</span>. A função externa, que eleva seu argumento ao quadrado, aceita qualquer número real. Portanto, <span class="math inline">\(D_F=[3,+\infty)\)</span>. Já <span class="math inline">\(P\)</span> é uma função afim e tem domínio <span class="math inline">\(D_P=\mathbb R\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(x\geq3\)</span>, vale <span class="math inline">\(F(x)=2x-6\)</span>. Os domínios são diferentes. Por exemplo, <span class="math inline">\(P(0)=-6\)</span>, mas <span class="math inline">\(F(0)\)</span> não está definida nos reais.</p></li>
+</ol>
 </section>
 </div>
 </div>

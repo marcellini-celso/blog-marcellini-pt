@@ -439,9 +439,9 @@ flowchart TD
     D -- "Sim" --> E["Calcular f(g(x))"]
 ```
 
-::: {.callout-warning title="Cuidado com o domínio"}
+::: {.callout-tip title="💡 Dica: domínio em duas etapas"}
 
-Não basta olhar apenas para a fórmula final simplificada. O domínio da composição depende das restrições de cada função envolvida.
+Em $(f\circ g)(x)=f(g(x))$, verifique primeiro se $x$ pertence ao domínio de $g$. Em seguida, imponha que $g(x)$ pertença ao domínio de $f$. Registre as duas restrições antes de simplificar a expressão da composta.
 
 :::
 
@@ -507,6 +507,16 @@ Além das fórmulas serem diferentes, os domínios também são diferentes.
 
 ***
 
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo sobre a ordem e o domínio da composição](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/ordem-e-dominio-da-composicao.mp4)** (duração: 76 s)
+
+Compare $\sqrt{x-5}$ e $\sqrt{x}-5$ e observe em que etapa surge a restrição de domínio.
+
+:::
+
+***
+
 ## ✅ Exemplo com logaritmo
 
 Considere
@@ -563,6 +573,14 @@ $$
 D_{f\circ g}=(-\infty,-2)\cup(2,+\infty).
 $$
 
+Na ordem contrária, aplicamos o logaritmo primeiro.
+
+$$
+(g\circ f)(x)=g(f(x))=g(\ln x)=(\ln x)^2-4.
+$$
+
+O logaritmo exige $x>0$. Como $g$ é um polinômio, qualquer valor de $\ln x$ pode entrar em $g$. Assim, $D_{g\circ f}=(0,+\infty)$.
+
 ***
 
 ## ✅ Exemplo com função racional
@@ -614,6 +632,15 @@ Logo,
 $$
 D_{f\circ g}=(-\infty,-1)\cup(-1,1)\cup(1,+\infty).
 $$
+
+Na ordem contrária, calculamos primeiro o recíproco de $x$.
+
+$$
+(g\circ f)(x)=g(f(x))=g\!\left(\frac{1}{x}\right)
+=\frac{1}{x^2}-1.
+$$
+
+O recíproco exige $x\neq0$. A função $g$ aceita qualquer valor real, portanto $D_{g\circ f}=(-\infty,0)\cup(0,+\infty)$.
 
 ***
 
@@ -668,6 +695,8 @@ Assim,
 $$
 h=f\circ g.
 $$
+
+Em $h(x)=\sqrt{1-x^2}$, podemos tomar $g(x)=1-x^2$ como função interna e $f(u)=\sqrt{u}$ como função externa. Assim, $h(x)=f(g(x))$. A raiz exige $1-x^2\geq0$, o que dá o domínio $[-1,1]$.
 
 Essa leitura será indispensável para derivar funções compostas.
 
@@ -959,19 +988,11 @@ Nesse caso, a função composta está definida para todo $x\in\mathbb{R}$, pois 
 
 ::: {.callout-note title="🌉 Ponte para o Cálculo"}
 
-A composição de funções é uma das ideias mais importantes para o estudo das derivadas.
+No modelo da altitude e da temperatura, $A(t)$ dá a altitude no instante $t$, e $T(A)$ dá a temperatura em função da altitude.
 
-Quando estudarmos a regra da cadeia, veremos que a derivada de
+**Se a altitude varia com o tempo e a temperatura varia com a altitude, como essas duas taxas determinam a variação da temperatura ao longo do tempo?**
 
-$$
-f(g(x))
-$$
-
-depende da derivada da função externa $f$ e da derivada da função interna $g$.
-
-A regra da cadeia é uma das ferramentas centrais do Cálculo Diferencial.
-
-Por isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição e identificar corretamente suas funções interna e externa.
+A composição $T(A(t))$ reúne as duas dependências. No Cálculo Diferencial, a **regra da cadeia** permite combinar a taxa de variação da altitude em relação ao tempo com a taxa de variação da temperatura em relação à altitude. Para aplicá-la, precisamos identificar a função interna $A$ e a função externa $T$.
 
 :::
 
@@ -1045,6 +1066,13 @@ Explique por que, em geral,
 $$
 f\circ g\neq g\circ f.
 $$
+
+## 🧪 Exercício 6
+
+Considere $F(x)=\bigl(\sqrt{2x-6}\bigr)^2$ e $P(x)=2x-6$.
+
+a) Determine os domínios reais de $F$ e $P$.
+b) Simplifique a expressão de $F$ no seu domínio. As duas funções têm o mesmo domínio? Justifique.
 
 :::
 
@@ -1333,6 +1361,12 @@ enquanto
 $$
 (g\circ f)(x)=x^2+1.
 $$
+
+## 🧪 Exercício 6
+
+a) A raiz exige $2x-6\geq0$, isto é, $x\geq3$. A função externa, que eleva seu argumento ao quadrado, aceita qualquer número real. Portanto, $D_F=[3,+\infty)$. Já $P$ é uma função afim e tem domínio $D_P=\mathbb R$.
+
+b) Para $x\geq3$, vale $F(x)=2x-6$. Os domínios são diferentes. Por exemplo, $P(0)=-6$, mas $F(0)$ não está definida nos reais.
 
 :::
 

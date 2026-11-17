@@ -7998,14 +7998,14 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "",
-    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Post Anterior: 👉 1.12 Transformações Gráficas"
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Aula anterior: 👉 1.12 Transformações Gráficas\n🎯 Próxima aula: 👉 1.14 Função Inversa"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#a-ideia-de-composição",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#a-ideia-de-composição",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.1 💡 A ideia de composição",
-    "text": "1.1 💡 A ideia de composição\nSuponha que temos duas funções:\n\\[\ng:A\\to B\n\\]\ne\n\\[\nf:B\\to C.\n\\]\nSe \\(g\\) leva elementos de \\(A\\) para \\(B\\), e \\(f\\) recebe elementos de \\(B\\) e leva para \\(C\\), então podemos formar a função composta\n\\[\nf\\circ g:A\\to C.\n\\]\nA definição é:\n\\[\n(f\\circ g)(x)=f(g(x)).\n\\]\nLemos:\n\n\\(f\\) composta com \\(g\\) é a função que primeiro aplica \\(g\\) e depois aplica \\(f\\).\n\nA notação\n\\[\nf\\circ g\n\\]\nnão significa multiplicação. Ela indica composição.\n\n\n\n\n\n\nNotaIdeia central\n\n\n\nEm \\((f\\circ g)(x)=f(g(x))\\), a função que está mais perto de \\(x\\) é aplicada primeiro."
+    "text": "1.1 💡 A ideia de composição\nSuponha que temos duas funções:\n\\[\ng:A\\to B\n\\]\ne\n\\[\nf:B\\to C.\n\\]\nSe \\(g\\) leva elementos de \\(A\\) para \\(B\\), e \\(f\\) recebe elementos de \\(B\\) e leva para \\(C\\), então podemos formar a função composta\n\\[\nf\\circ g:A\\to C.\n\\]\nA definição é:\n\\[\n(f\\circ g)(x)=f(g(x)).\n\\]\nLemos:\n\n\\(f\\) composta com \\(g\\) é a função que primeiro aplica \\(g\\) e depois aplica \\(f\\).\n\nA notação\n\\[\nf\\circ g\n\\]\nnão significa multiplicação. Ela indica composição.\n\n\n\n\n\n\nNotaIdeia central\n\n\n\nEm \\((f\\circ g)(x)=f(g(x))\\), a função que está mais perto de \\(x\\) é aplicada primeiro.\n\n\nIlustração — O caminho percorrido pela entrada\n\n\n\n\n\nflowchart LR\n    X[\"Entrada: x\"] --&gt; G[\"Aplicar g\"]\n    G --&gt; GX[\"Resultado: g(x)\"]\n    GX --&gt; F[\"Aplicar f\"]\n    F --&gt; FGX[\"Resultado final: f(g(x))\"]\n\n\n\n\n\n\nA composição pode ser entendida como uma sequência de etapas: a entrada passa primeiro por \\(g\\) e, em seguida, o resultado passa por \\(f\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exemplo-básico",
@@ -8019,70 +8019,63 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#a-ordem-da-composição-importa",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.3 🔢 A ordem da composição importa",
-    "text": "1.3 🔢 A ordem da composição importa\nA composição de funções geralmente não é comutativa.\nIsto é, em geral:\n\\[\nf\\circ g\\neq g\\circ f.\n\\]\nPor exemplo, com\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng(x)=x+3,\n\\]\ntemos:\n\\[\n(f\\circ g)(x)=(x+3)^2\n\\]\ne\n\\[\n(g\\circ f)(x)=x^2+3.\n\\]\nSe tomarmos \\(x=1\\):\n\\[\n(f\\circ g)(1)=(1+3)^2=16,\n\\]\nenquanto\n\\[\n(g\\circ f)(1)=1^2+3=4.\n\\]\nLogo, as duas composições não são iguais."
+    "text": "1.3 🔢 A ordem da composição importa\nA composição de funções geralmente não é comutativa.\nIsto é, em geral:\n\\[\nf\\circ g\\neq g\\circ f.\n\\]\nPor exemplo, com\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng(x)=x+3,\n\\]\ntemos:\n\\[\n(f\\circ g)(x)=(x+3)^2\n\\]\ne\n\\[\n(g\\circ f)(x)=x^2+3.\n\\]\nSe tomarmos \\(x=1\\):\n\\[\n(f\\circ g)(1)=(1+3)^2=16,\n\\]\nenquanto\n\\[\n(g\\circ f)(1)=1^2+3=4.\n\\]\nLogo, as duas composições não são iguais.\nIlustração — Comparando as duas ordens\n\n\n\n\n\n%%{init: {\"theme\": \"default\", \"flowchart\": {\"nodeSpacing\": 16, \"rankSpacing\": 18, \"diagramPadding\": 4, \"minNodeWidth\": 82}}}%%\nflowchart LR\n    subgraph A[\"Primeiro g, depois f\"]\n        direction TB\n        X1[\"x = 1\"] --&gt; G1[\"g(1) = 4\"] --&gt; F1[\"f(4) = 16\"]\n    end\n\n    subgraph B[\"Primeiro f, depois g\"]\n        direction TB\n        X2[\"x = 1\"] --&gt; F2[\"f(1) = 1\"] --&gt; G2[\"g(1) = 4\"]\n    end\n\n\n\n\n\n\nA ilustração mostra que a mesma entrada pode produzir resultados diferentes quando mudamos a ordem de aplicação das funções.\n\n\n\n\n\n\nImportanteAtenção\n\n\n\nA composição não é, em geral, comutativa. Isso não significa que \\(f\\circ g\\) e \\(g\\circ f\\) sejam sempre diferentes, mas que não podemos trocar a ordem das funções sem verificar o resultado."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#composição-com-funções-elementares",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#composição-com-funções-elementares",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.4 🔗 Composição com funções elementares",
-    "text": "1.4 🔗 Composição com funções elementares\nA composição aparece naturalmente em funções mais complexas.\nPor exemplo:\n\\[\nh(x)=\\sqrt{x^2+1}.\n\\]\nPodemos ver essa função como a composição de duas funções:\n\\[\ng(x)=x^2+1\n\\]\ne\n\\[\nf(u)=\\sqrt{u}.\n\\]\nEntão\n\\[\nh(x)=f(g(x)).\n\\]\nOu seja,\n\\[\nh=f\\circ g.\n\\]\nOutro exemplo:\n\\[\np(x)=\\ln(3x-2).\n\\]\nPodemos escrever:\n\\[\ng(x)=3x-2\n\\]\ne\n\\[\nf(u)=\\ln u.\n\\]\nEntão\n\\[\np(x)=f(g(x))=\\ln(3x-2).\n\\]\nEssa forma de enxergar funções será essencial quando estudarmos a regra da cadeia em derivadas."
+    "text": "1.4 🔗 Composição com funções elementares\nA composição aparece naturalmente em funções mais complexas.\nPor exemplo:\n\\[\nh(x)=\\sqrt{x^2+1}.\n\\]\nPodemos ver essa função como a composição de duas funções:\n\\[\ng(x)=x^2+1\n\\]\ne\n\\[\nf(u)=\\sqrt{u}.\n\\]\nEntão\n\\[\nh(x)=f(g(x)).\n\\]\nOu seja,\n\\[\nh=f\\circ g.\n\\]\nOutro exemplo:\n\\[\np(x)=\\ln(3x-2).\n\\]\nPodemos escrever:\n\\[\ng(x)=3x-2\n\\]\ne\n\\[\nf(u)=\\ln u.\n\\]\nEntão\n\\[\np(x)=f(g(x))=\\ln(3x-2).\n\\]\nPara que essa expressão esteja definida nos reais, precisamos de\n\\[\n3x-2&gt;0,\n\\]\nisto é,\n\\[\nx&gt;\\frac{2}{3}.\n\\]\nEssa forma de enxergar funções será essencial quando estudarmos a regra da cadeia em derivadas.\nIlustração — Uma função construída em duas etapas\n\n\n\n\n\nflowchart LR\n    X[\"Entrada: x\"] --&gt; G[\"Elevar ao quadrado e somar 1\"]\n    G --&gt; GX[\"x² + 1\"]\n    GX --&gt; F[\"Extrair a raiz quadrada\"]\n    F --&gt; H[\"√(x² + 1)\"]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#domínio-da-função-composta",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#domínio-da-função-composta",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.5 🧭 Domínio da função composta",
-    "text": "1.5 🧭 Domínio da função composta\nO domínio de uma composta exige cuidado.\nPara que\n\\[\n(f\\circ g)(x)=f(g(x))\n\\]\nesteja definida, duas coisas precisam acontecer:\n\n\\(x\\) precisa pertencer ao domínio de \\(g\\);\n\\(g(x)\\) precisa pertencer ao domínio de \\(f\\).\n\nEm símbolos, o domínio de \\(f\\circ g\\) é o conjunto dos \\(x\\) tais que:\n\\[\nx\\in D_g\n\\]\ne\n\\[\ng(x)\\in D_f.\n\\]\n\n\n\n\n\n\nAvisoCuidado com o domínio\n\n\n\nNão basta olhar apenas para a fórmula final simplificada. O domínio da composição depende das restrições de cada função envolvida."
+    "text": "1.5 🧭 Domínio da função composta\nO domínio de uma composta exige cuidado.\nPara que\n\\[\n(f\\circ g)(x)=f(g(x))\n\\]\nesteja definida, duas coisas precisam acontecer:\n\n\\(x\\) precisa pertencer ao domínio de \\(g\\);\n\\(g(x)\\) precisa pertencer ao domínio de \\(f\\).\n\nEm símbolos, o domínio de \\(f\\circ g\\) é o conjunto dos \\(x\\) tais que:\n\\[\nx\\in D_g\n\\]\ne\n\\[\ng(x)\\in D_f.\n\\]\nIlustração — Verificando o domínio em duas etapas\n\n\n\n\n\nflowchart TD\n    A[\"Escolher x\"] --&gt; B{\"x pertence ao domínio de g?\"}\n    B -- \"Não\" --&gt; X[\"A composição não está definida\"]\n    B -- \"Sim\" --&gt; C[\"Calcular g(x)\"]\n    C --&gt; D{\"g(x) pertence ao domínio de f?\"}\n    D -- \"Não\" --&gt; X\n    D -- \"Sim\" --&gt; E[\"Calcular f(g(x))\"]\n\n\n\n\n\n\n\n\n\n\n\n\nDica💡 Dica: domínio em duas etapas\n\n\n\nEm \\((f\\circ g)(x)=f(g(x))\\), verifique primeiro se \\(x\\) pertence ao domínio de \\(g\\). Em seguida, imponha que \\(g(x)\\) pertença ao domínio de \\(f\\). Registre as duas restrições antes de simplificar a expressão da composta."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exemplo-com-raiz",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exemplo-com-raiz",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.6 ✅ Exemplo com raiz",
-    "text": "1.6 ✅ Exemplo com raiz\nConsidere\n\\[\nf(x)=\\sqrt{x}\n\\]\ne\n\\[\ng(x)=x-2.\n\\]\nA composta é\n\\[\n(f\\circ g)(x)=f(g(x))=f(x-2)=\\sqrt{x-2}.\n\\]\nPara essa expressão fazer sentido nos reais, precisamos de\n\\[\nx-2\\geq 0.\n\\]\nLogo,\n\\[\nx\\geq 2.\n\\]\nAssim,\n\\[\nD_{f\\circ g}=[2,+\\infty).\n\\]\nNa ordem contrária:\n\\[\n(g\\circ f)(x)=g(f(x))=g(\\sqrt{x})=\\sqrt{x}-2.\n\\]\nAgora precisamos apenas que\n\\[\nx\\geq 0.\n\\]\nLogo,\n\\[\nD_{g\\circ f}=[0,+\\infty).\n\\]\nAlém das fórmulas serem diferentes, os domínios também são diferentes."
+    "text": "1.6 ✅ Exemplo com raiz\nConsidere\n\\[\nf(x)=\\sqrt{x}\n\\]\ne\n\\[\ng(x)=x-2.\n\\]\nA composta é\n\\[\n(f\\circ g)(x)=f(g(x))=f(x-2)=\\sqrt{x-2}.\n\\]\nPara essa expressão fazer sentido nos reais, precisamos de\n\\[\nx-2\\geq 0.\n\\]\nLogo,\n\\[\nx\\geq 2.\n\\]\nAssim,\n\\[\nD_{f\\circ g}=[2,+\\infty).\n\\]\nNa ordem contrária:\n\\[\n(g\\circ f)(x)=g(f(x))=g(\\sqrt{x})=\\sqrt{x}-2.\n\\]\nAgora precisamos apenas que\n\\[\nx\\geq 0.\n\\]\nLogo,\n\\[\nD_{g\\circ f}=[0,+\\infty).\n\\]\nAlém das fórmulas serem diferentes, os domínios também são diferentes.\n\n\n\n\n\n\n\nDica▶ Vídeo comentado\n\n\n\nAssista ao vídeo sobre a ordem e o domínio da composição (duração: 76 s)\nCompare \\(\\sqrt{x-5}\\) e \\(\\sqrt{x}-5\\) e observe em que etapa surge a restrição de domínio."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exemplo-com-logaritmo",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exemplo-com-logaritmo",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.7 ✅ Exemplo com logaritmo",
-    "text": "1.7 ✅ Exemplo com logaritmo\nConsidere\n\\[\nf(x)=\\ln x\n\\]\ne\n\\[\ng(x)=x^2-4.\n\\]\nA composta é\n\\[\n(f\\circ g)(x)=f(g(x))=\\ln(x^2-4).\n\\]\nComo o logaritmo só aceita argumentos positivos, precisamos de\n\\[\nx^2-4&gt;0.\n\\]\nFatorando:\n\\[\nx^2-4=(x-2)(x+2).\n\\]\nA inequação\n\\[\n(x-2)(x+2)&gt;0\n\\]\né satisfeita fora das raízes:\n\\[\nx&lt;-2\n\\]\nou\n\\[\nx&gt;2.\n\\]\nLogo,\n\\[\nD_{f\\circ g}=(-\\infty,-2)\\cup(2,+\\infty).\n\\]"
+    "text": "1.7 ✅ Exemplo com logaritmo\nConsidere\n\\[\nf(x)=\\ln x\n\\]\ne\n\\[\ng(x)=x^2-4.\n\\]\nA composta é\n\\[\n(f\\circ g)(x)=f(g(x))=\\ln(x^2-4).\n\\]\nComo o logaritmo só aceita argumentos positivos, precisamos de\n\\[\nx^2-4&gt;0.\n\\]\nFatorando:\n\\[\nx^2-4=(x-2)(x+2).\n\\]\nA inequação\n\\[\n(x-2)(x+2)&gt;0\n\\]\né satisfeita fora das raízes:\n\\[\nx&lt;-2\n\\]\nou\n\\[\nx&gt;2.\n\\]\nLogo,\n\\[\nD_{f\\circ g}=(-\\infty,-2)\\cup(2,+\\infty).\n\\]\nNa ordem contrária, aplicamos o logaritmo primeiro.\n\\[\n(g\\circ f)(x)=g(f(x))=g(\\ln x)=(\\ln x)^2-4.\n\\]\nO logaritmo exige \\(x&gt;0\\). Como \\(g\\) é um polinômio, qualquer valor de \\(\\ln x\\) pode entrar em \\(g\\). Assim, \\(D_{g\\circ f}=(0,+\\infty)\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exemplo-com-função-racional",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exemplo-com-função-racional",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.8 ✅ Exemplo com função racional",
-    "text": "1.8 ✅ Exemplo com função racional\nConsidere\n\\[\nf(x)=\\frac{1}{x}\n\\]\ne\n\\[\ng(x)=x^2-1.\n\\]\nA composta é\n\\[\n(f\\circ g)(x)=\\frac{1}{x^2-1}.\n\\]\nPara estar definida, precisamos de\n\\[\nx^2-1\\neq 0.\n\\]\nComo\n\\[\nx^2-1=(x-1)(x+1),\n\\]\ntemos\n\\[\nx\\neq -1\n\\]\ne\n\\[\nx\\neq 1.\n\\]\nLogo,\n\\[\nD_{f\\circ g}=(-\\infty,-1)\\cup(-1,1)\\cup(1,+\\infty).\n\\]"
+    "text": "1.8 ✅ Exemplo com função racional\nConsidere\n\\[\nf(x)=\\frac{1}{x}\n\\]\ne\n\\[\ng(x)=x^2-1.\n\\]\nA composta é\n\\[\n(f\\circ g)(x)=\\frac{1}{x^2-1}.\n\\]\nPara estar definida, precisamos de\n\\[\nx^2-1\\neq 0.\n\\]\nComo\n\\[\nx^2-1=(x-1)(x+1),\n\\]\ntemos\n\\[\nx\\neq -1\n\\]\ne\n\\[\nx\\neq 1.\n\\]\nLogo,\n\\[\nD_{f\\circ g}=(-\\infty,-1)\\cup(-1,1)\\cup(1,+\\infty).\n\\]\nNa ordem contrária, calculamos primeiro o recíproco de \\(x\\).\n\\[\n(g\\circ f)(x)=g(f(x))=g\\!\\left(\\frac{1}{x}\\right)\n=\\frac{1}{x^2}-1.\n\\]\nO recíproco exige \\(x\\neq0\\). A função \\(g\\) aceita qualquer valor real, portanto \\(D_{g\\circ f}=(-\\infty,0)\\cup(0,+\\infty)\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#decompor-uma-função-composta",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#decompor-uma-função-composta",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "1.9 🧩 Decompor uma função composta",
-    "text": "1.9 🧩 Decompor uma função composta\nTambém é importante saber fazer o processo inverso: reconhecer uma função composta e decompô-la.\nConsidere\n\\[\nh(x)=(3x+1)^5.\n\\]\nPodemos definir:\n\\[\ng(x)=3x+1\n\\]\ne\n\\[\nf(u)=u^5.\n\\]\nEntão\n\\[\nh(x)=f(g(x)).\n\\]\nOutro exemplo:\n\\[\nh(x)=\\sin(x^2).\n\\]\nPodemos tomar:\n\\[\ng(x)=x^2\n\\]\ne\n\\[\nf(u)=\\sin u.\n\\]\nAssim,\n\\[\nh=f\\circ g.\n\\]\nEssa leitura será indispensável para derivar funções compostas."
+    "text": "1.9 🧩 Decompor uma função composta\nTambém é importante saber fazer o processo inverso: reconhecer uma função composta e decompô-la.\nConsidere\n\\[\nh(x)=(3x+1)^5.\n\\]\nPodemos definir:\n\\[\ng(x)=3x+1\n\\]\ne\n\\[\nf(u)=u^5.\n\\]\nEntão\n\\[\nh(x)=f(g(x)).\n\\]\nOutro exemplo:\n\\[\nh(x)=\\sin(x^2).\n\\]\nPodemos tomar:\n\\[\ng(x)=x^2\n\\]\ne\n\\[\nf(u)=\\sin u.\n\\]\nAssim,\n\\[\nh=f\\circ g.\n\\]\nEm \\(h(x)=\\sqrt{1-x^2}\\), podemos tomar \\(g(x)=1-x^2\\) como função interna e \\(f(u)=\\sqrt{u}\\) como função externa. Assim, \\(h(x)=f(g(x))\\). A raiz exige \\(1-x^2\\geq0\\), o que dá o domínio \\([-1,1]\\).\nEssa leitura será indispensável para derivar funções compostas."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#composição-e-transformações-gráficas",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#composição-e-transformações-gráficas",
     "title": "📘 Módulo 1.13: Composição de Funções",
-    "section": "1.10 🔗 Composição e transformações gráficas",
-    "text": "1.10 🔗 Composição e transformações gráficas\nMuitas transformações gráficas podem ser vistas como composições.\nPor exemplo,\n\\[\nh(x)=f(x-3)\n\\]\né a composição de \\(f\\) com\n\\[\ng(x)=x-3.\n\\]\nJá\n\\[\np(x)=f(2x)\n\\]\né a composição de \\(f\\) com\n\\[\ng(x)=2x.\n\\]\nIsso mostra que as transformações horizontais são, na verdade, composições com funções simples na variável de entrada.\nDo mesmo modo, expressões como\n\\[\n2f(x)+1\n\\]\npodem ser entendidas como aplicar \\(f\\) e depois transformar o resultado."
+    "section": "1.12 🔗 Composição e transformações gráficas",
+    "text": "1.12 🔗 Composição e transformações gráficas\nMuitas transformações gráficas podem ser vistas como composições.\nPor exemplo,\n\\[\nh(x)=f(x-3)\n\\]\né a composição de \\(f\\) com\n\\[\ng(x)=x-3.\n\\]\nAssim,\n\\[\nh=f\\circ g.\n\\]\nJá\n\\[\np(x)=f(2x)\n\\]\né a composição de \\(f\\) com\n\\[\ng(x)=2x.\n\\]\nIsso mostra que as transformações horizontais são, na verdade, composições com funções simples na variável de entrada.\nDo mesmo modo, expressões como\n\\[\n2f(x)+1\n\\]\npodem ser entendidas como aplicar \\(f\\) e depois transformar o resultado.\nPara explicitar essa composição, podemos definir uma função externa:\n\\[\nr(u)=2u+1.\n\\]\nEntão,\n\\[\n2f(x)+1=r(f(x))=(r\\circ f)(x).\n\\]\nIlustração — Transformações na entrada e na saída\n\n\n\n\n\nflowchart TB\n    subgraph A[\"Transformação na entrada\"]\n        direction TB\n        X1[\"Entrada: x\"] --&gt; T[\"Transformação: x - 3\"]\n        T --&gt; F1[\"Aplicar f\"]\n        F1 --&gt; Y1[\"Resultado: f(x - 3)\"]\n    end\n\n    subgraph B[\"Transformação na saída\"]\n        direction TB\n        X2[\"Entrada: x\"] --&gt; F2[\"Aplicar f\"]\n        F2 --&gt; R[\"Transformação: 2u + 1\"]\n        R --&gt; Y2[\"Resultado: 2f(x) + 1\"]\n    end\n\n    Y1 ~~~ X2"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#composição-em-modelos",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#composição-em-modelos",
     "title": "📘 Módulo 1.13: Composição de Funções",
-    "section": "1.11 🔗 Composição em modelos",
-    "text": "1.11 🔗 Composição em modelos\nEm aplicações, composição aparece quando uma grandeza depende de outra, que por sua vez depende de uma terceira.\nPor exemplo:\n\na temperatura pode depender da altitude;\na altitude pode depender do tempo;\nentão a temperatura pode ser vista como função do tempo.\n\nSe\n\\[\nA(t)\n\\]\né a altitude no instante \\(t\\) e\n\\[\nT(A)\n\\]\né a temperatura em função da altitude, então\n\\[\nT(A(t))\n\\]\né a temperatura em função do tempo.\nEsse é um exemplo de composição."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#por-que-isso-importa-para-o-cálculo",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#por-que-isso-importa-para-o-cálculo",
-    "title": "📘 Módulo 1.13: Composição de Funções",
-    "section": "1.12 🌉 Por que isso importa para o Cálculo?",
-    "text": "1.12 🌉 Por que isso importa para o Cálculo?\nA composição de funções é uma das ideias mais importantes para derivadas.\nQuando estudarmos a regra da cadeia, veremos que a derivada de\n\\[\nf(g(x))\n\\]\ndepende da derivada da função externa \\(f\\) e da derivada da função interna \\(g\\).\nA regra da cadeia é uma das ferramentas centrais do Cálculo Diferencial.\nPor isso, antes de derivar funções compostas, precisamos reconhecer a estrutura da composição."
+    "section": "1.13 🔗 Composição em modelos",
+    "text": "1.13 🔗 Composição em modelos\nEm aplicações, composição aparece quando uma grandeza depende de outra, que por sua vez depende de uma terceira.\nPor exemplo:\n\na temperatura pode depender da altitude;\na altitude pode depender do tempo;\nentão a temperatura pode ser vista como função do tempo.\n\nSe\n\\[\nA(t)\n\\]\né a altitude no instante \\(t\\) e\n\\[\nT(A)\n\\]\né a temperatura em função da altitude, então\n\\[\nT(A(t))\n\\]\né a temperatura em função do tempo.\nEsse é um exemplo de composição.\nIlustração — Da passagem do tempo à temperatura\n\n\n\n\n\nflowchart LR\n    T[\"Tempo: t\"] --&gt; A[\"Altitude: A(t)\"]\n    A --&gt; TEMP[\"Temperatura: T(A(t))\"]\n\n\n\n\n\n\nA composição permite conectar modelos matemáticos diferentes e estudar como uma variável influencia outra por meio de etapas intermediárias.\n\n\n\n\n\n\n\nNota📋 Quadro-resumo\n\n\n\n\n\n\n\n\n\n\n\nConceito\nExpressão ou condição\nInterpretação\n\n\n\n\nComposição\n\\((f\\circ g)(x)=f(g(x))\\)\nAplicamos primeiro \\(g\\) e depois \\(f\\)\n\n\nOrdem\nEm geral, \\(f\\circ g\\neq g\\circ f\\)\nA ordem das operações importa\n\n\nDomínio\n\\(x\\in D_g\\) e \\(g(x)\\in D_f\\)\nA entrada deve ser válida para \\(g\\) e sua saída para \\(f\\)\n\n\nAssociatividade\n\\(h\\circ(g\\circ f)=(h\\circ g)\\circ f\\)\nPodemos reagrupar composições bem definidas\n\n\nIdentidade\n\\(I(x)=x\\)\nCompor com a identidade adequada preserva a função\n\n\nDecomposição\n\\(F=f\\circ g\\)\nUma expressão pode ser interpretada como operações sucessivas\n\n\n\nDomínio da composição:\n\\[\n\\operatorname{Dom}(f\\circ g)\n=\n\\left\\{\nx\\in\\operatorname{Dom}(g)\n\\;\\middle|\\;\ng(x)\\in\\operatorname{Dom}(f)\n\\right\\}.\n\\]\nExemplo: considere\n\\[\ng(x)=x^2+1,\n\\qquad\nf(u)=\\sqrt{u}.\n\\]\nEntão,\n\\[\n(f\\circ g)(x)=\\sqrt{x^2+1}.\n\\]\nNesse caso, a função composta está definida para todo \\(x\\in\\mathbb{R}\\), pois \\(x^2+1&gt;0\\).\nAtenção: não basta verificar separadamente os domínios de \\(f\\) e de \\(g\\). É necessário garantir que \\(g(x)\\) pertença ao domínio de \\(f\\).\n\n\n\n\n\n\n\n\n\nNota🌉 Ponte para o Cálculo\n\n\n\nNo modelo da altitude e da temperatura, \\(A(t)\\) dá a altitude no instante \\(t\\), e \\(T(A)\\) dá a temperatura em função da altitude.\nSe a altitude varia com o tempo e a temperatura varia com a altitude, como essas duas taxas determinam a variação da temperatura ao longo do tempo?\nA composição \\(T(A(t))\\) reúne as duas dependências. No Cálculo Diferencial, a regra da cadeia permite combinar a taxa de variação da altitude em relação ao tempo com a taxa de variação da temperatura em relação à altitude. Para aplicá-la, precisamos identificar a função interna \\(A\\) e a função externa \\(T\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exercício-1",
@@ -8103,7 +8096,7 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exercício-3",
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nDetermine o domínio real das funções compostas:\n\n\\(h(x)=\\ln(x-3)\\)\n\n\\(p(x)=\\sqrt{2x+4}\\)\n\n\\(q(x)=\\dfrac{1}{x^2-9}\\)"
+    "text": "2.3 🧪 Exercício 3\nDetermine o domínio real das funções:\n\n\\(h(x)=\\ln(x-3)\\)\n\n\\(p(x)=\\sqrt{2x+4}\\)\n\n\\(q(x)=\\dfrac{1}{x^2-9}\\)"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exercício-4",
@@ -8160,6 +8153,34 @@
     "title": "📘 Módulo 1.13: Composição de Funções",
     "section": "3.6 🧩 Quiz — Composição de Funções",
     "text": "3.6 🧩 Quiz — Composição de Funções\n\nQ1. Na composição \\((f\\circ g)(x)=f(g(x))\\), qual função é aplicada primeiro?\n\n\n\n\n ✗\\(f\\).\n\n\n ✓\\(g\\).\n\n\n ✗\\(f+g\\).\n\n\n\n\n\n\nQ2. Em geral, a composição de funções satisfaz:\n\n\n\n\n ✗\\(f\\circ g=g\\circ f\\) sempre.\n\n\n ✓\\(f\\circ g\\) pode ser diferente de \\(g\\circ f\\).\n\n\n ✗\\(f\\circ g\\) nunca existe.\n\n\n\n\n\n\nQ3. Para que \\((f\\circ g)(x)\\) esteja definida, é necessário que:\n\n\n\n\n ✓\\(x\\) pertença ao domínio de \\(g\\) e \\(g(x)\\) pertença ao domínio de \\(f\\).\n\n\n ✗\\(x\\) pertença apenas ao contradomínio de \\(f\\).\n\n\n ✗\\(f(x)\\) seja sempre igual a \\(g(x)\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#associatividade-da-composição",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#associatividade-da-composição",
+    "title": "📘 Módulo 1.13: Composição de Funções",
+    "section": "1.10 🔁 Associatividade da composição",
+    "text": "1.10 🔁 Associatividade da composição\nA composição de funções possui a propriedade da associatividade.\nQuando todas as composições estão bem definidas, temos:\n\\[\nh\\circ(g\\circ f)=(h\\circ g)\\circ f.\n\\]\nIsso significa que podemos mudar o agrupamento das funções sem alterar a ordem em que elas são aplicadas.\nConsidere três funções:\n\\[\nf(x)=x+1,\n\\]\n\\[\ng(x)=2x,\n\\]\ne\n\\[\nh(x)=x^2.\n\\]\nAplicando primeiro \\(f\\), depois \\(g\\) e, por último, \\(h\\), obtemos:\n\\[\nh(g(f(x)))=[2(x+1)]^2.\n\\]\nPortanto,\n\\[\nh(g(f(x)))=4(x+1)^2.\n\\]\nO resultado é o mesmo independentemente de agruparmos a composição como \\(h\\circ(g\\circ f)\\) ou como \\((h\\circ g)\\circ f\\).\nIlustração — Três funções em sequência\n\n\n\n\n\nflowchart LR\n    X[\"Entrada: x\"] --&gt; F[\"Aplicar f\"]\n    F --&gt; G[\"Aplicar g\"]\n    G --&gt; H[\"Aplicar h\"]\n    H --&gt; Y[\"Resultado final\"]\n\n\n\n\n\n\n\n\n\n\n\n\nNotaNão confunda\n\n\n\nA composição é associativa, mas, em geral, não é comutativa.\n\nAssociatividade: podemos mudar o agrupamento das funções.\nComutatividade: trocar a ordem das funções.\n\nA primeira propriedade vale para composições bem definidas; a segunda não vale em geral."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#função-identidade-e-composição",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#função-identidade-e-composição",
+    "title": "📘 Módulo 1.13: Composição de Funções",
+    "section": "1.11 🎯 Função identidade e composição",
+    "text": "1.11 🎯 Função identidade e composição\nA função identidade é aquela que devolve exatamente o valor que recebe.\nSua expressão é:\n\\[\nI(x)=x.\n\\]\nPara uma função \\(f:A\\to B\\), podemos considerar duas funções identidade:\n\n\\(I_A:A\\to A\\), identidade no conjunto de partida;\n\\(I_B:B\\to B\\), identidade no conjunto de chegada.\n\nA composição com a identidade adequada preserva a função:\n\\[\nf\\circ I_A=f\n\\]\ne\n\\[\nI_B\\circ f=f.\n\\]\nIsso acontece porque a identidade não modifica o valor recebido.\nExemplo: considere\n\\[\nf(x)=x^2+3.\n\\]\nComo \\(I(x)=x\\), temos:\n\\[\n(f\\circ I)(x)=f(I(x))=f(x)=x^2+3.\n\\]\nTambém:\n\\[\n(I\\circ f)(x)=I(f(x))=f(x)=x^2+3.\n\\]\nEm ambos os casos, o resultado é a própria função \\(f\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exercício-6",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exercício-6",
+    "title": "📘 Módulo 1.13: Composição de Funções",
+    "section": "2.6 🧪 Exercício 6",
+    "text": "2.6 🧪 Exercício 6\nConsidere \\(F(x)=\\bigl(\\sqrt{2x-6}\\bigr)^2\\) e \\(P(x)=2x-6\\).\n\nDetermine os domínios reais de \\(F\\) e \\(P\\).\nSimplifique a expressão de \\(F\\) no seu domínio. As duas funções têm o mesmo domínio? Justifique."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exercício-6-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.13-composicao-de-funcoes.html#exercício-6-1",
+    "title": "📘 Módulo 1.13: Composição de Funções",
+    "section": "3.6 🧪 Exercício 6",
+    "text": "3.6 🧪 Exercício 6\n\nA raiz exige \\(2x-6\\geq0\\), isto é, \\(x\\geq3\\). A função externa, que eleva seu argumento ao quadrado, aceita qualquer número real. Portanto, \\(D_F=[3,+\\infty)\\). Já \\(P\\) é uma função afim e tem domínio \\(D_P=\\mathbb R\\).\nPara \\(x\\geq3\\), vale \\(F(x)=2x-6\\). Os domínios são diferentes. Por exemplo, \\(P(0)=-6\\), mas \\(F(0)\\) não está definida nos reais."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.9-trigonometria-essencial.html",
