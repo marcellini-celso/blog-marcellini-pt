@@ -4211,126 +4211,49 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#o-que-é-uma-assíntota",
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
     "section": "1.1 🧱 O que é uma assíntota?",
-    "text": "1.1 🧱 O que é uma assíntota?\nUma assíntota é uma reta que serve como referência para o comportamento de um gráfico.\nAs mais comuns neste momento são:\n\nassíntotas verticais;\nassíntotas horizontais;\nassíntotas oblíquas.\n\nCada tipo responde a uma pergunta diferente."
+    "text": "1.1 🧱 O que é uma assíntota?\nPerto de um ponto excluído, perguntamos se os valores da função se aproximam de um número finito ou se crescem ou decrescem sem limite. No infinito, investigamos separadamente o que acontece quando \\(x\\to+\\infty\\) e quando \\(x\\to-\\infty\\).\nA reta vertical \\(x=a\\) é uma assíntota se pelo menos um limite lateral de \\(f\\) em \\(a\\) for \\(+\\infty\\) ou \\(-\\infty\\). Para uma reta horizontal ou oblíqua, verificamos se a diferença entre as ordenadas do gráfico e da reta, na mesma abscissa, tende a zero na direção do infinito considerada.\nOs três tipos fundamentais são:\n\nAssíntota vertical: relacionada ao comportamento da função nas proximidades de uma abscissa.\nAssíntota horizontal: relacionada à aproximação da função a uma constante quando \\(x\\) tende ao infinito.\nAssíntota oblíqua: relacionada à aproximação da função a uma reta inclinada quando \\(x\\) tende ao infinito.\n\nExiste ainda uma generalização importante: uma função pode se aproximar de uma curva polinomial de grau superior a um. Nesse caso, podemos falar em assíntota polinomial.\nCada tipo de assíntota corresponde a uma condição matemática específica, que será desenvolvida a seguir."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntota-vertical",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntota-vertical",
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
     "section": "1.2 📍 Assíntota vertical",
-    "text": "1.2 📍 Assíntota vertical\nUma assíntota vertical ocorre quando a função cresce ou decresce sem limite perto de certo valor de \\(x\\).\nPor exemplo:\n\\[\nf(x)=\\frac{1}{x-2}.\n\\]\nO denominador zera em\n\\[\nx=2.\n\\]\nQuando \\(x\\) se aproxima de \\(2\\), os valores da função crescem em módulo.\nAssim, temos uma assíntota vertical:\n\\[\nx=2.\n\\]\nNo módulo de limites, escreveremos:\n\\[\n\\lim_{x\\to 2^+}\\frac{1}{x-2}=+\\infty\n\\]\ne\n\\[\n\\lim_{x\\to 2^-}\\frac{1}{x-2}=-\\infty.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#nem-todo-ponto-excluído-é-assíntota-vertical",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#nem-todo-ponto-excluído-é-assíntota-vertical",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "1.3 ⚠️ Nem todo ponto excluído é assíntota vertical",
-    "text": "1.3 ⚠️ Nem todo ponto excluído é assíntota vertical\nConsidere:\n\\[\ng(x)=\\frac{x^2-4}{x-2}.\n\\]\nO denominador zera em \\(x=2\\), mas o numerador também zera.\nFatorando:\n\\[\nx^2-4=(x-2)(x+2).\n\\]\nPara \\(x\\neq 2\\),\n\\[\ng(x)=x+2.\n\\]\nO gráfico é uma reta com um buraco em \\(x=2\\), não uma assíntota vertical.\nLogo, pontos excluídos podem produzir:\n\nassíntotas verticais;\nburacos;\noutros tipos de descontinuidade.\n\nÉ preciso analisar o comportamento."
+    "text": "1.2 📍 Assíntota vertical\nUma reta vertical \\(x=a\\) é uma assíntota vertical de uma função \\(f\\) quando pelo menos um dos limites laterais é infinito positivo ou negativo:\n\\[\n\\lim_{x\\to a^-}f(x)=+\\infty,\n\\]\n\\[\n\\lim_{x\\to a^-}f(x)=-\\infty,\n\\]\n\\[\n\\lim_{x\\to a^+}f(x)=+\\infty\n\\]\nou\n\\[\n\\lim_{x\\to a^+}f(x)=-\\infty.\n\\]\nNão é necessário que os dois limites laterais sejam iguais. Basta que pelo menos um deles seja infinito.\n\n1.2.1 Exemplo 1 — A função recíproca deslocada\nConsidere:\n\\[\nf(x)=\\frac{1}{x-2}.\n\\]\nO domínio da função é:\n\\[\nD(f)=\\mathbb{R}\\setminus\\{2\\}.\n\\]\nQuando \\(x\\) se aproxima de \\(2\\) pela direita, temos \\(x-2&gt;0\\) e o denominador se aproxima de zero por valores positivos:\n\\[\n\\lim_{x\\to 2^+}\\frac{1}{x-2}=+\\infty.\n\\]\nQuando \\(x\\) se aproxima de \\(2\\) pela esquerda, temos \\(x-2&lt;0\\) e o denominador se aproxima de zero por valores negativos:\n\\[\n\\lim_{x\\to 2^-}\\frac{1}{x-2}=-\\infty.\n\\]\nPortanto:\n\\[\n\\boxed{x=2}\n\\]\né uma assíntota vertical.\nInterpretação: o gráfico apresenta dois ramos que se afastam indefinidamente do eixo horizontal nas proximidades de \\(x=2\\), um em direção a \\(+\\infty\\) e outro em direção a \\(-\\infty\\).\n\n\n1.2.2 Exemplo 2 — Os dois lados podem apresentar o mesmo sinal\nConsidere:\n\\[\ng(x)=\\frac{1}{(x-1)^2}.\n\\]\nQuando \\(x\\) se aproxima de \\(1\\), o denominador permanece positivo e se aproxima de zero:\n\\[\n\\lim_{x\\to 1^-}\\frac{1}{(x-1)^2}=+\\infty\n\\]\ne\n\\[\n\\lim_{x\\to 1^+}\\frac{1}{(x-1)^2}=+\\infty.\n\\]\nLogo:\n\\[\n\\boxed{x=1}\n\\]\né uma assíntota vertical.\nObserve que, diferentemente do exemplo anterior, os dois ramos crescem em direção a \\(+\\infty\\).\n\n\n1.2.3 Atenção aos limites laterais\nO comportamento de uma função nas proximidades de uma assíntota vertical depende do lado pelo qual nos aproximamos do ponto.\nPor isso, não devemos analisar apenas a expressão algébrica. É importante verificar os sinais dos fatores que aparecem no numerador e no denominador."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntotas-verticais-em-funções-racionais",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntotas-verticais-em-funções-racionais",
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
     "section": "1.4 ➗ Assíntotas verticais em funções racionais",
-    "text": "1.4 ➗ Assíntotas verticais em funções racionais\nEm funções racionais, candidatos a assíntotas verticais aparecem onde o denominador zera.\nMas devemos verificar se há cancelamento.\nExemplo:\n\\[\nf(x)=\\frac{x+1}{x^2-9}.\n\\]\nFatorando o denominador:\n\\[\nx^2-9=(x-3)(x+3).\n\\]\nO denominador zera em\n\\[\nx=3\n\\]\ne\n\\[\nx=-3.\n\\]\nComo o numerador não zera nesses pontos, temos assíntotas verticais:\n\\[\nx=3\n\\]\ne\n\\[\nx=-3.\n\\]"
+    "text": "1.4 ➗ Assíntotas verticais em funções racionais\nUma função racional é expressa pelo quociente de dois polinômios:\n\\[\nf(x)=\\frac{P(x)}{Q(x)},\n\\]\nem que \\(Q(x)\\) não é o polinômio nulo.\nOs pontos em que o denominador se anula são candidatos a assíntotas verticais.\nEntretanto, antes de concluir, devemos investigar se existe algum fator comum entre numerador e denominador.\n\n1.4.1 Procedimento de análise\nPara investigar as assíntotas verticais de uma função racional:\n\nDetermine os valores que anulam o denominador.\nFatore o numerador e o denominador, quando possível.\nSimplifique os fatores comuns, respeitando as restrições do domínio original.\nAnalise os limites laterais nos pontos excluídos.\nIdentifique quais pontos produzem limites infinitos.\n\n\n\n1.4.2 Exemplo 3 — Dois candidatos, duas assíntotas\nConsidere:\n\\[\nf(x)=\\frac{x+1}{x^2-9}.\n\\]\nFatorando o denominador:\n\\[\nx^2-9=(x-3)(x+3).\n\\]\nO domínio é:\n\\[\nD(f)=\\mathbb{R}\\setminus\\{-3,3\\}.\n\\]\nOs candidatos a assíntotas verticais são:\n\\[\nx=3\n\\]\ne\n\\[\nx=-3.\n\\]\nO numerador não se anula em nenhum desses pontos:\n\\[\n3+1=4\\neq 0\n\\]\ne\n\\[\n-3+1=-2\\neq 0.\n\\]\nLogo, não existe cancelamento de fatores.\nNas proximidades de \\(x=3\\), o denominador tende a zero, enquanto o numerador tende a \\(4\\). Os limites laterais são infinitos.\nNas proximidades de \\(x=-3\\), o numerador tende a \\(-2\\) e o denominador também tende a zero, produzindo novamente limites laterais infinitos.\nPortanto, as duas retas são assíntotas verticais:\n\\[\n\\boxed{x=3\\qquad\\text{e}\\qquad x=-3.}\n\\]\n\n\n1.4.3 Exemplo 4 — Cancelamento de um fator\nConsidere:\n\\[\ng(x)=\\frac{(x-2)(x+1)}{(x-2)(x+3)}.\n\\]\nO domínio original exclui:\n\\[\nx=2\n\\]\ne\n\\[\nx=-3.\n\\]\nPara os demais valores de \\(x\\), podemos simplificar:\n\\[\ng(x)=\\frac{x+1}{x+3}.\n\\]\nEm \\(x=2\\), o limite é finito:\n\\[\n\\lim_{x\\to 2}g(x)\n=\n\\frac{2+1}{2+3}\n=\n\\frac{3}{5}.\n\\]\nLogo, \\(x=2\\) corresponde a uma descontinuidade removível.\nEm \\(x=-3\\), entretanto, o denominador da expressão simplificada se aproxima de zero, enquanto o numerador tende a \\(-2\\).\nAssim, existem limites laterais infinitos e:\n\\[\n\\boxed{x=-3}\n\\]\né uma assíntota vertical.\nConclusão: a simplificação algébrica ajuda a identificar os pontos removíveis, mas os limites são o critério definitivo para reconhecer uma assíntota vertical."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntota-horizontal",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntota-horizontal",
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
     "section": "1.5 🌅 Assíntota horizontal",
-    "text": "1.5 🌅 Assíntota horizontal\nUma assíntota horizontal descreve o comportamento da função quando\n\\[\nx\\to+\\infty\n\\]\nou\n\\[\nx\\to-\\infty.\n\\]\nPor exemplo:\n\\[\nf(x)=\\frac{x}{x+1}.\n\\]\nDividindo numerador e denominador por \\(x\\):\n\\[\nf(x)=\\frac{1}{1+\\frac{1}{x}}.\n\\]\nQuando \\(x\\) cresce sem limite,\n\\[\n\\frac{1}{x}\n\\]\nse aproxima de zero.\nLogo,\n\\[\nf(x)\n\\]\nse aproxima de\n\\[\n1.\n\\]\nAssim, a assíntota horizontal é\n\\[\ny=1.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#regra-prática-para-funções-racionais",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#regra-prática-para-funções-racionais",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "1.6 🧮 Regra prática para funções racionais",
-    "text": "1.6 🧮 Regra prática para funções racionais\nConsidere uma função racional:\n\\[\nf(x)=\\frac{p(x)}{q(x)}.\n\\]\nPara assíntotas horizontais, comparamos os graus de \\(p\\) e \\(q\\).\n\n1.6.1 🧮 Grau do numerador menor que o grau do denominador\nSe\n\\[\n\\deg(p)&lt;\\deg(q),\n\\]\nentão a assíntota horizontal é\n\\[\ny=0.\n\\]\nExemplo:\n\\[\nf(x)=\\frac{x+1}{x^2+3}.\n\\]\n\n\n1.6.2 🧮 Graus iguais\nSe\n\\[\n\\deg(p)=\\deg(q),\n\\]\na assíntota horizontal é a razão dos coeficientes líderes.\nExemplo:\n\\[\nf(x)=\\frac{3x^2+1}{2x^2-5}.\n\\]\nA assíntota horizontal é\n\\[\ny=\\frac{3}{2}.\n\\]\n\n\n1.6.3 🧮 Grau do numerador maior\nSe\n\\[\n\\deg(p)&gt;\\deg(q),\n\\]\nnão há assíntota horizontal.\nPode haver assíntota oblíqua ou polinomial."
+    "text": "1.5 🌅 Assíntota horizontal\nUma reta horizontal \\(y=L\\) é uma assíntota horizontal de uma função quando:\n\\[\n\\lim_{x\\to+\\infty}f(x)=L\n\\]\nou\n\\[\n\\lim_{x\\to-\\infty}f(x)=L,\n\\]\ncom \\(L\\) finito.\nA função não precisa se aproximar da mesma reta nas duas direções.\n\n1.5.1 Exemplo 5 — Assíntota horizontal\nConsidere:\n\\[\nf(x)=\\frac{x}{x+1}.\n\\]\nDividindo o numerador e o denominador por \\(x\\):\n\\[\nf(x)=\\frac{1}{1+\\frac{1}{x}}.\n\\]\nQuando \\(x\\to+\\infty\\) ou \\(x\\to-\\infty\\):\n\\[\n\\frac{1}{x}\\to 0.\n\\]\nConsequentemente:\n\\[\n\\lim_{x\\to+\\infty}\\frac{x}{x+1}=1\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}\\frac{x}{x+1}=1.\n\\]\nPortanto:\n\\[\n\\boxed{y=1}\n\\]\né uma assíntota horizontal nas duas direções.\n\n\n1.5.2 Exemplo 6 — Assíntotas horizontais diferentes\nConsidere:\n\\[\ng(x)=\\frac{x}{\\sqrt{x^2+1}}.\n\\]\nPodemos escrever:\n\\[\ng(x)=\n\\frac{x}{|x|\\sqrt{1+\\frac{1}{x^2}}}.\n\\]\nPara \\(x\\to+\\infty\\), temos \\(|x|=x\\). Assim:\n\\[\n\\lim_{x\\to+\\infty}g(x)=1.\n\\]\nPara \\(x\\to-\\infty\\), temos \\(|x|=-x\\). Portanto:\n\\[\n\\lim_{x\\to-\\infty}g(x)=-1.\n\\]\nLogo, essa função apresenta duas assíntotas horizontais:\n\\[\n\\boxed{y=1\\quad\\text{quando }x\\to+\\infty}\n\\]\ne\n\\[\n\\boxed{y=-1\\quad\\text{quando }x\\to-\\infty.}\n\\]\nEsse exemplo mostra por que é importante investigar separadamente os dois sentidos do infinito."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntota-oblíqua",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntota-oblíqua",
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "1.7 📐 Assíntota oblíqua",
-    "text": "1.7 📐 Assíntota oblíqua\nUma assíntota oblíqua aparece quando o gráfico se aproxima de uma reta inclinada.\nExemplo:\n\\[\nf(x)=\\frac{x^2+1}{x}.\n\\]\nDividindo:\n\\[\nf(x)=x+\\frac{1}{x}.\n\\]\nQuando \\(x\\) tende a \\(+\\infty\\) ou \\(-\\infty\\),\n\\[\n\\frac{1}{x}\\to 0.\n\\]\nLogo, o gráfico se aproxima da reta\n\\[\ny=x.\n\\]\nEssa reta é uma assíntota oblíqua."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#termo-dominante",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#termo-dominante",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "1.8 🔍 Termo dominante",
-    "text": "1.8 🔍 Termo dominante\nO comportamento no infinito é frequentemente governado pelo termo dominante.\nEm um polinômio:\n\\[\np(x)=5x^4-3x^2+x-8,\n\\]\no termo dominante é\n\\[\n5x^4.\n\\]\nPara valores muito grandes de \\(x\\), os termos de menor grau têm importância relativa menor.\nEm funções racionais, comparamos os termos dominantes do numerador e do denominador.\nPor exemplo:\n\\[\nf(x)=\\frac{4x^3-1}{2x^3+7x}.\n\\]\nOs termos dominantes são\n\\[\n4x^3\n\\]\ne\n\\[\n2x^3.\n\\]\nLogo, a função se aproxima de\n\\[\n\\frac{4x^3}{2x^3}=2.\n\\]\nA assíntota horizontal é\n\\[\ny=2.\n\\]"
+    "section": "1.8 📐 Assíntota oblíqua",
+    "text": "1.8 📐 Assíntota oblíqua\nUma reta inclinada pode ser assíntota de uma função quando a diferença entre a função e a reta tende a zero.\nUma reta:\n\\[\ny=mx+b,\n\\]\ncom \\(m\\neq 0\\), é uma assíntota oblíqua em uma direção do infinito quando:\n\\[\n\\lim_{x\\to\\pm\\infty}\n\\left[f(x)-(mx+b)\\right]=0.\n\\]\nA expressão \\(\\pm\\infty\\) deve ser interpretada separadamente: a condição pode valer para \\(+\\infty\\), para \\(-\\infty\\) ou para ambos.\n\n1.8.1 Exemplo 7 — Divisão de polinômios\nConsidere:\n\\[\nf(x)=\\frac{x^2+1}{x}.\n\\]\nDividindo cada termo do numerador por \\(x\\):\n\\[\nf(x)=x+\\frac{1}{x}.\n\\]\nA reta candidata a assíntota oblíqua é:\n\\[\ny=x.\n\\]\nPara verificar:\n\\[\nf(x)-x=\\frac{1}{x}.\n\\]\nComo:\n\\[\n\\lim_{x\\to+\\infty}\\frac{1}{x}=0\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}\\frac{1}{x}=0,\n\\]\na reta:\n\\[\n\\boxed{y=x}\n\\]\né uma assíntota oblíqua nas duas direções.\n\n\n1.8.2 Exemplo 8 — Assíntota oblíqua com intercepto diferente de zero\nConsidere:\n\\[\ng(x)=\\frac{x^2+2x+1}{x}.\n\\]\nDividindo:\n\\[\ng(x)=x+2+\\frac{1}{x}.\n\\]\nA reta candidata é:\n\\[\ny=x+2.\n\\]\nA diferença entre a função e a reta é:\n\\[\ng(x)-(x+2)=\\frac{1}{x}.\n\\]\nComo:\n\\[\n\\lim_{x\\to\\pm\\infty}\\frac{1}{x}=0,\n\\]\nconcluímos que:\n\\[\n\\boxed{y=x+2}\n\\]\né uma assíntota oblíqua nas duas direções do infinito."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#comportamento-no-infinito",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#comportamento-no-infinito",
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "1.9 ♾️ Comportamento no infinito",
-    "text": "1.9 ♾️ Comportamento no infinito\nQuando perguntamos o que acontece com uma função quando\n\\[\nx\\to+\\infty,\n\\]\nestamos estudando o comportamento no infinito.\nAlguns exemplos:\n\\[\n\\frac{1}{x}\\to 0,\n\\]\n\\[\nx^2\\to+\\infty,\n\\]\n\\[\ne^x\\to+\\infty,\n\\]\n\\[\n\\ln x\\to+\\infty,\n\\]\nmas cresce lentamente.\nEssas afirmações serão formalizadas com limites no infinito."
+    "section": "1.11 ♾️ Comportamento no infinito",
+    "text": "1.11 ♾️ Comportamento no infinito\nO comportamento no infinito descreve o que acontece com uma função quando a variável independente cresce ou decresce sem limite.\nÉ importante distinguir:\n\\[\nx\\to+\\infty\n\\]\nde\n\\[\nx\\to-\\infty.\n\\]\nO comportamento pode ser diferente em cada direção.\n\n1.11.1 Exemplos fundamentais\nFunção recíproca\n\\[\nf(x)=\\frac{1}{x}.\n\\]\nTemos:\n\\[\n\\lim_{x\\to+\\infty}\\frac{1}{x}=0\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}\\frac{1}{x}=0.\n\\]\nFunção quadrática\n\\[\ng(x)=x^2.\n\\]\nTemos:\n\\[\n\\lim_{x\\to+\\infty}x^2=+\\infty\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}x^2=+\\infty.\n\\]\nFunção cúbica\n\\[\nh(x)=x^3.\n\\]\nTemos:\n\\[\n\\lim_{x\\to+\\infty}x^3=+\\infty\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}x^3=-\\infty.\n\\]\nFunção exponencial\n\\[\np(x)=e^x.\n\\]\nTemos:\n\\[\n\\lim_{x\\to+\\infty}e^x=+\\infty\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}e^x=0.\n\\]\nFunção logarítmica\n\\[\nq(x)=\\ln x.\n\\]\nSeu domínio é \\(x&gt;0\\), e:\n\\[\n\\lim_{x\\to+\\infty}\\ln x=+\\infty.\n\\]\nEsses exemplos mostram que o comportamento no infinito depende da estrutura da função."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#ponte-para-limites",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#ponte-para-limites",
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "1.10 🌉 Ponte para limites",
-    "text": "1.10 🌉 Ponte para limites\nAssíntotas são uma tradução geométrica de certos limites.\nAssíntota vertical:\n\\[\nx=a\n\\]\nestá ligada a limites infinitos quando \\(x\\to a\\).\nAssíntota horizontal:\n\\[\ny=L\n\\]\nestá ligada a limites no infinito:\n\\[\n\\lim_{x\\to+\\infty}f(x)=L\n\\]\nou\n\\[\n\\lim_{x\\to-\\infty}f(x)=L.\n\\]\nAssíntota oblíqua:\n\\[\ny=mx+b\n\\]\nindica que a diferença entre o gráfico e essa reta tende a zero no infinito."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nDetermine as assíntotas verticais:\n\n\\(f(x)=\\dfrac{1}{x-5}\\)\n\n\\(g(x)=\\dfrac{x+2}{x^2-1}\\)\n\n\\(h(x)=\\dfrac{x}{x^2-4}\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nDetermine a assíntota horizontal:\n\n\\(f(x)=\\dfrac{2x+1}{x-3}\\)\n\n\\(g(x)=\\dfrac{x+4}{x^2+1}\\)\n\n\\(h(x)=\\dfrac{5x^3-1}{2x^3+x}\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nExplique por que\n\\[\n\\frac{x^2-9}{x-3}\n\\]\nnão tem assíntota vertical em \\(x=3\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nDetermine a assíntota oblíqua de\n\\[\nf(x)=\\frac{x^2+2x+1}{x}.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1-1",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "3.1 🧪 Exercício 1",
-    "text": "3.1 🧪 Exercício 1\n\nO denominador zera em \\(x=5\\). Logo, a assíntota vertical é\n\n\\[\nx=5.\n\\]\n\n\n\n\\[\nx^2-1=(x-1)(x+1).\n\\]\nO denominador zera em \\(x=1\\) e \\(x=-1\\). Como o numerador não zera nesses pontos, as assíntotas verticais são\n\\[\nx=1\n\\]\ne\n\\[\nx=-1.\n\\]\n\n\n\n\\[\nx^2-4=(x-2)(x+2).\n\\]\nO denominador zera em \\(x=2\\) e \\(x=-2\\). O numerador não zera nesses pontos. Logo, as assíntotas verticais são\n\\[\nx=2\n\\]\ne\n\\[\nx=-2.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2-1",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "3.2 🧪 Exercício 2",
-    "text": "3.2 🧪 Exercício 2\n\nOs graus são iguais. A razão dos coeficientes líderes é\n\n\\[\n\\frac{2}{1}=2.\n\\]\nLogo, a assíntota horizontal é\n\\[\ny=2.\n\\]\n\nO grau do numerador é menor que o grau do denominador. Logo, a assíntota horizontal é\n\n\\[\ny=0.\n\\]\n\nOs graus são iguais. A razão dos coeficientes líderes é\n\n\\[\n\\frac{5}{2}.\n\\]\nLogo, a assíntota horizontal é\n\\[\ny=\\frac{5}{2}.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3-1",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\nTemos\n\\[\nx^2-9=(x-3)(x+3).\n\\]\nLogo, para \\(x\\neq 3\\),\n\\[\n\\frac{x^2-9}{x-3}=x+3.\n\\]\nO ponto \\(x=3\\) é excluído do domínio original, mas a função não cresce sem limite perto de \\(3\\). Ela se aproxima de \\(6\\).\nPortanto, há um buraco, não uma assíntota vertical."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4-1",
-    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
-    "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\nDividindo:\n\\[\n\\frac{x^2+2x+1}{x}=x+2+\\frac{1}{x}.\n\\]\nComo\n\\[\n\\frac{1}{x}\\to 0\n\\]\nquando \\(x\\to\\pm\\infty\\), a assíntota oblíqua é\n\\[\ny=x+2.\n\\]"
+    "section": "1.13 🌉 Ponte para limites",
+    "text": "1.13 🌉 Ponte para limites\nAs assíntotas são uma tradução geométrica de determinados limites.\nAssíntota vertical\nUma reta \\(x=a\\) é assíntota vertical quando pelo menos um dos limites laterais é infinito:\n\\[\n\\lim_{x\\to a^-}f(x)=\\pm\\infty\n\\]\nou\n\\[\n\\lim_{x\\to a^+}f(x)=\\pm\\infty.\n\\]\nAssíntota horizontal\nUma reta \\(y=L\\) é assíntota horizontal quando:\n\\[\n\\lim_{x\\to+\\infty}f(x)=L\n\\]\nou\n\\[\n\\lim_{x\\to-\\infty}f(x)=L.\n\\]\nAssíntota oblíqua\nUma reta \\(y=mx+b\\), com \\(m\\neq 0\\), é assíntota oblíqua em uma direção do infinito quando:\n\\[\n\\lim_{x\\to\\pm\\infty}\n[f(x)-(mx+b)]=0.\n\\]\nAssíntota polinomial\nUm polinômio \\(P(x)\\) é assíntota polinomial quando:\n\\[\n\\lim_{x\\to\\pm\\infty}[f(x)-P(x)]=0.\n\\]\nEssas definições mostram que o cálculo de limites não é apenas uma ferramenta algébrica: ele permite compreender geometricamente o comportamento de uma função.\n\n\n\n\n\n\nNota📋 Quadro-resumo\n\n\n\n\n\n\n\n\n\n\nTipo de comportamento\nCondição matemática\n\n\n\n\nAssíntota vertical \\(x=a\\)\nPelo menos um limite lateral em \\(a\\) é infinito\n\n\nAssíntota horizontal \\(y=L\\)\nO limite da função no infinito é \\(L\\)\n\n\nAssíntota oblíqua \\(y=mx+b\\)\nA diferença entre a função e a reta tende a zero\n\n\nAssíntota polinomial \\(P(x)\\)\nA diferença entre a função e o polinômio tende a zero\n\n\n\nFunções racionais\nPara:\n\\[\nf(x)=\\frac{P(x)}{Q(x)},\n\\]\na comparação dos graus permite investigar o comportamento no infinito.\n\nGrau do numerador menor: assíntota horizontal \\(y=0\\).\nGraus iguais: assíntota horizontal dada pela razão dos coeficientes líderes.\nGrau do numerador maior: não existe assíntota horizontal finita; pode haver assíntota oblíqua ou polinomial.\n\nAssíntotas verticais\nOs zeros do denominador são candidatos a assíntotas verticais. É necessário verificar se ocorre cancelamento de fatores e analisar os limites laterais.\nDivisão de polinômios\nA divisão permite escrever uma função racional como:\n\\[\nf(x)=S(x)+\\frac{R(x)}{Q(x)}.\n\\]\nSe:\n\\[\n\\lim_{x\\to\\pm\\infty}\\frac{R(x)}{Q(x)}=0,\n\\]\nentão o quociente \\(S(x)\\) descreve o comportamento assintótico da função na direção considerada.\n\n\n\n\n\n\n\n\nNota🌉 Conexão com o Módulo 2 — Limites\n\n\n\nNeste aprofundamento, utilizamos limites para compreender o comportamento de funções nas proximidades de pontos e no infinito.\nNo módulo de limites, desenvolveremos formalmente os procedimentos que permitem calcular essas expressões.\nEntre os assuntos que serão aprofundados estão:\n\nLimites laterais.\nLimites infinitos.\nLimites no infinito.\nPropriedades algébricas dos limites.\nIndeterminações.\nTécnicas de fatoração e simplificação.\nDivisão de polinômios.\nComparação de crescimento.\n\nAs assíntotas representam uma aplicação geométrica importante desses conceitos."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#quiz-assíntotas-e-comportamento-no-infinito",
@@ -4338,6 +4261,160 @@
     "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
     "section": "3.5 🧩 Quiz — Assíntotas e Comportamento no Infinito",
     "text": "3.5 🧩 Quiz — Assíntotas e Comportamento no Infinito\n\nQ1. Uma assíntota vertical está associada a:\n\n\n\n\n ✓Crescimento ou decrescimento sem limite perto de certo valor de \\(x\\).\n\n\n ✗Uma função constante.\n\n\n ✗Apenas gráficos de retas.\n\n\n\n\n\n\nQ2. Se uma função racional tem graus iguais no numerador e denominador, a assíntota horizontal é:\n\n\n\n\n ✗Sempre \\(y=0\\).\n\n\n ✓A razão dos coeficientes líderes.\n\n\n ✗Sempre inexistente.\n\n\n\n\n\n\nQ3. A função \\(\\dfrac{x^2-4}{x-2}\\) tem em \\(x=2\\):\n\n\n\n\n ✗Assíntota vertical obrigatoriamente.\n\n\n ✓Um buraco, pois há cancelamento do fator \\(x-2\\).\n\n\n ✗Uma assíntota horizontal."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#nem-todo-ponto-excluído-é-uma-assíntota-vertical",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#nem-todo-ponto-excluído-é-uma-assíntota-vertical",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "1.3 ⚠️ Nem todo ponto excluído é uma assíntota vertical",
+    "text": "1.3 ⚠️ Nem todo ponto excluído é uma assíntota vertical\nUm erro comum é considerar que todo ponto em que o denominador de uma função racional se anula produz uma assíntota vertical.\nIsso não é verdade.\nConsidere:\n\\[\ng(x)=\\frac{x^2-4}{x-2}.\n\\]\nO denominador se anula em:\n\\[\nx=2.\n\\]\nEntretanto, o numerador também se anula nesse ponto.\nFatorando o numerador:\n\\[\nx^2-4=(x-2)(x+2).\n\\]\nPara \\(x\\neq 2\\), podemos simplificar:\n\\[\ng(x)=x+2.\n\\]\nPortanto, embora a função original não esteja definida em \\(x=2\\), seus valores se aproximam de:\n\\[\n\\lim_{x\\to 2}\\frac{x^2-4}{x-2}\n=\n\\lim_{x\\to 2}(x+2)\n=4.\n\\]\nO limite existe e é finito.\nAssim, não há assíntota vertical em \\(x=2\\).\nO gráfico corresponde à reta \\(y=x+2\\), mas com um ponto removido:\n\\[\n(2,4).\n\\]\nEsse tipo de descontinuidade é chamado de descontinuidade removível.\n\n\n\n\n\n\nNota📌 Descontinuidade removível\n\n\n\nUma descontinuidade é removível quando a função apresenta um limite finito no ponto, mas não está definida ali ou possui um valor diferente desse limite.\nNo exemplo:\n\\[\n\\lim_{x\\to 2}g(x)=4,\n\\]\nmas \\(g(2)\\) não existe.\nSe definíssemos uma nova função atribuindo \\(g(2)=4\\), eliminaríamos essa descontinuidade.\nPortanto, um ponto excluído do domínio não implica necessariamente uma assíntota vertical.\n\n\n\n1.3.1 Comparação entre os dois casos\n\n\n\n\n\n\n\n\nSituação\nComportamento do limite\nInterpretação\n\n\n\n\n\\(\\dfrac{1}{x-2}\\) em \\(x=2\\)\nLimites laterais infinitos\nAssíntota vertical\n\n\n\\(\\dfrac{x^2-4}{x-2}\\) em \\(x=2\\)\nLimite finito igual a \\(4\\)\nDescontinuidade removível\n\n\n\nA análise dos limites permite distinguir situações que, observando apenas o denominador, poderiam parecer iguais."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#regra-prática-para-assíntotas-horizontais-em-funções-racionais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#regra-prática-para-assíntotas-horizontais-em-funções-racionais",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "1.6 🧮 Regra prática para assíntotas horizontais em funções racionais",
+    "text": "1.6 🧮 Regra prática para assíntotas horizontais em funções racionais\nConsidere:\n\\[\nf(x)=\\frac{P(x)}{Q(x)},\n\\]\nem que \\(P\\) e \\(Q\\) são polinômios não nulos.\nPara determinar o comportamento no infinito, comparamos os graus dos polinômios.\nSejam:\n\\[\nm=\\deg(P)\n\\]\ne\n\\[\nn=\\deg(Q).\n\\]\n\n1.6.1 Caso 1 — Grau do numerador menor que o grau do denominador\nSe:\n\\[\nm&lt;n,\n\\]\no denominador cresce mais rapidamente em módulo que o numerador.\nAssim:\n\\[\n\\lim_{x\\to\\pm\\infty}\\frac{P(x)}{Q(x)}=0.\n\\]\nA assíntota horizontal é:\n\\[\n\\boxed{y=0.}\n\\]\nExemplo:\n\\[\nf(x)=\\frac{x+1}{x^2+3}.\n\\]\nO grau do numerador é \\(1\\) e o do denominador é \\(2\\).\nPortanto:\n\\[\n\\boxed{y=0.}\n\\]\n\n\n1.6.2 Caso 2 — Graus iguais\nSe:\n\\[\nm=n,\n\\]\na assíntota horizontal é dada pela razão entre os coeficientes líderes.\nExemplo:\n\\[\nf(x)=\\frac{3x^2+1}{2x^2-5}.\n\\]\nOs coeficientes líderes são \\(3\\) e \\(2\\).\nLogo:\n\\[\n\\boxed{y=\\frac{3}{2}.}\n\\]\n\n\n1.6.3 Caso 3 — Grau do numerador maior que o grau do denominador\nSe:\n\\[\nm&gt;n,\n\\]\nnão existe assíntota horizontal finita.\nEntretanto, pode existir uma assíntota oblíqua ou uma assíntota polinomial.\nPara investigá-las, utilizamos a divisão de polinômios.\n\n\n1.6.4 Quadro-resumo\n\n\n\n\n\n\n\nComparação dos graus\nComportamento no infinito\n\n\n\n\n\\(\\deg(P)&lt;\\deg(Q)\\)\nAssíntota horizontal \\(y=0\\)\n\n\n\\(\\deg(P)=\\deg(Q)\\)\nAssíntota horizontal dada pela razão dos coeficientes líderes\n\n\n\\(\\deg(P)&gt;\\deg(Q)\\)\nNão há assíntota horizontal finita; pode haver assíntota polinomial\n\n\n\nObservação. A comparação de graus e coeficientes líderes pode ser feita com a expressão original. Um fator comum reduz os dois graus na mesma quantidade e deixa inalterada a razão dos coeficientes líderes. Para investigar assíntotas verticais, simplifique os fatores comuns e preserve as exclusões do domínio original."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#termo-dominante-e-funções-racionais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#termo-dominante-e-funções-racionais",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "1.7 🔍 Termo dominante e funções racionais",
+    "text": "1.7 🔍 Termo dominante e funções racionais\nO comportamento de uma função racional no infinito é frequentemente governado pelos termos de maior grau do numerador e do denominador.\nConsidere:\n\\[\nf(x)=\\frac{4x^3-1}{2x^3+7x}.\n\\]\nOs termos dominantes são:\n\\[\n4x^3\n\\]\ne\n\\[\n2x^3.\n\\]\nDividindo o numerador e o denominador por \\(x^3\\):\n\\[\nf(x)=\n\\frac{4-\\frac{1}{x^3}}\n{2+\\frac{7}{x^2}}.\n\\]\nQuando \\(x\\to+\\infty\\) ou \\(x\\to-\\infty\\), os termos com potências negativas de \\(x\\) tendem a zero.\nPortanto:\n\\[\n\\lim_{x\\to\\pm\\infty}f(x)\n=\n\\frac{4}{2}=2.\n\\]\nA assíntota horizontal é:\n\\[\n\\boxed{y=2.}\n\\]\n\n1.7.1 Por que o procedimento funciona?\nDividimos o numerador e o denominador pela potência \\(x^n\\), em que \\(n\\) é o grau do denominador. Assim, cada termo de grau menor que \\(n\\) tende a zero depois da divisão. Se o numerador também tem grau \\(n\\), o limite é a razão dos coeficientes líderes. Se tem grau menor, o limite é zero. Quando tem grau maior, o grau e o sinal do termo dominante determinam o comportamento em cada direção.\nEssa é a justificativa algébrica para a regra prática baseada na comparação dos graus."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#método-geral-pela-divisão-de-polinômios",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#método-geral-pela-divisão-de-polinômios",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "1.9 ➗ Método geral pela divisão de polinômios",
+    "text": "1.9 ➗ Método geral pela divisão de polinômios\nPara \\(f(x)=P(x)/Q(x)\\), com \\(Q\\) um polinômio não nulo, a divisão de polinômios fornece um quociente \\(S\\) e um resto \\(R\\) tais que\n\\[\nP(x)=Q(x)S(x)+R(x),\n\\]\ncom \\(R=0\\) ou \\(\\deg R&lt;\\deg Q\\). Para \\(Q(x)\\ne0\\), obtemos\n\\[\nf(x)=S(x)+\\frac{R(x)}{Q(x)}.\n\\]\nSe \\(R=0\\), a diferença \\(f(x)-S(x)\\) é zero no domínio. Se \\(R\\ne0\\), dividimos \\(R(x)\\) e \\(Q(x)\\) por \\(x^{\\deg Q}\\). O numerador tende a zero e o denominador tende ao seu coeficiente líder, que é diferente de zero. Portanto,\n\\[\n\\lim_{x\\to+\\infty}\\frac{R(x)}{Q(x)}=\\lim_{x\\to-\\infty}\\frac{R(x)}{Q(x)}=0.\n\\]\nAssim, \\(S\\) descreve a aproximação nas duas direções. Se \\(S\\) é constante, inclusive \\(S=0\\), temos uma assíntota horizontal. Se \\(S\\) tem grau um, temos uma assíntota oblíqua. Se tem grau dois ou mais, temos uma assíntota polinomial.\n\n1.9.1 Exemplo 9 — Divisão completa\nConsidere:\n\\[\nf(x)=\\frac{2x^2+3x-1}{x+1}.\n\\]\nEfetuando a divisão de polinômios:\n\\[\n\\frac{2x^2+3x-1}{x+1}\n=\n2x+1-\\frac{2}{x+1}.\n\\]\nA reta candidata é:\n\\[\ny=2x+1.\n\\]\nA diferença entre a função e a reta é:\n\\[\nf(x)-(2x+1)=-\\frac{2}{x+1}.\n\\]\nComo:\n\\[\n\\lim_{x\\to+\\infty}-\\frac{2}{x+1}=0\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}-\\frac{2}{x+1}=0,\n\\]\na assíntota oblíqua é:\n\\[\n\\boxed{y=2x+1.}\n\\]\n\n\n1.9.2 Regra prática\nPara funções racionais:\n\nSe o grau do numerador é menor que o do denominador, a assíntota horizontal é \\(y=0\\).\nSe os graus são iguais, a assíntota horizontal é dada pela razão dos coeficientes líderes.\nSe o grau do numerador supera o do denominador em uma unidade, o quociente fornece a assíntota oblíqua.\nSe a diferença entre os graus é maior que uma unidade, o quociente fornece a assíntota polinomial de grau superior."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntotas-polinomiais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#assíntotas-polinomiais",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "1.10 📈 Assíntotas polinomiais",
+    "text": "1.10 📈 Assíntotas polinomiais\nA ideia de assíntota não precisa ficar restrita às retas.\nUma função pode se aproximar de um polinômio de grau superior a um.\nSeja \\(P(x)\\) um polinômio. Dizemos que \\(P(x)\\) é uma assíntota polinomial de \\(f(x)\\) em uma direção do infinito quando:\n\\[\n\\lim_{x\\to\\pm\\infty}[f(x)-P(x)]=0.\n\\]\n\n1.10.1 Exemplo 10 — Aproximação por uma parábola\nConsidere:\n\\[\nf(x)=\\frac{x^3+2x^2+1}{x}.\n\\]\nDividindo os termos:\n\\[\nf(x)=x^2+2x+\\frac{1}{x}.\n\\]\nA função se aproxima do polinômio:\n\\[\nP(x)=x^2+2x.\n\\]\nDe fato:\n\\[\nf(x)-P(x)=\\frac{1}{x}.\n\\]\nComo:\n\\[\n\\lim_{x\\to\\pm\\infty}\\frac{1}{x}=0,\n\\]\ntemos:\n\\[\n\\boxed{P(x)=x^2+2x.}\n\\]\nEsse polinômio é uma assíntota polinomial de grau dois.\nObserve que não se trata de uma assíntota oblíqua, pois a expressão de aproximação é uma parábola, e não uma reta.\n\n\n1.10.2 Quando isso pode acontecer?\nEm funções racionais, a divisão de polinômios pode produzir quocientes de diferentes graus.\n\nQuociente constante: comportamento associado a uma assíntota horizontal.\nQuociente de primeiro grau: comportamento associado a uma assíntota oblíqua.\nQuociente de grau superior a um: assíntota polinomial.\n\nA análise do resto da divisão permite verificar se essa aproximação realmente ocorre."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#comparação-de-crescimento-e-limites-de-quocientes",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#comparação-de-crescimento-e-limites-de-quocientes",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "1.12 ⚖️ Comparação de crescimento e limites de quocientes",
+    "text": "1.12 ⚖️ Comparação de crescimento e limites de quocientes\nA comparação entre duas funções pode ser realizada por meio do limite do quociente.\nSe \\(f(x)\\) e \\(g(x)\\) são positivas para valores suficientemente grandes de \\(x\\) e:\n\\[\n\\lim_{x\\to+\\infty}\\frac{f(x)}{g(x)}=0,\n\\]\ndizemos que \\(f\\) cresce mais lentamente que \\(g\\), no sentido assintótico.\nPor exemplo:\n\\[\n\\lim_{x\\to+\\infty}\\frac{x}{x^2}\n=\n\\lim_{x\\to+\\infty}\\frac{1}{x}\n=0.\n\\]\nPortanto, \\(x^2\\) cresce mais rapidamente que \\(x\\).\nOutro exemplo:\n\\[\n\\lim_{x\\to+\\infty}\\frac{\\ln x}{x}=0.\n\\]\nAssim, \\(x\\) cresce mais rapidamente que \\(\\ln x\\).\nTambém temos:\n\\[\n\\lim_{x\\to+\\infty}\\frac{x^3}{e^x}=0.\n\\]\nPortanto, a função exponencial \\(e^x\\) cresce mais rapidamente que o polinômio \\(x^3\\).\nEsses resultados ajudam a compreender a hierarquia de crescimento apresentada na aula 1.16."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1-assíntotas-verticais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1-assíntotas-verticais",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.1 🧪 Exercício 1 — Assíntotas verticais",
+    "text": "2.1 🧪 Exercício 1 — Assíntotas verticais\nDetermine as assíntotas verticais de cada função. Justifique sua resposta.\n\n\n\n\\[\nf(x)=\\frac{1}{x-5}\n\\]\n\n\n\n\\[\ng(x)=\\frac{x+2}{x^2-1}\n\\]\n\n\n\n\\[\nh(x)=\\frac{x}{x^2-4}\n\\]\n\n\n\n\\[\np(x)=\\frac{x^2-4}{x-2}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2-descontinuidades-removíveis",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2-descontinuidades-removíveis",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.2 🧪 Exercício 2 — Descontinuidades removíveis",
+    "text": "2.2 🧪 Exercício 2 — Descontinuidades removíveis\nConsidere:\n\\[\nf(x)=\\frac{x^2-9}{x-3}.\n\\]\n\nDetermine o domínio da função.\nSimplifique a expressão para os valores permitidos.\nCalcule:\n\n\\[\n\\lim_{x\\to 3}f(x).\n\\]\n\nExplique por que \\(x=3\\) não é uma assíntota vertical."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3-assíntotas-horizontais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3-assíntotas-horizontais",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.3 🧪 Exercício 3 — Assíntotas horizontais",
+    "text": "2.3 🧪 Exercício 3 — Assíntotas horizontais\nDetermine as assíntotas horizontais de cada função:\n\n\n\n\\[\nf(x)=\\frac{2x+1}{x-3}\n\\]\n\n\n\n\\[\ng(x)=\\frac{x+4}{x^2+1}\n\\]\n\n\n\n\\[\nh(x)=\\frac{5x^3-1}{2x^3+x}\n\\]\n\n\n\n\\[\np(x)=\\frac{3x^2+1}{x^2-5}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4-comportamento-nas-duas-direções",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4-comportamento-nas-duas-direções",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.4 🧪 Exercício 4 — Comportamento nas duas direções",
+    "text": "2.4 🧪 Exercício 4 — Comportamento nas duas direções\nConsidere:\n\\[\nf(x)=\\frac{x}{\\sqrt{x^2+4}}.\n\\]\n\nCalcule:\n\n\\[\n\\lim_{x\\to+\\infty}f(x).\n\\]\n\nCalcule:\n\n\\[\n\\lim_{x\\to-\\infty}f(x).\n\\]\n\nDetermine as assíntotas horizontais da função."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-5-assíntota-oblíqua",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-5-assíntota-oblíqua",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.5 🧪 Exercício 5 — Assíntota oblíqua",
+    "text": "2.5 🧪 Exercício 5 — Assíntota oblíqua\nDetermine a assíntota oblíqua da função:\n\\[\nf(x)=\\frac{x^2+2x+1}{x}.\n\\]\nUtilize a divisão dos termos e verifique sua resposta por meio de um limite."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-6-divisão-de-polinômios",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-6-divisão-de-polinômios",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.6 🧪 Exercício 6 — Divisão de polinômios",
+    "text": "2.6 🧪 Exercício 6 — Divisão de polinômios\nConsidere:\n\\[\nf(x)=\\frac{2x^2+3x-1}{x+1}.\n\\]\n\nEfetue a divisão de polinômios.\nEscreva a função como soma do quociente e de uma fração.\nDetermine a assíntota oblíqua."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-7-assíntota-polinomial",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-7-assíntota-polinomial",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.7 🧪 Exercício 7 — Assíntota polinomial",
+    "text": "2.7 🧪 Exercício 7 — Assíntota polinomial\nConsidere:\n\\[\nf(x)=\\frac{x^3+2x^2+1}{x}.\n\\]\n\nReescreva a função como soma de termos.\nDetermine o polinômio que descreve seu comportamento assintótico.\nJustifique sua resposta utilizando limites."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-8-análise-completa",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-8-análise-completa",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "2.8 🧪 Exercício 8 — Análise completa",
+    "text": "2.8 🧪 Exercício 8 — Análise completa\nConsidere:\n\\[\nf(x)=\\frac{x^2-1}{x^2-x}.\n\\]\n\nDetermine o domínio.\nFatore o numerador e o denominador.\nSimplifique a expressão, respeitando as restrições do domínio original.\nIdentifique eventuais descontinuidades removíveis.\nDetermine as assíntotas verticais.\nDetermine a assíntota horizontal."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1-assíntotas-verticais-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-1-assíntotas-verticais-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.1 🧪 Exercício 1 — Assíntotas verticais",
+    "text": "3.1 🧪 Exercício 1 — Assíntotas verticais\na)\n\\[\nf(x)=\\frac{1}{x-5}.\n\\]\nO denominador se anula em:\n\\[\nx=5.\n\\]\nComo o numerador não se anula nesse ponto, os limites laterais são infinitos.\nLogo:\n\\[\n\\boxed{x=5.}\n\\]\nb)\n\\[\ng(x)=\\frac{x+2}{x^2-1}.\n\\]\nFatorando o denominador:\n\\[\nx^2-1=(x-1)(x+1).\n\\]\nOs candidatos são:\n\\[\nx=1\n\\]\ne\n\\[\nx=-1.\n\\]\nO numerador não se anula nesses pontos:\n\\[\n1+2=3\n\\]\ne\n\\[\n-1+2=1.\n\\]\nPortanto, as assíntotas verticais são:\n\\[\n\\boxed{x=1\\quad\\text{e}\\quad x=-1.}\n\\]\nc)\n\\[\nh(x)=\\frac{x}{x^2-4}.\n\\]\nFatorando:\n\\[\nx^2-4=(x-2)(x+2).\n\\]\nOs candidatos são \\(x=2\\) e \\(x=-2\\).\nO numerador não se anula nesses pontos:\n\\[\n2\\neq 0,\\qquad -2\\neq 0.\n\\]\nLogo:\n\\[\n\\boxed{x=2\\quad\\text{e}\\quad x=-2.}\n\\]\nd)\n\\[\np(x)=\\frac{x^2-4}{x-2}.\n\\]\nFatorando:\n\\[\np(x)=\\frac{(x-2)(x+2)}{x-2}.\n\\]\nPara \\(x\\neq 2\\):\n\\[\np(x)=x+2.\n\\]\nAssim:\n\\[\n\\lim_{x\\to 2}p(x)=4.\n\\]\nO limite é finito. Portanto, \\(x=2\\) representa uma descontinuidade removível, não uma assíntota vertical.\nResposta: não há assíntota vertical."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2-descontinuidades-removíveis-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-2-descontinuidades-removíveis-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.2 🧪 Exercício 2 — Descontinuidades removíveis",
+    "text": "3.2 🧪 Exercício 2 — Descontinuidades removíveis\nTemos:\n\\[\nf(x)=\\frac{x^2-9}{x-3}.\n\\]\na) O denominador não pode ser zero:\n\\[\nx-3\\neq 0.\n\\]\nLogo:\n\\[\nD(f)=\\mathbb{R}\\setminus\\{3\\}.\n\\]\nb) Fatorando:\n\\[\nx^2-9=(x-3)(x+3).\n\\]\nPara \\(x\\neq 3\\):\n\\[\nf(x)=x+3.\n\\]\nc)\n\\[\n\\lim_{x\\to 3}f(x)\n=\n\\lim_{x\\to 3}(x+3)\n=6.\n\\]\nd) O limite é finito. Portanto, o gráfico apresenta um buraco no ponto:\n\\[\n(3,6).\n\\]\nNão existe assíntota vertical em \\(x=3\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3-assíntotas-horizontais-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-3-assíntotas-horizontais-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.3 🧪 Exercício 3 — Assíntotas horizontais",
+    "text": "3.3 🧪 Exercício 3 — Assíntotas horizontais\na)\n\\[\nf(x)=\\frac{2x+1}{x-3}.\n\\]\nOs graus são iguais. A razão dos coeficientes líderes é:\n\\[\n\\frac{2}{1}=2.\n\\]\nLogo:\n\\[\n\\boxed{y=2.}\n\\]\nb)\n\\[\ng(x)=\\frac{x+4}{x^2+1}.\n\\]\nO grau do numerador é menor que o grau do denominador.\nLogo:\n\\[\n\\boxed{y=0.}\n\\]\nc)\n\\[\nh(x)=\\frac{5x^3-1}{2x^3+x}.\n\\]\nOs graus são iguais. A razão dos coeficientes líderes é:\n\\[\n\\frac{5}{2}.\n\\]\nLogo:\n\\[\n\\boxed{y=\\frac{5}{2}.}\n\\]\nd)\n\\[\np(x)=\\frac{3x^2+1}{x^2-5}.\n\\]\nOs graus são iguais. A razão dos coeficientes líderes é:\n\\[\n\\frac{3}{1}=3.\n\\]\nLogo:\n\\[\n\\boxed{y=3.}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4-comportamento-nas-duas-direções-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-4-comportamento-nas-duas-direções-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.4 🧪 Exercício 4 — Comportamento nas duas direções",
+    "text": "3.4 🧪 Exercício 4 — Comportamento nas duas direções\nTemos:\n\\[\nf(x)=\\frac{x}{\\sqrt{x^2+4}}.\n\\]\nPodemos escrever:\n\\[\nf(x)=\n\\frac{x}{|x|\\sqrt{1+\\frac{4}{x^2}}}.\n\\]\na) Quando \\(x\\to+\\infty\\), temos \\(|x|=x\\):\n\\[\n\\lim_{x\\to+\\infty}f(x)\n=\n\\frac{1}{\\sqrt{1+0}}\n=1.\n\\]\nb) Quando \\(x\\to-\\infty\\), temos \\(|x|=-x\\):\n\\[\n\\lim_{x\\to-\\infty}f(x)\n=\n-\\frac{1}{\\sqrt{1+0}}\n=-1.\n\\]\nc) As assíntotas horizontais são:\n\\[\n\\boxed{y=1\\quad\\text{em }+\\infty}\n\\]\ne\n\\[\n\\boxed{y=-1\\quad\\text{em }-\\infty.}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-5-assíntota-oblíqua-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-5-assíntota-oblíqua-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.5 🧪 Exercício 5 — Assíntota oblíqua",
+    "text": "3.5 🧪 Exercício 5 — Assíntota oblíqua\nTemos:\n\\[\nf(x)=\\frac{x^2+2x+1}{x}.\n\\]\nDividindo os termos por \\(x\\):\n\\[\nf(x)=x+2+\\frac{1}{x}.\n\\]\nA reta candidata é:\n\\[\ny=x+2.\n\\]\nCalculando a diferença:\n\\[\nf(x)-(x+2)=\\frac{1}{x}.\n\\]\nComo:\n\\[\n\\lim_{x\\to+\\infty}\\frac{1}{x}=0\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}\\frac{1}{x}=0,\n\\]\na assíntota oblíqua é:\n\\[\n\\boxed{y=x+2.}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-6-divisão-de-polinômios-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-6-divisão-de-polinômios-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.6 🧪 Exercício 6 — Divisão de polinômios",
+    "text": "3.6 🧪 Exercício 6 — Divisão de polinômios\nTemos:\n\\[\nf(x)=\\frac{2x^2+3x-1}{x+1}.\n\\]\na) Efetuando a divisão:\n\\[\n2x^2+3x-1=(x+1)(2x+1)-2.\n\\]\nb) Portanto:\n\\[\nf(x)=2x+1-\\frac{2}{x+1}.\n\\]\nc) A reta candidata é:\n\\[\ny=2x+1.\n\\]\nA diferença é:\n\\[\nf(x)-(2x+1)=-\\frac{2}{x+1}.\n\\]\nComo:\n\\[\n\\lim_{x\\to\\pm\\infty}-\\frac{2}{x+1}=0,\n\\]\na assíntota oblíqua é:\n\\[\n\\boxed{y=2x+1.}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-7-assíntota-polinomial-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-7-assíntota-polinomial-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.7 🧪 Exercício 7 — Assíntota polinomial",
+    "text": "3.7 🧪 Exercício 7 — Assíntota polinomial\nTemos:\n\\[\nf(x)=\\frac{x^3+2x^2+1}{x}.\n\\]\na) Dividindo os termos:\n\\[\nf(x)=x^2+2x+\\frac{1}{x}.\n\\]\nb) O polinômio candidato é:\n\\[\nP(x)=x^2+2x.\n\\]\nc) A diferença entre a função e o polinômio é:\n\\[\nf(x)-P(x)=\\frac{1}{x}.\n\\]\nComo:\n\\[\n\\lim_{x\\to+\\infty}\\frac{1}{x}=0\n\\]\ne\n\\[\n\\lim_{x\\to-\\infty}\\frac{1}{x}=0,\n\\]\nconcluímos que:\n\\[\n\\boxed{P(x)=x^2+2x}\n\\]\né uma assíntota polinomial nas duas direções do infinito."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-8-análise-completa-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.23-AP-assintotas-e-comportamento-no-infinito.html#exercício-8-análise-completa-1",
+    "title": "🔬 Módulo 1.23-AP: Assíntotas e Comportamento no Infinito",
+    "section": "3.8 🧪 Exercício 8 — Análise completa",
+    "text": "3.8 🧪 Exercício 8 — Análise completa\nTemos:\n\\[\nf(x)=\\frac{x^2-1}{x^2-x}.\n\\]\na) O denominador não pode ser zero:\n\\[\nx^2-x=x(x-1).\n\\]\nPortanto:\n\\[\nD(f)=\\mathbb{R}\\setminus\\{0,1\\}.\n\\]\nb) Fatorando numerador e denominador:\n\\[\nx^2-1=(x-1)(x+1)\n\\]\ne\n\\[\nx^2-x=x(x-1).\n\\]\nc) Para os valores permitidos:\n\\[\nf(x)=\n\\frac{(x-1)(x+1)}{x(x-1)}\n=\n\\frac{x+1}{x}.\n\\]\nA expressão simplificada é:\n\\[\nf(x)=1+\\frac{1}{x},\n\\]\nmas as restrições originais \\(x\\neq 0\\) e \\(x\\neq 1\\) devem ser mantidas.\nd) Em \\(x=1\\), o limite é:\n\\[\n\\lim_{x\\to 1}f(x)\n=\n\\frac{1+1}{1}\n=2.\n\\]\nPortanto, existe uma descontinuidade removível em:\n\\[\n(1,2).\n\\]\ne) Na expressão simplificada \\(f(x)=1+1/x\\), o termo \\(1/x\\) determina os limites laterais em \\(x=0\\):\n\\[\n\\lim_{x\\to 0^-} f(x)=-\\infty,\\qquad \\lim_{x\\to 0^+} f(x)=+\\infty.\n\\]\nAssim, existe uma assíntota vertical:\n\\[\n\\boxed{x=0.}\n\\]\nf) Para \\(x\\to\\pm\\infty\\):\n\\[\n\\lim_{x\\to\\pm\\infty}\n\\left(1+\\frac{1}{x}\\right)=1.\n\\]\nLogo, a assíntota horizontal é:\n\\[\n\\boxed{y=1.}\n\\]\nConclusão: a função apresenta uma descontinuidade removível em \\(x=1\\), uma assíntota vertical em \\(x=0\\) e uma assíntota horizontal \\(y=1\\).\n\n\n\n\n\n\nFigura 1: Análise do Exercício 8. A reta \\(x=0\\) é a assíntota vertical, a reta \\(y=1\\) é a horizontal e o círculo aberto marca o ponto excluído \\((1,2)\\).\n\n\n\n\n\n\n\n\n\nNotaCódigo-fonte da figura em Python\n\n\n\n\n\nfrom pathlib import Path\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nazul, dourado = \"#196399\", \"#A96916\"\nfig, ax = plt.subplots(figsize=(7.8, 4.45), layout=\"constrained\")\nintervalos = (\n    np.linspace(-5, -0.025, 450),\n    np.linspace(0.025, 1, 350, endpoint=False),\n    np.linspace(1, 5, 351)[1:],\n)\nfor i, x in enumerate(intervalos):\n    ax.plot(x, 1 + 1/x, color=azul, linewidth=2.4,\n            label=r\"$f(x)=\\dfrac{x^2-1}{x^2-x}$\" if i == 0 else None)\n\nax.axvline(0, color=dourado, linewidth=1.5, linestyle=\"--\")\nax.axhline(1, color=dourado, linewidth=1.5, linestyle=\"--\")\nax.text(0.15, -3.35, r\"$x=0$\", color=dourado, fontsize=11)\nax.text(-4.75, 1.3, r\"$y=1$\", color=dourado, fontsize=11)\nax.scatter(1, 2, s=104, facecolors=\"white\",\n           edgecolors=azul, linewidths=2.2, zorder=5)\nax.annotate(r\"$(1,2)$\", (1, 2), xytext=(14, 15), textcoords=\"offset points\",\n            arrowprops={\"arrowstyle\": \"-\", \"color\": azul}, color=azul, fontsize=11)\nax.set(xlim=(-5, 5), ylim=(-4, 5.6), xticks=np.arange(-5, 6),\n       yticks=np.arange(-4, 6), xlabel=r\"$x$\", ylabel=r\"$y$\")\nax.set_axisbelow(True)\nax.grid(color=\"#DCE5EF\")\nax.legend(loc=\"upper left\", frameon=False)\n\nplt.rcParams[\"svg.fonttype\"] = \"path\"\nPath(\"images\").mkdir(exist_ok=True)\nfig.savefig(\"images/1.23-ap-analise-assintotica.svg\")\nplt.close(fig)"
   },
   {
     "objectID": "tags/dirac.html",

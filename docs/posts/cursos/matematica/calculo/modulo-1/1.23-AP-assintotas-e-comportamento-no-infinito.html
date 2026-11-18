@@ -28,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -306,7 +341,7 @@ window.Quarto = {
   <li><a href="#exemplo-7-divisão-de-polinômios" id="toc-exemplo-7-divisão-de-polinômios" class="nav-link" data-scroll-target="#exemplo-7-divisão-de-polinômios"><span class="header-section-number">1.8.1</span> Exemplo 7 — Divisão de polinômios</a></li>
   <li><a href="#exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero" id="toc-exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero" class="nav-link" data-scroll-target="#exemplo-8-assíntota-oblíqua-com-intercepto-diferente-de-zero"><span class="header-section-number">1.8.2</span> Exemplo 8 — Assíntota oblíqua com intercepto diferente de zero</a></li>
   </ul></li>
-  <li><a href="#método-geral-para-encontrar-uma-assíntota-oblíqua" id="toc-método-geral-para-encontrar-uma-assíntota-oblíqua" class="nav-link" data-scroll-target="#método-geral-para-encontrar-uma-assíntota-oblíqua"><span class="header-section-number">1.9</span> ➗ Método geral para encontrar uma assíntota oblíqua</a>
+  <li><a href="#método-geral-pela-divisão-de-polinômios" id="toc-método-geral-pela-divisão-de-polinômios" class="nav-link" data-scroll-target="#método-geral-pela-divisão-de-polinômios"><span class="header-section-number">1.9</span> ➗ Método geral pela divisão de polinômios</a>
   <ul class="collapse">
   <li><a href="#exemplo-9-divisão-completa" id="toc-exemplo-9-divisão-completa" class="nav-link" data-scroll-target="#exemplo-9-divisão-completa"><span class="header-section-number">1.9.1</span> Exemplo 9 — Divisão completa</a></li>
   <li><a href="#regra-prática" id="toc-regra-prática" class="nav-link" data-scroll-target="#regra-prática"><span class="header-section-number">1.9.2</span> Regra prática</a></li>
@@ -436,7 +471,7 @@ window.Quarto = {
 </div>
 <section id="assíntotas-e-comportamento-no-infinito" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 🔬 Assíntotas e Comportamento no Infinito</h1>
-<p>Assíntotas são retas que descrevem a aproximação de um gráfico em determinadas regiões do plano.</p>
+<p>As assíntotas descrevem o comportamento de um gráfico perto de um ponto ou em uma direção do infinito.</p>
 <p>Elas ajudam a compreender o comportamento de uma função:</p>
 <ul>
 <li>nas proximidades de pontos em que seus valores podem crescer ou decrescer sem limite;</li>
@@ -445,10 +480,10 @@ window.Quarto = {
 </ul>
 <p>Na aula 1.16, apresentamos os conceitos fundamentais de assíntotas e comportamento assintótico. Neste aprofundamento, vamos desenvolver os procedimentos matemáticos que permitem identificá-las e justificá-las.</p>
 <p>O instrumento central será o <strong>limite</strong>.</p>
-<hr>
 <section id="o-que-é-uma-assíntota" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="o-que-é-uma-assíntota"><span class="header-section-number">1.1</span> 🧱 O que é uma assíntota?</h2>
-<p>Uma reta pode ser considerada assíntota de uma função quando a distância vertical entre o gráfico e essa reta tende a zero em determinada situação.</p>
+<p>Perto de um ponto excluído, perguntamos se os valores da função se aproximam de um número finito ou se crescem ou decrescem sem limite. No infinito, investigamos separadamente o que acontece quando <span class="math inline">\(x\to+\infty\)</span> e quando <span class="math inline">\(x\to-\infty\)</span>.</p>
+<p>A reta vertical <span class="math inline">\(x=a\)</span> é uma assíntota se pelo menos um limite lateral de <span class="math inline">\(f\)</span> em <span class="math inline">\(a\)</span> for <span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span>. Para uma reta horizontal ou oblíqua, verificamos se a diferença entre as ordenadas do gráfico e da reta, na mesma abscissa, tende a zero na direção do infinito considerada.</p>
 <p>Os três tipos fundamentais são:</p>
 <ul>
 <li><strong>Assíntota vertical:</strong> relacionada ao comportamento da função nas proximidades de uma abscissa.</li>
@@ -457,7 +492,6 @@ window.Quarto = {
 </ul>
 <p>Existe ainda uma generalização importante: uma função pode se aproximar de uma curva polinomial de grau superior a um. Nesse caso, podemos falar em <strong>assíntota polinomial</strong>.</p>
 <p>Cada tipo de assíntota corresponde a uma condição matemática específica, que será desenvolvida a seguir.</p>
-<hr>
 </section>
 <section id="assíntota-vertical" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="assíntota-vertical"><span class="header-section-number">1.2</span> 📍 Assíntota vertical</h2>
@@ -526,7 +560,6 @@ g(x)=\frac{1}{(x-1)^2}.
 <h3 data-number="1.2.3" class="anchored" data-anchor-id="atenção-aos-limites-laterais"><span class="header-section-number">1.2.3</span> Atenção aos limites laterais</h3>
 <p>O comportamento de uma função nas proximidades de uma assíntota vertical depende do lado pelo qual nos aproximamos do ponto.</p>
 <p>Por isso, não devemos analisar apenas a expressão algébrica. É importante verificar os sinais dos fatores que aparecem no numerador e no denominador.</p>
-<hr>
 </section>
 </section>
 <section id="nem-todo-ponto-excluído-é-uma-assíntota-vertical" class="level2" data-number="1.3">
@@ -613,7 +646,6 @@ g(x)=x+2.
 </tbody>
 </table>
 <p>A análise dos limites permite distinguir situações que, observando apenas o denominador, poderiam parecer iguais.</p>
-<hr>
 </section>
 </section>
 <section id="assíntotas-verticais-em-funções-racionais" class="level2" data-number="1.4">
@@ -708,7 +740,6 @@ g(x)=\frac{x+1}{x+3}.
 \]</span></p>
 <p>é uma assíntota vertical.</p>
 <p><strong>Conclusão:</strong> a simplificação algébrica ajuda a identificar os pontos removíveis, mas os limites são o critério definitivo para reconhecer uma assíntota vertical.</p>
-<hr>
 </section>
 </section>
 <section id="assíntota-horizontal" class="level2" data-number="1.5">
@@ -779,7 +810,6 @@ g(x)=
 \boxed{y=-1\quad\text{quando }x\to-\infty.}
 \]</span></p>
 <p>Esse exemplo mostra por que é importante investigar separadamente os dois sentidos do infinito.</p>
-<hr>
 </section>
 </section>
 <section id="regra-prática-para-assíntotas-horizontais-em-funções-racionais" class="level2" data-number="1.6">
@@ -878,8 +908,7 @@ m&gt;n,
 </tr>
 </tbody>
 </table>
-<p><strong>Observação:</strong> essas regras pressupõem que a função racional esteja escrita após a simplificação dos fatores comuns. A existência de assíntotas verticais deve ser investigada separadamente.</p>
-<hr>
+<p><strong>Observação.</strong> A comparação de graus e coeficientes líderes pode ser feita com a expressão original. Um fator comum reduz os dois graus na mesma quantidade e deixa inalterada a razão dos coeficientes líderes. Para investigar assíntotas verticais, simplifique os fatores comuns e preserve as exclusões do domínio original.</p>
 </section>
 </section>
 <section id="termo-dominante-e-funções-racionais" class="level2" data-number="1.7">
@@ -916,10 +945,8 @@ f(x)=
 \]</span></p>
 <section id="por-que-o-procedimento-funciona" class="level3" data-number="1.7.1">
 <h3 data-number="1.7.1" class="anchored" data-anchor-id="por-que-o-procedimento-funciona"><span class="header-section-number">1.7.1</span> Por que o procedimento funciona?</h3>
-<p>Quando dividimos todos os termos pela maior potência de <span class="math inline">\(x\)</span> presente no denominador, os termos de menor grau passam a aparecer como frações que tendem a zero.</p>
-<p>Dessa forma, os coeficientes dos termos dominantes determinam o limite.</p>
+<p>Dividimos o numerador e o denominador pela potência <span class="math inline">\(x^n\)</span>, em que <span class="math inline">\(n\)</span> é o grau do denominador. Assim, cada termo de grau menor que <span class="math inline">\(n\)</span> tende a zero depois da divisão. Se o numerador também tem grau <span class="math inline">\(n\)</span>, o limite é a razão dos coeficientes líderes. Se tem grau menor, o limite é zero. Quando tem grau maior, o grau e o sinal do termo dominante determinam o comportamento em cada direção.</p>
 <p>Essa é a justificativa algébrica para a regra prática baseada na comparação dos graus.</p>
-<hr>
 </section>
 </section>
 <section id="assíntota-oblíqua" class="level2" data-number="1.8">
@@ -994,34 +1021,23 @@ g(x)-(x+2)=\frac{1}{x}.
 \boxed{y=x+2}
 \]</span></p>
 <p>é uma assíntota oblíqua nas duas direções do infinito.</p>
-<hr>
 </section>
 </section>
-<section id="método-geral-para-encontrar-uma-assíntota-oblíqua" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="método-geral-para-encontrar-uma-assíntota-oblíqua"><span class="header-section-number">1.9</span> ➗ Método geral para encontrar uma assíntota oblíqua</h2>
-<p>Considere uma função racional:</p>
+<section id="método-geral-pela-divisão-de-polinômios" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="método-geral-pela-divisão-de-polinômios"><span class="header-section-number">1.9</span> ➗ Método geral pela divisão de polinômios</h2>
+<p>Para <span class="math inline">\(f(x)=P(x)/Q(x)\)</span>, com <span class="math inline">\(Q\)</span> um polinômio não nulo, a divisão de polinômios fornece um quociente <span class="math inline">\(S\)</span> e um resto <span class="math inline">\(R\)</span> tais que</p>
 <p><span class="math display">\[
-f(x)=\frac{P(x)}{Q(x)}.
+P(x)=Q(x)S(x)+R(x),
 \]</span></p>
-<p>Quando o grau do numerador supera o grau do denominador exatamente em uma unidade, a divisão de polinômios produz um quociente de primeiro grau.</p>
-<p>Podemos escrever:</p>
+<p>com <span class="math inline">\(R=0\)</span> ou <span class="math inline">\(\deg R&lt;\deg Q\)</span>. Para <span class="math inline">\(Q(x)\ne0\)</span>, obtemos</p>
 <p><span class="math display">\[
-P(x)=Q(x)(mx+b)+R(x),
+f(x)=S(x)+\frac{R(x)}{Q(x)}.
 \]</span></p>
-<p>em que o resto <span class="math inline">\(R(x)\)</span> possui grau menor que o de <span class="math inline">\(Q(x)\)</span>.</p>
-<p>Dividindo por <span class="math inline">\(Q(x)\)</span>:</p>
+<p>Se <span class="math inline">\(R=0\)</span>, a diferença <span class="math inline">\(f(x)-S(x)\)</span> é zero no domínio. Se <span class="math inline">\(R\ne0\)</span>, dividimos <span class="math inline">\(R(x)\)</span> e <span class="math inline">\(Q(x)\)</span> por <span class="math inline">\(x^{\deg Q}\)</span>. O numerador tende a zero e o denominador tende ao seu coeficiente líder, que é diferente de zero. Portanto,</p>
 <p><span class="math display">\[
-f(x)=mx+b+\frac{R(x)}{Q(x)}.
+\lim_{x\to+\infty}\frac{R(x)}{Q(x)}=\lim_{x\to-\infty}\frac{R(x)}{Q(x)}=0.
 \]</span></p>
-<p>Se:</p>
-<p><span class="math display">\[
-\lim_{x\to\pm\infty}\frac{R(x)}{Q(x)}=0,
-\]</span></p>
-<p>então a reta:</p>
-<p><span class="math display">\[
-\boxed{y=mx+b}
-\]</span></p>
-<p>é uma assíntota oblíqua na direção considerada.</p>
+<p>Assim, <span class="math inline">\(S\)</span> descreve a aproximação nas duas direções. Se <span class="math inline">\(S\)</span> é constante, inclusive <span class="math inline">\(S=0\)</span>, temos uma assíntota horizontal. Se <span class="math inline">\(S\)</span> tem grau um, temos uma assíntota oblíqua. Se tem grau dois ou mais, temos uma assíntota polinomial.</p>
 <section id="exemplo-9-divisão-completa" class="level3" data-number="1.9.1">
 <h3 data-number="1.9.1" class="anchored" data-anchor-id="exemplo-9-divisão-completa"><span class="header-section-number">1.9.1</span> Exemplo 9 — Divisão completa</h3>
 <p>Considere:</p>
@@ -1059,12 +1075,11 @@ f(x)-(2x+1)=-\frac{2}{x+1}.
 <h3 data-number="1.9.2" class="anchored" data-anchor-id="regra-prática"><span class="header-section-number">1.9.2</span> Regra prática</h3>
 <p>Para funções racionais:</p>
 <ul>
-<li>Se o grau do numerador é menor que o do denominador, podemos ter assíntota horizontal <span class="math inline">\(y=0\)</span>.</li>
-<li>Se os graus são iguais, podemos ter uma assíntota horizontal determinada pelos coeficientes líderes.</li>
-<li>Se o grau do numerador supera o do denominador em uma unidade, podemos obter uma assíntota oblíqua.</li>
-<li>Se a diferença entre os graus é maior que uma unidade, podemos obter uma assíntota polinomial de grau superior.</li>
+<li>Se o grau do numerador é menor que o do denominador, a assíntota horizontal é <span class="math inline">\(y=0\)</span>.</li>
+<li>Se os graus são iguais, a assíntota horizontal é dada pela razão dos coeficientes líderes.</li>
+<li>Se o grau do numerador supera o do denominador em uma unidade, o quociente fornece a assíntota oblíqua.</li>
+<li>Se a diferença entre os graus é maior que uma unidade, o quociente fornece a assíntota polinomial de grau superior.</li>
 </ul>
-<hr>
 </section>
 </section>
 <section id="assíntotas-polinomiais" class="level2" data-number="1.10">
@@ -1110,10 +1125,9 @@ f(x)-P(x)=\frac{1}{x}.
 <ul>
 <li>Quociente constante: comportamento associado a uma assíntota horizontal.</li>
 <li>Quociente de primeiro grau: comportamento associado a uma assíntota oblíqua.</li>
-<li>Quociente de grau superior a um: possibilidade de assíntota polinomial.</li>
+<li>Quociente de grau superior a um: assíntota polinomial.</li>
 </ul>
 <p>A análise do resto da divisão permite verificar se essa aproximação realmente ocorre.</p>
-<hr>
 </section>
 </section>
 <section id="comportamento-no-infinito" class="level2" data-number="1.11">
@@ -1187,7 +1201,6 @@ q(x)=\ln x.
 \lim_{x\to+\infty}\ln x=+\infty.
 \]</span></p>
 <p>Esses exemplos mostram que o comportamento no infinito depende da estrutura da função.</p>
-<hr>
 </section>
 </section>
 <section id="comparação-de-crescimento-e-limites-de-quocientes" class="level2" data-number="1.12">
@@ -1217,7 +1230,6 @@ q(x)=\ln x.
 \]</span></p>
 <p>Portanto, a função exponencial <span class="math inline">\(e^x\)</span> cresce mais rapidamente que o polinômio <span class="math inline">\(x^3\)</span>.</p>
 <p>Esses resultados ajudam a compreender a hierarquia de crescimento apresentada na aula 1.16.</p>
-<hr>
 </section>
 <section id="ponte-para-limites" class="level2" data-number="1.13">
 <h2 data-number="1.13" class="anchored" data-anchor-id="ponte-para-limites"><span class="header-section-number">1.13</span> 🌉 Ponte para limites</h2>
@@ -1252,7 +1264,6 @@ q(x)=\ln x.
 \lim_{x\to\pm\infty}[f(x)-P(x)]=0.
 \]</span></p>
 <p>Essas definições mostram que o cálculo de limites não é apenas uma ferramenta algébrica: ele permite compreender geometricamente o comportamento de uma função.</p>
-<hr>
 <div class="callout callout-style-default callout-note callout-titled" title="📋 Quadro-resumo">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1309,16 +1320,15 @@ f(x)=\frac{P(x)}{Q(x)},
 <p><strong>Divisão de polinômios</strong></p>
 <p>A divisão permite escrever uma função racional como:</p>
 <p><span class="math display">\[
-f(x)=P(x)+\frac{R(x)}{Q(x)}.
+f(x)=S(x)+\frac{R(x)}{Q(x)}.
 \]</span></p>
 <p>Se:</p>
 <p><span class="math display">\[
 \lim_{x\to\pm\infty}\frac{R(x)}{Q(x)}=0,
 \]</span></p>
-<p>então <span class="math inline">\(P(x)\)</span> descreve o comportamento assintótico da função na direção considerada.</p>
+<p>então o quociente <span class="math inline">\(S(x)\)</span> descreve o comportamento assintótico da função na direção considerada.</p>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-default callout-note callout-titled" title="🌉 Conexão com o Módulo 2 — Limites">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1504,21 +1514,18 @@ f(x)=\frac{x^2-1}{x^2-x}.
 </section>
 </div>
 </div>
-<hr>
 </section>
 <section id="gabarito-comentado" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> ✅ Gabarito comentado</h1>
 <div class="callout callout-style-default callout-important callout-titled" title="✅ Clique para consultar o gabarito">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Importante</span>✅ Clique para consultar o gabarito
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercício-1-assíntotas-verticais-1" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="exercício-1-assíntotas-verticais-1"><span class="header-section-number">3.1</span> 🧪 Exercício 1 — Assíntotas verticais</h2>
@@ -1855,9 +1862,9 @@ f(x)=1+\frac{1}{x},
 <p><span class="math display">\[
 (1,2).
 \]</span></p>
-<p><strong>e)</strong> Em <span class="math inline">\(x=0\)</span>, a expressão simplificada apresenta comportamento ilimitado:</p>
+<p><strong>e)</strong> Na expressão simplificada <span class="math inline">\(f(x)=1+1/x\)</span>, o termo <span class="math inline">\(1/x\)</span> determina os limites laterais em <span class="math inline">\(x=0\)</span>:</p>
 <p><span class="math display">\[
-f(x)=1+\frac{1}{x}.
+\lim_{x\to 0^-} f(x)=-\infty,\qquad \lim_{x\to 0^+} f(x)=+\infty.
 \]</span></p>
 <p>Assim, existe uma assíntota vertical:</p>
 <p><span class="math display">\[
@@ -1873,11 +1880,68 @@ f(x)=1+\frac{1}{x}.
 \boxed{y=1.}
 \]</span></p>
 <p><strong>Conclusão:</strong> a função apresenta uma descontinuidade removível em <span class="math inline">\(x=1\)</span>, uma assíntota vertical em <span class="math inline">\(x=0\)</span> e uma assíntota horizontal <span class="math inline">\(y=1\)</span>.</p>
+<div id="fig-ap06-assintotas" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dois ramos do gráfico com assíntota vertical em x igual a 0 e horizontal em y igual a 1. Um círculo aberto marca o ponto (1,2).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ap06-assintotas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.23-ap-analise-assintotica.svg" class="img-fluid figure-img" style="width:92.0%" alt="Dois ramos do gráfico com assíntota vertical em x igual a 0 e horizontal em y igual a 1. Um círculo aberto marca o ponto (1,2).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ap06-assintotas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Análise do Exercício 8. A reta <span class="math inline">\(x=0\)</span> é a assíntota vertical, a reta <span class="math inline">\(y=1\)</span> é a horizontal e o círculo aberto marca o ponto excluído <span class="math inline">\((1,2)\)</span>.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Código-fonte da figura em Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Código-fonte da figura em Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>azul, dourado <span class="op">=</span> <span class="st">"#196399"</span>, <span class="st">"#A96916"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.8</span>, <span class="fl">4.45</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>intervalos <span class="op">=</span> (</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="op">-</span><span class="fl">0.025</span>, <span class="dv">450</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    np.linspace(<span class="fl">0.025</span>, <span class="dv">1</span>, <span class="dv">350</span>, endpoint<span class="op">=</span><span class="va">False</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    np.linspace(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">351</span>)[<span class="dv">1</span>:],</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, x <span class="kw">in</span> <span class="bu">enumerate</span>(intervalos):</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span><span class="op">/</span>x, color<span class="op">=</span>azul, linewidth<span class="op">=</span><span class="fl">2.4</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\d</span><span class="vs">frac{x</span><span class="dv">^</span><span class="vs">2-1}{x</span><span class="dv">^</span><span class="vs">2-x}</span><span class="dv">$</span><span class="vs">"</span> <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="va">None</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span>dourado, linewidth<span class="op">=</span><span class="fl">1.5</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">1</span>, color<span class="op">=</span>dourado, linewidth<span class="op">=</span><span class="fl">1.5</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.15</span>, <span class="op">-</span><span class="fl">3.35</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">x=0</span><span class="dv">$</span><span class="vs">"</span>, color<span class="op">=</span>dourado, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">4.75</span>, <span class="fl">1.3</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">y=1</span><span class="dv">$</span><span class="vs">"</span>, color<span class="op">=</span>dourado, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax.scatter(<span class="dv">1</span>, <span class="dv">2</span>, s<span class="op">=</span><span class="dv">104</span>, facecolors<span class="op">=</span><span class="st">"white"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>           edgecolors<span class="op">=</span>azul, linewidths<span class="op">=</span><span class="fl">2.2</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1,2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (<span class="dv">1</span>, <span class="dv">2</span>), xytext<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">15</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span>{<span class="st">"arrowstyle"</span>: <span class="st">"-"</span>, <span class="st">"color"</span>: azul}, color<span class="op">=</span>azul, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">4</span>, <span class="fl">5.6</span>), xticks<span class="op">=</span>np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>       yticks<span class="op">=</span>np.arange(<span class="op">-</span><span class="dv">4</span>, <span class="dv">6</span>), xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, ylabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>ax.set_axisbelow(<span class="va">True</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>ax.grid(color<span class="op">=</span><span class="st">"#DCE5EF"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">"upper left"</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"svg.fonttype"</span>] <span class="op">=</span> <span class="st">"path"</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.23-ap-analise-assintotica.svg"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
 </div>
 </div>
-</div>
-<hr>
 </section>
 <section id="quiz-assíntotas-e-comportamento-no-infinito" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Assíntotas e Comportamento no Infinito</h1>
@@ -1908,7 +1972,7 @@ f(x)=1+\frac{1}{x}.
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>Sempre <span class="math inline">\(y=0\)</span>.</p><p></p>
 </div>
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>A razão dos coeficientes líderes.</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>A reta <span class="math inline">\(y=L\)</span>, em que <span class="math inline">\(L\)</span> é a razão dos coeficientes líderes.</p><p></p>
 </div>
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span>Sempre inexistente.</p><p></p>
@@ -1962,7 +2026,7 @@ f(x)=\frac{x^2+1}{x}
 </div>
 </div>
 <div class="question">
-<p><strong>Q5.</strong> Quando a diferença entre uma função e um polinômio <span class="math inline">\(P(x)\)</span> tende a zero no infinito, podemos dizer que:</p>
+<p><strong>Q5.</strong> Quando a diferença entre uma função e um polinômio <span class="math inline">\(P(x)\)</span> de grau maior que um tende a zero numa direção do infinito, podemos dizer que:</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
@@ -1979,7 +2043,6 @@ f(x)=\frac{x^2+1}{x}
 
 </div>
 </div>
-<hr>
 <div class="callout callout-style-default callout-tip callout-titled" title="🔬 Quer aprofundar ainda mais?">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2004,7 +2067,7 @@ f(x)=\frac{x^2+1}{x}
 <p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.16-crescimento-e-comportamento-assintotico.html">1.16 Crescimento e Comportamento Assintótico</a></p>
 <p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">1.17 Revisão Geral do Módulo 1</a></p>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">1.22-AP — Funções por Partes</a></p>
-<p>✅ <strong>Trilha AP concluída:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">Voltar à revisão geral</a>.</p>
+<p>✅ <strong>Trilha AP concluída:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercícios-propostos"><strong>Exercícios da Revisão Geral</strong></a>.</p>
 <p>🚧 <strong>Módulo 2 — Limites: em preparação.</strong> <a href="../../../../../posts/cursos/matematica/calculo/index.html#módulo-2-limites">Consultar os temas previstos</a>.</p>
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="#">Topo</a></p>
 <hr>

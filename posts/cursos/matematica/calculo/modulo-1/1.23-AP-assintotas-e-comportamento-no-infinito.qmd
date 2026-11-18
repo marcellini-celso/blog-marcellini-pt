@@ -63,7 +63,7 @@ Ao final deste aprofundamento, você deverá ser capaz de:
 
 # 🔬 Assíntotas e Comportamento no Infinito
 
-Assíntotas são retas que descrevem a aproximação de um gráfico em determinadas regiões do plano.
+As assíntotas descrevem o comportamento de um gráfico perto de um ponto ou em uma direção do infinito.
 
 Elas ajudam a compreender o comportamento de uma função:
 
@@ -75,11 +75,11 @@ Na aula 1.16, apresentamos os conceitos fundamentais de assíntotas e comportame
 
 O instrumento central será o **limite**.
 
-***
-
 ## 🧱 O que é uma assíntota?
 
-Uma reta pode ser considerada assíntota de uma função quando a distância vertical entre o gráfico e essa reta tende a zero em determinada situação.
+Perto de um ponto excluído, perguntamos se os valores da função se aproximam de um número finito ou se crescem ou decrescem sem limite. No infinito, investigamos separadamente o que acontece quando $x\to+\infty$ e quando $x\to-\infty$.
+
+A reta vertical $x=a$ é uma assíntota se pelo menos um limite lateral de $f$ em $a$ for $+\infty$ ou $-\infty$. Para uma reta horizontal ou oblíqua, verificamos se a diferença entre as ordenadas do gráfico e da reta, na mesma abscissa, tende a zero na direção do infinito considerada.
 
 Os três tipos fundamentais são:
 
@@ -90,8 +90,6 @@ Os três tipos fundamentais são:
 Existe ainda uma generalização importante: uma função pode se aproximar de uma curva polinomial de grau superior a um. Nesse caso, podemos falar em **assíntota polinomial**.
 
 Cada tipo de assíntota corresponde a uma condição matemática específica, que será desenvolvida a seguir.
-
-***
 
 ## 📍 Assíntota vertical
 
@@ -189,8 +187,6 @@ O comportamento de uma função nas proximidades de uma assíntota vertical depe
 
 Por isso, não devemos analisar apenas a expressão algébrica. É importante verificar os sinais dos fatores que aparecem no numerador e no denominador.
 
-***
-
 ## ⚠️ Nem todo ponto excluído é uma assíntota vertical
 
 Um erro comum é considerar que todo ponto em que o denominador de uma função racional se anula produz uma assíntota vertical.
@@ -270,8 +266,6 @@ Portanto, um ponto excluído do domínio não implica necessariamente uma assín
 | $\dfrac{x^2-4}{x-2}$ em $x=2$ | Limite finito igual a $4$ | Descontinuidade removível |
 
 A análise dos limites permite distinguir situações que, observando apenas o denominador, poderiam parecer iguais.
-
-***
 
 ## ➗ Assíntotas verticais em funções racionais
 
@@ -403,8 +397,6 @@ $$
 
 **Conclusão:** a simplificação algébrica ajuda a identificar os pontos removíveis, mas os limites são o critério definitivo para reconhecer uma assíntota vertical.
 
-***
-
 ## 🌅 Assíntota horizontal
 
 Uma reta horizontal $y=L$ é uma **assíntota horizontal** de uma função quando:
@@ -503,8 +495,6 @@ $$
 $$
 
 Esse exemplo mostra por que é importante investigar separadamente os dois sentidos do infinito.
-
-***
 
 ## 🧮 Regra prática para assíntotas horizontais em funções racionais
 
@@ -612,9 +602,7 @@ Para investigá-las, utilizamos a divisão de polinômios.
 | $\deg(P)=\deg(Q)$ | Assíntota horizontal dada pela razão dos coeficientes líderes |
 | $\deg(P)>\deg(Q)$ | Não há assíntota horizontal finita; pode haver assíntota polinomial |
 
-**Observação:** essas regras pressupõem que a função racional esteja escrita após a simplificação dos fatores comuns. A existência de assíntotas verticais deve ser investigada separadamente.
-
-***
+**Observação.** A comparação de graus e coeficientes líderes pode ser feita com a expressão original. Um fator comum reduz os dois graus na mesma quantidade e deixa inalterada a razão dos coeficientes líderes. Para investigar assíntotas verticais, simplifique os fatores comuns e preserve as exclusões do domínio original.
 
 ## 🔍 Termo dominante e funções racionais
 
@@ -664,13 +652,9 @@ $$
 
 ### Por que o procedimento funciona?
 
-Quando dividimos todos os termos pela maior potência de $x$ presente no denominador, os termos de menor grau passam a aparecer como frações que tendem a zero.
-
-Dessa forma, os coeficientes dos termos dominantes determinam o limite.
+Dividimos o numerador e o denominador pela potência $x^n$, em que $n$ é o grau do denominador. Assim, cada termo de grau menor que $n$ tende a zero depois da divisão. Se o numerador também tem grau $n$, o limite é a razão dos coeficientes líderes. Se tem grau menor, o limite é zero. Quando tem grau maior, o grau e o sinal do termo dominante determinam o comportamento em cada direção.
 
 Essa é a justificativa algébrica para a regra prática baseada na comparação dos graus.
-
-***
 
 ## 📐 Assíntota oblíqua
 
@@ -777,45 +761,27 @@ $$
 
 é uma assíntota oblíqua nas duas direções do infinito.
 
-***
+## ➗ Método geral pela divisão de polinômios
 
-## ➗ Método geral para encontrar uma assíntota oblíqua
-
-Considere uma função racional:
+Para $f(x)=P(x)/Q(x)$, com $Q$ um polinômio não nulo, a divisão de polinômios fornece um quociente $S$ e um resto $R$ tais que
 
 $$
-f(x)=\frac{P(x)}{Q(x)}.
+P(x)=Q(x)S(x)+R(x),
 $$
 
-Quando o grau do numerador supera o grau do denominador exatamente em uma unidade, a divisão de polinômios produz um quociente de primeiro grau.
-
-Podemos escrever:
+com $R=0$ ou $\deg R<\deg Q$. Para $Q(x)\ne0$, obtemos
 
 $$
-P(x)=Q(x)(mx+b)+R(x),
+f(x)=S(x)+\frac{R(x)}{Q(x)}.
 $$
 
-em que o resto $R(x)$ possui grau menor que o de $Q(x)$.
-
-Dividindo por $Q(x)$:
+Se $R=0$, a diferença $f(x)-S(x)$ é zero no domínio. Se $R\ne0$, dividimos $R(x)$ e $Q(x)$ por $x^{\deg Q}$. O numerador tende a zero e o denominador tende ao seu coeficiente líder, que é diferente de zero. Portanto,
 
 $$
-f(x)=mx+b+\frac{R(x)}{Q(x)}.
+\lim_{x\to+\infty}\frac{R(x)}{Q(x)}=\lim_{x\to-\infty}\frac{R(x)}{Q(x)}=0.
 $$
 
-Se:
-
-$$
-\lim_{x\to\pm\infty}\frac{R(x)}{Q(x)}=0,
-$$
-
-então a reta:
-
-$$
-\boxed{y=mx+b}
-$$
-
-é uma assíntota oblíqua na direção considerada.
+Assim, $S$ descreve a aproximação nas duas direções. Se $S$ é constante, inclusive $S=0$, temos uma assíntota horizontal. Se $S$ tem grau um, temos uma assíntota oblíqua. Se tem grau dois ou mais, temos uma assíntota polinomial.
 
 ### Exemplo 9 — Divisão completa
 
@@ -867,12 +833,10 @@ $$
 
 Para funções racionais:
 
-- Se o grau do numerador é menor que o do denominador, podemos ter assíntota horizontal $y=0$.
-- Se os graus são iguais, podemos ter uma assíntota horizontal determinada pelos coeficientes líderes.
-- Se o grau do numerador supera o do denominador em uma unidade, podemos obter uma assíntota oblíqua.
-- Se a diferença entre os graus é maior que uma unidade, podemos obter uma assíntota polinomial de grau superior.
-
-***
+- Se o grau do numerador é menor que o do denominador, a assíntota horizontal é $y=0$.
+- Se os graus são iguais, a assíntota horizontal é dada pela razão dos coeficientes líderes.
+- Se o grau do numerador supera o do denominador em uma unidade, o quociente fornece a assíntota oblíqua.
+- Se a diferença entre os graus é maior que uma unidade, o quociente fornece a assíntota polinomial de grau superior.
 
 ## 📈 Assíntotas polinomiais
 
@@ -934,11 +898,9 @@ Em funções racionais, a divisão de polinômios pode produzir quocientes de di
 
 - Quociente constante: comportamento associado a uma assíntota horizontal.
 - Quociente de primeiro grau: comportamento associado a uma assíntota oblíqua.
-- Quociente de grau superior a um: possibilidade de assíntota polinomial.
+- Quociente de grau superior a um: assíntota polinomial.
 
 A análise do resto da divisão permite verificar se essa aproximação realmente ocorre.
-
-***
 
 ## ♾️ Comportamento no infinito
 
@@ -1046,8 +1008,6 @@ $$
 
 Esses exemplos mostram que o comportamento no infinito depende da estrutura da função.
 
-***
-
 ## ⚖️ Comparação de crescimento e limites de quocientes
 
 A comparação entre duas funções pode ser realizada por meio do limite do quociente.
@@ -1088,8 +1048,6 @@ $$
 Portanto, a função exponencial $e^x$ cresce mais rapidamente que o polinômio $x^3$.
 
 Esses resultados ajudam a compreender a hierarquia de crescimento apresentada na aula 1.16.
-
-***
 
 ## 🌉 Ponte para limites
 
@@ -1142,8 +1100,6 @@ $$
 
 Essas definições mostram que o cálculo de limites não é apenas uma ferramenta algébrica: ele permite compreender geometricamente o comportamento de uma função.
 
-***
-
 ::: {.callout-note title="📋 Quadro-resumo"}
 
 | Tipo de comportamento | Condição matemática |
@@ -1176,7 +1132,7 @@ Os zeros do denominador são candidatos a assíntotas verticais. É necessário 
 A divisão permite escrever uma função racional como:
 
 $$
-f(x)=P(x)+\frac{R(x)}{Q(x)}.
+f(x)=S(x)+\frac{R(x)}{Q(x)}.
 $$
 
 Se:
@@ -1185,11 +1141,9 @@ $$
 \lim_{x\to\pm\infty}\frac{R(x)}{Q(x)}=0,
 $$
 
-então $P(x)$ descreve o comportamento assintótico da função na direção considerada.
+então o quociente $S(x)$ descreve o comportamento assintótico da função na direção considerada.
 
 :::
-
-***
 
 ::: {.callout-note title="🌉 Conexão com o Módulo 2 — Limites"}
 
@@ -1374,11 +1328,9 @@ f) Determine a assíntota horizontal.
 
 :::
 
-***
-
 # ✅ Gabarito comentado
 
-::: {.callout-important collapse="true" title="✅ Clique para consultar o gabarito"}
+:::: {.callout-important title="✅ Clique para consultar o gabarito"}
 
 ## 🧪 Exercício 1 — Assíntotas verticais
 
@@ -1860,10 +1812,10 @@ $$
 (1,2).
 $$
 
-**e)** Em $x=0$, a expressão simplificada apresenta comportamento ilimitado:
+**e)** Na expressão simplificada $f(x)=1+1/x$, o termo $1/x$ determina os limites laterais em $x=0$:
 
 $$
-f(x)=1+\frac{1}{x}.
+\lim_{x\to 0^-} f(x)=-\infty,\qquad \lim_{x\to 0^+} f(x)=+\infty.
 $$
 
 Assim, existe uma assíntota vertical:
@@ -1887,9 +1839,50 @@ $$
 
 **Conclusão:** a função apresenta uma descontinuidade removível em $x=1$, uma assíntota vertical em $x=0$ e uma assíntota horizontal $y=1$.
 
+![Análise do Exercício 8. A reta $x=0$ é a assíntota vertical, a reta $y=1$ é a horizontal e o círculo aberto marca o ponto excluído $(1,2)$.](images/1.23-ap-analise-assintotica.svg){#fig-ap06-assintotas width="92%" fig-alt="Dois ramos do gráfico com assíntota vertical em x igual a 0 e horizontal em y igual a 1. Um círculo aberto marca o ponto (1,2)."}
+
+::: {.callout-note collapse=true title="Código-fonte da figura em Python"}
+
+```python
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+azul, dourado = "#196399", "#A96916"
+fig, ax = plt.subplots(figsize=(7.8, 4.45), layout="constrained")
+intervalos = (
+    np.linspace(-5, -0.025, 450),
+    np.linspace(0.025, 1, 350, endpoint=False),
+    np.linspace(1, 5, 351)[1:],
+)
+for i, x in enumerate(intervalos):
+    ax.plot(x, 1 + 1/x, color=azul, linewidth=2.4,
+            label=r"$f(x)=\dfrac{x^2-1}{x^2-x}$" if i == 0 else None)
+
+ax.axvline(0, color=dourado, linewidth=1.5, linestyle="--")
+ax.axhline(1, color=dourado, linewidth=1.5, linestyle="--")
+ax.text(0.15, -3.35, r"$x=0$", color=dourado, fontsize=11)
+ax.text(-4.75, 1.3, r"$y=1$", color=dourado, fontsize=11)
+ax.scatter(1, 2, s=104, facecolors="white",
+           edgecolors=azul, linewidths=2.2, zorder=5)
+ax.annotate(r"$(1,2)$", (1, 2), xytext=(14, 15), textcoords="offset points",
+            arrowprops={"arrowstyle": "-", "color": azul}, color=azul, fontsize=11)
+ax.set(xlim=(-5, 5), ylim=(-4, 5.6), xticks=np.arange(-5, 6),
+       yticks=np.arange(-4, 6), xlabel=r"$x$", ylabel=r"$y$")
+ax.set_axisbelow(True)
+ax.grid(color="#DCE5EF")
+ax.legend(loc="upper left", frameon=False)
+
+plt.rcParams["svg.fonttype"] = "path"
+Path("images").mkdir(exist_ok=True)
+fig.savefig("images/1.23-ap-analise-assintotica.svg")
+plt.close(fig)
+```
+
 :::
 
-***
+::::
 
 # 🧩 Quiz — Assíntotas e Comportamento no Infinito
 
@@ -1926,7 +1919,7 @@ Sempre $y=0$.
 :::
 
 :::{.choice .correct-choice}
-A razão dos coeficientes líderes.
+A reta $y=L$, em que $L$ é a razão dos coeficientes líderes.
 :::
 
 :::{.choice}
@@ -1995,7 +1988,7 @@ $y=x$.
 
 :::::{.question}
 
-**Q5.** Quando a diferença entre uma função e um polinômio $P(x)$ tende a zero no infinito, podemos dizer que:
+**Q5.** Quando a diferença entre uma função e um polinômio $P(x)$ de grau maior que um tende a zero numa direção do infinito, podemos dizer que:
 
 ::::{.choices}
 
@@ -2014,8 +2007,6 @@ A função não possui domínio.
 ::::
 
 :::::
-
-***
 
 ::: {.callout-tip title="🔬 Quer aprofundar ainda mais?"}
 
@@ -2036,7 +2027,7 @@ Você pode continuar a sequência principal do curso ou revisitar este aprofunda
 
 🔬 **AP anterior:** [1.22-AP — Funções por Partes](1.22-AP-funcoes-por-partes.qmd)
 
-✅ **Trilha AP concluída:** [Voltar à revisão geral](1.17-revisao-geral-do-modulo-1.qmd).
+✅ **Trilha AP concluída:** [**Exercícios da Revisão Geral**](1.17-revisao-geral-do-modulo-1.qmd#exercícios-propostos).
 
 🚧 **Módulo 2 — Limites: em preparação.** [Consultar os temas previstos](../index.qmd#módulo-2-limites).
 
