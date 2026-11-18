@@ -159,14 +159,23 @@ Esse raciocínio antecipa a **integral** como ferramenta para medir áreas e ac�
 
 # 📜 Breve história do Cálculo
 
+O Cálculo se formou ao longo de séculos. Os problemas de determinar áreas, traçar tangentes e descrever o movimento ajudam a entender como suas ideias se desenvolveram.
+
 - **Arquimedes (séc. III a.C.)**: método da **exaustão** (áreas e volumes) — semente do cálculo integral.  
 - **Fermat (séc. XVII)**: técnicas para **tangentes** — semente do cálculo diferencial.  
-- **Newton (1643–1727)**: focado em movimento e Física; chamou derivadas de *fluxões*.  
+- **Newton (1643–1727)**: estudou o movimento e chamou de *fluxões* as taxas instantâneas de variação das grandezas.  
 - **Leibniz (1646–1716)**: notação clara e geral (símbolos que usamos até hoje).
 
 ::: {.callout-tip title="Teorema Fundamental do Cálculo (ideia)"}
 Mais adiante veremos que **mudança** (derivadas) e **acúmulo** (integrais) estão conectados por um resultado central — o **Teorema Fundamental do Cálculo** — que dá unidade à disciplina.
 :::
+
+## Fontes do panorama histórico
+
+- **C. H. Edwards.** *The Historical Development of the Calculus*. Springer-Verlag, 1979. [Editora](https://link.springer.com/book/10.1007/978-1-4612-6230-5)
+- **David M. Bressoud.** *Calculus Reordered: A History of the Big Ideas*. Princeton University Press, 2019. [Editora](https://press.princeton.edu/books/hardcover/9780691181318/calculus-reordered)
+
+Para complementar o estudo, consulte as [referências recomendadas no sumário do curso](../index.qmd#referências-recomendadas).
 
 ***
 
