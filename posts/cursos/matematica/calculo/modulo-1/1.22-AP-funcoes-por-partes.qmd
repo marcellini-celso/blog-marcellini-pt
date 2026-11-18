@@ -59,7 +59,15 @@ Cada expressão é utilizada somente na região indicada por sua condição.
 
 Esse tipo de função aparece em diferentes situações matemáticas e aplicações. Também é especialmente importante para compreender limites laterais, continuidade e descontinuidades.
 
-***
+::: {.callout-note title="🎯 Três perguntas em um ponto de troca"}
+
+Em cada ponto de troca $a$, respondemos a três perguntas:
+
+1. Qual regra determina o valor $f(a)$, se ele estiver definido?
+2. De que valor $f(x)$ se aproxima à esquerda de $a$?
+3. De que valor $f(x)$ se aproxima à direita de $a$?
+
+:::
 
 ## 🧩 Como interpretar uma função por partes
 
@@ -94,8 +102,6 @@ f(3)=3^2+1=10.
 $$
 
 Observe que as condições precisam ser lidas com atenção. O sinal de desigualdade determina a qual trecho pertence cada valor.
-
-***
 
 ## 🧭 Domínio de funções por partes
 
@@ -186,7 +192,7 @@ $$
 
 Observe que o valor $x=1$ pertence ao domínio, pois está incluído na segunda condição. Já $x=3$ não pertence ao domínio, pois anula o denominador.
 
-***
+Para revisar como combinamos as restrições dentro de cada trecho e reunimos os domínios resultantes, consulte a [**Aula 1.21-AP — Domínio de Funções: Guia Completo**](1.21-AP-dominio-de-funcoes-guia-completo.qmd).
 
 ## 🎯 Pontos de troca
 
@@ -218,8 +224,6 @@ Em um ponto de troca, podemos encontrar situações como:
 - a função não está definida no ponto.
 
 Essas possibilidades serão examinadas por meio dos limites laterais.
-
-***
 
 ## 👈 Limites laterais
 
@@ -297,11 +301,11 @@ $$
 
 Essa diferença caracteriza um comportamento de salto.
 
-***
+Neste estudo, comparamos os dois limites laterais em pontos $a$ que têm entradas do domínio arbitrariamente próximas tanto à esquerda quanto à direita. Se o domínio só permite aproximação de um lado, como pode ocorrer numa extremidade, usamos o limite daquele lado para analisar a continuidade.
 
 ## ⚖️ Quando o limite bilateral existe?
 
-Para que o limite bilateral de uma função exista em um ponto, os limites laterais precisam existir e ser iguais.
+Quando há pontos do domínio arbitrariamente próximos de $a$ dos dois lados, o limite bilateral em $a$ existe se, e somente se, os dois limites laterais existem e são iguais.
 
 Em particular, se
 
@@ -359,11 +363,9 @@ $$
 
 Observe, porém, que a existência do limite não garante, por si só, que a função seja contínua. Precisamos verificar também o valor da função no ponto.
 
-***
-
 ## 🕳️ Buracos e descontinuidades removíveis
 
-Uma descontinuidade removível ocorre quando o limite da função existe em determinado ponto, mas a função não está definida nesse ponto ou possui ali um valor diferente do limite.
+O caso removível ocorre quando há um limite finito no ponto e falta atribuir à função esse valor. Isso inclui tanto a ausência de valor no ponto quanto a atribuição de um valor diferente do limite.
 
 Considere
 
@@ -447,8 +449,6 @@ $$
 
 Esse é outro exemplo de descontinuidade removível.
 
-***
-
 ## ↕️ Descontinuidade por salto
 
 Uma descontinuidade por salto ocorre quando os limites laterais existem e são finitos, mas possuem valores diferentes.
@@ -497,11 +497,61 @@ $$
 
 A existência desse valor não elimina a descontinuidade, pois os limites laterais não coincidem.
 
-***
+![Dois comportamentos em $x=2$. No salto, os limites laterais são $3$ e $4$. No caso removível, o limite é $3$ e o valor no ponto é $10$.](images/1.22-ap-descontinuidades.svg){#fig-ap05-descontinuidades width="96%" fig-alt="Dois gráficos na mesma escala. À esquerda, círculo aberto em (2,3) e ponto fechado em (2,4). À direita, círculo aberto em (2,3) e ponto fechado isolado em (2,10)."}
+
+::: {.callout-note collapse=true title="Código-fonte da figura em Python"}
+
+```python
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+azul, verde = "#196399", "#007c74"
+fig, (salto, removivel) = plt.subplots(
+    1, 2, figsize=(8.4, 4.2), sharex=True, sharey=True, layout="constrained"
+)
+esquerda = np.linspace(1, 2, 160, endpoint=False)
+direita = np.linspace(2, 3, 161)[1:]
+
+def ponto(eixo, y, cor, aberto, deslocamento, texto):
+    preenchimento = "white" if aberto else cor
+    eixo.scatter(2, y, s=90, facecolors=preenchimento,
+                 edgecolors=cor, linewidths=2, zorder=4)
+    eixo.annotate(texto, (2, y), xytext=deslocamento, color=cor,
+                  textcoords="offset points", fontsize=10)
+
+salto.plot(esquerda, esquerda + 1, color=azul, linewidth=2.4)
+salto.plot(direita, direita**2, color=verde, linewidth=2.4)
+ponto(salto, 3, azul, True, (-45, -17), r"$(2,3)$")
+ponto(salto, 4, verde, False, (-44, 7), r"$(2,4)$")
+salto.set_title("Descontinuidade por salto", color="#19324F", pad=9)
+
+for x in (esquerda, direita):
+    removivel.plot(x, x + 1, color=azul, linewidth=2.4)
+ponto(removivel, 3, azul, True, (8, -18), r"$(2,3)$")
+ponto(removivel, 10, verde, False, (8, -6), r"$(2,10)$")
+removivel.set_title("Descontinuidade removível", color="#19324F", pad=9)
+
+for eixo in (salto, removivel):
+    eixo.set(xlim=(0.95, 3.05), ylim=(1.4, 10.8), xticks=[1, 2, 3],
+             yticks=[2, 3, 4, 6, 8, 10], xlabel=r"$x$")
+    eixo.set_axisbelow(True)
+    eixo.grid(color="#DCE5EF")
+    eixo.tick_params(labelleft=True)
+
+salto.set_ylabel(r"$y$")
+plt.rcParams["svg.fonttype"] = "path"
+Path("images").mkdir(exist_ok=True)
+fig.savefig("images/1.22-ap-descontinuidades.svg")
+plt.close(fig)
+```
+
+:::
 
 ## 🧱 Continuidade em um ponto
 
-Uma função é contínua em um ponto $a$ quando satisfaz três condições:
+Num ponto $a$ em que o domínio permite aproximação pelos dois lados, a continuidade exige três condições:
 
 1. $f(a)$ está definida;
 2. $\lim_{x\to a}f(x)$ existe;
@@ -516,8 +566,6 @@ $$
 Essa igualdade reúne as três condições, desde que ambos os lados estejam definidos.
 
 Para uma função por partes, isso significa que os trechos precisam se encontrar no ponto de troca e que o valor atribuído à função nesse ponto deve coincidir com o limite comum.
-
-***
 
 ## 🧩 Continuidade por encaixe
 
@@ -563,49 +611,13 @@ $$
 \boxed{a=2.}
 $$
 
-Verifiquemos o valor da função no ponto:
+A condição $x\geq 1$ inclui o ponto de troca. Logo, substituindo $x=1$ na regra $ax+1$, obtemos $f(1)=a+1=3$ para $a=2$.
 
 $$
-f(1)=2a+1.
+\lim_{x\to1^-}f(x)=\lim_{x\to1^+}f(x)=f(1)=3.
 $$
 
-Com $a=2$,
-
-$$
-f(1)=2\cdot2+1=5.
-$$
-
-Há um problema: os limites laterais não são iguais ao valor calculado? Vamos observar a expressão utilizada.
-
-Para a segunda parte, a função é $ax+1$. Portanto,
-
-$$
-f(1)=a+1.
-$$
-
-Com $a=2$,
-
-$$
-f(1)=3.
-$$
-
-Assim,
-
-$$
-\lim_{x\to1^-}f(x)
-=
-\lim_{x\to1^+}f(x)
-=
-f(1)=3.
-$$
-
-A função é contínua em $x=1$ quando
-
-$$
-\boxed{a=2.}
-$$
-
-***
+Portanto, a função é contínua em $x=1$ exatamente quando $a=2$.
 
 ## 🧮 Um exemplo com dois parâmetros
 
@@ -685,8 +697,6 @@ $$
 \boxed{a=3,\qquad b=3.}
 $$
 
-***
-
 ## 🌉 Relação com o estudo dos limites
 
 As funções por partes são especialmente úteis para compreender por que os limites laterais são necessários.
@@ -711,8 +721,6 @@ Somente depois de comparar esses resultados podemos concluir se o limite bilater
 
 Essa análise será fundamental no estudo sistemático dos limites e da continuidade.
 
-***
-
 ::: {.callout-note title="📋 Quadro-resumo"}
 
 | Conceito | Significado |
@@ -721,14 +729,12 @@ Essa análise será fundamental no estudo sistemático dos limites e da continui
 | Ponto de troca | Ponto no qual muda a expressão utilizada. |
 | Limite pela esquerda | Comportamento da função quando $x$ se aproxima de $a$ por valores menores que $a$. |
 | Limite pela direita | Comportamento da função quando $x$ se aproxima de $a$ por valores maiores que $a$. |
-| Limite bilateral | Existe quando os limites laterais existem e são iguais. |
+| Limite bilateral | Quando o domínio permite aproximação pelos dois lados, existe se os limites laterais existem e coincidem. |
 | Descontinuidade removível | O limite existe, mas não coincide com o valor da função ou a função não está definida no ponto. |
 | Descontinuidade por salto | Os limites laterais existem e são finitos, mas diferentes. |
 | Continuidade | O limite existe e coincide com o valor da função no ponto. |
 
 :::
-
-***
 
 # 🧪 Exercícios propostos
 
@@ -842,11 +848,9 @@ $$
 
 :::
 
-***
-
-::: {.callout-important collapse="true" title="✅ Gabarito comentado"}
-
 # ✅ Gabarito comentado
+
+::: {.callout-important collapse=true title="Clique para consultar as resoluções"}
 
 ## 🧪 Exercício 1
 
@@ -1145,8 +1149,6 @@ As três condições coincidem, portanto a função é contínua em $x=1$.
 
 :::
 
-***
-
 # 🧩 Quiz — Funções por Partes
 
 :::::{.question}
@@ -1186,7 +1188,7 @@ A função é necessariamente contínua.
 :::::
 
 :::::{.question}
-**Q3.** Para que uma função seja contínua em $x=a$, é necessário que:
+**Q3.** Se há entradas do domínio arbitrariamente próximas dos dois lados de $a$, para haver continuidade em $a$ é necessário que:
 
 ::::{.choices}
 :::{.choice}
@@ -1203,8 +1205,6 @@ O limite bilateral exista e seja igual a $f(a)$.
 ::::
 :::::
 
-***
-
 ::: {.callout-tip title="🌉 Conexão com a sequência principal"}
 
 O estudo das funções por partes prepara o caminho para a compreensão dos limites laterais e da continuidade.
@@ -1216,6 +1216,8 @@ Esses conceitos serão retomados e formalizados no estudo de limites, quando inv
 # 🔗 Navegação
 
 ↩️ **Voltar à aula de origem:** [1.10 — Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+
+🧭 [**Exercícios da Revisão Geral**](1.17-revisao-geral-do-modulo-1.qmd#exercícios-propostos)
 
 ▶️ **Continuar a sequência principal:** [1.11 — Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
 

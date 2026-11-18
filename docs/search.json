@@ -2569,116 +2569,53 @@
     "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🔬 AP anterior: 1.21-AP — Domínio de Funções: Guia Completo"
   },
   {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#como-ler-uma-função-por-partes",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#como-ler-uma-função-por-partes",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "1.1 🧩 Como ler uma função por partes",
-    "text": "1.1 🧩 Como ler uma função por partes\nConsidere:\n\\[\nf(x)=\n\\begin{cases}\n2x, & x&lt;1,\\\\\nx^2+1, & x\\geq 1.\n\\end{cases}\n\\]\nSe \\(x=0\\), usamos a primeira regra, pois \\(0&lt;1\\):\n\\[\nf(0)=2\\cdot 0=0.\n\\]\nSe \\(x=1\\), usamos a segunda regra, pois \\(1\\geq 1\\):\n\\[\nf(1)=1^2+1=2.\n\\]\nSe \\(x=3\\), usamos a segunda regra:\n\\[\nf(3)=3^2+1=10.\n\\]"
-  },
-  {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#domínio-de-funções-por-partes",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#domínio-de-funções-por-partes",
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
     "section": "1.2 🧭 Domínio de funções por partes",
-    "text": "1.2 🧭 Domínio de funções por partes\nO domínio de uma função por partes é a união dos valores permitidos em cada trecho.\nPor exemplo:\n\\[\nf(x)=\n\\begin{cases}\n\\sqrt{x+2}, & x&lt;1,\\\\\n\\dfrac{1}{x-3}, & x\\geq 1.\n\\end{cases}\n\\]\nNa primeira parte, precisamos de\n\\[\nx+2\\geq 0,\n\\]\nisto é,\n\\[\nx\\geq -2.\n\\]\nMas essa regra vale apenas quando\n\\[\nx&lt;1.\n\\]\nLogo, a primeira parte contribui com\n\\[\n[-2,1).\n\\]\nNa segunda parte, precisamos de\n\\[\nx-3\\neq 0,\n\\]\nisto é,\n\\[\nx\\neq 3.\n\\]\nMas essa regra vale quando\n\\[\nx\\geq 1.\n\\]\nLogo, a segunda parte contribui com\n\\[\n[1,3)\\cup(3,+\\infty).\n\\]\nPortanto,\n\\[\nD_f=[-2,3)\\cup(3,+\\infty).\n\\]"
+    "text": "1.2 🧭 Domínio de funções por partes\nO domínio de uma função por partes é obtido considerando as restrições de cada expressão e as condições que delimitam sua região de aplicação.\nEm outras palavras, precisamos respeitar simultaneamente:\n\nas condições de cada trecho;\nas restrições matemáticas da expressão utilizada naquele trecho.\n\nConsidere\n\\[\nf(x)=\n\\begin{cases}\n\\sqrt{x+2}, & x&lt;1,\\\\\n\\dfrac{1}{x-3}, & x\\geq 1.\n\\end{cases}\n\\]\nPrimeira parte\nA expressão é\n\\[\n\\sqrt{x+2}.\n\\]\nPara que a raiz seja real, precisamos de\n\\[\nx+2\\geq0,\n\\]\nou seja,\n\\[\nx\\geq-2.\n\\]\nMas essa expressão só vale quando \\(x&lt;1\\).\nPortanto, a primeira parte contribui com o intervalo\n\\[\n[-2,1).\n\\]\nSegunda parte\nA expressão é\n\\[\n\\frac{1}{x-3}.\n\\]\nO denominador não pode ser zero:\n\\[\nx-3\\neq0.\n\\]\nLogo,\n\\[\nx\\neq3.\n\\]\nComo essa regra vale para \\(x\\geq1\\), a segunda parte contribui com\n\\[\n[1,3)\\cup(3,+\\infty).\n\\]\nDomínio total\nUnindo as duas partes:\n\\[\nD_f=[-2,1)\\cup[1,3)\\cup(3,+\\infty).\n\\]\nSimplificando,\n\\[\n\\boxed{D_f=[-2,3)\\cup(3,+\\infty).}\n\\]\nObserve que o valor \\(x=1\\) pertence ao domínio, pois está incluído na segunda condição. Já \\(x=3\\) não pertence ao domínio, pois anula o denominador.\nPara revisar como combinamos as restrições dentro de cada trecho e reunimos os domínios resultantes, consulte a Aula 1.21-AP — Domínio de Funções: Guia Completo."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#pontos-de-troca",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#pontos-de-troca",
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
     "section": "1.3 🎯 Pontos de troca",
-    "text": "1.3 🎯 Pontos de troca\nOs pontos onde a regra muda são chamados aqui de pontos de troca.\nEm\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x&lt;2,\\\\\nx^2, & x\\geq 2,\n\\end{cases}\n\\]\no ponto de troca é\n\\[\nx=2.\n\\]\nEsse ponto merece atenção especial porque nele podem ocorrer:\n\nburacos;\nsaltos;\nmudança de fórmula;\ndescontinuidade;\ncontinuidade por encaixe."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#limite-pela-esquerda-e-pela-direita",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#limite-pela-esquerda-e-pela-direita",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "1.4 👈 Limite pela esquerda e pela direita",
-    "text": "1.4 👈 Limite pela esquerda e pela direita\nFunções por partes são uma preparação natural para limites laterais.\nPara entender o comportamento perto de um ponto de troca \\(a\\), analisamos:\n\no que acontece quando \\(x\\) se aproxima de \\(a\\) pela esquerda;\no que acontece quando \\(x\\) se aproxima de \\(a\\) pela direita.\n\nPor exemplo:\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x&lt;2,\\\\\nx^2, & x\\geq 2.\n\\end{cases}\n\\]\nQuando \\(x\\) se aproxima de \\(2\\) pela esquerda, usamos \\(x+1\\):\n\\[\nx+1\\to 3.\n\\]\nQuando \\(x\\) se aproxima de \\(2\\) pela direita, usamos \\(x^2\\):\n\\[\nx^2\\to 4.\n\\]\nComo os comportamentos laterais são diferentes, há um salto."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#buracos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#buracos",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "1.5 🕳️ Buracos",
-    "text": "1.5 🕳️ Buracos\nUm buraco pode ocorrer quando a função se aproxima de um valor, mas o valor definido no ponto é outro ou não existe.\nExemplo:\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x\\neq 2,\\\\\n10, & x=2.\n\\end{cases}\n\\]\nPerto de \\(2\\), a função segue a reta\n\\[\nx+1.\n\\]\nAssim, os valores se aproximam de\n\\[\n3.\n\\]\nMas o valor da função em \\(2\\) é\n\\[\nf(2)=10.\n\\]\nEsse é um exemplo típico de descontinuidade removível."
+    "text": "1.3 🎯 Pontos de troca\nOs pontos nos quais a regra da função muda são chamados de pontos de troca.\nConsidere novamente\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x&lt;2,\\\\\nx^2, & x\\geq2.\n\\end{cases}\n\\]\nA regra muda em\n\\[\nx=2.\n\\]\nEsse ponto merece atenção porque as expressões utilizadas à esquerda e à direita podem apresentar comportamentos diferentes.\nEm um ponto de troca, podemos encontrar situações como:\n\nas partes se encontram;\nas partes apresentam valores-limite diferentes;\na função possui um valor diferente do limite;\na função não está definida no ponto.\n\nEssas possibilidades serão examinadas por meio dos limites laterais."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#continuidade-por-encaixe",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#continuidade-por-encaixe",
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "1.6 🧱 Continuidade por encaixe",
-    "text": "1.6 🧱 Continuidade por encaixe\nÀs vezes, escolhemos um parâmetro para fazer as partes se encontrarem.\nConsidere:\n\\[\nf(x)=\n\\begin{cases}\nx+2, & x&lt;1,\\\\\nax+1, & x\\geq 1.\n\\end{cases}\n\\]\nPara as partes se encontrarem em \\(x=1\\), precisamos que:\n\\[\n1+2=a\\cdot 1+1.\n\\]\nLogo:\n\\[\n3=a+1,\n\\]\nportanto\n\\[\na=2.\n\\]\nEsse tipo de problema aparecerá no estudo de continuidade."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#gráficos-de-funções-por-partes",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#gráficos-de-funções-por-partes",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "1.7 📊 Gráficos de funções por partes",
-    "text": "1.7 📊 Gráficos de funções por partes\nO gráfico de uma função por partes é construído desenhando cada trecho apenas na região onde ele é válido.\nCuidados importantes:\n\nuse ponto aberto quando o extremo não pertence ao trecho;\nuse ponto fechado quando o extremo pertence ao trecho;\nverifique se há valores isolados;\nrespeite o domínio de cada regra.\n\nPor exemplo, em\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x&lt;2,\\\\\nx^2, & x\\geq 2,\n\\end{cases}\n\\]\no trecho da reta vale apenas para \\(x&lt;2\\), e o trecho da parábola vale para \\(x\\geq 2\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#por-que-isso-importa-para-limites",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#por-que-isso-importa-para-limites",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "1.8 🌉 Por que isso importa para limites?",
-    "text": "1.8 🌉 Por que isso importa para limites?\nLimites exigem entender o que acontece quando \\(x\\) se aproxima de um ponto.\nFunções por partes mostram que o comportamento pode depender do lado pelo qual nos aproximamos.\nPor isso, elas são fundamentais para estudar:\n\nlimites laterais;\ncontinuidade;\ndescontinuidades removíveis;\ndescontinuidades por salto;\nfunções definidas em contextos reais."
+    "section": "1.9 🧩 Continuidade por encaixe",
+    "text": "1.9 🧩 Continuidade por encaixe\nConsidere a função\n\\[\nf(x)=\n\\begin{cases}\nx+2, & x&lt;1,\\\\\nax+1, & x\\geq1.\n\\end{cases}\n\\]\nQueremos determinar o valor de \\(a\\) para que a função seja contínua em \\(x=1\\).\nPrimeiro, calculamos o limite pela esquerda:\n\\[\n\\lim_{x\\to1^-}f(x)\n=\n\\lim_{x\\to1^-}(x+2)\n=3.\n\\]\nAgora, calculamos o limite pela direita:\n\\[\n\\lim_{x\\to1^+}f(x)\n=\n\\lim_{x\\to1^+}(ax+1)\n=a+1.\n\\]\nPara que os limites laterais coincidam, precisamos de\n\\[\n3=a+1.\n\\]\nLogo,\n\\[\n\\boxed{a=2.}\n\\]\nA condição \\(x\\geq 1\\) inclui o ponto de troca. Logo, substituindo \\(x=1\\) na regra \\(ax+1\\), obtemos \\(f(1)=a+1=3\\) para \\(a=2\\).\n\\[\n\\lim_{x\\to1^-}f(x)=\\lim_{x\\to1^+}f(x)=f(1)=3.\n\\]\nPortanto, a função é contínua em \\(x=1\\) exatamente quando \\(a=2\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-1",
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nConsidere:\n\\[\nf(x)=\n\\begin{cases}\nx+2, & x&lt;0,\\\\\nx^2, & x\\geq 0.\n\\end{cases}\n\\]\nCalcule:\n\n\\(f(-3)\\)\n\n\\(f(0)\\)\n\n\\(f(2)\\)"
+    "section": "3.1 🧪 Exercício 1",
+    "text": "3.1 🧪 Exercício 1\nA função é\n\\[\nf(x)=\n\\begin{cases}\nx+2, & x&lt;0,\\\\\nx^2, & x\\geq0.\n\\end{cases}\n\\]\na) Como \\(-3&lt;0\\), utilizamos a primeira regra:\n\\[\nf(-3)=-3+2=-1.\n\\]\nb) Como \\(0\\geq0\\), utilizamos a segunda regra:\n\\[\nf(0)=0^2=0.\n\\]\nc) Como \\(2\\geq0\\), utilizamos a segunda regra:\n\\[\nf(2)=2^2=4.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-2",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-2",
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nDetermine o domínio:\n\\[\ng(x)=\n\\begin{cases}\n\\sqrt{x+1}, & x&lt;2,\\\\\n\\dfrac{1}{x-4}, & x\\geq 2.\n\\end{cases}\n\\]"
+    "section": "3.2 🧪 Exercício 2",
+    "text": "3.2 🧪 Exercício 2\nNa primeira parte, precisamos de\n\\[\nx+1\\geq0,\n\\]\nportanto,\n\\[\nx\\geq-1.\n\\]\nComo essa expressão vale para \\(x&lt;2\\), sua contribuição para o domínio é\n\\[\n[-1,2).\n\\]\nNa segunda parte, precisamos de\n\\[\nx-4\\neq0,\n\\]\nou seja,\n\\[\nx\\neq4.\n\\]\nComo essa expressão vale para \\(x\\geq2\\), sua contribuição é\n\\[\n[2,4)\\cup(4,+\\infty).\n\\]\nUnindo os intervalos:\n\\[\nD_g=[-1,2)\\cup[2,4)\\cup(4,+\\infty).\n\\]\nLogo,\n\\[\n\\boxed{D_g=[-1,4)\\cup(4,+\\infty).}\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-3",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-3",
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nConsidere:\n\\[\nh(x)=\n\\begin{cases}\n2x+1, & x&lt;1,\\\\\nx^2+2, & x\\geq 1.\n\\end{cases}\n\\]\nCompare o comportamento pela esquerda e pela direita em \\(x=1\\)."
+    "section": "3.3 🧪 Exercício 3",
+    "text": "3.3 🧪 Exercício 3\nA função é\n\\[\nh(x)=\n\\begin{cases}\n2x+1, & x&lt;1,\\\\\nx^2+2, & x\\geq1.\n\\end{cases}\n\\]\na) Limite pela esquerda\nUtilizamos a primeira expressão:\n\\[\n\\lim_{x\\to1^-}h(x)\n=\n\\lim_{x\\to1^-}(2x+1)\n=3.\n\\]\nb) Limite pela direita\nUtilizamos a segunda expressão:\n\\[\n\\lim_{x\\to1^+}h(x)\n=\n\\lim_{x\\to1^+}(x^2+2)\n=3.\n\\]\nc) Limite bilateral\nComo os limites laterais existem e são iguais,\n\\[\n\\boxed{\\lim_{x\\to1}h(x)=3.}\n\\]\nd) Valor da função\nComo \\(1\\) pertence à segunda condição,\n\\[\nh(1)=1^2+2=3.\n\\]\nPortanto, a função é contínua em \\(x=1\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-4",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-4",
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nEncontre \\(a\\) para que as partes se encontrem em \\(x=2\\):\n\\[\np(x)=\n\\begin{cases}\nx+4, & x&lt;2,\\\\\nax, & x\\geq 2.\n\\end{cases}\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-1-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-1-1",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "3.1 🧪 Exercício 1",
-    "text": "3.1 🧪 Exercício 1\n\nComo \\(-3&lt;0\\), usamos \\(x+2\\):\n\n\\[\nf(-3)=-3+2=-1.\n\\]\n\nComo \\(0\\geq 0\\), usamos \\(x^2\\):\n\n\\[\nf(0)=0^2=0.\n\\]\n\nComo \\(2\\geq 0\\), usamos \\(x^2\\):\n\n\\[\nf(2)=2^2=4.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-2-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-2-1",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "3.2 🧪 Exercício 2",
-    "text": "3.2 🧪 Exercício 2\nNa primeira parte, precisamos de\n\\[\nx+1\\geq 0,\n\\]\nlogo\n\\[\nx\\geq -1.\n\\]\nComo essa parte vale para \\(x&lt;2\\), ela contribui com\n\\[\n[-1,2).\n\\]\nNa segunda parte, precisamos de\n\\[\nx-4\\neq 0,\n\\]\nlogo\n\\[\nx\\neq 4.\n\\]\nComo essa parte vale para \\(x\\geq 2\\), ela contribui com\n\\[\n[2,4)\\cup(4,+\\infty).\n\\]\nPortanto,\n\\[\nD_g=[-1,4)\\cup(4,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-3-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-3-1",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
-    "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\nPela esquerda de \\(1\\), usamos\n\\[\n2x+1.\n\\]\nQuando \\(x\\) se aproxima de \\(1\\) pela esquerda:\n\\[\n2x+1\\to 3.\n\\]\nPela direita de \\(1\\), usamos\n\\[\nx^2+2.\n\\]\nQuando \\(x\\) se aproxima de \\(1\\) pela direita:\n\\[\nx^2+2\\to 3.\n\\]\nOs comportamentos laterais coincidem.\nAlém disso,\n\\[\nh(1)=1^2+2=3.\n\\]\nEntão as partes se encontram em \\(x=1\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-4-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-4-1",
-    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
     "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\nPara as partes se encontrarem em \\(x=2\\), precisamos que:\n\\[\n2+4=2a.\n\\]\nLogo,\n\\[\n6=2a,\n\\]\nportanto\n\\[\na=3.\n\\]"
+    "text": "3.4 🧪 Exercício 4\nA função é\n\\[\np(x)=\n\\begin{cases}\nx+4, & x&lt;2,\\\\\nax, & x\\geq2.\n\\end{cases}\n\\]\nPara que seja contínua em \\(x=2\\), os limites laterais devem coincidir com o valor da função.\nPela esquerda:\n\\[\n\\lim_{x\\to2^-}p(x)=2+4=6.\n\\]\nPela direita:\n\\[\n\\lim_{x\\to2^+}p(x)=2a.\n\\]\nComo a função deve ser contínua,\n\\[\n6=2a.\n\\]\nLogo,\n\\[\n\\boxed{a=3.}\n\\]\nCom esse valor,\n\\[\np(2)=3\\cdot2=6,\n\\]\nconfirmando a continuidade."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#quiz-funções-por-partes",
@@ -2686,6 +2623,118 @@
     "title": "🔬 Módulo 1.22-AP: Funções por Partes",
     "section": "3.5 🧩 Quiz — Funções por Partes",
     "text": "3.5 🧩 Quiz — Funções por Partes\n\nQ1. Em uma função por partes, para calcular \\(f(x)\\) devemos primeiro:\n\n\n\n\n ✓Verificar em qual região do domínio o valor de \\(x\\) está.\n\n\n ✗Somar todas as regras.\n\n\n ✗Ignorar as condições.\n\n\n\n\n\n\nQ2. Pontos onde a regra da função muda são importantes porque:\n\n\n\n\n ✗Nunca afetam o gráfico.\n\n\n ✓Podem produzir saltos, buracos ou mudanças de comportamento.\n\n\n ✗Eliminam o domínio da função.\n\n\n\n\n\n\nQ3. Funções por partes são especialmente úteis para preparar o estudo de:\n\n\n\n\n ✓Limites laterais e continuidade.\n\n\n ✗Apenas multiplicação de frações.\n\n\n ✗Somente números naturais."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#como-interpretar-uma-função-por-partes",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#como-interpretar-uma-função-por-partes",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.1 🧩 Como interpretar uma função por partes",
+    "text": "1.1 🧩 Como interpretar uma função por partes\nConsidere\n\\[\nf(x)=\n\\begin{cases}\n2x, & x&lt;1,\\\\\nx^2+1, & x\\geq 1.\n\\end{cases}\n\\]\nPara calcular \\(f(x)\\), primeiro identificamos a condição satisfeita pelo valor de entrada. Depois aplicamos a expressão correspondente.\nPor exemplo, se \\(x=0\\), temos \\(0&lt;1\\). Portanto, usamos a primeira regra:\n\\[\nf(0)=2\\cdot0=0.\n\\]\nSe \\(x=1\\), a primeira condição não é satisfeita. Como \\(1\\geq1\\), utilizamos a segunda regra:\n\\[\nf(1)=1^2+1=2.\n\\]\nPara \\(x=3\\), também utilizamos a segunda regra:\n\\[\nf(3)=3^2+1=10.\n\\]\nObserve que as condições precisam ser lidas com atenção. O sinal de desigualdade determina a qual trecho pertence cada valor."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#limites-laterais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#limites-laterais",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.4 👈 Limites laterais",
+    "text": "1.4 👈 Limites laterais\nPara estudar o comportamento de uma função nas proximidades de um ponto \\(a\\), podemos investigar o que acontece quando \\(x\\) se aproxima de \\(a\\) pela esquerda ou pela direita.\nEsses comportamentos são chamados de limite pela esquerda e limite pela direita.\nUsamos as notações\n\\[\n\\lim_{x\\to a^-}f(x)\n\\]\ne\n\\[\n\\lim_{x\\to a^+}f(x).\n\\]\nO símbolo \\(a^-\\) indica aproximação pela esquerda, enquanto \\(a^+\\) indica aproximação pela direita.\nConsidere\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x&lt;2,\\\\\nx^2, & x\\geq2.\n\\end{cases}\n\\]\nAproximação pela esquerda\nQuando \\(x\\) se aproxima de \\(2\\) pela esquerda, utilizamos a expressão \\(x+1\\).\nAssim,\n\\[\n\\lim_{x\\to2^-}f(x)\n=\n\\lim_{x\\to2^-}(x+1)\n=3.\n\\]\nAproximação pela direita\nQuando \\(x\\) se aproxima de \\(2\\) pela direita, utilizamos a expressão \\(x^2\\).\nLogo,\n\\[\n\\lim_{x\\to2^+}f(x)\n=\n\\lim_{x\\to2^+}x^2\n=4.\n\\]\nPortanto,\n\\[\n\\lim_{x\\to2^-}f(x)=3\n\\]\ne\n\\[\n\\lim_{x\\to2^+}f(x)=4.\n\\]\nComo os limites laterais são diferentes, o limite bilateral não existe:\n\\[\n\\boxed{\\lim_{x\\to2}f(x)\\text{ não existe}.}\n\\]\nEssa diferença caracteriza um comportamento de salto.\nNeste estudo, comparamos os dois limites laterais em pontos \\(a\\) que têm entradas do domínio arbitrariamente próximas tanto à esquerda quanto à direita. Se o domínio só permite aproximação de um lado, como pode ocorrer numa extremidade, usamos o limite daquele lado para analisar a continuidade."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#quando-o-limite-bilateral-existe",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#quando-o-limite-bilateral-existe",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.5 ⚖️ Quando o limite bilateral existe?",
+    "text": "1.5 ⚖️ Quando o limite bilateral existe?\nQuando há pontos do domínio arbitrariamente próximos de \\(a\\) dos dois lados, o limite bilateral em \\(a\\) existe se, e somente se, os dois limites laterais existem e são iguais.\nEm particular, se\n\\[\n\\lim_{x\\to a^-}f(x)=L\n\\]\ne\n\\[\n\\lim_{x\\to a^+}f(x)=L,\n\\]\nentão\n\\[\n\\boxed{\\lim_{x\\to a}f(x)=L.}\n\\]\nSe os limites laterais forem diferentes, o limite bilateral não existe.\nPor exemplo, considere\n\\[\nf(x)=\n\\begin{cases}\n2x+1, & x&lt;1,\\\\\nx^2+2, & x\\geq1.\n\\end{cases}\n\\]\nPela esquerda:\n\\[\n\\lim_{x\\to1^-}f(x)\n=\n\\lim_{x\\to1^-}(2x+1)\n=3.\n\\]\nPela direita:\n\\[\n\\lim_{x\\to1^+}f(x)\n=\n\\lim_{x\\to1^+}(x^2+2)\n=3.\n\\]\nComo os dois resultados coincidem,\n\\[\n\\boxed{\\lim_{x\\to1}f(x)=3.}\n\\]\nObserve, porém, que a existência do limite não garante, por si só, que a função seja contínua. Precisamos verificar também o valor da função no ponto."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#buracos-e-descontinuidades-removíveis",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#buracos-e-descontinuidades-removíveis",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.6 🕳️ Buracos e descontinuidades removíveis",
+    "text": "1.6 🕳️ Buracos e descontinuidades removíveis\nO caso removível ocorre quando há um limite finito no ponto e falta atribuir à função esse valor. Isso inclui tanto a ausência de valor no ponto quanto a atribuição de um valor diferente do limite.\nConsidere\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x\\neq2,\\\\\n10, & x=2.\n\\end{cases}\n\\]\nPara valores próximos de \\(2\\), mas diferentes de \\(2\\), a função é dada por\n\\[\nf(x)=x+1.\n\\]\nAssim,\n\\[\n\\lim_{x\\to2}f(x)\n=\n\\lim_{x\\to2}(x+1)\n=3.\n\\]\nEntretanto,\n\\[\nf(2)=10.\n\\]\nPortanto,\n\\[\n\\lim_{x\\to2}f(x)\\neq f(2).\n\\]\nO limite existe, mas não coincide com o valor da função.\nEssa descontinuidade é removível porque poderíamos redefinir o valor no ponto como\n\\[\nf(2)=3\n\\]\ne obter uma função contínua em \\(x=2\\).\nOutro exemplo importante é\n\\[\ng(x)=\\frac{x^2-4}{x-2},\n\\qquad x\\neq2.\n\\]\nFatorando o numerador:\n\\[\ng(x)=\\frac{(x-2)(x+2)}{x-2}.\n\\]\nPara \\(x\\neq2\\), podemos simplificar:\n\\[\ng(x)=x+2.\n\\]\nConsequentemente,\n\\[\n\\lim_{x\\to2}g(x)=4.\n\\]\nA função não está definida em \\(x=2\\), mas seu limite existe.\nO gráfico apresenta um ponto ausente em\n\\[\n(2,4).\n\\]\nEsse é outro exemplo de descontinuidade removível."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#descontinuidade-por-salto",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#descontinuidade-por-salto",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.7 ↕️ Descontinuidade por salto",
+    "text": "1.7 ↕️ Descontinuidade por salto\nUma descontinuidade por salto ocorre quando os limites laterais existem e são finitos, mas possuem valores diferentes.\nConsidere\n\\[\nf(x)=\n\\begin{cases}\nx+1, & x&lt;2,\\\\\nx^2, & x\\geq2.\n\\end{cases}\n\\]\nJá calculamos:\n\\[\n\\lim_{x\\to2^-}f(x)=3\n\\]\ne\n\\[\n\\lim_{x\\to2^+}f(x)=4.\n\\]\nComo\n\\[\n3\\neq4,\n\\]\no limite bilateral não existe.\nA diferença entre os valores laterais caracteriza um salto de tamanho\n\\[\n|4-3|=1.\n\\]\nO valor efetivo da função no ponto é\n\\[\nf(2)=4.\n\\]\nA existência desse valor não elimina a descontinuidade, pois os limites laterais não coincidem.\n\n\n\n\n\n\nFigura 1: Dois comportamentos em \\(x=2\\). No salto, os limites laterais são \\(3\\) e \\(4\\). No caso removível, o limite é \\(3\\) e o valor no ponto é \\(10\\).\n\n\n\n\n\n\n\n\n\nNotaCódigo-fonte da figura em Python\n\n\n\n\n\nfrom pathlib import Path\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nazul, verde = \"#196399\", \"#007c74\"\nfig, (salto, removivel) = plt.subplots(\n    1, 2, figsize=(8.4, 4.2), sharex=True, sharey=True, layout=\"constrained\"\n)\nesquerda = np.linspace(1, 2, 160, endpoint=False)\ndireita = np.linspace(2, 3, 161)[1:]\n\ndef ponto(eixo, y, cor, aberto, deslocamento, texto):\n    preenchimento = \"white\" if aberto else cor\n    eixo.scatter(2, y, s=90, facecolors=preenchimento,\n                 edgecolors=cor, linewidths=2, zorder=4)\n    eixo.annotate(texto, (2, y), xytext=deslocamento, color=cor,\n                  textcoords=\"offset points\", fontsize=10)\n\nsalto.plot(esquerda, esquerda + 1, color=azul, linewidth=2.4)\nsalto.plot(direita, direita**2, color=verde, linewidth=2.4)\nponto(salto, 3, azul, True, (-45, -17), r\"$(2,3)$\")\nponto(salto, 4, verde, False, (-44, 7), r\"$(2,4)$\")\nsalto.set_title(\"Descontinuidade por salto\", color=\"#19324F\", pad=9)\n\nfor x in (esquerda, direita):\n    removivel.plot(x, x + 1, color=azul, linewidth=2.4)\nponto(removivel, 3, azul, True, (8, -18), r\"$(2,3)$\")\nponto(removivel, 10, verde, False, (8, -6), r\"$(2,10)$\")\nremovivel.set_title(\"Descontinuidade removível\", color=\"#19324F\", pad=9)\n\nfor eixo in (salto, removivel):\n    eixo.set(xlim=(0.95, 3.05), ylim=(1.4, 10.8), xticks=[1, 2, 3],\n             yticks=[2, 3, 4, 6, 8, 10], xlabel=r\"$x$\")\n    eixo.set_axisbelow(True)\n    eixo.grid(color=\"#DCE5EF\")\n    eixo.tick_params(labelleft=True)\n\nsalto.set_ylabel(r\"$y$\")\nplt.rcParams[\"svg.fonttype\"] = \"path\"\nPath(\"images\").mkdir(exist_ok=True)\nfig.savefig(\"images/1.22-ap-descontinuidades.svg\")\nplt.close(fig)"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#continuidade-em-um-ponto",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#continuidade-em-um-ponto",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.8 🧱 Continuidade em um ponto",
+    "text": "1.8 🧱 Continuidade em um ponto\nNum ponto \\(a\\) em que o domínio permite aproximação pelos dois lados, a continuidade exige três condições:\n\n\\(f(a)\\) está definida;\n\\(\\lim_{x\\to a}f(x)\\) existe;\no limite é igual ao valor da função.\n\nEm notação matemática:\n\\[\n\\boxed{\\lim_{x\\to a}f(x)=f(a).}\n\\]\nEssa igualdade reúne as três condições, desde que ambos os lados estejam definidos.\nPara uma função por partes, isso significa que os trechos precisam se encontrar no ponto de troca e que o valor atribuído à função nesse ponto deve coincidir com o limite comum."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#um-exemplo-com-dois-parâmetros",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#um-exemplo-com-dois-parâmetros",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.10 🧮 Um exemplo com dois parâmetros",
+    "text": "1.10 🧮 Um exemplo com dois parâmetros\nEm problemas mais elaborados, podemos precisar determinar dois parâmetros simultaneamente.\nConsidere\n\\[\nf(x)=\n\\begin{cases}\nax+1, & x&lt;2,\\\\\nx^2+b, & x\\geq2.\n\\end{cases}\n\\]\nQueremos que a função seja contínua em \\(x=2\\) e que\n\\[\nf(2)=7.\n\\]\nComo o segundo trecho define o valor no ponto,\n\\[\nf(2)=2^2+b.\n\\]\nLogo,\n\\[\n4+b=7,\n\\]\ne, portanto,\n\\[\nb=3.\n\\]\nPara a continuidade, os limites laterais precisam coincidir com o valor da função:\n\\[\n\\lim_{x\\to2^-}f(x)\n=\n\\lim_{x\\to2^+}f(x)\n=\nf(2).\n\\]\nPela esquerda:\n\\[\n\\lim_{x\\to2^-}(ax+1)=2a+1.\n\\]\nPela direita:\n\\[\n\\lim_{x\\to2^+}(x^2+b)=4+b=7.\n\\]\nAssim,\n\\[\n2a+1=7.\n\\]\nPortanto,\n\\[\na=3.\n\\]\nA função será contínua em \\(x=2\\) e satisfará a condição solicitada quando\n\\[\n\\boxed{a=3,\\qquad b=3.}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#relação-com-o-estudo-dos-limites",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#relação-com-o-estudo-dos-limites",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "1.11 🌉 Relação com o estudo dos limites",
+    "text": "1.11 🌉 Relação com o estudo dos limites\nAs funções por partes são especialmente úteis para compreender por que os limites laterais são necessários.\nEm uma função definida por uma única expressão, podemos frequentemente estudar o limite substituindo o valor de aproximação, desde que a função seja contínua naquele ponto.\nEm funções por partes, porém, a expressão utilizada pode mudar conforme o lado pelo qual nos aproximamos.\nPor isso, precisamos analisar separadamente:\n\\[\n\\lim_{x\\to a^-}f(x)\n\\]\ne\n\\[\n\\lim_{x\\to a^+}f(x).\n\\]\nSomente depois de comparar esses resultados podemos concluir se o limite bilateral existe.\nEssa análise será fundamental no estudo sistemático dos limites e da continuidade.\n\n\n\n\n\n\nNota📋 Quadro-resumo\n\n\n\n\n\n\n\n\n\n\nConceito\nSignificado\n\n\n\n\nFunção por partes\nUma função definida por expressões diferentes em regiões do domínio.\n\n\nPonto de troca\nPonto no qual muda a expressão utilizada.\n\n\nLimite pela esquerda\nComportamento da função quando \\(x\\) se aproxima de \\(a\\) por valores menores que \\(a\\).\n\n\nLimite pela direita\nComportamento da função quando \\(x\\) se aproxima de \\(a\\) por valores maiores que \\(a\\).\n\n\nLimite bilateral\nQuando o domínio permite aproximação pelos dois lados, existe se os limites laterais existem e coincidem.\n\n\nDescontinuidade removível\nO limite existe, mas não coincide com o valor da função ou a função não está definida no ponto.\n\n\nDescontinuidade por salto\nOs limites laterais existem e são finitos, mas diferentes.\n\n\nContinuidade\nO limite existe e coincide com o valor da função no ponto."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-1-cálculo-de-valores",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-1-cálculo-de-valores",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "2.1 🧪 Exercício 1 — Cálculo de valores",
+    "text": "2.1 🧪 Exercício 1 — Cálculo de valores\nConsidere\n\\[\nf(x)=\n\\begin{cases}\nx+2, & x&lt;0,\\\\\nx^2, & x\\geq0.\n\\end{cases}\n\\]\nCalcule:\n\n\\(f(-3)\\);\n\\(f(0)\\);\n\\(f(2)\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-2-domínio",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-2-domínio",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "2.2 🧪 Exercício 2 — Domínio",
+    "text": "2.2 🧪 Exercício 2 — Domínio\nDetermine o domínio da função\n\\[\ng(x)=\n\\begin{cases}\n\\sqrt{x+1}, & x&lt;2,\\\\\n\\dfrac{1}{x-4}, & x\\geq2.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-3-limites-laterais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-3-limites-laterais",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "2.3 🧪 Exercício 3 — Limites laterais",
+    "text": "2.3 🧪 Exercício 3 — Limites laterais\nConsidere\n\\[\nh(x)=\n\\begin{cases}\n2x+1, & x&lt;1,\\\\\nx^2+2, & x\\geq1.\n\\end{cases}\n\\]\nDetermine:\n\n\\(\\displaystyle\\lim_{x\\to1^-}h(x)\\);\n\\(\\displaystyle\\lim_{x\\to1^+}h(x)\\);\n\\(\\displaystyle\\lim_{x\\to1}h(x)\\), caso exista;\n\\(h(1)\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-4-continuidade-por-parâmetro",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-4-continuidade-por-parâmetro",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "2.4 🧪 Exercício 4 — Continuidade por parâmetro",
+    "text": "2.4 🧪 Exercício 4 — Continuidade por parâmetro\nEncontre o valor de \\(a\\) para que a função\n\\[\np(x)=\n\\begin{cases}\nx+4, & x&lt;2,\\\\\nax, & x\\geq2\n\\end{cases}\n\\]\nseja contínua em \\(x=2\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-5-descontinuidade-removível",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-5-descontinuidade-removível",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "2.5 🧪 Exercício 5 — Descontinuidade removível",
+    "text": "2.5 🧪 Exercício 5 — Descontinuidade removível\nConsidere\n\\[\nq(x)=\n\\begin{cases}\n\\dfrac{x^2-9}{x-3}, & x\\neq3,\\\\\n10, & x=3.\n\\end{cases}\n\\]\nDetermine:\n\n\\(\\displaystyle\\lim_{x\\to3}q(x)\\);\n\\(q(3)\\);\nclassifique a descontinuidade em \\(x=3\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-6-dois-parâmetros",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-6-dois-parâmetros",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "2.6 🧪 Exercício 6 — Dois parâmetros",
+    "text": "2.6 🧪 Exercício 6 — Dois parâmetros\nDetermine \\(a\\) e \\(b\\) para que a função\n\\[\nr(x)=\n\\begin{cases}\nax+2, & x&lt;1,\\\\\nx^2+b, & x\\geq1\n\\end{cases}\n\\]\nseja contínua em \\(x=1\\) e satisfaça\n\\[\nr(1)=5.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-5",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-5",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "3.5 🧪 Exercício 5",
+    "text": "3.5 🧪 Exercício 5\nPara \\(x\\neq3\\), temos\n\\[\nq(x)=\\frac{x^2-9}{x-3}.\n\\]\nFatorando o numerador:\n\\[\nx^2-9=(x-3)(x+3).\n\\]\nAssim,\n\\[\nq(x)=x+3,\\qquad x\\neq3.\n\\]\na) Limite\n\\[\n\\lim_{x\\to3}q(x)\n=\n\\lim_{x\\to3}(x+3)\n=6.\n\\]\nb) Valor da função\nPela definição,\n\\[\nq(3)=10.\n\\]\nc) Classificação\nComo\n\\[\n\\lim_{x\\to3}q(x)=6\n\\]\ne\n\\[\nq(3)=10,\n\\]\no limite existe, mas não coincide com o valor da função.\nPortanto, temos uma descontinuidade removível em \\(x=3\\).\nSe definíssemos \\(q(3)=6\\), a função se tornaria contínua nesse ponto."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-6",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html#exercício-6",
+    "title": "🔬 Módulo 1.22-AP: Funções por Partes",
+    "section": "3.6 🧪 Exercício 6",
+    "text": "3.6 🧪 Exercício 6\nA função é\n\\[\nr(x)=\n\\begin{cases}\nax+2, & x&lt;1,\\\\\nx^2+b, & x\\geq1.\n\\end{cases}\n\\]\nA condição \\(r(1)=5\\) fornece\n\\[\n1^2+b=5.\n\\]\nPortanto,\n\\[\nb=4.\n\\]\nPara a continuidade em \\(x=1\\), o limite pela esquerda deve coincidir com o valor da função:\n\\[\na\\cdot1+2=5.\n\\]\nLogo,\n\\[\na=3.\n\\]\nAssim,\n\\[\n\\boxed{a=3,\\qquad b=4.}\n\\]\nVerificando:\n\\[\n\\lim_{x\\to1^-}r(x)=3+2=5,\n\\]\n\\[\n\\lim_{x\\to1^+}r(x)=1+4=5,\n\\]\ne\n\\[\nr(1)=5.\n\\]\nAs três condições coincidem, portanto a função é contínua em \\(x=1\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.4-numeros-reais-e-intervalos.html",
