@@ -68,8 +68,6 @@ Em outras palavras, o módulo de um número é o próprio número quando ele é 
 
 :::
 
----
-
 # 📍 Interpretação Geométrica
 
 Na reta real, o módulo de um número representa a **distância desse número até a origem**.
@@ -91,9 +89,9 @@ $$
 \qquad\text{para todo }x\in\mathbb{R}.
 $$
 
-![](../images/imagem1-modulo1_3.svg){fig-align="center" width="100%" fig-cap="Interpretação geométrica do valor absoluto como distância até a origem."}
+![Distâncias de −2,5 e 3 até a origem.](../images/imagem1-modulo1_3.svg){fig-align="center" width="100%"}
 
----
+Mais geralmente, $|x-c|$ mede a distância entre $x$ e $c$ na reta real.
 
 # 🧱 Propriedades do Módulo
 
@@ -174,7 +172,7 @@ $$
 
 **(3) Módulo de um quociente**
 
-Para $y\neq 0$, aplicando a propriedade do produto ao número $x/y$, temos
+Para $y\neq 0$, temos $x=(x/y)y$. Pela propriedade do produto, $|x|=|x/y|\,|y|$. Dividindo por $|y|>0$, obtemos
 
 $$
 \left|\frac{x}{y}\right|
@@ -276,115 +274,6 @@ $$
 
 :::
 
----
-
-## 📌 Equivalências úteis para inequações modulares
-
-Se $a\geq 0$, valem as seguintes equivalências:
-
-- **Módulo menor que:**
-
-  $$
-  |x|<a
-  \iff
-  -a<x<a.
-  $$
-
-- **Módulo menor ou igual:**
-
-  $$
-  |x|\leq a
-  \iff
-  -a\leq x\leq a.
-  $$
-
-- **Módulo maior que:**
-
-  $$
-  |x|>a
-  \iff
-  x<-a\quad\text{ou}\quad x>a.
-  $$
-
-- **Módulo maior ou igual:**
-
-  $$
-  |x|\geq a
-  \iff
-  x\leq -a\quad\text{ou}\quad x\geq a.
-  $$
-
-De maneira mais geral, para $r\geq 0$:
-
-$$
-|x-c|<r
-\iff
-c-r<x<c+r.
-$$
-
-Essa última equivalência descreve um intervalo aberto centrado em $c$, com raio $r$.
-
----
-
-# ✅ Exemplos Resolvidos
-
-::: {.callout-note title="🧮 Exemplo 1"}
-
-Resolva a equação
-
-$$
-|x|=3.
-$$
-
-::: {.callout-note collapse="true" title="Resolução"}
-
-Pela definição do módulo, temos dois casos:
-
-- Se $x\geq 0$, então $|x|=x=3$, de onde $x=3$.
-- Se $x<0$, então $|x|=-x=3$, de onde $x=-3$.
-
-Portanto, o conjunto solução é
-
-$$
-\boxed{S=\{-3,3\}}.
-$$
-
-:::
-:::
-
----
-
-::: {.callout-note title="🧮 Exemplo 2"}
-
-Resolva a inequação
-
-$$
-|x-2|<5.
-$$
-
-::: {.callout-note collapse="true" title="Resolução"}
-
-Aplicando a equivalência para módulo menor que:
-
-$$
-\begin{aligned}
-|x-2|<5
-&\iff -5<x-2<5\\
-&\iff -3<x<7.
-\end{aligned}
-$$
-
-Portanto, o conjunto solução é
-
-$$
-\boxed{S=(-3,7)}.
-$$
-
-:::
-:::
-
----
-
 # ⚖️ Inequações Modulares
 
 ::: {.callout-note title="📖 Definição"}
@@ -399,51 +288,20 @@ $$
 |f(x)|\geq a.
 $$
 
-As equivalências fundamentais apresentadas a seguir pressupõem $a\geq 0$.
+Para cada $x$ do domínio de $f$, as equivalências abaixo pressupõem $a\geq 0$.
 
 :::
 
----
-
 ## 🔎 Os quatro casos básicos
 
-Para $a\geq 0$, temos:
+Para $a\geq 0$ e $x$ no domínio de $f$, valem as equivalências abaixo. Tomando $f(x)=x$, recuperamos os casos para $|x|$.
 
-**Caso 1 — menor que**
-
-$$
-|f(x)|<a
-\iff
--a<f(x)<a.
-$$
-
-**Caso 2 — menor ou igual**
-
-$$
-|f(x)|\leq a
-\iff
--a\leq f(x)\leq a.
-$$
-
-**Caso 3 — maior que**
-
-$$
-|f(x)|>a
-\iff
-f(x)<-a
-\quad\text{ou}\quad
-f(x)>a.
-$$
-
-**Caso 4 — maior ou igual**
-
-$$
-|f(x)|\geq a
-\iff
-f(x)\leq -a
-\quad\text{ou}\quad
-f(x)\geq a.
-$$
+| Inequação | Condição equivalente |
+|:---|:---|
+| $\lvert f(x)\rvert<a$ | $-a<f(x)<a$ |
+| $\lvert f(x)\rvert\leq a$ | $-a\leq f(x)\leq a$ |
+| $\lvert f(x)\rvert>a$ | $f(x)<-a$ ou $f(x)>a$ |
+| $\lvert f(x)\rvert\geq a$ | $f(x)\leq -a$ ou $f(x)\geq a$ |
 
 ::: {.callout-tip title="🚧 Casos-limite com $a=0$"}
 
@@ -455,8 +313,6 @@ Quando $a=0$, as equivalências assumem formas particulares:
 - $|f(x)|\geq 0$: é **sempre verdadeira**, para todo $x$ do domínio de $f$.
 
 :::
-
----
 
 ## 🎯 Formas centradas
 
@@ -494,11 +350,51 @@ Para $|x-c|$ e $r\geq 0$, temos:
   x\leq c-r\quad\text{ou}\quad x\geq c+r.
   $$
 
+Quando $r=0$, a condição estrita $|x-c|<0$ dá o conjunto vazio. Já $|x-c|\leq 0$ tem apenas a solução $x=c$.
+
+# ✅ Exemplos Resolvidos
+
+## Equação modular
+
+:::: {.callout-note title="🧮 Exemplo 1"}
+
+Resolva a equação
+
+$$
+|x|=3.
+$$
+
+::: {.callout-note collapse="true" title="Resolução"}
+
+Pela definição do módulo, temos dois casos:
+
+- Se $x\geq 0$, então $|x|=x=3$, de onde $x=3$.
+- Se $x<0$, então $|x|=-x=3$, de onde $x=-3$.
+
+Portanto, o conjunto solução é
+
+$$
+\boxed{S=\{-3,3\}}.
+$$
+
+:::
+::::
+
 ---
 
-## ⚙️ Microexemplos
+## Intervalo aberto {#exemplo-intervalo-aberto}
 
-**Exemplo 1**
+:::: {.callout-note title="🧮 Exemplo 2"}
+
+Resolva a inequação
+
+$$
+|x-2|<5.
+$$
+
+::: {.callout-note collapse="true" title="Resolução"}
+
+Aplicando a equivalência para módulo menor que:
 
 $$
 \begin{aligned}
@@ -508,7 +404,20 @@ $$
 \end{aligned}
 $$
 
-**Exemplo 2**
+Portanto, o conjunto solução é
+
+$$
+\boxed{S=(-3,7)}.
+$$
+
+:::
+::::
+
+## ⚙️ Microexemplos
+
+O [exemplo do intervalo aberto](#exemplo-intervalo-aberto) reúne os passos para resolver $|x-2|<5$.
+
+### Região exterior
 
 $$
 \begin{aligned}
@@ -530,8 +439,6 @@ Logo,
 $$
 \boxed{S=(-\infty,-2]\cup[1,+\infty)}.
 $$
-
----
 
 # 🧪 Exercícios Propostos
 
@@ -656,8 +563,6 @@ A desigualdade triangular é satisfeita.
 
 :::
 
----
-
 ## 🧩 Quiz — Valor Absoluto e Inequações Modulares
 
 :::::{.question}
@@ -725,6 +630,8 @@ $|xy|=|x|+|y|$ para todos os reais.
 # 🔗 Navegação
 
 ↩️ **Voltar à aula de origem:** [1.3 Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
+
+🧭 [**Exercícios da Revisão Geral**](1.17-revisao-geral-do-modulo-1.qmd#exercícios-propostos)
 
 ▶️ **Continuar a sequência principal:** [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd)
 

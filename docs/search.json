@@ -9576,39 +9576,46 @@
     "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🔬 AP anterior: 1.18-AP — Conjuntos Numéricos"
   },
   {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#equivalências-úteis-para-inequações-modulares",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#equivalências-úteis-para-inequações-modulares",
-    "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
-    "section": "3.1 📌 Equivalências úteis para inequações modulares",
-    "text": "3.1 📌 Equivalências úteis para inequações modulares\nSe \\(a\\ge0\\), valem:\n\n\\(|x|&lt;a \\iff -a&lt;x&lt;a\\).\n\n\\(|x|\\le a \\iff -a\\le x\\le a\\).\n\n\\(|x|&gt;a \\iff x&lt;-a \\ \\text{ou}\\ x&gt;a\\).\n\n\\(|x|\\ge a \\iff x\\le -a \\ \\text{ou}\\ x\\ge a\\).\n\n\\(|x-c|&lt;r \\iff c-r&lt;x&lt;c+r\\) (intervalo aberto de raio \\(r\\) centrado em \\(c\\))."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#quebra-por-casos-básicos-com-age0",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#quebra-por-casos-básicos-com-age0",
-    "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
-    "section": "5.1 🔎 Quebra por casos básicos (com \\(a\\ge0\\))",
-    "text": "5.1 🔎 Quebra por casos básicos (com \\(a\\ge0\\))\n\nCaso 1 — menor que\n\\[\n|f(x)|&lt;a \\iff -a&lt;f(x)&lt;a.\n\\]\nCaso 2 — menor ou igual\n\\[\n|f(x)|\\le a \\iff -a\\le f(x)\\le a.\n\\]\nCaso 3 — maior que\n\\[\n|f(x)|&gt;a \\iff f(x)&lt;-a \\ \\ \\text{ou}\\ \\ f(x)&gt;a.\n\\]\nCaso 4 — maior ou igual\n\\[\n|f(x)|\\ge a \\iff f(x)\\le -a \\ \\ \\text{ou}\\ \\ f(x)\\ge a.\n\\]\n\n\n\n\n\n\n\nDica🚧 Casos-limite com (a=0)\n\n\n\n\n\\(|f(x)|&lt;0\\): sem solução.\n\n\\(|f(x)|\\le0\\): equivale a \\(f(x)=0\\).\n\n\\(|f(x)|&gt;0\\): equivale a \\(f(x)\\ne0\\).\n\n\\(|f(x)|\\ge0\\): sempre verdadeira (para todo \\(x\\))."
-  },
-  {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#formas-centradas",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#formas-centradas",
     "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
-    "section": "5.2 🎯 Formas centradas",
-    "text": "5.2 🎯 Formas centradas\nPara \\(|x-c| \\ \\{&lt;,\\le,&gt;,\\ge\\}\\ r\\) com \\(r\\ge0\\):\n\n\\(|x-c|&lt;r \\iff c-r&lt;x&lt;c+r\\) (intervalo aberto)\n\n\\(|x-c|\\le r \\iff c-r\\le x\\le c+r\\) (intervalo fechado)\n\n\\(|x-c|&gt;r \\iff x&lt;c-r \\ \\text{ou}\\ x&gt;c+r\\) (fora do intervalo)\n\n\\(|x-c|\\ge r \\iff x\\le c-r \\ \\text{ou}\\ x\\ge c+r\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#micro-exemplos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#micro-exemplos",
-    "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
-    "section": "5.3 ⚙️ Micro-exemplos",
-    "text": "5.3 ⚙️ Micro-exemplos\n\n\\(|x-2|&lt;5 \\iff -5&lt;x-2&lt;5 \\iff -3&lt;x&lt;7\\).\n\n\\(|2x+1|\\ge3 \\iff 2x+1\\le-3\\ \\text{ou}\\ 2x+1\\ge3 \\iff x\\le-2\\ \\text{ou}\\ x\\ge1\\)."
+    "section": "4.2 🎯 Formas centradas",
+    "text": "4.2 🎯 Formas centradas\nPara \\(|x-c|\\) e \\(r\\geq 0\\), temos:\n\nIntervalo aberto:\n\\[\n|x-c|&lt;r\n\\iff\nc-r&lt;x&lt;c+r.\n\\]\nIntervalo fechado:\n\\[\n|x-c|\\leq r\n\\iff\nc-r\\leq x\\leq c+r.\n\\]\nRegião exterior ao intervalo:\n\\[\n|x-c|&gt;r\n\\iff\nx&lt;c-r\\quad\\text{ou}\\quad x&gt;c+r.\n\\]\nRegião exterior, incluindo as extremidades:\n\\[\n|x-c|\\geq r\n\\iff\nx\\leq c-r\\quad\\text{ou}\\quad x\\geq c+r.\n\\]\n\nQuando \\(r=0\\), a condição estrita \\(|x-c|&lt;0\\) dá o conjunto vazio. Já \\(|x-c|\\leq 0\\) tem apenas a solução \\(x=c\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#quiz-valor-absoluto-e-inequações-modulares",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#quiz-valor-absoluto-e-inequações-modulares",
     "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
     "section": "6.1 🧩 Quiz — Valor Absoluto e Inequações Modulares",
-    "text": "6.1 🧩 Quiz — Valor Absoluto e Inequações Modulares\n\nQ1. Geometricamente, \\(|x-a|\\) representa:\n\n\n\n\n ✓A distância entre \\(x\\) e \\(a\\) na reta real.\n\n\n ✗A soma algébrica entre \\(x\\) e \\(a\\).\n\n\n ✗O produto entre \\(x\\) e \\(a\\).\n\n\n\n\n\n\nQ2. Para \\(r\\ge0\\), a inequação \\(|x-a|&lt;r\\) é equivalente a:\n\n\n\n\n ✗\\(x&lt;a-r\\) ou \\(x&gt;a+r\\).\n\n\n ✗\\(x=a+r\\) apenas.\n\n\n ✓\\(a-r&lt;x&lt;a+r\\).\n\n\n\n\n\n\nQ3. A desigualdade triangular afirma que:\n\n\n\n\n ✓\\(|x+y|\\le |x|+|y|\\).\n\n\n ✗\\(|x+y|=|x|-|y|\\) para todos os reais.\n\n\n ✗\\(|xy|=|x|+|y|\\) para todos os reais."
+    "text": "6.1 🧩 Quiz — Valor Absoluto e Inequações Modulares\n\nQ1. Geometricamente, \\(|x-a|\\) representa:\n\n\n\n\n ✓A distância entre \\(x\\) e \\(a\\) na reta real.\n\n\n ✗A soma algébrica entre \\(x\\) e \\(a\\).\n\n\n ✗O produto entre \\(x\\) e \\(a\\).\n\n\n\n\n\n\nQ2. Para \\(r\\geq 0\\), a inequação \\(|x-a|&lt;r\\) é equivalente a:\n\n\n\n\n ✗\\(x&lt;a-r\\) ou \\(x&gt;a+r\\).\n\n\n ✗\\(x=a+r\\) apenas.\n\n\n ✓\\(a-r&lt;x&lt;a+r\\).\n\n\n\n\n\n\nQ3. A desigualdade triangular afirma que:\n\n\n\n\n ✓\\(|x+y|\\leq |x|+|y|\\).\n\n\n ✗\\(|x+y|=|x|-|y|\\) para todos os reais.\n\n\n ✗\\(|xy|=|x|+|y|\\) para todos os reais."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#os-quatro-casos-básicos",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#os-quatro-casos-básicos",
+    "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
+    "section": "4.1 🔎 Os quatro casos básicos",
+    "text": "4.1 🔎 Os quatro casos básicos\nPara \\(a\\geq 0\\) e \\(x\\) no domínio de \\(f\\), valem as equivalências abaixo. Tomando \\(f(x)=x\\), recuperamos os casos para \\(|x|\\).\n\n\n\nInequação\nCondição equivalente\n\n\n\n\n\\(\\lvert f(x)\\rvert&lt;a\\)\n\\(-a&lt;f(x)&lt;a\\)\n\n\n\\(\\lvert f(x)\\rvert\\leq a\\)\n\\(-a\\leq f(x)\\leq a\\)\n\n\n\\(\\lvert f(x)\\rvert&gt;a\\)\n\\(f(x)&lt;-a\\) ou \\(f(x)&gt;a\\)\n\n\n\\(\\lvert f(x)\\rvert\\geq a\\)\n\\(f(x)\\leq -a\\) ou \\(f(x)\\geq a\\)\n\n\n\n\n\n\n\n\n\nDica🚧 Casos-limite com \\(a=0\\)\n\n\n\nQuando \\(a=0\\), as equivalências assumem formas particulares:\n\n\\(|f(x)|&lt;0\\): não possui solução, pois o módulo nunca é negativo.\n\\(|f(x)|\\leq 0\\): equivale a \\(f(x)=0\\).\n\\(|f(x)|&gt;0\\): equivale a \\(f(x)\\neq 0\\).\n\\(|f(x)|\\geq 0\\): é sempre verdadeira, para todo \\(x\\) do domínio de \\(f\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#equação-modular",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#equação-modular",
+    "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
+    "section": "5.1 Equação modular",
+    "text": "5.1 Equação modular\n\n\n\n\n\n\nNota🧮 Exemplo 1\n\n\n\nResolva a equação\n\\[\n|x|=3.\n\\]\n\n\n\n\n\n\nNotaResolução\n\n\n\n\n\nPela definição do módulo, temos dois casos:\n\nSe \\(x\\geq 0\\), então \\(|x|=x=3\\), de onde \\(x=3\\).\nSe \\(x&lt;0\\), então \\(|x|=-x=3\\), de onde \\(x=-3\\).\n\nPortanto, o conjunto solução é\n\\[\n\\boxed{S=\\{-3,3\\}}.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#exemplo-intervalo-aberto",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#exemplo-intervalo-aberto",
+    "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
+    "section": "5.2 Intervalo aberto",
+    "text": "5.2 Intervalo aberto\n\n\n\n\n\n\nNota🧮 Exemplo 2\n\n\n\nResolva a inequação\n\\[\n|x-2|&lt;5.\n\\]\n\n\n\n\n\n\nNotaResolução\n\n\n\n\n\nAplicando a equivalência para módulo menor que:\n\\[\n\\begin{aligned}\n|x-2|&lt;5\n&\\iff -5&lt;x-2&lt;5\\\\\n&\\iff -3&lt;x&lt;7.\n\\end{aligned}\n\\]\nPortanto, o conjunto solução é\n\\[\n\\boxed{S=(-3,7)}.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#microexemplos",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html#microexemplos",
+    "title": "📘 Módulo 1.19-AP: Valor Absoluto e Inequações Modulares",
+    "section": "5.3 ⚙️ Microexemplos",
+    "text": "5.3 ⚙️ Microexemplos\nO exemplo do intervalo aberto reúne os passos para resolver \\(|x-2|&lt;5\\).\n\n5.3.1 Região exterior\n\\[\n\\begin{aligned}\n|2x+1|\\geq 3\n&\\iff 2x+1\\leq -3\n   \\quad\\text{ou}\\quad\n   2x+1\\geq 3\\\\\n&\\iff 2x\\leq -4\n   \\quad\\text{ou}\\quad\n   2x\\geq 2\\\\\n&\\iff x\\leq -2\n   \\quad\\text{ou}\\quad\n   x\\geq 1.\n\\end{aligned}\n\\]\nLogo,\n\\[\n\\boxed{S=(-\\infty,-2]\\cup[1,+\\infty)}.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/index.html",
