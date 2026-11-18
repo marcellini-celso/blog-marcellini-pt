@@ -83,6 +83,12 @@ Nesta aula, vamos integrar esses conhecimentos, destacando as relações entre e
 
 ***
 
+::: {.callout-tip title="🧭 Como usar esta revisão"}
+
+Consulte o mapa conceitual para localizar cada tema. Resolva os exercícios e use os links de revisão quando precisar retomar um conceito. Os links das caixas **Para retomar** abrem em uma nova aba. Depois de conferir o gabarito, refaça o item que apresentou dificuldade.
+
+:::
+
 ## 🧭 O papel do Módulo 1 na construção do Cálculo
 
 O Cálculo não começa com a aplicação de fórmulas de derivação ou integração.
@@ -832,25 +838,9 @@ Essas ideias serão formalizadas por meio dos limites no próximo módulo.
 
 O percurso desenvolvido neste módulo pode ser sintetizado da seguinte maneira:
 
-```text
-Números reais
-     ↓
-Intervalos e inequações
-     ↓
-Domínios de funções
-     ↓
-Famílias de funções elementares
-     ↓
-Gráficos e transformações
-     ↓
-Composição e inversas
-     ↓
-Modelagem matemática
-     ↓
-Crescimento e comportamento assintótico
-     ↓
-Limites
-```
+1. **Fundamentos algébricos.** Os números reais, intervalos e inequações permitem descrever os domínios.
+2. **Funções.** Com o domínio definido, podemos reconhecer famílias de funções, ler seus gráficos, aplicar transformações, compor e inverter funções.
+3. **Modelagem e limites.** A modelagem dá significado às variáveis. O estudo do crescimento e do comportamento assintótico levanta as perguntas que serão tratadas com limites.
 
 O mapa evidencia que o estudo dos limites não aparece isoladamente. Ele se apoia em conhecimentos algébricos, funcionais e gráficos desenvolvidos ao longo do módulo.
 
@@ -885,6 +875,14 @@ A meta não é memorizar isoladamente todas as fórmulas, mas compreender as rel
 
 ***
 
+::: {.callout-tip title="▶ Vídeo comentado"}
+
+**[Assista ao vídeo Por que o gráfico tem um ponto aberto?](https://trilhas-da-matematica-content.s3.us-east-1.amazonaws.com/calculo-diferencial-integral/pre-calculo-essencial/videos/por-que-o-grafico-tem-um-ponto-aberto.mp4)** (duração: 82 s)
+
+Veja como a fatoração preserva a restrição de domínio e acompanhe os valores da função dos dois lados de $x=3$.
+
+:::
+
 ::: {.callout-note title="🌉 Ponte para o Cálculo"}
 
 O Módulo 1 desenvolveu a linguagem matemática necessária para estudar funções.
@@ -897,7 +895,9 @@ Agora podemos formular perguntas mais profundas:
 - Como investigar situações em que a função cresce sem limite?
 - Como determinar a taxa de variação instantânea?
 
-Essas perguntas nos conduzem ao estudo dos **limites**.
+No exercício integrador, a função $f(x)=(x^2-9)/(x-3)$ dá $f(2{,}99)=5{,}99$ e $f(3{,}01)=6{,}01$. À medida que $x$ fica mais perto de $3$, os valores de $f(x)$ ficam mais perto de $6$, mesmo com $3$ fora do domínio.
+
+**Como descrever o valor de que $f(x)$ se aproxima quando $x$ chega perto de $3$?** Essa pergunta nos conduz ao estudo dos **limites**.
 
 Os limites permitirão desenvolver formalmente as ideias de continuidade e derivada e, posteriormente, compreender a integral.
 
@@ -907,11 +907,17 @@ Os limites permitirão desenvolver formalmente as ideias de continuidade e deriv
 
 # 🧪 Exercícios propostos
 
-::: {.callout-note title="📝 Exercícios de revisão"}
+:::: {.callout-note title="📝 Exercícios de revisão"}
 
 Os exercícios a seguir retomam os principais conhecimentos do Módulo 1. Procure resolver cada questão antes de consultar o gabarito comentado.
 
 ## 🧪 Exercício 1 — Domínio de funções
+
+::: {.callout-tip appearance="minimal" title="Para retomar"}
+
+[**Conceito Formal de Função**](1.10-conceito-formal-de-funcao.qmd){target="_blank" rel="noopener"} e [**Domínio de Funções: Guia Completo**](1.21-AP-dominio-de-funcoes-guia-completo.qmd){target="_blank" rel="noopener"}.
+
+:::
 
 Determine o domínio das funções:
 
@@ -924,6 +930,12 @@ c) $h(x)=\ln(x-1)$
 d) $p(x)=\dfrac{x+1}{x^2-4}$
 
 ## 🧪 Exercício 2 — Análise de uma função quadrática
+
+::: {.callout-tip appearance="minimal" title="Para retomar"}
+
+[**Revisão Gráfica e Algébrica**](1.11-revisao-grafica-e-algebrica.qmd){target="_blank" rel="noopener"} e [**Funções Polinomiais e Racionais**](1.7-funcoes-polinomiais-e-racionais.qmd){target="_blank" rel="noopener"}.
+
+:::
 
 Considere:
 
@@ -942,6 +954,12 @@ c) Os intervalos nos quais a função é positiva.
 d) Os intervalos nos quais a função é negativa.
 
 ## 🧪 Exercício 3 — Composição de funções
+
+::: {.callout-tip appearance="minimal" title="Para retomar"}
+
+[**Composição de Funções**](1.13-composicao-de-funcoes.qmd){target="_blank" rel="noopener"}.
+
+:::
 
 Considere:
 
@@ -967,6 +985,12 @@ d) $(g\circ f)(1)$.
 
 ## 🧪 Exercício 4 — Função inversa
 
+::: {.callout-tip appearance="minimal" title="Para retomar"}
+
+[**Função Inversa**](1.14-funcao-inversa.qmd){target="_blank" rel="noopener"}.
+
+:::
+
 Determine a função inversa de:
 
 $$
@@ -986,6 +1010,12 @@ f(f^{-1}(x)).
 $$
 
 ## 🧪 Exercício 5 — Classificação de funções
+
+::: {.callout-tip appearance="minimal" title="Para retomar"}
+
+[**Funções Elementares**](1.6-funcoes-elementares.qmd){target="_blank" rel="noopener"} e [**Crescimento e Comportamento Assintótico**](1.16-crescimento-e-comportamento-assintotico.qmd){target="_blank" rel="noopener"}.
+
+:::
 
 Classifique cada função de acordo com sua família:
 
@@ -1009,7 +1039,21 @@ Utilize as classificações:
 
 Identifique também a assíntota horizontal da função do item d), se existir.
 
+## 🧪 Exercício 6 — Domínio, fatoração e gráfico
+
+::: {.callout-tip appearance="minimal" title="Para retomar"}
+
+[**Intervalos e Inequações**](1.3-intervalos-inequacoes.qmd){target="_blank" rel="noopener"}, [**Funções Polinomiais e Racionais**](1.7-funcoes-polinomiais-e-racionais.qmd){target="_blank" rel="noopener"} e [**Revisão Gráfica e Algébrica**](1.11-revisao-grafica-e-algebrica.qmd){target="_blank" rel="noopener"}.
+
 :::
+
+Considere $f(x)=\dfrac{x^2-9}{x-3}$.
+
+a) Determine o domínio de $f$.
+b) Fatore o numerador e simplifique a expressão, mantendo a restrição do domínio.
+c) Esboce o gráfico. Que ponto da reta obtida precisa ser marcado com um círculo aberto?
+
+::::
 
 ***
 
@@ -1311,6 +1355,50 @@ $$
 
 **e)** $\sin x$: função trigonométrica periódica.
 
+## 🧪 Exercício 6 — Domínio, fatoração e gráfico
+
+a) O denominador se anula em $x=3$. Assim, $D_f=\mathbb{R}\setminus\{3\}$.
+b) Para $x\ne3$, vale
+
+$$
+f(x)=\frac{(x-3)(x+3)}{x-3}=x+3.
+$$
+
+c) O gráfico acompanha a reta $y=x+3$ com um ponto aberto em $(3,6)$. A restrição $x\ne3$ continua valendo após o cancelamento.
+
+![Reta $y=x+3$ com um ponto aberto em $(3,6)$.](images/1.17-ponto-aberto.svg){#fig-1-17-ponto-aberto fig-alt="Reta crescente com um círculo aberto em x igual a 3 e y igual a 6." width="80%"}
+
+:::
+
+::: {.callout-note collapse="true" title="Clique para ver o código Python"}
+
+```{python}
+from pathlib import Path
+import numpy as np
+import matplotlib.pyplot as plt
+
+azul = "#196399"
+grade = "#DCE5EF"
+fig, ax = plt.subplots(figsize=(7.2, 4.55), layout="constrained")
+x = np.linspace(0, 6, 400)
+ax.plot(x, x + 3, color=azul, linewidth=2.4,
+        label=r"$f(x)=x+3$ para $x\ne 3$")
+ax.scatter([3], [6], s=106, facecolors="white",
+           edgecolors=azul, linewidths=2.1, zorder=5)
+ax.plot([3, 3], [2.5, 5.92], color="#8395A8", linewidth=1, linestyle="--")
+ax.plot([0, 2.92], [6, 6], color="#8395A8", linewidth=1, linestyle="--")
+ax.annotate(r"$(3,6)$", (3, 6), xytext=(9, -26),
+            textcoords="offset points", color=azul, fontsize=12)
+ax.set(xlim=(0, 6), ylim=(2.5, 9.5), xticks=np.arange(7),
+       yticks=np.arange(3, 10), xlabel="$x$", ylabel="$f(x)$")
+ax.set_axisbelow(True)
+ax.grid(color=grade)
+ax.legend(loc="upper left", frameon=False)
+Path("images").mkdir(exist_ok=True)
+fig.savefig("images/1.17-ponto-aberto.svg", bbox_inches="tight")
+plt.close(fig)
+```
+
 :::
 
 ***
@@ -1433,12 +1521,12 @@ Essas leituras não são obrigatórias para concluir a revisão. Você pode real
 
 | Aprofundamento opcional | Aula principal relacionada |
 |---|---|
-| [1.18-AP — Conjuntos Numéricos](1.18-AP-conjuntos.qmd) | [1.2 Conjuntos Numéricos](1.2-conjuntos.qmd) |
-| [1.19-AP — Valor Absoluto e Inequações Modulares](1.19-AP-valor-absoluto.qmd) | [1.3 Intervalos e Inequações](1.3-intervalos-inequacoes.qmd) |
-| [1.20-AP — Valor Absoluto, Distância e Vizinhanças](1.20-AP-valor-absoluto-distancia-vizinhancas.qmd) | [1.4 Números Reais e Intervalos](1.4-numeros-reais-e-intervalos.qmd) |
-| [1.21-AP — Domínio de Funções: Guia Completo](1.21-AP-dominio-de-funcoes-guia-completo.qmd) | [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd) |
-| [1.22-AP — Funções por Partes](1.22-AP-funcoes-por-partes.qmd) | [1.10 Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd) |
-| [1.23-AP — Assíntotas e Comportamento no Infinito](1.23-AP-assintotas-e-comportamento-no-infinito.qmd) | [1.16 Crescimento e Comportamento Assintótico](1.16-crescimento-e-comportamento-assintotico.qmd) |
+| [**1.18-AP — Conjuntos Numéricos**](1.18-AP-conjuntos.qmd) | [**1.2 Conjuntos Numéricos**](1.2-conjuntos.qmd) |
+| [**1.19-AP — Valor Absoluto e Inequações Modulares**](1.19-AP-valor-absoluto.qmd) | [**1.3 Intervalos e Inequações**](1.3-intervalos-inequacoes.qmd) |
+| [**1.20-AP — Valor Absoluto, Distância e Vizinhanças**](1.20-AP-valor-absoluto-distancia-vizinhancas.qmd) | [**1.4 Números Reais e Intervalos**](1.4-numeros-reais-e-intervalos.qmd) |
+| [**1.21-AP — Domínio de Funções: Guia Completo**](1.21-AP-dominio-de-funcoes-guia-completo.qmd) | [**1.10 Conceito Formal de Função**](1.10-conceito-formal-de-funcao.qmd) |
+| [**1.22-AP — Funções por Partes**](1.22-AP-funcoes-por-partes.qmd) | [**1.10 Conceito Formal de Função**](1.10-conceito-formal-de-funcao.qmd) |
+| [**1.23-AP — Assíntotas e Comportamento no Infinito**](1.23-AP-assintotas-e-comportamento-no-infinito.qmd) | [**1.16 Crescimento e Comportamento Assintótico**](1.16-crescimento-e-comportamento-assintotico.qmd) |
 
 ::: {.callout-tip title="📌 Como utilizar os aprofundamentos"}
 

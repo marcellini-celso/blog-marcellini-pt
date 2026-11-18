@@ -9216,210 +9216,84 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "",
-    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Post Anterior: 👉 1.16 Crescimento e Comportamento Assintótico"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#o-papel-do-módulo-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#o-papel-do-módulo-1",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.1 🧭 O papel do Módulo 1",
-    "text": "1.1 🧭 O papel do Módulo 1\nO Cálculo não começa com derivadas.\nAntes de falar em derivada, precisamos entender função.\nAntes de falar em limite, precisamos entender comportamento.\nAntes de falar em continuidade, precisamos entender domínio, gráfico e proximidade.\nAntes de falar em integral, precisamos entender área, variação e acumulação.\nPor isso, o Módulo 1 funciona como uma base.\nEle não é uma revisão decorativa. Ele é a fundação conceitual do curso.\n\n\n\n\n\n\nNotaIdeia central\n\n\n\nO Cálculo estuda variação, aproximação e acumulação. Para isso, precisamos dominar a linguagem das funções."
+    "text": "🏠 ← Sumário do Curso · ← Cursos de Matemática · ← Seção de Matemática\n🎯 Aula anterior: 👉 1.16 Crescimento e Comportamento Assintótico"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#conjuntos-e-números-reais",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#conjuntos-e-números-reais",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.2 🔢 Conjuntos e números reais",
-    "text": "1.2 🔢 Conjuntos e números reais\nO curso começou revisando conjuntos e números reais.\nA linguagem de conjuntos permite organizar objetos matemáticos e escrever afirmações com precisão.\nVimos ideias como:\n\\[\nx\\in A,\n\\]\n\\[\nA\\subseteq B,\n\\]\nunião,\n\\[\nA\\cup B,\n\\]\ninterseção,\n\\[\nA\\cap B,\n\\]\ne diferença,\n\\[\nA\\setminus B.\n\\]\nTambém revisamos os principais conjuntos numéricos:\n\\[\n\\mathbb{N},\\quad \\mathbb{Z},\\quad \\mathbb{Q},\\quad \\mathbb{R}.\n\\]\nNo Cálculo de uma variável real, trabalhamos principalmente com funções definidas em subconjuntos de \\(\\mathbb{R}\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#intervalos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#intervalos",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.3 📏 Intervalos",
-    "text": "1.3 📏 Intervalos\nIntervalos são subconjuntos especiais da reta real.\nEles aparecem o tempo todo no Cálculo.\nPor exemplo:\n\\[\n(a,b),\n\\]\n\\[\n[a,b],\n\\]\n\\[\n(a,b],\n\\]\n\\[\n[a,+\\infty).\n\\]\nIntervalos ajudam a descrever domínios, soluções de inequações, regiões de crescimento, intervalos de continuidade e intervalos de integração.\nQuando dizemos que uma função é contínua em\n\\[\n[a,b],\n\\]\nou que uma integral é calculada de\n\\[\na\n\\]\naté\n\\[\nb,\n\\]\nestamos usando a linguagem dos intervalos."
+    "text": "1.2 🔢 Conjuntos e números reais\nOs conjuntos numéricos fornecem o universo no qual trabalhamos.\nOs principais conjuntos estudados são:\n\n\n\n\n\n\n\n\nConjunto\nSímbolo\nCaracterização\n\n\n\n\nNaturais\n\\(\\mathbb{N}\\)\nNúmeros naturais\n\n\nInteiros\n\\(\\mathbb{Z}\\)\nNaturais, seus opostos e o zero\n\n\nRacionais\n\\(\\mathbb{Q}\\)\nNúmeros que podem ser escritos como fração de inteiros\n\n\nReais\n\\(\\mathbb{R}\\)\nRacionais e irracionais\n\n\n\nA relação de inclusão entre esses conjuntos pode ser representada por:\n\\[\n\\mathbb{N}\\subseteq\\mathbb{Z}\n\\subseteq\\mathbb{Q}\\subseteq\\mathbb{R}.\n\\]\nOs números irracionais pertencem a \\(\\mathbb{R}\\), mas não a \\(\\mathbb{Q}\\).\nEntre eles estão números importantes como:\n\\[\n\\sqrt{2},\\qquad \\pi,\\qquad e.\n\\]\n\n1.2.1 Operações com conjuntos\nSejam \\(A\\) e \\(B\\) dois conjuntos.\nPodemos destacar:\n\nUnião: \\(A\\cup B\\).\nInterseção: \\(A\\cap B\\).\nDiferença: \\(A\\setminus B\\).\nInclusão: \\(A\\subseteq B\\).\nPertinência: \\(x\\in A\\).\n\nEssas operações são importantes para descrever conjuntos de soluções, domínios e outras regiões do conjunto dos números reais.\nNo Cálculo de uma variável real, trabalharemos frequentemente com funções definidas em subconjuntos de \\(\\mathbb{R}\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#equações-e-inequações",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#equações-e-inequações",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.4 🧮 Equações e inequações",
-    "text": "1.4 🧮 Equações e inequações\nEquações e inequações aparecem em praticamente todas as etapas do Cálculo.\nUsamos equações para encontrar:\n\nzeros de funções;\npontos críticos;\ninterseções;\nsoluções de problemas;\npontos onde uma expressão muda de comportamento.\n\nUsamos inequações para determinar:\n\ndomínios;\nsinais;\nintervalos de validade;\nregiões onde uma função é positiva ou negativa.\n\nPor exemplo, para determinar o domínio de\n\\[\nf(x)=\\sqrt{x-3},\n\\]\nresolvemos a inequação\n\\[\nx-3\\geq 0.\n\\]\nLogo,\n\\[\nx\\geq 3.\n\\]\nAssim,\n\\[\nD_f=[3,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#valor-absoluto",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#valor-absoluto",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.5 📐 Valor absoluto",
-    "text": "1.5 📐 Valor absoluto\nO valor absoluto mede distância até zero.\nPara qualquer real \\(x\\),\n\\[\n|x|\\geq 0.\n\\]\nAlém disso,\n\\[\n|x|=\n\\begin{cases}\nx, & x\\geq 0,\\\\\n-x, & x&lt;0.\n\\end{cases}\n\\]\nEssa definição por partes é importante porque muitas funções no Cálculo também serão definidas por partes.\nO valor absoluto também aparece em desigualdades de distância:\n\\[\n|x-a|&lt;\\varepsilon\n\\]\nsignifica que \\(x\\) está a uma distância menor que \\(\\varepsilon\\) de \\(a\\).\nEssa ideia será essencial na definição formal de limite."
+    "text": "1.4 🧮 Equações e inequações\nEquações e inequações são ferramentas fundamentais para determinar conjuntos de valores que satisfazem determinadas condições.\nAs equações aparecem, por exemplo, na determinação de:\n\nZeros de funções.\nPontos de interseção entre gráficos.\nValores desconhecidos em modelos matemáticos.\nSoluções de problemas algébricos.\n\nAs inequações permitem identificar:\n\nRegiões nas quais uma função é positiva ou negativa.\nIntervalos de validade de determinadas expressões.\nRestrições de domínio.\nConjuntos de soluções de problemas.\n\n\n1.4.1 Exemplo: determinação de domínio\nConsidere a função:\n\\[\nf(x)=\\sqrt{x-3}.\n\\]\nPara que a raiz quadrada esteja definida no conjunto dos reais, precisamos exigir:\n\\[\nx-3\\geq 0.\n\\]\nResolvendo a inequação:\n\\[\nx\\geq 3.\n\\]\nPortanto, o domínio é:\n\\[\n\\boxed{D(f)=[3,+\\infty).}\n\\]\nEsse exemplo mostra como uma inequação pode determinar o domínio de uma função."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#funções-elementares",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#funções-elementares",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.6 🧩 Funções elementares",
-    "text": "1.6 🧩 Funções elementares\nRevisamos várias famílias de funções elementares.\nEntre elas:\n\nfunções afins;\nfunções quadráticas;\nfunções polinomiais;\nfunções racionais;\nfunções exponenciais;\nfunções logarítmicas;\nfunções trigonométricas.\n\nEssas funções são os blocos básicos do Cálculo.\nMuitas funções mais complexas são construídas a partir delas por soma, produto, quociente, composição e transformação.\nPor isso, reconhecer famílias de funções ajuda a prever comportamento."
+    "text": "1.6 🧩 Funções elementares\nDurante o módulo, estudamos diferentes famílias de funções.\nCada família possui características próprias, que podem ser identificadas por suas expressões algébricas e representações gráficas.\n\n\n\n\n\n\n\n\nFamília\nExemplo\nCaracterística\n\n\n\n\nAfim\n\\(f(x)=2x+1\\)\nGráfico em reta\n\n\nQuadrática\n\\(f(x)=x^2-4\\)\nGráfico parabólico\n\n\nPolinomial\n\\(f(x)=x^3-2x+1\\)\nExpressão formada por potências inteiras não negativas\n\n\nRacional\n\\(f(x)=\\frac{1}{x-1}\\)\nQuociente de polinômios\n\n\nExponencial\n\\(f(x)=2^x\\)\nVariável no expoente\n\n\nLogarítmica\n\\(f(x)=\\ln x\\)\nInversa de uma exponencial\n\n\nTrigonométrica\n\\(f(x)=\\sin x\\)\nComportamento periódico\n\n\n\nEssas funções também podem ser combinadas por operações algébricas, composições e transformações gráficas."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#funções-polinomiais-e-racionais",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#funções-polinomiais-e-racionais",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.7 🧩 Funções polinomiais e racionais",
-    "text": "1.7 🧩 Funções polinomiais e racionais\nFunções polinomiais têm a forma\n\\[\np(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_1x+a_0.\n\\]\nElas são definidas em todo \\(\\mathbb{R}\\).\nFunções racionais têm a forma\n\\[\nr(x)=\\frac{p(x)}{q(x)},\n\\]\ncom \\(q(x)\\neq 0\\).\nAs funções racionais exigem cuidado com o domínio, pois o denominador não pode ser zero.\nPor exemplo,\n\\[\nf(x)=\\frac{1}{x-2}\n\\]\ntem domínio\n\\[\n\\mathbb{R}\\setminus\\{2\\}.\n\\]\nEsse ponto excluído pode gerar uma assíntota vertical."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exponenciais-e-logaritmos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exponenciais-e-logaritmos",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.8 🚀 Exponenciais e logaritmos",
-    "text": "1.8 🚀 Exponenciais e logaritmos\nFunções exponenciais têm a forma\n\\[\nf(x)=a^x,\n\\]\ncom \\(a&gt;0\\) e \\(a\\neq 1\\).\nQuando \\(a&gt;1\\), a função cresce.\nQuando \\(0&lt;a&lt;1\\), a função decresce.\nFunções logarítmicas são inversas das exponenciais.\nEm especial,\n\\[\ne^x\n\\]\ne\n\\[\n\\ln x\n\\]\nsão funções inversas.\nTemos:\n\\[\n\\ln(e^x)=x\n\\]\ne\n\\[\ne^{\\ln x}=x,\n\\]\ncom \\(x&gt;0\\) na segunda igualdade.\nEssas funções serão centrais no estudo de derivadas e integrais."
+    "text": "1.7 🧩 Funções polinomiais e racionais\nUma função polinomial pode ser escrita na forma:\n\\[\np(x)=a_nx^n+a_{n-1}x^{n-1}\n+\\cdots+a_1x+a_0,\n\\]\nem que \\(a_n\\neq 0\\) e os coeficientes são números reais.\nSeu domínio é todo o conjunto dos números reais:\n\\[\nD(p)=\\mathbb{R}.\n\\]\nUma função racional é definida pelo quociente de dois polinômios:\n\\[\nr(x)=\\frac{p(x)}{q(x)},\n\\]\ncom a restrição:\n\\[\nq(x)\\neq 0.\n\\]\n\n1.7.1 Exemplo\nConsidere:\n\\[\nf(x)=\\frac{1}{x-2}.\n\\]\nO denominador não pode ser igual a zero. Assim:\n\\[\nx-2\\neq 0\n\\implies x\\neq 2.\n\\]\nLogo:\n\\[\n\\boxed{D(f)=\\mathbb{R}\\setminus\\{2\\}.}\n\\]\nA exclusão de um ponto do domínio pode estar relacionada a comportamentos especiais do gráfico, como uma assíntota vertical ou uma descontinuidade removível."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#trigonometria-essencial",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#trigonometria-essencial",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.9 🌊 Trigonometria essencial",
-    "text": "1.9 🌊 Trigonometria essencial\nA trigonometria entra no Cálculo por meio de funções como:\n\\[\n\\sin x,\\qquad \\cos x,\\qquad \\tan x.\n\\]\nO uso de radianos é fundamental.\nNo Cálculo, os ângulos devem ser medidos em radianos porque essa medida se conecta naturalmente ao comprimento de arco no círculo unitário.\nAlguns fatos importantes:\n\\[\n\\sin^2 x+\\cos^2 x=1,\n\\]\n\\[\n\\tan x=\\frac{\\sin x}{\\cos x},\n\\]\n\\[\n\\sin(x+2\\pi)=\\sin x,\n\\]\n\\[\n\\cos(x+2\\pi)=\\cos x.\n\\]\nAs funções trigonométricas serão indispensáveis em limites, derivadas, integrais, equações diferenciais e modelos periódicos."
+    "text": "1.9 🌊 Trigonometria essencial\nAs funções trigonométricas fundamentais incluem:\n\\[\n\\sin x,\\qquad \\cos x,\\qquad \\tan x.\n\\]\nElas aparecem em fenômenos periódicos, como oscilações, movimentos circulares e ondas.\nUma identidade fundamental é:\n\\[\n\\sin^2x+\\cos^2x=1.\n\\]\nQuando \\(\\cos x\\neq 0\\), também temos:\n\\[\n\\tan x=\\frac{\\sin x}{\\cos x}.\n\\]\nAs funções seno e cosseno são periódicas, com período \\(2\\pi\\):\n\\[\n\\sin(x+2\\pi)=\\sin x\n\\]\ne\n\\[\n\\cos(x+2\\pi)=\\cos x.\n\\]\n\n1.9.1 A importância dos radianos\nNo estudo do Cálculo, utilizamos frequentemente a medida de ângulos em radianos.\nEssa escolha não é apenas uma convenção. Ela permite estabelecer relações matemáticas especialmente simples entre funções trigonométricas e limites, que serão importantes no desenvolvimento posterior da teoria."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#definição-formal-de-função",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#definição-formal-de-função",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.10 📐 Definição formal de função",
-    "text": "1.10 📐 Definição formal de função\nUma função\n\\[\nf:A\\to B\n\\]\nassocia a cada elemento de \\(A\\) exatamente um elemento de \\(B\\).\nO conjunto \\(A\\) é o domínio.\nO conjunto \\(B\\) é o contradomínio.\nA imagem é o conjunto dos valores realmente atingidos por \\(f\\).\nEsses três conceitos precisam ser distinguidos:\n\n\n\nConceito\nSignificado\n\n\n\n\nDomínio\nentradas permitidas\n\n\nContradomínio\nconjunto declarado das saídas\n\n\nImagem\nvalores realmente assumidos\n\n\n\nNo Cálculo, o domínio é especialmente importante. Ele determina onde podemos falar de limite, continuidade, derivada e integral."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#leitura-gráfica-e-algébrica",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#leitura-gráfica-e-algébrica",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.11 🔎 Leitura gráfica e algébrica",
-    "text": "1.11 🔎 Leitura gráfica e algébrica\nUma função pode ser analisada por sua fórmula e por seu gráfico.\nA leitura algébrica ajuda a encontrar:\n\ndomínio;\nzeros;\nsinais;\nfatorações;\nsimplificações;\nrestrições.\n\nA leitura gráfica ajuda a visualizar:\n\ncrescimento;\ndecrescimento;\nmáximos;\nmínimos;\nburacos;\nsaltos;\nassíntotas;\nsimetrias.\n\nAs duas leituras devem ser usadas juntas.\nO Cálculo formaliza muitas percepções gráficas por meio de limites, derivadas e integrais."
+    "text": "1.10 📐 Definição formal de função\nUma função é uma relação que associa a cada elemento de um conjunto de partida exatamente um elemento de um conjunto de chegada.\nRepresentamos uma função por:\n\\[\nf:A\\to B.\n\\]\nNessa notação:\n\n\n\nConceito\nSignificado\n\n\n\n\nDomínio\nConjunto de partida \\(A\\)\n\n\nContradomínio\nConjunto de chegada \\(B\\)\n\n\nImagem\nConjunto dos valores efetivamente assumidos pela função\n\n\n\nA imagem é um subconjunto do contradomínio:\n\\[\n\\operatorname{Im}(f)\\subseteq B.\n\\]\n\n1.10.1 Exemplo\nConsidere:\n\\[\nf:\\mathbb{R}\\to\\mathbb{R},\n\\qquad f(x)=x^2.\n\\]\nO domínio é:\n\\[\nD(f)=\\mathbb{R}.\n\\]\nEntretanto, como o quadrado de um número real nunca é negativo, sua imagem é:\n\\[\n\\operatorname{Im}(f)=[0,+\\infty).\n\\]\nObserve que domínio, contradomínio e imagem são conceitos diferentes.\nO domínio merece atenção especial porque determina os valores para os quais podemos avaliar a função e investigar seu comportamento."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#transformações-gráficas",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#transformações-gráficas",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.12 🔄 Transformações gráficas",
-    "text": "1.12 🔄 Transformações gráficas\nTransformações gráficas permitem construir gráficos novos a partir de gráficos conhecidos.\nExemplos:\n\\[\nf(x)+k\n\\]\ndesloca o gráfico verticalmente.\n\\[\nf(x-h)\n\\]\ndesloca o gráfico horizontalmente.\n\\[\n-f(x)\n\\]\nreflete o gráfico em relação ao eixo horizontal.\n\\[\nf(-x)\n\\]\nreflete o gráfico em relação ao eixo vertical.\n\\[\naf(x)\n\\]\nalonga ou comprime verticalmente.\n\\[\nf(bx)\n\\]\nalonga ou comprime horizontalmente.\nEssas transformações ajudam a reconhecer rapidamente o comportamento de funções."
+    "text": "1.12 🔄 Transformações gráficas\nA partir de uma função conhecida, podemos construir outras funções por meio de transformações de seu gráfico.\nConsidere uma função \\(f(x)\\).\n\n\n\nExpressão\nTransformação\n\n\n\n\n\\(f(x)+k\\)\nTranslação vertical\n\n\n\\(f(x-h)\\)\nTranslação horizontal\n\n\n\\(-f(x)\\)\nReflexão em relação ao eixo horizontal\n\n\n\\(f(-x)\\)\nReflexão em relação ao eixo vertical\n\n\n\\(af(x)\\)\nEscala vertical\n\n\n\\(f(bx)\\)\nEscala horizontal\n\n\n\n\n1.12.1 Escala vertical\nNa transformação:\n\\[\ng(x)=af(x),\n\\]\ntemos:\n\nSe \\(|a|&gt;1\\), ocorre alongamento vertical.\nSe \\(0&lt;|a|&lt;1\\), ocorre compressão vertical.\nSe \\(a&lt;0\\), também ocorre reflexão em relação ao eixo horizontal.\n\n\n\n1.12.2 Escala horizontal\nNa transformação:\n\\[\ng(x)=f(bx),\n\\]\ntemos:\n\nSe \\(|b|&gt;1\\), ocorre compressão horizontal.\nSe \\(0&lt;|b|&lt;1\\), ocorre alongamento horizontal.\nSe \\(b&lt;0\\), também ocorre reflexão em relação ao eixo vertical.\n\nEssas transformações são úteis para compreender como alterações na expressão algébrica modificam a representação gráfica."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#composição-de-funções",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#composição-de-funções",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.13 🔗 Composição de funções",
-    "text": "1.13 🔗 Composição de funções\nA composição de funções é dada por\n\\[\n(f\\circ g)(x)=f(g(x)).\n\\]\nA função mais próxima de \\(x\\) é aplicada primeiro.\nEm geral,\n\\[\nf\\circ g\\neq g\\circ f.\n\\]\nPor exemplo, se\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng(x)=x+1,\n\\]\nentão\n\\[\n(f\\circ g)(x)=(x+1)^2,\n\\]\nenquanto\n\\[\n(g\\circ f)(x)=x^2+1.\n\\]\nA composição será essencial para a regra da cadeia no estudo de derivadas."
+    "text": "1.13 🔗 Composição de funções\nA composição permite aplicar uma função ao resultado produzido por outra.\nSejam duas funções \\(f\\) e \\(g\\). A composição de \\(f\\) com \\(g\\) é definida por:\n\\[\n(f\\circ g)(x)=f(g(x)).\n\\]\nPrimeiro aplicamos \\(g\\) e, em seguida, aplicamos \\(f\\) ao resultado.\n\n1.13.1 Exemplo\nConsidere:\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng(x)=x+1.\n\\]\nA primeira composição é:\n\\[\n\\begin{aligned}\n(f\\circ g)(x)\n&=f(g(x))\\\\\n&=f(x+1)\\\\\n&=(x+1)^2.\n\\end{aligned}\n\\]\nA segunda composição é:\n\\[\n\\begin{aligned}\n(g\\circ f)(x)\n&=g(f(x))\\\\\n&=g(x^2)\\\\\n&=x^2+1.\n\\end{aligned}\n\\]\nPortanto:\n\\[\n\\boxed{f\\circ g\\neq g\\circ f.}\n\\]\nEm geral, a composição não é comutativa.\n\n\n1.13.2 Condição de existência\nPara que \\((f\\circ g)(x)\\) esteja definida, precisamos que:\n\n\\(x\\) pertença ao domínio de \\(g\\).\n\\(g(x)\\) pertença ao domínio de \\(f\\).\n\nEssa operação será essencial no estudo da regra da cadeia, uma das ferramentas fundamentais do cálculo diferencial."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#função-inversa",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#função-inversa",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.14 🪞 Função inversa",
-    "text": "1.14 🪞 Função inversa\nUma função inversa desfaz a ação da função original.\nSe \\(f\\) tem inversa \\(f^{-1}\\), então:\n\\[\nf^{-1}(f(x))=x\n\\]\ne\n\\[\nf(f^{-1}(x))=x.\n\\]\nPara uma função ter inversa, ela precisa ser bijetiva.\nQuando uma função não é injetiva em todo o seu domínio, podemos às vezes restringir o domínio para obter uma inversa.\nPor exemplo,\n\\[\nf(x)=x^2\n\\]\nnão tem inversa em todo \\(\\mathbb{R}\\), mas a função\n\\[\nf:[0,+\\infty)\\to[0,+\\infty),\n\\qquad f(x)=x^2\n\\]\ntem inversa\n\\[\nf^{-1}(x)=\\sqrt{x}.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#modelagem-com-funções",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#modelagem-com-funções",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.15 🛠️ Modelagem com funções",
-    "text": "1.15 🛠️ Modelagem com funções\nFunções elementares servem para construir modelos.\nAlguns padrões comuns são:\n\n\n\nSituação\nModelo possível\n\n\n\n\ntaxa constante\nfunção linear\n\n\ntrajetória parabólica\nfunção quadrática\n\n\ncrescimento por fator\nfunção exponencial\n\n\ncrescimento lento\nfunção logarítmica\n\n\ncomportamento com assíntotas\nfunção racional\n\n\nfenômenos periódicos\nfunção trigonométrica\n\n\n\nAo modelar, devemos sempre considerar o contexto.\nSe \\(x\\) representa quantidade, normalmente\n\\[\nx\\geq 0.\n\\]\nSe \\(t\\) representa tempo após o início de um experimento, normalmente\n\\[\nt\\geq 0.\n\\]\nNem todo valor permitido pela fórmula faz sentido no problema real."
+    "text": "1.14 🪞 Função inversa\nA função inversa desfaz a operação realizada pela função original.\nUma função \\(f:A\\to B\\) possui inversa \\(f^{-1}:B\\to A\\) quando é bijetiva, isto é, injetiva e sobrejetiva.\nNesse caso:\n\\[\nf^{-1}(f(x))=x\n\\]\ne\n\\[\nf(f^{-1}(y))=y.\n\\]\nQuando o contradomínio é escolhido como sendo a própria imagem da função, a injetividade é suficiente para garantir a existência da inversa.\n\n1.14.1 Exemplo: uma função sem inversa em todo o domínio\nConsidere:\n\\[\nf(x)=x^2.\n\\]\nA função não é injetiva em \\(\\mathbb{R}\\), pois:\n\\[\nf(2)=f(-2)=4.\n\\]\nPortanto, não possui inversa como função de \\(\\mathbb{R}\\) em \\(\\mathbb{R}\\).\nEntretanto, podemos restringir seu domínio:\n\\[\nf:[0,+\\infty)\\to[0,+\\infty),\n\\qquad f(x)=x^2.\n\\]\nNessa restrição, a função é bijetiva e sua inversa é:\n\\[\n\\boxed{f^{-1}(x)=\\sqrt{x}.}\n\\]\nEsse exemplo mostra que a existência de uma função inversa depende das propriedades da função e dos conjuntos considerados."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#crescimento-e-comportamento-assintótico",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#crescimento-e-comportamento-assintótico",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.16 📈 Crescimento e comportamento assintótico",
-    "text": "1.16 📈 Crescimento e comportamento assintótico\nNo final do módulo, estudamos como comparar o crescimento de funções e como observar tendências extremas.\nUma hierarquia intuitiva importante é:\n\\[\n\\ln x\n\\]\ncresce mais lentamente que\n\\[\nx^\\alpha\n\\]\npara \\(\\alpha&gt;0\\),\nque cresce mais lentamente que\n\\[\na^x\n\\]\npara \\(a&gt;1\\).\nTambém vimos assíntotas.\nUma assíntota vertical pode aparecer quando a função cresce sem limite perto de um ponto.\nUma assíntota horizontal aparece quando a função se aproxima de um valor constante quando\n\\[\nx\\to+\\infty\n\\]\nou\n\\[\nx\\to-\\infty.\n\\]\nEssas ideias serão formalizadas no módulo de limites."
+    "text": "1.16 📈 Crescimento e comportamento assintótico\nNa Aula 1.16, estudamos como comparar o crescimento de diferentes funções e reconhecer comportamentos assintóticos.\nPara \\(x\\to+\\infty\\), uma hierarquia importante é:\n\\[\n\\ln x \\ll x^\\alpha \\ll a^x,\n\\]\ncom:\n\\[\n\\alpha&gt;0,\\qquad a&gt;1.\n\\]\nIsso significa que:\n\nO logaritmo cresce mais lentamente que qualquer potência positiva de \\(x\\).\nUma potência positiva de \\(x\\) cresce mais lentamente que uma exponencial de base maior que \\(1\\).\n\nEssa comparação pode ser expressa por limites:\n\\[\n\\lim_{x\\to+\\infty}\\frac{\\ln x}{x^\\alpha}=0\n\\]\ne\n\\[\n\\lim_{x\\to+\\infty}\\frac{x^\\alpha}{a^x}=0.\n\\]\n\n1.16.1 Assíntotas\nUma assíntota é uma reta que descreve uma aproximação do gráfico de uma função em determinada região.\nOs três tipos fundamentais são:\n\n\n\n\n\n\n\nTipo\nCaracterística\n\n\n\n\nVertical\nRelacionada ao comportamento ilimitado nas proximidades de uma abscissa\n\n\nHorizontal\nAproximação de uma reta horizontal quando \\(x\\) tende ao infinito\n\n\nOblíqua\nAproximação de uma reta inclinada quando \\(x\\) tende ao infinito\n\n\n\nPor exemplo, a função:\n\\[\nf(x)=\\frac{1}{x-2}\n\\]\napresenta uma assíntota vertical em:\n\\[\nx=2.\n\\]\nJá a função:\n\\[\ng(x)=\\frac{x}{x+1}\n\\]\napresenta uma assíntota horizontal em:\n\\[\ny=1.\n\\]\nEssas ideias serão formalizadas por meio dos limites no próximo módulo."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#mapa-conceitual-do-módulo-1",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#mapa-conceitual-do-módulo-1",
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "1.17 🗺️ Mapa conceitual do Módulo 1",
-    "text": "1.17 🗺️ Mapa conceitual do Módulo 1\nPodemos resumir o módulo assim:\nNúmeros reais\n   ↓\nIntervalos e inequações\n   ↓\nDomínios de funções\n   ↓\nFamílias de funções elementares\n   ↓\nGráficos e transformações\n   ↓\nComposição e inversas\n   ↓\nModelagem\n   ↓\nCrescimento e comportamento assintótico\n   ↓\nLimites\nO próximo módulo começará exatamente no último ponto: limites."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#checklist-para-seguir-para-limites",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#checklist-para-seguir-para-limites",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.18 ✅ Checklist para seguir para limites",
-    "text": "1.18 ✅ Checklist para seguir para limites\nAntes de avançar, é importante que você consiga:\n\nidentificar o domínio de funções simples;\nresolver inequações básicas;\nreconhecer funções polinomiais, racionais, exponenciais, logarítmicas e trigonométricas;\ninterpretar gráficos;\nencontrar zeros de funções;\nanalisar sinais;\nreconhecer transformações gráficas;\ncalcular composições;\nentender quando uma função pode ter inversa;\ncomparar crescimentos básicos;\nreconhecer assíntotas simples.\n\nSe algum desses pontos ainda parece frágil, vale revisar os posts anteriores antes de seguir."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#o-que-vem-agora",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#o-que-vem-agora",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "1.19 🚀 O que vem agora?",
-    "text": "1.19 🚀 O que vem agora?\nCom essa base, estamos prontos para começar o estudo de limites. O Módulo 2 está em preparação; enquanto ele não é publicado, você pode revisar os pontos em que encontrou dificuldade ou explorar a trilha opcional de aprofundamentos AP.\nO limite é a ideia que permite responder perguntas como:\n\no que acontece com \\(f(x)\\) quando \\(x\\) se aproxima de um ponto?\numa função se aproxima de algum valor?\nhá buraco no gráfico?\nhá salto?\nhá assíntota?\nqual é a inclinação instantânea de uma curva?\n\nA partir dos limites, construiremos continuidade, derivadas e integrais."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nDetermine o domínio real das funções:\n\n\\(f(x)=\\sqrt{x-2}\\)\n\n\\(g(x)=\\dfrac{1}{x+5}\\)\n\n\\(h(x)=\\ln(x-1)\\)\n\n\\(p(x)=\\dfrac{x+1}{x^2-4}\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nConsidere\n\\[\nf(x)=x^2-4.\n\\]\nDetermine:\n\nos zeros;\n\na interseção com o eixo vertical;\n\nos intervalos em que \\(f(x)&gt;0\\);\n\nos intervalos em que \\(f(x)&lt;0\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nConsidere\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng(x)=x+3.\n\\]\nCalcule:\n\n\\((f\\circ g)(x)\\)\n\n\\((g\\circ f)(x)\\)\n\n\\((f\\circ g)(1)\\)\n\n\\((g\\circ f)(1)\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nDetermine a inversa de\n\\[\nf(x)=3x-6.\n\\]\nVerifique por composição."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "2.5 🧪 Exercício 5",
-    "text": "2.5 🧪 Exercício 5\nAssocie cada função ao tipo de comportamento dominante:\n\n\\(f(x)=2^x\\)\n\n\\(g(x)=\\ln x\\)\n\n\\(h(x)=x^3\\)\n\n\\(p(x)=\\dfrac{x}{x+1}\\)\n\n\\(q(x)=\\sin x\\)\n\nUse as opções: exponencial, logarítmico, polinomial, racional com assíntota horizontal, periódico."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1-1",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "3.1 🧪 Exercício 1",
-    "text": "3.1 🧪 Exercício 1\n\nPara\n\n\\[\nf(x)=\\sqrt{x-2},\n\\]\nprecisamos de\n\\[\nx-2\\geq 0.\n\\]\nLogo,\n\\[\nx\\geq 2\n\\]\ne\n\\[\nD_f=[2,+\\infty).\n\\]\n\nPara\n\n\\[\ng(x)=\\frac{1}{x+5},\n\\]\nprecisamos de\n\\[\nx+5\\neq 0.\n\\]\nLogo,\n\\[\nx\\neq -5\n\\]\ne\n\\[\nD_g=(-\\infty,-5)\\cup(-5,+\\infty).\n\\]\n\nPara\n\n\\[\nh(x)=\\ln(x-1),\n\\]\nprecisamos de\n\\[\nx-1&gt;0.\n\\]\nLogo,\n\\[\nx&gt;1\n\\]\ne\n\\[\nD_h=(1,+\\infty).\n\\]\n\nPara\n\n\\[\np(x)=\\frac{x+1}{x^2-4},\n\\]\nprecisamos de\n\\[\nx^2-4\\neq 0.\n\\]\nComo\n\\[\nx^2-4=(x-2)(x+2),\n\\]\ntemos\n\\[\nx\\neq -2\n\\]\ne\n\\[\nx\\neq 2.\n\\]\nPortanto,\n\\[\nD_p=(-\\infty,-2)\\cup(-2,2)\\cup(2,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2-1",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "3.2 🧪 Exercício 2",
-    "text": "3.2 🧪 Exercício 2\nTemos\n\\[\nf(x)=x^2-4=(x-2)(x+2).\n\\]\n\nOs zeros são\n\n\\[\nx=-2\n\\]\ne\n\\[\nx=2.\n\\]\n\nA interseção com o eixo vertical ocorre em \\(x=0\\):\n\n\\[\nf(0)=0^2-4=-4.\n\\]\nLogo, o ponto é\n\\[\n(0,-4).\n\\]\n\nA função é positiva fora das raízes:\n\n\\[\nf(x)&gt;0\n\\]\nem\n\\[\n(-\\infty,-2)\\cup(2,+\\infty).\n\\]\n\nA função é negativa entre as raízes:\n\n\\[\nf(x)&lt;0\n\\]\nem\n\\[\n(-2,2).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3-1",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\nTemos\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng(x)=x+3.\n\\]\n\n\n\n\\[\n(f\\circ g)(x)=f(g(x))=f(x+3)=(x+3)^2.\n\\]\n\n\n\n\\[\n(g\\circ f)(x)=g(f(x))=g(x^2)=x^2+3.\n\\]\n\n\n\n\\[\n(f\\circ g)(1)=(1+3)^2=16.\n\\]\n\n\n\n\\[\n(g\\circ f)(1)=1^2+3=4.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4-1",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\nTemos\n\\[\nf(x)=3x-6.\n\\]\nEscrevemos\n\\[\ny=3x-6.\n\\]\nEntão\n\\[\ny+6=3x,\n\\]\nlogo\n\\[\nx=\\frac{y+6}{3}.\n\\]\nPortanto,\n\\[\nf^{-1}(x)=\\frac{x+6}{3}.\n\\]\nVerificando:\n\\[\nf^{-1}(f(x))=f^{-1}(3x-6)=\\frac{(3x-6)+6}{3}=x.\n\\]\nE:\n\\[\nf(f^{-1}(x))=f\\left(\\frac{x+6}{3}\\right)=3\\cdot\\frac{x+6}{3}-6=x+6-6=x.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5-1",
-    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
-    "section": "3.5 🧪 Exercício 5",
-    "text": "3.5 🧪 Exercício 5\n\n\\(f(x)=2^x\\): exponencial.\n\\(g(x)=\\ln x\\): logarítmico.\n\\(h(x)=x^3\\): polinomial.\n\\(p(x)=\\dfrac{x}{x+1}\\): racional com assíntota horizontal.\n\\(q(x)=\\sin x\\): periódico."
+    "text": "1.17 🗺️ Mapa conceitual do Módulo 1\nO percurso desenvolvido neste módulo pode ser sintetizado da seguinte maneira:\n\nFundamentos algébricos. Os números reais, intervalos e inequações permitem descrever os domínios.\nFunções. Com o domínio definido, podemos reconhecer famílias de funções, ler seus gráficos, aplicar transformações, compor e inverter funções.\nModelagem e limites. A modelagem dá significado às variáveis. O estudo do crescimento e do comportamento assintótico levanta as perguntas que serão tratadas com limites.\n\nO mapa evidencia que o estudo dos limites não aparece isoladamente. Ele se apoia em conhecimentos algébricos, funcionais e gráficos desenvolvidos ao longo do módulo."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#quiz-revisão-geral-do-módulo-1",
@@ -9427,6 +9301,139 @@
     "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
     "section": "3.6 🧩 Quiz — Revisão Geral do Módulo 1",
     "text": "3.6 🧩 Quiz — Revisão Geral do Módulo 1\n\nQ1. O domínio de \\(f(x)=\\sqrt{x-4}\\) é:\n\n\n\n\n ✗\\((-\\infty,4]\\).\n\n\n ✓\\([4,+\\infty)\\).\n\n\n ✗\\(\\mathbb{R}\\).\n\n\n\n\n\n\nQ2. Se \\(f(x)=x^2\\) e \\(g(x)=x+1\\), então \\((f\\circ g)(x)\\) é:\n\n\n\n\n ✓\\((x+1)^2\\).\n\n\n ✗\\(x^2+1\\).\n\n\n ✗\\(x+2\\).\n\n\n\n\n\n\nQ3. A função \\(e^x\\) tem como inversa:\n\n\n\n\n ✗\\(x^2\\).\n\n\n ✓\\(\\ln x\\).\n\n\n ✗\\(\\sin x\\).\n\n\n\n\n\n\nQ4. Uma assíntota horizontal descreve o comportamento da função quando:\n\n\n\n\n ✗\\(x\\) é sempre igual a zero.\n\n\n ✓\\(x\\) tende a \\(+\\infty\\) ou \\(-\\infty\\).\n\n\n ✗A função é necessariamente constante."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#o-papel-do-módulo-1-na-construção-do-cálculo",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#o-papel-do-módulo-1-na-construção-do-cálculo",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "1.1 🧭 O papel do Módulo 1 na construção do Cálculo",
+    "text": "1.1 🧭 O papel do Módulo 1 na construção do Cálculo\nO Cálculo não começa com a aplicação de fórmulas de derivação ou integração.\nAntes disso, precisamos compreender os objetos matemáticos sobre os quais essas operações serão realizadas.\nUma função pode representar uma grande variedade de fenômenos:\n\nA posição de um objeto em movimento.\nO crescimento de uma população.\nA variação de uma temperatura.\nO custo de produção de uma empresa.\nA área de uma região.\nA concentração de uma substância ao longo do tempo.\n\nEm todos esses casos, queremos investigar como uma quantidade depende de outra.\nPara isso, precisamos saber interpretar expressões, reconhecer restrições, analisar gráficos e compreender o comportamento das funções em diferentes regiões de seus domínios.\n\n\n\n\n\n\nNota💡 Ideia central\n\n\n\nO Cálculo estuda variação, aproximação e acumulação.\nPara desenvolver essas ideias, precisamos dominar a linguagem das funções e compreender como elas se comportam."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#intervalos-reais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#intervalos-reais",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "1.3 📏 Intervalos reais",
+    "text": "1.3 📏 Intervalos reais\nOs intervalos permitem representar conjuntos de números reais que satisfazem determinadas condições.\nOs principais exemplos são:\n\n\n\nIntervalo\nInterpretação\n\n\n\n\n\\((a,b)\\)\n\\(a&lt;x&lt;b\\)\n\n\n\\([a,b]\\)\n\\(a\\leq x\\leq b\\)\n\n\n\\((a,b]\\)\n\\(a&lt;x\\leq b\\)\n\n\n\\([a,b)\\)\n\\(a\\leq x&lt;b\\)\n\n\n\\((a,+\\infty)\\)\n\\(x&gt;a\\)\n\n\n\\([a,+\\infty)\\)\n\\(x\\geq a\\)\n\n\n\nOs símbolos \\(+\\infty\\) e \\(-\\infty\\) nunca são incluídos como extremidades de intervalos.\n\n1.3.1 Aplicações dos intervalos\nOs intervalos aparecem em diversas situações do Cálculo:\n\nNa determinação do domínio de uma função.\nNa representação de soluções de inequações.\nNa identificação de intervalos de crescimento e decrescimento.\nNa análise de continuidade.\nNa definição de intervalos de integração.\n\nPor exemplo, quando dizemos que uma função é contínua em \\([a,b]\\), estamos considerando seu comportamento em todo esse intervalo, incluindo as extremidades, com a interpretação apropriada de continuidade lateral nos extremos."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#valor-absoluto-e-distância",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#valor-absoluto-e-distância",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "1.5 📐 Valor absoluto e distância",
+    "text": "1.5 📐 Valor absoluto e distância\nO valor absoluto de um número real representa sua distância até zero na reta real.\nSua definição é:\n\\[\n|x|=\n\\begin{cases}\nx, & x\\geq 0,\\\\\n-x, & x&lt;0.\n\\end{cases}\n\\]\nAlgumas propriedades importantes são:\n\\[\n|x|\\geq 0\n\\]\ne\n\\[\n|-x|=|x|.\n\\]\nAlém disso, para quaisquer números reais \\(a\\) e \\(b\\):\n\\[\n|a-b|\n\\]\nrepresenta a distância entre eles na reta real.\n\n1.5.1 Valor absoluto e vizinhanças\nA desigualdade\n\\[\n|x-a|&lt;\\varepsilon,\n\\qquad \\varepsilon&gt;0,\n\\]\nsignifica que a distância entre \\(x\\) e \\(a\\) é menor que \\(\\varepsilon\\).\nPodemos reescrevê-la como:\n\\[\na-\\varepsilon&lt;x&lt;a+\\varepsilon.\n\\]\nPortanto:\n\\[\n|x-a|&lt;\\varepsilon\n\\iff\nx\\in(a-\\varepsilon,a+\\varepsilon).\n\\]\nEssa interpretação será fundamental para compreender a definição formal de limite, na qual estudaremos o comportamento de uma função quando sua variável se aproxima de determinado valor."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#funções-exponenciais-e-logarítmicas",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#funções-exponenciais-e-logarítmicas",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "1.8 🚀 Funções exponenciais e logarítmicas",
+    "text": "1.8 🚀 Funções exponenciais e logarítmicas\nUma função exponencial tem a forma:\n\\[\nf(x)=a^x,\n\\]\ncom:\n\\[\na&gt;0,\\qquad a\\neq 1.\n\\]\nSeu comportamento depende da base:\n\nSe \\(a&gt;1\\), a função é estritamente crescente.\nSe \\(0&lt;a&lt;1\\), a função é estritamente decrescente.\n\nA função logarítmica é a inversa da função exponencial correspondente.\nEm particular, as funções exponencial natural e logarítmica natural são inversas:\n\\[\nf(x)=e^x\n\\]\ne\n\\[\ng(x)=\\ln x.\n\\]\nPor isso:\n\\[\n\\ln(e^x)=x\n\\]\ne\n\\[\ne^{\\ln x}=x,\\qquad x&gt;0.\n\\]\nEssas relações são importantes em equações, modelos de crescimento e problemas que envolvem taxas de variação."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#leitura-algébrica-e-gráfica-de-funções",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#leitura-algébrica-e-gráfica-de-funções",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "1.11 🔎 Leitura algébrica e gráfica de funções",
+    "text": "1.11 🔎 Leitura algébrica e gráfica de funções\nUma função pode ser estudada por diferentes representações.\nA representação algébrica apresenta a regra que associa cada entrada à sua saída.\nA representação gráfica permite visualizar o comportamento da função no plano cartesiano.\nTambém podemos utilizar tabelas de valores para organizar informações.\n\n1.11.1 O que investigar algebricamente?\n\nDomínio.\nZeros da função.\nSinal da função.\nFatoração e simplificação.\nRestrições da expressão.\nRelações entre variáveis.\n\n\n\n1.11.2 O que investigar graficamente?\n\nIntervalos de crescimento e decrescimento.\nPontos de máximo e mínimo.\nInterseções com os eixos.\nSimetrias.\nDescontinuidades.\nAssíntotas.\nComportamento global.\n\nAs duas perspectivas são complementares.\nO estudo do Cálculo permitirá transformar muitas observações gráficas em afirmações matemáticas rigorosas, utilizando limites, continuidade e derivadas."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#modelagem-matemática-com-funções",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#modelagem-matemática-com-funções",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "1.15 🛠️ Modelagem matemática com funções",
+    "text": "1.15 🛠️ Modelagem matemática com funções\nUma função pode representar matematicamente uma situação concreta.\nA escolha do modelo depende das características do fenômeno investigado.\n\n\n\nSituação\nModelo possível\n\n\n\n\nVariação a uma taxa constante\nFunção afim\n\n\nTrajetória parabólica idealizada\nFunção quadrática\n\n\nCrescimento multiplicativo\nFunção exponencial\n\n\nCrescimento logarítmico\nFunção logarítmica\n\n\nComportamento representado por quocientes\nFunção racional\n\n\nFenômenos periódicos\nFunções trigonométricas\n\n\n\n\n1.15.1 O domínio no contexto de um modelo\nÉ importante distinguir o domínio algébrico de uma expressão e o domínio que faz sentido em uma aplicação.\nPor exemplo, se \\(t\\) representa o tempo transcorrido em um experimento, normalmente consideramos:\n\\[\nt\\geq 0.\n\\]\nSe \\(x\\) representa a quantidade de produtos fabricados, também podemos exigir:\n\\[\nx\\geq 0.\n\\]\nDependendo do contexto, ainda pode ser necessário restringir \\(x\\) aos números inteiros não negativos.\nAssim, o modelo matemático precisa respeitar tanto as condições algébricas quanto o significado das variáveis."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#quadro-resumo-síntese-do-módulo-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#quadro-resumo-síntese-do-módulo-1",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "1.18 📋 Quadro-resumo — Síntese do Módulo 1",
+    "text": "1.18 📋 Quadro-resumo — Síntese do Módulo 1\n\n\n\n\n\n\nNota📋 Quadro-resumo\n\n\n\n\n\n\n\n\n\n\nEixo de estudo\nConceitos fundamentais\n\n\n\n\nFundamentos algébricos\nNúmeros reais, intervalos, equações, inequações e valor absoluto\n\n\nFunções elementares\nFunções afins, quadráticas, polinomiais, racionais, exponenciais, logarítmicas e trigonométricas\n\n\nDefinição de função\nDomínio, contradomínio e imagem\n\n\nRepresentações\nExpressões algébricas, tabelas e gráficos\n\n\nTransformações\nTranslações, reflexões, alongamentos e compressões\n\n\nOperações\nComposição e função inversa\n\n\nModelagem\nVariáveis, parâmetros e restrições de contexto\n\n\nComportamento\nCrescimento, decrescimento, termo dominante e assíntotas\n\n\n\nIntegração dos conhecimentos\nOs conteúdos estudados formam uma base articulada para compreender como as funções são definidas, representadas, transformadas e utilizadas na descrição de fenômenos.\nPreparação para o Cálculo\nO domínio das funções e de seus comportamentos permite avançar para questões mais profundas sobre aproximação, continuidade e variação.\nA meta não é memorizar isoladamente todas as fórmulas, mas compreender as relações entre os conceitos.\n\n\n\n\n\n\n\n\n\nDica▶ Vídeo comentado\n\n\n\nAssista ao vídeo Por que o gráfico tem um ponto aberto? (duração: 82 s)\nVeja como a fatoração preserva a restrição de domínio e acompanhe os valores da função dos dois lados de \\(x=3\\).\n\n\n\n\n\n\n\n\nNota🌉 Ponte para o Cálculo\n\n\n\nO Módulo 1 desenvolveu a linguagem matemática necessária para estudar funções.\nAgora podemos formular perguntas mais profundas:\n\nO que acontece com \\(f(x)\\) quando \\(x\\) se aproxima de determinado valor?\nUma função pode se aproximar de um número mesmo sem assumir esse valor?\nComo descrever matematicamente o comportamento de uma função nas proximidades de um ponto?\nComo investigar situações em que a função cresce sem limite?\nComo determinar a taxa de variação instantânea?\n\nNo exercício integrador, a função \\(f(x)=(x^2-9)/(x-3)\\) dá \\(f(2{,}99)=5{,}99\\) e \\(f(3{,}01)=6{,}01\\). À medida que \\(x\\) fica mais perto de \\(3\\), os valores de \\(f(x)\\) ficam mais perto de \\(6\\), mesmo com \\(3\\) fora do domínio.\nComo descrever o valor de que \\(f(x)\\) se aproxima quando \\(x\\) chega perto de \\(3\\)? Essa pergunta nos conduz ao estudo dos limites.\nOs limites permitirão desenvolver formalmente as ideias de continuidade e derivada e, posteriormente, compreender a integral."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1-domínio-de-funções",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1-domínio-de-funções",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "2.1 🧪 Exercício 1 — Domínio de funções",
+    "text": "2.1 🧪 Exercício 1 — Domínio de funções\n\n\n\n\n\n\nDicaPara retomar\n\n\n\nConceito Formal de Função e Domínio de Funções: Guia Completo.\n\n\nDetermine o domínio das funções:\n\n\\(f(x)=\\sqrt{x-2}\\)\n\\(g(x)=\\dfrac{1}{x+5}\\)\n\\(h(x)=\\ln(x-1)\\)\n\\(p(x)=\\dfrac{x+1}{x^2-4}\\)"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2-análise-de-uma-função-quadrática",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2-análise-de-uma-função-quadrática",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "2.2 🧪 Exercício 2 — Análise de uma função quadrática",
+    "text": "2.2 🧪 Exercício 2 — Análise de uma função quadrática\n\n\n\n\n\n\nDicaPara retomar\n\n\n\nRevisão Gráfica e Algébrica e Funções Polinomiais e Racionais.\n\n\nConsidere:\n\\[\nf(x)=x^2-4.\n\\]\nDetermine:\n\nOs zeros da função.\nA interseção do gráfico com o eixo vertical.\nOs intervalos nos quais a função é positiva.\nOs intervalos nos quais a função é negativa."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3-composição-de-funções",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3-composição-de-funções",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "2.3 🧪 Exercício 3 — Composição de funções",
+    "text": "2.3 🧪 Exercício 3 — Composição de funções\n\n\n\n\n\n\nDicaPara retomar\n\n\n\nComposição de Funções.\n\n\nConsidere:\n\\[\nf(x)=x^2\n\\]\ne\n\\[\ng(x)=x+3.\n\\]\nDetermine:\n\n\\((f\\circ g)(x)\\).\n\\((g\\circ f)(x)\\).\n\\((f\\circ g)(1)\\).\n\\((g\\circ f)(1)\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4-função-inversa",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4-função-inversa",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "2.4 🧪 Exercício 4 — Função inversa",
+    "text": "2.4 🧪 Exercício 4 — Função inversa\n\n\n\n\n\n\nDicaPara retomar\n\n\n\nFunção Inversa.\n\n\nDetermine a função inversa de:\n\\[\nf(x)=3x-6.\n\\]\nEm seguida, verifique o resultado calculando as composições:\n\\[\nf^{-1}(f(x))\n\\]\ne\n\\[\nf(f^{-1}(x)).\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5-classificação-de-funções",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5-classificação-de-funções",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "2.5 🧪 Exercício 5 — Classificação de funções",
+    "text": "2.5 🧪 Exercício 5 — Classificação de funções\n\n\n\n\n\n\nDicaPara retomar\n\n\n\nFunções Elementares e Crescimento e Comportamento Assintótico.\n\n\nClassifique cada função de acordo com sua família:\n\n\\(f(x)=2^x\\)\n\\(g(x)=\\ln x\\)\n\\(h(x)=x^3\\)\n\\(p(x)=\\dfrac{x}{x+1}\\)\n\\(q(x)=\\sin x\\)\n\nUtilize as classificações:\n\nExponencial.\nLogarítmica.\nPolinomial.\nRacional.\nTrigonométrica periódica.\n\nIdentifique também a assíntota horizontal da função do item d), se existir."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-6-domínio-fatoração-e-gráfico",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-6-domínio-fatoração-e-gráfico",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "2.6 🧪 Exercício 6 — Domínio, fatoração e gráfico",
+    "text": "2.6 🧪 Exercício 6 — Domínio, fatoração e gráfico\n\n\n\n\n\n\nDicaPara retomar\n\n\n\nIntervalos e Inequações, Funções Polinomiais e Racionais e Revisão Gráfica e Algébrica.\n\n\nConsidere \\(f(x)=\\dfrac{x^2-9}{x-3}\\).\n\nDetermine o domínio de \\(f\\).\nFatore o numerador e simplifique a expressão, mantendo a restrição do domínio.\nEsboce o gráfico. Que ponto da reta obtida precisa ser marcado com um círculo aberto?"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1-domínio-de-funções-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-1-domínio-de-funções-1",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "3.1 🧪 Exercício 1 — Domínio de funções",
+    "text": "3.1 🧪 Exercício 1 — Domínio de funções\na) Para:\n\\[\nf(x)=\\sqrt{x-2},\n\\]\nprecisamos exigir:\n\\[\nx-2\\geq 0.\n\\]\nLogo:\n\\[\n\\boxed{D(f)=[2,+\\infty).}\n\\]\nb) Para:\n\\[\ng(x)=\\frac{1}{x+5},\n\\]\no denominador não pode ser zero:\n\\[\nx+5\\neq 0\n\\implies x\\neq -5.\n\\]\nPortanto:\n\\[\n\\boxed{D(g)=\\mathbb{R}\\setminus\\{-5\\}.}\n\\]\nc) Para:\n\\[\nh(x)=\\ln(x-1),\n\\]\no argumento do logaritmo precisa ser positivo:\n\\[\nx-1&gt;0.\n\\]\nAssim:\n\\[\n\\boxed{D(h)=(1,+\\infty).}\n\\]\nd) Para:\n\\[\np(x)=\\frac{x+1}{x^2-4},\n\\]\no denominador deve ser diferente de zero:\n\\[\nx^2-4\\neq 0.\n\\]\nFatorando:\n\\[\n(x-2)(x+2)\\neq 0.\n\\]\nLogo:\n\\[\nx\\neq -2,\\qquad x\\neq 2.\n\\]\nPortanto:\n\\[\n\\boxed{\nD(p)=\n(-\\infty,-2)\\cup(-2,2)\\cup(2,+\\infty).\n}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2-análise-de-uma-função-quadrática-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-2-análise-de-uma-função-quadrática-1",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "3.2 🧪 Exercício 2 — Análise de uma função quadrática",
+    "text": "3.2 🧪 Exercício 2 — Análise de uma função quadrática\nTemos:\n\\[\nf(x)=x^2-4.\n\\]\nFatorando:\n\\[\nf(x)=(x-2)(x+2).\n\\]\na) Zeros da função\nResolvendo:\n\\[\n(x-2)(x+2)=0,\n\\]\nobtemos:\n\\[\n\\boxed{x=-2\\quad\\text{ou}\\quad x=2.}\n\\]\nb) Interseção com o eixo vertical\nCalculamos:\n\\[\nf(0)=0^2-4=-4.\n\\]\nPortanto, o gráfico intercepta o eixo vertical no ponto:\n\\[\n\\boxed{(0,-4).}\n\\]\nc) Onde a função é positiva\nComo a parábola tem concavidade voltada para cima, seus valores são positivos fora das raízes:\n\\[\n\\boxed{(-\\infty,-2)\\cup(2,+\\infty).}\n\\]\nd) Onde a função é negativa\nEntre as raízes, a função assume valores negativos:\n\\[\n\\boxed{(-2,2).}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3-composição-de-funções-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-3-composição-de-funções-1",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "3.3 🧪 Exercício 3 — Composição de funções",
+    "text": "3.3 🧪 Exercício 3 — Composição de funções\nTemos:\n\\[\nf(x)=x^2,\\qquad g(x)=x+3.\n\\]\na) Primeira composição\n\\[\n\\begin{aligned}\n(f\\circ g)(x)\n&=f(g(x))\\\\\n&=f(x+3)\\\\\n&=(x+3)^2.\n\\end{aligned}\n\\]\nLogo:\n\\[\n\\boxed{(f\\circ g)(x)=(x+3)^2.}\n\\]\nb) Segunda composição\n\\[\n\\begin{aligned}\n(g\\circ f)(x)\n&=g(f(x))\\\\\n&=g(x^2)\\\\\n&=x^2+3.\n\\end{aligned}\n\\]\nLogo:\n\\[\n\\boxed{(g\\circ f)(x)=x^2+3.}\n\\]\nc) Valor da primeira composição em \\(x=1\\)\n\\[\n(f\\circ g)(1)=(1+3)^2.\n\\]\nPortanto:\n\\[\n\\boxed{(f\\circ g)(1)=16.}\n\\]\nd) Valor da segunda composição em \\(x=1\\)\n\\[\n(g\\circ f)(1)=1^2+3.\n\\]\nPortanto:\n\\[\n\\boxed{(g\\circ f)(1)=4.}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4-função-inversa-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-4-função-inversa-1",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "3.4 🧪 Exercício 4 — Função inversa",
+    "text": "3.4 🧪 Exercício 4 — Função inversa\nConsidere:\n\\[\ny=3x-6.\n\\]\nIsolando \\(x\\):\n\\[\ny+6=3x.\n\\]\nAssim:\n\\[\nx=\\frac{y+6}{3}.\n\\]\nTrocando as variáveis, obtemos:\n\\[\n\\boxed{f^{-1}(x)=\\frac{x+6}{3}.}\n\\]\nVerificação da primeira composição\n\\[\n\\begin{aligned}\nf^{-1}(f(x))\n&=\\frac{(3x-6)+6}{3}\\\\\n&=\\frac{3x}{3}\\\\\n&=x.\n\\end{aligned}\n\\]\nVerificação da segunda composição\n\\[\n\\begin{aligned}\nf(f^{-1}(x))\n&=3\\left(\\frac{x+6}{3}\\right)-6\\\\\n&=x+6-6\\\\\n&=x.\n\\end{aligned}\n\\]\nAs duas composições retornam o valor original. Portanto, a inversa está correta."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5-classificação-de-funções-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-5-classificação-de-funções-1",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "3.5 🧪 Exercício 5 — Classificação de funções",
+    "text": "3.5 🧪 Exercício 5 — Classificação de funções\na) \\(2^x\\): função exponencial.\nb) \\(\\ln x\\): função logarítmica.\nc) \\(x^3\\): função polinomial.\nd) \\(\\dfrac{x}{x+1}\\): função racional.\nPara identificar sua assíntota horizontal, dividimos o numerador e o denominador por \\(x\\):\n\\[\n\\frac{x}{x+1}\n=\n\\frac{1}{1+\\frac{1}{x}}.\n\\]\nQuando \\(x\\) tende ao infinito, a expressão se aproxima de \\(1\\).\nPortanto:\n\\[\n\\boxed{y=1}\n\\]\né sua assíntota horizontal.\ne) \\(\\sin x\\): função trigonométrica periódica."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-6-domínio-fatoração-e-gráfico-1",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercício-6-domínio-fatoração-e-gráfico-1",
+    "title": "📘 Módulo 1.17: Revisão Geral do Módulo 1",
+    "section": "3.6 🧪 Exercício 6 — Domínio, fatoração e gráfico",
+    "text": "3.6 🧪 Exercício 6 — Domínio, fatoração e gráfico\n\nO denominador se anula em \\(x=3\\). Assim, \\(D_f=\\mathbb{R}\\setminus\\{3\\}\\).\nPara \\(x\\ne3\\), vale\n\n\\[\nf(x)=\\frac{(x-3)(x+3)}{x-3}=x+3.\n\\]\n\nO gráfico acompanha a reta \\(y=x+3\\) com um ponto aberto em \\((3,6)\\). A restrição \\(x\\ne3\\) continua valendo após o cancelamento.\n\n\n\n\n\n\n\nFigura 1: Reta \\(y=x+3\\) com um ponto aberto em \\((3,6)\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html",
