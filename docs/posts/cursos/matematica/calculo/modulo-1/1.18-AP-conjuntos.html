@@ -377,12 +377,14 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Este AP complementa a <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">Aula 1.2 — Conjuntos Numéricos</a>. Enquanto a aula principal apresenta os conjuntos numéricos e suas propriedades fundamentais, este aprofundamento desenvolve algumas ideias com maior rigor matemático.</p>
-<p>O conteúdo é opcional e amplia o estudo sem interromper a sequência principal.</p>
-<p>↩︎️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">Voltar à aula de origem</a> · ▶️ <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">Continuar com 1.3 — Intervalos e Inequações</a></p>
+<p>Este aprofundamento complementa a <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">Aula 1.2 — Conjuntos Numéricos</a>. Três perguntas orientam a leitura.</p>
+<ul>
+<li>Por que <span class="math inline">\(\sqrt{2}\)</span> é irracional?</li>
+<li>Como podemos enumerar <span class="math inline">\(\mathbb Q\)</span> se seus elementos são densos na reta?</li>
+<li>O que a completude de <span class="math inline">\(\mathbb R\)</span> nos permite afirmar sobre o supremo?</li>
+</ul>
 </div>
 </div>
-<p>🧭 <strong>Entrada na trilha AP:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">Revisão geral do Módulo 1</a></p>
 <hr>
 <div class="callout callout-style-default callout-note callout-titled" title="📌 Objetivos do aprofundamento">
 <div class="callout-header d-flex align-content-center">
@@ -509,24 +511,24 @@ b^2=2k^2.
 </section>
 <section id="o-método-diagonal-e-os-reais-não-enumeráveis" class="level2" data-number="0.4">
 <h2 data-number="0.4" class="anchored" data-anchor-id="o-método-diagonal-e-os-reais-não-enumeráveis"><span class="header-section-number">0.4</span> 🧠 O método diagonal e os reais não enumeráveis</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="🧠 Método diagonal de Cantor: $[0,1]$ não é enumerável">
+<div class="callout callout-style-default callout-important callout-titled" title="🧠 Método diagonal de Cantor: $[0,1)$ não é enumerável">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>🧠 Método diagonal de Cantor: <span class="math inline">\([0,1]\)</span> não é enumerável
+<span class="screen-reader-only">Importante</span>🧠 Método diagonal de Cantor: <span class="math inline">\([0,1)\)</span> não é enumerável
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p><strong>Ideia da demonstração.</strong></p>
-<p>Suponha, por absurdo, que todos os números reais do intervalo <span class="math inline">\([0,1]\)</span> possam ser organizados em uma lista:</p>
+<p>Suponha, por absurdo, que todos os números reais do intervalo <span class="math inline">\([0,1)\)</span> possam ser organizados em uma lista:</p>
 <p><span class="math display">\[
 x_1,x_2,x_3,\ldots
 \]</span></p>
-<p>Escrevemos suas expansões decimais na forma</p>
+<p>Todo número de <span class="math inline">\([0,1)\)</span> tem parte inteira zero. Para cada número da lista, usamos sua expansão decimal sem uma cauda de noves e escrevemos</p>
 <p><span class="math display">\[
 \begin{aligned}
 x_1 &amp;= 0,a_{11}a_{12}a_{13}\ldots\\
@@ -548,17 +550,18 @@ b_n=
 1, &amp; \text{se }a_{nn}=2.
 \end{cases}
 \]</span></p>
-<p>Desse modo, <span class="math inline">\(y\)</span> pertence a <span class="math inline">\([0,1]\)</span> e difere de cada <span class="math inline">\(x_n\)</span> pelo menos no n-ésimo algarismo decimal.</p>
-<p>Portanto, <span class="math inline">\(y\)</span> não pode ser nenhum dos elementos da lista, contradizendo a hipótese de que ela continha todos os reais de <span class="math inline">\([0,1]\)</span>.</p>
-<p>Concluímos que <span class="math inline">\([0,1]\)</span> é não enumerável. Como <span class="math inline">\([0,1]\subset\mathbb R\)</span>, o conjunto dos reais também é não enumerável.</p>
-<div style="text-align: center;">
-<img src="../images/Diagonal_argument_01_svg.svg" alt="Método diagonal de Cantor: construção de um número real diferente de todos os elementos de uma lista" width="60%">
-<figcaption>
-<strong>Método diagonal de Cantor — reais</strong>
+<p>Desse modo, <span class="math inline">\(y\)</span> pertence a <span class="math inline">\([0,1)\)</span> e difere de cada <span class="math inline">\(x_n\)</span> pelo menos no n-ésimo algarismo decimal.</p>
+<p>Portanto, <span class="math inline">\(y\)</span> não pode ser nenhum dos elementos da lista, contradizendo a hipótese de que ela continha todos os reais de <span class="math inline">\([0,1)\)</span>.</p>
+<p>Concluímos que <span class="math inline">\([0,1)\)</span> é não enumerável. Como <span class="math inline">\([0,1)\subset[0,1]\subset\mathbb R\)</span>, tanto <span class="math inline">\([0,1]\)</span> quanto <span class="math inline">\(\mathbb R\)</span> são não enumeráveis.</p>
+<div id="fig-ap01-diagonal-reais" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Construção de um número que difere de cada elemento da lista em um algarismo decimal.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ap01-diagonal-reais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Diagonal_argument_01_svg.svg" class="img-fluid figure-img" style="width:60.0%" alt="Construção de um número que difere de cada elemento da lista em um algarismo decimal.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ap01-diagonal-reais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Método diagonal de Cantor para os reais. Crédito: Jochen Burghardt, CC BY-SA 3.0.
 </figcaption>
-<p style="font-size: 0.8em; margin-top: 0.5em;">
-Crédito: Jochen Burghardt — CC BY-SA 3.0.
-</p>
+</figure>
 </div>
 </div>
 </div>
@@ -603,14 +606,15 @@ Crédito: Jochen Burghardt — CC BY-SA 3.0.
 </div>
 </div>
 </div>
-<div style="text-align: center;">
-<img src="../images/Diagonal_argument.svg" alt="Método diagonal para enumerar os números racionais" width="60%">
-<figcaption>
-<strong>Método diagonal — racionais</strong>
+<div id="fig-ap01-diagonal-racionais" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Percurso dos pares de inteiros positivos em diagonais de soma constante.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ap01-diagonal-racionais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Diagonal_argument.svg" class="img-fluid figure-img" style="width:60.0%" alt="Percurso dos pares de inteiros positivos em diagonais de soma constante.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ap01-diagonal-racionais-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Enumeração diagonal dos racionais positivos. Crédito: Cronholm144, CC BY-SA 3.0.
 </figcaption>
-<p style="font-size: 0.8em; margin-top: 0.5em;">
-Crédito: Cronholm144 — CC BY-SA 3.0.
-</p>
+</figure>
 </div>
 </section>
 <section id="finitude-da-representação-decimal" class="level2" data-number="0.6">
@@ -653,10 +657,10 @@ b=2^m5^n.
 <p>Concluímos que a equivalência está demonstrada.</p>
 <p><strong>Exemplos:</strong></p>
 <ul>
-<li><span class="math inline">\(\frac38=0,375\)</span>, pois <span class="math inline">\(8=2^3\)</span>;</li>
-<li><span class="math inline">\(\frac7{20}=0,35\)</span>, pois <span class="math inline">\(20=2^2\cdot5\)</span>;</li>
-<li><span class="math inline">\(\frac4{15}=0,\overline{26}\)</span>, pois <span class="math inline">\(15=3\cdot5\)</span>;</li>
-<li><span class="math inline">\(\frac56=0,8\overline{3}\)</span>, pois <span class="math inline">\(6=2\cdot3\)</span>.</li>
+<li><span class="math inline">\(\frac38=0{,}375\)</span>, pois <span class="math inline">\(8=2^3\)</span>;</li>
+<li><span class="math inline">\(\frac7{20}=0{,}35\)</span>, pois <span class="math inline">\(20=2^2\cdot5\)</span>;</li>
+<li><span class="math inline">\(\frac4{15}=0{,}2\overline{6}\)</span>, pois <span class="math inline">\(15=3\cdot5\)</span>;</li>
+<li><span class="math inline">\(\frac56=0{,}8\overline{3}\)</span>, pois <span class="math inline">\(6=2\cdot3\)</span>.</li>
 </ul>
 <p>Nos dois últimos exemplos, há um fator primo diferente de 2 e 5, e a representação decimal é periódica, não finita.</p>
 </div>
@@ -724,25 +728,26 @@ A=\{x\in\mathbb Q\mid x^2&lt;2\}.
 <p>Esse conjunto contém os números racionais cujo quadrado é menor que 2.</p>
 <p>Por exemplo, pertencem a <span class="math inline">\(A\)</span> os números</p>
 <p><span class="math display">\[
--1,\quad 0,\quad 1,\quad 1,2,\quad 1,4.
+-1,\quad 0,\quad 1,\quad 1{,}2,\quad 1{,}4.
 \]</span></p>
 <p>O conjunto é não vazio e limitado superiormente. Por exemplo, 2 é um majorante.</p>
+<p><strong>Por que <span class="math inline">\(\sqrt2\)</span> é um majorante em <span class="math inline">\(\mathbb R\)</span>?</strong></p>
+<p>Se <span class="math inline">\(q\in A\)</span>, então <span class="math inline">\(q^2&lt;2\)</span>. Logo, <span class="math inline">\(-\sqrt2&lt;q&lt;\sqrt2\)</span> e, em particular, <span class="math inline">\(\sqrt2\)</span> é um majorante.</p>
+<p><strong>Por que é o menor majorante?</strong></p>
+<p>Para qualquer <span class="math inline">\(s&lt;\sqrt2\)</span>, a densidade de <span class="math inline">\(\mathbb Q\)</span> permite escolher um racional <span class="math inline">\(q\)</span> com <span class="math inline">\(\max\{s,0\}&lt;q&lt;\sqrt2\)</span>. Como <span class="math inline">\(0&lt;q&lt;\sqrt2\)</span>, temos <span class="math inline">\(q^2&lt;2\)</span>, e então <span class="math inline">\(q\in A\)</span>. Como <span class="math inline">\(q&gt;s\)</span>, o número <span class="math inline">\(s\)</span> falha como majorante. Portanto,</p>
+<p><span class="math display">\[
+\boxed{\sup_{\mathbb R} A=\sqrt2.}
+\]</span></p>
 <p><strong>O que acontece em <span class="math inline">\(\mathbb Q\)</span>?</strong></p>
-<p>Não existe um supremo de <span class="math inline">\(A\)</span> pertencente a <span class="math inline">\(\mathbb Q\)</span>.</p>
-<p>O candidato natural para o menor majorante é <span class="math inline">\(\sqrt2\)</span>, mas já demonstramos que</p>
-<p><span class="math display">\[
-\sqrt2\notin\mathbb Q.
-\]</span></p>
-<p>Além disso, pela densidade dos racionais na reta real, qualquer racional maior que <span class="math inline">\(\sqrt2\)</span> pode ser substituído por outro racional ainda menor e que continue sendo maior que <span class="math inline">\(\sqrt2\)</span>. Portanto, nenhum racional pode ser o menor majorante de <span class="math inline">\(A\)</span>.</p>
-<p><strong>O que acontece em <span class="math inline">\(\mathbb R\)</span>?</strong></p>
-<p>Em <span class="math inline">\(\mathbb R\)</span>, o supremo existe e é</p>
-<p><span class="math display">\[
-\boxed{\sup A=\sqrt2.}
-\]</span></p>
-<p>Esse exemplo evidencia a diferença entre os racionais e os reais: a reta racional possui lacunas que são preenchidas pela completude de <span class="math inline">\(\mathbb R\)</span>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/supremo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-cap="Axioma do supremo: existência do menor majorante em ℝ."></p>
+<p>Um majorante racional de <span class="math inline">\(A\)</span> teria de ser maior que <span class="math inline">\(\sqrt2\)</span>, pois <span class="math inline">\(\sqrt2\)</span> é irracional. Pela densidade de <span class="math inline">\(\mathbb Q\)</span>, entre esse majorante e <span class="math inline">\(\sqrt2\)</span> há um racional menor que ainda é majorante. Assim, <span class="math inline">\(A\)</span> tem majorantes em <span class="math inline">\(\mathbb Q\)</span>, mas seu menor majorante existe apenas em <span class="math inline">\(\mathbb R\)</span>. Esse exemplo mostra como a completude distingue os dois conjuntos.</p>
+<div id="fig-ap01-supremo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Ilustração da propriedade do supremo na reta real.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ap01-supremo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/supremo.png" class="img-fluid figure-img" style="width:96.0%" alt="Ilustração da propriedade do supremo na reta real.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ap01-supremo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: O menor majorante de <span class="math inline">\(A\)</span> é <span class="math inline">\(\sqrt2\)</span> em <span class="math inline">\(\mathbb R\)</span>.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -874,13 +879,13 @@ x=0,\overline{142857}.
 <li><span class="math inline">\(\mathbb R\)</span> e os irracionais positivos: não enumeráveis.</li>
 </ul>
 <p><strong>2.</strong></p>
-<p>Suponha que os elementos de <span class="math inline">\([0,1]\)</span> possam ser listados. Construa um número decimal que difira do primeiro número no primeiro algarismo, do segundo no segundo algarismo e assim sucessivamente. O número construído pertence a <span class="math inline">\([0,1]\)</span>, mas não aparece na lista. Isso contradiz a hipótese de que a lista era completa.</p>
+<p>Suponha que os elementos de <span class="math inline">\([0,1)\)</span> possam ser listados. Escreva os números sem uma cauda de noves e construa um decimal com algarismos <span class="math inline">\(1\)</span> ou <span class="math inline">\(2\)</span> que difira do primeiro número no primeiro algarismo, do segundo no segundo, e assim sucessivamente. O número construído pertence a <span class="math inline">\([0,1)\)</span> e fica fora da lista. Isso contradiz a hipótese de que a lista era completa. Como <span class="math inline">\([0,1)\)</span> é não enumerável, qualquer conjunto que o contenha, inclusive <span class="math inline">\([0,1]\)</span>, também é não enumerável.</p>
 <p><strong>3.</strong></p>
 <p>Um corpo ordenado completo é um conjunto com operações de adição e multiplicação, uma relação de ordem compatível com essas operações e a propriedade de que todo subconjunto não vazio e limitado superiormente possui supremo.</p>
 <p><strong>4.</strong></p>
 <p>Suponha que <span class="math inline">\(\sqrt2=\frac pq\)</span>, com <span class="math inline">\(p,q\)</span> inteiros e a fração irredutível. Elevando ao quadrado, obtemos <span class="math inline">\(p^2=2q^2\)</span>. Portanto, <span class="math inline">\(p\)</span> é par. Escrevendo <span class="math inline">\(p=2k\)</span>, concluímos que <span class="math inline">\(q^2=2k^2\)</span>, de modo que <span class="math inline">\(q\)</span> também é par. Contradição com a hipótese de irredutibilidade.</p>
 <p><strong>5.</strong></p>
-<p>Na divisão de um inteiro por outro, existem apenas um número finito de restos possíveis. Se a divisão não termina, algum resto se repete. A partir dessa repetição, os algarismos decimais passam a se repetir periodicamente.</p>
+<p>Na divisão de um inteiro por outro, há apenas um número finito de restos possíveis. Se a divisão não termina, algum resto se repete. A partir dessa repetição, os algarismos decimais passam a se repetir periodicamente.</p>
 <p><strong>6.</strong></p>
 <p>Uma representação decimal infinita de um racional necessariamente apresenta repetição de restos na divisão que a produz. Essa repetição gera um período. Logo, uma decimal infinita não periódica não pode representar um racional.</p>
 <p><strong>7.</strong></p>
@@ -986,7 +991,7 @@ x=\frac{142857}{999999}
 <h1 data-number="1"><span class="header-section-number">1</span> 🔗 Navegação</h1>
 <p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.2-conjuntos.html">1.2 — Conjuntos Numéricos</a></p>
 <p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.3-intervalos-inequacoes.html">1.3 — Intervalos e Inequações</a></p>
-<p>🧭 <strong>Início da trilha:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html">Revisão geral do Módulo 1</a></p>
+<p>🧭 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercícios-propostos"><strong>Exercícios da Revisão Geral</strong></a></p>
 <p>🔬 <strong>Próximo AP:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html">1.19-AP — Valor Absoluto e Inequações Modulares</a></p>
 <p>🏠 <a href="../../../../../posts/cursos/matematica/calculo/index.html">← Sumário do Curso</a> · <a href="../../../../../posts/cursos/matematica/index.html">← Cursos de Matemática</a> · 🔝 <a href="#">Topo</a></p>
 <hr>

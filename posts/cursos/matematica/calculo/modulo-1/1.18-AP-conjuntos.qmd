@@ -27,15 +27,13 @@ page-layout: full
 
 ::: {.callout-note title="🧭 Aprofundamento opcional"}
 
-Este AP complementa a [Aula 1.2 — Conjuntos Numéricos](1.2-conjuntos.qmd). Enquanto a aula principal apresenta os conjuntos numéricos e suas propriedades fundamentais, este aprofundamento desenvolve algumas ideias com maior rigor matemático.
+Este aprofundamento complementa a [Aula 1.2 — Conjuntos Numéricos](1.2-conjuntos.qmd). Três perguntas orientam a leitura.
 
-O conteúdo é opcional e amplia o estudo sem interromper a sequência principal.
-
-↩️ [Voltar à aula de origem](1.2-conjuntos.qmd) · ▶️ [Continuar com 1.3 — Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
+- Por que $\sqrt{2}$ é irracional?
+- Como podemos enumerar $\mathbb Q$ se seus elementos são densos na reta?
+- O que a completude de $\mathbb R$ nos permite afirmar sobre o supremo?
 
 :::
-
-🧭 **Entrada na trilha AP:** [Revisão geral do Módulo 1](1.17-revisao-geral-do-modulo-1.qmd)
 
 ***
 
@@ -141,17 +139,17 @@ Assim, embora os racionais sejam infinitos e densos na reta real, eles não esgo
 
 ## 🧠 O método diagonal e os reais não enumeráveis
 
-::: {.callout-important collapse=false title="🧠 Método diagonal de Cantor: $[0,1]$ não é enumerável"}
+::: {.callout-important collapse=false title="🧠 Método diagonal de Cantor: $[0,1)$ não é enumerável"}
 
 **Ideia da demonstração.**
 
-Suponha, por absurdo, que todos os números reais do intervalo $[0,1]$ possam ser organizados em uma lista:
+Suponha, por absurdo, que todos os números reais do intervalo $[0,1)$ possam ser organizados em uma lista:
 
 $$
 x_1,x_2,x_3,\ldots
 $$
 
-Escrevemos suas expansões decimais na forma
+Todo número de $[0,1)$ tem parte inteira zero. Para cada número da lista, usamos sua expansão decimal sem uma cauda de noves e escrevemos
 
 $$
 \begin{aligned}
@@ -180,19 +178,13 @@ b_n=
 \end{cases}
 $$
 
-Desse modo, $y$ pertence a $[0,1]$ e difere de cada $x_n$ pelo menos no n-ésimo algarismo decimal.
+Desse modo, $y$ pertence a $[0,1)$ e difere de cada $x_n$ pelo menos no n-ésimo algarismo decimal.
 
-Portanto, $y$ não pode ser nenhum dos elementos da lista, contradizendo a hipótese de que ela continha todos os reais de $[0,1]$.
+Portanto, $y$ não pode ser nenhum dos elementos da lista, contradizendo a hipótese de que ela continha todos os reais de $[0,1)$.
 
-Concluímos que $[0,1]$ é não enumerável. Como $[0,1]\subset\mathbb R$, o conjunto dos reais também é não enumerável.
+Concluímos que $[0,1)$ é não enumerável. Como $[0,1)\subset[0,1]\subset\mathbb R$, tanto $[0,1]$ quanto $\mathbb R$ são não enumeráveis.
 
-<div style="text-align: center;">
-  <img src="../images/Diagonal_argument_01_svg.svg" alt="Método diagonal de Cantor: construção de um número real diferente de todos os elementos de uma lista" width="60%">
-  <figcaption><strong>Método diagonal de Cantor — reais</strong></figcaption>
-  <p style="font-size: 0.8em; margin-top: 0.5em;">
-    Crédito: Jochen Burghardt — CC BY-SA 3.0.
-  </p>
-</div>
+![Método diagonal de Cantor para os reais. Crédito: Jochen Burghardt, CC BY-SA 3.0.](../images/Diagonal_argument_01_svg.svg){#fig-ap01-diagonal-reais fig-alt="Construção de um número que difere de cada elemento da lista em um algarismo decimal." width="60%"}
 
 :::
 
@@ -231,13 +223,7 @@ Concluímos que $\mathbb Q$ é enumerável.
 
 :::
 
-<div style="text-align: center;">
-  <img src="../images/Diagonal_argument.svg" alt="Método diagonal para enumerar os números racionais" width="60%">
-  <figcaption><strong>Método diagonal — racionais</strong></figcaption>
-  <p style="font-size: 0.8em; margin-top: 0.5em;">
-    Crédito: Cronholm144 — CC BY-SA 3.0.
-  </p>
-</div>
+![Enumeração diagonal dos racionais positivos. Crédito: Cronholm144, CC BY-SA 3.0.](../images/Diagonal_argument.svg){#fig-ap01-diagonal-racionais fig-alt="Percurso dos pares de inteiros positivos em diagonais de soma constante." width="60%"}
 
 ## 🧠 Finitude da representação decimal
 
@@ -285,10 +271,10 @@ Concluímos que a equivalência está demonstrada.
 
 **Exemplos:**
 
-- $\frac38=0,375$, pois $8=2^3$;
-- $\frac7{20}=0,35$, pois $20=2^2\cdot5$;
-- $\frac4{15}=0,\overline{26}$, pois $15=3\cdot5$;
-- $\frac56=0,8\overline{3}$, pois $6=2\cdot3$.
+- $\frac38=0{,}375$, pois $8=2^3$;
+- $\frac7{20}=0{,}35$, pois $20=2^2\cdot5$;
+- $\frac4{15}=0{,}2\overline{6}$, pois $15=3\cdot5$;
+- $\frac56=0{,}8\overline{3}$, pois $6=2\cdot3$.
 
 Nos dois últimos exemplos, há um fator primo diferente de 2 e 5, e a representação decimal é periódica, não finita.
 
@@ -345,34 +331,28 @@ Esse conjunto contém os números racionais cujo quadrado é menor que 2.
 Por exemplo, pertencem a $A$ os números
 
 $$
--1,\quad 0,\quad 1,\quad 1,2,\quad 1,4.
+-1,\quad 0,\quad 1,\quad 1{,}2,\quad 1{,}4.
 $$
 
 O conjunto é não vazio e limitado superiormente. Por exemplo, 2 é um majorante.
 
+**Por que $\sqrt2$ é um majorante em $\mathbb R$?**
+
+Se $q\in A$, então $q^2<2$. Logo, $-\sqrt2<q<\sqrt2$ e, em particular, $\sqrt2$ é um majorante.
+
+**Por que é o menor majorante?**
+
+Para qualquer $s<\sqrt2$, a densidade de $\mathbb Q$ permite escolher um racional $q$ com $\max\{s,0\}<q<\sqrt2$. Como $0<q<\sqrt2$, temos $q^2<2$, e então $q\in A$. Como $q>s$, o número $s$ falha como majorante. Portanto,
+
+$$
+\boxed{\sup_{\mathbb R} A=\sqrt2.}
+$$
+
 **O que acontece em $\mathbb Q$?**
 
-Não existe um supremo de $A$ pertencente a $\mathbb Q$.
+Um majorante racional de $A$ teria de ser maior que $\sqrt2$, pois $\sqrt2$ é irracional. Pela densidade de $\mathbb Q$, entre esse majorante e $\sqrt2$ há um racional menor que ainda é majorante. Assim, $A$ tem majorantes em $\mathbb Q$, mas seu menor majorante existe apenas em $\mathbb R$. Esse exemplo mostra como a completude distingue os dois conjuntos.
 
-O candidato natural para o menor majorante é $\sqrt2$, mas já demonstramos que
-
-$$
-\sqrt2\notin\mathbb Q.
-$$
-
-Além disso, pela densidade dos racionais na reta real, qualquer racional maior que $\sqrt2$ pode ser substituído por outro racional ainda menor e que continue sendo maior que $\sqrt2$. Portanto, nenhum racional pode ser o menor majorante de $A$.
-
-**O que acontece em $\mathbb R$?**
-
-Em $\mathbb R$, o supremo existe e é
-
-$$
-\boxed{\sup A=\sqrt2.}
-$$
-
-Esse exemplo evidencia a diferença entre os racionais e os reais: a reta racional possui lacunas que são preenchidas pela completude de $\mathbb R$.
-
-![](../images/supremo.png){fig-align="center" width="100%" fig-cap="Axioma do supremo: existência do menor majorante em ℝ."}
+![O menor majorante de $A$ é $\sqrt2$ em $\mathbb R$.](../images/supremo.png){#fig-ap01-supremo fig-alt="Ilustração da propriedade do supremo na reta real." width="96%"}
 
 :::
 
@@ -478,7 +458,7 @@ $$
 
 **2.**
 
-Suponha que os elementos de $[0,1]$ possam ser listados. Construa um número decimal que difira do primeiro número no primeiro algarismo, do segundo no segundo algarismo e assim sucessivamente. O número construído pertence a $[0,1]$, mas não aparece na lista. Isso contradiz a hipótese de que a lista era completa.
+Suponha que os elementos de $[0,1)$ possam ser listados. Escreva os números sem uma cauda de noves e construa um decimal com algarismos $1$ ou $2$ que difira do primeiro número no primeiro algarismo, do segundo no segundo, e assim sucessivamente. O número construído pertence a $[0,1)$ e fica fora da lista. Isso contradiz a hipótese de que a lista era completa. Como $[0,1)$ é não enumerável, qualquer conjunto que o contenha, inclusive $[0,1]$, também é não enumerável.
 
 **3.**
 
@@ -490,7 +470,7 @@ Suponha que $\sqrt2=\frac pq$, com $p,q$ inteiros e a fração irredutível. Ele
 
 **5.**
 
-Na divisão de um inteiro por outro, existem apenas um número finito de restos possíveis. Se a divisão não termina, algum resto se repete. A partir dessa repetição, os algarismos decimais passam a se repetir periodicamente.
+Na divisão de um inteiro por outro, há apenas um número finito de restos possíveis. Se a divisão não termina, algum resto se repete. A partir dessa repetição, os algarismos decimais passam a se repetir periodicamente.
 
 **6.**
 
@@ -633,7 +613,7 @@ Todo subconjunto não vazio de $\mathbb R$ limitado superiormente possui supremo
 
 ▶️ **Continuar a sequência principal:** [1.3 — Intervalos e Inequações](1.3-intervalos-inequacoes.qmd)
 
-🧭 **Início da trilha:** [Revisão geral do Módulo 1](1.17-revisao-geral-do-modulo-1.qmd)
+🧭 [**Exercícios da Revisão Geral**](1.17-revisao-geral-do-modulo-1.qmd#exercícios-propostos)
 
 🔬 **Próximo AP:** [1.19-AP — Valor Absoluto e Inequações Modulares](1.19-AP-valor-absoluto.qmd)
 
