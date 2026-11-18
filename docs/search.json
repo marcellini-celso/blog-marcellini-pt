@@ -8824,126 +8824,91 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#valor-absoluto-como-distância-até-zero",
     "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
     "section": "1.1 📦 Valor absoluto como distância até zero",
-    "text": "1.1 📦 Valor absoluto como distância até zero\nO valor absoluto de um número real \\(x\\) é definido por\n\\[\n|x|=\n\\begin{cases}\nx, & x\\geq 0,\\\\\n-x, & x&lt;0.\n\\end{cases}\n\\]\nGeometricamente, \\(|x|\\) mede a distância de \\(x\\) até zero na reta real.\nPor exemplo:\n\\[\n|5|=5,\n\\]\ne\n\\[\n|-5|=5.\n\\]\nOs números \\(5\\) e \\(-5\\) estão à mesma distância da origem."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#distância-entre-dois-pontos",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#distância-entre-dois-pontos",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "1.2 📏 Distância entre dois pontos",
-    "text": "1.2 📏 Distância entre dois pontos\nA distância entre dois números reais \\(x\\) e \\(a\\) é dada por\n\\[\n|x-a|.\n\\]\nPor exemplo, a distância entre \\(7\\) e \\(3\\) é\n\\[\n|7-3|=4.\n\\]\nA distância entre \\(-1\\) e \\(3\\) também é\n\\[\n|-1-3|=|-4|=4.\n\\]\nLogo, a expressão\n\\[\n|x-a|\n\\]\nmede quanto \\(x\\) está afastado de \\(a\\)."
+    "text": "1.1 📦 Valor absoluto como distância até zero\nO valor absoluto de um número real \\(x\\) é definido por:\n\\[\n|x|=\n\\begin{cases}\nx, & x\\geq 0,\\\\\n-x, & x&lt;0.\n\\end{cases}\n\\]\nGeometricamente, \\(|x|\\) representa a distância entre o número \\(x\\) e a origem da reta real.\nPor exemplo:\n\\[\n|5|=5\n\\]\ne\n\\[\n|-5|=5.\n\\]\nOs números \\(5\\) e \\(-5\\) estão à mesma distância do zero, embora estejam em lados opostos da reta.\n\n\n\n\n\n\nNota💡 Interpretação geométrica\n\n\n\nO valor absoluto não mede se um número é positivo ou negativo. Ele mede sua distância até zero.\nPor isso, seu resultado nunca é negativo:\n\\[\n|x|\\geq 0.\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#vizinhança-aberta",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#vizinhança-aberta",
     "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
     "section": "1.3 🎯 Vizinhança aberta",
-    "text": "1.3 🎯 Vizinhança aberta\nUma vizinhança aberta de centro \\(a\\) e raio \\(\\varepsilon&gt;0\\) é o intervalo\n\\[\n(a-\\varepsilon,\\;a+\\varepsilon).\n\\]\nEquivalentemente, é o conjunto dos reais \\(x\\) tais que\n\\[\n|x-a|&lt;\\varepsilon.\n\\]\nPortanto,\n\\[\n|x-a|&lt;\\varepsilon\n\\]\ne\n\\[\na-\\varepsilon&lt;x&lt;a+\\varepsilon\n\\]\ndizem a mesma coisa.\n\n\n\n\n\n\nNotaIdeia central\n\n\n\nUma vizinhança aberta reúne todos os pontos que estão a uma distância menor que \\(\\varepsilon\\) do centro \\(a\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exemplo-com-centro-3",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exemplo-com-centro-3",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "1.4 ✅ Exemplo com centro 3",
-    "text": "1.4 ✅ Exemplo com centro 3\nSe\n\\[\na=3\n\\]\ne\n\\[\n\\varepsilon=0{,}5,\n\\]\nentão a vizinhança aberta é\n\\[\n(3-0{,}5,\\;3+0{,}5)=(2{,}5,\\;3{,}5).\n\\]\nTambém podemos escrever:\n\\[\n|x-3|&lt;0{,}5.\n\\]\nIsso significa que \\(x\\) está a uma distância menor que \\(0{,}5\\) de \\(3\\)."
+    "text": "1.3 🎯 Vizinhança aberta\nUma vizinhança aberta de centro \\(a\\) e raio \\(\\varepsilon&gt;0\\) é o intervalo:\n\\[\n(a-\\varepsilon,\\;a+\\varepsilon).\n\\]\nEquivalentemente, podemos representar essa vizinhança pelo conjunto:\n\\[\nV_\\varepsilon(a)\n=\n\\{x\\in\\mathbb{R}:|x-a|&lt;\\varepsilon\\}.\n\\]\nPortanto:\n\\[\n|x-a|&lt;\\varepsilon\n\\]\ne\n\\[\na-\\varepsilon&lt;x&lt;a+\\varepsilon\n\\]\nexpressam exatamente a mesma condição.\n\n\n\n\n\n\nNota📌 Ideia central\n\n\n\nUma vizinhança aberta reúne todos os pontos da reta real que estão a uma distância menor que \\(\\varepsilon\\) do centro \\(a\\).\nO centro pertence à vizinhança, mas suas extremidades não.\n\n\n\n1.3.1 Exemplo: vizinhança de centro 3\nConsidere:\n\\[\na=3\n\\]\ne\n\\[\n\\varepsilon=0{,}5.\n\\]\nA vizinhança aberta será:\n\\[\n(3-0{,}5,\\;3+0{,}5).\n\\]\nLogo:\n\\[\nV_{0{,}5}(3)=(2{,}5,\\;3{,}5).\n\\]\nTambém podemos escrever:\n\\[\n|x-3|&lt;0{,}5.\n\\]\nIsso significa que \\(x\\) está a uma distância menor que \\(0{,}5\\) de \\(3\\)."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#vizinhança-furada",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#vizinhança-furada",
     "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "1.5 🧭 Vizinhança furada",
-    "text": "1.5 🧭 Vizinhança furada\nEm limites, muitas vezes queremos estudar o que acontece perto de \\(a\\), mas sem usar o próprio ponto \\(a\\).\nPara isso, usamos uma vizinhança furada:\n\\[\n0&lt;|x-a|&lt;\\varepsilon.\n\\]\nEssa desigualdade diz duas coisas:\n\n\\(x\\) está perto de \\(a\\);\n\\(x\\neq a\\).\n\nA condição\n\\[\n0&lt;|x-a|\n\\]\nexclui o centro.\nIsso será muito importante em limites, porque o limite de uma função em \\(a\\) depende do comportamento perto de \\(a\\), não necessariamente do valor da função em \\(a\\)."
+    "section": "1.4 🧭 Vizinhança furada",
+    "text": "1.4 🧭 Vizinhança furada\nNo estudo de limites, frequentemente queremos analisar o comportamento de uma função perto de um ponto, mas sem considerar necessariamente o próprio ponto.\nPara isso, utilizamos uma vizinhança furada (ou perfurada).\nSua representação é:\n\\[\n0&lt;|x-a|&lt;\\varepsilon.\n\\]\nEssa desigualdade reúne duas condições:\n\n\\(x\\) está a uma distância menor que \\(\\varepsilon\\) de \\(a\\);\n\\(x\\) é diferente de \\(a\\).\n\nA primeira condição garante a proximidade. A segunda exclui o centro.\nPodemos representar a vizinhança furada por:\n\\[\n(a-\\varepsilon,a)\\cup(a,a+\\varepsilon).\n\\]\nOu, em notação de conjuntos:\n\\[\nV_\\varepsilon^*(a)\n=\n\\{x\\in\\mathbb{R}:0&lt;|x-a|&lt;\\varepsilon\\}.\n\\]\n\n\n\n\n\n\nImportante💡 Por que excluir o centro?\n\n\n\nO limite de uma função em \\(a\\) depende do comportamento de seus valores quando \\(x\\) se aproxima de \\(a\\), e não necessariamente do valor que a função assume exatamente em \\(a\\).\nPor isso, a definição de limite utiliza uma vizinhança furada.\n\n\nCompare as duas representações para \\(a=3\\) e \\(\\varepsilon=0{,}5\\). Os extremos \\(2{,}5\\) e \\(3{,}5\\) ficam excluídos nos dois casos. O ponto \\(3\\) pertence só à primeira vizinhança.\n\n\n\n\n\n\nFigura 1: Vizinhanças aberta e furada com o mesmo centro e raio. O ponto 3 pertence apenas à vizinhança aberta."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-equivalentes",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-equivalentes",
     "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "1.6 🔁 Desigualdades equivalentes",
-    "text": "1.6 🔁 Desigualdades equivalentes\nA desigualdade\n\\[\n|x-a|&lt;\\varepsilon\n\\]\né equivalente a\n\\[\n-\\varepsilon&lt;x-a&lt;\\varepsilon.\n\\]\nSomando \\(a\\) nos três membros, obtemos\n\\[\na-\\varepsilon&lt;x&lt;a+\\varepsilon.\n\\]\nAssim,\n\\[\n|x-a|&lt;\\varepsilon\n\\quad\\Longleftrightarrow\\quad\nx\\in(a-\\varepsilon,a+\\varepsilon).\n\\]\nEssa equivalência é uma das ferramentas fundamentais para traduzir linguagem algébrica em linguagem geométrica."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-com-valor-absoluto",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-com-valor-absoluto",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "1.7 ⚖️ Desigualdades com valor absoluto",
-    "text": "1.7 ⚖️ Desigualdades com valor absoluto\nTambém temos a forma fechada:\n\\[\n|x-a|\\leq r\n\\]\nequivalente a\n\\[\na-r\\leq x\\leq a+r.\n\\]\nPor exemplo:\n\\[\n|x-2|\\leq 5\n\\]\nequivale a\n\\[\n-5\\leq x-2\\leq 5.\n\\]\nSomando \\(2\\):\n\\[\n-3\\leq x\\leq 7.\n\\]\nLogo, a solução é\n\\[\n[-3,7].\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-do-tipo-maior-que",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-do-tipo-maior-que",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "1.8 🚪 Desigualdades do tipo maior que",
-    "text": "1.8 🚪 Desigualdades do tipo maior que\nA desigualdade\n\\[\n|x-a|&gt;r\n\\]\nsignifica que \\(x\\) está a uma distância maior que \\(r\\) de \\(a\\).\nIsso corresponde a dois intervalos:\n\\[\nx&lt;a-r\n\\]\nou\n\\[\nx&gt;a+r.\n\\]\nPor exemplo:\n\\[\n|x-3|&gt;2\n\\]\nequivale a\n\\[\nx&lt;1\n\\]\nou\n\\[\nx&gt;5.\n\\]\nLogo, a solução é\n\\[\n(-\\infty,1)\\cup(5,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#ponte-para-limites",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#ponte-para-limites",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "1.9 🌉 Ponte para limites",
-    "text": "1.9 🌉 Ponte para limites\nA definição formal de limite usa exatamente a linguagem de distância e vizinhança.\nDizer que\n\\[\n\\lim_{x\\to a}f(x)=L\n\\]\nsignifica, informalmente, que podemos tornar \\(f(x)\\) tão perto de \\(L\\) quanto quisermos, desde que \\(x\\) esteja suficientemente perto de \\(a\\).\nA linguagem formal usa expressões como:\n\\[\n0&lt;|x-a|&lt;\\delta\n\\]\ne\n\\[\n|f(x)-L|&lt;\\varepsilon.\n\\]\nPor isso, compreender valor absoluto como distância é essencial antes de estudar limites com rigor."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-1",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nEscreva na forma de intervalo:\n\n\\(|x-4|&lt;2\\)\n\n\\(|x+1|&lt;3\\)\n\n\\(|x-5|\\leq 1\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-2",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-2",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nEscreva usando valor absoluto:\n\n\\(x\\in(2,8)\\)\n\n\\(x\\in(-3,3)\\)\n\n\\(x\\in[1,5]\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-3",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-3",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nResolva:\n\n\\(|x-2|&gt;4\\)\n\n\\(|x+3|\\geq 2\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-4",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-4",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nExplique o significado geométrico de\n\\[\n0&lt;|x-a|&lt;\\varepsilon.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-1-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-1-1",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "3.1 🧪 Exercício 1",
-    "text": "3.1 🧪 Exercício 1\n\n\n\n\\[\n|x-4|&lt;2\n\\]\nequivale a\n\\[\n4-2&lt;x&lt;4+2.\n\\]\nLogo,\n\\[\nx\\in(2,6).\n\\]\n\n\n\n\\[\n|x+1|&lt;3\n\\]\né o mesmo que\n\\[\n|x-(-1)|&lt;3.\n\\]\nLogo,\n\\[\nx\\in(-4,2).\n\\]\n\n\n\n\\[\n|x-5|\\leq 1\n\\]\nequivale a\n\\[\n5-1\\leq x\\leq 5+1.\n\\]\nLogo,\n\\[\nx\\in[4,6].\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-2-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-2-1",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "3.2 🧪 Exercício 2",
-    "text": "3.2 🧪 Exercício 2\n\nO intervalo \\((2,8)\\) tem centro \\(5\\) e raio \\(3\\). Logo:\n\n\\[\n|x-5|&lt;3.\n\\]\n\nO intervalo \\((-3,3)\\) tem centro \\(0\\) e raio \\(3\\). Logo:\n\n\\[\n|x|&lt;3.\n\\]\n\nO intervalo \\([1,5]\\) tem centro \\(3\\) e raio \\(2\\). Logo:\n\n\\[\n|x-3|\\leq 2.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-3-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-3-1",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\n\n\n\n\\[\n|x-2|&gt;4\n\\]\nsignifica:\n\\[\nx&lt;2-4\n\\]\nou\n\\[\nx&gt;2+4.\n\\]\nLogo,\n\\[\nx\\in(-\\infty,-2)\\cup(6,+\\infty).\n\\]\n\n\n\n\\[\n|x+3|\\geq 2\n\\]\né o mesmo que\n\\[\n|x-(-3)|\\geq 2.\n\\]\nLogo:\n\\[\nx\\leq -5\n\\]\nou\n\\[\nx\\geq -1.\n\\]\nPortanto,\n\\[\nx\\in(-\\infty,-5]\\cup[-1,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-4-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercício-4-1",
-    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\nA expressão\n\\[\n0&lt;|x-a|&lt;\\varepsilon\n\\]\nsignifica que \\(x\\) está dentro da vizinhança aberta de centro \\(a\\) e raio \\(\\varepsilon\\), mas \\(x\\) não pode ser igual a \\(a\\). É uma vizinhança furada."
+    "section": "1.5 🔁 Desigualdades equivalentes",
+    "text": "1.5 🔁 Desigualdades equivalentes\nO quadro retoma as formas centradas estudadas em 1.19-AP — Valor Absoluto e Inequações Modulares.\nPara \\(r\\geq 0\\), temos:\n\n\n\nCondição de distância\nRegião na reta real\n\n\n\n\n\\(\\lvert x-a\\rvert&lt;r\\)\n\\((a-r,a+r)\\)\n\n\n\\(\\lvert x-a\\rvert\\leq r\\)\n\\([a-r,a+r]\\)\n\n\n\\(\\lvert x-a\\rvert&gt;r\\)\n\\((-\\infty,a-r)\\cup(a+r,+\\infty)\\)\n\n\n\\(\\lvert x-a\\rvert\\geq r\\)\n\\((-\\infty,a-r]\\cup[a+r,+\\infty)\\)\n\n\n\nVamos desenvolver a equivalência que conecta valor absoluto e intervalos.\nConsidere:\n\\[\n|x-a|&lt;\\varepsilon,\n\\qquad \\varepsilon&gt;0.\n\\]\nPela definição de valor absoluto, essa condição equivale a:\n\\[\n-\\varepsilon&lt;x-a&lt;\\varepsilon.\n\\]\nSomando \\(a\\) aos três membros:\n\\[\na-\\varepsilon&lt;x&lt;a+\\varepsilon.\n\\]\nAssim:\n\\[\n\\boxed{\n|x-a|&lt;\\varepsilon\n\\iff\na-\\varepsilon&lt;x&lt;a+\\varepsilon.\n}\n\\]\nEm termos de intervalos:\n\\[\n\\boxed{\nx\\in(a-\\varepsilon,a+\\varepsilon).\n}\n\\]\nEssa equivalência é uma ferramenta importante para traduzir uma condição algébrica em uma região geométrica da reta real."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#quiz-valor-absoluto-distância-e-vizinhanças",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#quiz-valor-absoluto-distância-e-vizinhanças",
     "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
-    "section": "3.5 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças",
-    "text": "3.5 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças\n\nQ1. A expressão \\(|x-a|\\) representa:\n\n\n\n\n ✓A distância entre \\(x\\) e \\(a\\) na reta real.\n\n\n ✗A soma entre \\(x\\) e \\(a\\).\n\n\n ✗A multiplicação entre \\(x\\) e \\(a\\).\n\n\n\n\n\n\nQ2. A desigualdade \\(|x-3|&lt;0{,}5\\) representa:\n\n\n\n\n ✗\\(x\\) está longe de \\(3\\).\n\n\n ✓\\(x\\) está a uma distância menor que \\(0{,}5\\) de \\(3\\).\n\n\n ✗\\(x\\) é necessariamente igual a \\(3\\).\n\n\n\n\n\n\nQ3. A expressão \\(0&lt;|x-a|&lt;\\varepsilon\\) exclui:\n\n\n\n\n ✗Todos os pontos próximos de \\(a\\).\n\n\n ✓O próprio ponto \\(a\\).\n\n\n ✗Todos os números reais."
+    "section": "1.11 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças",
+    "text": "1.11 🧩 Quiz — Valor Absoluto, Distância e Vizinhanças\n\nQ1. A expressão \\(|x-a|\\) representa:\n\n\n\n\n ✓A distância entre \\(x\\) e \\(a\\) na reta real.\n\n\n ✗A soma entre \\(x\\) e \\(a\\).\n\n\n ✗A multiplicação entre \\(x\\) e \\(a\\).\n\n\n\n\n\n\nQ2. A desigualdade \\(|x-3|&lt;0{,}5\\) representa:\n\n\n\n\n ✗\\(x\\) está longe de \\(3\\).\n\n\n ✓\\(x\\) está a uma distância menor que \\(0{,}5\\) de \\(3\\).\n\n\n ✗\\(x\\) é necessariamente igual a \\(3\\).\n\n\n\n\n\n\nQ3. A expressão \\(0&lt;|x-a|&lt;\\varepsilon\\) exclui:\n\n\n\n\n ✗Todos os pontos próximos de \\(a\\).\n\n\n ✓O próprio ponto \\(a\\).\n\n\n ✗Todos os números reais.\n\n\n\n\n\n\nQ4. Na definição formal de limite, o número \\(\\delta\\) controla:\n\n\n\n\n ✗A distância entre \\(f(x)\\) e \\(L\\).\n\n\n ✓A distância entre \\(x\\) e \\(a\\).\n\n\n ✗O valor da função no ponto \\(a\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#distância-entre-dois-pontos-reais",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#distância-entre-dois-pontos-reais",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.2 📏 Distância entre dois pontos reais",
+    "text": "1.2 📏 Distância entre dois pontos reais\nA distância entre dois números reais \\(x\\) e \\(a\\) é dada por:\n\\[\nd(x,a)=|x-a|.\n\\]\nEssa expressão funciona independentemente da posição relativa dos dois números.\nPor exemplo, a distância entre \\(7\\) e \\(3\\) é:\n\\[\n|7-3|=4.\n\\]\nA distância entre \\(-1\\) e \\(3\\) também é:\n\\[\n|-1-3|=|-4|=4.\n\\]\nPortanto, a expressão\n\\[\n|x-a|\n\\]\nmede quanto \\(x\\) está afastado de \\(a\\) na reta real.\nÉ importante observar que a distância é simétrica:\n\\[\n|x-a|=|a-x|.\n\\]\nAssim, a distância de \\(x\\) até \\(a\\) é igual à distância de \\(a\\) até \\(x\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-com-valor-absoluto-menor-ou-igual",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-com-valor-absoluto-menor-ou-igual",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.6 ⚖️ Desigualdades com valor absoluto: menor ou igual",
+    "text": "1.6 ⚖️ Desigualdades com valor absoluto: menor ou igual\nTambém podemos trabalhar com desigualdades não estritas:\n\\[\n|x-a|\\leq r,\n\\qquad r\\geq 0.\n\\]\nEssa condição significa que a distância entre \\(x\\) e \\(a\\) é menor ou igual a \\(r\\).\nEla equivale a:\n\\[\n-r\\leq x-a\\leq r.\n\\]\nSomando \\(a\\) aos três membros:\n\\[\na-r\\leq x\\leq a+r.\n\\]\nPortanto:\n\\[\n\\boxed{\n|x-a|\\leq r\n\\iff\nx\\in[a-r,a+r].\n}\n\\]\n\n1.6.1 Exemplo\nConsidere:\n\\[\n|x-2|\\leq 5.\n\\]\nTemos:\n\\[\n-5\\leq x-2\\leq 5.\n\\]\nSomando \\(2\\):\n\\[\n-3\\leq x\\leq 7.\n\\]\nLogo, a solução é:\n\\[\n\\boxed{x\\in[-3,7].}\n\\]\nObserve a diferença entre as duas situações:\n\n\\(|x-a|&lt;r\\): intervalo aberto;\n\\(|x-a|\\leq r\\): intervalo fechado."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-com-valor-absoluto-maior-que",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#desigualdades-com-valor-absoluto-maior-que",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.7 🚪 Desigualdades com valor absoluto: maior que",
+    "text": "1.7 🚪 Desigualdades com valor absoluto: maior que\nA desigualdade\n\\[\n|x-a|&gt;r,\n\\qquad r\\geq 0,\n\\]\nsignifica que \\(x\\) está a uma distância maior que \\(r\\) de \\(a\\).\nNesse caso, \\(x\\) pertence ao complemento do intervalo fechado \\([a-r,a+r]\\).\nIsso corresponde a duas possibilidades:\n\\[\nx&lt;a-r\n\\]\nou\n\\[\nx&gt;a+r.\n\\]\nPortanto:\n\\[\n\\boxed{\n|x-a|&gt;r\n\\iff\nx\\in(-\\infty,a-r)\\cup(a+r,+\\infty).\n}\n\\]\n\n1.7.1 Exemplo\nConsidere:\n\\[\n|x-3|&gt;2.\n\\]\nTemos duas possibilidades:\n\\[\nx&lt;3-2\n\\]\nou\n\\[\nx&gt;3+2.\n\\]\nLogo:\n\\[\nx&lt;1\n\\qquad\\text{ou}\\qquad\nx&gt;5.\n\\]\nA solução é:\n\\[\n\\boxed{\n(-\\infty,1)\\cup(5,+\\infty).\n}\n\\]\n\n\n1.7.2 E quando a desigualdade é maior ou igual?\nPara \\(r\\geq 0\\), se\n\\[\n|x-a|\\geq r,\n\\]\nentão:\n\\[\nx\\leq a-r\n\\qquad\\text{ou}\\qquad\nx\\geq a+r.\n\\]\nAssim:\n\\[\n\\boxed{\n|x-a|\\geq r\n\\iff\nx\\in(-\\infty,a-r]\\cup[a+r,+\\infty).\n}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#ponte-para-o-cálculo",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#ponte-para-o-cálculo",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.8 🌉 Ponte para o Cálculo",
+    "text": "1.8 🌉 Ponte para o Cálculo\nA definição formal de limite utiliza exatamente a linguagem de distância e vizinhança que desenvolvemos até aqui.\nConsidere a afirmação:\n\\[\n\\lim_{x\\to a}f(x)=L.\n\\]\nInformalmente, ela significa que podemos tornar \\(f(x)\\) tão próximo de \\(L\\) quanto desejarmos, tomando \\(x\\) no domínio de \\(f\\), suficientemente perto de \\(a\\) e diferente de \\(a\\).\nA linguagem matemática utiliza duas desigualdades:\n\\[\n0&lt;|x-a|&lt;\\delta\n\\]\ne\n\\[\n|f(x)-L|&lt;\\varepsilon.\n\\]\nCada uma desempenha um papel específico.\nNa entrada da função:\n\\[\n0&lt;|x-a|&lt;\\delta.\n\\]\nEssa condição indica que \\(x\\) está em uma vizinhança furada de centro \\(a\\) e raio \\(\\delta\\).\nNa saída da função:\n\\[\n|f(x)-L|&lt;\\varepsilon.\n\\]\nEssa condição indica que \\(f(x)\\) está a uma distância menor que \\(\\varepsilon\\) de \\(L\\).\nPortanto:\n\n\\(\\delta\\) controla a proximidade de \\(x\\) em relação a \\(a\\);\n\\(\\varepsilon\\) controla a proximidade de \\(f(x)\\) em relação a \\(L\\).\n\n\n1.8.1 A definição formal de limite\nSeja \\(f:A\\to\\mathbb R\\) e seja \\(a\\) um ponto de acumulação de \\(A\\). Isso significa que toda vizinhança furada de \\(a\\) contém algum ponto do domínio. Mais precisamente, para todo \\(r&gt;0\\), existe \\(x\\in A\\) tal que \\(0&lt;|x-a|&lt;r\\). Assim, podemos aproximar \\(x\\) de \\(a\\) com valores do domínio, mesmo quando \\(a\\notin A\\).\nDizemos que:\n\\[\n\\lim_{x\\to a}f(x)=L\n\\]\nquando:\n\\[\n\\forall\\varepsilon&gt;0,\\ \\exists\\delta&gt;0\n\\]\ntal que, para todo \\(x\\in A\\),\n\\[\n0&lt;|x-a|&lt;\\delta\n\\quad\\Longrightarrow\\quad\n|f(x)-L|&lt;\\varepsilon.\n\\]\nEssa definição afirma que, para qualquer tolerância positiva \\(\\varepsilon\\) escolhida para os valores da função, existe uma tolerância positiva \\(\\delta\\) que garante o resultado desejado para as entradas suficientemente próximas de \\(a\\).\n\n\n\n\n\n\nDica💡 Uma interpretação importante\n\n\n\nO número \\(\\varepsilon\\) é escolhido primeiro. Depois, precisamos encontrar um \\(\\delta\\) que garanta a aproximação desejada.\nNão precisamos que \\(\\delta\\) seja igual a \\(\\varepsilon\\). A escolha de \\(\\delta\\) pode depender da função, do ponto \\(a\\) e da tolerância \\(\\varepsilon\\) escolhida.\n\n\nNão é necessário dominar todos os detalhes dessa definição neste momento. O objetivo deste aprofundamento é compreender de onde vêm as expressões de valor absoluto que aparecem nela."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercícios-propostos",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#exercícios-propostos",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.9 🧪 Exercícios propostos",
+    "text": "1.9 🧪 Exercícios propostos\n\n\n\n\n\n\nNota📝 Exercícios\n\n\n\n\n1.9.1 🧪 Exercício 1 — Escrevendo intervalos\nEscreva cada desigualdade na forma de intervalo:\n\n\\(|x-4|&lt;2\\)\n\\(|x+1|&lt;3\\)\n\\(|x-5|\\leq 1\\)\n\n\n\n1.9.2 🧪 Exercício 2 — Escrevendo com valor absoluto\nEscreva cada intervalo usando uma desigualdade com valor absoluto:\n\n\\(x\\in(2,8)\\)\n\\(x\\in(-3,3)\\)\n\\(x\\in[1,5]\\)\n\n\n\n1.9.3 🧪 Exercício 3 — Desigualdades modulares\nResolva:\n\n\\(|x-2|&gt;4\\)\n\\(|x+3|\\geq 2\\)\n\n\n\n1.9.4 🧪 Exercício 4 — Interpretação geométrica\nExplique o significado geométrico da expressão:\n\\[\n0&lt;|x-a|&lt;\\varepsilon.\n\\]\n\n\n1.9.5 🧪 Exercício 5 — Vizinhança aberta\nDetermine a vizinhança aberta de centro \\(a=4\\) e raio \\(\\varepsilon=0{,}2\\), escrevendo sua resposta:\n\nna forma de intervalo;\npor meio de uma desigualdade com valor absoluto."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#gabarito-comentado",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#gabarito-comentado",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.10 ✅ Gabarito comentado",
+    "text": "1.10 ✅ Gabarito comentado\n\n\n\n\n\n\nImportante🔎 Clique para consultar as resoluções\n\n\n\n\n\n\n1.10.1 🧪 Exercício 1 — Escrevendo intervalos\na)\n\\[\n|x-4|&lt;2\n\\]\nEquivale a:\n\\[\n4-2&lt;x&lt;4+2.\n\\]\nLogo:\n\\[\n\\boxed{x\\in(2,6).}\n\\]\nb)\nPodemos escrever:\n\\[\n|x+1|=|x-(-1)|.\n\\]\nAssim:\n\\[\n|x-(-1)|&lt;3.\n\\]\nLogo:\n\\[\n\\boxed{x\\in(-4,2).}\n\\]\nc)\n\\[\n|x-5|\\leq 1\n\\]\nEquivale a:\n\\[\n5-1\\leq x\\leq 5+1.\n\\]\nPortanto:\n\\[\n\\boxed{x\\in[4,6].}\n\\]\n\n\n1.10.2 🧪 Exercício 2 — Escrevendo com valor absoluto\na)\nO intervalo \\((2,8)\\) tem centro:\n\\[\na=\\frac{2+8}{2}=5\n\\]\ne raio:\n\\[\nr=\\frac{8-2}{2}=3.\n\\]\nLogo:\n\\[\n\\boxed{|x-5|&lt;3.}\n\\]\nb)\nO intervalo \\((-3,3)\\) tem centro \\(0\\) e raio \\(3\\).\nLogo:\n\\[\n\\boxed{|x|&lt;3.}\n\\]\nc)\nO intervalo \\([1,5]\\) tem centro:\n\\[\na=\\frac{1+5}{2}=3\n\\]\ne raio:\n\\[\nr=\\frac{5-1}{2}=2.\n\\]\nComo o intervalo é fechado, utilizamos a desigualdade não estrita:\n\\[\n\\boxed{|x-3|\\leq 2.}\n\\]\n\n\n1.10.3 🧪 Exercício 3 — Desigualdades modulares\na)\n\\[\n|x-2|&gt;4\n\\]\nIsso significa:\n\\[\nx&lt;2-4\n\\]\nou:\n\\[\nx&gt;2+4.\n\\]\nLogo:\n\\[\n\\boxed{x\\in(-\\infty,-2)\\cup(6,+\\infty).}\n\\]\nb)\n\\[\n|x+3|\\geq 2\n\\]\nPodemos escrever:\n\\[\n|x-(-3)|\\geq 2.\n\\]\nLogo:\n\\[\nx\\leq -3-2\n\\]\nou:\n\\[\nx\\geq -3+2.\n\\]\nPortanto:\n\\[\n\\boxed{x\\in(-\\infty,-5]\\cup[-1,+\\infty).}\n\\]\n\n\n1.10.4 🧪 Exercício 4 — Interpretação geométrica\nA expressão:\n\\[\n0&lt;|x-a|&lt;\\varepsilon\n\\]\nindica que \\(x\\) pertence à vizinhança aberta de centro \\(a\\) e raio \\(\\varepsilon\\), mas não pode ser igual ao próprio centro.\nÉ uma vizinhança furada, representada por:\n\\[\n(a-\\varepsilon,a)\\cup(a,a+\\varepsilon).\n\\]\n\n\n1.10.5 🧪 Exercício 5 — Vizinhança aberta\nTemos:\n\\[\na=4\n\\qquad\\text{e}\\qquad\n\\varepsilon=0{,}2.\n\\]\na) Na forma de intervalo:\n\\[\n(4-0{,}2,\\;4+0{,}2).\n\\]\nLogo:\n\\[\n\\boxed{(3{,}8,\\;4{,}2).}\n\\]\nb) Com valor absoluto:\n\\[\n\\boxed{|x-4|&lt;0{,}2.}\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#conexão-com-o-estudo-de-limites",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#conexão-com-o-estudo-de-limites",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.12 🌉 Conexão com o estudo de limites",
+    "text": "1.12 🌉 Conexão com o estudo de limites\nNeste aprofundamento, partimos de uma interpretação geométrica simples — o valor absoluto como distância — e chegamos à linguagem utilizada na definição formal de limite.\nA sequência de ideias é:\n\nO valor absoluto representa uma distância na reta real.\nA distância permite definir vizinhanças abertas.\nA exclusão do centro produz uma vizinhança furada.\nAs vizinhanças permitem descrever matematicamente a aproximação de uma variável a um ponto.\nA linguagem de \\(\\varepsilon\\) e \\(\\delta\\) formaliza a aproximação dos valores de uma função.\n\nEssa construção será retomada quando estudarmos limites com maior rigor matemático."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#navegação",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html#navegação",
+    "title": "🔬 Módulo 1.20-AP: Valor Absoluto, Distância e Vizinhanças",
+    "section": "1.13 🔗 Navegação",
+    "text": "1.13 🔗 Navegação\n↩︎️ Voltar à aula de origem: 1.4 — Números Reais e Intervalos\n🧭 Exercícios da Revisão Geral\n▶️ Continuar a sequência principal: 1.5 — Equações e Inequações\n🔬 AP anterior: 1.19-AP — Valor Absoluto e Inequações Modulares\n🔬 Próximo AP: 1.21-AP — Domínio de Funções: Guia Completo\n🏠 Sumário do Curso · ← Cursos de Matemática · 🔝 Topo\n\nBlog do Marcellini — Explorando a Matemática com Rigor e Beleza.\n\n\n\n\n\n\nNota\n\n\n\nCriado por Blog do Marcellini com ❤️ e código."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.18-AP-conjuntos.html",
