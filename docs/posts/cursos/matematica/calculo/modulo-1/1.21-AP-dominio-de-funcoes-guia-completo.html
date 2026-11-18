@@ -28,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -268,37 +303,41 @@ window.Quarto = {
   <ul>
   <li><a href="#domínio-de-funções-guia-completo" id="toc-domínio-de-funções-guia-completo" class="nav-link active" data-scroll-target="#domínio-de-funções-guia-completo"><span class="header-section-number">1</span> 🔬 Domínio de Funções — Guia Completo</a>
   <ul>
-  <li><a href="#regra-geral" id="toc-regra-geral" class="nav-link" data-scroll-target="#regra-geral"><span class="header-section-number">1.1</span> 🧭 1. Regra geral</a></li>
-  <li><a href="#frações-o-denominador-não-pode-ser-zero" id="toc-frações-o-denominador-não-pode-ser-zero" class="nav-link" data-scroll-target="#frações-o-denominador-não-pode-ser-zero"><span class="header-section-number">1.2</span> ➗ 2. Frações: o denominador não pode ser zero</a></li>
-  <li><a href="#raízes-de-índice-par" id="toc-raízes-de-índice-par" class="nav-link" data-scroll-target="#raízes-de-índice-par"><span class="header-section-number">1.3</span> 🌱 3. Raízes de índice par</a>
+  <li><a href="#regra-geral" id="toc-regra-geral" class="nav-link" data-scroll-target="#regra-geral"><span class="header-section-number">1.1</span> 🧭 Regra geral</a>
+  <ul class="collapse">
+  <li><a href="#quadro-de-consulta" id="toc-quadro-de-consulta" class="nav-link" data-scroll-target="#quadro-de-consulta"><span class="header-section-number">1.1.1</span> Quadro de consulta</a></li>
+  </ul></li>
+  <li><a href="#frações" id="toc-frações" class="nav-link" data-scroll-target="#frações"><span class="header-section-number">1.2</span> ➗ Frações</a></li>
+  <li><a href="#raízes-de-índice-par" id="toc-raízes-de-índice-par" class="nav-link" data-scroll-target="#raízes-de-índice-par"><span class="header-section-number">1.3</span> 🌱 Raízes de índice par</a>
   <ul class="collapse">
   <li><a href="#outro-exemplo-uma-raiz-com-expressão-quadrática" id="toc-outro-exemplo-uma-raiz-com-expressão-quadrática" class="nav-link" data-scroll-target="#outro-exemplo-uma-raiz-com-expressão-quadrática"><span class="header-section-number">1.3.1</span> Outro exemplo: uma raiz com expressão quadrática</a></li>
   </ul></li>
-  <li><a href="#logaritmos" id="toc-logaritmos" class="nav-link" data-scroll-target="#logaritmos"><span class="header-section-number">1.4</span> 📈 4. Logaritmos</a>
+  <li><a href="#logaritmos" id="toc-logaritmos" class="nav-link" data-scroll-target="#logaritmos"><span class="header-section-number">1.4</span> 📈 Logaritmos</a>
   <ul class="collapse">
   <li><a href="#outro-exemplo" id="toc-outro-exemplo" class="nav-link" data-scroll-target="#outro-exemplo"><span class="header-section-number">1.4.1</span> Outro exemplo</a></li>
   </ul></li>
-  <li><a href="#composição-de-restrições" id="toc-composição-de-restrições" class="nav-link" data-scroll-target="#composição-de-restrições"><span class="header-section-number">1.5</span> 🧩 5. Composição de restrições</a></li>
-  <li><a href="#logaritmo-com-fração" id="toc-logaritmo-com-fração" class="nav-link" data-scroll-target="#logaritmo-com-fração"><span class="header-section-number">1.6</span> 🔗 6. Logaritmo com fração</a></li>
-  <li><a href="#domínio-de-função-composta" id="toc-domínio-de-função-composta" class="nav-link" data-scroll-target="#domínio-de-função-composta"><span class="header-section-number">1.7</span> 🧮 7. Domínio de função composta</a>
+  <li><a href="#tangente" id="toc-tangente" class="nav-link" data-scroll-target="#tangente"><span class="header-section-number">1.5</span> 📐 Tangente</a></li>
+  <li><a href="#combinação-de-restrições" id="toc-combinação-de-restrições" class="nav-link" data-scroll-target="#combinação-de-restrições"><span class="header-section-number">1.6</span> 🧩 Combinação de restrições</a></li>
+  <li><a href="#logaritmo-com-fração" id="toc-logaritmo-com-fração" class="nav-link" data-scroll-target="#logaritmo-com-fração"><span class="header-section-number">1.7</span> 🔗 Logaritmo com fração</a></li>
+  <li><a href="#domínio-de-função-composta" id="toc-domínio-de-função-composta" class="nav-link" data-scroll-target="#domínio-de-função-composta"><span class="header-section-number">1.8</span> 🧮 Domínio de função composta</a>
   <ul class="collapse">
-  <li><a href="#exemplo" id="toc-exemplo" class="nav-link" data-scroll-target="#exemplo"><span class="header-section-number">1.7.1</span> Exemplo</a></li>
+  <li><a href="#exemplo" id="toc-exemplo" class="nav-link" data-scroll-target="#exemplo"><span class="header-section-number">1.8.1</span> Exemplo</a></li>
   </ul></li>
-  <li><a href="#funções-definidas-por-partes" id="toc-funções-definidas-por-partes" class="nav-link" data-scroll-target="#funções-definidas-por-partes"><span class="header-section-number">1.8</span> 🧱 8. Funções definidas por partes</a>
+  <li><a href="#funções-definidas-por-partes" id="toc-funções-definidas-por-partes" class="nav-link" data-scroll-target="#funções-definidas-por-partes"><span class="header-section-number">1.9</span> 🧱 Funções definidas por partes</a>
   <ul class="collapse">
-  <li><a href="#primeira-parte" id="toc-primeira-parte" class="nav-link" data-scroll-target="#primeira-parte"><span class="header-section-number">1.8.1</span> Primeira parte</a></li>
-  <li><a href="#segunda-parte" id="toc-segunda-parte" class="nav-link" data-scroll-target="#segunda-parte"><span class="header-section-number">1.8.2</span> Segunda parte</a></li>
-  <li><a href="#domínio-total" id="toc-domínio-total" class="nav-link" data-scroll-target="#domínio-total"><span class="header-section-number">1.8.3</span> Domínio total</a></li>
+  <li><a href="#primeira-parte" id="toc-primeira-parte" class="nav-link" data-scroll-target="#primeira-parte"><span class="header-section-number">1.9.1</span> Primeira parte</a></li>
+  <li><a href="#segunda-parte" id="toc-segunda-parte" class="nav-link" data-scroll-target="#segunda-parte"><span class="header-section-number">1.9.2</span> Segunda parte</a></li>
+  <li><a href="#domínio-total" id="toc-domínio-total" class="nav-link" data-scroll-target="#domínio-total"><span class="header-section-number">1.9.3</span> Domínio total</a></li>
   </ul></li>
-  <li><a href="#erros-comuns-na-determinação-do-domínio" id="toc-erros-comuns-na-determinação-do-domínio" class="nav-link" data-scroll-target="#erros-comuns-na-determinação-do-domínio"><span class="header-section-number">1.9</span> ⚠️ 9. Erros comuns na determinação do domínio</a>
+  <li><a href="#erros-comuns-na-determinação-do-domínio" id="toc-erros-comuns-na-determinação-do-domínio" class="nav-link" data-scroll-target="#erros-comuns-na-determinação-do-domínio"><span class="header-section-number">1.10</span> ⚠️ Erros comuns na determinação do domínio</a>
   <ul class="collapse">
-  <li><a href="#um-exemplo-importante-expressões-equivalentes-domínios-diferentes" id="toc-um-exemplo-importante-expressões-equivalentes-domínios-diferentes" class="nav-link" data-scroll-target="#um-exemplo-importante-expressões-equivalentes-domínios-diferentes"><span class="header-section-number">1.9.1</span> Um exemplo importante: expressões equivalentes, domínios diferentes</a></li>
+  <li><a href="#simplificação-e-o-ponto-ausente" id="toc-simplificação-e-o-ponto-ausente" class="nav-link" data-scroll-target="#simplificação-e-o-ponto-ausente"><span class="header-section-number">1.10.1</span> Simplificação e o ponto ausente</a></li>
   </ul></li>
-  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">1.10</span> 🧪 10. Exercícios propostos</a></li>
-  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">1.11</span> ✅ Gabarito comentado</a></li>
-  <li><a href="#quiz-domínio-de-funções" id="toc-quiz-domínio-de-funções" class="nav-link" data-scroll-target="#quiz-domínio-de-funções"><span class="header-section-number">1.12</span> 🧩 11. Quiz — Domínio de Funções</a></li>
-  <li><a href="#síntese-do-aprofundamento" id="toc-síntese-do-aprofundamento" class="nav-link" data-scroll-target="#síntese-do-aprofundamento"><span class="header-section-number">1.13</span> 🧭 12. Síntese do aprofundamento</a></li>
-  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">1.14</span> 🔗 13. Navegação</a></li>
+  <li><a href="#exercícios-propostos" id="toc-exercícios-propostos" class="nav-link" data-scroll-target="#exercícios-propostos"><span class="header-section-number">1.11</span> 🧪 Exercícios propostos</a></li>
+  <li><a href="#gabarito-comentado" id="toc-gabarito-comentado" class="nav-link" data-scroll-target="#gabarito-comentado"><span class="header-section-number">1.12</span> ✅ Gabarito comentado</a></li>
+  <li><a href="#quiz-domínio-de-funções" id="toc-quiz-domínio-de-funções" class="nav-link" data-scroll-target="#quiz-domínio-de-funções"><span class="header-section-number">1.13</span> 🧩 Quiz — Domínio de Funções</a></li>
+  <li><a href="#síntese-do-aprofundamento" id="toc-síntese-do-aprofundamento" class="nav-link" data-scroll-target="#síntese-do-aprofundamento"><span class="header-section-number">1.14</span> 🧭 Síntese do aprofundamento</a></li>
+  <li><a href="#navegação" id="toc-navegação" class="nav-link" data-scroll-target="#navegação"><span class="header-section-number">1.15</span> 🔗 Navegação</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -374,8 +413,22 @@ window.Quarto = {
 <p>No Cálculo, determinar esse conjunto é fundamental. Antes de investigar limites, continuidade, derivadas ou integrais, precisamos saber em quais valores de entrada a função pode ser considerada.</p>
 <p>Neste aprofundamento, vamos organizar as principais restrições que aparecem no estudo de funções reais e aprender a combiná-las corretamente.</p>
 <section id="regra-geral" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="regra-geral"><span class="header-section-number">1.1</span> 🧭 1. Regra geral</h2>
-<p>Para determinar o domínio real de uma função, fazemos a seguinte pergunta:</p>
+<h2 data-number="1.1" class="anchored" data-anchor-id="regra-geral"><span class="header-section-number">1.1</span> 🧭 Regra geral</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Domínio declarado e domínio natural">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Domínio declarado e domínio natural
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O <strong>domínio declarado</strong> faz parte da definição de uma função. Por exemplo, se <span class="math inline">\(f:[0,+\infty)\to\mathbb R\)</span> é dada por <span class="math inline">\(f(x)=x^2\)</span>, seu domínio é <span class="math inline">\([0,+\infty)\)</span>. O <strong>domínio real natural</strong> da expressão <span class="math inline">\(x^2\)</span> é <span class="math inline">\(\mathbb R\)</span>, pois o quadrado está definido para toda entrada real.</p>
+<p>Quando o enunciado fornece apenas a expressão, este guia usa seu domínio real natural. Se o domínio foi declarado, usamos o conjunto dado e verificamos se a expressão está definida em todas as suas entradas.</p>
+</div>
+</div>
+<p>Para determinar o domínio real natural de uma expressão, fazemos a seguinte pergunta:</p>
 <blockquote class="blockquote">
 <p>Para quais valores reais de <span class="math inline">\(x\)</span> a expressão que define a função está matematicamente bem definida?</p>
 </blockquote>
@@ -388,11 +441,51 @@ window.Quarto = {
 <li>composições de funções;</li>
 <li>funções definidas por partes.</li>
 </ul>
-<p>Quando uma expressão apresenta mais de uma dessas operações, <strong>todas as condições precisam ser satisfeitas simultaneamente</strong>.</p>
-<p>Em termos de conjuntos, o domínio será a interseção dos conjuntos determinados por cada restrição, respeitando também as condições específicas de cada função.</p>
+<p>Quando a mesma expressão envolve várias operações, <strong>todas as condições precisam valer para a mesma entrada</strong>. Intersectamos os conjuntos de entradas permitidos por cada operação. Em uma função definida por partes, fazemos essa interseção em cada trecho e depois reunimos os conjuntos obtidos por união.</p>
+<section id="quadro-de-consulta" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="quadro-de-consulta"><span class="header-section-number">1.1.1</span> Quadro de consulta</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operação</th>
+<th>Condição para existência real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fração <span class="math inline">\(\dfrac{a(x)}{b(x)}\)</span></td>
+<td><span class="math inline">\(b(x)\neq 0\)</span></td>
+</tr>
+<tr class="even">
+<td>Raiz de índice par <span class="math inline">\(\sqrt[2n]{a(x)}\)</span></td>
+<td><span class="math inline">\(a(x)\geq 0\)</span></td>
+</tr>
+<tr class="odd">
+<td>Logaritmo <span class="math inline">\(\log_b(a(x))\)</span></td>
+<td><span class="math inline">\(a(x)&gt;0\)</span>, com <span class="math inline">\(b&gt;0\)</span> e <span class="math inline">\(b\neq 1\)</span></td>
+</tr>
+<tr class="even">
+<td>Tangente <span class="math inline">\(\tan x\)</span></td>
+<td><span class="math inline">\(\cos x\neq 0\)</span></td>
+</tr>
+<tr class="odd">
+<td>Composição <span class="math inline">\(f(g(x))\)</span></td>
+<td><span class="math inline">\(x\in D_g\)</span> e <span class="math inline">\(g(x)\in D_f\)</span></td>
+</tr>
+<tr class="even">
+<td>Função por partes</td>
+<td>Cada regra deve respeitar sua condição e suas restrições próprias</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="frações-o-denominador-não-pode-ser-zero" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="frações-o-denominador-não-pode-ser-zero"><span class="header-section-number">1.2</span> ➗ 2. Frações: o denominador não pode ser zero</h2>
+</section>
+<section id="frações" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="frações"><span class="header-section-number">1.2</span> ➗ Frações</h2>
 <p>Em uma fração, o denominador precisa ser diferente de zero.</p>
 <p>Considere:</p>
 <p><span class="math display">\[
@@ -414,7 +507,7 @@ D_f=(-\infty,4)\cup(4,+\infty).
 <p><strong>Regra:</strong> em qualquer expressão fracionária, devemos excluir os valores que anulam o denominador.</p>
 </section>
 <section id="raízes-de-índice-par" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="raízes-de-índice-par"><span class="header-section-number">1.3</span> 🌱 3. Raízes de índice par</h2>
+<h2 data-number="1.3" class="anchored" data-anchor-id="raízes-de-índice-par"><span class="header-section-number">1.3</span> 🌱 Raízes de índice par</h2>
 <p>Para que uma raiz de índice par tenha valor real, seu radicando precisa ser não negativo.</p>
 <p>Considere:</p>
 <p><span class="math display">\[
@@ -465,7 +558,7 @@ D_h=[-3,3].
 </section>
 </section>
 <section id="logaritmos" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="logaritmos"><span class="header-section-number">1.4</span> 📈 4. Logaritmos</h2>
+<h2 data-number="1.4" class="anchored" data-anchor-id="logaritmos"><span class="header-section-number">1.4</span> 📈 Logaritmos</h2>
 <p>Para que um logaritmo esteja definido nos números reais, seu argumento precisa ser estritamente positivo.</p>
 <p>Considere:</p>
 <p><span class="math display">\[
@@ -505,8 +598,16 @@ D_q=(-\infty,5).
 <p><strong>Regra:</strong> o argumento de um logaritmo real deve ser estritamente positivo.</p>
 </section>
 </section>
-<section id="composição-de-restrições" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="composição-de-restrições"><span class="header-section-number">1.5</span> 🧩 5. Composição de restrições</h2>
+<section id="tangente" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="tangente"><span class="header-section-number">1.5</span> 📐 Tangente</h2>
+<p>A identidade <span class="math inline">\(\tan x=\dfrac{\sin x}{\cos x}\)</span> mostra que a tangente é definida quando <span class="math inline">\(\cos x\neq 0\)</span>.</p>
+<p>Como <span class="math inline">\(\cos x=0\)</span> precisamente em <span class="math inline">\(x=\dfrac{\pi}{2}+k\pi\)</span>, para <span class="math inline">\(k\in\mathbb Z\)</span>, excluímos esses pontos:</p>
+<p><span class="math display">\[
+D_{\tan}=\mathbb R\setminus\left\{\frac{\pi}{2}+k\pi:k\in\mathbb Z\right\}.
+\]</span></p>
+</section>
+<section id="combinação-de-restrições" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="combinação-de-restrições"><span class="header-section-number">1.6</span> 🧩 Combinação de restrições</h2>
 <p>Quando uma função combina diferentes operações, todas as restrições precisam ser satisfeitas simultaneamente.</p>
 <p>Considere:</p>
 <p><span class="math display">\[
@@ -543,8 +644,8 @@ x\neq 4.
 \]</span></p>
 <p>A ideia central é que não basta satisfazer uma das condições: o número precisa satisfazer todas elas.</p>
 </section>
-<section id="logaritmo-com-fração" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="logaritmo-com-fração"><span class="header-section-number">1.6</span> 🔗 6. Logaritmo com fração</h2>
+<section id="logaritmo-com-fração" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="logaritmo-com-fração"><span class="header-section-number">1.7</span> 🔗 Logaritmo com fração</h2>
 <p>Quando o argumento de um logaritmo é uma fração, precisamos garantir que a fração inteira seja positiva.</p>
 <p>Considere:</p>
 <p><span class="math display">\[
@@ -606,8 +707,8 @@ x=-2.
 \boxed{D_g=(-\infty,-2)\cup(1,+\infty).}
 \]</span></p>
 </section>
-<section id="domínio-de-função-composta" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="domínio-de-função-composta"><span class="header-section-number">1.7</span> 🧮 7. Domínio de função composta</h2>
+<section id="domínio-de-função-composta" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="domínio-de-função-composta"><span class="header-section-number">1.8</span> 🧮 Domínio de função composta</h2>
 <p>Considere duas funções:</p>
 <p><span class="math display">\[
 f:A\to\mathbb{R}
@@ -616,7 +717,7 @@ f:A\to\mathbb{R}
 <p><span class="math display">\[
 g:B\to\mathbb{R}.
 \]</span></p>
-<p>A composição é definida por:</p>
+<p>Na composição <span class="math inline">\(f\circ g\)</span>, aplicamos primeiro <span class="math inline">\(g\)</span> e depois <span class="math inline">\(f\)</span>:</p>
 <p><span class="math display">\[
 (f\circ g)(x)=f(g(x)).
 \]</span></p>
@@ -625,9 +726,12 @@ g:B\to\mathbb{R}.
 <li><span class="math inline">\(x\)</span> deve pertencer ao domínio de <span class="math inline">\(g\)</span>;</li>
 <li><span class="math inline">\(g(x)\)</span> deve pertencer ao domínio de <span class="math inline">\(f\)</span>.</li>
 </ol>
-<p>Em outras palavras, não basta que <span class="math inline">\(g(x)\)</span> exista: o resultado produzido por <span class="math inline">\(g\)</span> também precisa ser uma entrada permitida para <span class="math inline">\(f\)</span>.</p>
-<section id="exemplo" class="level3" data-number="1.7.1">
-<h3 data-number="1.7.1" class="anchored" data-anchor-id="exemplo"><span class="header-section-number">1.7.1</span> Exemplo</h3>
+<p>O resultado produzido pela função interna precisa ser uma entrada permitida para a função externa. Assim,</p>
+<p><span class="math display">\[
+D_{f\circ g}=\{x\in B:g(x)\in A\}.
+\]</span></p>
+<section id="exemplo" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="exemplo"><span class="header-section-number">1.8.1</span> Exemplo</h3>
 <p>Considere:</p>
 <p><span class="math display">\[
 f(u)=\sqrt{u}
@@ -660,8 +764,8 @@ x\geq 2.
 \]</span></p>
 </section>
 </section>
-<section id="funções-definidas-por-partes" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="funções-definidas-por-partes"><span class="header-section-number">1.8</span> 🧱 8. Funções definidas por partes</h2>
+<section id="funções-definidas-por-partes" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="funções-definidas-por-partes"><span class="header-section-number">1.9</span> 🧱 Funções definidas por partes</h2>
 <p>Em uma função definida por partes, cada expressão corresponde a uma região específica do domínio.</p>
 <p>Por isso, devemos analisar cada regra separadamente, respeitando o intervalo em que ela é válida.</p>
 <p>Considere:</p>
@@ -672,8 +776,8 @@ f(x)=
 \dfrac{1}{x-3}, &amp; x\geq 2.
 \end{cases}
 \]</span></p>
-<section id="primeira-parte" class="level3" data-number="1.8.1">
-<h3 data-number="1.8.1" class="anchored" data-anchor-id="primeira-parte"><span class="header-section-number">1.8.1</span> Primeira parte</h3>
+<section id="primeira-parte" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="primeira-parte"><span class="header-section-number">1.9.1</span> Primeira parte</h3>
 <p>A primeira expressão é:</p>
 <p><span class="math display">\[
 \sqrt{x+1}.
@@ -699,8 +803,8 @@ x&lt;2.
 [-1,2).
 \]</span></p>
 </section>
-<section id="segunda-parte" class="level3" data-number="1.8.2">
-<h3 data-number="1.8.2" class="anchored" data-anchor-id="segunda-parte"><span class="header-section-number">1.8.2</span> Segunda parte</h3>
+<section id="segunda-parte" class="level3" data-number="1.9.2">
+<h3 data-number="1.9.2" class="anchored" data-anchor-id="segunda-parte"><span class="header-section-number">1.9.2</span> Segunda parte</h3>
 <p>A segunda expressão é:</p>
 <p><span class="math display">\[
 \frac{1}{x-3}.
@@ -722,8 +826,8 @@ x\geq 2.
 [2,3)\cup(3,+\infty).
 \]</span></p>
 </section>
-<section id="domínio-total" class="level3" data-number="1.8.3">
-<h3 data-number="1.8.3" class="anchored" data-anchor-id="domínio-total"><span class="header-section-number">1.8.3</span> Domínio total</h3>
+<section id="domínio-total" class="level3" data-number="1.9.3">
+<h3 data-number="1.9.3" class="anchored" data-anchor-id="domínio-total"><span class="header-section-number">1.9.3</span> Domínio total</h3>
 <p>O domínio da função é a união dos conjuntos obtidos nas duas partes:</p>
 <p><span class="math display">\[
 D_f=[-1,2)\cup[2,3)\cup(3,+\infty).
@@ -733,11 +837,11 @@ D_f=[-1,2)\cup[2,3)\cup(3,+\infty).
 \boxed{D_f=[-1,3)\cup(3,+\infty).}
 \]</span></p>
 <p>Observe que <span class="math inline">\(x=2\)</span> pertence ao domínio, pois a segunda expressão está definida nesse ponto.</p>
-<p><strong>Ideia fundamental:</strong> em funções por partes, cada restrição deve ser combinada com a condição que determina onde aquela expressão pode ser utilizada.</p>
+<p><strong>Ideia fundamental.</strong> Em cada trecho, intersectamos o conjunto de entradas permitidas pela expressão com a condição daquele trecho. O domínio total é a união dos conjuntos resultantes.</p>
 </section>
 </section>
-<section id="erros-comuns-na-determinação-do-domínio" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="erros-comuns-na-determinação-do-domínio"><span class="header-section-number">1.9</span> ⚠️ 9. Erros comuns na determinação do domínio</h2>
+<section id="erros-comuns-na-determinação-do-domínio" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="erros-comuns-na-determinação-do-domínio"><span class="header-section-number">1.10</span> ⚠️ Erros comuns na determinação do domínio</h2>
 <p>Alguns erros aparecem frequentemente durante a resolução de exercícios.</p>
 <ul>
 <li>Esquecer que o denominador de uma fração não pode ser zero.</li>
@@ -747,8 +851,8 @@ D_f=[-1,2)\cup[2,3)\cup(3,+\infty).
 <li>Analisar uma expressão de função por partes fora do intervalo em que ela é válida.</li>
 <li>Determinar o domínio de uma composição considerando somente uma das funções envolvidas.</li>
 </ul>
-<section id="um-exemplo-importante-expressões-equivalentes-domínios-diferentes" class="level3" data-number="1.9.1">
-<h3 data-number="1.9.1" class="anchored" data-anchor-id="um-exemplo-importante-expressões-equivalentes-domínios-diferentes"><span class="header-section-number">1.9.1</span> Um exemplo importante: expressões equivalentes, domínios diferentes</h3>
+<section id="simplificação-e-o-ponto-ausente" class="level3" data-number="1.10.1">
+<h3 data-number="1.10.1" class="anchored" data-anchor-id="simplificação-e-o-ponto-ausente"><span class="header-section-number">1.10.1</span> Simplificação e o ponto ausente</h3>
 <p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{x^2-1}{x-1}.
@@ -779,7 +883,17 @@ D_g=\mathbb{R}.
 <p><span class="math display">\[
 (1,2).
 \]</span></p>
-<p>Esse ponto ausente é chamado de <strong>descontinuidade removível</strong>: a expressão simplificada sugere o valor que preencheria o ponto, mas a função original não o assume.</p>
+<p>Quando <span class="math inline">\(x\)</span> se aproxima de <span class="math inline">\(1\)</span> pelo domínio de <span class="math inline">\(f\)</span>, os valores <span class="math inline">\(f(x)=x+1\)</span> se aproximam de <span class="math inline">\(2\)</span>. A função <span class="math inline">\(g\)</span> é uma <strong>extensão contínua</strong> de <span class="math inline">\(f\)</span>: coincide com ela para <span class="math inline">\(x\neq 1\)</span> e atribui ao novo ponto o valor <span class="math inline">\(g(1)=2\)</span>. Por isso, dizemos que o ponto ausente é removível.</p>
+<div id="fig-ap04-ponto-aberto" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Duas retas de mesma inclinação na mesma escala. À esquerda, círculo aberto em (1,2). À direita, ponto preenchido em (1,2).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ap04-ponto-aberto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/1.21-ap-dominio-ponto-aberto.svg" class="img-fluid figure-img" style="width:95.0%" alt="Duas retas de mesma inclinação na mesma escala. À esquerda, círculo aberto em (1,2). À direita, ponto preenchido em (1,2).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ap04-ponto-aberto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Os gráficos coincidem para entradas diferentes de 1. O ponto (1,2) fica aberto no gráfico de f e preenchido no de g.
+</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-important callout-titled" title="💡 Uma distinção essencial">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -794,10 +908,61 @@ D_g=\mathbb{R}.
 <p>As restrições impostas pela expressão inicial precisam ser preservadas.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled" title="Código-fonte da figura em Python">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Código-fonte da figura em Python
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>azul <span class="op">=</span> <span class="st">"#196399"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="st">"#DCE5EF"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>fig, eixos <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">8.4</span>, <span class="fl">3.65</span>), sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                         layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>esquerda <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">150</span>, endpoint<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>direita <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">151</span>)[<span class="dv">1</span>:]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">300</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>f, g <span class="op">=</span> eixos</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>f.plot(esquerda, esquerda <span class="op">+</span> <span class="dv">1</span>, color<span class="op">=</span>azul, linewidth<span class="op">=</span><span class="fl">2.4</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>f.plot(direita, direita <span class="op">+</span> <span class="dv">1</span>, color<span class="op">=</span>azul, linewidth<span class="op">=</span><span class="fl">2.4</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>g.plot(x, x <span class="op">+</span> <span class="dv">1</span>, color<span class="op">=</span>azul, linewidth<span class="op">=</span><span class="fl">2.4</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>f.set_title(<span class="vs">r"</span><span class="dv">$</span><span class="vs">f</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=</span><span class="dv">\d</span><span class="vs">frac{x</span><span class="dv">^</span><span class="vs">2-1}{x-1}</span><span class="dv">$</span><span class="vs">,  </span><span class="dv">$</span><span class="vs">x</span><span class="ch">\n</span><span class="vs">e 1</span><span class="dv">$</span><span class="vs">"</span>, pad<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>g.set_title(<span class="vs">r"</span><span class="dv">$</span><span class="vs">g</span><span class="kw">(</span><span class="vs">x</span><span class="kw">)</span><span class="vs">=x</span><span class="op">+</span><span class="vs">1</span><span class="dv">$</span><span class="vs">,  </span><span class="dv">$</span><span class="vs">x</span><span class="er">\</span><span class="vs">in</span><span class="dv">\m</span><span class="vs">athbb{R}</span><span class="dv">$</span><span class="vs">"</span>, pad<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> eixo, preenchimento <span class="kw">in</span> <span class="bu">zip</span>(eixos, (<span class="st">"white"</span>, azul)):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    eixo.scatter(<span class="dv">1</span>, <span class="dv">2</span>, s<span class="op">=</span><span class="dv">92</span>, facecolors<span class="op">=</span>preenchimento,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                 edgecolors<span class="op">=</span>azul, linewidths<span class="op">=</span><span class="dv">2</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    eixo.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1,2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, (<span class="dv">1</span>, <span class="dv">2</span>), xytext<span class="op">=</span>(<span class="dv">10</span>, <span class="op">-</span><span class="dv">16</span>),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                  textcoords<span class="op">=</span><span class="st">"offset points"</span>, color<span class="op">=</span>azul, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    eixo.<span class="bu">set</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">1.12</span>, <span class="fl">3.12</span>), ylim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.2</span>, <span class="fl">4.2</span>), xticks<span class="op">=</span>[<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>             yticks<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    eixo.tick_params(labelleft<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    eixo.set_axisbelow(<span class="va">True</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    eixo.grid(color<span class="op">=</span>grade)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>f.set_ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="vs">y</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"svg.fonttype"</span>] <span class="op">=</span> <span class="st">"path"</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Path(<span class="st">"images"</span>).mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"images/1.21-ap-dominio-ponto-aberto.svg"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="exercícios-propostos" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="exercícios-propostos"><span class="header-section-number">1.10</span> 🧪 10. Exercícios propostos</h2>
+<section id="exercícios-propostos" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="exercícios-propostos"><span class="header-section-number">1.11</span> 🧪 Exercícios propostos</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="📝 Exercícios">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -808,8 +973,8 @@ D_g=\mathbb{R}.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<section id="exercício-1-restrições-básicas" class="level3" data-number="1.10.1">
-<h3 data-number="1.10.1" class="anchored" data-anchor-id="exercício-1-restrições-básicas"><span class="header-section-number">1.10.1</span> 🧪 Exercício 1 — Restrições básicas</h3>
+<section id="exercício-1-restrições-básicas" class="level3" data-number="1.11.1">
+<h3 data-number="1.11.1" class="anchored" data-anchor-id="exercício-1-restrições-básicas"><span class="header-section-number">1.11.1</span> 🧪 Exercício 1 — Restrições básicas</h3>
 <p>Determine o domínio real de cada função:</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\dfrac{1}{x+7}\)</span></p></li>
@@ -817,8 +982,8 @@ D_g=\mathbb{R}.
 <li><p><span class="math inline">\(h(x)=\ln(x+4)\)</span></p></li>
 </ol>
 </section>
-<section id="exercício-2-combinação-de-restrições" class="level3" data-number="1.10.2">
-<h3 data-number="1.10.2" class="anchored" data-anchor-id="exercício-2-combinação-de-restrições"><span class="header-section-number">1.10.2</span> 🧪 Exercício 2 — Combinação de restrições</h3>
+<section id="exercício-2-combinação-de-restrições" class="level3" data-number="1.11.2">
+<h3 data-number="1.11.2" class="anchored" data-anchor-id="exercício-2-combinação-de-restrições"><span class="header-section-number">1.11.2</span> 🧪 Exercício 2 — Combinação de restrições</h3>
 <p>Determine o domínio real de cada função:</p>
 <ol type="a">
 <li><p><span class="math inline">\(p(x)=\dfrac{\sqrt{x-2}}{x-6}\)</span></p></li>
@@ -826,15 +991,15 @@ D_g=\mathbb{R}.
 <li><p><span class="math inline">\(r(x)=\sqrt{x^2-16}\)</span></p></li>
 </ol>
 </section>
-<section id="exercício-3-logaritmo-com-fração" class="level3" data-number="1.10.3">
-<h3 data-number="1.10.3" class="anchored" data-anchor-id="exercício-3-logaritmo-com-fração"><span class="header-section-number">1.10.3</span> 🧪 Exercício 3 — Logaritmo com fração</h3>
+<section id="exercício-3-logaritmo-com-fração" class="level3" data-number="1.11.3">
+<h3 data-number="1.11.3" class="anchored" data-anchor-id="exercício-3-logaritmo-com-fração"><span class="header-section-number">1.11.3</span> 🧪 Exercício 3 — Logaritmo com fração</h3>
 <p>Determine o domínio de:</p>
 <p><span class="math display">\[
 s(x)=\ln\left(\frac{x+1}{x-3}\right).
 \]</span></p>
 </section>
-<section id="exercício-4-domínios-e-simplificação" class="level3" data-number="1.10.4">
-<h3 data-number="1.10.4" class="anchored" data-anchor-id="exercício-4-domínios-e-simplificação"><span class="header-section-number">1.10.4</span> 🧪 Exercício 4 — Domínios e simplificação</h3>
+<section id="exercício-4-domínios-e-simplificação" class="level3" data-number="1.11.4">
+<h3 data-number="1.11.4" class="anchored" data-anchor-id="exercício-4-domínios-e-simplificação"><span class="header-section-number">1.11.4</span> 🧪 Exercício 4 — Domínios e simplificação</h3>
 <p>Explique por que as expressões</p>
 <p><span class="math display">\[
 \frac{x^2-4}{x-2}
@@ -847,12 +1012,11 @@ x+2
 </section>
 </div>
 </div>
-<hr>
 </section>
-<section id="gabarito-comentado" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="gabarito-comentado"><span class="header-section-number">1.11</span> ✅ Gabarito comentado</h2>
+<section id="gabarito-comentado" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="gabarito-comentado"><span class="header-section-number">1.12</span> ✅ Gabarito comentado</h2>
 <div class="callout callout-style-default callout-important callout-titled" title="🔎 Clique para consultar as resoluções">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -861,10 +1025,10 @@ x+2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<section id="exercício-1-restrições-básicas-1" class="level3" data-number="1.11.1">
-<h3 data-number="1.11.1" class="anchored" data-anchor-id="exercício-1-restrições-básicas-1"><span class="header-section-number">1.11.1</span> 🧪 Exercício 1 — Restrições básicas</h3>
+<section id="exercício-1-restrições-básicas-1" class="level3" data-number="1.12.1">
+<h3 data-number="1.12.1" class="anchored" data-anchor-id="exercício-1-restrições-básicas-1"><span class="header-section-number">1.12.1</span> 🧪 Exercício 1 — Restrições básicas</h3>
 <p><strong>a)</strong></p>
 <p>O denominador precisa ser diferente de zero:</p>
 <p><span class="math display">\[
@@ -905,8 +1069,8 @@ x&gt;-4.
 \boxed{D_h=(-4,+\infty).}
 \]</span></p>
 </section>
-<section id="exercício-2-combinação-de-restrições-1" class="level3" data-number="1.11.2">
-<h3 data-number="1.11.2" class="anchored" data-anchor-id="exercício-2-combinação-de-restrições-1"><span class="header-section-number">1.11.2</span> 🧪 Exercício 2 — Combinação de restrições</h3>
+<section id="exercício-2-combinação-de-restrições-1" class="level3" data-number="1.12.2">
+<h3 data-number="1.12.2" class="anchored" data-anchor-id="exercício-2-combinação-de-restrições-1"><span class="header-section-number">1.12.2</span> 🧪 Exercício 2 — Combinação de restrições</h3>
 <p><strong>a)</strong></p>
 <p>Precisamos satisfazer simultaneamente:</p>
 <p><span class="math display">\[
@@ -959,8 +1123,8 @@ x\geq 4.
 \boxed{D_r=(-\infty,-4]\cup[4,+\infty).}
 \]</span></p>
 </section>
-<section id="exercício-3-logaritmo-com-fração-1" class="level3" data-number="1.11.3">
-<h3 data-number="1.11.3" class="anchored" data-anchor-id="exercício-3-logaritmo-com-fração-1"><span class="header-section-number">1.11.3</span> 🧪 Exercício 3 — Logaritmo com fração</h3>
+<section id="exercício-3-logaritmo-com-fração-1" class="level3" data-number="1.12.3">
+<h3 data-number="1.12.3" class="anchored" data-anchor-id="exercício-3-logaritmo-com-fração-1"><span class="header-section-number">1.12.3</span> 🧪 Exercício 3 — Logaritmo com fração</h3>
 <p>Precisamos de:</p>
 <p><span class="math display">\[
 \frac{x+1}{x-3}&gt;0.
@@ -990,8 +1154,8 @@ x=3.
 \boxed{D_s=(-\infty,-1)\cup(3,+\infty).}
 \]</span></p>
 </section>
-<section id="exercício-4-domínios-e-simplificação-1" class="level3" data-number="1.11.4">
-<h3 data-number="1.11.4" class="anchored" data-anchor-id="exercício-4-domínios-e-simplificação-1"><span class="header-section-number">1.11.4</span> 🧪 Exercício 4 — Domínios e simplificação</h3>
+<section id="exercício-4-domínios-e-simplificação-1" class="level3" data-number="1.12.4">
+<h3 data-number="1.12.4" class="anchored" data-anchor-id="exercício-4-domínios-e-simplificação-1"><span class="header-section-number">1.12.4</span> 🧪 Exercício 4 — Domínios e simplificação</h3>
 <p>Considere:</p>
 <p><span class="math display">\[
 f(x)=\frac{x^2-4}{x-2}.
@@ -1034,10 +1198,9 @@ D_g=\mathbb{R}.
 </div>
 </div>
 </div>
-<hr>
 </section>
-<section id="quiz-domínio-de-funções" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="quiz-domínio-de-funções"><span class="header-section-number">1.12</span> 🧩 11. Quiz — Domínio de Funções</h2>
+<section id="quiz-domínio-de-funções" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="quiz-domínio-de-funções"><span class="header-section-number">1.13</span> 🧩 Quiz — Domínio de Funções</h2>
 <div class="question">
 <p><strong>Q1.</strong> Para que a expressão <span class="math inline">\(\sqrt{x-1}\)</span> esteja definida nos números reais, precisamos de:</p>
 <div class="choices">
@@ -1092,44 +1255,10 @@ D_g=\mathbb{R}.
 
 </div>
 </div>
-<hr>
 </section>
-<section id="síntese-do-aprofundamento" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="síntese-do-aprofundamento"><span class="header-section-number">1.13</span> 🧭 12. Síntese do aprofundamento</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Operação</th>
-<th>Condição para existência real</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Fração <span class="math inline">\(\dfrac{a(x)}{b(x)}\)</span></td>
-<td><span class="math inline">\(b(x)\neq 0\)</span></td>
-</tr>
-<tr class="even">
-<td>Raiz de índice par <span class="math inline">\(\sqrt[2n]{a(x)}\)</span></td>
-<td><span class="math inline">\(a(x)\geq 0\)</span></td>
-</tr>
-<tr class="odd">
-<td>Logaritmo <span class="math inline">\(\log_b(a(x))\)</span></td>
-<td><span class="math inline">\(a(x)&gt;0\)</span>, com <span class="math inline">\(b&gt;0\)</span> e <span class="math inline">\(b\neq 1\)</span></td>
-</tr>
-<tr class="even">
-<td>Composição <span class="math inline">\(f(g(x))\)</span></td>
-<td><span class="math inline">\(x\in D_g\)</span> e <span class="math inline">\(g(x)\in D_f\)</span></td>
-</tr>
-<tr class="odd">
-<td>Função por partes</td>
-<td>Cada regra deve respeitar sua condição e suas restrições próprias</td>
-</tr>
-</tbody>
-</table>
+<section id="síntese-do-aprofundamento" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="síntese-do-aprofundamento"><span class="header-section-number">1.14</span> 🧭 Síntese do aprofundamento</h2>
+<p>O <a href="#quadro-de-consulta">quadro de consulta</a> reúne as condições de cada operação.</p>
 <p>A determinação do domínio é uma etapa fundamental na análise de funções. Ela estabelece onde podemos estudar o comportamento da função e prepara o caminho para os conceitos centrais do Cálculo.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="📚 Conexão com as próximas aulas">
 <div class="callout-header d-flex align-content-center">
@@ -1147,9 +1276,10 @@ D_g=\mathbb{R}.
 </div>
 </div>
 </section>
-<section id="navegação" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="navegação"><span class="header-section-number">1.14</span> 🔗 13. Navegação</h2>
+<section id="navegação" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="navegação"><span class="header-section-number">1.15</span> 🔗 Navegação</h2>
 <p>↩︎️ <strong>Voltar à aula de origem:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.10-conceito-formal-de-funcao.html">1.10 — Conceito Formal de Função</a></p>
+<p>🧭 <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.17-revisao-geral-do-modulo-1.html#exercícios-propostos"><strong>Exercícios da Revisão Geral</strong></a></p>
 <p>▶️ <strong>Continuar a sequência principal:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.11-revisao-grafica-e-algebrica.html">1.11 — Revisão Gráfica e Algébrica</a></p>
 <p>🔬 <strong>AP anterior:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.20-AP-valor-absoluto-distancia-vizinhancas.html">1.20-AP — Valor Absoluto, Distância e Vizinhanças</a></p>
 <p>🔬 <strong>Próximo AP:</strong> <a href="../../../../../posts/cursos/matematica/calculo/modulo-1/1.22-AP-funcoes-por-partes.html">1.22-AP — Funções por Partes</a></p>

@@ -43,11 +43,19 @@ No Cálculo, determinar esse conjunto é fundamental. Antes de investigar limite
 
 Neste aprofundamento, vamos organizar as principais restrições que aparecem no estudo de funções reais e aprender a combiná-las corretamente.
 
-## 🧭 1. Regra geral
+## 🧭 Regra geral
 
-Para determinar o domínio real de uma função, fazemos a seguinte pergunta:
+::: {.callout-important title="Domínio declarado e domínio natural"}
 
-> Para quais valores reais de \(x\) a expressão que define a função está matematicamente bem definida?
+O **domínio declarado** faz parte da definição de uma função. Por exemplo, se $f:[0,+\infty)\to\mathbb R$ é dada por $f(x)=x^2$, seu domínio é $[0,+\infty)$. O **domínio real natural** da expressão $x^2$ é $\mathbb R$, pois o quadrado está definido para toda entrada real.
+
+Quando o enunciado fornece apenas a expressão, este guia usa seu domínio real natural. Se o domínio foi declarado, usamos o conjunto dado e verificamos se a expressão está definida em todas as suas entradas.
+
+:::
+
+Para determinar o domínio real natural de uma expressão, fazemos a seguinte pergunta:
+
+> Para quais valores reais de $x$ a expressão que define a função está matematicamente bem definida?
 
 As restrições mais comuns estão associadas a:
 
@@ -58,11 +66,20 @@ As restrições mais comuns estão associadas a:
 - composições de funções;
 - funções definidas por partes.
 
-Quando uma expressão apresenta mais de uma dessas operações, **todas as condições precisam ser satisfeitas simultaneamente**.
+Quando a mesma expressão envolve várias operações, **todas as condições precisam valer para a mesma entrada**. Intersectamos os conjuntos de entradas permitidos por cada operação. Em uma função definida por partes, fazemos essa interseção em cada trecho e depois reunimos os conjuntos obtidos por união.
 
-Em termos de conjuntos, o domínio será a interseção dos conjuntos determinados por cada restrição, respeitando também as condições específicas de cada função.
+### Quadro de consulta
 
-## ➗ 2. Frações: o denominador não pode ser zero
+| Operação | Condição para existência real |
+|---|---|
+| Fração $\dfrac{a(x)}{b(x)}$ | $b(x)\neq 0$ |
+| Raiz de índice par $\sqrt[2n]{a(x)}$ | $a(x)\geq 0$ |
+| Logaritmo $\log_b(a(x))$ | $a(x)>0$, com $b>0$ e $b\neq 1$ |
+| Tangente $\tan x$ | $\cos x\neq 0$ |
+| Composição $f(g(x))$ | $x\in D_g$ e $g(x)\in D_f$ |
+| Função por partes | Cada regra deve respeitar sua condição e suas restrições próprias |
+
+## ➗ Frações
 
 Em uma fração, o denominador precisa ser diferente de zero.
 
@@ -90,11 +107,11 @@ $$
 D_f=(-\infty,4)\cup(4,+\infty).
 $$
 
-Observe que todos os números reais são permitidos, exceto \(4\).
+Observe que todos os números reais são permitidos, exceto $4$.
 
 **Regra:** em qualquer expressão fracionária, devemos excluir os valores que anulam o denominador.
 
-## 🌱 3. Raízes de índice par
+## 🌱 Raízes de índice par
 
 Para que uma raiz de índice par tenha valor real, seu radicando precisa ser não negativo.
 
@@ -122,7 +139,7 @@ $$
 D_g=[3,+\infty).
 $$
 
-Observe que o valor \(x=3\) está permitido, pois:
+Observe que o valor $x=3$ está permitido, pois:
 
 $$
 \sqrt{3-3}=\sqrt{0}=0.
@@ -162,9 +179,9 @@ $$
 
 **Regra:** para raízes de índice par, o radicando deve ser maior ou igual a zero.
 
-> Atenção: essa condição não se aplica da mesma maneira às raízes de índice ímpar. Por exemplo, \(\sqrt[3]{-8}=-2\) é um número real.
+> Atenção: essa condição não se aplica da mesma maneira às raízes de índice ímpar. Por exemplo, $\sqrt[3]{-8}=-2$ é um número real.
 
-## 📈 4. Logaritmos
+## 📈 Logaritmos
 
 Para que um logaritmo esteja definido nos números reais, seu argumento precisa ser estritamente positivo.
 
@@ -192,7 +209,7 @@ $$
 D_p=(2,+\infty).
 $$
 
-Observe que \(x=2\) não pertence ao domínio, pois o logaritmo de zero não está definido.
+Observe que $x=2$ não pertence ao domínio, pois o logaritmo de zero não está definido.
 
 ### Outro exemplo
 
@@ -222,7 +239,17 @@ $$
 
 **Regra:** o argumento de um logaritmo real deve ser estritamente positivo.
 
-## 🧩 5. Composição de restrições
+## 📐 Tangente
+
+A identidade $\tan x=\dfrac{\sin x}{\cos x}$ mostra que a tangente é definida quando $\cos x\neq 0$.
+
+Como $\cos x=0$ precisamente em $x=\dfrac{\pi}{2}+k\pi$, para $k\in\mathbb Z$, excluímos esses pontos:
+
+$$
+D_{\tan}=\mathbb R\setminus\left\{\frac{\pi}{2}+k\pi:k\in\mathbb Z\right\}.
+$$
+
+## 🧩 Combinação de restrições
 
 Quando uma função combina diferentes operações, todas as restrições precisam ser satisfeitas simultaneamente.
 
@@ -278,7 +305,7 @@ $$
 
 A ideia central é que não basta satisfazer uma das condições: o número precisa satisfazer todas elas.
 
-## 🔗 6. Logaritmo com fração
+## 🔗 Logaritmo com fração
 
 Quando o argumento de um logaritmo é uma fração, precisamos garantir que a fração inteira seja positiva.
 
@@ -316,15 +343,15 @@ $$
 
 Analisando os sinais:
 
-| Intervalo | Numerador \(x-1\) | Denominador \(x+2\) | Fração |
+| Intervalo | Numerador $x-1$ | Denominador $x+2$ | Fração |
 |---|---:|---:|---:|
-| \((-\infty,-2)\) | − | − | + |
-| \((-2,1)\) | − | + | − |
-| \((1,+\infty)\) | + | + | + |
+| $(-\infty,-2)$ | − | − | + |
+| $(-2,1)$ | − | + | − |
+| $(1,+\infty)$ | + | + | + |
 
 Como o argumento do logaritmo precisa ser positivo, selecionamos os intervalos nos quais a fração é positiva.
 
-Os extremos não são incluídos: em \(x=1\), o argumento seria zero; em \(x=-2\), a fração não estaria definida.
+Os extremos não são incluídos: em $x=1$, o argumento seria zero; em $x=-2$, a fração não estaria definida.
 
 Portanto:
 
@@ -332,7 +359,7 @@ $$
 \boxed{D_g=(-\infty,-2)\cup(1,+\infty).}
 $$
 
-## 🧮 7. Domínio de função composta
+## 🧮 Domínio de função composta
 
 Considere duas funções:
 
@@ -346,7 +373,7 @@ $$
 g:B\to\mathbb{R}.
 $$
 
-A composição é definida por:
+Na composição $f\circ g$, aplicamos primeiro $g$ e depois $f$:
 
 $$
 (f\circ g)(x)=f(g(x)).
@@ -354,10 +381,14 @@ $$
 
 Para que essa composição esteja definida, precisamos verificar duas condições:
 
-1. \(x\) deve pertencer ao domínio de \(g\);
-2. \(g(x)\) deve pertencer ao domínio de \(f\).
+1. $x$ deve pertencer ao domínio de $g$;
+2. $g(x)$ deve pertencer ao domínio de $f$.
 
-Em outras palavras, não basta que \(g(x)\) exista: o resultado produzido por \(g\) também precisa ser uma entrada permitida para \(f\).
+O resultado produzido pela função interna precisa ser uma entrada permitida para a função externa. Assim,
+
+$$
+D_{f\circ g}=\{x\in B:g(x)\in A\}.
+$$
 
 ### Exemplo
 
@@ -405,7 +436,7 @@ $$
 \boxed{D_{f\circ g}=(-\infty,-2]\cup[2,+\infty).}
 $$
 
-## 🧱 8. Funções definidas por partes
+## 🧱 Funções definidas por partes
 
 Em uma função definida por partes, cada expressão corresponde a uma região específica do domínio.
 
@@ -505,11 +536,11 @@ $$
 \boxed{D_f=[-1,3)\cup(3,+\infty).}
 $$
 
-Observe que \(x=2\) pertence ao domínio, pois a segunda expressão está definida nesse ponto.
+Observe que $x=2$ pertence ao domínio, pois a segunda expressão está definida nesse ponto.
 
-**Ideia fundamental:** em funções por partes, cada restrição deve ser combinada com a condição que determina onde aquela expressão pode ser utilizada.
+**Ideia fundamental.** Em cada trecho, intersectamos o conjunto de entradas permitidas pela expressão com a condição daquele trecho. O domínio total é a união dos conjuntos resultantes.
 
-## ⚠️ 9. Erros comuns na determinação do domínio
+## ⚠️ Erros comuns na determinação do domínio
 
 Alguns erros aparecem frequentemente durante a resolução de exercícios.
 
@@ -520,7 +551,7 @@ Alguns erros aparecem frequentemente durante a resolução de exercícios.
 - Analisar uma expressão de função por partes fora do intervalo em que ela é válida.
 - Determinar o domínio de uma composição considerando somente uma das funções envolvidas.
 
-### Um exemplo importante: expressões equivalentes, domínios diferentes
+### Simplificação e o ponto ausente
 
 Considere:
 
@@ -534,13 +565,13 @@ $$
 f(x)=\frac{(x-1)(x+1)}{x-1}.
 $$
 
-Para \(x\neq 1\), podemos simplificar:
+Para $x\neq 1$, podemos simplificar:
 
 $$
 f(x)=x+1.
 $$
 
-Entretanto, a expressão original não está definida em \(x=1\).
+Entretanto, a expressão original não está definida em $x=1$.
 
 Assim, seu domínio é:
 
@@ -560,15 +591,17 @@ $$
 D_g=\mathbb{R}.
 $$
 
-Portanto, embora as duas expressões produzam o mesmo valor para todo \(x\neq 1\), elas não definem a mesma função quando consideramos seus domínios naturais.
+Portanto, embora as duas expressões produzam o mesmo valor para todo $x\neq 1$, elas não definem a mesma função quando consideramos seus domínios naturais.
 
-A representação gráfica de \(f\) corresponde à reta \(y=x+1\), com um ponto ausente em:
+A representação gráfica de $f$ corresponde à reta $y=x+1$, com um ponto ausente em:
 
 $$
 (1,2).
 $$
 
-Esse ponto ausente é chamado de **descontinuidade removível**: a expressão simplificada sugere o valor que preencheria o ponto, mas a função original não o assume.
+Quando $x$ se aproxima de $1$ pelo domínio de $f$, os valores $f(x)=x+1$ se aproximam de $2$. A função $g$ é uma **extensão contínua** de $f$: coincide com ela para $x\neq 1$ e atribui ao novo ponto o valor $g(1)=2$. Por isso, dizemos que o ponto ausente é removível.
+
+![Os gráficos coincidem para entradas diferentes de 1. O ponto (1,2) fica aberto no gráfico de f e preenchido no de g.](images/1.21-ap-dominio-ponto-aberto.svg){#fig-ap04-ponto-aberto width="95%" fig-alt="Duas retas de mesma inclinação na mesma escala. À esquerda, círculo aberto em (1,2). À direita, ponto preenchido em (1,2)."}
 
 ::: {.callout-important title="💡 Uma distinção essencial"}
 
@@ -578,7 +611,50 @@ As restrições impostas pela expressão inicial precisam ser preservadas.
 
 :::
 
-## 🧪 10. Exercícios propostos
+::: {.callout-note collapse=true title="Código-fonte da figura em Python"}
+
+```python
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+azul = "#196399"
+grade = "#DCE5EF"
+fig, eixos = plt.subplots(1, 2, figsize=(8.4, 3.65), sharex=True, sharey=True,
+                         layout="constrained")
+esquerda = np.linspace(-1, 1, 150, endpoint=False)
+direita = np.linspace(1, 3, 151)[1:]
+x = np.linspace(-1, 3, 300)
+
+f, g = eixos
+f.plot(esquerda, esquerda + 1, color=azul, linewidth=2.4)
+f.plot(direita, direita + 1, color=azul, linewidth=2.4)
+g.plot(x, x + 1, color=azul, linewidth=2.4)
+
+f.set_title(r"$f(x)=\dfrac{x^2-1}{x-1}$,  $x\ne 1$", pad=10)
+g.set_title(r"$g(x)=x+1$,  $x\in\mathbb{R}$", pad=10)
+for eixo, preenchimento in zip(eixos, ("white", azul)):
+    eixo.scatter(1, 2, s=92, facecolors=preenchimento,
+                 edgecolors=azul, linewidths=2, zorder=4)
+    eixo.annotate(r"$(1,2)$", (1, 2), xytext=(10, -16),
+                  textcoords="offset points", color=azul, fontsize=11)
+    eixo.set(xlim=(-1.12, 3.12), ylim=(-0.2, 4.2), xticks=[-1, 0, 1, 2, 3],
+             yticks=[0, 1, 2, 3, 4], xlabel=r"$x$")
+    eixo.tick_params(labelleft=True)
+    eixo.set_axisbelow(True)
+    eixo.grid(color=grade)
+
+f.set_ylabel(r"$y$")
+plt.rcParams["svg.fonttype"] = "path"
+Path("images").mkdir(exist_ok=True)
+fig.savefig("images/1.21-ap-dominio-ponto-aberto.svg")
+plt.close(fig)
+```
+
+:::
+
+## 🧪 Exercícios propostos
 
 ::: {.callout-note title="📝 Exercícios"}
 
@@ -586,21 +662,21 @@ As restrições impostas pela expressão inicial precisam ser preservadas.
 
 Determine o domínio real de cada função:
 
-a) \(f(x)=\dfrac{1}{x+7}\)
+a) $f(x)=\dfrac{1}{x+7}$
 
-b) \(g(x)=\sqrt{x-5}\)
+b) $g(x)=\sqrt{x-5}$
 
-c) \(h(x)=\ln(x+4)\)
+c) $h(x)=\ln(x+4)$
 
 ### 🧪 Exercício 2 — Combinação de restrições
 
 Determine o domínio real de cada função:
 
-a) \(p(x)=\dfrac{\sqrt{x-2}}{x-6}\)
+a) $p(x)=\dfrac{\sqrt{x-2}}{x-6}$
 
-b) \(q(x)=\ln(3-x)\)
+b) $q(x)=\ln(3-x)$
 
-c) \(r(x)=\sqrt{x^2-16}\)
+c) $r(x)=\sqrt{x^2-16}$
 
 ### 🧪 Exercício 3 — Logaritmo com fração
 
@@ -624,11 +700,9 @@ $$
 x+2
 $$
 
-não possuem o mesmo domínio natural, embora sejam equivalentes para \(x\neq 2\).
+não possuem o mesmo domínio natural, embora sejam equivalentes para $x\neq 2$.
 
 :::
-
-***
 
 ## ✅ Gabarito comentado
 
@@ -810,7 +884,7 @@ $$
 (3,+\infty).
 $$
 
-Os extremos são excluídos porque, em \(x=-1\), o argumento do logaritmo seria zero, e em \(x=3\), a fração não estaria definida.
+Os extremos são excluídos porque, em $x=-1$, o argumento do logaritmo seria zero, e em $x=3$, a fração não estaria definida.
 
 Portanto:
 
@@ -844,7 +918,7 @@ $$
 f(x)=\frac{(x-2)(x+2)}{x-2}.
 $$
 
-Para \(x\neq 2\), podemos simplificar:
+Para $x\neq 2$, podemos simplificar:
 
 $$
 f(x)=x+2.
@@ -876,29 +950,27 @@ $$
 \boxed{D_f\neq D_g.}
 $$
 
-A simplificação algébrica é válida apenas para \(x\neq 2\), e não elimina a restrição que existia na expressão original.
+A simplificação algébrica é válida apenas para $x\neq 2$, e não elimina a restrição que existia na expressão original.
 
 :::
 
-***
-
-## 🧩 11. Quiz — Domínio de Funções
+## 🧩 Quiz — Domínio de Funções
 
 :::::{.question}
 
-**Q1.** Para que a expressão \(\sqrt{x-1}\) esteja definida nos números reais, precisamos de:
+**Q1.** Para que a expressão $\sqrt{x-1}$ esteja definida nos números reais, precisamos de:
 
 ::::{.choices}
 :::{.choice .correct-choice}
-\(x-1\geq 0\).
+$x-1\geq 0$.
 :::
 
 :::{.choice}
-\(x-1>0\) obrigatoriamente.
+$x-1>0$ obrigatoriamente.
 :::
 
 :::{.choice}
-\(x-1\neq 0\).
+$x-1\neq 0$.
 :::
 ::::
 
@@ -906,19 +978,19 @@ A simplificação algébrica é válida apenas para \(x\neq 2\), e não elimina 
 
 :::::{.question}
 
-**Q2.** Para que \(\ln(x+2)\) esteja definido nos números reais, precisamos de:
+**Q2.** Para que $\ln(x+2)$ esteja definido nos números reais, precisamos de:
 
 ::::{.choices}
 :::{.choice}
-\(x+2\geq 0\).
+$x+2\geq 0$.
 :::
 
 :::{.choice .correct-choice}
-\(x+2>0\).
+$x+2>0$.
 :::
 
 :::{.choice}
-\(x+2\neq 0\) apenas.
+$x+2\neq 0$ apenas.
 :::
 ::::
 
@@ -944,17 +1016,9 @@ Diferente de zero.
 
 :::::
 
-***
+## 🧭 Síntese do aprofundamento
 
-## 🧭 12. Síntese do aprofundamento
-
-| Operação | Condição para existência real |
-|---|---|
-| Fração \(\dfrac{a(x)}{b(x)}\) | \(b(x)\neq 0\) |
-| Raiz de índice par \(\sqrt[2n]{a(x)}\) | \(a(x)\geq 0\) |
-| Logaritmo \(\log_b(a(x))\) | \(a(x)>0\), com \(b>0\) e \(b\neq 1\) |
-| Composição \(f(g(x))\) | \(x\in D_g\) e \(g(x)\in D_f\) |
-| Função por partes | Cada regra deve respeitar sua condição e suas restrições próprias |
+O [quadro de consulta](#quadro-de-consulta) reúne as condições de cada operação.
 
 A determinação do domínio é uma etapa fundamental na análise de funções. Ela estabelece onde podemos estudar o comportamento da função e prepara o caminho para os conceitos centrais do Cálculo.
 
@@ -968,9 +1032,11 @@ Na Aula 1.22-AP, ampliaremos o estudo das funções definidas por partes, explor
 
 :::
 
-## 🔗 13. Navegação
+## 🔗 Navegação
 
 ↩️ **Voltar à aula de origem:** [1.10 — Conceito Formal de Função](1.10-conceito-formal-de-funcao.qmd)
+
+🧭 [**Exercícios da Revisão Geral**](1.17-revisao-geral-do-modulo-1.qmd#exercícios-propostos)
 
 ▶️ **Continuar a sequência principal:** [1.11 — Revisão Gráfica e Algébrica](1.11-revisao-grafica-e-algebrica.qmd)
 

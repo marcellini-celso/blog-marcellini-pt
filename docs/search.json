@@ -9412,126 +9412,105 @@
     "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#regra-geral",
     "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
     "section": "1.1 🧭 Regra geral",
-    "text": "1.1 🧭 Regra geral\nPara encontrar o domínio real de uma função, fazemos a pergunta:\n\nPara quais valores reais de \\(x\\) a expressão faz sentido?\n\nAs restrições mais comuns vêm de:\n\ndenominadores;\nraízes de índice par;\nlogaritmos;\ntangente e outras funções trigonométricas com denominador;\ncomposições;\nfunções definidas por partes."
+    "text": "1.1 🧭 Regra geral\n\n\n\n\n\n\nImportanteDomínio declarado e domínio natural\n\n\n\nO domínio declarado faz parte da definição de uma função. Por exemplo, se \\(f:[0,+\\infty)\\to\\mathbb R\\) é dada por \\(f(x)=x^2\\), seu domínio é \\([0,+\\infty)\\). O domínio real natural da expressão \\(x^2\\) é \\(\\mathbb R\\), pois o quadrado está definido para toda entrada real.\nQuando o enunciado fornece apenas a expressão, este guia usa seu domínio real natural. Se o domínio foi declarado, usamos o conjunto dado e verificamos se a expressão está definida em todas as suas entradas.\n\n\nPara determinar o domínio real natural de uma expressão, fazemos a seguinte pergunta:\n\nPara quais valores reais de \\(x\\) a expressão que define a função está matematicamente bem definida?\n\nAs restrições mais comuns estão associadas a:\n\ndenominadores de frações;\nraízes de índice par;\nlogaritmos;\nfunções trigonométricas que envolvem denominadores;\ncomposições de funções;\nfunções definidas por partes.\n\nQuando a mesma expressão envolve várias operações, todas as condições precisam valer para a mesma entrada. Intersectamos os conjuntos de entradas permitidos por cada operação. Em uma função definida por partes, fazemos essa interseção em cada trecho e depois reunimos os conjuntos obtidos por união.\n\n1.1.1 Quadro de consulta\n\n\n\n\n\n\n\nOperação\nCondição para existência real\n\n\n\n\nFração \\(\\dfrac{a(x)}{b(x)}\\)\n\\(b(x)\\neq 0\\)\n\n\nRaiz de índice par \\(\\sqrt[2n]{a(x)}\\)\n\\(a(x)\\geq 0\\)\n\n\nLogaritmo \\(\\log_b(a(x))\\)\n\\(a(x)&gt;0\\), com \\(b&gt;0\\) e \\(b\\neq 1\\)\n\n\nTangente \\(\\tan x\\)\n\\(\\cos x\\neq 0\\)\n\n\nComposição \\(f(g(x))\\)\n\\(x\\in D_g\\) e \\(g(x)\\in D_f\\)\n\n\nFunção por partes\nCada regra deve respeitar sua condição e suas restrições próprias"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#frações",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#frações",
     "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
     "section": "1.2 ➗ Frações",
-    "text": "1.2 ➗ Frações\nEm uma fração, o denominador não pode ser zero.\nPor exemplo:\n\\[\nf(x)=\\frac{1}{x-4}.\n\\]\nPrecisamos de\n\\[\nx-4\\neq 0.\n\\]\nLogo,\n\\[\nx\\neq 4.\n\\]\nAssim,\n\\[\nD_f=(-\\infty,4)\\cup(4,+\\infty).\n\\]"
+    "text": "1.2 ➗ Frações\nEm uma fração, o denominador precisa ser diferente de zero.\nConsidere:\n\\[\nf(x)=\\frac{1}{x-4}.\n\\]\nPrecisamos impor:\n\\[\nx-4\\neq 0.\n\\]\nLogo:\n\\[\nx\\neq 4.\n\\]\nPortanto, o domínio é:\n\\[\nD_f=(-\\infty,4)\\cup(4,+\\infty).\n\\]\nObserve que todos os números reais são permitidos, exceto \\(4\\).\nRegra: em qualquer expressão fracionária, devemos excluir os valores que anulam o denominador."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#raízes-de-índice-par",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#raízes-de-índice-par",
     "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "1.3 🌱 √ Raízes de índice par",
-    "text": "1.3 🌱 √ Raízes de índice par\nPara raízes de índice par, o radicando precisa ser não negativo.\nPor exemplo:\n\\[\ng(x)=\\sqrt{x-3}.\n\\]\nPrecisamos de\n\\[\nx-3\\geq 0.\n\\]\nLogo,\n\\[\nx\\geq 3.\n\\]\nAssim,\n\\[\nD_g=[3,+\\infty).\n\\]\nOutro exemplo:\n\\[\nh(x)=\\sqrt{9-x^2}.\n\\]\nPrecisamos de\n\\[\n9-x^2\\geq 0.\n\\]\nIsso equivale a\n\\[\nx^2\\leq 9.\n\\]\nLogo,\n\\[\n-3\\leq x\\leq 3.\n\\]\nAssim,\n\\[\nD_h=[-3,3].\n\\]"
+    "section": "1.3 🌱 Raízes de índice par",
+    "text": "1.3 🌱 Raízes de índice par\nPara que uma raiz de índice par tenha valor real, seu radicando precisa ser não negativo.\nConsidere:\n\\[\ng(x)=\\sqrt{x-3}.\n\\]\nPrecisamos de:\n\\[\nx-3\\geq 0.\n\\]\nLogo:\n\\[\nx\\geq 3.\n\\]\nAssim:\n\\[\nD_g=[3,+\\infty).\n\\]\nObserve que o valor \\(x=3\\) está permitido, pois:\n\\[\n\\sqrt{3-3}=\\sqrt{0}=0.\n\\]\n\n1.3.1 Outro exemplo: uma raiz com expressão quadrática\nConsidere:\n\\[\nh(x)=\\sqrt{9-x^2}.\n\\]\nPrecisamos de:\n\\[\n9-x^2\\geq 0.\n\\]\nReorganizando:\n\\[\nx^2\\leq 9.\n\\]\nPortanto:\n\\[\n-3\\leq x\\leq 3.\n\\]\nO domínio é:\n\\[\nD_h=[-3,3].\n\\]\nRegra: para raízes de índice par, o radicando deve ser maior ou igual a zero.\n\nAtenção: essa condição não se aplica da mesma maneira às raízes de índice ímpar. Por exemplo, \\(\\sqrt[3]{-8}=-2\\) é um número real."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#logaritmos",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#logaritmos",
     "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
     "section": "1.4 📈 Logaritmos",
-    "text": "1.4 📈 Logaritmos\nPara logaritmos reais, o argumento precisa ser positivo.\nPor exemplo:\n\\[\np(x)=\\ln(x-2).\n\\]\nPrecisamos de\n\\[\nx-2&gt;0.\n\\]\nLogo,\n\\[\nx&gt;2.\n\\]\nAssim,\n\\[\nD_p=(2,+\\infty).\n\\]\nSe\n\\[\nq(x)=\\log_2(5-x),\n\\]\nprecisamos de\n\\[\n5-x&gt;0.\n\\]\nLogo,\n\\[\nx&lt;5.\n\\]\nAssim,\n\\[\nD_q=(-\\infty,5).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#composição-de-restrições",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#composição-de-restrições",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "1.5 🧩 Composição de restrições",
-    "text": "1.5 🧩 Composição de restrições\nQuando a função combina várias operações, todas as restrições precisam ser satisfeitas ao mesmo tempo.\nConsidere:\n\\[\nf(x)=\\frac{\\sqrt{x-1}}{x-4}.\n\\]\nTemos duas restrições:\n\nraiz quadrada:\n\n\\[\nx-1\\geq 0,\n\\]\nlogo\n\\[\nx\\geq 1;\n\\]\n\ndenominador:\n\n\\[\nx-4\\neq 0,\n\\]\nlogo\n\\[\nx\\neq 4.\n\\]\nPortanto,\n\\[\nD_f=[1,4)\\cup(4,+\\infty).\n\\]"
+    "text": "1.4 📈 Logaritmos\nPara que um logaritmo esteja definido nos números reais, seu argumento precisa ser estritamente positivo.\nConsidere:\n\\[\np(x)=\\ln(x-2).\n\\]\nPrecisamos de:\n\\[\nx-2&gt;0.\n\\]\nLogo:\n\\[\nx&gt;2.\n\\]\nAssim:\n\\[\nD_p=(2,+\\infty).\n\\]\nObserve que \\(x=2\\) não pertence ao domínio, pois o logaritmo de zero não está definido.\n\n1.4.1 Outro exemplo\nSe:\n\\[\nq(x)=\\log_2(5-x),\n\\]\nprecisamos de:\n\\[\n5-x&gt;0.\n\\]\nLogo:\n\\[\nx&lt;5.\n\\]\nAssim:\n\\[\nD_q=(-\\infty,5).\n\\]\nRegra: o argumento de um logaritmo real deve ser estritamente positivo."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#logaritmo-com-fração",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#logaritmo-com-fração",
     "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "1.6 🔗 Logaritmo com fração",
-    "text": "1.6 🔗 Logaritmo com fração\nConsidere:\n\\[\ng(x)=\\ln\\left(\\frac{x-1}{x+2}\\right).\n\\]\nPrecisamos de\n\\[\n\\frac{x-1}{x+2}&gt;0.\n\\]\nAlém disso, implicitamente\n\\[\nx+2\\neq 0.\n\\]\nOs pontos críticos são\n\\[\nx=1\n\\]\ne\n\\[\nx=-2.\n\\]\nAnalisando sinais:\n\nem \\((-\\infty,-2)\\), a fração é positiva;\nem \\((-2,1)\\), a fração é negativa;\nem \\((1,+\\infty)\\), a fração é positiva.\n\nLogo,\n\\[\nD_g=(-\\infty,-2)\\cup(1,+\\infty).\n\\]"
+    "section": "1.7 🔗 Logaritmo com fração",
+    "text": "1.7 🔗 Logaritmo com fração\nQuando o argumento de um logaritmo é uma fração, precisamos garantir que a fração inteira seja positiva.\nConsidere:\n\\[\ng(x)=\\ln\\left(\\frac{x-1}{x+2}\\right).\n\\]\nA condição fundamental é:\n\\[\n\\frac{x-1}{x+2}&gt;0.\n\\]\nAlém disso, o denominador não pode ser zero:\n\\[\nx+2\\neq 0.\n\\]\nOs pontos críticos são os valores que anulam o numerador ou o denominador:\n\\[\nx=1\n\\qquad\\text{e}\\qquad\nx=-2.\n\\]\nEles dividem a reta real em três intervalos:\n\\[\n(-\\infty,-2),\\quad (-2,1),\\quad (1,+\\infty).\n\\]\nAnalisando os sinais:\n\n\n\nIntervalo\nNumerador \\(x-1\\)\nDenominador \\(x+2\\)\nFração\n\n\n\n\n\\((-\\infty,-2)\\)\n−\n−\n+\n\n\n\\((-2,1)\\)\n−\n+\n−\n\n\n\\((1,+\\infty)\\)\n+\n+\n+\n\n\n\nComo o argumento do logaritmo precisa ser positivo, selecionamos os intervalos nos quais a fração é positiva.\nOs extremos não são incluídos: em \\(x=1\\), o argumento seria zero; em \\(x=-2\\), a fração não estaria definida.\nPortanto:\n\\[\n\\boxed{D_g=(-\\infty,-2)\\cup(1,+\\infty).}\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#domínio-de-função-composta",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#domínio-de-função-composta",
     "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "1.7 🧮 Domínio de função composta",
-    "text": "1.7 🧮 Domínio de função composta\nSe\n\\[\n(f\\circ g)(x)=f(g(x)),\n\\]\nentão precisamos que:\n\n\\(x\\) pertença ao domínio de \\(g\\);\n\\(g(x)\\) pertença ao domínio de \\(f\\).\n\nPor exemplo, se\n\\[\nf(u)=\\sqrt{u}\n\\]\ne\n\\[\ng(x)=x^2-4,\n\\]\nentão\n\\[\n(f\\circ g)(x)=\\sqrt{x^2-4}.\n\\]\nPrecisamos de\n\\[\nx^2-4\\geq 0.\n\\]\nLogo,\n\\[\nx\\leq -2\n\\]\nou\n\\[\nx\\geq 2.\n\\]\nAssim,\n\\[\nD_{f\\circ g}=(-\\infty,-2]\\cup[2,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#funções-por-partes",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#funções-por-partes",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "1.8 🧱 Funções por partes",
-    "text": "1.8 🧱 Funções por partes\nEm funções definidas por partes, cada regra vale em uma região do domínio.\nPor exemplo:\n\\[\nf(x)=\n\\begin{cases}\n\\sqrt{x+1}, & x&lt;2,\\\\\n\\dfrac{1}{x-3}, & x\\geq 2.\n\\end{cases}\n\\]\nNa primeira parte, precisamos de\n\\[\nx+1\\geq 0,\n\\]\nisto é,\n\\[\nx\\geq -1.\n\\]\nMas essa parte só vale quando\n\\[\nx&lt;2.\n\\]\nLogo, a primeira parte contribui com\n\\[\n[-1,2).\n\\]\nNa segunda parte, precisamos de\n\\[\nx-3\\neq 0,\n\\]\nisto é,\n\\[\nx\\neq 3.\n\\]\nMas essa parte só vale quando\n\\[\nx\\geq 2.\n\\]\nLogo, a segunda parte contribui com\n\\[\n[2,3)\\cup(3,+\\infty).\n\\]\nPortanto,\n\\[\nD_f=[-1,3)\\cup(3,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#erros-comuns",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#erros-comuns",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "1.9 ⚠️ Erros comuns",
-    "text": "1.9 ⚠️ Erros comuns\nAlguns erros aparecem com frequência:\n\nesquecer que denominador não pode ser zero;\nusar \\(&gt;\\) em vez de \\(\\geq\\) em raízes quadradas;\nusar \\(\\geq\\) em vez de \\(&gt;\\) em logaritmos;\ncancelar fatores e esquecer restrições do domínio original;\nanalisar a fórmula simplificada e esquecer a expressão original.\n\nPor exemplo:\n\\[\nf(x)=\\frac{x^2-1}{x-1}.\n\\]\nPara \\(x\\neq 1\\), temos\n\\[\nf(x)=x+1.\n\\]\nMas o domínio original exclui \\(x=1\\).\nLogo, o gráfico é a reta \\(y=x+1\\) com um buraco em \\(x=1\\)."
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-1",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "2.1 🧪 Exercício 1",
-    "text": "2.1 🧪 Exercício 1\nDetermine o domínio real:\n\n\\(f(x)=\\dfrac{1}{x+7}\\)\n\n\\(g(x)=\\sqrt{x-5}\\)\n\n\\(h(x)=\\ln(x+4)\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-2",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-2",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "2.2 🧪 Exercício 2",
-    "text": "2.2 🧪 Exercício 2\nDetermine o domínio real:\n\n\\(p(x)=\\dfrac{\\sqrt{x-2}}{x-6}\\)\n\n\\(q(x)=\\ln(3-x)\\)\n\n\\(r(x)=\\sqrt{x^2-16}\\)"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-3",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-3",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "2.3 🧪 Exercício 3",
-    "text": "2.3 🧪 Exercício 3\nDetermine o domínio de:\n\\[\ns(x)=\\ln\\left(\\frac{x+1}{x-3}\\right).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-4",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-4",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "2.4 🧪 Exercício 4",
-    "text": "2.4 🧪 Exercício 4\nExplique por que\n\\[\n\\frac{x^2-4}{x-2}\n\\]\nnão tem domínio igual ao de\n\\[\nx+2.\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-1-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-1-1",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "3.1 🧪 Exercício 1",
-    "text": "3.1 🧪 Exercício 1\n\n\n\n\\[\nx+7\\neq 0\n\\]\nlogo\n\\[\nx\\neq -7.\n\\]\nAssim,\n\\[\nD_f=(-\\infty,-7)\\cup(-7,+\\infty).\n\\]\n\n\n\n\\[\nx-5\\geq 0\n\\]\nlogo\n\\[\nx\\geq 5.\n\\]\nAssim,\n\\[\nD_g=[5,+\\infty).\n\\]\n\n\n\n\\[\nx+4&gt;0\n\\]\nlogo\n\\[\nx&gt;-4.\n\\]\nAssim,\n\\[\nD_h=(-4,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-2-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-2-1",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "3.2 🧪 Exercício 2",
-    "text": "3.2 🧪 Exercício 2\n\nPrecisamos de \\(x-2\\geq 0\\) e \\(x-6\\neq 0\\). Logo:\n\n\\[\nD_p=[2,6)\\cup(6,+\\infty).\n\\]\n\n\n\n\\[\n3-x&gt;0\n\\]\nlogo\n\\[\nx&lt;3.\n\\]\nAssim,\n\\[\nD_q=(-\\infty,3).\n\\]\n\n\n\n\\[\nx^2-16\\geq 0\n\\]\nlogo\n\\[\nx\\leq -4\n\\]\nou\n\\[\nx\\geq 4.\n\\]\nAssim,\n\\[\nD_r=(-\\infty,-4]\\cup[4,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-3-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-3-1",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "3.3 🧪 Exercício 3",
-    "text": "3.3 🧪 Exercício 3\nPrecisamos de\n\\[\n\\frac{x+1}{x-3}&gt;0.\n\\]\nOs pontos críticos são \\(x=-1\\) e \\(x=3\\).\nA fração é positiva em\n\\[\n(-\\infty,-1)\n\\]\ne\n\\[\n(3,+\\infty).\n\\]\nLogo,\n\\[\nD_s=(-\\infty,-1)\\cup(3,+\\infty).\n\\]"
-  },
-  {
-    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-4-1",
-    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercício-4-1",
-    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "3.4 🧪 Exercício 4",
-    "text": "3.4 🧪 Exercício 4\nA expressão\n\\[\n\\frac{x^2-4}{x-2}\n\\]\ntem denominador zero em \\(x=2\\), portanto \\(x=2\\) não pertence ao domínio original.\nEmbora\n\\[\n\\frac{x^2-4}{x-2}=x+2\n\\]\npara \\(x\\neq 2\\), a função original mantém a restrição \\(x\\neq 2\\).\nJá \\(x+2\\) está definida para todo real."
+    "section": "1.8 🧮 Domínio de função composta",
+    "text": "1.8 🧮 Domínio de função composta\nConsidere duas funções:\n\\[\nf:A\\to\\mathbb{R}\n\\]\ne\n\\[\ng:B\\to\\mathbb{R}.\n\\]\nNa composição \\(f\\circ g\\), aplicamos primeiro \\(g\\) e depois \\(f\\):\n\\[\n(f\\circ g)(x)=f(g(x)).\n\\]\nPara que essa composição esteja definida, precisamos verificar duas condições:\n\n\\(x\\) deve pertencer ao domínio de \\(g\\);\n\\(g(x)\\) deve pertencer ao domínio de \\(f\\).\n\nO resultado produzido pela função interna precisa ser uma entrada permitida para a função externa. Assim,\n\\[\nD_{f\\circ g}=\\{x\\in B:g(x)\\in A\\}.\n\\]\n\n1.8.1 Exemplo\nConsidere:\n\\[\nf(u)=\\sqrt{u}\n\\]\ne:\n\\[\ng(x)=x^2-4.\n\\]\nA composição será:\n\\[\n(f\\circ g)(x)=\\sqrt{x^2-4}.\n\\]\nComo a raiz quadrada exige radicando não negativo:\n\\[\nx^2-4\\geq 0.\n\\]\nLogo:\n\\[\nx^2\\geq 4.\n\\]\nPortanto:\n\\[\nx\\leq -2\n\\qquad\\text{ou}\\qquad\nx\\geq 2.\n\\]\nAssim:\n\\[\n\\boxed{D_{f\\circ g}=(-\\infty,-2]\\cup[2,+\\infty).}\n\\]"
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#quiz-domínio-de-funções",
     "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#quiz-domínio-de-funções",
     "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
-    "section": "3.5 🧩 Quiz — Domínio de Funções",
-    "text": "3.5 🧩 Quiz — Domínio de Funções\n\nQ1. Para \\(\\sqrt{x-1}\\) estar definida nos reais, precisamos de:\n\n\n\n\n ✓\\(x-1\\geq 0\\).\n\n\n ✗\\(x-1&gt;0\\) obrigatoriamente.\n\n\n ✗\\(x-1\\neq 0\\).\n\n\n\n\n\n\nQ2. Para \\(\\ln(x+2)\\) estar definido, precisamos de:\n\n\n\n\n ✗\\(x+2\\geq 0\\).\n\n\n ✓\\(x+2&gt;0\\).\n\n\n ✗\\(x+2\\neq 0\\) apenas.\n\n\n\n\n\n\nQ3. Em uma fração, o denominador deve ser:\n\n\n\n\n ✗Sempre positivo.\n\n\n ✗Sempre negativo.\n\n\n ✓Diferente de zero."
+    "section": "1.13 🧩 Quiz — Domínio de Funções",
+    "text": "1.13 🧩 Quiz — Domínio de Funções\n\nQ1. Para que a expressão \\(\\sqrt{x-1}\\) esteja definida nos números reais, precisamos de:\n\n\n\n\n ✓\\(x-1\\geq 0\\).\n\n\n ✗\\(x-1&gt;0\\) obrigatoriamente.\n\n\n ✗\\(x-1\\neq 0\\).\n\n\n\n\n\n\nQ2. Para que \\(\\ln(x+2)\\) esteja definido nos números reais, precisamos de:\n\n\n\n\n ✗\\(x+2\\geq 0\\).\n\n\n ✓\\(x+2&gt;0\\).\n\n\n ✗\\(x+2\\neq 0\\) apenas.\n\n\n\n\n\n\nQ3. Em uma fração, o denominador deve ser:\n\n\n\n\n ✗Sempre positivo.\n\n\n ✗Sempre negativo.\n\n\n ✓Diferente de zero."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#tangente",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#tangente",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.5 📐 Tangente",
+    "text": "1.5 📐 Tangente\nA identidade \\(\\tan x=\\dfrac{\\sin x}{\\cos x}\\) mostra que a tangente é definida quando \\(\\cos x\\neq 0\\).\nComo \\(\\cos x=0\\) precisamente em \\(x=\\dfrac{\\pi}{2}+k\\pi\\), para \\(k\\in\\mathbb Z\\), excluímos esses pontos:\n\\[\nD_{\\tan}=\\mathbb R\\setminus\\left\\{\\frac{\\pi}{2}+k\\pi:k\\in\\mathbb Z\\right\\}.\n\\]"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#combinação-de-restrições",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#combinação-de-restrições",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.6 🧩 Combinação de restrições",
+    "text": "1.6 🧩 Combinação de restrições\nQuando uma função combina diferentes operações, todas as restrições precisam ser satisfeitas simultaneamente.\nConsidere:\n\\[\nf(x)=\\frac{\\sqrt{x-1}}{x-4}.\n\\]\nTemos duas condições.\n1. Restrição da raiz quadrada\nO radicando precisa ser não negativo:\n\\[\nx-1\\geq 0.\n\\]\nLogo:\n\\[\nx\\geq 1.\n\\]\n2. Restrição do denominador\nO denominador precisa ser diferente de zero:\n\\[\nx-4\\neq 0.\n\\]\nLogo:\n\\[\nx\\neq 4.\n\\]\nPrecisamos combinar as duas condições:\n\\[\nx\\geq 1\n\\qquad\\text{e}\\qquad\nx\\neq 4.\n\\]\nPortanto:\n\\[\n\\boxed{D_f=[1,4)\\cup(4,+\\infty).}\n\\]\nA ideia central é que não basta satisfazer uma das condições: o número precisa satisfazer todas elas."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#funções-definidas-por-partes",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#funções-definidas-por-partes",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.9 🧱 Funções definidas por partes",
+    "text": "1.9 🧱 Funções definidas por partes\nEm uma função definida por partes, cada expressão corresponde a uma região específica do domínio.\nPor isso, devemos analisar cada regra separadamente, respeitando o intervalo em que ela é válida.\nConsidere:\n\\[\nf(x)=\n\\begin{cases}\n\\sqrt{x+1}, & x&lt;2,\\\\[4pt]\n\\dfrac{1}{x-3}, & x\\geq 2.\n\\end{cases}\n\\]\n\n1.9.1 Primeira parte\nA primeira expressão é:\n\\[\n\\sqrt{x+1}.\n\\]\nA condição da raiz quadrada é:\n\\[\nx+1\\geq 0.\n\\]\nLogo:\n\\[\nx\\geq -1.\n\\]\nEntretanto, essa regra só vale para:\n\\[\nx&lt;2.\n\\]\nCombinando as condições:\n\\[\n-1\\leq x&lt;2.\n\\]\nPortanto, a primeira parte contribui com:\n\\[\n[-1,2).\n\\]\n\n\n1.9.2 Segunda parte\nA segunda expressão é:\n\\[\n\\frac{1}{x-3}.\n\\]\nO denominador precisa ser diferente de zero:\n\\[\nx-3\\neq 0.\n\\]\nLogo:\n\\[\nx\\neq 3.\n\\]\nMas essa regra só vale para:\n\\[\nx\\geq 2.\n\\]\nPortanto, a segunda parte contribui com:\n\\[\n[2,3)\\cup(3,+\\infty).\n\\]\n\n\n1.9.3 Domínio total\nO domínio da função é a união dos conjuntos obtidos nas duas partes:\n\\[\nD_f=[-1,2)\\cup[2,3)\\cup(3,+\\infty).\n\\]\nSimplificando:\n\\[\n\\boxed{D_f=[-1,3)\\cup(3,+\\infty).}\n\\]\nObserve que \\(x=2\\) pertence ao domínio, pois a segunda expressão está definida nesse ponto.\nIdeia fundamental. Em cada trecho, intersectamos o conjunto de entradas permitidas pela expressão com a condição daquele trecho. O domínio total é a união dos conjuntos resultantes."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#erros-comuns-na-determinação-do-domínio",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#erros-comuns-na-determinação-do-domínio",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.10 ⚠️ Erros comuns na determinação do domínio",
+    "text": "1.10 ⚠️ Erros comuns na determinação do domínio\nAlguns erros aparecem frequentemente durante a resolução de exercícios.\n\nEsquecer que o denominador de uma fração não pode ser zero.\nExigir que o radicando de uma raiz quadrada seja positivo, quando a condição correta é ser não negativo.\nPermitir argumento igual a zero em um logaritmo, quando ele precisa ser estritamente positivo.\nCancelar fatores algébricos e esquecer as restrições da expressão original.\nAnalisar uma expressão de função por partes fora do intervalo em que ela é válida.\nDeterminar o domínio de uma composição considerando somente uma das funções envolvidas.\n\n\n1.10.1 Simplificação e o ponto ausente\nConsidere:\n\\[\nf(x)=\\frac{x^2-1}{x-1}.\n\\]\nFatorando o numerador:\n\\[\nf(x)=\\frac{(x-1)(x+1)}{x-1}.\n\\]\nPara \\(x\\neq 1\\), podemos simplificar:\n\\[\nf(x)=x+1.\n\\]\nEntretanto, a expressão original não está definida em \\(x=1\\).\nAssim, seu domínio é:\n\\[\nD_f=\\mathbb{R}\\setminus\\{1\\}.\n\\]\nJá a função:\n\\[\ng(x)=x+1\n\\]\ntem domínio:\n\\[\nD_g=\\mathbb{R}.\n\\]\nPortanto, embora as duas expressões produzam o mesmo valor para todo \\(x\\neq 1\\), elas não definem a mesma função quando consideramos seus domínios naturais.\nA representação gráfica de \\(f\\) corresponde à reta \\(y=x+1\\), com um ponto ausente em:\n\\[\n(1,2).\n\\]\nQuando \\(x\\) se aproxima de \\(1\\) pelo domínio de \\(f\\), os valores \\(f(x)=x+1\\) se aproximam de \\(2\\). A função \\(g\\) é uma extensão contínua de \\(f\\): coincide com ela para \\(x\\neq 1\\) e atribui ao novo ponto o valor \\(g(1)=2\\). Por isso, dizemos que o ponto ausente é removível.\n\n\n\n\n\n\nFigura 1: Os gráficos coincidem para entradas diferentes de 1. O ponto (1,2) fica aberto no gráfico de f e preenchido no de g.\n\n\n\n\n\n\n\n\n\nImportante💡 Uma distinção essencial\n\n\n\nSimplificar uma expressão algébrica não significa automaticamente ampliar o domínio da função original.\nAs restrições impostas pela expressão inicial precisam ser preservadas.\n\n\n\n\n\n\n\n\nNotaCódigo-fonte da figura em Python\n\n\n\n\n\nfrom pathlib import Path\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nazul = \"#196399\"\ngrade = \"#DCE5EF\"\nfig, eixos = plt.subplots(1, 2, figsize=(8.4, 3.65), sharex=True, sharey=True,\n                         layout=\"constrained\")\nesquerda = np.linspace(-1, 1, 150, endpoint=False)\ndireita = np.linspace(1, 3, 151)[1:]\nx = np.linspace(-1, 3, 300)\n\nf, g = eixos\nf.plot(esquerda, esquerda + 1, color=azul, linewidth=2.4)\nf.plot(direita, direita + 1, color=azul, linewidth=2.4)\ng.plot(x, x + 1, color=azul, linewidth=2.4)\n\nf.set_title(r\"$f(x)=\\dfrac{x^2-1}{x-1}$,  $x\\ne 1$\", pad=10)\ng.set_title(r\"$g(x)=x+1$,  $x\\in\\mathbb{R}$\", pad=10)\nfor eixo, preenchimento in zip(eixos, (\"white\", azul)):\n    eixo.scatter(1, 2, s=92, facecolors=preenchimento,\n                 edgecolors=azul, linewidths=2, zorder=4)\n    eixo.annotate(r\"$(1,2)$\", (1, 2), xytext=(10, -16),\n                  textcoords=\"offset points\", color=azul, fontsize=11)\n    eixo.set(xlim=(-1.12, 3.12), ylim=(-0.2, 4.2), xticks=[-1, 0, 1, 2, 3],\n             yticks=[0, 1, 2, 3, 4], xlabel=r\"$x$\")\n    eixo.tick_params(labelleft=True)\n    eixo.set_axisbelow(True)\n    eixo.grid(color=grade)\n\nf.set_ylabel(r\"$y$\")\nplt.rcParams[\"svg.fonttype\"] = \"path\"\nPath(\"images\").mkdir(exist_ok=True)\nfig.savefig(\"images/1.21-ap-dominio-ponto-aberto.svg\")\nplt.close(fig)"
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercícios-propostos",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#exercícios-propostos",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.11 🧪 Exercícios propostos",
+    "text": "1.11 🧪 Exercícios propostos\n\n\n\n\n\n\nNota📝 Exercícios\n\n\n\n\n1.11.1 🧪 Exercício 1 — Restrições básicas\nDetermine o domínio real de cada função:\n\n\\(f(x)=\\dfrac{1}{x+7}\\)\n\\(g(x)=\\sqrt{x-5}\\)\n\\(h(x)=\\ln(x+4)\\)\n\n\n\n1.11.2 🧪 Exercício 2 — Combinação de restrições\nDetermine o domínio real de cada função:\n\n\\(p(x)=\\dfrac{\\sqrt{x-2}}{x-6}\\)\n\\(q(x)=\\ln(3-x)\\)\n\\(r(x)=\\sqrt{x^2-16}\\)\n\n\n\n1.11.3 🧪 Exercício 3 — Logaritmo com fração\nDetermine o domínio de:\n\\[\ns(x)=\\ln\\left(\\frac{x+1}{x-3}\\right).\n\\]\n\n\n1.11.4 🧪 Exercício 4 — Domínios e simplificação\nExplique por que as expressões\n\\[\n\\frac{x^2-4}{x-2}\n\\]\ne\n\\[\nx+2\n\\]\nnão possuem o mesmo domínio natural, embora sejam equivalentes para \\(x\\neq 2\\)."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#gabarito-comentado",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#gabarito-comentado",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.12 ✅ Gabarito comentado",
+    "text": "1.12 ✅ Gabarito comentado\n\n\n\n\n\n\nImportante🔎 Clique para consultar as resoluções\n\n\n\n\n\n\n1.12.1 🧪 Exercício 1 — Restrições básicas\na)\nO denominador precisa ser diferente de zero:\n\\[\nx+7\\neq 0.\n\\]\nLogo:\n\\[\nx\\neq -7.\n\\]\nPortanto:\n\\[\n\\boxed{D_f=(-\\infty,-7)\\cup(-7,+\\infty).}\n\\]\nb)\nO radicando precisa ser não negativo:\n\\[\nx-5\\geq 0.\n\\]\nLogo:\n\\[\nx\\geq 5.\n\\]\nPortanto:\n\\[\n\\boxed{D_g=[5,+\\infty).}\n\\]\nc)\nO argumento do logaritmo precisa ser positivo:\n\\[\nx+4&gt;0.\n\\]\nLogo:\n\\[\nx&gt;-4.\n\\]\nPortanto:\n\\[\n\\boxed{D_h=(-4,+\\infty).}\n\\]\n\n\n1.12.2 🧪 Exercício 2 — Combinação de restrições\na)\nPrecisamos satisfazer simultaneamente:\n\\[\nx-2\\geq 0\n\\]\ne:\n\\[\nx-6\\neq 0.\n\\]\nLogo:\n\\[\nx\\geq 2\n\\qquad\\text{e}\\qquad\nx\\neq 6.\n\\]\nPortanto:\n\\[\n\\boxed{D_p=[2,6)\\cup(6,+\\infty).}\n\\]\nb)\nO argumento do logaritmo precisa ser positivo:\n\\[\n3-x&gt;0.\n\\]\nLogo:\n\\[\nx&lt;3.\n\\]\nPortanto:\n\\[\n\\boxed{D_q=(-\\infty,3).}\n\\]\nc)\nO radicando precisa ser não negativo:\n\\[\nx^2-16\\geq 0.\n\\]\nLogo:\n\\[\nx^2\\geq 16.\n\\]\nPortanto:\n\\[\nx\\leq -4\n\\qquad\\text{ou}\\qquad\nx\\geq 4.\n\\]\nAssim:\n\\[\n\\boxed{D_r=(-\\infty,-4]\\cup[4,+\\infty).}\n\\]\n\n\n1.12.3 🧪 Exercício 3 — Logaritmo com fração\nPrecisamos de:\n\\[\n\\frac{x+1}{x-3}&gt;0.\n\\]\nOs pontos críticos são:\n\\[\nx=-1\n\\qquad\\text{e}\\qquad\nx=3.\n\\]\nEles dividem a reta real nos intervalos:\n\\[\n(-\\infty,-1),\\quad (-1,3),\\quad (3,+\\infty).\n\\]\nA fração é positiva quando numerador e denominador possuem o mesmo sinal.\nIsso ocorre nos intervalos:\n\\[\n(-\\infty,-1)\n\\]\ne:\n\\[\n(3,+\\infty).\n\\]\nOs extremos são excluídos porque, em \\(x=-1\\), o argumento do logaritmo seria zero, e em \\(x=3\\), a fração não estaria definida.\nPortanto:\n\\[\n\\boxed{D_s=(-\\infty,-1)\\cup(3,+\\infty).}\n\\]\n\n\n1.12.4 🧪 Exercício 4 — Domínios e simplificação\nConsidere:\n\\[\nf(x)=\\frac{x^2-4}{x-2}.\n\\]\nO denominador não pode ser zero:\n\\[\nx-2\\neq 0.\n\\]\nLogo:\n\\[\nx\\neq 2.\n\\]\nFatorando o numerador:\n\\[\nf(x)=\\frac{(x-2)(x+2)}{x-2}.\n\\]\nPara \\(x\\neq 2\\), podemos simplificar:\n\\[\nf(x)=x+2.\n\\]\nEntretanto, a restrição original continua válida.\nAssim:\n\\[\nD_f=\\mathbb{R}\\setminus\\{2\\}.\n\\]\nJá a expressão:\n\\[\ng(x)=x+2\n\\]\nestá definida para todos os números reais:\n\\[\nD_g=\\mathbb{R}.\n\\]\nPortanto:\n\\[\n\\boxed{D_f\\neq D_g.}\n\\]\nA simplificação algébrica é válida apenas para \\(x\\neq 2\\), e não elimina a restrição que existia na expressão original."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#síntese-do-aprofundamento",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#síntese-do-aprofundamento",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.14 🧭 Síntese do aprofundamento",
+    "text": "1.14 🧭 Síntese do aprofundamento\nO quadro de consulta reúne as condições de cada operação.\nA determinação do domínio é uma etapa fundamental na análise de funções. Ela estabelece onde podemos estudar o comportamento da função e prepara o caminho para os conceitos centrais do Cálculo.\n\n\n\n\n\n\nDica📚 Conexão com as próximas aulas\n\n\n\nNa Aula 1.10, estudamos o conceito formal de função e a distinção entre domínio, contradomínio e imagem.\nNeste aprofundamento, desenvolvemos técnicas para determinar o domínio de expressões mais elaboradas.\nNa Aula 1.22-AP, ampliaremos o estudo das funções definidas por partes, explorando a interpretação de cada regra, os pontos de transição e o comportamento das funções nesses pontos."
+  },
+  {
+    "objectID": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#navegação",
+    "href": "posts/cursos/matematica/calculo/modulo-1/1.21-AP-dominio-de-funcoes-guia-completo.html#navegação",
+    "title": "🔬 Módulo 1.21-AP: Domínio de Funções — Guia Completo",
+    "section": "1.15 🔗 Navegação",
+    "text": "1.15 🔗 Navegação\n↩︎️ Voltar à aula de origem: 1.10 — Conceito Formal de Função\n🧭 Exercícios da Revisão Geral\n▶️ Continuar a sequência principal: 1.11 — Revisão Gráfica e Algébrica\n🔬 AP anterior: 1.20-AP — Valor Absoluto, Distância e Vizinhanças\n🔬 Próximo AP: 1.22-AP — Funções por Partes\n🏠 Sumário do Curso · ← Cursos de Matemática · 🔝 Topo\n\nBlog do Marcellini — Explorando a Matemática com Rigor e Beleza.\n\n\n\n\n\n\nNota\n\n\n\nCriado por Blog do Marcellini com ❤️ e código."
   },
   {
     "objectID": "posts/cursos/matematica/calculo/modulo-1/1.19-AP-valor-absoluto.html",
