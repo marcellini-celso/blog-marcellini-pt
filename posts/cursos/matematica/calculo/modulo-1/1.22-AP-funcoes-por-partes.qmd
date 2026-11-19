@@ -55,7 +55,7 @@ f_n(x), & x\in A_n.
 \end{cases}
 $$
 
-Cada expressão é utilizada somente na região indicada por sua condição.
+Cada expressão é utilizada somente na região indicada por sua condição. Se duas regras forem aplicáveis à mesma entrada, elas devem dar a mesma saída para que a definição represente uma função.
 
 Esse tipo de função aparece em diferentes situações matemáticas e aplicações. Também é especialmente importante para compreender limites laterais, continuidade e descontinuidades.
 
@@ -305,7 +305,7 @@ Neste estudo, comparamos os dois limites laterais em pontos $a$ que têm entrada
 
 ## ⚖️ Quando o limite bilateral existe?
 
-Quando há pontos do domínio arbitrariamente próximos de $a$ dos dois lados, o limite bilateral em $a$ existe se, e somente se, os dois limites laterais existem e são iguais.
+Quando há pontos do domínio arbitrariamente próximos de $a$ dos dois lados, o limite bilateral finito em $a$ existe se, e somente se, os dois limites laterais são finitos e iguais.
 
 Em particular, se
 

@@ -73,7 +73,8 @@ Quando a mesma expressão envolve várias operações, **todas as condições pr
 | Operação | Condição para existência real |
 |---|---|
 | Fração $\dfrac{a(x)}{b(x)}$ | $b(x)\neq 0$ |
-| Raiz de índice par $\sqrt[2n]{a(x)}$ | $a(x)\geq 0$ |
+| Raiz de índice par $\sqrt[2n]{a(x)}$ ($n\geq1$ inteiro) | $a(x)\geq0$ |
+| Raiz de índice par no denominador $\dfrac{1}{\sqrt[2n]{a(x)}}$ | $a(x)>0$ |
 | Logaritmo $\log_b(a(x))$ | $a(x)>0$, com $b>0$ e $b\neq 1$ |
 | Tangente $\tan x$ | $\cos x\neq 0$ |
 | Composição $f(g(x))$ | $x\in D_g$ e $g(x)\in D_f$ |

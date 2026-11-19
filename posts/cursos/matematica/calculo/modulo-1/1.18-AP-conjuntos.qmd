@@ -126,7 +126,7 @@ Exemplos:
 - $\mathbb Z$: números inteiros;
 - $\mathbb Q$: números racionais.
 
-Um conjunto é **não enumerável** quando não existe uma enumeração completa de seus elementos por números naturais.
+Chamamos de **não enumerável** um conjunto infinito cujos elementos não podem ser postos em correspondência biunívoca com $\mathbb N$.
 
 Exemplos:
 
@@ -454,7 +454,7 @@ $$
 **1.**
 
 - $\mathbb N$, $\mathbb Z$ e $\mathbb Q$: enumeráveis;
-- $\mathbb R$ e os irracionais positivos: não enumeráveis.
+- $\mathbb R$ e os irracionais positivos: não enumeráveis. Se os irracionais positivos fossem enumeráveis, poderíamos intercalar sua lista com a dos racionais positivos e obter uma lista de todos os reais positivos. Isso é impossível, pois $(0,1)$ já é não enumerável.
 
 **2.**
 
@@ -474,7 +474,7 @@ Na divisão de um inteiro por outro, há apenas um número finito de restos poss
 
 **6.**
 
-Uma representação decimal infinita de um racional necessariamente apresenta repetição de restos na divisão que a produz. Essa repetição gera um período. Logo, uma decimal infinita não periódica não pode representar um racional.
+Na divisão que gera os algarismos de um racional, a repetição de um resto faz com que os algarismos seguintes se repitam. Se a divisão termina, a expansão pode ter uma cauda de zeros ou, quando existe a expansão alternativa, uma cauda de noves. Em ambos os casos, uma expansão infinita é periódica a partir de certa casa.
 
 **7.**
 
@@ -492,13 +492,7 @@ Percorrendo todas as diagonais, cada par aparece em alguma posição da sequênc
 
 **9.**
 
-Considere
-
-$$
-A=\{x\in\mathbb Q\mid x^2<2\}.
-$$
-
-Esse conjunto é não vazio e limitado superiormente, mas não possui supremo em $\mathbb Q$. Seu supremo em $\mathbb R$ é $\sqrt2$, que não é racional.
+O conjunto $A=\{x\in\mathbb Q\mid x^2<2\}$ contém $0$ e é limitado superiormente. Seu supremo em $\mathbb R$ é $\sqrt2$. Entre $\sqrt2$ e qualquer majorante racional há outro majorante racional menor. Logo, $A$ não tem supremo em $\mathbb Q$.
 
 **10.**
 

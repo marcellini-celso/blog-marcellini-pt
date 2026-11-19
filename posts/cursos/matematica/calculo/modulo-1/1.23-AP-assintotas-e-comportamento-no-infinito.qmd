@@ -423,7 +423,7 @@ $$
 f(x)=\frac{x}{x+1}.
 $$
 
-Dividindo o numerador e o denominador por $x$:
+Para $x\neq0$, dividimos o numerador e o denominador por $x$ e obtemos
 
 $$
 f(x)=\frac{1}{1+\frac{1}{x}}.
@@ -463,7 +463,7 @@ $$
 g(x)=\frac{x}{\sqrt{x^2+1}}.
 $$
 
-Podemos escrever:
+Para $x\neq0$, podemos escrever
 
 $$
 g(x)=
@@ -590,7 +590,7 @@ $$
 
 não existe assíntota horizontal finita.
 
-Entretanto, pode existir uma assíntota oblíqua ou uma assíntota polinomial.
+O quociente da divisão é de grau um quando a diferença dos graus é um e de grau maior nos demais casos.
 
 Para investigá-las, utilizamos a divisão de polinômios.
 
@@ -600,7 +600,7 @@ Para investigá-las, utilizamos a divisão de polinômios.
 |---|---|
 | $\deg(P)<\deg(Q)$ | Assíntota horizontal $y=0$ |
 | $\deg(P)=\deg(Q)$ | Assíntota horizontal dada pela razão dos coeficientes líderes |
-| $\deg(P)>\deg(Q)$ | Não há assíntota horizontal finita; pode haver assíntota polinomial |
+| $\deg(P)>\deg(Q)$ | O quociente da divisão fornece a assíntota oblíqua ou polinomial |
 
 **Observação.** A comparação de graus e coeficientes líderes pode ser feita com a expressão original. Um fator comum reduz os dois graus na mesma quantidade e deixa inalterada a razão dos coeficientes líderes. Para investigar assíntotas verticais, simplifique os fatores comuns e preserve as exclusões do domínio original.
 
@@ -844,7 +844,7 @@ A ideia de assíntota não precisa ficar restrita às retas.
 
 Uma função pode se aproximar de um polinômio de grau superior a um.
 
-Seja $P(x)$ um polinômio. Dizemos que $P(x)$ é uma assíntota polinomial de $f(x)$ em uma direção do infinito quando:
+Seja $P(x)$ um polinômio de grau pelo menos dois. Fixamos uma direção, $+\infty$ ou $-\infty$. A curva $y=P(x)$ é uma assíntota polinomial de $f$ se, na direção escolhida, vale
 
 $$
 \lim_{x\to\pm\infty}[f(x)-P(x)]=0.
@@ -1577,7 +1577,7 @@ $$
 f(x)=\frac{x}{\sqrt{x^2+4}}.
 $$
 
-Podemos escrever:
+Para $x\ne0$, podemos escrever:
 
 $$
 f(x)=

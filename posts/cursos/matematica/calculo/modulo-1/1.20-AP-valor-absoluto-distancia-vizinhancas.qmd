@@ -793,13 +793,13 @@ $$
 **a) Na forma de intervalo:**
 
 $$
-(4-0{,}2,\;4+0{,}2).
+(4-0{,}2\,;\,4+0{,}2).
 $$
 
 Logo:
 
 $$
-\boxed{(3{,}8,\;4{,}2).}
+\boxed{(3{,}8\,;\,4{,}2).}
 $$
 
 **b) Com valor absoluto:**
@@ -854,7 +854,7 @@ $x$ é necessariamente igual a $3$.
 
 :::::{.question}
 
-**Q3.** A expressão $0<|x-a|<\varepsilon$ exclui:
+**Q3.** Qual ponto da vizinhança aberta de centro $a$ e raio $\varepsilon>0$ é excluído pela condição $0<|x-a|<\varepsilon$?
 
 ::::{.choices}
 :::{.choice}
