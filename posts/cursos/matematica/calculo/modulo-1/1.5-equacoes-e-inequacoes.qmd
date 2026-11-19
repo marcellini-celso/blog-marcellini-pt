@@ -536,7 +536,7 @@ seus zeros e facilitar o estudo dos sinais.
 Os pontos críticos são:
 
 - os zeros do numerador que pertencem ao domínio, nos quais o quociente é igual a zero;
-- os zeros do denominador, que não pertencem ao domínio.
+- todos os valores excluídos do domínio original, inclusive os que anulam fatores cancelados.
 
 Esses valores dividem a reta real em intervalos nos quais o sinal
 do quociente permanece constante.
@@ -566,7 +566,7 @@ A inclusão dos pontos críticos depende do tipo de desigualdade:
   não são incluídos;
 - em desigualdades não estritas, como $\geq$ ou $\leq$, os zeros do
   numerador são incluídos quando pertencem ao domínio;
-- os zeros do denominador são sempre excluídos.
+- os valores fora do domínio original são sempre excluídos.
 
 ::: {.callout-warning title="Atenção ao domínio"}
 Mesmo que um fator comum seja cancelado durante uma simplificação
@@ -780,7 +780,7 @@ d) Para $p(x)=\sqrt{4-x}$, precisamos de $4-x\geq 0$, isto é, $x\leq 4$. Logo, 
 
 ## 🧪 Exercício 6
 
-O domínio da expressão original exclui $-2$ e $2$. Nesse domínio, cancelamos o fator $x-2$ e obtemos $\dfrac{x-1}{x+2}$. Pelo quadro de sinais, o quociente é positivo para $x<-2$ ou $x>1$, e é zero em $x=1$.
+O domínio da expressão original exclui $-2$ e $2$. Nesse domínio, cancelamos o fator $x-2$ e obtemos $\dfrac{x-1}{x+2}$. Pelo quadro de sinais da expressão simplificada, $\dfrac{x-1}{x+2}$ é positivo para $x<-2$ ou $x>1$ e vale zero em $x=1$.
 
 O valor $x=2$ satisfaz a desigualdade simplificada, mas permanece excluído porque anula o denominador original. Logo,
 

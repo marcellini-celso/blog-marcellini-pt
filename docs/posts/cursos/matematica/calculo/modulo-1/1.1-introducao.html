@@ -427,9 +427,9 @@ Esse é o espírito do cálculo: <strong>estudar a mudança e o acúmulo</strong
 <section id="formulação-matemática" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="formulação-matemática"><span class="header-section-number">2.2</span> 📐 Formulação matemática</h2>
 <ul>
-<li><strong>Tangente</strong> em <span class="math inline">\(A=(a,f(a))\)</span>: a inclinação da tangente é o valor para o qual as <strong>secantes</strong> convergem quando o segundo ponto se aproxima de <span class="math inline">\(A\)</span>.<br>
+<li><strong>Tangente</strong> em <span class="math inline">\(A=(a,f(a))\)</span>: quando as inclinações das <strong>secantes</strong> tendem a um valor finito à medida que o segundo ponto se aproxima de <span class="math inline">\(A\)</span>, esse valor é a inclinação da tangente. Uma tangente vertical não tem inclinação finita.<br>
 </li>
-<li><strong>Área</strong> em <span class="math inline">\([a,b]\)</span>: a área sob <span class="math inline">\(y=f(x)\)</span> é o valor para o qual as <strong>somas de pequenos retângulos</strong> convergem quando refinamos a partição.</li>
+<li><strong>Área</strong> em <span class="math inline">\([a,b]\)</span>: quando <span class="math inline">\(f\)</span> é contínua e não negativa, dividimos <span class="math inline">\([a,b]\)</span> em subintervalos de mesmo comprimento e construímos um retângulo em cada um, com altura dada por <span class="math inline">\(f\)</span> em um ponto do subintervalo. A soma das áreas desses retângulos converge para a área sob o gráfico à medida que aumentamos o número de subintervalos.</li>
 </ul>
 <hr>
 </section>
@@ -445,7 +445,7 @@ Esse é o espírito do cálculo: <strong>estudar a mudança e o acúmulo</strong
 </div>
 <section id="mini-exemplo-numérico-sem-notação-de-limite" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="mini-exemplo-numérico-sem-notação-de-limite"><span class="header-section-number">3.1</span> 🧮 Mini exemplo numérico (sem notação de limite)</h2>
-<p>Para <span class="math inline">\(y=e^x\)</span> em <span class="math inline">\(x=0\)</span>, considere a secante entre <span class="math inline">\(x=0\)</span> e <span class="math inline">\(x=h\)</span>.<br>
+<p>Para <span class="math inline">\(y=e^x\)</span> em <span class="math inline">\(x=0\)</span>, considere a secante entre <span class="math inline">\(x=0\)</span> e <span class="math inline">\(x=h\)</span>, com <span class="math inline">\(h\neq 0\)</span>.<br>
 A inclinação dessa secante é <span class="math display">\[
 m(h)=\frac{e^{h}-e^{0}}{h}=\frac{e^{h}-1}{h}.
 \]</span></p>
@@ -481,8 +481,7 @@ m(h)=\frac{e^{h}-e^{0}}{h}=\frac{e^{h}-1}{h}.
 </tr>
 </tbody>
 </table>
-<p>📌 Observação: os valores numéricos mostram que, <strong>à medida que <span class="math inline">\(h \to 0\)</span>, <span class="math inline">\(m(h)\)</span> se aproxima de 1</strong>.<br>
-Logo, a inclinação da <strong>reta tangente</strong> ao gráfico de <span class="math inline">\(y=e^x\)</span> em <span class="math inline">\(x=0\)</span> é 1.</p>
+<p>📌 <strong>Observação.</strong> Os valores numéricos sugerem que <span class="math inline">\(m(h)\)</span> se aproxima de <span class="math inline">\(1\)</span> quando <span class="math inline">\(h\)</span> se aproxima de <span class="math inline">\(0\)</span> pela direita. A inclinação da tangente em <span class="math inline">\(A\)</span> é <span class="math inline">\(1\)</span>. A tabela ilustra esse valor, cuja demonstração requer o estudo do limite pelos dois lados.</p>
 <p>Esse é o <strong>problema da tangente</strong>, um dos dois problemas fundamentais do cálculo.</p>
 <hr>
 </section>

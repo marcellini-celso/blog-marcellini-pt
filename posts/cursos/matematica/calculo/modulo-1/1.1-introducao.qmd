@@ -85,8 +85,8 @@ Esse é o espírito do cálculo: **estudar a mudança e o acúmulo** no mundo re
 
 ## 📐 Formulação matemática
 
-- **Tangente** em \(A=(a,f(a))\): a inclinação da tangente é o valor para o qual as **secantes** convergem quando o segundo ponto se aproxima de \(A\).  
-- **Área** em \([a,b]\): a área sob \(y=f(x)\) é o valor para o qual as **somas de pequenos retângulos** convergem quando refinamos a partição.
+- **Tangente** em \(A=(a,f(a))\): quando as inclinações das **secantes** tendem a um valor finito à medida que o segundo ponto se aproxima de $A$, esse valor é a inclinação da tangente. Uma tangente vertical não tem inclinação finita.  
+- **Área** em \([a,b]\): quando $f$ é contínua e não negativa, dividimos $[a,b]$ em subintervalos de mesmo comprimento e construímos um retângulo em cada um, com altura dada por $f$ em um ponto do subintervalo. A soma das áreas desses retângulos converge para a área sob o gráfico à medida que aumentamos o número de subintervalos.
 
 ***
 
@@ -100,7 +100,7 @@ Usaremos a função \(y=e^x\) no ponto \(A(0,1)\). Na figura, retas **secantes**
 
 ## 🧮 Mini exemplo numérico (sem notação de limite)
 
-Para \(y=e^x\) em \(x=0\), considere a secante entre \(x=0\) e \(x=h\).  
+Para \(y=e^x\) em \(x=0\), considere a secante entre \(x=0\) e \(x=h\), com \(h\neq 0\).  
 A inclinação dessa secante é
 \[
 m(h)=\frac{e^{h}-e^{0}}{h}=\frac{e^{h}-1}{h}.
@@ -115,8 +115,7 @@ Tabela (valores ilustrativos):
 | 0.1    | \(\dfrac{e^{0.1}-1}{0.1}\)             | 1.0517           |
 | 0.01   | \(\dfrac{e^{0.01}-1}{0.01}\)           | 1.0050           |
 
-📌 Observação: os valores numéricos mostram que, **à medida que \(h \to 0\), \(m(h)\) se aproxima de 1**.  
-Logo, a inclinação da **reta tangente** ao gráfico de \(y=e^x\) em \(x=0\) é 1.
+📌 **Observação.** Os valores numéricos sugerem que $m(h)$ se aproxima de $1$ quando $h$ se aproxima de $0$ pela direita. A inclinação da tangente em $A$ é $1$. A tabela ilustra esse valor, cuja demonstração requer o estudo do limite pelos dois lados.
 
 Esse é o **problema da tangente**, um dos dois problemas fundamentais do cálculo.
 

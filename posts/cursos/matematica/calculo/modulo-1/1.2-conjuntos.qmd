@@ -207,7 +207,7 @@ c) $\frac47$
 
 d) $\pi$
 
-e) $0,101001000100001\ldots$
+e) $0{,}101001000100001\ldots$, com um zero entre os dois primeiros algarismos $1$, dois zeros entre os dois seguintes e assim por diante, aumentando em um o número de zeros a cada novo trecho.
 
 **2.** Qual dos números abaixo é irracional?
 
@@ -239,7 +239,7 @@ c) Existem mais números irracionais do que racionais, no sentido de cardinalida
 - b) Irracional;
 - c) Racional;
 - d) Irracional;
-- e) Irracional, considerando a expansão decimal infinita não periódica apresentada.
+- e) Irracional. Há infinitos algarismos $1$ e os blocos de zeros entre eles têm comprimentos cada vez maiores. Em uma expansão periódica com algarismos $1$ no período, o comprimento desses blocos seria limitado.
 
 **2.**
 
@@ -909,13 +909,7 @@ $$
 
 **3.**
 
-Exemplos:
-
-$$
-\sqrt3,\qquad \pi,\qquad e.
-$$
-
-São irracionais porque não podem ser escritos como frações de inteiros com denominador não nulo.
+Os números $\sqrt2$, $\sqrt2+1$ e $2\sqrt2$ são irracionais. A irracionalidade de $\sqrt2$ é demonstrada no [Aprofundamento 1 — Conjuntos Numéricos](1.18-AP-conjuntos.qmd). Se $\sqrt2+1$ fosse racional, poderíamos subtrair $1$ para concluir que $\sqrt2$ é racional. Se $2\sqrt2$ fosse racional, teríamos a mesma contradição ao dividir por $2$.
 
 **4.**
 
