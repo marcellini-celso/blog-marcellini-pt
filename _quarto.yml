@@ -38,12 +38,8 @@ website:
             href: posts/pessoal/index.qmd
           - text: "👤 Sobre Mim e Sobre o Blog"
             href: posts/pessoal/sobre-o-blog.qmd
-      - text: "📘 Cursos"
-        menu:
-          - text: "🧮 Cursos de Matemática"
-            href: posts/cursos/matematica/index.qmd
-          - text: "📊 Cursos de Estatística"
-            href: posts/cursos/estatistica/index.qmd
+      - text: "📘 Portal de Cursos"
+        href: https://cursos.blogdomarcellini.com.br/
       - href: guia.qmd
         text: "🗺️ Mapa do Site"
     right:

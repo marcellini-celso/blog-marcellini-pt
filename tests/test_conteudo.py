@@ -71,18 +71,43 @@ class ConteudoTests(unittest.TestCase):
         self.assertEqual([p["title"] for p in ultimos_posts(posts)], ["Aula 1.23", "Aula 1.10", "Aula 1.9"])
 
     def test_atualiza_os_dois_paineis_e_preserva_o_resto_da_pagina(self):
-        self.post("ensaio.qmd", "title: Ensaio\ntags: [física]\ndate: 2026-06-05")
+        self.post(
+            "ensaio.qmd",
+            "title: Ensaio\ntags: [física]\ndate: 2026-06-05"
+        )
+
         Path("posts/cursos").mkdir()
-        self.post("cursos/aula.qmd", "title: Aula\ntags: [curso]\ndate: 2026-06-05")
-        Path("index.qmd").write_text("ANTES\n<!-- inicio-ultimos-posts -->\nANTIGO\n<!-- fim-ultimos-posts -->\nDEPOIS", encoding="utf-8")
+        self.post(
+            "cursos/aula.qmd",
+            "title: Aula\ntags: [curso]\ndate: 2026-06-05"
+        )
+
+        Path("index.qmd").write_text(
+            "ANTES\n"
+            "<!-- inicio-ultimos-posts -->\n"
+            "ANTIGO\n"
+            "<!-- fim-ultimos-posts -->\n"
+            "DEPOIS",
+            encoding="utf-8"
+        )
+
         atualizar()
-        content = Path("index.qmd").read_text()
-        artigos, aulas = content.split("### 🎓 Novas aulas")
-        self.assertIn("posts/ensaio.html", artigos)
-        self.assertNotIn("posts/cursos/aula.html", artigos)
-        self.assertIn("posts/cursos/aula.html", aulas)
-        self.assertNotIn("posts/ensaio.html", aulas)
+
+        content = Path("index.qmd").read_text(encoding="utf-8")
+
+        self.assertIn("### 📝 Artigos recentes", content)
+        self.assertIn("### 🎓 Portal de Cursos", content)
+
+        self.assertIn("posts/ensaio.html", content)
+        self.assertNotIn("posts/cursos/aula.html", content)
+
+        self.assertIn(
+            "https://cursos.blogdomarcellini.com.br/",
+            content
+        )
+
         self.assertIn("05/06/2026", content)
+
         self.assertTrue(content.startswith("ANTES"))
         self.assertTrue(content.endswith("DEPOIS"))
         self.assertNotIn("ANTIGO", content)

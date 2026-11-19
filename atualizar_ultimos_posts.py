@@ -53,18 +53,25 @@ def atualizar():
     if not ultimos_posts(posts):
         raise ValueError("Nenhum post datado encontrado; índice preservado")
     articles = ultimos_posts(posts, quantidade=6, tipo="artigos")
-    lessons = ultimos_posts(posts, quantidade=6, tipo="aulas")
-    panels = ('::: {.home-updates}\n\n'
-              '::: {.home-update-panel}\n\n'
-              '### 📝 Artigos recentes {#artigos-recentes}\n\n'
-              + _lista(articles) + '\n\n:::\n\n'
-              '::: {.home-update-panel}\n\n'
-              '### 🎓 Novas aulas {#novas-aulas}\n\n'
-              + _lista(lessons) + '\n\n:::\n\n:::\n')
+    panels = (
+        '::: {.home-updates}\n\n'
+        '::: {.home-update-panel}\n\n'
+        '### 📝 Artigos recentes {#artigos-recentes}\n\n'
+        + _lista(articles)
+        + '\n\n:::\n\n'
+        '::: {.home-update-panel}\n\n'
+        '### 🎓 Portal de Cursos {#portal-de-cursos}\n\n'
+        'Explore nossos cursos de Matemática e Estatística, '
+        'com aulas, exercícios, gráficos e quizzes interativos.\n\n'
+        '[📘 Acessar o Portal de Cursos]'
+        '(https://cursos.blogdomarcellini.com.br/)\n\n'
+        ':::\n\n'
+        ':::\n'
+    )
     replacement = start + "\n" + panels + "\n" + end
     content = re.sub(re.escape(start) + r".*?" + re.escape(end), lambda _: replacement, content, flags=re.S)
     index.write_text(content, encoding="utf-8")
-    print(f"✅ Atualizados {len(articles)} artigos e {len(lessons)} aulas")
+    print(f"✅ Atualizados {len(articles)} artigos e o painel do Portal de Cursos")
 
 if __name__ == "__main__":
     atualizar()

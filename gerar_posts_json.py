@@ -38,8 +38,12 @@ def extract_post_metadata(qmd_file):
     return post
 
 def coletar_posts():
-    return [post for path in sorted(POSTS_DIR.rglob("*.qmd"))
-            if (post := extract_post_metadata(path)) is not None]
+    return [
+        post
+        for path in sorted(POSTS_DIR.rglob("*.qmd"))
+        if "cursos" not in path.relative_to(POSTS_DIR).parts
+        if (post := extract_post_metadata(path)) is not None
+    ]
 
 def salvar_json(posts):
     SAIDA_JSON.write_text(json.dumps(posts, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
