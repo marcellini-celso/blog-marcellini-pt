@@ -138,6 +138,8 @@ A comparação entre $f(x)=x$ e $g(x)=x^2$ permite visualizar dois comportamento
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -157,6 +159,7 @@ ax.axvline(0, color="black", linewidth=0.8)
 ax.legend()
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.16-crescimento-linear-quadratico.svg",
             format="svg", bbox_inches="tight")
 plt.close(fig)
@@ -379,6 +382,8 @@ $$
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -399,6 +404,7 @@ ax.grid(True, alpha=0.3)
 ax.legend()
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.16-termo-dominante.svg",
             format="svg", bbox_inches="tight")
 plt.close(fig)
@@ -610,6 +616,8 @@ $$
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import LogLocator, NullFormatter
@@ -641,6 +649,7 @@ ax_log.yaxis.set_minor_formatter(NullFormatter())
 ax_linear.legend(loc="upper left", ncol=2, frameon=False)
 ax_log.legend(loc="upper left", ncol=2, frameon=False)
 
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.16-hierarquia-crescimento.svg",
             format="svg", bbox_inches="tight")
 plt.close(fig)
@@ -824,6 +833,8 @@ A figura apresenta três exemplos:
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -880,6 +891,7 @@ axes[2].grid(True, alpha=0.3)
 axes[2].legend()
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.16-tipos-assintotas.svg",
             format="svg", bbox_inches="tight")
 plt.close(fig)

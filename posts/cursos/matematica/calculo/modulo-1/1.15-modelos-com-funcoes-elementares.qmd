@@ -205,6 +205,8 @@ O gráfico representa o custo total em função da quantidade produzida.
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -225,6 +227,7 @@ ax.set_xlim(0, 10)
 ax.set_ylim(0, 110)
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.15-modelo-afim.svg", bbox_inches="tight")
 plt.close(fig)
 ```
@@ -327,6 +330,8 @@ O gráfico apresenta o trecho da parábola correspondente ao movimento físico, 
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -355,6 +360,7 @@ ax.set_xlim(0, raiz + 0.1)
 ax.set_ylim(-1, 24)
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.15-modelo-quadratico.svg", bbox_inches="tight")
 plt.close(fig)
 ```
@@ -476,6 +482,8 @@ Os dois painéis usam o mesmo eixo do tempo. Cada um tem escala vertical e unida
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -505,6 +513,7 @@ for ax in (ax_q, ax_m):
     ax.grid(alpha=0.25)
 
 fig.tight_layout(pad=1.4)
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.15-modelos-exponenciais.svg", bbox_inches="tight")
 plt.close(fig)
 ```
@@ -592,6 +601,8 @@ $$
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -612,6 +623,7 @@ ax.grid(alpha=0.3)
 ax.legend()
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.15-modelo-logaritmico.svg", bbox_inches="tight")
 plt.close(fig)
 ```
@@ -681,6 +693,8 @@ Esse tipo de comportamento será estudado com mais precisão no módulo de limit
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -708,6 +722,7 @@ ax.grid(alpha=0.3)
 ax.legend()
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.15-modelo-racional.svg", bbox_inches="tight")
 plt.close(fig)
 ```
@@ -777,6 +792,8 @@ A escolha da fase inicial deve ser ajustada quando desejamos representar dados r
 ::: {.callout-note collapse="true" title="Clique para ver o código Python"}
 
 ```{python}
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -805,6 +822,7 @@ ax.grid(alpha=0.3)
 ax.legend()
 
 fig.tight_layout()
+Path("images").mkdir(exist_ok=True)
 fig.savefig("images/1.15-modelo-trigonometrico.svg", bbox_inches="tight")
 plt.close(fig)
 ```
