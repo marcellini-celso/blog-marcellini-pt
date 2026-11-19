@@ -209,7 +209,7 @@ $$
 x^2+y^2=1.
 $$
 
-Dado um ângulo $\theta$, medido a partir do eixo positivo $x$, o ponto correspondente no círculo unitário tem coordenadas
+Medimos $\theta$ a partir do semieixo positivo de $x$, no sentido anti-horário para ângulos positivos e no sentido horário para negativos. O ponto correspondente no círculo unitário tem coordenadas
 
 $$
 (\cos\theta,\sin\theta).
@@ -383,7 +383,7 @@ $$
 2\pi.
 $$
 
-Para a tangente,
+Para todo $\theta$ no domínio da tangente, $\theta+\pi$ também pertence ao domínio e vale
 
 $$
 \tan(\theta+\pi)=\tan\theta.
@@ -801,7 +801,7 @@ Essa expressão representa o **período fundamental** de $A\sin(Bx+C)+D$ quando 
 
 ::: {.callout-tip title="💡 Dica de leitura do gráfico"}
 
-Em $f(x)=A\sin(Bx+C)+D$, a **amplitude** $|A|$ é a distância vertical entre a linha média e um extremo. O **período fundamental** $2\pi/|B|$ é a distância horizontal entre repetições consecutivas. A **linha média** é a reta $y=D$. Essas três leituras se aplicam à função não constante, com $A\neq 0$ e $B\neq 0$.
+Em $f(x)=A\sin(Bx+C)+D$, a **amplitude** $|A|$ é a distância vertical entre a linha média e um extremo. O **período fundamental** $2\pi/|B|$ é a distância horizontal entre repetições consecutivas. A **linha média** é a reta $y=D$. Quando $A\neq 0$ e $B\neq 0$, a imagem é $[D-|A|,D+|A|]$. Seus extremos ficam à distância $|A|$ da linha média.
 
 :::
 

@@ -106,7 +106,7 @@ $$
 2^n.
 $$
 
-**Enquanto funções afins representam crescimento por soma constante, funções exponenciais representam crescimento por multiplicação constante.**
+**A cada avanço de uma unidade, uma função afim soma o mesmo valor à saída e uma função exponencial multiplica a saída pela base.**
 
 ***
 
@@ -574,13 +574,13 @@ Essa fórmula é importante em aplicações e também em demonstrações envolve
 As funções
 
 $$
-f(x)=a^x
+f:\mathbb{R}\to(0,+\infty),\qquad f(x)=a^x
 $$
 
 e
 
 $$
-g(x)=\log_a x
+g:(0,+\infty)\to\mathbb{R},\qquad g(x)=\log_a x
 $$
 
 são inversas uma da outra, desde que $a>0$ e $a\neq 1$.

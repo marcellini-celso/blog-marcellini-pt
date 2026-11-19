@@ -416,13 +416,13 @@ plt.close(fig)
 
 Nem todo conjunto de pontos do plano cartesiano representa o gráfico de uma função de $x$.
 
-Para que isso aconteça, cada valor de $x$ deve corresponder a exatamente um valor de $y$.
+Para que isso aconteça, cada valor de $x$ que aparece no gráfico deve corresponder a exatamente um valor de $y$.
 
 Geometricamente, essa condição conduz ao teste da reta vertical.
 
 ::: {.callout-tip title="💡 Dica: teste da reta vertical"}
 
-Um conjunto de pontos representa o gráfico de uma função de $x$ quando toda reta vertical o intercepta em, no máximo, um ponto. Se o domínio já foi declarado, para cada $x$ desse domínio deve haver exatamente uma interseção.
+Um conjunto de pontos representa o gráfico de uma função de $x$ quando toda reta vertical o intercepta em, no máximo, um ponto. Se o domínio $A$ já foi declarado, a reta vertical em $x$ deve encontrar exatamente um ponto para $x\in A$ e nenhum para $x\notin A$.
 
 :::
 

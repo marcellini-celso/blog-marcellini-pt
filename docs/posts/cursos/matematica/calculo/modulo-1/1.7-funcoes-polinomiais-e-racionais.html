@@ -417,12 +417,12 @@ window.Quarto = {
 <section id="funções-polinomiais-e-racionais" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 📘 Funções Polinomiais e Racionais</h1>
 <p>Entre as funções elementares, duas famílias aparecem continuamente no Cálculo: as <strong>funções polinomiais</strong> e as <strong>funções racionais</strong>.</p>
-<p>As funções polinomiais são construídas a partir de somas de potências inteiras não negativas de <span class="math inline">\(x\)</span>. As funções racionais são quocientes de polinômios.</p>
+<p>As funções polinomiais são somas de termos constantes e de potências inteiras positivas de <span class="math inline">\(x\)</span> multiplicadas por coeficientes. As funções racionais são quocientes de polinômios.</p>
 <p>Essas duas famílias são importantes porque combinam simplicidade algébrica com grande riqueza gráfica. Elas permitem discutir zeros, sinais, crescimento, domínio, continuidade, assíntotas e comportamento no infinito.</p>
 <hr>
 <section id="funções-polinomiais" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="funções-polinomiais"><span class="header-section-number">1.1</span> 🧮 Funções polinomiais</h2>
-<p>Uma <strong>função polinomial real</strong> tem a forma</p>
+<p>Uma <strong>função polinomial real não identicamente nula</strong> tem a forma</p>
 <p><span class="math display">\[
 \boxed{
 p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
@@ -432,11 +432,11 @@ p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
 <p><span class="math display">\[
 a_0,a_1,\ldots,a_n\in\mathbb{R},
 \qquad
-n\in\mathbb{N}_0,
+n\in\{0,1,2,\ldots\},
 \qquad
 a_n\neq 0.
 \]</span></p>
-<p>O número <span class="math inline">\(n\)</span> é chamado de <strong>grau</strong> do polinômio.</p>
+<p>O número <span class="math inline">\(n\)</span> é chamado de <strong>grau</strong> do polinômio. No caso <span class="math inline">\(n=0\)</span>, a expressão se reduz ao termo constante <span class="math inline">\(p(x)=a_0\)</span>.</p>
 <p>O coeficiente <span class="math inline">\(a_n\)</span> é chamado de <strong>coeficiente dominante</strong>, pois acompanha o termo de maior grau.</p>
 <p><strong>Exemplos:</strong></p>
 <p><span class="math display">\[
@@ -525,7 +525,7 @@ Figura&nbsp;1
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="1ec5839f" class="cell" data-message="false" data-execution_count="2">
+<div id="b3155a0f" class="cell" data-message="false" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -581,7 +581,7 @@ Figura&nbsp;1
 </section>
 <section id="domínio-de-funções-polinomiais" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="domínio-de-funções-polinomiais"><span class="header-section-number">1.2</span> 🌍 Domínio de funções polinomiais</h2>
-<p><strong>Toda função polinomial real está definida para todo número real.</strong></p>
+<p><strong>O domínio real natural de uma expressão polinomial é <span class="math inline">\(\mathbb{R}\)</span>.</strong></p>
 <p>Assim, se</p>
 <p><span class="math display">\[
 p(x)=x^4-3x^2+1,
@@ -590,7 +590,7 @@ p(x)=x^4-3x^2+1,
 <p><span class="math display">\[
 D_p=\mathbb{R}.
 \]</span></p>
-<p>Isso acontece porque as operações que formam um polinômio — soma, subtração, multiplicação e potências inteiras não negativas — fazem sentido para qualquer <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
+<p>Isso acontece porque os termos constantes e as potências inteiras positivas de <span class="math inline">\(x\)</span> estão definidos para todo <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Ideia importante">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -696,7 +696,7 @@ p(x)=(x-2)(x-3).
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="19227a42" class="cell" data-message="false" data-execution_count="3">
+<div id="69e33e33" class="cell" data-message="false" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -783,7 +783,7 @@ Figura&nbsp;2
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="764aacb9" class="cell" data-message="false" data-execution_count="5">
+<div id="b5981d13" class="cell" data-message="false" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -941,7 +941,7 @@ Figura&nbsp;3
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="5b99aa7c" class="cell" data-message="false" data-execution_count="7">
+<div id="8badd193" class="cell" data-message="false" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1126,7 +1126,7 @@ Figura&nbsp;4
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="088441f1" class="cell" data-message="false" data-execution_count="9">
+<div id="8efa3f50" class="cell" data-message="false" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1239,7 +1239,7 @@ Figura&nbsp;5
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="e1503419" class="cell" data-message="false" data-execution_count="11">
+<div id="3f737e49" class="cell" data-message="false" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1339,7 +1339,7 @@ Figura&nbsp;6
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="d67733d6" class="cell" data-message="false" data-execution_count="13">
+<div id="8e962ac0" class="cell" data-message="false" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1870,7 +1870,7 @@ y=\frac{2+2}{2-3}=-4.
 <section id="quiz-funções-polinomiais-e-racionais" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 🧩 Quiz — Funções Polinomiais e Racionais</h1>
 <div class="question">
-<p><strong>Q1.</strong> Toda função polinomial real tem domínio:</p>
+<p><strong>Q1.</strong> Qual é o domínio real natural de uma expressão polinomial?</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 

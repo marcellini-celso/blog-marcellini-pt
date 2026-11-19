@@ -1,3 +1,4 @@
+
 ---
 title: "📘 Módulo 1.6: Funções Elementares"
 description: "Introdução às principais famílias de funções reais usadas no Cálculo: afins, quadráticas, potências, raízes, exponenciais, logarítmicas e trigonométricas."
@@ -526,6 +527,8 @@ $$
 As funções potência apresentam comportamentos diferentes conforme o expoente.
 
 Quando o expoente é um inteiro positivo, a função está definida para todos os números reais.
+
+Quando o expoente é zero, $x^0=1$ para $x\neq 0$. Podemos estender essa regra ao zero definindo a função constante $f(x)=1$ em toda a reta real.
 
 Quando o expoente é um inteiro negativo, temos:
 

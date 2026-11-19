@@ -44,7 +44,7 @@ Como os polinômios e quocientes de polinômios ajudam a compreender zeros, sina
 
 Entre as funções elementares, duas famílias aparecem continuamente no Cálculo: as **funções polinomiais** e as **funções racionais**.
 
-As funções polinomiais são construídas a partir de somas de potências inteiras não negativas de $x$. As funções racionais são quocientes de polinômios.
+As funções polinomiais são somas de termos constantes e de potências inteiras positivas de $x$ multiplicadas por coeficientes. As funções racionais são quocientes de polinômios.
 
 Essas duas famílias são importantes porque combinam simplicidade algébrica com grande riqueza gráfica. Elas permitem discutir zeros, sinais, crescimento, domínio, continuidade, assíntotas e comportamento no infinito.
 
@@ -52,7 +52,7 @@ Essas duas famílias são importantes porque combinam simplicidade algébrica co
 
 ## 🧮 Funções polinomiais
 
-Uma **função polinomial real** tem a forma
+Uma **função polinomial real não identicamente nula** tem a forma
 
 $$
 \boxed{
@@ -65,12 +65,12 @@ em que
 $$
 a_0,a_1,\ldots,a_n\in\mathbb{R},
 \qquad
-n\in\mathbb{N}_0,
+n\in\{0,1,2,\ldots\},
 \qquad
 a_n\neq 0.
 $$
 
-O número $n$ é chamado de **grau** do polinômio.
+O número $n$ é chamado de **grau** do polinômio. No caso $n=0$, a expressão se reduz ao termo constante $p(x)=a_0$.
 
 O coeficiente $a_n$ é chamado de **coeficiente dominante**, pois acompanha o termo de maior grau.
 
@@ -219,7 +219,7 @@ plt.show()
 
 ## 🌍 Domínio de funções polinomiais
 
-**Toda função polinomial real está definida para todo número real.**
+**O domínio real natural de uma expressão polinomial é $\mathbb{R}$.**
 
 Assim, se
 
@@ -233,7 +233,7 @@ $$
 D_p=\mathbb{R}.
 $$
 
-Isso acontece porque as operações que formam um polinômio — soma, subtração, multiplicação e potências inteiras não negativas — fazem sentido para qualquer $x\in\mathbb{R}$.
+Isso acontece porque os termos constantes e as potências inteiras positivas de $x$ estão definidos para todo $x\in\mathbb{R}$.
 
 ::: {.callout-note title="Ideia importante"}
 Funções polinomiais não têm restrições de domínio nos reais.
@@ -1709,7 +1709,7 @@ Esse exercício reúne três ideias importantes: domínio, descontinuidade remov
 
 :::::{.question}
 
-**Q1.** Toda função polinomial real tem domínio:
+**Q1.** Qual é o domínio real natural de uma expressão polinomial?
 
 ::::{.choices}
 :::{.choice .correct-choice}
