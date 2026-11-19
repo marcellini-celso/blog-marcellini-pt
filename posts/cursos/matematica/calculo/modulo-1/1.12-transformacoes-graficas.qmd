@@ -1211,7 +1211,7 @@ $$
 Nesse caso:
 
 - $A$ determina a amplitude $|A|$. Se $A<0$, também ocorre reflexão em relação à linha média $y=D$;
-- $B$ determina o período $\dfrac{2\pi}{|B|}$, desde que $B\neq 0$;
+- se $A\neq 0$ e $B\neq 0$, o período fundamental é $\dfrac{2\pi}{|B|}$;
 - $C$ determina o deslocamento horizontal, quando $B\neq 0$;
 - $D$ determina o deslocamento vertical e a linha média do gráfico, $y=D$.
 
@@ -1220,15 +1220,9 @@ $Bx+C=B(x+C/B)$. Portanto, o deslocamento horizontal é $-C/B$:
 se $-C/B>0$, ocorre para a direita; se $-C/B<0$, para a esquerda.
 O valor de $C$ altera a posição horizontal, mas não altera o período.
 
-Se $B=0$, a expressão $A\sin(C)+D$ é constante; nesse caso, não há período trigonométrico a determinar.
+Se $A=0$ ou $B=0$, a função é constante e não possui período fundamental positivo.
 
-Por exemplo,
-
-$$
-g(x)=3\sin(2x)-1
-$$
-
-tem amplitude $3$, período $\pi$ e deslocamento vertical de $1$ unidade para baixo.
+Por exemplo, $g(x)=3\sin(2x)-1$ tem amplitude $3$, período $\pi$ e deslocamento vertical de $1$ unidade para baixo.
 
 A curva transformada tem amplitude $3$, período $\pi$ e linha média em $y=-1$. Observe o máximo $2$ e o mínimo $-4$.
 

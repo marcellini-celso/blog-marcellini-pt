@@ -1751,13 +1751,7 @@ não possui inversa.
 
 ## 🧪 Exercício 4
 
-Restrinja o domínio da função:
-
-$$
-f(x)=x^2
-$$
-
-para que ela tenha inversa e determine essa inversa.
+Restrinja o domínio de $f(x)=x^2$ para que ela seja injetiva. Tome sua imagem nesse domínio como contradomínio e determine a inversa.
 
 ## 🧪 Exercício 5
 
@@ -1769,7 +1763,7 @@ b) \(g(x)=\ln x\)
 
 ## 🧪 Exercício 6
 
-Considere $f(x)=\dfrac{x}{1+x}$ para $x\geq0$.
+Considere $f(x)=\dfrac{x}{1+x}$ para $x\geq0$, com contradomínio igual à sua imagem.
 
 a) Determine a imagem de $f$.
 b) Encontre $f^{-1}$ e indique seu domínio.
@@ -2036,7 +2030,7 @@ $$
 \boxed{\operatorname{Im}(g)=\mathbb{R}}.
 $$
 
-Essas funções são inversas uma da outra.
+Com contradomínio $(0,+\infty)$ para $f$ e $\mathbb{R}$ para $g$, essas funções são inversas uma da outra.
 
 ## 🧪 Exercício 6
 

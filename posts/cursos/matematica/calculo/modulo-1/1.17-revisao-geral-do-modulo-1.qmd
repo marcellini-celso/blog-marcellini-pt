@@ -582,7 +582,7 @@ Considere uma função $f(x)$.
 | $-f(x)$ | Reflexão em relação ao eixo horizontal |
 | $f(-x)$ | Reflexão em relação ao eixo vertical |
 | $af(x)$ | Escala vertical |
-| $f(bx)$ | Escala horizontal |
+| $f(bx)$, com $b\neq0$ | Escala horizontal |
 
 ### Escala vertical
 
@@ -991,10 +991,10 @@ d) $(g\circ f)(1)$.
 
 :::
 
-Determine a função inversa de:
+Determine a função inversa de
 
 $$
-f(x)=3x-6.
+f:\mathbb{R}\to\mathbb{R},\qquad f(x)=3x-6.
 $$
 
 Em seguida, verifique o resultado calculando as composições:
@@ -1459,7 +1459,7 @@ $2x+1$.
 
 :::::{.question}
 
-**Q3.** Qual é a função inversa de $f(x)=e^x$?
+**Q3.** Qual é a inversa de $f:\mathbb{R}\to(0,+\infty)$ dada por $f(x)=e^x$?
 
 ::::{.choices}
 

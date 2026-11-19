@@ -882,35 +882,11 @@ salvar(fig, "1.11-crescimento-minimo.svg")
 
 ## 🏔️ Máximos e mínimos
 
-Um ponto de mínimo ocorre quando a função atinge um valor menor do que os valores próximos.
+A função tem um mínimo local em $x_0$ quando $f(x_0)$ é menor ou igual a $f(x)$ para todos os $x$ do domínio suficientemente próximos de $x_0$.
 
-Por exemplo,
+Por exemplo, $f(x)=x^2$ tem mínimo em $x=0$, pois $f(0)=0$ e $x^2\geq0$ para todo real $x$.
 
-$$
-f(x)=x^2
-$$
-
-tem mínimo em
-
-$$
-x=0,
-$$
-
-pois
-
-$$
-f(0)=0
-$$
-
-e
-
-$$
-x^2\geq 0
-$$
-
-para todo real $x$.
-
-Um ponto de máximo ocorre quando a função atinge um valor maior do que os valores próximos.
+A função tem um máximo local em $x_0$ quando $f(x_0)$ é maior ou igual a $f(x)$ para todos os $x$ do domínio suficientemente próximos de $x_0$. Se a comparação vale em todo o domínio, o extremo é absoluto.
 
 A análise de máximos e mínimos será uma das grandes aplicações das derivadas.
 

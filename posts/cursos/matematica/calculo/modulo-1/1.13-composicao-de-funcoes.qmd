@@ -712,7 +712,7 @@ $$
 h\circ(g\circ f)=(h\circ g)\circ f.
 $$
 
-Isso significa que podemos mudar o agrupamento das funções sem alterar a ordem em que elas são aplicadas.
+Os dois agrupamentos têm o mesmo domínio: $x$ deve pertencer ao domínio de $f$, $f(x)$ ao de $g$ e $g(f(x))$ ao de $h$. Para cada uma dessas entradas, o resultado é $h(g(f(x)))$.
 
 Considere três funções:
 

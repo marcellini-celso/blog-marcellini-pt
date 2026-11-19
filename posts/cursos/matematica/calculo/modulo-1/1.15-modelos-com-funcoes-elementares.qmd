@@ -529,7 +529,7 @@ $$
 
 em que $k$ é uma constante real.
 
-Se $k>0$, temos crescimento exponencial. Se $k<0$, temos decaimento exponencial.
+Para $Q_0>0$, há crescimento se $k>0$, decaimento se $k<0$ e a quantidade é constante se $k=0$. Com $a>0$, as duas expressões são iguais quando $k=\ln a$. Usar o modelo entre os instantes inteiros supõe que a mesma lei exponencial vale também para frações de um período.
 
 Essa distinção será importante posteriormente, quando estudarmos derivadas e equações diferenciais.
 
@@ -733,7 +733,7 @@ Nessa expressão:
 - $C$ determina, com $B$, o deslocamento horizontal de $-C/B$, quando $B\neq0$;
 - $D$ desloca o gráfico verticalmente.
 
-A amplitude é $|A|$ e, quando $B\neq 0$, o período é
+Com $A\neq0$ e $B\neq0$, a amplitude é $|A|$ e o período fundamental é
 
 $$
 P=\frac{2\pi}{|B|}.
@@ -996,7 +996,7 @@ c) $P(t)=1000(1{,}05)^t$, onde $t$ é tempo após o início da observação.
 
 ## 🧪 Exercício 5
 
-Associe cada situação a um tipo provável de modelo: linear, quadrático, exponencial, logarítmico, racional ou trigonométrico.
+Associe cada situação a um tipo provável de modelo: linear ou afim, quadrático, exponencial, logarítmico, racional ou trigonométrico.
 
 a) Temperatura diária variando de forma periódica.
 
@@ -1193,7 +1193,7 @@ c) Custo com taxa fixa mais valor por unidade: modelo afim.
 
 d) Altura de um projétil em função do tempo: modelo quadrático.
 
-e) Quantidade que se aproxima de um limite horizontal: modelo racional ou outro modelo com assíntota horizontal.
+e) Quantidade que se aproxima de um limite horizontal: um modelo racional como $L+1/(x+1)$ ou um modelo exponencial como $L+2^{-x}$, para $x\geq0$. Ambos tendem a $L$, e os dados ajudam a decidir qual modelo usar.
 
 f) Perda de uma porcentagem fixa da massa a cada período: modelo exponencial de decaimento.
 

@@ -570,7 +570,7 @@ Figura&nbsp;1: Modelo afim de custo: custo fixo e custo variável.
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="2320c526" class="cell" data-execution_count="1">
+<div id="062c1dc7" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -684,7 +684,7 @@ Figura&nbsp;2: Trajetória vertical idealizada de um objeto.
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="ebb84513" class="cell" data-execution_count="2">
+<div id="1f9c7999" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -828,7 +828,7 @@ Figura&nbsp;3: Crescimento da população e decaimento da massa em painéis com 
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="ca418e11" class="cell" data-execution_count="3">
+<div id="4bf17b53" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -877,7 +877,7 @@ Q(t)=Q_0a^t
 Q(t)=Q_0e^{kt},
 \]</span></p>
 <p>em que <span class="math inline">\(k\)</span> é uma constante real.</p>
-<p>Se <span class="math inline">\(k&gt;0\)</span>, temos crescimento exponencial. Se <span class="math inline">\(k&lt;0\)</span>, temos decaimento exponencial.</p>
+<p>Para <span class="math inline">\(Q_0&gt;0\)</span>, há crescimento se <span class="math inline">\(k&gt;0\)</span>, decaimento se <span class="math inline">\(k&lt;0\)</span> e a quantidade é constante se <span class="math inline">\(k=0\)</span>. Com <span class="math inline">\(a&gt;0\)</span>, as duas expressões são iguais quando <span class="math inline">\(k=\ln a\)</span>. Usar o modelo entre os instantes inteiros supõe que a mesma lei exponencial vale também para frações de um período.</p>
 <p>Essa distinção será importante posteriormente, quando estudarmos derivadas e equações diferenciais.</p>
 <hr>
 <div class="callout callout-style-default callout-tip callout-titled" title="▶ Vídeo comentado">
@@ -947,7 +947,7 @@ Figura&nbsp;4: Comportamento crescente e desacelerado de uma função logarítmi
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="281f8102" class="cell" data-execution_count="4">
+<div id="48e31aa0" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1036,7 +1036,7 @@ Figura&nbsp;5: Gráfico de uma função racional com assíntotas.
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="d23af752" class="cell" data-execution_count="5">
+<div id="48f0a41b" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1087,7 +1087,7 @@ f(t)=A\sin(Bt+C)+D.
 <li><span class="math inline">\(C\)</span> determina, com <span class="math inline">\(B\)</span>, o deslocamento horizontal de <span class="math inline">\(-C/B\)</span>, quando <span class="math inline">\(B\neq0\)</span>;</li>
 <li><span class="math inline">\(D\)</span> desloca o gráfico verticalmente.</li>
 </ul>
-<p>A amplitude é <span class="math inline">\(|A|\)</span> e, quando <span class="math inline">\(B\neq 0\)</span>, o período é</p>
+<p>Com <span class="math inline">\(A\neq0\)</span> e <span class="math inline">\(B\neq0\)</span>, a amplitude é <span class="math inline">\(|A|\)</span> e o período fundamental é</p>
 <p><span class="math display">\[
 P=\frac{2\pi}{|B|}.
 \]</span></p>
@@ -1137,7 +1137,7 @@ Figura&nbsp;6: Modelo trigonométrico de temperatura diária.
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="2e43ec57" class="cell" data-execution_count="6">
+<div id="140e1313" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1437,7 +1437,7 @@ h(t)=-5t^2+30t+2.
 </section>
 <section id="exercício-5" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="exercício-5"><span class="header-section-number">2.5</span> 🧪 Exercício 5</h2>
-<p>Associe cada situação a um tipo provável de modelo: linear, quadrático, exponencial, logarítmico, racional ou trigonométrico.</p>
+<p>Associe cada situação a um tipo provável de modelo: linear ou afim, quadrático, exponencial, logarítmico, racional ou trigonométrico.</p>
 <ol type="a">
 <li><p>Temperatura diária variando de forma periódica.</p></li>
 <li><p>Crescimento de uma aplicação com juros compostos.</p></li>
@@ -1612,7 +1612,7 @@ t\geq 0.
 <li><p>Crescimento com juros compostos: modelo exponencial.</p></li>
 <li><p>Custo com taxa fixa mais valor por unidade: modelo afim.</p></li>
 <li><p>Altura de um projétil em função do tempo: modelo quadrático.</p></li>
-<li><p>Quantidade que se aproxima de um limite horizontal: modelo racional ou outro modelo com assíntota horizontal.</p></li>
+<li><p>Quantidade que se aproxima de um limite horizontal: um modelo racional como <span class="math inline">\(L+1/(x+1)\)</span> ou um modelo exponencial como <span class="math inline">\(L+2^{-x}\)</span>, para <span class="math inline">\(x\geq0\)</span>. Ambos tendem a <span class="math inline">\(L\)</span>, e os dados ajudam a decidir qual modelo usar.</p></li>
 <li><p>Perda de uma porcentagem fixa da massa a cada período: modelo exponencial de decaimento.</p></li>
 </ol>
 </section>

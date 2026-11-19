@@ -899,7 +899,7 @@ Observe que cada tipo de assíntota descreve uma situação diferente:
 
 ::: {.callout-tip title="💡 Dica — Quociente ou diferença?"}
 
-- Use o **quociente** $f(x)/g(x)$ para comparar os valores de duas funções em termos relativos. Se ele tende a $1$, as funções são assintoticamente equivalentes nessa direção.
+- Use o **quociente** $f(x)/g(x)$ para comparar duas funções em termos relativos, com $g(x)\neq0$ a partir de certo ponto na direção considerada. Se o quociente tende a $1$, as funções são assintoticamente equivalentes nessa direção.
 - Use a **diferença** $f(x)-(mx+b)$ para verificar se a separação vertical entre o gráfico e a reta tende a zero. Quando isso acontece, a reta $y=mx+b$, com $m\neq0$, é assíntota oblíqua nessa direção.
 
 :::
