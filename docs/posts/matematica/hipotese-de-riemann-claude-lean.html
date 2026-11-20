@@ -9,7 +9,7 @@
 <meta name="author" content="Blog do Marcellini">
 <meta name="description" content="Levent Alpöge anunciou uma possível prova com Claude. Entenda o que a hipótese diz sobre os primos e o que precisa ser conferido no código Lean.">
 
-<title>🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso – Blog do Marcellini</title>
+<title>📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso – Blog do Marcellini</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -126,14 +126,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../../assets/css/custom.css">
 <link rel="stylesheet" href="../../assets/css/cards.css">
 <link rel="stylesheet" href="../../assets/css/chips.css">
-<meta property="og:title" content="🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso – Blog do Marcellini">
+<meta property="og:title" content="📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso – Blog do Marcellini">
 <meta property="og:description" content="Levent Alpöge anunciou uma possível prova com Claude. Entenda o que a hipótese diz sobre os primos e o que precisa ser conferido no código Lean.">
 <meta property="og:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta property="og:site_name" content="Blog do Marcellini">
 <meta property="og:image:height" content="1380">
 <meta property="og:image:width" content="1830">
 <meta property="og:image:alt" content="Blog do Marcellini">
-<meta name="twitter:title" content="🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso – Blog do Marcellini">
+<meta name="twitter:title" content="📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso – Blog do Marcellini">
 <meta name="twitter:description" content="Levent Alpöge anunciou uma possível prova com Claude. Entenda o que a hipótese diz sobre os primos e o que precisa ser conferido no código Lean.">
 <meta name="twitter:image" content="https://blogdomarcellini.com.br/images/placeholder-dark.png">
 <meta name="twitter:image-height" content="1380">
@@ -247,7 +247,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -255,17 +255,41 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#o-que-os-zeros-têm-a-ver-com-os-primos" id="toc-o-que-os-zeros-têm-a-ver-com-os-primos" class="nav-link active" data-scroll-target="#o-que-os-zeros-têm-a-ver-com-os-primos">🔢 O que os zeros têm a ver com os primos?</a></li>
-  <li><a href="#o-que-o-lean-pode-verificar" id="toc-o-que-o-lean-pode-verificar" class="nav-link" data-scroll-target="#o-que-o-lean-pode-verificar">🛠️ O que o Lean pode verificar?</a></li>
+  <li><a href="#quem-é-levent-alpöge" id="toc-quem-é-levent-alpöge" class="nav-link active" data-scroll-target="#quem-é-levent-alpöge"><span class="header-section-number">1</span> 👤 Quem é Levent Alpöge?</a></li>
+  <li><a href="#o-que-é-claude" id="toc-o-que-é-claude" class="nav-link" data-scroll-target="#o-que-é-claude"><span class="header-section-number">2</span> 🤖 O que é Claude?</a></li>
+  <li><a href="#um-breve-histórico" id="toc-um-breve-histórico" class="nav-link" data-scroll-target="#um-breve-histórico"><span class="header-section-number">3</span> 🕰️ Um breve histórico</a></li>
+  <li><a href="#a-hipótese-de-riemann-e-as-funções-l-de-dirichlet" id="toc-a-hipótese-de-riemann-e-as-funções-l-de-dirichlet" class="nav-link" data-scroll-target="#a-hipótese-de-riemann-e-as-funções-l-de-dirichlet"><span class="header-section-number">4</span> 📐 A hipótese de Riemann e as funções <span class="math inline">\(L\)</span> de Dirichlet</a>
+  <ul class="collapse">
+  <li><a href="#a-função-zeta" id="toc-a-função-zeta" class="nav-link" data-scroll-target="#a-função-zeta"><span class="header-section-number">4.1</span> A função zeta</a>
+  <ul class="collapse">
+  <li><a href="#como-ler-a-faixa-crítica" id="toc-como-ler-a-faixa-crítica" class="nav-link" data-scroll-target="#como-ler-a-faixa-crítica"><span class="header-section-number">4.1.1</span> Como ler a faixa crítica</a></li>
+  </ul></li>
+  <li><a href="#da-zeta-às-funções-l" id="toc-da-zeta-às-funções-l" class="nav-link" data-scroll-target="#da-zeta-às-funções-l"><span class="header-section-number">4.2</span> Da zeta às funções <span class="math inline">\(L\)</span></a></li>
+  </ul></li>
+  <li><a href="#como-os-zeros-aparecem-na-contagem-dos-primos" id="toc-como-os-zeros-aparecem-na-contagem-dos-primos" class="nav-link" data-scroll-target="#como-os-zeros-aparecem-na-contagem-dos-primos"><span class="header-section-number">5</span> 🔢 Como os zeros aparecem na contagem dos primos?</a>
+  <ul class="collapse">
+  <li><a href="#a-contagem-em-degraus" id="toc-a-contagem-em-degraus" class="nav-link" data-scroll-target="#a-contagem-em-degraus"><span class="header-section-number">5.1</span> A contagem em degraus</a></li>
+  <li><a href="#as-oscilações-na-fórmula-explícita" id="toc-as-oscilações-na-fórmula-explícita" class="nav-link" data-scroll-target="#as-oscilações-na-fórmula-explícita"><span class="header-section-number">5.2</span> As oscilações na fórmula explícita</a></li>
+  </ul></li>
+  <li><a href="#o-que-é-lean" id="toc-o-que-é-lean" class="nav-link" data-scroll-target="#o-que-é-lean"><span class="header-section-number">6</span> 🛠️ O que é Lean?</a></li>
+  <li><a href="#o-que-mudaria-se-a-prova-fosse-confirmada" id="toc-o-que-mudaria-se-a-prova-fosse-confirmada" class="nav-link" data-scroll-target="#o-que-mudaria-se-a-prova-fosse-confirmada"><span class="header-section-number">7</span> 🎯 O que mudaria se a prova fosse confirmada?</a>
+  <ul class="collapse">
+  <li><a href="#riemann-e-rsa" id="toc-riemann-e-rsa" class="nav-link" data-scroll-target="#riemann-e-rsa"><span class="header-section-number">7.1</span> Introdução ao RSA</a></li>
+  </ul></li>
+  <li><a href="#premio-do-instituto-clay" id="toc-premio-do-instituto-clay" class="nav-link" data-scroll-target="#premio-do-instituto-clay"><span class="header-section-number">8</span> 🏆 O Instituto Clay e o prêmio de US$ 1 milhão</a>
+  <ul class="collapse">
+  <li><a href="#problemas-resolvidos-e-perelman" id="toc-problemas-resolvidos-e-perelman" class="nav-link" data-scroll-target="#problemas-resolvidos-e-perelman"><span class="header-section-number">8.1</span> Quantos problemas foram resolvidos?</a></li>
+  </ul></li>
+  <li><a href="#bibliografia-e-leitura-adicional" id="toc-bibliografia-e-leitura-adicional" class="nav-link" data-scroll-target="#bibliografia-e-leitura-adicional"><span class="header-section-number">9</span> 📚 Bibliografia e leitura adicional</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso</h1>
+<h1 class="title">📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso</h1>
   <div class="quarto-categories">
     <div class="quarto-category">matemática</div>
     <div class="quarto-category">inteligência artificial</div>
@@ -279,7 +303,7 @@ window.Quarto = {
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     <div>
     <div class="quarto-title-meta-heading">Autor</div>
@@ -303,39 +327,230 @@ window.Quarto = {
 </header>
 
 
-<p><a href="../../posts/matematica/index.html">← Seção de Matemática</a></p>
-<p>Em 20 de novembro de 2026, o matemático Levent Alpöge anunciou que acredita ter demonstrado, com a ajuda do modelo de inteligência artificial Claude, a hipótese de Riemann e sua generalização para as funções <span class="math inline">\(L\)</span> de Dirichlet. Ele divulgou uma nota sobre o trabalho e disponibilizou o argumento em Lean, um assistente de provas. A reportagem de Konstantin Kakaes na <em>Quanta Magazine</em> estima que o material soma cerca de 17 milhões de linhas de código. <a href="https://alpo.ge/remark.pdf">Nota de Alpöge</a> · <a href="https://www.quantamagazine.org/updates/transformation/">Cobertura da Quanta Magazine</a></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Estado da verificação em 20 de novembro">
+<p>· <a href="../../posts/matematica/guia-matematica.html">← Guia de Leitura de Matemática</a> · <a href="../../posts/matematica/index.html">← Seção de Matemática</a></p>
+<hr>
+<p>Em 20 de novembro de 2026, Levent Alpöge anunciou que acredita ter encontrado, trabalhando com Claude, uma prova da hipótese de Riemann e de sua generalização para as funções <span class="math inline">\(L\)</span> de Dirichlet. Divulgou uma nota sobre a pesquisa e disponibilizou o argumento em Lean, um assistente de provas. A <em>Quanta Magazine</em> estimou que o material reúne cerca de 17 milhões de linhas de código. <a href="https://alpo.ge/remark.pdf">Nota de Alpöge</a> · <a href="https://www.quantamagazine.org/updates/transformation/">Reportagem de Konstantin Kakaes</a></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Estado da verificação em 20 de novembro de 2026">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Estado da verificação em 20 de novembro
+<span class="screen-reader-only">Nota</span>Estado da verificação em 20 de novembro de 2026
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Um projeto independente já registrou a conferência da integridade do material e a compilação dos enunciados de referência contra a biblioteca Mathlib. O projeto ainda indicava como em andamento a etapa que compara os enunciados, audita os axiomas e verifica as demonstrações submetidas. <a href="https://github.com/SINF-KEN/rh-lean-check">Acompanhe o registro técnico</a></p>
+<p>O projeto independente consultado confirmou que sua cópia correspondia ao material publicado e compilou os enunciados de referência com a biblioteca Mathlib. No registro consultado, a etapa de conferir as demonstrações submetidas, comparar os enunciados e auditar seus axiomas ainda estava em andamento. O Instituto Clay ainda listava a hipótese clássica como problema em aberto. <a href="https://github.com/SINF-KEN/rh-lean-check">Registro técnico</a> · <a href="https://www.claymath.org/millennium/riemann-hypothesis/">Instituto Clay</a></p>
 </div>
 </div>
-<section id="o-que-os-zeros-têm-a-ver-com-os-primos" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-os-zeros-têm-a-ver-com-os-primos">🔢 O que os zeros têm a ver com os primos?</h2>
-<p>Se <span class="math inline">\(\pi(x)\)</span> conta quantos números primos são menores ou iguais a <span class="math inline">\(x\)</span>, o teorema dos números primos diz que <span class="math inline">\(\pi(x)\)</span> cresce, em primeira aproximação, como <span class="math inline">\(x/\log x\)</span>. Quando procuramos estimativas mais precisas, os zeros da função zeta entram em cena. Eles aparecem em fórmulas que ligam a distribuição dos primos ao comportamento dessa função no plano complexo. <a href="https://www.claymath.org/millennium/riemann-hypothesis/">Instituto Clay de Matemática</a></p>
-<p>Para um número complexo <span class="math inline">\(s\)</span> com parte real maior que <span class="math inline">\(1\)</span>, a zeta pode ser escrita de duas maneiras:</p>
+<section id="quem-é-levent-alpöge" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 👤 Quem é Levent Alpöge?</h1>
+<p>Levent Alpöge é um matemático da Anthropic. Fez o doutorado em Princeton, com uma tese sobre pontos em curvas, e pesquisou a distribuição de pontos inteiros em curvas elípticas. São problemas de teoria dos números que perguntam, por exemplo, quais soluções inteiras podem ocorrer em equações polinomiais. No anúncio, Alpöge conta que orientou a pesquisa a partir de um problema análogo mais simples e atribui a Claude a sugestão de etapas importantes do argumento. <a href="https://alpo.ge/">Página acadêmica de Alpöge</a> · <a href="https://alpo.ge/papers/my%20thesis.pdf">Tese de doutorado</a> · <a href="https://alpo.ge/remark.pdf">Relato da colaboração</a></p>
+</section>
+<section id="o-que-é-claude" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🤖 O que é Claude?</h1>
+<p>Claude é o nome do assistente de IA e da família de modelos de linguagem da Anthropic. Lançado publicamente em 2023, o assistente pode analisar textos e escrever código. Em pesquisa matemática, um modelo desse tipo pode sugerir resultados intermediários, propor abordagens e ajudar a traduzir um argumento em código formal. Cada proposta exige checagem. Neste caso, Claude participou do desenvolvimento do argumento, e o Lean é a ferramenta usada para conferir a prova formal. <a href="https://www.anthropic.com/news/introducing-claude">Apresentação de Claude pela Anthropic</a></p>
+</section>
+<section id="um-breve-histórico" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 🕰️ Um breve histórico</h1>
+<p>Em <strong>1859</strong>, Bernhard Riemann publicou um trabalho sobre quantos primos existem abaixo de um dado número. Ele estudou a função zeta para argumentos complexos e mostrou como seus zeros entram nas fórmulas de contagem. Em <strong>1896</strong>, Jacques Hadamard e Charles de la Vallée Poussin provaram, de maneira independente, o teorema dos números primos. Em <strong>1914</strong>, G. H. Hardy provou que há infinitos zeros na linha crítica. A hipótese exige que <strong>todos</strong> os zeros não triviais estejam nessa linha. Em <strong>2000</strong>, o Instituto Clay a incluiu entre os Problemas do Milênio. <a href="https://www.claymath.org/collections/riemanns-1859-manuscript/">Manuscrito de 1859</a> · <a href="https://www.claymath.org/library/annual_report/ar2004/04report_riemann.pdf">Histórico do Instituto Clay</a> · <a href="https://personal.math.ubc.ca/~gerg/teaching/592-Fall2018/papers/1916.Hardy.pdf">Hardy e Littlewood, histórico do resultado de 1914</a> · <a href="../../posts/matematica/beleza-matematica.html">Hardy no Blog</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/riemann-linha-do-tempo.png" class="img-fluid figure-img" alt="Linha do tempo com cinco marcos em ordem: artigo de Riemann em 1859, teorema dos números primos em 1896, resultado de Hardy em 1914, seleção pelo Instituto Clay em 2000 e anúncio de Alpöge em 2026."></p>
+<figcaption>Marcos da hipótese de Riemann, do artigo de 1859 ao anúncio de 2026.</figcaption>
+</figure>
+</div>
+</section>
+<section id="a-hipótese-de-riemann-e-as-funções-l-de-dirichlet" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 📐 A hipótese de Riemann e as funções <span class="math inline">\(L\)</span> de Dirichlet</h1>
+<section id="a-função-zeta" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="a-função-zeta"><span class="header-section-number">4.1</span> A função zeta</h2>
+<p>Imagine que queremos reunir todos os inteiros positivos em uma soma. Para que a soma possa ter um valor finito, atribuímos um peso cada vez menor aos inteiros maiores. Se usamos o inverso do quadrado, as primeiras parcelas são <span class="math inline">\(1\)</span>, <span class="math inline">\(1/4\)</span>, <span class="math inline">\(1/9\)</span> e <span class="math inline">\(1/16\)</span>. Essa soma é o valor da <strong>função zeta</strong> no ponto <span class="math inline">\(s=2\)</span>. O expoente <span class="math inline">\(s\)</span> pode variar e pode até ser um número complexo.</p>
+<p>Há outro jeito de montar a mesma soma. Separe as potências de cada primo. O fator do primo <span class="math inline">\(2\)</span> fornece os pesos de <span class="math inline">\(1,2,4,8,\ldots\)</span>, e o fator de <span class="math inline">\(3\)</span> fornece os pesos de <span class="math inline">\(1,3,9,27,\ldots\)</span>. Ao multiplicar os fatores, podemos escolher <span class="math inline">\(1/2^2\)</span> do primeiro e <span class="math inline">\(1/3^2\)</span> do segundo. O produto é <span class="math inline">\(1/6^2\)</span>, exatamente o peso de <span class="math inline">\(6\)</span> na soma. Como cada inteiro tem uma única fatoração em primos, cada peso aparece uma única vez.</p>
+<p>Para <span class="math inline">\(\operatorname{Re}(s)&gt;1\)</span>, a série converge absolutamente e essa correspondência fica escrita assim:</p>
 <p><span class="math display">\[
 \zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}
-        =\prod_{p\ \mathrm{primo}}\frac{1}{1-p^{-s}}.
+       =\prod_{p\text{ primo}}\frac{1}{1-p^{-s}}.
 \]</span></p>
-<p>O produto de Euler reúne todos os primos. Ao expandir seus fatores, surgem termos como <span class="math inline">\(2^{-s}3^{-s}=6^{-s}\)</span>. A fatoração única garante que cada inteiro positivo apareça exatamente uma vez.</p>
-<p>A função se estende ao plano complexo, com um polo em <span class="math inline">\(s=1\)</span>. Seus zeros chamados não triviais ficam na faixa <span class="math inline">\(0&lt;\operatorname{Re}(s)&lt;1\)</span>. A hipótese de Riemann diz que todos estão sobre a linha vertical <span class="math inline">\(\operatorname{Re}(s)=\tfrac12\)</span>. Se confirmada, ela permitiria limitar com muito mais precisão o erro em estimativas da contagem de primos. A generalização anunciada propõe a mesma condição para os zeros na faixa crítica de uma família de funções, as funções <span class="math inline">\(L\)</span> de Dirichlet, ligadas à distribuição de primos em progressões aritméticas. <a href="https://www.claymath.org/millennium/riemann-hypothesis/">Enunciado clássico e descrição oficial</a> · <a href="https://github.com/SINF-KEN/rh-lean-check#the-statements">Enunciados da versão formal</a></p>
+<p>Essa igualdade explica por que uma função definida por uma soma de inteiros pode revelar informações sobre os primos. Para estudar seus zeros, é preciso ampliar o domínio. O <strong>prolongamento analítico</strong> preserva os valores da zeta onde a série converge e estende a função ao restante do plano complexo, com um polo simples em <span class="math inline">\(s=1\)</span>. <a href="https://dlmf.nist.gov/25.2">NIST, definição e produto de Euler</a></p>
+<section id="como-ler-a-faixa-crítica" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="como-ler-a-faixa-crítica"><span class="header-section-number">4.1.1</span> Como ler a faixa crítica</h3>
+<p>Pense em cada entrada <span class="math inline">\(s\)</span> como um ponto no mapa da figura. A coordenada horizontal é a parte real, e a vertical é a parte imaginária. Um <strong>zero</strong> é uma entrada em que a função devolve zero. Alguns zeros são os inteiros negativos pares, marcados por quadrados verdes. Os demais são os <strong>zeros não triviais</strong>. Sabe-se que eles ficam dentro da faixa azul, entre as verticais de coordenadas <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/riemann-faixa-critica.png" class="img-fluid figure-img" alt="Plano complexo com faixa sombreada entre as partes reais zero e um. Quatro pares de zeros aparecem na reta real igual a um meio. Os zeros triviais visíveis são menos dois e menos quatro. O polo, em um, é marcado com uma cruz."></p>
+<figcaption>A faixa crítica e os quatro primeiros pares de zeros não triviais da função zeta.</figcaption>
+</figure>
+</div>
+<p>O primeiro ponto azul acima do eixo real fica aproximadamente na altura <span class="math inline">\(14{,}13\)</span>. O ponto conjugado fica na altura oposta, na mesma posição horizontal. A linha tracejada passa pelo meio da faixa e contém os oito pontos azuis mostrados. A hipótese é que essa linha também contém todos os demais zeros não triviais. <a href="https://dlmf.nist.gov/25.10">NIST, zeros da zeta</a></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Enunciado da hipótese de Riemann">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Enunciado da hipótese de Riemann
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se <span class="math inline">\(\rho\)</span> é um zero não trivial da zeta, então</p>
+<p><span class="math display">\[
+\operatorname{Re}(\rho)=\frac12.
+\]</span></p>
+</div>
+</div>
 </section>
-<section id="o-que-o-lean-pode-verificar" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-o-lean-pode-verificar">🛠️ O que o Lean pode verificar?</h2>
-<p>Em Lean, o enunciado precisa ser escrito com definições precisas, e a demonstração precisa produzir um objeto que o núcleo do sistema consiga conferir. Nessa checagem, importa identificar exatamente qual proposição foi provada e de quais axiomas ela depende. Um enunciado de referência escrito separadamente ajuda a conferir se o código resolve o problema que motivou o anúncio. <a href="https://lean-lang.org/">Projeto Lean</a> · <a href="https://github.com/SINF-KEN/rh-lean-check/blob/main/verification/NOTES.md">Notas da verificação independente</a></p>
-<p>Para quem estuda matemática, o caso levanta outra pergunta. Se a verificação for bem-sucedida, quais ideias do argumento poderão ser explicadas, ensinadas e usadas em outros problemas? Um certificado formal pode estabelecer que a conclusão decorre das premissas. Uma exposição matemática pode mostrar por que uma construção foi escolhida e onde ela pode funcionar de novo. O trabalho de entender a prova começa por essas perguntas.</p>
+</section>
+<section id="da-zeta-às-funções-l" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="da-zeta-às-funções-l"><span class="header-section-number">4.2</span> Da zeta às funções <span class="math inline">\(L\)</span></h2>
+<p>Suponha que queremos comparar dois grupos de primos ímpares. Ao dividir por <span class="math inline">\(4\)</span>, os primos <span class="math inline">\(5\)</span> e <span class="math inline">\(13\)</span> deixam resto <span class="math inline">\(1\)</span>, enquanto <span class="math inline">\(3\)</span>, <span class="math inline">\(7\)</span> e <span class="math inline">\(11\)</span> deixam resto <span class="math inline">\(3\)</span>. Como fazer uma versão da zeta que guarde essa diferença? Podemos trocar os pesos da soma. Damos sinal positivo aos números com resto <span class="math inline">\(1\)</span>, sinal negativo aos que deixam resto <span class="math inline">\(3\)</span> e peso zero aos pares.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Resto de <span class="math inline">\(n\)</span> na divisão por <span class="math inline">\(4\)</span></th>
+<th style="text-align: left;">Exemplos</th>
+<th style="text-align: center;">Peso <span class="math inline">\(\chi(n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1,5,9,13\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(3,7,11,15\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0\)</span> ou <span class="math inline">\(2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(2,4,6,8\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>O padrão se repete a cada quatro números e respeita a multiplicação. Por exemplo, <span class="math inline">\(3\)</span> e <span class="math inline">\(7\)</span> têm peso <span class="math inline">\(-1\)</span>, e seu produto <span class="math inline">\(21\)</span> tem peso <span class="math inline">\(+1\)</span>. Chamamos esse sistema de pesos de <strong>caráter de Dirichlet</strong> de módulo <span class="math inline">\(4\)</span>. De modo geral, um caráter de módulo <span class="math inline">\(q\)</span> é periódico de período <span class="math inline">\(q\)</span>, satisfaz <span class="math inline">\(\chi(ab)=\chi(a)\chi(b)\)</span> e vale zero quando <span class="math inline">\(n\)</span> e <span class="math inline">\(q\)</span> têm um divisor comum maior que <span class="math inline">\(1\)</span>.</p>
+<p>Aplicando os pesos da tabela à série da zeta, obtemos <span class="math inline">\(1-3^{-s}+5^{-s}-7^{-s}+\cdots\)</span>. Cada inteiro continua contribuindo com seu peso, mas agora com o sinal da classe a que pertence. Para <span class="math inline">\(\operatorname{Re}(s)&gt;1\)</span>, a fórmula geral da <strong>função <span class="math inline">\(L\)</span> de Dirichlet</strong> é</p>
+<p><span class="math display">\[
+L(s,\chi)=\sum_{n=1}^{\infty}\frac{\chi(n)}{n^s}
+        =\prod_{p\text{ primo}}\frac{1}{1-\chi(p)p^{-s}}.
+\]</span></p>
+<p>O produto também registra o peso de cada primo. Comparar o caráter da tabela com o que dá <span class="math inline">\(+1\)</span> a todos os ímpares permite distinguir as duas classes. A zeta é o caso em que todos os pesos são <span class="math inline">\(1\)</span>, correspondente ao módulo <span class="math inline">\(1\)</span>. <a href="https://dlmf.nist.gov/25.15">NIST, funções <span class="math inline">\(L\)</span> de Dirichlet</a></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Enunciado da hipótese de Riemann generalizada">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Enunciado da hipótese de Riemann generalizada
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para todo caráter de Dirichlet <span class="math inline">\(\chi\)</span>, cada zero de <span class="math inline">\(L(s,\chi)\)</span> na faixa <span class="math inline">\(0&lt;\operatorname{Re}(s)&lt;1\)</span> tem parte real <span class="math inline">\(\tfrac12\)</span>. A reta é a mesma da figura, agora para uma família de funções. <a href="https://github.com/SINF-KEN/rh-lean-check#the-statements">Enunciados formais em análise</a></p>
+</div>
+</div>
+</section>
+</section>
+<section id="como-os-zeros-aparecem-na-contagem-dos-primos" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 🔢 Como os zeros aparecem na contagem dos primos?</h1>
+<section id="a-contagem-em-degraus" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="a-contagem-em-degraus"><span class="header-section-number">5.1</span> A contagem em degraus</h2>
+<p>Até <span class="math inline">\(10\)</span> há quatro primos, <span class="math inline">\(2,3,5,7\)</span>. Ao passar de <span class="math inline">\(10\)</span> para <span class="math inline">\(11\)</span>, encontramos mais um primo e a contagem sobe para cinco. De <span class="math inline">\(11\)</span> para <span class="math inline">\(12\)</span> ela permanece em cinco. É por isso que o gráfico de <span class="math inline">\(\pi(x)\)</span>, a quantidade de primos menores ou iguais a <span class="math inline">\(x\)</span>, tem degraus.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/riemann-contagem-primos.png" class="img-fluid figure-img" alt="Gráfico com três curvas crescentes até x igual a mil. A contagem exata dos primos forma degraus azuis. A integral logarítmica acompanha a contagem de perto. A curva x dividido pelo logaritmo de x termina abaixo das outras."></p>
+<figcaption>Contagem exata de primos até mil e as curvas de aproximação.</figcaption>
+</figure>
+</div>
+<p>A curva laranja representa uma estimativa global. Perto de um número grande <span class="math inline">\(t\)</span>, a densidade média de primos é aproximadamente <span class="math inline">\(1/\log t\)</span>. Se usamos a densidade do extremo <span class="math inline">\(x\)</span> para estimar a contagem até ele, obtemos <span class="math inline">\(x/\log x\)</span>. O <strong>teorema dos números primos</strong> diz que o erro relativo dessa aproximação tende a zero:</p>
+<p><span class="math display">\[
+\frac{\pi(x)}{x/\log x}\longrightarrow 1
+\qquad (x\to\infty).
+\]</span></p>
+<p>A curva verde acrescenta uma ideia. A densidade estimada varia ao longo do caminho, então somamos as estimativas locais desde <span class="math inline">\(2\)</span> até <span class="math inline">\(x\)</span>. Ao transformar essa soma em uma integral, obtemos a <strong>integral logarítmica</strong> usada na figura:</p>
+<p><span class="math display">\[
+\operatorname{Li}(x)=\int_2^x\frac{dt}{\log t}.
+\]</span></p>
+<p>Em <span class="math inline">\(x=1000\)</span>, há <span class="math inline">\(168\)</span> primos. A estimativa laranja dá cerca de <span class="math inline">\(145\)</span>, e a verde fica em torno de <span class="math inline">\(177\)</span>. A pergunta que nos leva aos zeros da zeta é como explicar e limitar o desvio entre uma contagem exata e sua tendência. <a href="https://dlmf.nist.gov/25.16#i">NIST, distribuição dos primos</a></p>
+</section>
+<section id="as-oscilações-na-fórmula-explícita" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="as-oscilações-na-fórmula-explícita"><span class="header-section-number">5.2</span> As oscilações na fórmula explícita</h2>
+<p>Para enxergar a ligação, usamos uma contagem que combina com o produto de Euler. Em vez de somar <span class="math inline">\(1\)</span> só quando passamos por um primo, somamos <span class="math inline">\(\log p\)</span> quando passamos por qualquer potência de um primo <span class="math inline">\(p\)</span>. Até <span class="math inline">\(10\)</span>, por exemplo, o primo <span class="math inline">\(2\)</span> contribui três vezes, em <span class="math inline">\(2,4,8\)</span>, e o primo <span class="math inline">\(3\)</span> contribui duas vezes, em <span class="math inline">\(3,9\)</span>. Os primos <span class="math inline">\(5\)</span> e <span class="math inline">\(7\)</span> contribuem uma vez cada. Essa é a <strong>função de Chebyshev</strong>:</p>
+<p><span class="math display">\[
+\psi(x)=\sum_{\substack{p^k\le x\\k\ge1}}\log p.
+\]</span></p>
+<p>A tendência de <span class="math inline">\(\psi(x)\)</span> é a reta <span class="math inline">\(x\)</span>. Entre duas potências de primos, a contagem fica parada enquanto <span class="math inline">\(x\)</span> cresce. Por isso o desvio <span class="math inline">\(\psi(x)-x\)</span> desce entre os saltos. Na figura, a linha azul registra esse desvio e a laranja tenta reconstruí-lo com os primeiros 20 pares de zeros da zeta.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/riemann-oscilacoes.png" class="img-fluid figure-img" alt="A linha azul irregular mostra psi de x menos x. A linha laranja mostra a aproximação obtida com os primeiros vinte pares de zeros e os termos restantes da fórmula. Ela acompanha parte das oscilações, sem reproduzir todos os saltos."></p>
+<figcaption>Desvio da contagem ponderada e aproximação usando vinte pares de zeros.</figcaption>
+</figure>
+</div>
+<p>Por que aparecem ondas? Cada zero <span class="math inline">\(\rho=\beta+i\gamma\)</span> fornece uma contribuição. A parte imaginária <span class="math inline">\(\gamma\)</span> determina a frequência da oscilação na escala <span class="math inline">\(\log x\)</span>. A parte real <span class="math inline">\(\beta\)</span> determina quanto a contribuição pode crescer. Na fórmula, isso aparece porque <span class="math inline">\(x^\rho=x^\beta e^{i\gamma\log x}\)</span>. Ao somar a contribuição de um zero e a do seu conjugado, obtemos uma oscilação real.</p>
+<p>A <strong>fórmula explícita de Riemann–von Mangoldt</strong> junta a tendência, as contribuições de todos os zeros e dois termos de correção. Para <span class="math inline">\(x&gt;1\)</span> fora dos pontos de salto, ela dá</p>
+<p><span class="math display">\[
+\psi(x)=x-\sum_{\rho}\frac{x^\rho}{\rho}
+        -\log(2\pi)-\tfrac12\log(1-x^{-2}).
+\]</span></p>
+<p>A soma inclui os zeros não triviais em ordem simétrica de altura. Se todos estiverem sobre a reta crítica, o fator <span class="math inline">\(x^\beta\)</span> de cada contribuição será <span class="math inline">\(\sqrt{x}\)</span>. A posição dos zeros ajuda, assim, a controlar os desvios na contagem dos primos. <a href="https://dlmf.nist.gov/25.16.E2">NIST, relação entre zeros e contagem</a> · <a href="https://arxiv.org/abs/1611.07251">Dudek, estimativas explícitas para primos</a></p>
+</section>
+</section>
+<section id="o-que-é-lean" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 🛠️ O que é Lean?</h1>
+<p><strong>Lean</strong> é uma linguagem de programação e um assistente de provas. Nele, escrevemos o enunciado e fornecemos uma demonstração. Comandos podem procurar passos automaticamente, e o núcleo confere se o objeto de prova obedece às regras lógicas do sistema. A comunidade mantém a <strong>Mathlib</strong>, uma biblioteca para reutilizar definições e resultados já formalizados. <a href="https://lean-lang.org/">Projeto Lean</a> · <a href="https://github.com/leanprover-community/mathlib4">Mathlib</a></p>
+<p>A linha abaixo afirma que somar zero a um número natural preserva esse número e invoca um resultado da biblioteca para demonstrá-lo.</p>
+<pre class="lean"><code>example (n : Nat) : n + 0 = n := Nat.add_zero n</code></pre>
+<p>Na alegação sobre Riemann, a checagem envolve determinar se o enunciado formal corresponde às conjecturas anunciadas, quais axiomas o argumento usa e se ele é aceito pelo verificador. Uma exposição matemática pode explicar por que as construções usadas funcionam e onde poderão ser aplicadas de novo. <a href="https://github.com/SINF-KEN/rh-lean-check">Registro da verificação independente</a></p>
+</section>
+<section id="o-que-mudaria-se-a-prova-fosse-confirmada" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 🎯 O que mudaria se a prova fosse confirmada?</h1>
+<ul>
+<li><p><strong>Contagem de primos com margem de erro demonstrada.</strong> A hipótese clássica implica <span class="math inline">\(\pi(x)=\operatorname{Li}(x)+O(\sqrt{x}\log x)\)</span>. Para <span class="math inline">\(x\)</span> suficientemente grande, o erro fica limitado por uma constante vezes <span class="math inline">\(\sqrt{x}\log x\)</span>. <a href="https://arxiv.org/abs/1410.7015">Büthe, estimativas para <span class="math inline">\(\pi(x)\)</span></a></p></li>
+<li><p><strong>Garantias em intervalos mais curtos.</strong> Sob a hipótese clássica, pode-se garantir um primo entre <span class="math inline">\(x\)</span> e <span class="math inline">\(x+C\sqrt{x}\log x\)</span> para uma constante adequada e <span class="math inline">\(x\)</span> suficientemente grande. <a href="https://arxiv.org/abs/1611.07251">Dudek, estimativas explícitas</a></p></li>
+<li><p><strong>Estimativas por classe de resíduos.</strong> A versão generalizada controla melhor a quantidade de primos em progressões aritméticas. A longo prazo, cada uma das classes <span class="math inline">\(4k+1\)</span> e <span class="math inline">\(4k+3\)</span> fica com cerca de metade dos primos ímpares. A generalização quantifica os desvios nessa divisão. <a href="https://dlmf.nist.gov/25.15#ii">NIST, primos em progressões aritméticas</a></p></li>
+<li><p><strong>Testes computacionais de primalidade.</strong> Em 1976, Gary Miller mostrou que, sob uma hipótese sobre funções <span class="math inline">\(L\)</span> de Dirichlet, seu teste determinístico decide se um inteiro é primo em tempo polinomial no número de dígitos. A confirmação da versão generalizada daria a garantia incondicional desse teste. <a href="https://www.cs.cmu.edu/~glmiller/Publications/Papers/Mi76.pdf">Artigo de Gary Miller</a></p></li>
+</ul>
+<p>As consequências hoje demonstradas sob essas hipóteses passariam a valer incondicionalmente. O alcance do método dependeria também de quais ideias da prova pudessem ser reaproveitadas para outras funções <span class="math inline">\(L\)</span> e outros problemas de teoria dos números.</p>
+<section id="riemann-e-rsa" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="riemann-e-rsa"><span class="header-section-number">7.1</span> Introdução ao RSA</h2>
+<p>Imagine que Beatriz quer receber uma mensagem confidencial de André. Com o RSA, ela pode divulgar uma <strong>chave pública</strong> e guardar uma <strong>chave privada</strong>. André usa a chave pública de Beatriz para cifrar a mensagem. Beatriz usa a chave privada correspondente para lê-la. O RSA também serve para assinaturas digitais. Nesse caso, Beatriz assina com a chave privada e qualquer pessoa com a chave pública pode verificar a assinatura.</p>
+<p>O nome <strong>RSA</strong> vem dos sobrenomes de seus autores, Ronald Rivest, Adi Shamir e Leonard Adleman. Para gerar o par de chaves, escolhem-se normalmente dois primos grandes, <span class="math inline">\(p\)</span> e <span class="math inline">\(q\)</span>. O produto <span class="math inline">\(N=pq\)</span>, chamado <strong>módulo</strong>, faz parte da chave pública. Quando já conhecemos os primos, calcular o produto é rápido mesmo com números muito grandes. Recuperar os primos a partir do produto pode ser difícil. Quem consegue fatorar <span class="math inline">\(N\)</span> pode calcular a chave privada correspondente. <a href="https://people.csail.mit.edu/rivest/Rsapaper.pdf">Artigo original do RSA</a></p>
+<p>Um exemplo pequeno ajuda a distinguir as operações. Um teste de primalidade responde se <span class="math inline">\(91\)</span> é primo ou composto. A fatoração dá uma informação a mais, <span class="math inline">\(91=7\cdot13\)</span>. Na geração de chaves, usamos testes de primalidade para escolher os fatores. Quando o módulo já é público, descobrir aqueles fatores é um problema diferente.</p>
+<p>A relação com Riemann é indireta. A versão generalizada daria uma garantia matemática ao teste de primalidade de Miller, mencionado acima. A quebra de uma chave RSA por fatoração exigiria um método eficiente para encontrar os fatores de um módulo específico. Até onde se sabe, demonstrar a hipótese clássica ou a generalizada, por si só, não fornece esse método. <a href="https://www.cs.cmu.edu/~glmiller/Publications/Papers/Mi76.pdf">Artigo de Gary Miller</a></p>
+</section>
+</section>
+<section id="premio-do-instituto-clay" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 🏆 O Instituto Clay e o prêmio de US$ 1 milhão</h1>
+<p>O <strong>Clay Mathematics Institute</strong> (CMI) foi fundado em 1998 por Landon e Lavinia Clay para apoiar a pesquisa matemática. Em maio de 2000, o instituto anunciou no Collège de France, em Paris, os <strong>sete Problemas do Milênio</strong>. Reservou <strong>US$ 7 milhões</strong> para o programa, com <strong>US$ 1 milhão por problema</strong>. <a href="https://www.claymath.org/about/the-clay-mathematics-institute-overview-and-history/">História do Instituto Clay</a> · <a href="https://www.claymath.org/millennium-problems/">Problemas do Milênio</a></p>
+<p>A escolha de Paris foi uma homenagem a <strong>David Hilbert</strong>. No Congresso Internacional de Matemáticos de 1900, Hilbert fez uma palestra cujo texto publicado reuniu <strong>23 problemas</strong> para orientar pesquisas nas décadas seguintes. Um século depois, o Instituto Clay retomou a ideia de apresentar à comunidade uma seleção de grandes questões em aberto. A <strong>hipótese de Riemann</strong> liga as duas iniciativas. Ela fazia parte do <strong>oitavo problema de Hilbert</strong>, dedicado à distribuição dos números primos, e entrou na lista do Clay como um problema próprio. <a href="https://mathcs.clarku.edu/~djoyce/hilbert/problems.html">Texto da palestra de Hilbert</a> · <a href="https://www.claymath.org/lectures/the-millennium-prize-problems-i/">Registro do evento de 2000</a></p>
+<p>Para que o Instituto Clay considere uma proposta, a solução precisa responder integralmente ao enunciado oficial e cumprir três condições:</p>
+<ol type="1">
+<li>Ser publicada em um veículo que satisfaça os critérios do instituto.</li>
+<li>Ter pelo menos dois anos decorridos desde essa publicação.</li>
+<li>Alcançar aceitação geral na comunidade matemática internacional.</li>
+</ol>
+<p>Essas condições permitem ao instituto avaliar a solução para o prêmio. No caso de Alpöge, o anúncio e a checagem do código Lean fazem parte de uma etapa anterior. O prazo de dois anos é contado a partir de uma publicação que cumpra as regras. <a href="https://www.claymath.org/millennium-problems/rules/">Regulamento oficial do prêmio</a></p>
+<section id="problemas-resolvidos-e-perelman" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="problemas-resolvidos-e-perelman"><span class="header-section-number">8.1</span> Quantos problemas foram resolvidos?</h2>
+<p>Em <strong>20 de novembro de 2026</strong>, apenas <strong>um dos sete</strong> constava como resolvido na lista oficial do Instituto Clay, a <strong>Conjectura de Poincaré</strong>. O Clay classificava cinco como não resolvidos, entre eles a hipótese de Riemann. O sétimo, sobre as equações de <strong>Navier–Stokes</strong>, aparecia como ativo. Em setembro de 2026, o Instituto se pronunciou sobre o anúncio de uma aparente solução e indicou que a avaliação seguiria o processo previsto nas regras do prêmio. <a href="https://www.claymath.org/millennium-problems/">Lista oficial dos Problemas do Milênio</a> · <a href="https://www.claymath.org/news/navier-stokes-announcement/">Comunicado sobre Navier–Stokes</a></p>
+<p><strong>Grigori Perelman</strong> é um matemático russo nascido em 1966, na então União Soviética. Doutorou-se na Universidade Estatal de São Petersburgo, pesquisou no Instituto de Matemática Steklov e passou parte dos anos 1990 na Universidade da Califórnia em Berkeley. Em três preprints de <strong>2002 e 2003</strong>, desenvolveu o programa do <em>fluxo de Ricci</em> iniciado por Richard Hamilton. O fluxo de Ricci deforma a geometria de um espaço de acordo com sua curvatura. Perelman mostrou como lidar com as singularidades que surgem nesse processo. Com isso, provou a conjectura de geometrização de Thurston, que inclui a Conjectura de Poincaré. <a href="https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2006/PerelmanENG.pdf">Perfil biográfico da União Matemática Internacional</a> · <a href="https://www.claymath.org/millennium/poincare-conjecture/">A solução de Poincaré no Instituto Clay</a></p>
+<p>Perelman recusou a <strong>Medalha Fields</strong>, concedida pela União Matemática Internacional em <strong>2006</strong> por suas contribuições à geometria e ao estudo do fluxo de Ricci. Em <strong>2010</strong>, recusou também o <strong>prêmio de US$ 1 milhão</strong> que o Instituto Clay lhe atribuiu pela solução da Conjectura de Poincaré. <a href="https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2006">Registro da Medalha Fields de 2006</a> · <a href="https://www.claymath.org/news/poincare-chair-2/">Registro da recusa do prêmio do Clay</a></p>
+</section>
+</section>
+<section id="bibliografia-e-leitura-adicional" class="level1 rodape" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> 📚 Bibliografia e leitura adicional</h1>
+<ul>
+<li><a href="https://www.claymath.org/collections/riemanns-1859-manuscript/">Bernhard Riemann — manuscrito de 1859</a>. Fac-símile e materiais de leitura do Instituto Clay.</li>
+<li><a href="https://dlmf.nist.gov/25">NIST — Zeta and Related Functions</a>. Referência para definições, zeros e aplicações.</li>
+<li><a href="https://alpo.ge/remark.pdf">Levent Alpöge — nota do anúncio</a>. Relato original da colaboração com Claude.</li>
+<li><a href="https://www.quantamagazine.org/updates/transformation/">Konstantin Kakaes — Transformation</a>. Cobertura da <em>Quanta Magazine</em>.</li>
+</ul>
+</section>
+<hr>
+<p>· <a href="../../posts/matematica/guia-matematica.html">← Guia de Leitura de Matemática</a> · <a href="../../posts/matematica/index.html">← Seção de Matemática</a> · 🔝 <a href="#top">Topo</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script>

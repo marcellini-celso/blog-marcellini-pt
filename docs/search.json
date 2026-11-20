@@ -163,23 +163,51 @@
   {
     "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html",
     "href": "posts/matematica/hipotese-de-riemann-claude-lean.html",
-    "title": "🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
+    "title": "📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
     "section": "",
-    "text": "← Seção de Matemática\nEm 20 de novembro de 2026, o matemático Levent Alpöge anunciou que acredita ter demonstrado, com a ajuda do modelo de inteligência artificial Claude, a hipótese de Riemann e sua generalização para as funções \\(L\\) de Dirichlet. Ele divulgou uma nota sobre o trabalho e disponibilizou o argumento em Lean, um assistente de provas. A reportagem de Konstantin Kakaes na Quanta Magazine estima que o material soma cerca de 17 milhões de linhas de código. Nota de Alpöge · Cobertura da Quanta Magazine"
+    "text": "· ← Guia de Leitura de Matemática · ← Seção de Matemática\nEm 20 de novembro de 2026, Levent Alpöge anunciou que acredita ter encontrado, trabalhando com Claude, uma prova da hipótese de Riemann e de sua generalização para as funções \\(L\\) de Dirichlet. Divulgou uma nota sobre a pesquisa e disponibilizou o argumento em Lean, um assistente de provas. A Quanta Magazine estimou que o material reúne cerca de 17 milhões de linhas de código. Nota de Alpöge · Reportagem de Konstantin Kakaes\n· ← Guia de Leitura de Matemática · ← Seção de Matemática · 🔝 Topo"
   },
   {
-    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#o-que-os-zeros-têm-a-ver-com-os-primos",
-    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#o-que-os-zeros-têm-a-ver-com-os-primos",
-    "title": "🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
-    "section": "🔢 O que os zeros têm a ver com os primos?",
-    "text": "🔢 O que os zeros têm a ver com os primos?\nSe \\(\\pi(x)\\) conta quantos números primos são menores ou iguais a \\(x\\), o teorema dos números primos diz que \\(\\pi(x)\\) cresce, em primeira aproximação, como \\(x/\\log x\\). Quando procuramos estimativas mais precisas, os zeros da função zeta entram em cena. Eles aparecem em fórmulas que ligam a distribuição dos primos ao comportamento dessa função no plano complexo. Instituto Clay de Matemática\nPara um número complexo \\(s\\) com parte real maior que \\(1\\), a zeta pode ser escrita de duas maneiras:\n\\[\n\\zeta(s)=\\sum_{n=1}^{\\infty}\\frac{1}{n^s}\n        =\\prod_{p\\ \\mathrm{primo}}\\frac{1}{1-p^{-s}}.\n\\]\nO produto de Euler reúne todos os primos. Ao expandir seus fatores, surgem termos como \\(2^{-s}3^{-s}=6^{-s}\\). A fatoração única garante que cada inteiro positivo apareça exatamente uma vez.\nA função se estende ao plano complexo, com um polo em \\(s=1\\). Seus zeros chamados não triviais ficam na faixa \\(0&lt;\\operatorname{Re}(s)&lt;1\\). A hipótese de Riemann diz que todos estão sobre a linha vertical \\(\\operatorname{Re}(s)=\\tfrac12\\). Se confirmada, ela permitiria limitar com muito mais precisão o erro em estimativas da contagem de primos. A generalização anunciada propõe a mesma condição para os zeros na faixa crítica de uma família de funções, as funções \\(L\\) de Dirichlet, ligadas à distribuição de primos em progressões aritméticas. Enunciado clássico e descrição oficial · Enunciados da versão formal"
+    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#a-função-zeta",
+    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#a-função-zeta",
+    "title": "📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
+    "section": "4.1 A função zeta",
+    "text": "4.1 A função zeta\nImagine que queremos reunir todos os inteiros positivos em uma soma. Para que a soma possa ter um valor finito, atribuímos um peso cada vez menor aos inteiros maiores. Se usamos o inverso do quadrado, as primeiras parcelas são \\(1\\), \\(1/4\\), \\(1/9\\) e \\(1/16\\). Essa soma é o valor da função zeta no ponto \\(s=2\\). O expoente \\(s\\) pode variar e pode até ser um número complexo.\nHá outro jeito de montar a mesma soma. Separe as potências de cada primo. O fator do primo \\(2\\) fornece os pesos de \\(1,2,4,8,\\ldots\\), e o fator de \\(3\\) fornece os pesos de \\(1,3,9,27,\\ldots\\). Ao multiplicar os fatores, podemos escolher \\(1/2^2\\) do primeiro e \\(1/3^2\\) do segundo. O produto é \\(1/6^2\\), exatamente o peso de \\(6\\) na soma. Como cada inteiro tem uma única fatoração em primos, cada peso aparece uma única vez.\nPara \\(\\operatorname{Re}(s)&gt;1\\), a série converge absolutamente e essa correspondência fica escrita assim:\n\\[\n\\zeta(s)=\\sum_{n=1}^{\\infty}\\frac{1}{n^s}\n       =\\prod_{p\\text{ primo}}\\frac{1}{1-p^{-s}}.\n\\]\nEssa igualdade explica por que uma função definida por uma soma de inteiros pode revelar informações sobre os primos. Para estudar seus zeros, é preciso ampliar o domínio. O prolongamento analítico preserva os valores da zeta onde a série converge e estende a função ao restante do plano complexo, com um polo simples em \\(s=1\\). NIST, definição e produto de Euler\n\n4.1.1 Como ler a faixa crítica\nPense em cada entrada \\(s\\) como um ponto no mapa da figura. A coordenada horizontal é a parte real, e a vertical é a parte imaginária. Um zero é uma entrada em que a função devolve zero. Alguns zeros são os inteiros negativos pares, marcados por quadrados verdes. Os demais são os zeros não triviais. Sabe-se que eles ficam dentro da faixa azul, entre as verticais de coordenadas \\(0\\) e \\(1\\).\n\n\n\nA faixa crítica e os quatro primeiros pares de zeros não triviais da função zeta.\n\n\nO primeiro ponto azul acima do eixo real fica aproximadamente na altura \\(14{,}13\\). O ponto conjugado fica na altura oposta, na mesma posição horizontal. A linha tracejada passa pelo meio da faixa e contém os oito pontos azuis mostrados. A hipótese é que essa linha também contém todos os demais zeros não triviais. NIST, zeros da zeta\n\n\n\n\n\n\nImportanteEnunciado da hipótese de Riemann\n\n\n\nSe \\(\\rho\\) é um zero não trivial da zeta, então\n\\[\n\\operatorname{Re}(\\rho)=\\frac12.\n\\]"
   },
   {
-    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#o-que-o-lean-pode-verificar",
-    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#o-que-o-lean-pode-verificar",
-    "title": "🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
-    "section": "🛠️ O que o Lean pode verificar?",
-    "text": "🛠️ O que o Lean pode verificar?\nEm Lean, o enunciado precisa ser escrito com definições precisas, e a demonstração precisa produzir um objeto que o núcleo do sistema consiga conferir. Nessa checagem, importa identificar exatamente qual proposição foi provada e de quais axiomas ela depende. Um enunciado de referência escrito separadamente ajuda a conferir se o código resolve o problema que motivou o anúncio. Projeto Lean · Notas da verificação independente\nPara quem estuda matemática, o caso levanta outra pergunta. Se a verificação for bem-sucedida, quais ideias do argumento poderão ser explicadas, ensinadas e usadas em outros problemas? Um certificado formal pode estabelecer que a conclusão decorre das premissas. Uma exposição matemática pode mostrar por que uma construção foi escolhida e onde ela pode funcionar de novo. O trabalho de entender a prova começa por essas perguntas."
+    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#da-zeta-às-funções-l",
+    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#da-zeta-às-funções-l",
+    "title": "📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
+    "section": "4.2 Da zeta às funções \\(L\\)",
+    "text": "4.2 Da zeta às funções \\(L\\)\nSuponha que queremos comparar dois grupos de primos ímpares. Ao dividir por \\(4\\), os primos \\(5\\) e \\(13\\) deixam resto \\(1\\), enquanto \\(3\\), \\(7\\) e \\(11\\) deixam resto \\(3\\). Como fazer uma versão da zeta que guarde essa diferença? Podemos trocar os pesos da soma. Damos sinal positivo aos números com resto \\(1\\), sinal negativo aos que deixam resto \\(3\\) e peso zero aos pares.\n\n\n\nResto de \\(n\\) na divisão por \\(4\\)\nExemplos\nPeso \\(\\chi(n)\\)\n\n\n\n\n\\(1\\)\n\\(1,5,9,13\\)\n\\(+1\\)\n\n\n\\(3\\)\n\\(3,7,11,15\\)\n\\(-1\\)\n\n\n\\(0\\) ou \\(2\\)\n\\(2,4,6,8\\)\n\\(0\\)\n\n\n\nO padrão se repete a cada quatro números e respeita a multiplicação. Por exemplo, \\(3\\) e \\(7\\) têm peso \\(-1\\), e seu produto \\(21\\) tem peso \\(+1\\). Chamamos esse sistema de pesos de caráter de Dirichlet de módulo \\(4\\). De modo geral, um caráter de módulo \\(q\\) é periódico de período \\(q\\), satisfaz \\(\\chi(ab)=\\chi(a)\\chi(b)\\) e vale zero quando \\(n\\) e \\(q\\) têm um divisor comum maior que \\(1\\).\nAplicando os pesos da tabela à série da zeta, obtemos \\(1-3^{-s}+5^{-s}-7^{-s}+\\cdots\\). Cada inteiro continua contribuindo com seu peso, mas agora com o sinal da classe a que pertence. Para \\(\\operatorname{Re}(s)&gt;1\\), a fórmula geral da função \\(L\\) de Dirichlet é\n\\[\nL(s,\\chi)=\\sum_{n=1}^{\\infty}\\frac{\\chi(n)}{n^s}\n        =\\prod_{p\\text{ primo}}\\frac{1}{1-\\chi(p)p^{-s}}.\n\\]\nO produto também registra o peso de cada primo. Comparar o caráter da tabela com o que dá \\(+1\\) a todos os ímpares permite distinguir as duas classes. A zeta é o caso em que todos os pesos são \\(1\\), correspondente ao módulo \\(1\\). NIST, funções \\(L\\) de Dirichlet\n\n\n\n\n\n\nImportanteEnunciado da hipótese de Riemann generalizada\n\n\n\nPara todo caráter de Dirichlet \\(\\chi\\), cada zero de \\(L(s,\\chi)\\) na faixa \\(0&lt;\\operatorname{Re}(s)&lt;1\\) tem parte real \\(\\tfrac12\\). A reta é a mesma da figura, agora para uma família de funções. Enunciados formais em análise"
+  },
+  {
+    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#a-contagem-em-degraus",
+    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#a-contagem-em-degraus",
+    "title": "📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
+    "section": "5.1 A contagem em degraus",
+    "text": "5.1 A contagem em degraus\nAté \\(10\\) há quatro primos, \\(2,3,5,7\\). Ao passar de \\(10\\) para \\(11\\), encontramos mais um primo e a contagem sobe para cinco. De \\(11\\) para \\(12\\) ela permanece em cinco. É por isso que o gráfico de \\(\\pi(x)\\), a quantidade de primos menores ou iguais a \\(x\\), tem degraus.\n\n\n\nContagem exata de primos até mil e as curvas de aproximação.\n\n\nA curva laranja representa uma estimativa global. Perto de um número grande \\(t\\), a densidade média de primos é aproximadamente \\(1/\\log t\\). Se usamos a densidade do extremo \\(x\\) para estimar a contagem até ele, obtemos \\(x/\\log x\\). O teorema dos números primos diz que o erro relativo dessa aproximação tende a zero:\n\\[\n\\frac{\\pi(x)}{x/\\log x}\\longrightarrow 1\n\\qquad (x\\to\\infty).\n\\]\nA curva verde acrescenta uma ideia. A densidade estimada varia ao longo do caminho, então somamos as estimativas locais desde \\(2\\) até \\(x\\). Ao transformar essa soma em uma integral, obtemos a integral logarítmica usada na figura:\n\\[\n\\operatorname{Li}(x)=\\int_2^x\\frac{dt}{\\log t}.\n\\]\nEm \\(x=1000\\), há \\(168\\) primos. A estimativa laranja dá cerca de \\(145\\), e a verde fica em torno de \\(177\\). A pergunta que nos leva aos zeros da zeta é como explicar e limitar o desvio entre uma contagem exata e sua tendência. NIST, distribuição dos primos"
+  },
+  {
+    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#as-oscilações-na-fórmula-explícita",
+    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#as-oscilações-na-fórmula-explícita",
+    "title": "📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
+    "section": "5.2 As oscilações na fórmula explícita",
+    "text": "5.2 As oscilações na fórmula explícita\nPara enxergar a ligação, usamos uma contagem que combina com o produto de Euler. Em vez de somar \\(1\\) só quando passamos por um primo, somamos \\(\\log p\\) quando passamos por qualquer potência de um primo \\(p\\). Até \\(10\\), por exemplo, o primo \\(2\\) contribui três vezes, em \\(2,4,8\\), e o primo \\(3\\) contribui duas vezes, em \\(3,9\\). Os primos \\(5\\) e \\(7\\) contribuem uma vez cada. Essa é a função de Chebyshev:\n\\[\n\\psi(x)=\\sum_{\\substack{p^k\\le x\\\\k\\ge1}}\\log p.\n\\]\nA tendência de \\(\\psi(x)\\) é a reta \\(x\\). Entre duas potências de primos, a contagem fica parada enquanto \\(x\\) cresce. Por isso o desvio \\(\\psi(x)-x\\) desce entre os saltos. Na figura, a linha azul registra esse desvio e a laranja tenta reconstruí-lo com os primeiros 20 pares de zeros da zeta.\n\n\n\nDesvio da contagem ponderada e aproximação usando vinte pares de zeros.\n\n\nPor que aparecem ondas? Cada zero \\(\\rho=\\beta+i\\gamma\\) fornece uma contribuição. A parte imaginária \\(\\gamma\\) determina a frequência da oscilação na escala \\(\\log x\\). A parte real \\(\\beta\\) determina quanto a contribuição pode crescer. Na fórmula, isso aparece porque \\(x^\\rho=x^\\beta e^{i\\gamma\\log x}\\). Ao somar a contribuição de um zero e a do seu conjugado, obtemos uma oscilação real.\nA fórmula explícita de Riemann–von Mangoldt junta a tendência, as contribuições de todos os zeros e dois termos de correção. Para \\(x&gt;1\\) fora dos pontos de salto, ela dá\n\\[\n\\psi(x)=x-\\sum_{\\rho}\\frac{x^\\rho}{\\rho}\n        -\\log(2\\pi)-\\tfrac12\\log(1-x^{-2}).\n\\]\nA soma inclui os zeros não triviais em ordem simétrica de altura. Se todos estiverem sobre a reta crítica, o fator \\(x^\\beta\\) de cada contribuição será \\(\\sqrt{x}\\). A posição dos zeros ajuda, assim, a controlar os desvios na contagem dos primos. NIST, relação entre zeros e contagem · Dudek, estimativas explícitas para primos"
+  },
+  {
+    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#riemann-e-rsa",
+    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#riemann-e-rsa",
+    "title": "📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
+    "section": "7.1 Introdução ao RSA",
+    "text": "7.1 Introdução ao RSA\nImagine que Beatriz quer receber uma mensagem confidencial de André. Com o RSA, ela pode divulgar uma chave pública e guardar uma chave privada. André usa a chave pública de Beatriz para cifrar a mensagem. Beatriz usa a chave privada correspondente para lê-la. O RSA também serve para assinaturas digitais. Nesse caso, Beatriz assina com a chave privada e qualquer pessoa com a chave pública pode verificar a assinatura.\nO nome RSA vem dos sobrenomes de seus autores, Ronald Rivest, Adi Shamir e Leonard Adleman. Para gerar o par de chaves, escolhem-se normalmente dois primos grandes, \\(p\\) e \\(q\\). O produto \\(N=pq\\), chamado módulo, faz parte da chave pública. Quando já conhecemos os primos, calcular o produto é rápido mesmo com números muito grandes. Recuperar os primos a partir do produto pode ser difícil. Quem consegue fatorar \\(N\\) pode calcular a chave privada correspondente. Artigo original do RSA\nUm exemplo pequeno ajuda a distinguir as operações. Um teste de primalidade responde se \\(91\\) é primo ou composto. A fatoração dá uma informação a mais, \\(91=7\\cdot13\\). Na geração de chaves, usamos testes de primalidade para escolher os fatores. Quando o módulo já é público, descobrir aqueles fatores é um problema diferente.\nA relação com Riemann é indireta. A versão generalizada daria uma garantia matemática ao teste de primalidade de Miller, mencionado acima. A quebra de uma chave RSA por fatoração exigiria um método eficiente para encontrar os fatores de um módulo específico. Até onde se sabe, demonstrar a hipótese clássica ou a generalizada, por si só, não fornece esse método. Artigo de Gary Miller"
+  },
+  {
+    "objectID": "posts/matematica/hipotese-de-riemann-claude-lean.html#problemas-resolvidos-e-perelman",
+    "href": "posts/matematica/hipotese-de-riemann-claude-lean.html#problemas-resolvidos-e-perelman",
+    "title": "📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso",
+    "section": "8.1 Quantos problemas foram resolvidos?",
+    "text": "8.1 Quantos problemas foram resolvidos?\nEm 20 de novembro de 2026, apenas um dos sete constava como resolvido na lista oficial do Instituto Clay, a Conjectura de Poincaré. O Clay classificava cinco como não resolvidos, entre eles a hipótese de Riemann. O sétimo, sobre as equações de Navier–Stokes, aparecia como ativo. Em setembro de 2026, o Instituto se pronunciou sobre o anúncio de uma aparente solução e indicou que a avaliação seguiria o processo previsto nas regras do prêmio. Lista oficial dos Problemas do Milênio · Comunicado sobre Navier–Stokes\nGrigori Perelman é um matemático russo nascido em 1966, na então União Soviética. Doutorou-se na Universidade Estatal de São Petersburgo, pesquisou no Instituto de Matemática Steklov e passou parte dos anos 1990 na Universidade da Califórnia em Berkeley. Em três preprints de 2002 e 2003, desenvolveu o programa do fluxo de Ricci iniciado por Richard Hamilton. O fluxo de Ricci deforma a geometria de um espaço de acordo com sua curvatura. Perelman mostrou como lidar com as singularidades que surgem nesse processo. Com isso, provou a conjectura de geometrização de Thurston, que inclui a Conjectura de Poincaré. Perfil biográfico da União Matemática Internacional · A solução de Poincaré no Instituto Clay\nPerelman recusou a Medalha Fields, concedida pela União Matemática Internacional em 2006 por suas contribuições à geometria e ao estudo do fluxo de Ricci. Em 2010, recusou também o prêmio de US$ 1 milhão que o Instituto Clay lhe atribuiu pela solução da Conjectura de Poincaré. Registro da Medalha Fields de 2006 · Registro da recusa do prêmio do Clay"
   },
   {
     "objectID": "posts/fisica/parte-1-mecanica-quantica.html",
@@ -3182,7 +3210,7 @@
     "href": "tags/hipotese-de-riemann.html#posts-com-a-tag-hipótese-de-riemann",
     "title": "hipótese de Riemann",
     "section": "Posts com a tag hipótese de Riemann",
-    "text": "Posts com a tag hipótese de Riemann\n\n🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso"
+    "text": "Posts com a tag hipótese de Riemann\n\n📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso"
   },
   {
     "objectID": "tags/rlhf.html",
@@ -3448,7 +3476,7 @@
     "href": "tags/teoria-dos-numeros.html#posts-com-a-tag-teoria-dos-números",
     "title": "teoria dos números",
     "section": "Posts com a tag teoria dos números",
-    "text": "Posts com a tag teoria dos números\n\n🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso"
+    "text": "Posts com a tag teoria dos números\n\n📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso"
   },
   {
     "objectID": "tags/tutoriais.html",
@@ -3560,7 +3588,7 @@
     "href": "tags/lean.html#posts-com-a-tag-lean",
     "title": "lean",
     "section": "Posts com a tag lean",
-    "text": "Posts com a tag lean\n\n🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso"
+    "text": "Posts com a tag lean\n\n📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso"
   },
   {
     "objectID": "tags/gofai.html",
@@ -3588,7 +3616,7 @@
     "href": "tags/matematica.html#posts-com-a-tag-matemática",
     "title": "matemática",
     "section": "Posts com a tag matemática",
-    "text": "Posts com a tag matemática\n\n📚 Biografias Matemáticas\n📚 Omar Khayyam (Parte 1): Matemático e Poeta\n📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte\n📘 ✨ 🧮 ⚛️ Fórmulas que Marcaram a História\n📘 🧮 Por que 0! = 1?\n🧭 🧮 Guia de Leitura — Matemática\n🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso\n🧮 Matemática"
+    "text": "Posts com a tag matemática\n\n📚 Biografias Matemáticas\n📚 Omar Khayyam (Parte 1): Matemático e Poeta\n📘 🧮 A Beleza é o Primeiro Teste — G. H. Hardy e a Matemática como Arte\n📘 ✨ 🧮 ⚛️ Fórmulas que Marcaram a História\n📘 🧮 Por que 0! = 1?\n🧭 🧮 Guia de Leitura — Matemática\n📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso\n🧮 Matemática"
   },
   {
     "objectID": "tags/guia-de-leitura.html",
@@ -4218,7 +4246,7 @@
     "href": "tags/inteligencia-artificial.html#posts-com-a-tag-inteligência-artificial",
     "title": "inteligência artificial",
     "section": "Posts com a tag inteligência artificial",
-    "text": "Posts com a tag inteligência artificial\n\n🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso\n🧠 Inteligência Artificial — Índice da Seção\n🚀 Aplicações Práticas dos LLMs\n✨ Atenção em Transformers: Q, K, V e Multi-Head Attention\n⚠️ Desafios e Limitações dos LLMs\n🔮 O Futuro dos LLMs e da IA Generativa\n🤖 O que é um Large Language Model (LLM)?\n⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF"
+    "text": "Posts com a tag inteligência artificial\n\n📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso\n🧠 Inteligência Artificial — Índice da Seção\n🚀 Aplicações Práticas dos LLMs\n✨ Atenção em Transformers: Q, K, V e Multi-Head Attention\n⚠️ Desafios e Limitações dos LLMs\n🔮 O Futuro dos LLMs e da IA Generativa\n🤖 O que é um Large Language Model (LLM)?\n⚡ Como os LLMs são treinados: Pré-treinamento, Fine-Tuning e RLHF"
   },
   {
     "objectID": "tags/sumario-de-latex.html",
@@ -7060,7 +7088,7 @@
     "href": "index.html#últimos-posts",
     "title": "Blog do Marcellini",
     "section": "🆕 Atualizações",
-    "text": "🆕 Atualizações\nEncontre os artigos mais recentes e acompanhe as novidades dos cursos.\n\n\n\n📝 Artigos recentes\n\n🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso\nMatemática · 20/11/2026\n🧠 Galileu, Newton e a Matematização da Natureza\nFísica · 31/05/2026\n🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia\nFísica · 10/05/2026\n🧠 Einstein — Físico ou Filósofo Natural?\nFísica · 10/05/2026\n🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física\nFísica · 10/05/2026\n🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?\nFísica · 10/05/2026\n\n\n\n🎓 Portal de Cursos\nExplore nossos cursos de Matemática e Estatística, com aulas, exercícios, gráficos e quizzes interativos.\n📘 Acessar o Portal de Cursos"
+    "text": "🆕 Atualizações\nEncontre os artigos mais recentes e acompanhe as novidades dos cursos.\n\n\n\n📝 Artigos recentes\n\n📘 🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso\nMatemática · 20/11/2026\n🧠 Galileu, Newton e a Matematização da Natureza\nFísica · 31/05/2026\n🧠 Feynman e Gell-Mann — Entre Babilônia e Grécia\nFísica · 10/05/2026\n🧠 Einstein — Físico ou Filósofo Natural?\nFísica · 10/05/2026\n🧠 Dirac vs Feynman — Dois Estilos de Pensar a Física\nFísica · 10/05/2026\n🧠 Cálculo Simbólico vs Numérico — O que Significa Entender a Física?\nFísica · 10/05/2026\n\n\n\n🎓 Portal de Cursos\nExplore nossos cursos de Matemática e Estatística, com aulas, exercícios, gráficos e quizzes interativos.\n📘 Acessar o Portal de Cursos"
   },
   {
     "objectID": "index.html#sobre-o-autor",
