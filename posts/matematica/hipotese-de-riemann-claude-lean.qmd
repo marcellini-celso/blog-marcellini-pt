@@ -1,0 +1,38 @@
+---
+title: "🧮 Hipótese de Riemann e IA — uma prova anunciada, uma verificação em curso"
+description: "Levent Alpöge anunciou uma possível prova com Claude. Entenda o que a hipótese diz sobre os primos e o que precisa ser conferido no código Lean."
+author: "Blog do Marcellini"
+date: 2026-11-20
+lang: pt-BR
+categories: [matemática, inteligência artificial]
+tags: [matemática, teoria dos números, hipótese de Riemann, inteligência artificial, lean]
+---
+
+[← Seção de Matemática](index.qmd)
+
+Em 20 de novembro de 2026, o matemático Levent Alpöge anunciou que acredita ter demonstrado, com a ajuda do modelo de inteligência artificial Claude, a hipótese de Riemann e sua generalização para as funções $L$ de Dirichlet. Ele divulgou uma nota sobre o trabalho e disponibilizou o argumento em Lean, um assistente de provas. A reportagem de Konstantin Kakaes na *Quanta Magazine* estima que o material soma cerca de 17 milhões de linhas de código. [Nota de Alpöge](https://alpo.ge/remark.pdf) · [Cobertura da Quanta Magazine](https://www.quantamagazine.org/updates/transformation/)
+
+::: {.callout-note title="Estado da verificação em 20 de novembro"}
+Um projeto independente já registrou a conferência da integridade do material e a compilação dos enunciados de referência contra a biblioteca Mathlib. O projeto ainda indicava como em andamento a etapa que compara os enunciados, audita os axiomas e verifica as demonstrações submetidas. [Acompanhe o registro técnico](https://github.com/SINF-KEN/rh-lean-check)
+:::
+
+## 🔢 O que os zeros têm a ver com os primos?
+
+Se $\pi(x)$ conta quantos números primos são menores ou iguais a $x$, o teorema dos números primos diz que $\pi(x)$ cresce, em primeira aproximação, como $x/\log x$. Quando procuramos estimativas mais precisas, os zeros da função zeta entram em cena. Eles aparecem em fórmulas que ligam a distribuição dos primos ao comportamento dessa função no plano complexo. [Instituto Clay de Matemática](https://www.claymath.org/millennium/riemann-hypothesis/)
+
+Para um número complexo $s$ com parte real maior que $1$, a zeta pode ser escrita de duas maneiras:
+
+$$
+\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}
+        =\prod_{p\ \mathrm{primo}}\frac{1}{1-p^{-s}}.
+$$
+
+O produto de Euler reúne todos os primos. Ao expandir seus fatores, surgem termos como $2^{-s}3^{-s}=6^{-s}$. A fatoração única garante que cada inteiro positivo apareça exatamente uma vez.
+
+A função se estende ao plano complexo, com um polo em $s=1$. Seus zeros chamados não triviais ficam na faixa $0<\operatorname{Re}(s)<1$. A hipótese de Riemann diz que todos estão sobre a linha vertical $\operatorname{Re}(s)=\tfrac12$. Se confirmada, ela permitiria limitar com muito mais precisão o erro em estimativas da contagem de primos. A generalização anunciada propõe a mesma condição para os zeros na faixa crítica de uma família de funções, as funções $L$ de Dirichlet, ligadas à distribuição de primos em progressões aritméticas. [Enunciado clássico e descrição oficial](https://www.claymath.org/millennium/riemann-hypothesis/) · [Enunciados da versão formal](https://github.com/SINF-KEN/rh-lean-check#the-statements)
+
+## 🛠️ O que o Lean pode verificar?
+
+Em Lean, o enunciado precisa ser escrito com definições precisas, e a demonstração precisa produzir um objeto que o núcleo do sistema consiga conferir. Nessa checagem, importa identificar exatamente qual proposição foi provada e de quais axiomas ela depende. Um enunciado de referência escrito separadamente ajuda a conferir se o código resolve o problema que motivou o anúncio. [Projeto Lean](https://lean-lang.org/) · [Notas da verificação independente](https://github.com/SINF-KEN/rh-lean-check/blob/main/verification/NOTES.md)
+
+Para quem estuda matemática, o caso levanta outra pergunta. Se a verificação for bem-sucedida, quais ideias do argumento poderão ser explicadas, ensinadas e usadas em outros problemas? Um certificado formal pode estabelecer que a conclusão decorre das premissas. Uma exposição matemática pode mostrar por que uma construção foi escolhida e onde ela pode funcionar de novo. O trabalho de entender a prova começa por essas perguntas.
