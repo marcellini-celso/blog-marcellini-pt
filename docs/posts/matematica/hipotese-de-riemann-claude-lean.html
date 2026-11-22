@@ -468,19 +468,25 @@ window.Quarto = {
 <section id="da-zeta-às-funções-l" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="da-zeta-às-funções-l"><span class="header-section-number">4.3</span> A versão generalizada</h2>
 <p>Há primos que deixam resto 1 quando divididos por 4, como 5 e 13. Outros deixam resto 3, como 3 e 7. Para estudar esses grupos separadamente, os matemáticos usam funções aparentadas com a zeta, chamadas <strong>funções L de Dirichlet</strong>. Elas atribuem pesos diferentes aos grupos. A versão generalizada da hipótese prevê que os zeros dessas funções na faixa crítica também estejam na reta de coordenada horizontal <span class="math inline">\(1/2\)</span>. <a href="https://dlmf.nist.gov/25.15">NIST, funções L de Dirichlet</a></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Para aprofundar — um exemplo de função L">
+<div class="callout callout-style-default callout-note callout-titled" title="Para aprofundar — dois exemplos de funções L">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Para aprofundar — um exemplo de função L
+<span class="screen-reader-only">Nota</span>Para aprofundar — dois exemplos de funções L
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Podemos dar peso <span class="math inline">\(+1\)</span> aos números que deixam resto <span class="math inline">\(1\)</span> na divisão por <span class="math inline">\(4\)</span>, peso <span class="math inline">\(-1\)</span> aos que deixam resto <span class="math inline">\(3\)</span> e peso zero aos pares. Essa regra é um <strong>caráter de Dirichlet</strong>, denotado por <span class="math inline">\(\chi\)</span>. Para <span class="math inline">\(\operatorname{Re}(s)&gt;1\)</span>, ela produz a série <span class="math inline">\(L(s,\chi)=1-3^{-s}+5^{-s}-7^{-s}+\cdots\)</span>. No caso geral, a série é <span class="math inline">\(L(s,\chi)=\sum_{n\ge1}\chi(n)n^{-s}\)</span>.</p>
+<p><strong>Divisão por 3.</strong> Se dividirmos os primos até 30 por 3, três deixam resto 1 (7, 13 e 19) e seis deixam resto 2 (2, 5, 11, 17, 23 e 29). O próprio 3 deixa resto zero. Se dermos peso <span class="math inline">\(+1\)</span> ao primeiro grupo, <span class="math inline">\(-1\)</span> ao segundo e <span class="math inline">\(0\)</span> ao 3, a soma dos pesos será <span class="math inline">\(3-6=-3\)</span>. O sinal negativo mostra que, até 30, há mais primos no grupo de resto 2.</p>
+<p>Para construir a função <span class="math inline">\(L\)</span>, usamos a mesma regra de sinais para todos os inteiros positivos. Cada número <span class="math inline">\(n\)</span> entra com seu peso dividido por <span class="math inline">\(n^s\)</span>. Os múltiplos de 3 têm peso zero, por isso a série começa assim:</p>
+<p><span class="math display">\[
+L(s,\chi_3)=1-\frac{1}{2^s}+\frac{1}{4^s}-\frac{1}{5^s}+\frac{1}{7^s}-\frac{1}{8^s}+\cdots,\qquad \operatorname{Re}(s)&gt;1.
+\]</span></p>
+<p>Como na zeta, essa série também pode ser escrita como um produto sobre os primos. É nesse produto que os primos de resto 1 e os de resto 2 entram com sinais diferentes. <a href="https://dlmf.nist.gov/25.15.E2">NIST, produto sobre os primos</a></p>
 </div>
 </div>
 </div>

@@ -109,8 +109,18 @@ O **prolongamento analítico** estende a função ao plano complexo, com um polo
 
 Há primos que deixam resto 1 quando divididos por 4, como 5 e 13. Outros deixam resto 3, como 3 e 7. Para estudar esses grupos separadamente, os matemáticos usam funções aparentadas com a zeta, chamadas **funções L de Dirichlet**. Elas atribuem pesos diferentes aos grupos. A versão generalizada da hipótese prevê que os zeros dessas funções na faixa crítica também estejam na reta de coordenada horizontal $1/2$. [NIST, funções L de Dirichlet](https://dlmf.nist.gov/25.15)
 
-::: {.callout-note collapse="true" title="Para aprofundar — um exemplo de função L"}
+::: {.callout-note collapse="true" title="Para aprofundar — dois exemplos de funções L"}
 Podemos dar peso $+1$ aos números que deixam resto $1$ na divisão por $4$, peso $-1$ aos que deixam resto $3$ e peso zero aos pares. Essa regra é um **caráter de Dirichlet**, denotado por $\chi$. Para $\operatorname{Re}(s)>1$, ela produz a série $L(s,\chi)=1-3^{-s}+5^{-s}-7^{-s}+\cdots$. No caso geral, a série é $L(s,\chi)=\sum_{n\ge1}\chi(n)n^{-s}$.
+
+**Divisão por 3.** Se dividirmos os primos até 30 por 3, três deixam resto 1 (7, 13 e 19) e seis deixam resto 2 (2, 5, 11, 17, 23 e 29). O próprio 3 deixa resto zero. Se dermos peso $+1$ ao primeiro grupo, $-1$ ao segundo e $0$ ao 3, a soma dos pesos será $3-6=-3$. O sinal negativo mostra que, até 30, há mais primos no grupo de resto 2.
+
+Para construir a função $L$, usamos a mesma regra de sinais para todos os inteiros positivos. Cada número $n$ entra com seu peso dividido por $n^s$. Os múltiplos de 3 têm peso zero, por isso a série começa assim:
+
+$$
+L(s,\chi_3)=1-\frac{1}{2^s}+\frac{1}{4^s}-\frac{1}{5^s}+\frac{1}{7^s}-\frac{1}{8^s}+\cdots,\qquad \operatorname{Re}(s)>1.
+$$
+
+Como na zeta, essa série também pode ser escrita como um produto sobre os primos. É nesse produto que os primos de resto 1 e os de resto 2 entram com sinais diferentes. [NIST, produto sobre os primos](https://dlmf.nist.gov/25.15.E2)
 :::
 
 # 🔢 O que os zeros têm a ver com os primos? {#como-os-zeros-aparecem-na-contagem-dos-primos}
