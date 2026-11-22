@@ -1,5 +1,7 @@
 # Blog do Marcellini
 
+[![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/marcellini-celso/badge.svg)](https://hub.xerj.org/contributors/marcellini-celso)
+
 Blog pessoal de Celso Marcellini sobre Matemática, Estatística, Física e Programação, com explicações didáticas, exemplos em R/Python e tipografia matemática.
 
 🌐 **[Acesse o Blog do Marcellini](https://blogdomarcellini.com.br/)**
