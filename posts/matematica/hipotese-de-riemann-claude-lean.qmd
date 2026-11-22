@@ -23,6 +23,10 @@ page-layout: full
 
 ---
 
+::: {.callout-note appearance="simple"}
+**Atualização de 22 de novembro de 2026.** Em 21 de novembro, as comunidades Lean e Mathlib confirmaram a validade da demonstração formal de Levent Alpöge. Verificadores independentes também checaram a prova, e a comparação com a Mathlib confirmou que o enunciado demonstrado é o da hipótese de Riemann clássica. [Leia a declaração conjunta](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/).
+:::
+
 Até 10 há quatro números primos. Até 100, há 25. Até 1.000, já são 168. À medida que avançamos, os primos ficam mais raros em média, e a distância entre eles varia. Podemos ver isso começando pela contagem exata.
 
 O **Crivo de Eratóstenes** mostra como fazer essa contagem. Até 10, deixamos o 1 de fora, conservamos o 2 e riscamos seus múltiplos maiores que ele (4, 6, 8 e 10). O próximo número ainda de pé é o 3. Conservamos o 3 e riscamos o 9, pois o 6 já foi riscado. Sobram **2, 3, 5 e 7**. Basta usar os primos até a raiz quadrada do limite, pois todo número composto tem pelo menos um fator primo nessa faixa.
