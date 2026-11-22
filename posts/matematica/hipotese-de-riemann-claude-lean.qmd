@@ -43,7 +43,7 @@ Em cada linha, o crivo é feito desde o 2 até o fim da faixa. A coluna **Primos
 
 **Com que precisão podemos estimar quantos primos existem até um número dado?** O crivo dá a contagem exata. Uma estimativa clássica para o total até 1.000 dá cerca de **177**, enquanto a tabela mostra **168**. A diferença é de aproximadamente **9 primos**. Quando o limite cresce, quão grande pode ficar esse erro?
 
-Riemann descobriu que, para estudar esse erro, podemos olhar os **zeros da função zeta**, os pontos em que ela vale zero. A posição desses pontos ajuda a determinar quanto a estimativa pode se afastar da contagem real. A **hipótese de Riemann** afirma que um grupo específico desses zeros, os **não triviais**, está todo numa mesma reta. Se isso for verdade, teremos um limite mais preciso para o erro das estimativas. Essa ligação explica por que um anúncio sobre os zeros de uma função chamou a atenção de quem estuda os primos. [Instituto Clay, hipótese de Riemann](https://www.claymath.org/millennium/riemann-hypothesis/)
+Riemann descobriu que, para estudar esse erro, podemos olhar os **zeros da função zeta (ζ)**, os pontos em que ela vale zero. A posição desses pontos ajuda a determinar quanto a estimativa pode se afastar da contagem real. A **hipótese de Riemann** afirma que um grupo específico desses zeros, os **não triviais**, está todo numa mesma reta. Se isso for verdade, teremos um limite mais preciso para o erro das estimativas. Essa ligação explica por que um anúncio sobre os zeros de uma função chamou a atenção de quem estuda os primos. [Instituto Clay, hipótese de Riemann](https://www.claymath.org/millennium/riemann-hypothesis/)
 
 Em 20 de novembro de 2026, o matemático **Levent Alpöge** anunciou que acredita ter demonstrado a **hipótese de Riemann** e sua **versão generalizada**, em um trabalho desenvolvido com a ajuda do assistente de IA **Claude**. [Nota de Alpöge](https://alpo.ge/remark.pdf) · [Cobertura da Quanta Magazine](https://www.quantamagazine.org/updates/transformation/)
 
@@ -61,15 +61,15 @@ Claude é o assistente de IA da Anthropic. Na pesquisa matemática, ele pode aju
 
 # 🕰️ Uma pergunta que atravessou gerações {#um-breve-histórico}
 
-Em 1859, Bernhard Riemann encontrou uma maneira de ligar a contagem de primos a uma função chamada **zeta**. Em 1896, Hadamard e de la Vallée Poussin provaram o **teorema dos números primos**, que descreve o crescimento da contagem. Em 1914, G. H. Hardy provou que infinitos zeros da zeta estão na reta que Riemann indicou. Ainda restava saber se algum dos zeros não triviais poderia estar fora dela. [Manuscrito de Riemann](https://www.claymath.org/collections/riemanns-1859-manuscript/) · [Histórico do Clay](https://www.claymath.org/library/annual_report/ar2004/04report_riemann.pdf) · [Hardy no Blog](beleza-matematica.qmd)
+Em 1859, Bernhard Riemann encontrou uma maneira de ligar a contagem de primos a uma função chamada **zeta (ζ)**. Em 1896, Hadamard e de la Vallée Poussin provaram o **teorema dos números primos**, que descreve o crescimento da contagem. Em 1914, G. H. Hardy provou que infinitos zeros da zeta (ζ) estão na reta que Riemann indicou. Ainda restava saber se algum dos zeros não triviais poderia estar fora dela. [Manuscrito de Riemann](https://www.claymath.org/collections/riemanns-1859-manuscript/) · [Histórico do Clay](https://www.claymath.org/library/annual_report/ar2004/04report_riemann.pdf) · [Hardy no Blog](beleza-matematica.qmd)
 
 ![Do artigo de Riemann em 1859 ao anúncio de Alpöge em 2026.](../../images/riemann-linha-do-tempo.png){fig-alt="Linha do tempo com marcos em 1859, 1896, 1914, 2000 e 2026."}
 
 # 📐 O que a hipótese de Riemann diz? {#a-hipótese-de-riemann-e-as-funções-l-de-dirichlet}
 
-## Por que aparece a função zeta? {#a-função-zeta}
+## Por que aparece a função zeta (ζ)? {#a-função-zeta}
 
-Uma maneira de calcular a zeta começa com uma soma de parcelas cada vez menores. Para calcular $\zeta(2)$, tomamos o inverso do quadrado de cada inteiro positivo.
+Uma maneira de calcular a zeta (ζ) começa com uma soma de parcelas cada vez menores. Para calcular $\zeta(2)$, tomamos o inverso do quadrado de cada inteiro positivo.
 
 $$
 \begin{aligned}
@@ -84,18 +84,18 @@ $$
 \frac{1}{2^2}\cdot\frac{1}{3^2}=\frac{1}{(2\cdot3)^2}=\frac{1}{6^2}=\frac{1}{36}.
 $$
 
-Cada parcela da soma pode ser obtida pelo mesmo princípio. Essa ponte permite estudar os primos por meio da zeta. [NIST, função zeta](https://dlmf.nist.gov/25.2)
+Cada parcela da soma pode ser obtida pelo mesmo princípio. Essa ponte permite estudar os primos por meio da zeta (ζ). [NIST, função zeta (ζ)](https://dlmf.nist.gov/25.2)
 
 ## Como ler a faixa crítica {#como-ler-a-faixa-crítica}
 
-Até aqui calculamos a zeta para a entrada $s=2$. Riemann estudou a função para **números complexos**, que podemos representar como pontos num mapa. A coordenada horizontal é a **parte real** e a vertical é a **parte imaginária**. Um **zero** é um ponto em que a função vale zero. Os zeros que interessam à hipótese, chamados *não triviais*, ficam na faixa azul. A hipótese afirma que **todos eles estão sobre a linha tracejada**, cuja coordenada horizontal é $1/2$.
+Até aqui calculamos a zeta (ζ) para a entrada $s=2$. Riemann estudou a função para **números complexos**, que podemos representar como pontos num mapa. A coordenada horizontal é a **parte real** e a vertical é a **parte imaginária**. Um **zero** é um ponto em que a função vale zero. Os zeros que interessam à hipótese, chamados *não triviais*, ficam na faixa azul. A hipótese afirma que **todos eles estão sobre a linha tracejada**, cuja coordenada horizontal é $1/2$.
 
-![A faixa crítica e quatro pares de zeros da zeta.](../../images/riemann-faixa-critica.png){fig-alt="Faixa azul entre 0 e 1 no eixo horizontal. Oito zeros estão sobre a reta tracejada que passa por 1/2. Dois zeros triviais aparecem à esquerda e o polo é marcado com uma cruz."}
+![A faixa crítica e quatro pares de zeros da zeta (ζ).](../../images/riemann-faixa-critica.png){fig-alt="Faixa azul entre 0 e 1 no eixo horizontal. Oito zeros estão sobre a reta tracejada que passa por 1/2. Dois zeros triviais aparecem à esquerda e o polo é marcado com uma cruz."}
 
-Os oito pontos azuis são exemplos já conhecidos. Para demonstrar a hipótese, é preciso explicar por que nenhum dos zeros não triviais pode ficar fora daquela linha. [NIST, zeros da zeta](https://dlmf.nist.gov/25.10)
+Os oito pontos azuis são exemplos já conhecidos. Para demonstrar a hipótese, é preciso explicar por que nenhum dos zeros não triviais pode ficar fora daquela linha. [NIST, zeros da zeta (ζ)](https://dlmf.nist.gov/25.10)
 
-::: {.callout-note collapse="true" title="Para aprofundar — as fórmulas da zeta"}
-Se a parte real de $s$ for maior que $1$, a zeta admite uma soma sobre os inteiros e um produto sobre os primos:
+::: {.callout-note collapse="true" title="Para aprofundar — as fórmulas da zeta (ζ)"}
+Se a parte real de $s$ for maior que $1$, a zeta (ζ) admite uma soma sobre os inteiros e um produto sobre os primos:
 
 $$
 \zeta(s)=\sum_{n\ge1}\frac{1}{n^s}
@@ -107,21 +107,37 @@ O **prolongamento analítico** estende a função ao plano complexo, com um polo
 
 ## A versão generalizada {#da-zeta-às-funções-l}
 
-Há primos que deixam resto 1 quando divididos por 4, como 5 e 13. Outros deixam resto 3, como 3 e 7. Para estudar esses grupos separadamente, os matemáticos usam funções aparentadas com a zeta, chamadas **funções L de Dirichlet**. Elas atribuem pesos diferentes aos grupos. A versão generalizada da hipótese prevê que os zeros dessas funções na faixa crítica também estejam na reta de coordenada horizontal $1/2$. [NIST, funções L de Dirichlet](https://dlmf.nist.gov/25.15)
+Na seção anterior, a zeta (ζ) nos ajudou a formular uma pergunta sobre **todos** os primos. Podemos refinar a pergunta. Até um limite dado, quantos primos deixam resto 1 na divisão por 3? Quantos deixam resto 2? E com que precisão podemos estimar cada contagem?
+
+Até 30, podemos listar os primos e dar um sinal a cada grupo.
+
+| Resto na divisão por 3 | Primos até 30 | Quantidade | Peso |
+|:---:|:---|---:|:---:|
+| $0$ | 3 | 1 | $0$ |
+| $1$ | 7, 13, 19 | 3 | $+1$ |
+| $2$ | 2, 5, 11, 17, 23, 29 | 6 | $-1$ |
+
+A soma dos pesos é $3-6=-3$. O sinal negativo diz que há três primos a mais no grupo de resto 2 **até 30**. Se mudarmos o limite, a diferença pode mudar.
 
 ::: {.callout-note collapse="true" title="Para aprofundar — dois exemplos de funções L"}
-Podemos dar peso $+1$ aos números que deixam resto $1$ na divisão por $4$, peso $-1$ aos que deixam resto $3$ e peso zero aos pares. Essa regra é um **caráter de Dirichlet**, denotado por $\chi$. Para $\operatorname{Re}(s)>1$, ela produz a série $L(s,\chi)=1-3^{-s}+5^{-s}-7^{-s}+\cdots$. No caso geral, a série é $L(s,\chi)=\sum_{n\ge1}\chi(n)n^{-s}$.
+Em cada exemplo, $\chi(n)$ é o peso dado ao inteiro positivo $n$. A regra dos pesos é um **caráter de Dirichlet**. Para $\operatorname{Re}(s)>1$, a série é $L(s,\chi)=\sum_{n\ge1}\chi(n)/n^s$.
 
-**Divisão por 3.** Se dividirmos os primos até 30 por 3, três deixam resto 1 (7, 13 e 19) e seis deixam resto 2 (2, 5, 11, 17, 23 e 29). O próprio 3 deixa resto zero. Se dermos peso $+1$ ao primeiro grupo, $-1$ ao segundo e $0$ ao 3, a soma dos pesos será $3-6=-3$. O sinal negativo mostra que, até 30, há mais primos no grupo de resto 2.
-
-Para construir a função $L$, usamos a mesma regra de sinais para todos os inteiros positivos. Cada número $n$ entra com seu peso dividido por $n^s$. Os múltiplos de 3 têm peso zero, por isso a série começa assim:
+**Divisão por 4.** O caráter $\chi_4$ dá peso $+1$ aos números de resto $1$, peso $-1$ aos de resto $3$ e peso $0$ aos pares. Entre os primos até 30, quatro deixam resto $1$ (5, 13, 17 e 29), cinco deixam resto $3$ (3, 7, 11, 19 e 23) e o $2$ tem peso zero. A soma dos pesos desses primos é $4-5=-1$. Aplicando a regra a todos os inteiros positivos, a série começa por
 
 $$
-L(s,\chi_3)=1-\frac{1}{2^s}+\frac{1}{4^s}-\frac{1}{5^s}+\frac{1}{7^s}-\frac{1}{8^s}+\cdots,\qquad \operatorname{Re}(s)>1.
+L(s,\chi_4)=1-\frac{1}{3^s}+\frac{1}{5^s}-\frac{1}{7^s}+\cdots.
 $$
 
-Como na zeta, essa série também pode ser escrita como um produto sobre os primos. É nesse produto que os primos de resto 1 e os de resto 2 entram com sinais diferentes. [NIST, produto sobre os primos](https://dlmf.nist.gov/25.15.E2)
+**Divisão por 3.** O caráter $\chi_3$ dá peso $+1$ aos números de resto $1$, peso $-1$ aos de resto $2$ e peso $0$ aos múltiplos de $3$. Entre os primos até 30, três deixam resto $1$ (7, 13 e 19), seis deixam resto $2$ (2, 5, 11, 17, 23 e 29) e o $3$ tem peso zero. A soma dos pesos desses primos é $3-6=-3$. Aplicando a regra a todos os inteiros positivos, a série começa por
+
+$$
+L(s,\chi_3)=1-\frac{1}{2^s}+\frac{1}{4^s}-\frac{1}{5^s}+\frac{1}{7^s}-\frac{1}{8^s}+\cdots.
+$$
+
+Nos dois exemplos, a série também pode ser escrita como um produto sobre os primos. O peso de cada primo determina o sinal com que ele aparece no fator correspondente. [NIST, produto sobre os primos](https://dlmf.nist.gov/25.15.E2)
 :::
+
+As **funções $L$ de Dirichlet** permitem estudar quanto as estimativas de primos em cada grupo podem se afastar das contagens reais. A posição de seus zeros ajuda a controlar esse erro, assim como acontece com a zeta (ζ) na contagem de todos os primos. A **hipótese de Riemann generalizada** afirma que os zeros não triviais dessas funções estão todos sobre a reta $\operatorname{Re}(s)=\tfrac12$. [NIST, zeros das funções $L$](https://dlmf.nist.gov/25.15.ii)
 
 # 🔢 O que os zeros têm a ver com os primos? {#como-os-zeros-aparecem-na-contagem-dos-primos}
 
@@ -133,7 +149,7 @@ O gráfico azul sobe um degrau cada vez que encontramos um primo. Entre 10 e 11,
 
 ## De onde vêm as oscilações? {#as-oscilações-na-fórmula-explícita}
 
-O desvio entre o total exato e as estimativas é mais fácil de estudar com uma contagem que também inclui potências de primos como 4 e 8. Nela, 2, 4 e 8 contribuem com o mesmo peso, por serem potências de 2. Essa contagem revela oscilações em torno de uma tendência. Cada par de zeros da zeta que aparecem à mesma distância acima e abaixo do eixo horizontal contribui com uma onda. A posição dos zeros controla quanto essas ondas podem crescer e ajuda a limitar o desvio na contagem dos primos. [NIST, relação entre zeros e contagem](https://dlmf.nist.gov/25.16.E2)
+O desvio entre o total exato e as estimativas é mais fácil de estudar com uma contagem que também inclui potências de primos como 4 e 8. Nela, 2, 4 e 8 contribuem com o mesmo peso, por serem potências de 2. Essa contagem revela oscilações em torno de uma tendência. Cada par de zeros da zeta (ζ) que aparecem à mesma distância acima e abaixo do eixo horizontal contribui com uma onda. A posição dos zeros controla quanto essas ondas podem crescer e ajuda a limitar o desvio na contagem dos primos. [NIST, relação entre zeros e contagem](https://dlmf.nist.gov/25.16.E2)
 
 ::: {.callout-note collapse="true" title="Para aprofundar — veja as ondas no gráfico"}
 Chamamos de $\psi(x)$ a contagem que soma $\log p$ para cada potência $p^k\le x$, com $k\ge1$. A linha azul mostra o desvio $\psi(x)-x$. A laranja aproxima esse desvio usando os primeiros 20 pares de zeros e os termos de correção da fórmula abaixo. Ela já acompanha parte das oscilações.
