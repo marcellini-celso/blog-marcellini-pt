@@ -44,6 +44,64 @@ body.blog-home main.content {
   font-size: 1.5rem;
   margin-bottom: .8rem;
 }
+.blog-home .home-trilhas {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: "logo copy button";
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: 1px solid #ddd9ca;
+  border-radius: 16px;
+  background: #fbf8f1;
+  color: #2d4037;
+}
+.blog-home .home-trilhas-logo {
+  grid-area: logo;
+  width: clamp(3rem, 8vw, 6rem);
+  height: auto;
+}
+.blog-home .home-trilhas-copy { grid-area: copy; }
+.blog-home .home-trilhas h2 {
+  margin: 0 0 .35rem;
+  padding: 0;
+  border: 0;
+  color: #245d45;
+  font-size: 1.4rem;
+}
+.blog-home .home-trilhas p { margin: 0; }
+.blog-home .home-trilhas p + p { margin-top: .35rem; }
+.blog-home .home-trilhas-button {
+  grid-area: button;
+  justify-self: start;
+  display: block;
+  padding: .65rem .9rem;
+  border-radius: 8px;
+  background: #245d45;
+  color: #fff;
+  font-weight: 650;
+  text-decoration: none;
+}
+.blog-home .home-trilhas-button:hover {
+  background: #194733;
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 850px) {
+  .blog-home .home-trilhas {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "logo copy" "button button";
+    align-items: start;
+    gap: .8rem;
+  }
+}
+@media (max-width: 480px) {
+  .blog-home .home-trilhas {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "logo" "copy" "button";
+  }
+}
 .blog-home .home-areas {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
